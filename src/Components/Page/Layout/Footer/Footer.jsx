@@ -25,7 +25,7 @@ export const Footer = () => {
                     <div className="row">
                         <div className="col-md-8 col-sm-6 col-xs-12">
                             <br /><p className="copyright-text">Copyright &copy; 2022 All Rights Reserved by-  
-                                <a href="#">Healhty Corporation</a>.
+                                <a href="#">Healthy Corporation</a>.
                             </p>
                         </div>
 

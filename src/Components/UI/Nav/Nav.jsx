@@ -6,7 +6,7 @@ export const Nav = () => {
         <nav className='nav'>
             <div className='content'>
                 <a href="#">Inicio</a>
-                <a href="#">Prodcutos</a>
+                <a href="#">Productos</a>
                 <a href="#">Ingresar</a>
                 <a href="#">Más</a>
             </div>
