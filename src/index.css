@@ -11,3 +11,198 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+/*-------------  footer ------------------*/
+
+
+.site-footer
+{
+  background-color:#83c5eb;
+  padding:45px 0 20px;
+  font-size:15px;
+  line-height:24px;
+  color:#737373;
+}
+.site-footer hr
+{
+  border-top-color:rgb(0, 0, 0);
+  opacity:0.5
+}
+.site-footer hr.small
+{
+  margin:20px 0
+}
+.site-footer h6
+{
+  color:#ff0000;
+  font-size:16px;
+  text-transform:uppercase;
+  margin-top:-16px;
+  letter-spacing:2px
+
+}
+.site-footer a
+{
+  color:#000000;
+}
+.site-footer a:hover
+{
+  color:#3366cc;
+  text-decoration:none;
+}
+.footer-links
+{
+  padding-left:0;
+  list-style:none
+}
+.footer-links li
+{
+  display:block
+}
+.footer-links a
+{
+  color:#000000
+}
+.footer-links a:active,.footer-links a:focus,.footer-links a:hover
+{
+  color:#3366cc;
+  text-decoration:none;
+}
+.footer-links.inline li
+{
+  display:inline-block
+}
+.site-footer .social-icons
+{
+  text-align:right;
+  margin-top: -23px;
+}
+
+.copyright-text
+{
+  margin:0
+}
+@media (max-width:991px)
+{
+  .site-footer [class^=col-]
+  {
+    margin-bottom:30px
+  }
+}
+@media (max-width:767px)
+{
+  .site-footer
+  {
+    padding-bottom:0
+  }
+  .site-footer .copyright-text,.site-footer .social-icons
+  {
+    text-align:center
+  }
+}
+
+.social-icons li
+{
+  display:inline-block;
+  margin-bottom:4px
+}
+
+
+
+
+
+@media (max-width:767px)
+{
+  .social-icons li.title
+  {
+    display:block;
+    margin-right:0;
+    font-weight:600
+  }
+
+
+}
+
+.image_footer{
+  width: 400px;
+  height: 80px;
+  padding-right: 25px;
+  border-right:solid #ff0000;
+}
+
+
+.text-justify{
+  margin-top: -15px;
+  margin-bottom: 50px;
+  font-size: 17px;
+  color: black;
+}
+
+.copyright-text{
+  font-size: 17px;
+  color: black;
+}
+
+
+.content_footer{
+  padding-left: 46px;
+
+}
+
+.row2{
+  display: flex;
+  flex-direction: row;
+}
+
+.content_down{
+  padding: 30px;
+  background-color:#83c5eb;
+  border-top: solid rgb(48, 48, 48);
+}
+
+/*  icons */
+
+.twitter{
+  width: 64px;
+  margin-bottom: -7px;
+}
+
+/*---------------- Nav -------------------*/
+
+nav{
+  background-color:#83c5eb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90px;
+  border-bottom:solid #000000;
+  border-top:solid #000000;
+  margin-bottom: 280px;
+}
+
+nav a{
+  text-decoration: none;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 35px;
+  transition: all 400ms;
+  color: black  ;
+}
+
+nav a:hover{
+  color:white;
+  transition: all 300ms;
+  border-bottom:solid white;
+}
+
+
+header{
+  display: flex;
+  justify-content: center;
+  height: 90px;
+}
+header img{
+  width: 30rem;
+}
+
