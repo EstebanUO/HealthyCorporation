@@ -1,4 +1,3 @@
-import './App.css';
 import {Home} from '../src/Components/Page/Home/Home';
 // import {Products} from '../src/Components/Page/Products/Products';
 
