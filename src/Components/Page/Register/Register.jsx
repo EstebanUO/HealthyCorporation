@@ -7,6 +7,7 @@ export const register = () => {
     <div>
         <Header/>
         <h1>Register</h1>
+        <h3>holaaaa</h3>
         <Footer/>
     </div>
   )
