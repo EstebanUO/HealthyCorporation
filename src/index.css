@@ -170,6 +170,13 @@ code {
 
 /*---------------- Nav -------------------*/
 
+.imgu{
+  width: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 nav{
   background-color:#83c5eb;
   display: flex;
