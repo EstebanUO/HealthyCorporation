@@ -156,7 +156,7 @@ code {
 }
 
 .content_down{
-  padding: 30px;
+  padding: 2rem;
   background-color:#83c5eb;
   border-top: solid rgb(48, 48, 48);
 }
@@ -175,13 +175,13 @@ nav{
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 90px;
+  height: 4rem;
   border-bottom:solid #000000;
   border-top:solid #000000;
   margin-bottom: 280px;
 }
 
-nav a{
+nav .a{
   text-decoration: none;
   padding-left: 20px;
   padding-right: 20px;
@@ -200,8 +200,9 @@ nav a:hover{
 header{
   display: flex;
   justify-content: center;
-  height: 90px;
+  height: 9rem;
 }
+
 header img{
   width: 30rem;
 }
