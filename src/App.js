@@ -1,9 +1,16 @@
 import {Home} from '../src/Components/Page/Home/Home';
-// import {Products} from '../src/Components/Page/Products/Products';
+import { Route, Routes } from "react-router-dom"
+import {Products} from '../src/Components/Page/Products/Products';
 
 function App() {
   return (
-    <Home />
+    <div>
+      <Routes>
+        <Route path="/" element={<Home />}/>
+        <Route path="/products" element={<Products />}/>
+      </Routes>
+    </div>
+    
   );
 }
 
