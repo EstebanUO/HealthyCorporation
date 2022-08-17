@@ -222,7 +222,7 @@ header img{
 
 .formulario2{
   background-color: #fff;
-  padding: 3rem;
+  padding: 5rem;
   box-shadow: 1px 1px 18px black;
   border-radius: 1rem;
 }
@@ -277,6 +277,15 @@ header img{
 
 .form-input:focus{
   outline: none;
+}
+
+.iconos{
+  display: flex;
+  justify-content: space-around;
+}
+
+.border-icon{
+  font-size: 2rem;
 }
 
 p{
