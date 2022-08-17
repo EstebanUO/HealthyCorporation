@@ -1,6 +1,7 @@
 import React from 'react';
 import { Header } from '../Layout/Header/Header';
 import { Footer } from '../Layout/Footer/Footer';
+import { Link } from "react-router-dom"
 
 export const Register = () => {
   return (
@@ -12,10 +13,10 @@ export const Register = () => {
                 <h1 className="titleReg">Register</h1>
                 <div className="formularioReg">
                   <label for="inputUser" class="labelsReg">User name</label>
-                    <input name="name" type="text" class="form-input" placeholder="User" autocomplete="off"/>
+                    <input name="name" type="text" class="form-input" placeholder="User name" autocomplete="off" required/>
 
                   <label for="exampleInputEmail1" class="labelsReg"><br/>Email</label>
-                    <input name="correo" type="email" class="form-input" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Example@" autocomplete="off"/>
+                    <input name="correo" type="email" class="form-input" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Example@" autocomplete="off" required/>
 
                   <label for="inputPassword" class="labelsReg"><br/>Password</label>
                     <input name="password" type="password" class="form-input" id="inputPassword" placeholder="Password"/>
@@ -24,7 +25,7 @@ export const Register = () => {
                     <input name="password" type="password" class="form-input" id="inputPassword" placeholder="Confirm your password"/>
                   <br />
                   <div className="checkTyC">
-                    <input type="checkbox"/><p>Al hacer click en registrarse, usted acepta nuestros<br/><a href="#">terminos y condiciones</a>.</p>
+                    <input type="checkbox"/><p>Haz click aqui para aceptar nuestros<br/><Link to="/terminoS">terminos y condiciones</Link>.</p>
                   </div>
                   
                   <div className="submitReg">

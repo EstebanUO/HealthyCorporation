@@ -4,9 +4,10 @@ import { Footer } from '../Layout/Footer/Footer';
 
 export const Home = () => {
   return (
-    <>
+    <div>
         <Header />
+        <h1>HOMEEEEEEE</h1>
         <Footer />
-    </>
+    </div>
   )
 }
