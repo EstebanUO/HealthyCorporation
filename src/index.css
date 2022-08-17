@@ -178,7 +178,6 @@ nav{
   height: 4rem;
   border-bottom:solid #000000;
   border-top:solid #000000;
-  margin-bottom: 280px;
 }
 
 nav .a{
@@ -207,3 +206,19 @@ header img{
   width: 30rem;
 }
 
+/*---------------- Formulario Registro -------------------*/
+.formulario{
+  display: flex;
+  justify-content: center;
+  padding: 2.5rem;
+}
+
+.formulario2{
+  background-color: green;
+  padding: 3rem;
+}
+
+.formularioReg{
+  display: flex;
+  flex-direction: column;
+}

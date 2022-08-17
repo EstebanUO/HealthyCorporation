@@ -4,10 +4,10 @@ import { Footer } from '../Layout/Footer/Footer';
 
 export const Pago = () => {
   return (
-    <>
+    <div>
         <Header />
         <h1>Pago</h1>
         <Footer />
-    </>
+    </div>
   )
 }

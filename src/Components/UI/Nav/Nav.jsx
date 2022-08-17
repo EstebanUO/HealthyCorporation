@@ -7,7 +7,7 @@ export const Nav = () => {
         <div className='content'>
             <Link to='/' className='a'>Inicio</Link>
             <Link to='/products' className='a'>Productos</Link>
-            <Link to='/' className='a'>Ingresar</Link>
+            <Link to='/register' className='a'>Ingresar</Link>
             <Link to='/' className='a'>Más</Link>
         </div>
     </nav>
