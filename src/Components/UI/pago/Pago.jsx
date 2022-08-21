@@ -2,11 +2,11 @@ import React from 'react';
 import { Header } from '../Layout/Header/Header';
 import { Footer } from '../Layout/Footer/Footer';
 
-export const Products = () => {
+export const Pago = () => {
   return (
     <div>
         <Header />
-        <h1>Productos</h1>
+        <h1>Pago</h1>
         <Footer />
     </div>
   )
