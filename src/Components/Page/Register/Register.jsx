@@ -11,17 +11,17 @@ export const Register = () => {
         <Header />
           <div className="formulario">
               <div className="welcome-back">
-                <div className="message">
-                  <h2>Bienvenido a HealthyCorporation</h2>
-                  <p>Si ya tienes una cuenta por favor inicia sesion aqui</p>
-                  <Link to="/login"> 
-                    <button className="signUpBtn">Iniciar Sesion</button>
-                  </Link>
-                </div>
+                  <div className="message">
+                    <h2>Bienvenido a HealthyCorporation</h2>
+                    <p>Si ya tienes una cuenta por favor inicia sesion aqui</p>
+                    <Link to="/login"> 
+                      <button className="signUpBtn">Iniciar Sesion</button>
+                    </Link>
+                  </div>
               </div>
             <div>
               <form className="formulario2">
-                <h1 className="titleReg">Register</h1>
+                <h1 className="titleReg">Registro</h1>
                 <div className="iconos">
                   <div className="border-icon">
                     <FaFacebook/>
@@ -51,7 +51,7 @@ export const Register = () => {
                   </div>
                   
                   <div className="submitReg">
-                    <button type="submit" class="submitReg2">Register</button>
+                    <button type="submit" class="submitReg2">Registrarse</button>
                   </div>
                 </div>
               </form>

@@ -218,10 +218,11 @@ header img{
   display: flex;
   justify-content: center;
   padding: 2.5rem;
+  background-image: url(/src/Components/Image/fondoReg.png);
 }
 
 .formulario2{
-  background-color: #fff;
+  background-color: #ffffff57;
   padding: 5rem;
   box-shadow: 1px 1px 18px black;
   border-radius: 1rem;
@@ -238,18 +239,21 @@ header img{
 }
 
 .submitReg2{
-  text-align: center;
-  width: 7rem;
-  height: 3rem;
-  -webkit-transition-duration: 0.4s; /* Safari */
-  transition-duration: 0.4s;
-  border-color: #000000;
-  border-radius: 8px;
+  padding: 1rem;
+  font-weight: 400;
+  background-color: #4a4aee;
+  border-radius: 2rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: .9rem;
+  margin-top: 2rem;
+  transition: all .3s ease-in;
+  color: #fff;
 }
 
 .submitReg2:hover{
-  background-color: #83c5eb; /* Green */
-  color: #000000;
+  background-color: #6464f8;
 }
 
 .labelsReg{
@@ -267,6 +271,7 @@ header img{
 }
 
 .form-input{
+  background-color: #ffffff57;
   width: 100%;
   height: 1.5rem;
   padding: .2rem;
@@ -291,3 +296,32 @@ header img{
 p{
   text-align: center;
 }
+
+.message {
+  padding: 3rem;
+  margin-right: 6rem;
+}
+
+.message h2 {
+  font-size: 1.7rem;
+  padding: 1rem 0;
+}
+
+.message button {
+  padding: 1rem;
+  font-weight: 400;
+  background-color: #4a4aee;
+  border-radius: 2rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: .9rem;
+  margin-top: 2rem;
+  transition: all .3s ease-in;
+  color: #fff;
+}
+
+.message button:hover {
+  background-color: #6464f8;
+}
+
