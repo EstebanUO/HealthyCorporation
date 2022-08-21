@@ -6,9 +6,6 @@ import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa';
 
 export const Register = () => {
 
-
-
-
   return (
     <div>
         <Header />
