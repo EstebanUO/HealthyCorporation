@@ -19,7 +19,7 @@ code {
 .site-footer
 {
   background-color:#83c5eb;
-  padding:45px 0 20px;
+  padding: 39px 0 0px;
   font-size:15px;
   line-height:24px;
   color:#737373;
@@ -300,6 +300,7 @@ p{
 .message {
   padding: 3rem;
   margin-right: 6rem;
+  margin-left: 6rem;
 }
 
 .message h2 {
@@ -319,6 +320,8 @@ p{
   margin-top: 2rem;
   transition: all .3s ease-in;
   color: #fff;
+  margin: auto;
+  display: block;
 }
 
 .message button:hover {
