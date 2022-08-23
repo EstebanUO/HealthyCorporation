@@ -226,7 +226,7 @@ header img{
   padding: 5rem;
   box-shadow: 1px 1px 18px black;
   border-radius: 1rem;
-  /* width: 24rem; */
+  width: 24rem;
 }
 
 .formularioReg{
@@ -265,6 +265,7 @@ header img{
   display: flex;
   align-items: baseline;
   text-align: center;
+  justify-content: center;
 }
 
 .titleReg{
