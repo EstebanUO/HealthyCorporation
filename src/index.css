@@ -289,6 +289,7 @@ header img{
 .iconos{
   display: flex;
   justify-content: space-around;
+  cursor: pointer;
 }
 
 .links{
