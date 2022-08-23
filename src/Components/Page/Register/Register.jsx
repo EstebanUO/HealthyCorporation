@@ -1,7 +1,7 @@
 import React from 'react';
 import { Header } from '../Layout/Header/Header';
 import { Footer } from '../Layout/Footer/Footer';
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa';
 
 export const Register = () => {
@@ -47,7 +47,7 @@ export const Register = () => {
                     <input name="password" type="password" class="form-input" id="inputPassword" placeholder="Confirm your password"/>
                   <br />
                   <div className="checkTyC">
-                    <input type="checkbox"/><p>Haz click aqui para aceptar nuestros<br/><Link to="/termino">terminos y condiciones</Link>.</p>
+                    <input type="checkbox"/><p>Haz click aqui para aceptar nuestros<br/><Link to="/terminos">terminos y condiciones</Link>.</p>
                   </div>
                   
                   <div className="submitReg">
