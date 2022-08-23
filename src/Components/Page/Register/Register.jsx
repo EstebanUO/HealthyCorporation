@@ -14,7 +14,7 @@ export const Register = () => {
                   <div className="message">
                     <h2>Bienvenido a HealthyCorporation</h2>
                     <p>Si ya tienes una cuenta por favor inicia sesion aqui</p>
-                    <Link to="/login"> 
+                    <Link to="/login" className="links"> 
                       <button className="signUpBtn">Iniciar Sesion</button>
                     </Link>
                   </div>

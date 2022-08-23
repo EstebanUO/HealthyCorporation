@@ -40,7 +40,7 @@ export const Login = () => {
                   <div className="message">
                     <h2>Bienvenido a HealthyCorporation</h2>
                     <p>Si ya tienes una cuenta por favor inicia sesion aqui</p>
-                    <Link to="/register"> 
+                    <Link to="/register" className="links"> 
                       <button className="signUpBtn">Registrarse</button>
                     </Link>
                   </div>

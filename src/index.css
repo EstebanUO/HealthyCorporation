@@ -291,6 +291,10 @@ header img{
   justify-content: space-around;
 }
 
+.links{
+  text-decoration: none;
+}
+
 .border-icon{
   font-size: 2rem;
 }
