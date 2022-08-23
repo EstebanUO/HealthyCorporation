@@ -325,3 +325,85 @@ p{
   background-color: #6464f8;
 }
 
+/*---------------- Terminos -------------------*/
+.parrafo{
+  text-align: justify;
+}
+
+h2{
+  text-align: center;
+}
+
+h3{
+  text-align: center;
+}
+
+.container1{
+  background-color: #ffffff57;
+  padding: 3rem;
+  box-shadow: 1px 1px 18px black;
+  border-radius: 1rem;
+}
+
+
+/*---------------- ContactUS -------------------*/
+textarea{
+  min-height: 100px;
+  max-height: 200px;
+  max-width: 380px;
+  border-radius: 7px;
+  border-bottom: 2px solid #2196F3;
+  box-shadow:9px 6px 6px #90A4AE; 
+}
+  
+input{
+  width: 250px;
+  margin: 10px 0;
+  border-radius: 7px;
+  border-bottom: 2px solid #2196F3;
+  box-shadow:5px 5px 5px #90A4AE; 
+}
+
+label{
+  font-weight: bold;
+}
+
+
+.text{
+  background-color: #ffffff57;
+  width: 100%;
+  height: 1.5rem;
+  padding: .2rem;
+  font-size: 1rem;
+  border: none;
+  border-bottom: solid 1px black;
+}
+
+.text:focus{
+  outline: none;
+}
+
+.submitReg{
+  display: flex;
+  justify-content: center;
+}
+
+.boton{
+  padding: 1rem;
+  font-weight: 400;
+  background-color: #4a4aee;
+  border-radius: 2rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: .9rem;
+  margin-top: 2rem;
+  transition: all .3s ease-in;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+}
+
+.boton:hover{
+  background-color: #6464f8;
+}
