@@ -7,7 +7,7 @@ export const Header = () => {
     <>
         <header className='Up'>
           <div className='imgu'>
-            <a href="#"><img src={logo} alt="Logo" /></a>
+            <a href="/"><img src={logo} alt="Logo" /></a>
           </div>
         </header>
         <Nav />
