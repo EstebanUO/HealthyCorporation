@@ -47,7 +47,7 @@ export const Register = () => {
                     <input name="password" type="password" class="form-input" id="inputPassword" placeholder="Confirm your password"/>
                   <br />
                   <div className="checkTyC">
-                    <input type="checkbox"/><p>Haz click aqui para aceptar nuestros<br/><Link to="/terminos">terminos y condiciones</Link>.</p>
+                    <input type="checkbox" required/><p>Haz click aqui para aceptar nuestros<br/><Link to="/terminos">terminos y condiciones</Link>.</p>
                   </div>
                   
                   <div className="submitReg">
