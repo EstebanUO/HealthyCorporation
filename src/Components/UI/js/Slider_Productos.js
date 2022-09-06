@@ -3,7 +3,7 @@ import React from 'react';
 import img1 from './../../Image/condon_producto.jpg'
 import img2 from './../../Image/pastillas_productos.jpg'
 import img3 from './../../Image/shampoo_producto.jpg'
-import img4 from './../../Image/kotex_producto.jpg' 
+import img4 from './../../Image/kotex_producto.jpg'
 
 import styled from "styled-components";
 
@@ -12,40 +12,39 @@ import { ReactComponent as FlechaDerecha} from './../../Image/iconmonstr-arrow-r
 
 
 export const Slideshow = () => {
-    return( 
+    return(
       <ContenedorPrincipal>
       <ContenedorSlideMostrar>
           <Slide>
           <Link to='/' className='a'>
           <img src={img1} alt={img1} />
-          </Link> 
+          </Link>
           <TextoSlide>
             <p>Top productos de la semana</p>
           </TextoSlide>
           </Slide>
-          
+
 
 
           <Slide>
           <Link to='/' className='a'>
           <img src={img2} alt={img2} />
-          </Link> 
+          </Link>
           <TextoSlide>
             <p>Top productos de la semana</p>
           </TextoSlide>
           </Slide>
-          
 
 
           <Slide>
           <Link to='/' className='a'>
           <img src={img3} alt={img3} />
-          </Link> 
+          </Link>
           <TextoSlide>
             <p>Top productos de la semana</p>
           </TextoSlide>
           </Slide>
-          
+
 
 
           <Slide>
@@ -56,9 +55,8 @@ export const Slideshow = () => {
             <p>Top productos de la semana</p>
           </TextoSlide>
           </Slide>
-          
           </ContenedorSlideMostrar>
-          
+
           <Controles>
           <Boton> <FlechaIzquierda/> </Boton>
           <Boton derecho> <FlechaDerecha/> </Boton>
