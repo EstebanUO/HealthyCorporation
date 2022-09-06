@@ -122,7 +122,7 @@ export const Slideshow = () => {
     cursor: pointer;
     outline: none;
     width: 50px;
-    height: 50px;
+    height: 100px;
     text-align: center;
     position: absolute;
     transition: .3s ease all;
