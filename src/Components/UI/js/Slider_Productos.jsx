@@ -7,8 +7,8 @@ import img4 from './../../Image/kotex_producto.jpg'
 
 import styled from "styled-components";
 
-import { ReactComponent as FlechaIzquierda} from './../../Image/iconmonstr-arrow-left-thin.svg'
-import { ReactComponent as FlechaDerecha} from './../../Image/iconmonstr-arrow-right-thin.svg'
+import { ReactComponent as FlechaIzquierda} from './../../Image/iconmonstr-angel-left-thin.svg'
+import { ReactComponent as FlechaDerecha} from './../../Image/iconmonstr-angel-right-thin.svg'
 
 
 export const Slider_Productos = () => {
