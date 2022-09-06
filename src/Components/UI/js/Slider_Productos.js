@@ -59,13 +59,17 @@ export const Slideshow = () => {
           
           </ContenedorSlideMostrar>
           
-          <div>
-          <button> <FlechaIzquierda/> </button>
-          <button> <FlechaDerecha/> </button>
-          </div>
+          <Controles>
+          <Boton> <FlechaIzquierda/> </Boton>
+          <Boton derecho> <FlechaDerecha/> </Boton>
+          </Controles>
       </ContenedorPrincipal>
     )};
     const ContenedorPrincipal = styled.div`
+
+    position: relative;
+
+
     `;
     const ContenedorSlideMostrar = styled.div`
     display: flex;
@@ -104,6 +108,29 @@ export const Slideshow = () => {
 
     `;
 
+    const Controles = styled.div`
+    position: absolute;
+    top: 0;
+    z-index: 20;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    `;
+
+    const Boton = styled.button`
+    pointer-events: all;
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    position: absolute;
+    transition: .3s ease all;
+
+    ${props => props.derecho ? 'right: 0' : 'left: 0'}
+    `;
 
 
     
