@@ -11,7 +11,7 @@ import { ReactComponent as FlechaIzquierda} from './../../Image/iconmonstr-arrow
 import { ReactComponent as FlechaDerecha} from './../../Image/iconmonstr-arrow-right-thin.svg'
 
 
-export const Slideshow = () => {
+export const Slider_Productos = () => {
     return(
       <ContenedorPrincipal>
       <ContenedorSlideMostrar>
