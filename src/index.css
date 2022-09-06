@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
 }
 
 code {
@@ -199,14 +200,13 @@ nav .a{
 nav a:hover{
   color:white;
   transition: all 300ms;
-  border-bottom:solid white;
 }
 
 
 header{
   display: flex;
   justify-content: center;
-  height: 9rem;
+  height: 7.5rem;
 }
 
 header img{
