@@ -127,17 +127,5 @@ export const Slider_Productos = () => {
     position: absolute;
     transition: .3s ease all;
 
-<<<<<<< HEAD
     ${props => props.derecho ? 'right: 0' : 'left: 0'}
     `;
-
-
-    
-=======
-    path{
-      filter: ${props.derecho ? 'drop-shadow(-2px 0px 0px #fff)': 'drop-shadow(2px 0px 0px #fff'};
-    }
-
-    ${props => props.derecho ? 'right: 0' : 'left: 0'}
-    `;
->>>>>>> Sebas
