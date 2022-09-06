@@ -227,6 +227,8 @@ header img{
   box-shadow: 1px 1px 18px black;
   border-radius: 1rem;
   width: 24rem;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 .formularioReg{
@@ -353,6 +355,8 @@ h3{
   padding: 3rem;
   box-shadow: 1px 1px 18px black;
   border-radius: 1rem;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 
