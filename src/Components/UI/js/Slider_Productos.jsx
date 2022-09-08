@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import React from 'react';
+import React, {useRef} from 'react';
 import img1 from './../../Image/condon_producto.jpg'
 import img2 from './../../Image/pastillas_productos.jpg'
 import img3 from './../../Image/shampoo_producto.jpg'
@@ -11,10 +11,27 @@ import { ReactComponent as FlechaIzquierda} from './../../Image/iconmonstr-angel
 import { ReactComponent as FlechaDerecha} from './../../Image/iconmonstr-angel-right-thin.svg'
 
 
+
+
+
+
+
 export const Slider_Productos = () => {
+
+  const siguiente = () => {
+    console.log('slidemostrar')
+  }
+  
+  const anterior = () => {
+    console.log('anterior')
+  }
+  
+
+
+  const slidemostrar = useRef(null);
     return(
       <ContenedorPrincipal>
-      <ContenedorSlideMostrar>
+      <ContenedorSlideMostrar ref={slidemostrar}>
           <Slide>
           <Link to='/' className='a'>
           <img src={img1} alt={img1} />
@@ -51,15 +68,15 @@ export const Slider_Productos = () => {
           <Link to='/' className='a'>
           <img src={img4} alt={img4} />
           </Link>
-          <TextoSlide>
+          <TextoSlide colorfondo="#fff" colortexto = "#000">
             <p>Top productos de la semana</p>
           </TextoSlide>
           </Slide>
           </ContenedorSlideMostrar>
 
           <Controles>
-          <Boton> <FlechaIzquierda/> </Boton>
-          <Boton derecho> <FlechaDerecha/> </Boton>
+          <Boton onClick={anterior}> <FlechaIzquierda/> </Boton>
+          <Boton derecho onClick={siguiente}> <FlechaDerecha/> </Boton>
           </Controles>
       </ContenedorPrincipal>
     )};
@@ -90,8 +107,8 @@ export const Slider_Productos = () => {
     `;
 
     const TextoSlide = styled.div`
-    background: rgba(0,0,0,.5);
-    color: #fff;
+    background: ${props => props.colorFondo ? props.colorFondo: 'rgba(0,0,0,.3)'};
+    color: ${props => props.colortexto ? props.colortexto: '#fff'};
     width: 100%;
     padding: 10px 60px;
     text-aling: center;
@@ -126,6 +143,14 @@ export const Slider_Productos = () => {
     text-align: center;
     position: absolute;
     transition: .3s ease all;
+    &:hover {
+      background: rgba(0,0,0,.2);
+      path{
+        fill: #fff
+      }
+    }
+
+
 
     ${props => props.derecho ? 'right: 0' : 'left: 0'}
     `;
