@@ -14,7 +14,6 @@ const SliderHome = () => {
             </motion.div>
         ))}
         </motion.div>
-        
     </motion.div>
   )
 }
