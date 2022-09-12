@@ -66,7 +66,7 @@ export const Slider_Productos = () => {
       const tamañoSlide = slidemostrar.current.children[0].offsetWidth
       slidemostrar.current.style.transition = 'none'
       slidemostrar.current.style.transform = `translateX(-${tamañoSlide}px)`;
-
+      //Timer
       setTimeout(()=> {
         slidemostrar.current.style.transition = '2000'
         slidemostrar.current.style.transform = `translateX(0)`;
