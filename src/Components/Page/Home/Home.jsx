@@ -1,7 +1,6 @@
 import React from 'react';
 import { Header } from '../Layout/Header/Header';
 import { Footer } from '../Layout/Footer/Footer';
-import "../Home/Home.css";
 import Slider from '../../UI/SliderHome/SliderHome';
 
 

@@ -342,6 +342,18 @@ p{
   text-align: justify;
 }
 
+h1{
+    display: flex;
+    justify-content: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    margin-top: 2rem;
+    font-size: 3rem;
+    color: #727272;
+ 
+}
+
 h2{
   text-align: center;
 }
@@ -415,6 +427,7 @@ label{
   color: #fff;
   margin: auto;
   display: block;
+  margin-top: 2rem;
 }
 
 .boton:hover{
