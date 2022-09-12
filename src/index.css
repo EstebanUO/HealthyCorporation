@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
 }
 
 code {
@@ -199,14 +200,13 @@ nav .a{
 nav a:hover{
   color:white;
   transition: all 300ms;
-  border-bottom:solid white;
 }
 
 
 header{
   display: flex;
   justify-content: center;
-  height: 9rem;
+  height: 7.5rem;
 }
 
 header img{
@@ -227,6 +227,8 @@ header img{
   box-shadow: 1px 1px 18px black;
   border-radius: 1rem;
   width: 24rem;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 .formularioReg{
@@ -353,6 +355,8 @@ h3{
   padding: 3rem;
   box-shadow: 1px 1px 18px black;
   border-radius: 1rem;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 
@@ -418,3 +422,4 @@ label{
 .boton:hover{
   background-color: #6464f8;
 }
+
