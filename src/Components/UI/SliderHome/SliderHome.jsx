@@ -10,7 +10,7 @@ const SliderHome = () => {
         dragConstraints={{right: 0, left:-1323}} >
         {images.map(image => (
             <motion.div className='item'>
-                <img src={image} alt="" />
+                <img className='item-image' src={image} alt="" />
             </motion.div>
         ))}
         </motion.div>
