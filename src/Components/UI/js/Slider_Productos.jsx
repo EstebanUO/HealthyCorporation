@@ -10,12 +10,6 @@ import styled from "styled-components";
 import { ReactComponent as FlechaIzquierda} from './../../Image/iconmonstr-angel-left-thin.svg'
 import { ReactComponent as FlechaDerecha} from './../../Image/iconmonstr-angel-right-thin.svg'
 
-
-
-
-
-
-
 export const Slider_Productos = () => {
 
   const siguiente = () => {
