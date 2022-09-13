@@ -1,0 +1,61 @@
+.content-marks{
+    background-color: #E3FAF1;
+    margin-bottom: 5rem;
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    
+}
+
+.marks{
+    height: 15rem;
+}
+
+.text-marks{
+    color: #83c5eb;
+    font-size: 2.5rem;
+    margin-bottom: -2rem;
+}
+
+.image-marks{
+    padding: 1rem;
+}
+
+.edit{
+    border-radius: 10rem;
+    width: 4.5rem;
+}
+
+.edit2{
+    border-radius: 10rem;
+    width: 11rem;
+}
+
+.edit3{
+    border-radius: 10rem;
+    width: 11rem;
+}
+
+.edit4{
+    border-radius: 10rem;
+    width: 6.5rem;
+}
+
+.edit5{
+    border-radius: 10rem;
+    width: 6.5rem;
+}
+
+.edit6{
+    border-radius: 10rem;
+    width: 11rem;
+}
+
+
+.edit1{
+    border-radius: 10rem;
+    width: 6rem;
+}
