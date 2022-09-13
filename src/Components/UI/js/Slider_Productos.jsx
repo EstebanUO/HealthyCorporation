@@ -33,9 +33,8 @@ export const Slider_Productos = () => {
       slidemostrar.current.style.transform = `translateX(-${tamañoSlide}px)`;
 
       const transicion = () => {
-      slidemostrar.current.style.transition = 
-      'none';
-      slidemostrar.current.style.translate = `translateX(0)`;
+      slidemostrar.current.style.transition = 'none';
+      slidemostrar.current.style.transform = `translateX(0)`;
 
       slidemostrar.current.appendChild(primerElemento);
 
@@ -65,7 +64,7 @@ export const Slider_Productos = () => {
       slidemostrar.current.style.transform = `translateX(-${tamañoSlide}px)`;
       //Timer
       setTimeout(()=> {
-        slidemostrar.current.style.transition = '2000'
+        slidemostrar.current.style.transition = '2000ms ease-out all'
         slidemostrar.current.style.transform = `translateX(0)`;
       }, 30);
     }
@@ -86,7 +85,7 @@ export const Slider_Productos = () => {
     slidemostrar.current.addEventListener('mouseleave', () => {
       intervaloSlideMostrar.current = setInterval(()=> {
         siguiente();
-      }, 5000);
+      }, 2000);
     });
 
     
@@ -157,10 +156,10 @@ export const Slider_Productos = () => {
 
     const Slide = styled.div`
     min-width: 100%;
-    overglow: hidden;
+    overflow: hidden;
     transition: .3s ease all;
-    z-index: 10;
     max-height: 500px;
+    z-index: 10;
     position: relative;
 
     img{
