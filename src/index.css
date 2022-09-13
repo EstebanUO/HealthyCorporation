@@ -302,9 +302,7 @@ header img{
   font-size: 2rem;
 }
 
-p{
-  text-align: center;
-}
+
 
 .message {
   padding: 3rem;
@@ -350,8 +348,6 @@ h1{
     sans-serif;
     margin-top: 2rem;
     font-size: 3rem;
-    color: #727272;
- 
 }
 
 h2{

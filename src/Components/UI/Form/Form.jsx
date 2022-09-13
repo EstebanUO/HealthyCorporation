@@ -17,7 +17,7 @@ export const Form = () => {
       <form className="formulario" onSubmit={sendEmail}>
             <div>
               <div className="container1">
-                <h1>Contact Us</h1>
+                <h1>Contacto</h1>
                
                 <label>Nombres:</label><br/>
                 <input type="text" className='text' name='user-name' placeholder="Digite sus respectivos nombre.."></input>

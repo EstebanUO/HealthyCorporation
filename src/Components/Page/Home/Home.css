@@ -1,0 +1,130 @@
+.title-home{
+    color: rgb(131, 131, 131);
+}
+.title-home2{
+    color: rgb(131, 131, 131);
+    font-size: 5rem;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 7rem;
+}
+.title-home3{
+    color: rgb(131, 131, 131);;
+    font-size: 6rem;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 7rem;
+}
+
+/*------------------- Noticie ------------------------*/
+
+.Noticie{
+    margin-top: -3rem;
+}
+
+.Noticie2{
+    display: flex;
+    flex-direction: column;
+}
+
+.First{
+    display: flex;  
+    justify-content: flex-start;
+    padding-left: 7rem;
+    color:rgb(250, 54, 54);
+}
+
+.First2{
+    display: flex;  
+    justify-content: flex-start;
+    padding-left: 7rem;
+    margin-top: 3rem;
+    color:rgb(250, 54, 54);
+}
+
+.Second{
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 7rem;
+    color:#83c5eb;
+    font-size: 3rem;
+}
+
+.Paragraph{
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: flex-start; 
+    padding-left: 7rem;
+    padding-right: 3rem;
+
+}
+
+.Second2{
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 7rem;
+    color:#83c5eb;
+    font-size: 2.5rem;
+    margin-top: -4px;
+}
+
+.Paragraph2{
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: flex-start; 
+    padding-left: 7rem;
+    padding-right: 3rem;
+    margin-top: -3rem;
+}
+
+.Second3{
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 5.5rem;
+    color:#83c5eb;
+    font-size: 2.5rem;
+    margin-top: 8rem;
+}
+
+.Paragraph3{
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: flex-end; 
+    padding-left: 5rem;
+    padding-right: 2rem;
+  
+}
+
+.Image-noticie{
+   margin-top: -6rem;
+   padding-right: 3rem;
+   width: 35rem;
+}
+
+.Image-noticie2{
+    margin-top: -6rem;
+    width: 40rem;
+ }
+
+.Content{
+    display: flex;
+    flex-direction: row;
+    margin-top: -2rem;
+}
+
+.Content2{
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: -2rem;
+}
+
+.products-home{
+    background-color: #E3FAF1;
+    height: 26rem;
+}
+
+.title-home{
+    color: #83c5eb;
+    padding-top: 1rem;
+    font-size: 2.5rem;
+}

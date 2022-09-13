@@ -12,17 +12,65 @@ import { ReactComponent as FlechaDerecha} from './../../Image/iconmonstr-angel-r
 
 export const Slider_Productos = () => {
 
+  const slidemostrar = useRef(null);
   const siguiente = () => {
-    console.log('slidemostrar')
+    
+    //Esto para comprobar que el slide tenga elementos.
+    if (slidemostrar.current.children.length > 0) {
+      
+      // Para obtener el primer elemento del slide.
+      const primerElemento = slidemostrar.current.children[0];
+
+      
+
+      slidemostrar.current.style.transition = `2000ms ease-out all`;
+
+      const tamañoSlide = slidemostrar.current.children[0].offsetWidth
+
+
+      //para mover el slide
+      slidemostrar.current.style.transform = `translateX(-${tamañoSlide}px)`;
+
+      const transicion = () => {
+      slidemostrar.current.style.transition = 
+      'none';
+      slidemostrar.current.style.translate = `translateX(0)`;
+
+      slidemostrar.current.appendChild(0);
+
+      
+    }
+
+    slidemostrar.current.addEventListener('transitionend', transicion);
+
+
+    }
   }
   
   const anterior = () => {
     console.log('anterior')
+    if(slidemostrar.current.children.length > 0){
+
+      const index = slidemostrar.current.children.length - 1;
+
+      const ultimoElemento = slidemostrar.current.children[index];
+
+      slidemostrar.current.insertBefore(ultimoElemento, slidemostrar.current.firstChild);
+
+      const tamañoSlide = slidemostrar.current.children[0].offsetWidth
+      slidemostrar.current.style.transition = 'none'
+      slidemostrar.current.style.transform = `translateX(-${tamañoSlide}px)`;
+      //Timer
+      setTimeout(()=> {
+        slidemostrar.current.style.transition = '2000'
+        slidemostrar.current.style.transform = `translateX(0)`;
+      }, 30);
+    }
   }
   
 
 
-  const slidemostrar = useRef(null);
+
     return(
       <ContenedorPrincipal>
       <ContenedorSlideMostrar ref={slidemostrar}>
