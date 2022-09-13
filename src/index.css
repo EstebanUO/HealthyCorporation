@@ -178,6 +178,12 @@ code {
   align-items: center;
 }
 
+.img{
+  margin-top: 10px; height: 65vh;
+
+
+}
+
 nav{
   background-color:#83c5eb;
   display: flex;
