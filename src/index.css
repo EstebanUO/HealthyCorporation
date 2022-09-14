@@ -56,7 +56,8 @@ header{
   display: flex;
   background-color: #5bc3fc;
   justify-content: center;
-  height: 5.5rem;
+  height: 3rem;
+  padding: 2.5rem;
 }
 
 header img{
@@ -158,6 +159,7 @@ header img{
   padding: 3rem;
   margin-right: 6rem;
   margin-left: 6rem;
+  text-align: center;
 }
 
 .message h2 {

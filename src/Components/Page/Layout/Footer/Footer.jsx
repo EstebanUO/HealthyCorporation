@@ -186,7 +186,7 @@ export const Footer = () => {
         </MDBContainer>
   
         <div className='text-center p-3' style={{ backgroundColor: 'rgb(83 194 255 / 84%)', borderTop: 'solid black' }}>
-          © 2020 Copyright <a className='text-white' href='https://youtube.com/'>Healthy Corporation</a>
+          <a className='text-white' href='/'>Healthy Corporation</a> © 2020 Copyright 
         </div>
       </MDBFooter>
     )
