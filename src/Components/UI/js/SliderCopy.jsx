@@ -17,21 +17,21 @@ const SliderCopy= () => {
           <div class="carousel-item active tancition-5s" data-bs-interval="4000">
             <img src={img1} class="d-block w-100" style={{height: '34rem'}} alt="..."/>
               <div class="carousel-caption d-none d-md-block">
-                <h5>Mejores productos</h5>
+                
              
               </div>
           </div>
           <div class="carousel-item tancition-5s" data-bs-interval="4000">
             <img src={img2} class="d-block w-100" alt="..."/>
               <div class="carousel-caption d-none d-md-block">
-                <h5>Mejores productos</h5>
+                
           
               </div>
           </div>
           <div class="carousel-item tancition-5s" data-bs-interval="4000">
             <img src={img3} class="d-block w-100" alt="..."/>
               <div class="carousel-caption d-none d-md-block">
-                <h5>Mejores productos</h5>
+                
 
               </div>
           </div>
