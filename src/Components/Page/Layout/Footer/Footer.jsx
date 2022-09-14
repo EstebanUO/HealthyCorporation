@@ -27,7 +27,7 @@ export const Footer = () => {
           <a href='' className='me-4 text-reset'>
             <MDBIcon fab icon="linkedin" />
           </a>
-          <a href='' className='me-4 text-reset'>
+          <a href='https://github.com/EstebanUO' target='_blank' className='me-4 text-reset'>
             <MDBIcon fab icon="github" />
           </a>
         </div>
@@ -47,11 +47,16 @@ export const Footer = () => {
               </p>
             </MDBCol>
 
+<<<<<<< HEAD
             <MDBCol md="2" lg="2" xl="2" className='mx-auto mb-4'>
               <h6 className='text-uppercase fw-bold mb-4'>Products</h6>
+=======
+            <MDBCol md="2" lg="2" xl="2" className='mx-auto mb-4' >
+              <h6 className='text-uppercase fw-bold mb-4'>Lenguajes</h6>
+>>>>>>> df3fcf730f590430949ad80a5ccd183e506eab21
               <p>
                 <a href='#!' className='text-reset'>
-                  Angular
+                  JavaScript
                 </a>
               </p>
               <p>
@@ -61,12 +66,12 @@ export const Footer = () => {
               </p>
               <p>
                 <a href='#!' className='text-reset'>
-                  Vue
+                  Python
                 </a>
               </p>
               <p>
                 <a href='#!' className='text-reset'>
-                  Laravel
+                  SQLite
                 </a>
               </p>
             </MDBCol>
@@ -116,11 +121,16 @@ export const Footer = () => {
         </MDBContainer>
       </section>
 
+<<<<<<< HEAD
       <div className='text-center p-4' style={{ backgroundColor: 'rgba(0, 0, 0, 0.05)' }}>
         © 2021 Copyright:
         <a className='text-reset fw-bold' href='https://mdbootstrap.com/'>
           MDBootstrap.com
         </a>
+=======
+      <div className='text-center p-4'style={{backgroundColor: "rgb(74 165 218)", color: "white"}}>
+        <a className='text-reset fw-bold' href='/'>Healthy Corporation </a>©Copyright 2021-2022.
+>>>>>>> df3fcf730f590430949ad80a5ccd183e506eab21
       </div>
     </MDBFooter>
   )
