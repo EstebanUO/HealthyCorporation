@@ -14,6 +14,15 @@ code {
 }
 
 /*---------------- Nav -------------------*/
+.headerDisplay{
+  display: flex;
+  align-items: center;
+}
+
+.userIcon{
+  font-size: 3rem;
+}
+
 
 .imgu{
   width: 5rem;
