@@ -1,10 +1,10 @@
 import React from 'react';
-import img1 from './../../Image/condon_producto.jpg'
-import img2 from './../../Image/pastillas_productos.jpg'
+import img1 from './../../Image/Marks/jonson_slider.jpg'
+import img2 from './../../Image/Marks/promedon.jpg'
 import img3 from './../../Image/shampoo_producto.jpg'
 
 
-const Slider = () => {
+const SliderCopy= () => {
   return (
     <div>
       <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
@@ -14,22 +14,22 @@ const Slider = () => {
           <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div>
         <div class="carousel-inner">
-          <div class="width carousel-item active tancition-5s" data-bs-interval="4000">
-            <img src={img1} class="d-block w-50 margin-left" alt="..."/>
+          <div class="carousel-item active tancition-5s" data-bs-interval="4000">
+            <img src={img1} class="d-block w-100" style={{height: '34rem'}} alt="..."/>
               <div class="carousel-caption d-none d-md-block">
                 <h5>Mejores productos</h5>
              
               </div>
           </div>
-          <div class="width carousel-item tancition-5s" data-bs-interval="4000">
-            <img src={img2} class="d-block w-50 margin-left" alt="..."/>
+          <div class="carousel-item tancition-5s" data-bs-interval="4000">
+            <img src={img2} class="d-block w-100" alt="..."/>
               <div class="carousel-caption d-none d-md-block">
                 <h5>Mejores productos</h5>
           
               </div>
           </div>
-          <div class="width carousel-item tancition-5s" data-bs-interval="4000">
-            <img src={img3} class="d-block w-50 margin-left" alt="..."/>
+          <div class="carousel-item tancition-5s" data-bs-interval="4000">
+            <img src={img3} class="d-block w-100" alt="..."/>
               <div class="carousel-caption d-none d-md-block">
                 <h5>Mejores productos</h5>
 
@@ -49,6 +49,6 @@ const Slider = () => {
   );
 }
 
-export default Slider;
+export default SliderCopy;
 
 
