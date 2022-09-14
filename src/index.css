@@ -286,3 +286,11 @@ label{
 .tancition-5s{
   transition: all .5s ease;
 }
+
+.width{
+  height: 20rem;
+}
+
+.margin-left{
+  margin-left: 22rem;
+}
