@@ -5,7 +5,6 @@ import { MDBFooter, MDBContainer, MDBRow, MDBCol, MDBIcon } from 'mdb-react-ui-k
 
 export const Footer = () => {
     return (
-<<<<<<< HEAD
 
     <MDBFooter bgColor='light' className='text-center text-lg-start text-muted' >
       <section className='d-flex justify-content-center justify-content-lg-between p-4 border-bottom' style={{backgroundColor: "#83c5eb", borderTop: "solid black"}}>
@@ -186,12 +185,6 @@ export const Footer = () => {
         <div className='text-center p-3' style={{ backgroundColor: 'rgb(83 194 255 / 84%)', borderTop: 'solid black' }}>
           <a className='text-white' href='/'>Healthy Corporation</a> © 2020 Copyright 
 
-=======
-      <MDBFooter bgColor='light' className='text-center text-lg-start text-muted' >
-      <section className='d-flex justify-content-center justify-content-lg-between p-4 border-bottom' style={{backgroundColor: "#83c5eb", borderTop: "solid black"}}>
-        <div className='me-5 d-none d-lg-block'>
-          <span>Mira nuestras redes sociales:</span>
->>>>>>> a1193831e2a6fe7afb44e5da375078c260305b66
         </div>
 
         <div >
