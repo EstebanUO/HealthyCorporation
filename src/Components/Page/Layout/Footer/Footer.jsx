@@ -75,7 +75,7 @@ export const Footer = () => {
           <section className=''>
             <MDBRow>
               <MDBCol lg='3' md='6' className='mb-4 mb-md-0'>
-                <h5 className='text-uppercase'>Links</h5>
+                <h5 className='text-uppercase'>Link</h5> 
   
                 <ul className='list-unstyled mb-0'>
                   <li>
