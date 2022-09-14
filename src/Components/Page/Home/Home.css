@@ -32,6 +32,7 @@
     justify-content: flex-start;
     padding-left: 7rem;
     color:rgb(250, 54, 54);
+    padding-top: 5rem;
 }
 
 .First2{
@@ -56,7 +57,7 @@
     justify-content: flex-start; 
     padding-left: 7rem;
     padding-right: 3rem;
-
+    padding-top: 2rem;
 }
 
 .Second2{
@@ -74,7 +75,6 @@
     justify-content: flex-start; 
     padding-left: 7rem;
     padding-right: 3rem;
-    margin-top: -3rem;
 }
 
 .Second3{
@@ -92,7 +92,8 @@
     justify-content: flex-end; 
     padding-left: 5rem;
     padding-right: 2rem;
-  
+    
+  padding-top: 2rem;
 }
 
 .Image-noticie{

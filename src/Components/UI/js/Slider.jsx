@@ -2,12 +2,12 @@ import React from 'react';
 import img1 from './../../Image/condon_producto.jpg'
 import img2 from './../../Image/pastillas_productos.jpg'
 import img3 from './../../Image/shampoo_producto.jpg'
-import img4 from './../../Image/kotex_producto.jpg'
+/*import img4 from './../../Image/kotex_producto.jpg'*/
 
 const Slider = () => {
-    return (
-        <div>
-                  <div>
+  return (
+    <div>
+      <div>
         <div
           id="carouselExampleCaptions"
           class="carousel slide"
@@ -84,8 +84,8 @@ const Slider = () => {
           </button>
         </div>
       </div>
-        </div>
-    );
+    </div>
+  );
 }
 
 export default Slider;
