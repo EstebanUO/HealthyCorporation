@@ -14,7 +14,7 @@ export const Form = () => {
 
   return (
     <div>
-      <form className="formulario" onSubmit={sendEmail}>
+      <form className="contact" onSubmit={sendEmail}>
             <div>
               <div className="container1">
                 <h1>Contacto</h1>

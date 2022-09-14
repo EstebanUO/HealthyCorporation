@@ -63,14 +63,14 @@ export const Footer = () => {
               </MDBRow>
             </form>
           </section>
-  
+{/*   
           <section className='mb-4'>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum repellat quaerat
               voluptatibus placeat nam, commodi optio pariatur est quia magnam eum harum corrupti dicta, aliquam
               sequi voluptate quas.
             </p>
-          </section>
+          </section> */}
   
           <section className=''>
             <MDBRow>
@@ -186,10 +186,7 @@ export const Footer = () => {
         </MDBContainer>
   
         <div className='text-center p-3' style={{ backgroundColor: 'rgb(83 194 255 / 84%)', borderTop: 'solid black' }}>
-          © 2020 Copyright:
-          <a className='text-white' href='https://youtube.com/'>
-            Healthy Corporation
-          </a>
+          © 2020 Copyright <a className='text-white' href='https://youtube.com/'>Healthy Corporation</a>
         </div>
       </MDBFooter>
     )
