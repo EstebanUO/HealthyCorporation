@@ -299,3 +299,9 @@ label{
 a{
   text-decoration: none;
 }
+
+/*utilidad*/
+
+.tancition-5s{
+  transition: all .5s ease;
+}
