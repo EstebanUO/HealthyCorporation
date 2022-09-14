@@ -15,7 +15,7 @@ const SliderCopy= () => {
         </div>
         <div class="carousel-inner">
           <div class="carousel-item active tancition-5s" data-bs-interval="4000">
-            <img src={img1} class="d-block w-100" style={{height: '34rem'}} alt="..."/>
+            <img src={img1} class="d-block w-100"  alt="..."/>
               <div class="carousel-caption d-none d-md-block">
                 <h5>Mejores productos</h5>
              
