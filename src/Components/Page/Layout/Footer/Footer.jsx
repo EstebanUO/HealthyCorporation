@@ -4,197 +4,14 @@ import { MDBFooter, MDBContainer, MDBRow, MDBCol, MDBIcon } from 'mdb-react-ui-k
 
 
 export const Footer = () => {
-    return (
-<<<<<<< HEAD
-
-    <MDBFooter bgColor='light' className='text-center text-lg-start text-muted' >
-      <section className='d-flex justify-content-center justify-content-lg-between p-4 border-bottom' style={{backgroundColor: "#83c5eb", borderTop: "solid black"}}>
+  return (
+    <MDBFooter bgColor='light' className='text-center text-lg-start text-muted'>
+      <section className='d-flex justify-content-center justify-content-lg-between p-4 border-bottom'>
         <div className='me-5 d-none d-lg-block'>
-          <span>Mira nuestras redes sociales:</span>
-
-        <MDBFooter className='text-center' color='balk' style={{ backgroundColor: '#83c5eb',borderTop: 'solid black' }}>
-        <MDBContainer className='p-4'>
-          <section className='mb-4'>
-            <MDBBtn outline color="light" floating className='m-1' href='#!' role='button'>
-              <MDBIcon fab icon='facebook-f' />
-            </MDBBtn>
-  
-            <MDBBtn outline color="light" floating className='m-1' href='#!' role='button'>
-              <MDBIcon fab icon='twitter' />
-            </MDBBtn>
-  
-            <MDBBtn outline color="light" floating className='m-1' href='#!' role='button'>
-              <MDBIcon fab icon='google' />
-            </MDBBtn>
-  
-            <MDBBtn outline color="light" floating className='m-1' href='#!' role='button'>
-              <MDBIcon fab icon='instagram' />
-            </MDBBtn>
-  
-            <MDBBtn outline color="light" floating className='m-1' href='#!' role='button'>
-              <MDBIcon fab icon='linkedin-in' />
-            </MDBBtn>
-  
-            <MDBBtn outline color="light" floating className='m-1' href='#!' role='button'>
-              <MDBIcon fab icon='github' />
-            </MDBBtn>
-          </section>
-  
-          <section className=''>
-            <form action=''>
-              <MDBRow className='d-flex justify-content-center'>
-                <MDBCol size="auto">
-                  <p className='text_footer' >
-                    <strong>Suscribete para más </strong>
-                  </p>
-                </MDBCol>
-  
-                <MDBCol md='5'  start='12' style={{ marginTop: "-1rem", transition: "all 300ms"}}>
-                  <MDBInput contrast type='email' label='' className='mb-4' />
-                </MDBCol>
-  
-                <MDBCol size="auto">
-                  <MDBBtn outline color='light'  style={{ marginTop: "-6px", transition: "all 300ms"}}>
-                    Subscribe
-                  </MDBBtn>
-                </MDBCol>
-              </MDBRow>
-            </form>
-          </section>
-{/*   
-          <section className='mb-4'>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum repellat quaerat
-              voluptatibus placeat nam, commodi optio pariatur est quia magnam eum harum corrupti dicta, aliquam
-              sequi voluptate quas.
-            </p>
-          </section> */}
-  
-          <section className=''>
-            <MDBRow>
-              <MDBCol lg='3' md='6' className='mb-4 mb-md-0'>
-                <h5 className='text-uppercase'>Link</h5> 
-  
-                <ul className='list-unstyled mb-0'>
-                  <li>
-                    <a href='#!' className='text-white'>
-                      Link 1
-                    </a>
-                  </li>
-                  <li>
-                    <a href='#!' className='text-white'>
-                      Link 2
-                    </a>
-                  </li>
-                  <li>
-                    <a href='#!' className='text-white'>
-                      Link 3
-                    </a>
-                  </li>
-                  <li>
-                    <a href='#!' className='text-white'>
-                      Link 4
-                    </a>
-                  </li>
-                </ul>
-              </MDBCol>
-  
-              <MDBCol lg='3' md='6' className='mb-4 mb-md-0'>
-                <h5 className='text-uppercase'>Links</h5>
-  
-                <ul className='list-unstyled mb-0'>
-                  <li>
-                    <a href='#!' className='text-white'>
-                      Link 1
-                    </a>
-                  </li>
-                  <li>
-                    <a href='#!' className='text-white'>
-                      Link 2
-                    </a>
-                  </li>
-                  <li>
-                    <a href='#!' className='text-white'>
-                      Link 3
-                    </a>
-                  </li>
-                  <li>
-                    <a href='#!' className='text-white'>
-                      Link 4
-                    </a>
-                  </li>
-                </ul>
-              </MDBCol>
-  
-              <MDBCol lg='3' md='6' className='mb-4 mb-md-0'>
-                <h5 className='text-uppercase'>Links</h5>
-  
-                <ul className='list-unstyled mb-0'>
-                  <li>
-                    <a href='#!' className='text-white'>
-                      Link 1
-                    </a>
-                  </li>
-                  <li>
-                    <a href='#!' className='text-white'>
-                      Link 2
-                    </a>
-                  </li>
-                  <li>
-                    <a href='#!' className='text-white'>
-                      Link 3
-                    </a>
-                  </li>
-                  <li>
-                    <a href='#!' className='text-white'>
-                      Link 4
-                    </a>
-                  </li>
-                </ul>
-              </MDBCol>
-  
-              <MDBCol lg='3' md='6' className='mb-4 mb-md-0'>
-                <h5 className='text-uppercase'>Links</h5>
-  
-                <ul className='list-unstyled mb-0'>
-                  <li>
-                    <a href='#!' className='text-white'>
-                      Link 1
-                    </a>
-                  </li>
-                  <li>
-                    <a href='#!' className='text-white'>
-                      Link 2
-                    </a>
-                  </li>
-                  <li>
-                    <a href='#!' className='text-white'>
-                      Link 3
-                    </a>
-                  </li>
-                  <li>
-                    <a href='#!' className='text-white'>
-                      Link 4
-                    </a>
-                  </li>
-                </ul>
-              </MDBCol>
-            </MDBRow>
-          </section>
-        </MDBContainer>
-  
-        <div className='text-center p-3' style={{ backgroundColor: 'rgb(83 194 255 / 84%)', borderTop: 'solid black' }}>
-          <a className='text-white' href='/'>Healthy Corporation</a> © 2020 Copyright 
-
-=======
-      <MDBFooter bgColor='light' className='text-center text-lg-start text-muted' >
-      <section className='d-flex justify-content-center justify-content-lg-between p-4 border-bottom' style={{backgroundColor: "#83c5eb", borderTop: "solid black"}}>
-        <div className='me-5 d-none d-lg-block'>
-          <span>Mira nuestras redes sociales:</span>
->>>>>>> a1193831e2a6fe7afb44e5da375078c260305b66
+          <span>Get connected with us on social networks:</span>
         </div>
 
-        <div >
+        <div>
           <a href='' className='me-4 text-reset'>
             <MDBIcon fab icon="facebook-f" />
           </a>
@@ -216,13 +33,13 @@ export const Footer = () => {
         </div>
       </section>
 
-      <section className='' style={{backgroundColor: "#83c5eb", marginTop: "-3.1rem"}}>
-        <MDBContainer className='text-center text-md-start mt-5' >
-          <MDBRow className='mt-3' >
+      <section className=''>
+        <MDBContainer className='text-center text-md-start mt-5'>
+          <MDBRow className='mt-3'>
             <MDBCol md="3" lg="4" xl="3" className='mx-auto mb-4'>
               <h6 className='text-uppercase fw-bold mb-4'>
                 <MDBIcon icon="gem" className="me-3" />
-                Healthy Corporation
+                Company name
               </h6>
               <p>
                 Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet,
@@ -230,8 +47,8 @@ export const Footer = () => {
               </p>
             </MDBCol>
 
-            <MDBCol md="2" lg="2" xl="2" className='mx-auto mb-4' >
-              <h6 className='text-uppercase fw-bold mb-4'>Lenguages</h6>
+            <MDBCol md="2" lg="2" xl="2" className='mx-auto mb-4'>
+              <h6 className='text-uppercase fw-bold mb-4'>Products</h6>
               <p>
                 <a href='#!' className='text-reset'>
                   Angular
@@ -255,20 +72,25 @@ export const Footer = () => {
             </MDBCol>
 
             <MDBCol md="3" lg="2" xl="2" className='mx-auto mb-4'>
-              <h6 className='text-uppercase fw-bold mb-4'>Recursos</h6>
+              <h6 className='text-uppercase fw-bold mb-4'>Useful links</h6>
               <p>
                 <a href='#!' className='text-reset'>
-                  Blog
+                  Pricing
                 </a>
               </p>
               <p>
                 <a href='#!' className='text-reset'>
-                  Meet
+                  Settings
                 </a>
               </p>
               <p>
                 <a href='#!' className='text-reset'>
-                  Jira
+                  Orders
+                </a>
+              </p>
+              <p>
+                <a href='#!' className='text-reset'>
+                  Help
                 </a>
               </p>
             </MDBCol>
@@ -277,32 +99,29 @@ export const Footer = () => {
               <h6 className='text-uppercase fw-bold mb-4'>Contact</h6>
               <p>
                 <MDBIcon icon="home" className="me-2" />
-                  Armenia Quindio
+                New York, NY 10012, US
               </p>
               <p>
                 <MDBIcon icon="envelope" className="me-3" />
-                Healthy_Contact@gmail.com
+                info@example.com
               </p>
               <p>
                 <MDBIcon icon="phone" className="me-3" /> + 01 234 567 88
               </p>
               <p>
-                <MDBIcon icon="print" className="me-3" /> <a href='#!' className='text-reset'>
-                  Formulario de contacto
-                </a>
+                <MDBIcon icon="print" className="me-3" /> + 01 234 567 89
               </p>
             </MDBCol>
           </MDBRow>
         </MDBContainer>
       </section>
 
-      <div className='text-center p-4'style={{backgroundColor: "rgb(74 165 218)", color: "white"}}>
-        © 2021 Copyright 
-        <a className='text-reset fw-bold' href='https://tiktok.com/'>
-          Healthy Corporation
+      <div className='text-center p-4' style={{ backgroundColor: 'rgba(0, 0, 0, 0.05)' }}>
+        © 2021 Copyright:
+        <a className='text-reset fw-bold' href='https://mdbootstrap.com/'>
+          MDBootstrap.com
         </a>
       </div>
     </MDBFooter>
-    )
+  )
 }
-
