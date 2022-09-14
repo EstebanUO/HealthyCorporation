@@ -3,6 +3,7 @@ import { Header } from '../Layout/Header/Header';
 import { Footer } from '../Layout/Footer/Footer';
 import { Categories } from '../../UI/Categories/Categories';
 import { Marks } from '../../UI/Marks/Marks';
+import Slider2 from '../../UI/js/SliderCopy';
 import Slider from '../../UI/SliderHome/SliderHome';
 import noticie from '../../Image/Noticie/tos.jpg';
 import noticie2 from '../../Image/Noticie/enfermera.png';
@@ -16,7 +17,9 @@ export const Home = () => {
     <div>
       <Header />
       <div>
-        
+
+        <Slider2 />
+
         <div>
           <h1 className='title-home2'>Categorias</h1>
           <Categories />
@@ -62,13 +65,6 @@ export const Home = () => {
 
             <Marks />
           </div>
-
-
-
-
-
-
-
 
         </div>
       </div>

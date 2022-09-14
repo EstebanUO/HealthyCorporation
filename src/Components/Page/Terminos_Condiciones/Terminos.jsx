@@ -6,7 +6,7 @@ export const Terminos = () => {
   return (
     <div>
       <Header/>
-        <div className="formulario">
+        <div className="terminos">
             <div>
               <div className="container1">
 

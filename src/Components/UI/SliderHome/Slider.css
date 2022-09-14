@@ -20,3 +20,124 @@
 .item-image{
     border-radius: 1rem;
 }
+
+
+/*-------------- see ------------*/
+.all2{
+    margin-top: -1em;
+    display: flex;
+    justify-content: center;
+}
+
+.text_send{
+    font-size: 1.5rem;
+}
+
+.text_send2{
+    font-size: 1rem;
+    margin-top: .3rem;
+}
+
+.image-send{
+    height: 17rem;
+    min-width: 20rem;
+    padding: 1rem;
+}
+
+.img_edit{
+    height: 68%;
+    width: 80%;
+    margin-right: 2rem;
+    border-radius: 1rem;
+    margin-left: 2rem;
+}
+
+.btn_send{
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+    margin-top: 2rem;
+  
+    margin-bottom: -1rem;
+}
+
+.content_send{
+    margin-left: 3rem;
+    margin-top: 1rem;
+}
+
+#content{
+    display: flex;
+    flex-direction: row;
+    
+
+    position: absolute;
+    z-index: 1; 
+    background-color: #83c5eb;
+    border-radius: 18px;
+    font-family: sans-serif;
+    line-height: 1;
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(10px);
+    max-width: 70%;
+    padding: 40px 55px;
+    transition: all .3s ease;
+    border:solid #221007;
+  }
+  .off{
+    display: none;
+  }
+  .create{
+    margin-bottom: 1rem;
+    border-radius: .3rem;
+    border: none;
+    transition: all 300ms;
+    height: 3em;
+  }
+  #reser{
+    background-color: #5cf15c;
+  }
+  #reser:hover{
+    background-color: #eee7e7;
+      transition: all 300ms;
+      border:solid #221007;
+  }
+
+
+  #cancel{
+    background-color: #f15c5c;
+    
+  }
+  #cancel:hover{
+    background-color: #eee7e7;
+      transition: all 300ms;
+      border:solid #221007;
+      
+  }
+  #Send{
+    background-color: #a4dcff;
+  }
+  #Send:hover{
+    background-color: #eee7e7;
+    transition: all 300ms;
+    border:solid #221007;
+  }
+  #btn_create{
+    width: 12rem;
+    margin-top: 2rem;
+    box-shadow: 0 0 15px #b3b3b3;
+    border-radius: 15px;
+    background-color: #eee7e7;
+    color: #ffff;
+  }
+  #btn_create:hover{
+    background-color: #eee7e7;
+    
+    transition: all 300ms;
+    box-shadow: 0 0 15px #7e7e7e;
+  }
+  
+  #car{
+    width: 34%;
+    margin-right: -300px;
+  }

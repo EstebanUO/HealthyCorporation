@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import React, {useRef} from 'react';
+import React, {useRef, useEffect} from 'react';
 import img1 from './../../Image/condon_producto.jpg'
 import img2 from './../../Image/pastillas_productos.jpg'
 import img3 from './../../Image/shampoo_producto.jpg'
@@ -10,15 +10,10 @@ import styled from "styled-components";
 import { ReactComponent as FlechaIzquierda} from './../../Image/iconmonstr-angel-left-thin.svg'
 import { ReactComponent as FlechaDerecha} from './../../Image/iconmonstr-angel-right-thin.svg'
 
-
-
-
-
-
-
 export const Slider_Productos = () => {
 
   const slidemostrar = useRef(null);
+  const intervaloSlideMostrar = useRef(null);
   const siguiente = () => {
     
     //Esto para comprobar que el slide tenga elementos.
@@ -38,11 +33,12 @@ export const Slider_Productos = () => {
       slidemostrar.current.style.transform = `translateX(-${tamañoSlide}px)`;
 
       const transicion = () => {
-      slidemostrar.current.style.transition = 
-      'none';
-      slidemostrar.current.style.translate = `translateX(0)`;
+      slidemostrar.current.style.transition = 'none';
+      slidemostrar.current.style.transform = `translateX(0)`;
 
-      slidemostrar.current.appendChild(0);
+      slidemostrar.current.appendChild(primerElemento);
+
+      slidemostrar.current.removeEventListener('transitionend', transicion);
 
       
     }
@@ -68,13 +64,32 @@ export const Slider_Productos = () => {
       slidemostrar.current.style.transform = `translateX(-${tamañoSlide}px)`;
       //Timer
       setTimeout(()=> {
-        slidemostrar.current.style.transition = '2000'
+        slidemostrar.current.style.transition = '2000ms ease-out all'
         slidemostrar.current.style.transform = `translateX(0)`;
       }, 30);
     }
+
+
+
   }
   
+  useEffect(()=>{
+    intervaloSlideMostrar.current = setInterval(()=> {
+      siguiente();
+    }, 5000);
 
+    slidemostrar.current.addEventListener('mouseenter', () => {
+      clearInterval(intervaloSlideMostrar.current);
+    });
+
+    slidemostrar.current.addEventListener('mouseleave', () => {
+      intervaloSlideMostrar.current = setInterval(()=> {
+        siguiente();
+      }, 2000);
+    });
+
+    
+  }, []);
 
 
     return(
@@ -141,10 +156,10 @@ export const Slider_Productos = () => {
 
     const Slide = styled.div`
     min-width: 100%;
-    overglow: hidden;
+    overflow: hidden;
     transition: .3s ease all;
-    z-index: 10;
     max-height: 500px;
+    z-index: 10;
     position: relative;
 
     img{

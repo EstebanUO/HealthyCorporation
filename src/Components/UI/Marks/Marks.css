@@ -11,13 +11,14 @@
 }
 
 .marks{
-    height: 15rem;
+    height: 13rem;
 }
 
 .text-marks{
     color: #83c5eb;
     font-size: 2.5rem;
     margin-bottom: -2rem;
+    padding-top: 1rem;
 }
 
 .image-marks{

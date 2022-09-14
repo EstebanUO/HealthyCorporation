@@ -13,163 +13,16 @@ code {
     monospace;
 }
 
-
-/*-------------  footer ------------------*/
-
-
-.site-footer
-{
-  background-color:#83c5eb;
-  padding: 39px 0 0px;
-  font-size:15px;
-  line-height:24px;
-  color:#737373;
-}
-.site-footer hr
-{
-  border-top-color:rgb(0, 0, 0);
-  opacity:0.5
-}
-.site-footer hr.small
-{
-  margin:20px 0
-}
-.site-footer h6
-{
-  color:#ff0000;
-  font-size:16px;
-  text-transform:uppercase;
-  margin-top:-16px;
-  letter-spacing:2px
-
-}
-.site-footer a
-{
-  color:#000000;
-}
-.site-footer a:hover
-{
-  color:#3366cc;
-  text-decoration:none;
-}
-.footer-links
-{
-  padding-left:0;
-  list-style:none
-}
-.footer-links li
-{
-  display:block
-}
-.footer-links a
-{
-  color:#000000
-}
-.footer-links a:active,.footer-links a:focus,.footer-links a:hover
-{
-  color:#3366cc;
-  text-decoration:none;
-}
-.footer-links.inline li
-{
-  display:inline-block
-}
-.site-footer .social-icons
-{
-  text-align:right;
-  margin-top: -44px;
-}
-
-.copyright-text
-{
-  margin:0
-}
-@media (max-width:991px)
-{
-  .site-footer [class^=col-]
-  {
-    margin-bottom:30px
-  }
-}
-@media (max-width:767px)
-{
-  .site-footer
-  {
-    padding-bottom:0
-  }
-  .site-footer .copyright-text,.site-footer .social-icons
-  {
-    text-align:center
-  }
-}
-
-.social-icons li
-{
-  display:inline-block;
-  margin-bottom:4px
-}
-
-
-
-
-
-@media (max-width:767px)
-{
-  .social-icons li.title
-  {
-    display:block;
-    margin-right:0;
-    font-weight:600
-  }
-
-
-}
-
-.image_footer{
-  width: 400px;
-  height: 80px;
-  padding-right: 25px;
-  border-right:solid #ff0000;
-}
-
-
-.text-justify{
-  margin-top: -15px;
-  margin-bottom: 50px;
-  font-size: 17px;
-  color: black;
-}
-
-.copyright-text{
-  font-size: 17px;
-  color: black;
-}
-
-
-.content_footer{
-  padding-left: 46px;
-
-}
-
-.row2{
-  display: flex;
-  flex-direction: row;
-}
-
-.content_down{
-  padding: .5rem;
-  background-color:#83c5eb;
-  border-top: solid rgb(48, 48, 48);
-}
-
-/*  icons */
-
-.twitter{
-  width: 64px;
-  margin-bottom: -7px;
-}
-
 /*---------------- Nav -------------------*/
+.headerDisplay{
+  display: flex;
+  align-items: center;
+}
+
+.userIcon{
+  font-size: 3rem;
+}
+
 
 .imgu{
   width: 5rem;
@@ -178,21 +31,26 @@ code {
   align-items: center;
 }
 
+.img{
+  margin-top: 10px; height: 65vh;
+
+
+}
+
 nav{
-  background-color:#83c5eb;
+  background-color: #5bc3fc;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 4rem;
+  height: 3rem;
   border-bottom:solid #000000;
-  border-top:solid #000000;
 }
 
 nav .a{
   text-decoration: none;
-  padding-left: 20px;
-  padding-right: 20px;
-  font-size: 35px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-size: 1.5rem;
   transition: all 400ms;
   color: black  ;
 }
@@ -205,8 +63,10 @@ nav a:hover{
 
 header{
   display: flex;
+  background-color: #5bc3fc;
   justify-content: center;
-  height: 7.5rem;
+  height: 3rem;
+  padding: 2.5rem;
 }
 
 header img{
@@ -216,6 +76,7 @@ header img{
 /*---------------- Formulario Registro -------------------*/
 .formulario{
   display: flex;
+  width: 100%;
   justify-content: center;
   padding: 2.5rem;
   background-image: url(/src/Components/Image/fondoReg.png);
@@ -226,7 +87,7 @@ header img{
   padding: 5rem;
   box-shadow: 1px 1px 18px black;
   border-radius: 1rem;
-  width: 24rem;
+  width: 34rem;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
 }
@@ -300,14 +161,14 @@ header img{
 
 .border-icon{
   font-size: 2rem;
+  padding: 0.5rem;
 }
-
-
 
 .message {
   padding: 3rem;
   margin-right: 6rem;
   margin-left: 6rem;
+  text-align: center;
 }
 
 .message h2 {
@@ -338,6 +199,13 @@ header img{
 /*---------------- Terminos -------------------*/
 .parrafo{
   text-align: justify;
+}
+
+.terminos{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  padding: 2.5rem;
 }
 
 h1{
@@ -375,15 +243,22 @@ textarea{
   max-width: 380px;
   min-width: 380px;
   border-radius: 7px;
-  border-bottom: 2px solid #2196F3;
+  /* border-bottom: 2px solid #2196F3; */
   box-shadow:9px 6px 6px #90A4AE; 
   background-color: #ffffff57;
+}
+
+.contact{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  padding: 2.5rem;
 }
   
 input{
   margin: 10px 0;
   border-radius: 7px;
-  border-bottom: 2px solid #2196F3;
+  /* border-bottom: 2px solid #2196F3; */
   box-shadow:5px 5px 5px #90A4AE; 
 }
 
@@ -432,3 +307,22 @@ label{
   background-color: #6464f8;
 }
 
+/* --------------------Footer --------------------*/
+
+a{
+  text-decoration: none;
+}
+
+/*utilidad*/
+
+.tancition-5s{
+  transition: all .5s ease;
+}
+
+.width{
+  height: 20rem;
+}
+
+.margin-left{
+  margin-left: 22rem;
+}

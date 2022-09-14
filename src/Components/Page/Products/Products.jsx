@@ -2,6 +2,7 @@
 import { Header } from '../Layout/Header/Header';
 import { Footer } from '../Layout/Footer/Footer';
 import {Slider_Productos} from '../../UI/js/Slider_Productos'
+import Slider from '../../UI/js/Slider'
 
 
 export const Products = () => {
@@ -9,7 +10,7 @@ export const Products = () => {
     <div>
         <Header />
         <h1>Productos</h1>
-        <Slider_Productos/>
+        <Slider/>
         <Footer />
     </div>
   )

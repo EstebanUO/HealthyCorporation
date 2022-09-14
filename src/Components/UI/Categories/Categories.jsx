@@ -13,7 +13,7 @@ export const Categories = () => {
     return (
         <div className='all'>
 
-            <div className='content'>
+            <div className='contents'>
 
                 <div className='card2'>
                     <img src={image_1} alt="Prueba de imagen" className='Image-card' />
@@ -22,7 +22,7 @@ export const Categories = () => {
 
             </div>
 
-            <div className='content'>
+            <div className='contents'>
 
                 <div className='card'>
                     <img src={image_7} alt="Prueba de imagen" className='Image-card' />
@@ -31,7 +31,7 @@ export const Categories = () => {
 
             </div>
 
-            <div className='content'>
+            <div className='contents'>
 
                 <div className='card'>
                     <img src={image_3} alt="Prueba de imagen" className='Image-card' />
@@ -40,7 +40,7 @@ export const Categories = () => {
 
             </div>
 
-            <div className='content'>
+            <div className='contents'>
 
                 <div className='card'>
                     <img src={image_6} alt="Prueba de imagen" className='Image-card' />
@@ -49,7 +49,7 @@ export const Categories = () => {
 
             </div>
 
-            <div className='content'>
+            <div className='contents'>
 
                 <div className='card'>
                     <img src={image_2} alt="Prueba de imagen" className='Image-card' />
@@ -58,7 +58,7 @@ export const Categories = () => {
 
             </div>
 
-            <div className='content'>
+            <div className='contents'>
 
                 <div className='card'>
                     <img src={image_5} alt="Prueba de imagen" className='Image-card' />
@@ -67,7 +67,7 @@ export const Categories = () => {
 
             </div>
 
-            <div className='content'>
+            <div className='contents'>
 
                 <div className='card'>
                     <img src={image_4} alt="Prueba de imagen" className='Image-card' />
