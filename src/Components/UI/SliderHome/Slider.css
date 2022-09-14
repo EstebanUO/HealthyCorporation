@@ -67,10 +67,9 @@
 }
 
 #content{
-    display: flex;
+    /* display: flex; */
+    display: none;
     flex-direction: row;
-    
-
     position: absolute;
     z-index: 1; 
     background-color: #83c5eb;

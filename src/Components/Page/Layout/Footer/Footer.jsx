@@ -27,7 +27,7 @@ export const Footer = () => {
           <a href='' className='me-4 text-reset'>
             <MDBIcon fab icon="linkedin" />
           </a>
-          <a href='' className='me-4 text-reset'>
+          <a href='https://github.com/EstebanUO' target='_blank' className='me-4 text-reset'>
             <MDBIcon fab icon="github" />
           </a>
         </div>
@@ -48,10 +48,10 @@ export const Footer = () => {
             </MDBCol>
 
             <MDBCol md="2" lg="2" xl="2" className='mx-auto mb-4' >
-              <h6 className='text-uppercase fw-bold mb-4'>Lenguages</h6>
+              <h6 className='text-uppercase fw-bold mb-4'>Lenguajes</h6>
               <p>
                 <a href='#!' className='text-reset'>
-                  Angular
+                  JavaScript
                 </a>
               </p>
               <p>
@@ -61,12 +61,12 @@ export const Footer = () => {
               </p>
               <p>
                 <a href='#!' className='text-reset'>
-                  Vue
+                  Python
                 </a>
               </p>
               <p>
                 <a href='#!' className='text-reset'>
-                  Laravel
+                  SQLite
                 </a>
               </p>
             </MDBCol>
@@ -114,10 +114,7 @@ export const Footer = () => {
       </section>
 
       <div className='text-center p-4'style={{backgroundColor: "rgb(74 165 218)", color: "white"}}>
-        © 2021 Copyright 
-        <a className='text-reset fw-bold' href='https://tiktok.com/'>
-          Healthy Corporation
-        </a>
+        <a className='text-reset fw-bold' href='/'>Healthy Corporation </a>©Copyright 2021-2022.
       </div>
     </MDBFooter>
     )
