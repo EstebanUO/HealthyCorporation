@@ -210,6 +210,12 @@ header img{
   background-color: #6464f8;
 }
 
+.forgetPass{
+  text-align: right;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
 /*---------------- Terminos -------------------*/
 .parrafo{
   text-align: justify;

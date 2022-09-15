@@ -29,6 +29,8 @@ export const Login = () => {
 
                   <label for="inputPassword" class="labelsReg"><br/>Password</label>
                     <input name="password" type="password" class="form-input" id="inputPassword" placeholder="Password"/>
+
+                  <Link to="/" className="forgetPass">¿Haz olvidado tu contraseña?</Link>
                   
                   <div className="submitReg">
                     <button type="submit" class="submitReg2">Iniciar Sesion</button>
