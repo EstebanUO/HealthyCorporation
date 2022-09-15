@@ -7,7 +7,7 @@ import cancel from '../../Image/x.png'
 
 const SliderHome = () => {
 
-  const Content = document.getElementById("content_det");
+  const Content = document.querySelector("#content_det");
    
   const onSee = () => {Content.style.display = 'flex'};
   const onBlock = () => {Content.style.display = 'none'};
@@ -22,6 +22,7 @@ const SliderHome = () => {
             <motion.div onClick={onSee} className='item'>
               <div className='link'  >
               <img  className='item-image' src={image} alt="Imagen producto" />
+              
               </div>
             </motion.div>
           ))}
@@ -39,7 +40,7 @@ const SliderHome = () => {
               
             </div>
           </div>
-          <div className="content_send"> 
+          <div className="content_send">
             
             <label for="product" class="text_send">Nombre del producto</label>
             <a onClick={onBlock}> <img className='img_edit2' src={cancel} alt="Imagen producto" /></a>
