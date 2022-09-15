@@ -7,6 +7,8 @@ import {Politicas} from './Components/Page/Politicas_Cond/Politicas';
 import {Contact} from './Components/Page/Contact/Contact';
 import { Login } from './Components/Page/Login/Login';
 
+
+
 function App() {
   return (
     <div>

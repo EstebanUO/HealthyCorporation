@@ -1,8 +1,8 @@
 import React from 'react';
 import { Nav } from '../../../UI/Nav/Nav';
 import logo from '../../../Image/logo.png'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUserCircle } from '@fortawesome/free-solid-svg-icons'
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { faUserCircle } from '@fortawesome/free-solid-svg-icons'
 
 export const Header = () => {
   return (
