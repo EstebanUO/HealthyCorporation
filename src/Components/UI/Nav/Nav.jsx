@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 // // import styled from "styled-components"; 
 // import logo from "../../Image/logo.png"
 import $ from 'jquery';
+import { FaBars } from "react-icons/fa";
 
 
 
@@ -43,7 +44,9 @@ export const Nav = () => {
 
   return (
     <nav className='nav'>
-
+      <div className='burger'>
+        <FaBars/>
+      </div>
       <div className='content'>
         <Link to='/' className='a'>Inicio</Link>
         <Link to='/products' className='a'>Productos</Link>

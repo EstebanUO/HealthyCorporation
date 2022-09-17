@@ -87,6 +87,50 @@ header img{
   width: 30rem;
 }
 
+.burger{
+  cursor: pointer;
+}
+
+/*---------------- Navbar -------------------*/
+
+.navbar{
+  display: flex;
+  align-items: baseline;
+  justify-content: space-around;
+  background-color: #5bc3fc;
+  border-bottom:solid #000000;
+}
+
+.navbar2{
+  display: flex;
+  align-items: baseline;
+  justify-content: space-around;
+  cursor: pointer;
+}
+
+.navbar2:hover{
+  color: #fff;
+}
+
+.buscar{
+  width: 22rem;
+}
+
+.buscar2{
+  /* background-color: #ffffff; */
+  border-radius: .5rem;
+  background-color: #fff;
+}
+
+.cuenta{
+  text-decoration: none;
+  color: #000000;
+}
+
+.cuenta:hover{
+  color: #fff;
+}
+
 /*---------------- Formulario Registro -------------------*/
 
 .formulario2 {
