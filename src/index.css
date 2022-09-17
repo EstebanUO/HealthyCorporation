@@ -277,13 +277,12 @@ header img{
   background-color: #6464f8;
 }
 
-<<<<<<< HEAD
+
 .forgetPass{
   text-align: right;
   display: flex;
   flex-direction: column-reverse;
-=======
-
+}
 .message2 button {
   padding: 1rem;
   font-weight: 400;
@@ -302,7 +301,7 @@ header img{
 
 .message2 button:hover {
   background-color: #6464f8;
->>>>>>> jc4
+
 }
 
 /*---------------- Terminos -------------------*/
