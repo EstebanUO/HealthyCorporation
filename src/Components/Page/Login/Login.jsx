@@ -10,7 +10,7 @@ export const Login = () => {
         <Header/>
           <div className="formulario">
             <div>
-              <form className="formulario2">
+              <form className="formulario3">
                 <h1 className="titleReg">Iniciar Sesion</h1>
                 <div className="iconos">
                   <div className="border-icon">
@@ -37,9 +37,9 @@ export const Login = () => {
               </form>
             </div>
             <div className="welcome-back">
-                  <div className="message">
+                  <div className="message2">
                     <h2>Bienvenido a HealthyCorporation</h2>
-                    <p>Si ya tienes una cuenta por favor inicia sesion aqui</p>
+                    <p>Aun no tienes cuenta? por favor registrate aqui</p>
                     <Link to="/register" className="links"> 
                       <button className="signUpBtn">Registrarse</button>
                     </Link>

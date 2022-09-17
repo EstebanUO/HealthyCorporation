@@ -88,15 +88,9 @@ header img{
 }
 
 /*---------------- Formulario Registro -------------------*/
-.formulario{
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  padding: 2.5rem;
-  background-image: url(/src/Components/Image/fondoReg.png);
-}
 
-.formulario2{
+.formulario2 {
+  animation: slidein 1s forwards;
   background-color: #ffffff57;
   padding: 5rem;
   box-shadow: 1px 1px 18px black;
@@ -105,6 +99,83 @@ header img{
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
 }
+
+@keyframes slidein {
+  from {
+    transform: translate(-500px);
+  }
+  to {
+    transform: translate(0px);
+  }
+}
+.message {
+  animation: texxt 1s forwards;
+  padding: 3rem;
+  margin-right: 6rem;
+  margin-left: 6rem;
+  text-align: center;
+}
+
+@keyframes texxt {
+  from {
+   transform: translate(-900px);
+  }
+  to {
+    transform: translate(0px);
+  }
+}
+
+
+
+
+.formulario3 {
+  animation: slidein2 1s forwards;
+  background-color: #ffffff57;
+  padding: 5rem;
+  box-shadow: 1px 1px 18px black;
+  border-radius: 1rem;
+  width: 34rem;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+@keyframes slidein2 {
+  from {
+    transform: translate(500px);
+  }
+  to {
+    transform: translate(0px);
+  }
+ 
+}
+.message2 {
+  animation: texxt2 1s forwards;
+
+  padding: 3rem;
+  margin-right: 6rem;
+  margin-left: 6rem;
+  text-align: center;
+}
+
+@keyframes texxt2 {
+  from {
+   transform: translate(900px);
+  }
+
+  to {
+    transform: translate(0px);
+  }
+}
+/*-----------------------------*/
+
+.formulario{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  padding: 2.5rem;
+  background-image: url(/src/Components/Image/fondoReg.png);
+}
+
+
 
 .formularioReg{
   display: flex;
@@ -178,12 +249,8 @@ header img{
   padding: 0.5rem;
 }
 
-.message {
-  padding: 3rem;
-  margin-right: 6rem;
-  margin-left: 6rem;
-  text-align: center;
-}
+
+
 
 .message h2 {
   font-size: 1.7rem;
@@ -207,6 +274,27 @@ header img{
 }
 
 .message button:hover {
+  background-color: #6464f8;
+}
+
+
+.message2 button {
+  padding: 1rem;
+  font-weight: 400;
+  background-color: #4a4aee;
+  border-radius: 2rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: .9rem;
+  margin-top: 2rem;
+  transition: all .3s ease-in;
+  color: #fff;
+  margin: auto;
+  display: block;
+}
+
+.message2 button:hover {
   background-color: #6464f8;
 }
 
@@ -337,4 +425,14 @@ a{
 
 .margin-left{
   margin-left: 22rem;
+}
+
+
+#home{
+  color: white;
+  font-size: 3rem;
+  margin-top: -20rem;
+}
+#opacidad{
+  background-color: rgba(0,0,0,0.6);
 }
