@@ -434,5 +434,8 @@ a{
   margin-top: -20rem;
 }
 #opacidad{
+  z-index: 1;
+}
+#color_1{
   background-color: rgba(0,0,0,0.6);
 }
