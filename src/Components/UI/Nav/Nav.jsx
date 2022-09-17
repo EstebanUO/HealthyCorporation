@@ -51,6 +51,7 @@ export const Nav = () => {
         <Link to='/' className='a'>Inicio</Link>
         <Link to='/products' className='a'>Productos</Link>
         <Link to='/register' className='a'>Ingresar</Link>
+        <Link to='/Contact' className='a'>Contacto</Link>
       </div>
 
       
