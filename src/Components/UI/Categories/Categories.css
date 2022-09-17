@@ -3,6 +3,7 @@
     padding-top: 4rem;
 }
 
+
 .card {
     width: 10rem;
     height: 10rem;
@@ -45,7 +46,7 @@
 
 .text-card {
     font-size: 1.2rem;
-}
+} 
 
 .Image-card {
     width: 4rem;
