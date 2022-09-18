@@ -136,7 +136,7 @@ header img{
 .formulario2 {
   animation: slidein 1s forwards;
   background-color: #ffffff57;
-  padding: 5rem;
+  padding: 3rem;
   box-shadow: 1px 1px 18px black;
   border-radius: 1rem;
   width: 34rem;
@@ -170,12 +170,10 @@ header img{
 }
 
 
-
-
 .formulario3 {
   animation: slidein2 1s forwards;
   background-color: #ffffff57;
-  padding: 5rem;
+  padding: 3rem;
   box-shadow: 1px 1px 18px black;
   border-radius: 1rem;
   width: 34rem;
@@ -267,7 +265,7 @@ header img{
 .form-input{
   background-color: #ffffff57;
   width: 100%;
-  height: 1.5rem;
+  height: 2.5rem;
   padding: .2rem;
   font-size: 1rem;
   border: none;
@@ -372,6 +370,7 @@ h1{
 
 h2{
   text-align: center;
+  font-size: 1.7rem;
 }
 
 h3{
@@ -380,11 +379,89 @@ h3{
 
 .container1{
   background-color: #ffffff57;
-  padding: 3rem;
+  padding: 2rem;
   box-shadow: 1px 1px 18px black;
   border-radius: 1rem;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
+  width: 40rem;
+}
+
+.container_all{
+  display: flex;
+  justify-content: center;
+
+  animation: container_all 2s forwards;
+}
+@keyframes container_all {
+  from {
+    transform: translate(-500px);
+  }
+  to {
+    transform: translate(0px);
+  }
+}
+
+.about_all{
+  display: flex;
+  flex-direction: row;
+}
+.about_contact{
+  margin-top: 8rem;
+  width: 118rem;
+  margin-left: -6rem;
+}
+.about_contact2{
+  padding-left: 8rem;
+  color: #5bc3fc;
+  animation: about_contact2 2s forwards;
+}
+@keyframes about_contact2 {
+  from {
+    transform: translate(-500px);
+  }
+  to {
+    transform: translate(0px);
+  }
+}
+.about_contact3{
+  padding-left: 8rem;
+  margin-bottom: -3rem;
+}
+.about_contact4{
+  font-size: 1.3rem;
+  animation: about_contact4 2s forwards;
+}
+@keyframes about_contact4 {
+  from {
+    transform: translate(-500px);
+  }
+  to {
+    transform: translate(0px);
+  }
+}
+
+.about_where{
+  padding-left: 8rem;
+  animation: about_where 2s forwards;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  margin-top: 5.8rem;
+}
+@keyframes about_where {
+  from {
+    transform: translate(-500px);
+  }
+  to {
+    transform: translate(0px);
+  }
+}
+.about_where1{
+  color: #5bc3fc;
+}
+.about_where3{
+  font-size: 1.3rem;
 }
 
 
@@ -392,7 +469,7 @@ h3{
 textarea{
   min-height: 100px;
   max-height: 200px;
-  max-width: 380px;
+  width: 36rem;
   border-radius: 7px;
   /* border-bottom: 2px solid #2196F3; */
   box-shadow:9px 6px 6px #90A4AE; 
@@ -400,7 +477,6 @@ textarea{
 
 .contact{
   display: flex;
-  width: 100%;
   justify-content: center;
   padding: 2.5rem;
 }
@@ -420,7 +496,7 @@ label{
 .text{
   background-color: #ffffff57;
   width: 100%;
-  height: 1.5rem;
+  height: 2.5rem;
   padding: .2rem;
   font-size: 1rem;
   border: none;
@@ -481,11 +557,60 @@ a{
 #home{
   color: white;
   font-size: 3rem;
+}
+.center_home{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
   margin-top: -20rem;
 }
+
+
 #opacidad{
   z-index: 1;
 }
 #color_1{
   background-color: rgba(0,0,0,0.6);
+}
+
+
+.image_contact{
+  width: 100%;
+  z-index: 0;
+}
+
+.text_product{
+  margin-top: -14.8rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: flex-start;
+  font-size: 5rem;
+  padding-left: 6rem;
+  color: white;
+  animation: text_product 1s forwards;
+}
+@keyframes text_product {
+  from {
+    transform: translate(-500px);
+  }
+  to {
+    transform: translate(0px);
+  }
+}
+.text_product2{
+  margin-top: -3rem;
+  display: flex;
+  justify-content: flex-start;
+  font-size: 5rem;
+  padding-left: 6rem;
+  color: white;
+  animation: text_product2 1.2s forwards;
+}
+@keyframes text_product2 {
+  from {
+    transform: translate(-500px);
+  }
+  to {
+    transform: translate(0px);
+  }
 }

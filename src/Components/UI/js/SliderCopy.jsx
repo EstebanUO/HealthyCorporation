@@ -1,5 +1,6 @@
 import React from 'react';
 import img1 from './../../Image/Noticie/talco.jpg'
+import img2 from './../../Image/Noticie/nutribela.jpg'
 import img3 from './../../Image/shampoo_producto.jpg'
 import img4 from './../../Image/Noticie/shampoo.jpg'
 import img5 from './../../Image/Noticie/shampoo2.jpg'
@@ -17,13 +18,16 @@ const SliderCopy= () => {
           <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="4" aria-label="Slide 5"></button>
           <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="5" aria-label="Slide 6"></button>
  
-        </div >
-        <div class="carousel-inner"  >
-          <div class="carousel-item active tancition-5s" data-bs-interval="4000" >
-            <img src={img1} class="d-block w-100" alt="..."/>
-              <div class="carousel-caption d-none d-md-block" >
-                <h2 id='home' >Bienvenidos a heathy corporation donde los precios se ajusta a ti</h2>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active tancition-5s" data-bs-interval="4000">
+            <img src={img1} class="d-block w-100" id='opacidad' alt="..."/>
+              <div class="carousel-caption d-none d-md-block">
+                <div className='center_home'>
+                <h2 id='home' >Bienvenidos a heathy corpration donde los precios se ajusta a ti</h2>
              
+                  </div>
+                
               </div>
           </div>
           <div class="carousel-item tancition-5s" data-bs-interval="4000">

@@ -1,4 +1,4 @@
-import {React, useState} from 'react'
+import React from 'react'
 import './Slider.css'
 import { motion } from 'framer-motion'
 import images from '../../../exports/images'
