@@ -4,8 +4,16 @@ import { Link } from 'react-router-dom';
 
 export const NavBar = () => {
 
+    const showNavbar = () =>{
+        
+    }
+
+    const closeNavbar = () =>{
+        
+    }
+
     window.addEventListener("scroll", () =>{
-        console.log("Scrolliando..")
+        console.log("scrollindo")
     })
    
   return (
