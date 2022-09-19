@@ -27,7 +27,7 @@ export const Contact = () => {
               Polígono Industrial El Mar,
               46120 Alboraia (Valencia)
               Tel: 961 853 827 | Fax:  01 234 567 88
-              e-mail: healthy_ifo@outlock.com</h3>
+              e-mail: healthy_ifo@outlook.com</h3>
           </div>
         </div>
       </div>
