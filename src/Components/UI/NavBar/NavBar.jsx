@@ -5,14 +5,8 @@ import { Link } from 'react-router-dom';
 export const NavBar = () => {
 
     window.addEventListener("scroll", () =>{
-        let up = ('.navbar');
-  
-        if ((window) > up) {
-          up.addClass('on');
-        } else {
-          up.remove('off');
-        }
-      })
+        console.log("Scrolliando..")
+    })
    
   return (
     <div>
