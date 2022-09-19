@@ -17,9 +17,7 @@ code {
 
 
 .menu_fixed{
-  position: fixed;
-  z-index: 1;
-  top: 0;
+  
   width: 100%;
 }
 
@@ -91,6 +89,8 @@ header img{
   cursor: pointer;
 }
 
+
+
 /*---------------- Navbar -------------------*/
 
 .navbar{
@@ -99,6 +99,23 @@ header img{
   justify-content: space-around;
   background-color: #5bc3fc;
   border-bottom:solid #000000;
+  display: none;
+}
+
+.on{
+  display: flex;
+  align-items: baseline;
+  justify-content: space-around;
+  background-color: #5bc3fc;
+  border-bottom:solid #000000;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  transform: all 300ms;
+}
+
+.off{
+  display: none;
 }
 
 .navbar2{
