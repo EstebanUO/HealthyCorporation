@@ -19,19 +19,19 @@ export const Form = () => {
               <div className="container1">
                
                 <label>Nombres</label><br/>
-                <input type="text" className='text' name='user-name' placeholder="Digite sus respectivos nombre.."></input>
+                <input type="text" className='textContact' name='user-name' placeholder="Digite sus respectivos nombre.."></input>
                
 
                 <label>Apellidos</label><br/>
-                <input type="text" className='text' name='user-surname' placeholder="Digite sus respectivos apellido.."></input>
+                <input type="text" className='textContact' name='user-surname' placeholder="Digite sus respectivos apellido.."></input>
                
 
                 <label>Correo</label><br/>
-                <input type="email" className='text' name='user-email' placeholder="Digite su correo.."></input>
+                <input type="email" className='textContact' name='user-email' placeholder="Digite su correo.."></input>
                
 
                 <label>Telefono</label><br/>
-                <input type="number" className='text' name='user-number' placeholder="Digite su numero.."></input>
+                <input type="number" className='textContact' name='user-number' placeholder="Digite su numero.."></input>
                
 
                 <label>Mensaje</label>

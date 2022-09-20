@@ -98,7 +98,7 @@ header img{
   align-items: baseline;
   justify-content: space-around;
   background-color: #5bc3fc;
-  border-bottom:solid #000000;
+  /* border-bottom:solid #000000; */
   display: none;
   position: fixed;
   width: 100%;
@@ -122,13 +122,16 @@ header img{
 }
 
 .buscar{
-  width: 22rem;
+  width: 26rem;
+  border-radius: .3rem;
 }
 
 .buscar2{
-  /* background-color: #ffffff; */
-  border-radius: .5rem;
+  border: none;
   background-color: #fff;
+  margin-left: -2rem;
+  display: block;
+  color: #2b8dc2;
 }
 
 .cuenta{
@@ -298,9 +301,6 @@ header img{
   font-size: 2rem;
   padding: 0.5rem;
 }
-
-
-
 
 .message h2 {
   font-size: 1.7rem;
@@ -489,7 +489,7 @@ textarea{
   padding: 2.5rem;
 }
   
-input{
+.textContact{
   margin: 10px 0;
   border-radius: 7px;
   /* border-bottom: 2px solid #2196F3; */
