@@ -100,23 +100,15 @@ header img{
   background-color: #5bc3fc;
   border-bottom:solid #000000;
   display: none;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  top: 0;
 }
 
-/* .on{
-  display: flex;
-  align-items: baseline;
-  justify-content: space-around;
-  background-color: #5bc3fc;
-  border-bottom:solid #000000;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  transform: all 300ms;
-} */
-
-/* .off{
-  display: none;
-} */
+#logo{
+  width: 14rem;
+}
 
 .navbar2{
   display: flex;

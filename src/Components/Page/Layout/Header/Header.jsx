@@ -8,7 +8,7 @@ import { NavBar } from '../../../UI/NavBar/NavBar';
 export const Header = () => {
   return (
     <>
-        <header className='Up'>
+        <header className='Up' id='Up'>
           <div className='imgu'>
               <a href="/"><img src={logo} alt="Logo" /></a>
               {/* <div className='userIcon'>

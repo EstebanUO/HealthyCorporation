@@ -11,7 +11,7 @@ export const Nav = () => {
 
 
   return (
-    <nav className='nav'>
+    <nav className='nav' id='nav'>
       <div className='content'>
         <Link to='/' className='a'>Inicio</Link>
         <Link to='/products' className='a'>Productos</Link>
