@@ -55,7 +55,7 @@
 
 .amount_content{
     width: 22rem;
-    background-color: #E3FAF1;
+    background-color: #d3ebf7;
     max-height: 20rem;
     padding: 1rem;
     border-radius: 1rem;
@@ -93,7 +93,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    background-color: #E3FAF1;
+    background-color: #d3ebf7;
     width: 45rem;
     height: 8rem;
     border-radius: 1rem;
