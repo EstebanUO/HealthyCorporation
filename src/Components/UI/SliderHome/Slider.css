@@ -63,6 +63,10 @@
   height: 14rem;
 }
 
+.link:hover{
+
+}
+
 .btn_send{
     display: flex;
     align-content: center;
