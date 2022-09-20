@@ -73,8 +73,6 @@ export const Amount = () => {
 
 
                     {/* prueba al amontonar todad las cards */}
-                    
-
                 </div>
 
 
@@ -90,7 +88,7 @@ export const Amount = () => {
                         <div className="amount_number">
                             <div className='amount_text'>
                                 <p>Sub total: </p>
-                                <p id='sub'>$ </p>
+                                <p id='sub'>$ 0</p>
                             </div>
                             <div className='amount_text2'>
                                 <p>Descuento: </p>
@@ -98,7 +96,7 @@ export const Amount = () => {
                             </div><hr className='lineal' />
                             <div className="amount_total">
                                 <p>Total a pagar:</p>
-                                <p>$ </p>
+                                <p>$ 0</p>
                             </div>
                         </div>
                         <div className='amount_btn'>

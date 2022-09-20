@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from "react-router-dom";
 // import styled from "styled-components"; 
 // import logo from "../../Image/logo.png"
-import $ from 'jquery';
 // import { FaBars } from "react-icons/fa";
 
 

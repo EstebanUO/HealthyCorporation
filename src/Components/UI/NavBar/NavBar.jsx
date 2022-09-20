@@ -7,7 +7,17 @@ import { Categories } from '../Categories/Categories';
 export const NavBar = () => {
 
 
+
     window.onscroll = function() {scrollFunction()};
+
+    // const showNavbar = () =>{
+        
+    // }
+
+    // const closeNavbar = () =>{
+        
+    // }
+
 
     window.addEventListener("scroll", () =>{
         console.log("scrollindo...")
