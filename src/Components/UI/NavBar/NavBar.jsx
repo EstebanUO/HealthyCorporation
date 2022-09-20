@@ -4,13 +4,13 @@ import { Link } from 'react-router-dom';
 
 export const NavBar = () => {
 
-    const showNavbar = () =>{
+    // const showNavbar = () =>{
         
-    }
+    // }
 
-    const closeNavbar = () =>{
+    // const closeNavbar = () =>{
         
-    }
+    // }
 
     window.addEventListener("scroll", () =>{
         console.log("scrollindo")
