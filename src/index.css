@@ -207,12 +207,11 @@ header img{
  
 }
 .message2 {
-  animation: texxt2 1s forwards;
-
   padding: 3rem;
   margin-right: 6rem;
   margin-left: 6rem;
   text-align: center;
+  animation: texxt2 1s forwards;
 }
 
 @keyframes texxt2 {

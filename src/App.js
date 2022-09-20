@@ -6,6 +6,7 @@ import {Terminos} from '../src/Components/Page/Terminos_Condiciones/Terminos';
 import {Politicas} from './Components/Page/Politicas_Cond/Politicas';
 import {Contact} from './Components/Page/Contact/Contact';
 import { Login } from './Components/Page/Login/Login';
+import { Car } from './Components/Page/Car/Car';
 
 
 
@@ -20,6 +21,7 @@ function App() {
         <Route path="/politicas" element={<Politicas />}/>
         <Route path="/contact" element={<Contact />}/>
         <Route path="/login" element={<Login />}/>
+        <Route path="/car" element={<Car />}/>
       </Routes>
     </div>
     
