@@ -5,12 +5,27 @@ import { Link } from "react-router-dom"
 import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa';
 
 export const Login = () => {
+
+      /*validaciones login*/ 
+
+
+
+      const [userLogin, setuserLogin] = useState("")
+
+      const [passwordUser, setpasswordUser] = useState("")
+  
+      const onChangeUserLogin = ({ currentTarget }) => setuserLogin(currentTarget.value);
+  
+      const onChangePasswordLogin = ({ currentTarget }) => setpasswordUser(currentTarget.value);
+    
+      /*fin validaciones login*/
+
   return (
     <div>
         <Header/>
           <div className="formulario">
             <div>
-              <form className="formulario2">
+              <form className="formulario3">
                 <h1 className="titleReg">Iniciar Sesion</h1>
                 <div className="iconos">
                   <div className="border-icon">
@@ -25,10 +40,12 @@ export const Login = () => {
                 </div><br />
                 <div className="formularioLog">
                   <label for="exampleInputEmail1" class="labelsReg"><br/>Email</label>
-                    <input name="correo" type="email" class="form-input" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Example@" autocomplete="off" required/>
+                    <input onChange={onChangeUserLogin} value={userLogin} name="correo" type="email" class="form-input" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Example@" autocomplete="off" required/>
 
                   <label for="inputPassword" class="labelsReg"><br/>Password</label>
-                    <input name="password" type="password" class="form-input" id="inputPassword" placeholder="Password"/>
+                    <input onChange={onChangePasswordLogin} value={passwordUser} name="password" type="password" class="form-input" id="inputPassword" placeholder="Password"/>
+
+                  <Link to="/" className="forgetPass">¿Haz olvidado tu contraseña?</Link>
                   
                   <div className="submitReg">
                     <button type="submit" class="submitReg2">Iniciar Sesion</button>
@@ -37,9 +54,9 @@ export const Login = () => {
               </form>
             </div>
             <div className="welcome-back">
-                  <div className="message">
+                  <div className="message2">
                     <h2>Bienvenido a HealthyCorporation</h2>
-                    <p>Si ya tienes una cuenta por favor inicia sesion aqui</p>
+                    <p>Aun no tienes cuenta? por favor registrate aqui</p>
                     <Link to="/register" className="links"> 
                       <button className="signUpBtn">Registrarse</button>
                     </Link>

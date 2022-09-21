@@ -13,29 +13,28 @@ export const Form = () => {
   }
 
   return (
-    <div>
+    <div className='container_all'>
       <form className="contact" onSubmit={sendEmail}>
             <div>
               <div className="container1">
-                <h1>Contacto</h1>
                
-                <label>Nombres:</label><br/>
-                <input type="text" className='text' name='user-name' placeholder="Digite sus respectivos nombre.."></input>
-               
-
-                <label>Apellidos:</label><br/>
-                <input type="text" className='text' name='user-surname' placeholder="Digite sus respectivos apellido.."></input>
+                <label>Nombres</label><br/>
+                <input type="text" className='textContact' name='user-name' placeholder="Digite sus respectivos nombre.."></input>
                
 
-                <label>Correo:</label><br/>
-                <input type="email" className='text' name='user-email' placeholder="Digite su correo.."></input>
+                <label>Apellidos</label><br/>
+                <input type="text" className='textContact' name='user-surname' placeholder="Digite sus respectivos apellido.."></input>
                
 
-                <label>Telefono:</label><br/>
-                <input type="number" className='text' name='user-number' placeholder="Digite su numero.."></input>
+                <label>Correo</label><br/>
+                <input type="email" className='textContact' name='user-email' placeholder="Digite su correo.."></input>
                
 
-                <label>Mensaje:</label>
+                <label>Telefono</label><br/>
+                <input type="number" className='textContact' name='user-number' placeholder="Digite su numero.."></input>
+               
+
+                <label>Mensaje</label>
                 <br />
                 <textarea rows="10" cols="50" name='user-message' placeholder="Escriba tu mensaje...."></textarea>
                
