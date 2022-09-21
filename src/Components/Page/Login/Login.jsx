@@ -1,25 +1,25 @@
-import React,{useState} from 'react'
+import React from 'react'
 import { Footer } from '../Layout/Footer/Footer'
 import { Header } from '../Layout/Header/Header'
 import { Link } from "react-router-dom"
 import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa';
-import axios from 'axios'
 
 export const Login = () => {
 
-    /*validaciones login*/ 
+      /*validaciones login*/ 
 
 
 
-    const [userLogin, setuserLogin] = useState("")
+      const [userLogin, setuserLogin] = useState("")
 
-    const [passwordUser, setpasswordUser] = useState("")
-
-    const onChangeUserLogin = ({ currentTarget }) => setuserLogin(currentTarget.value);
-
-    const onChangePasswordLogin = ({ currentTarget }) => setpasswordUser(currentTarget.value);
+      const [passwordUser, setpasswordUser] = useState("")
   
-    /*fin validaciones login*/
+      const onChangeUserLogin = ({ currentTarget }) => setuserLogin(currentTarget.value);
+  
+      const onChangePasswordLogin = ({ currentTarget }) => setpasswordUser(currentTarget.value);
+    
+      /*fin validaciones login*/
+
   return (
     <div>
         <Header/>
@@ -40,19 +40,15 @@ export const Login = () => {
                 </div><br />
                 <div className="formularioLog">
                   <label for="exampleInputEmail1" class="labelsReg"><br/>Email</label>
-                    <input value={userLogin} onChange={onChangeUserLogin} name="correo" type="email" class="form-input" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Example@" autocomplete="off" required/>
+                    <input onChange={onChangeUserLogin} value={userLogin} name="correo" type="email" class="form-input" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Example@" autocomplete="off" required/>
 
                   <label for="inputPassword" class="labelsReg"><br/>Password</label>
-<<<<<<< HEAD
-                    <input name="password" type="password" class="form-input" id="inputPassword" placeholder="Password"/>
+                    <input onChange={onChangePasswordLogin} value={passwordUser} name="password" type="password" class="form-input" id="inputPassword" placeholder="Password"/>
 
                   <Link to="/" className="forgetPass">¿Haz olvidado tu contraseña?</Link>
-=======
-                    <input value={passwordUser} onChange={onChangePasswordLogin} name="password" type="password" class="form-input" id="inputPassword" placeholder="Password"/>
->>>>>>> felipe
                   
                   <div className="submitReg">
-                    <button onClick={submitLogin} type="submit" class="submitReg2">Iniciar Sesion</button>
+                    <button type="submit" class="submitReg2">Iniciar Sesion</button>
                   </div>
                 </div>
               </form>
