@@ -2,10 +2,10 @@ import React from 'react';
 import { Header } from '../Layout/Header/Header';
 import { Footer } from '../Layout/Footer/Footer';
 
-export const Terminos = () => {
+export const Terminos = (props) => {
   return (
     <div>
-      <Header/>
+      <Header valiLoginAdmin={props.valiLoginAdmin}/>
         <div className="terminos">
             <div>
               <div className="container1">

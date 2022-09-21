@@ -4,10 +4,10 @@ import { NavCopy } from '../../UI/Nav/NavCopy'
 import { Footer } from '../Layout/Footer/Footer'
 
 
-export const MyAcount = () => {
+export const MyAcount = (props) => {
   return (
     <div>
-        <Nav />
+        <Nav valiLoginAdmin={props.valiLoginAdmin}/>
         <NavCopy />
         
         <Footer />

@@ -1,5 +1,6 @@
 import {Home} from '../src/Components/Page/Home/Home';
-import { Route, Routes } from "react-router-dom"
+import {useState} from 'react'
+import { Route, Routes,Navigate } from "react-router-dom"
 import {Products} from '../src/Components/Page/Products/Products';
 import {Register} from '../src/Components/Page/Register/Register';
 import {Terminos} from '../src/Components/Page/Terminos_Condiciones/Terminos';
@@ -15,18 +16,42 @@ import { Tarjet } from './Components/Page/Tarjet/Tarjet';
 
 
 function App() {
+      /*validaciones login*/ 
+
+      const [valiLogin, setvaliLogin] = useState(false)
+      const [valiLoginAdmin, setvaliLoginAdmin] = useState(false)
+
+      const [userLogin, setuserLogin] = useState("")
+
+      const [passwordUser, setpasswordUser] = useState("")
+  
+      const onChangeUserLogin = ({ currentTarget }) => setuserLogin(currentTarget.value);
+  
+      const onChangePasswordLogin = ({ currentTarget }) => setpasswordUser(currentTarget.value);
+
+
+      
+      const ClickLogin=()=>{
+
+        if (userLogin==="admin" && passwordUser==="admin1234") {
+            setvaliLogin(true);
+            setvaliLoginAdmin(true)
+        }
+
+      }
+      /*fin validaciones login*/
   return (
     <div>
       <Routes>
-        <Route path="/" element={<Home />}/>
-        <Route path="/products" element={<Products />}/>
-        <Route path="/register" element={<Register />}/>
-        <Route path="/terminos" element={<Terminos />}/>
-        <Route path="/politicas" element={<Politicas />}/>
-        <Route path="/contact" element={<Contact />}/>
-        <Route path="/login" element={<Login />}/>
-        <Route path="/car" element={<Car />}/>
-        <Route path="/acount" element={<MyAcount />}/>
+        <Route path="/" element={<Home valiLoginAdmin={valiLoginAdmin}/>}/>
+        <Route path="/products" element={<Products valiLoginAdmin={valiLoginAdmin} />}/>
+        <Route path="/register" element={valiLogin? <Navigate replace to="/"/> : <Register />}/>
+        <Route path="/terminos" element={<Terminos valiLoginAdmin={valiLoginAdmin} />}/>
+        <Route path="/politicas" element={<Politicas valiLoginAdmin={valiLoginAdmin} />}/>
+        <Route path="/contact" element={<Contact valiLoginAdmin={valiLoginAdmin}/>}/>
+        <Route path="/login" element={valiLogin? <Navigate replace to="/"/> :<Login userLogin={userLogin} ClickLogin={ClickLogin} passwordUser={passwordUser} onChangePasswordLogin={onChangePasswordLogin} onChangeUserLogin={onChangeUserLogin}/>}/>
+        <Route path="/car" element={<Car valiLoginAdmin={valiLoginAdmin} />}/>
+        <Route path="/acount" element={<MyAcount valiLoginAdmin={valiLoginAdmin}/>}/>
         <Route path="/direction" element={<Direction />}/>
         <Route path="/password" element={<Password />}/>
         <Route path="/tarjet" element={<Tarjet />}/>

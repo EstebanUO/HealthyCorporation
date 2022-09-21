@@ -6,21 +6,8 @@ import logofacebook from '../../Image/Icons/facebook.png';
 import logoGoogle from '../../Image/Icons/google.png';
 import logoLinkening from '../../Image/Icons/linkedin.png';
 
-export const Login = () => {
+export const Login = (props) => {
 
-      /*validaciones login*/ 
-
-
-
-      const [userLogin, setuserLogin] = useState("")
-
-      const [passwordUser, setpasswordUser] = useState("")
-  
-      const onChangeUserLogin = ({ currentTarget }) => setuserLogin(currentTarget.value);
-  
-      const onChangePasswordLogin = ({ currentTarget }) => setpasswordUser(currentTarget.value);
-    
-      /*fin validaciones login*/
 
   return (
     <div>
@@ -41,15 +28,15 @@ export const Login = () => {
                 </div><br />
                 <div className="formularioLog">
                   <label for="exampleInputEmail1" class="labelsReg"><br/>Email</label>
-                    <input onChange={onChangeUserLogin} value={userLogin} name="correo" type="email" class="form-input" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Example@" autocomplete="off" required/>
+                    <input onChange={props.onChangeUserLogin} value={props.userLogin} name="correo" type="email" class="form-input" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Example@" autocomplete="off" required/>
 
                   <label for="inputPassword" class="labelsReg"><br/>Password</label>
-                    <input onChange={onChangePasswordLogin} value={passwordUser} name="password" type="password" class="form-input" id="inputPassword" placeholder="Password"/>
+                    <input onChange={props.onChangePasswordLogin} value={props.passwordUser} name="password" type="password" class="form-input" id="inputPassword" placeholder="Password"/>
 
                   <Link to="/" className="forgetPass">¿Haz olvidado tu contraseña?</Link>
                   
                   <div className="submitReg">
-                    <button type="submit" class="submitReg2">Iniciar Sesion</button>
+                    <button onClick={props.ClickLogin} type="submit" class="submitReg2">Iniciar Sesion</button>
                   </div>
                 </div>
               </form>
