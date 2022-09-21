@@ -51,7 +51,7 @@ export const Home = () => {
               </div>
             </div>
 
-            <div className='Noticie'>
+            <div className='Noticie3'>
               <h2 className='Second3'>¿Como se puede contagiar?</h2>
               <div className='Content2'>
                 <p className='Paragraph3'>La viruela símica se propaga de persona a persona mediante contacto directo con alguien que tiene una erupción cutánea de viruela símica, en particular mediante contacto cara con cara, piel con piel, boca con boca o boca con piel, incluido el contacto sexual. Todavía estamos aprendiendo sobre la duración de la capacidad infectante de las personas con viruela símica, pero por lo general se consideran infecciosas hasta que todas las lesiones se han cubierto de costras, las costras se han caído y se ha formado una nueva capa de piel debajo. </p>
@@ -59,9 +59,7 @@ export const Home = () => {
               </div>
             </div>
 
-            <div >
-              <h2 className='First2'>¿Noticia secundaria?</h2>
-            </div>
+            
 
             <Marks />
           </div>

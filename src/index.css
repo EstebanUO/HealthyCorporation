@@ -14,6 +14,14 @@ code {
 }
 
 /*---------------- Nav -------------------*/
+
+
+.menu_fixed{
+  
+  width: 100%;
+}
+
+
 .headerDisplay{
   display: flex;
   align-items: center;
@@ -46,6 +54,10 @@ nav{
   border-bottom:solid #000000;
 }
 
+.Logo_nav{
+  width: 15rem;
+}
+
 nav .a{
   text-decoration: none;
   padding-left: 1rem;
@@ -73,7 +85,180 @@ header img{
   width: 30rem;
 }
 
+.burger{
+  cursor: pointer;
+}
+
+
+
+/*---------------- Navbar -------------------*/
+
+.navbar{
+  display: flex;
+  align-items: baseline;
+  justify-content: space-around;
+  background-color: #5bc3fc;
+  /* border-bottom:solid #000000; */
+  display: none;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  top: 0;
+  transition: margin-left 4s ease-in-out 1s;
+  border-bottom: solid black;
+}
+
+#logo{
+  width: 14rem;
+  animation: logo 1s forwards;
+}
+
+@keyframes logo {
+  from {
+    transform: translate(-100px);
+  }
+
+  to {
+    transform: translate(0px);
+  }
+}
+
+.navbar2{
+  display: flex;
+  align-items: baseline;
+  justify-content: space-around;
+  cursor: pointer;
+  margin-top: 1rem;
+  margin-bottom: .5rem;
+  animation: navbar2 1s forwards;
+  font-size: 1.1rem;
+}
+
+@keyframes navbar2 {
+  from {
+    transform: translate(100px);
+  }
+
+  to {
+    transform: translate(0px);
+  }
+}
+
+.navbar2:hover{
+  color: #fff;
+}
+
+.buscar{
+  width: 26rem;
+  border-radius: .3rem;
+}
+
+.buscar2{
+  border: none;
+  background-color: #fff;
+  margin-left: -2rem;
+  display: block;
+  color: #2b8dc2;
+}
+
+.acount{
+  text-decoration: none;
+  color: #000000;
+}
+
+.acount:hover{
+  color: #fff;
+}
+
+.car{
+  text-decoration: none;
+  color: #000000;
+}
+
+.car:hover{
+  color: #fff;
+}
+
+
+
+
 /*---------------- Formulario Registro -------------------*/
+
+.formulario2 {
+  animation: slidein 1s forwards;
+  background-color: #ffffff57;
+  padding: 3rem;
+  box-shadow: 1px 1px 18px black;
+  border-radius: 1rem;
+  width: 34rem;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+@keyframes slidein {
+  from {
+    transform: translate(-500px);
+  }
+  to {
+    transform: translate(0px);
+  }
+}
+.message {
+  animation: texxt 1s forwards;
+  padding: 3rem;
+  margin-right: 6rem;
+  margin-left: 6rem;
+  text-align: center;
+}
+
+@keyframes texxt {
+  from {
+   transform: translate(-900px);
+  }
+  to {
+    transform: translate(0px);
+  }
+}
+
+
+.formulario3 {
+  animation: slidein2 1s forwards;
+  background-color: #ffffff57;
+  padding: 3rem;
+  box-shadow: 1px 1px 18px black;
+  border-radius: 1rem;
+  width: 34rem;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+@keyframes slidein2 {
+  from {
+    transform: translate(500px);
+  }
+  to {
+    transform: translate(0px);
+  }
+ 
+}
+.message2 {
+  padding: 3rem;
+  margin-right: 6rem;
+  margin-left: 6rem;
+  text-align: center;
+  animation: texxt2 1s forwards;
+}
+
+@keyframes texxt2 {
+  from {
+   transform: translate(900px);
+  }
+
+  to {
+    transform: translate(0px);
+  }
+}
+/*-----------------------------*/
+
 .formulario{
   display: flex;
   width: 100%;
@@ -82,15 +267,7 @@ header img{
   background-image: url(/src/Components/Image/fondoReg.png);
 }
 
-.formulario2{
-  background-color: #ffffff57;
-  padding: 5rem;
-  box-shadow: 1px 1px 18px black;
-  border-radius: 1rem;
-  width: 34rem;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-}
+
 
 .formularioReg{
   display: flex;
@@ -138,7 +315,7 @@ header img{
 .form-input{
   background-color: #ffffff57;
   width: 100%;
-  height: 1.5rem;
+  height: 2.5rem;
   padding: .2rem;
   font-size: 1rem;
   border: none;
@@ -162,13 +339,6 @@ header img{
 .border-icon{
   font-size: 2rem;
   padding: 0.5rem;
-}
-
-.message {
-  padding: 3rem;
-  margin-right: 6rem;
-  margin-left: 6rem;
-  text-align: center;
 }
 
 .message h2 {
@@ -196,6 +366,33 @@ header img{
   background-color: #6464f8;
 }
 
+
+.forgetPass{
+  text-align: right;
+  display: flex;
+  flex-direction: column-reverse;
+}
+.message2 button {
+  padding: 1rem;
+  font-weight: 400;
+  background-color: #4a4aee;
+  border-radius: 2rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: .9rem;
+  margin-top: 2rem;
+  transition: all .3s ease-in;
+  color: #fff;
+  margin: auto;
+  display: block;
+}
+
+.message2 button:hover {
+  background-color: #6464f8;
+
+}
+
 /*---------------- Terminos -------------------*/
 .parrafo{
   text-align: justify;
@@ -220,6 +417,7 @@ h1{
 
 h2{
   text-align: center;
+  font-size: 1.7rem;
 }
 
 h3{
@@ -228,11 +426,89 @@ h3{
 
 .container1{
   background-color: #ffffff57;
-  padding: 3rem;
+  padding: 2rem;
   box-shadow: 1px 1px 18px black;
   border-radius: 1rem;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
+  width: 40rem;
+}
+
+.container_all{
+  display: flex;
+  justify-content: center;
+
+  animation: container_all 2s forwards;
+}
+@keyframes container_all {
+  from {
+    transform: translate(-500px);
+  }
+  to {
+    transform: translate(0px);
+  }
+}
+
+.about_all{
+  display: flex;
+  flex-direction: row;
+}
+.about_contact{
+  margin-top: 8rem;
+  width: 118rem;
+  margin-left: -6rem;
+}
+.about_contact2{
+  padding-left: 8rem;
+  color: #5bc3fc;
+  animation: about_contact2 2s forwards;
+}
+@keyframes about_contact2 {
+  from {
+    transform: translate(-500px);
+  }
+  to {
+    transform: translate(0px);
+  }
+}
+.about_contact3{
+  padding-left: 8rem;
+  margin-bottom: -3rem;
+}
+.about_contact4{
+  font-size: 1.3rem;
+  animation: about_contact4 2s forwards;
+}
+@keyframes about_contact4 {
+  from {
+    transform: translate(-500px);
+  }
+  to {
+    transform: translate(0px);
+  }
+}
+
+.about_where{
+  padding-left: 8rem;
+  animation: about_where 2s forwards;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  margin-top: 5.8rem;
+}
+@keyframes about_where {
+  from {
+    transform: translate(-500px);
+  }
+  to {
+    transform: translate(0px);
+  }
+}
+.about_where1{
+  color: #5bc3fc;
+}
+.about_where3{
+  font-size: 1.3rem;
 }
 
 
@@ -240,7 +516,7 @@ h3{
 textarea{
   min-height: 100px;
   max-height: 200px;
-  max-width: 380px;
+  width: 36rem;
   border-radius: 7px;
   /* border-bottom: 2px solid #2196F3; */
   box-shadow:9px 6px 6px #90A4AE; 
@@ -248,27 +524,35 @@ textarea{
 
 .contact{
   display: flex;
-  width: 100%;
   justify-content: center;
   padding: 2.5rem;
 }
   
-input{
-  margin: 10px 0;
+.textContact{
+  /* margin: 10px 0;
   border-radius: 7px;
-  /* border-bottom: 2px solid #2196F3; */
-  box-shadow:5px 5px 5px #90A4AE; 
+  /* border-bottom: 2px solid #2196F3; 
+  box-shadow:5px 5px 5px #90A4AE;  */
+
+  background-color: #ffffff57;
+  width: 100%;
+  height: 2.5rem;
+  padding: 0.2rem;
+  font-size: 1rem;
+  border: none;
+  border-bottom: solid 1px black;
 }
 
 label{
   font-weight: bold;
+  margin-top: 1rem;
 }
 
 
 .text{
   background-color: #ffffff57;
   width: 100%;
-  height: 1.5rem;
+  height: 2.5rem;
   padding: .2rem;
   font-size: 1rem;
   border: none;
@@ -323,4 +607,66 @@ a{
 
 .margin-left{
   margin-left: 22rem;
+}
+
+
+#home{
+  color: white;
+  font-size: 3rem;
+}
+.center_home{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: -20rem;
+}
+
+
+#opacidad{
+  z-index: 1;
+}
+#color_1{
+  background-color: rgba(0,0,0,0.6);
+}
+
+
+.image_contact{
+  width: 100%;
+  z-index: 0;
+}
+
+.text_product{
+  margin-top: -14.8rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: flex-start;
+  font-size: 5rem;
+  padding-left: 6rem;
+  color: white;
+  animation: text_product 1s forwards;
+}
+@keyframes text_product {
+  from {
+    transform: translate(-500px);
+  }
+  to {
+    transform: translate(0px);
+  }
+}
+.text_product2{
+  margin-top: -3rem;
+  display: flex;
+  justify-content: flex-start;
+  font-size: 5rem;
+  padding-left: 6rem;
+  color: white;
+  animation: text_product2 1.2s forwards;
+}
+@keyframes text_product2 {
+  from {
+    transform: translate(-500px);
+  }
+  to {
+    transform: translate(0px);
+  }
 }

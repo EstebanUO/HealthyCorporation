@@ -9,8 +9,8 @@ export const Products = () => {
   return (
     <div>
         <Header />
-        <h1>Productos</h1>
         <Slider/>
+        <h1>Aqui se colocaran una lista larga de productos</h1>
         <Footer />
     </div>
   )

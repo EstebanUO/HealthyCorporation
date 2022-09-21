@@ -11,10 +11,10 @@ import image_7 from '../../Image/Category/sexual.png';
 
 export const Categories = () => {
     return (
-        <div className='all'>
+        <div className='all' >
 
-            <div className='contents'>
-
+            <div className='contents' >
+ 
                 <div className='card2'>
                     <img src={image_1} alt="Prueba de imagen" className='Image-card' />
                     <p className='text-card'>Ofertas</p>
@@ -22,7 +22,7 @@ export const Categories = () => {
 
             </div>
 
-            <div className='contents'>
+            <div className='contents' >
 
                 <div className='card'>
                     <img src={image_7} alt="Prueba de imagen" className='Image-card' />

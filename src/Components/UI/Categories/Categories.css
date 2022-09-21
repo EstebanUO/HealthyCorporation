@@ -1,12 +1,13 @@
 .contents {
-    padding: 1rem;
+    padding: .9rem;
     padding-top: 4rem;
 }
 
+
 .card {
     width: 10rem;
-    height: 10rem;
-    background-color: #83c5eb;
+    height: 9rem;
+    background-color: #4aa5da;
     border-radius: 1rem;
     display: flex;
     justify-content: center;
@@ -24,8 +25,8 @@
 }
 
 .card2 {
-    width: 9rem;
-    height: 10rem;
+    width: 10rem;
+    height: 9rem;
     background-color: #ff4848;
     border-radius: 1rem;
     display: flex;
@@ -45,7 +46,7 @@
 
 .text-card {
     font-size: 1.2rem;
-}
+} 
 
 .Image-card {
     width: 4rem;

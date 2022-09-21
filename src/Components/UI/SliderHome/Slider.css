@@ -9,7 +9,7 @@
     pointer-events: none;
 }
 .slider{
-    display: flex;
+    display: flex; 
     cursor: grab;
 }
 .slider-container{
@@ -52,6 +52,21 @@
     margin-left: 2rem;
 }
 
+.img_edit2{
+  width: 10%;
+  z-index: 1;
+  margin-left: 9rem;
+  margin-top: -3rem;
+}
+
+.link{
+  height: 14rem;
+}
+
+.link:hover{
+
+}
+
 .btn_send{
     display: flex;
     align-content: center;
@@ -66,11 +81,11 @@
     margin-top: 1rem;
 }
 
-#content{
-    display: flex;
+.contentt{
+   
+     /* display: flex; */
+    display: none;
     flex-direction: row;
-    
-
     position: absolute;
     z-index: 1; 
     background-color: #83c5eb;
@@ -83,6 +98,8 @@
     padding: 40px 55px;
     transition: all .3s ease;
     border:solid #221007;
+    
+    
   }
   .off{
     display: none;
@@ -102,17 +119,13 @@
       transition: all 300ms;
       border:solid #221007;
   }
-
-
   #cancel{
     background-color: #f15c5c;
-    
   }
   #cancel:hover{
     background-color: #eee7e7;
       transition: all 300ms;
       border:solid #221007;
-      
   }
   #Send{
     background-color: #a4dcff;

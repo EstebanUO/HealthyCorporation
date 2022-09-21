@@ -5,8 +5,7 @@
     color: rgb(131, 131, 131);
     font-size: 5rem;
     display: flex;
-    justify-content: flex-start;
-    padding-left: 7rem;
+    justify-content: center;
 }
 .title-home3{
     color: rgb(131, 131, 131);;
@@ -20,12 +19,34 @@
 
 .Noticie{
     margin-top: -3rem;
+    animation: noticie 2s forwards;
 }
-
+  @keyframes noticie {
+    from {
+      transform: translate(-500px);
+    }
+    to {
+      transform: translate(0px);
+    }
+  }
+  
 .Noticie2{
     display: flex;
     flex-direction: column;
 }
+
+.Noticie3{
+    margin-top: -3rem;
+    animation: Noticie3 2.7s forwards;
+}
+  @keyframes Noticie3 {
+    from {
+      transform: translate(500px);
+    }
+    to {
+      transform: translate(0px);
+    }
+  }
 
 .First{
     display: flex;  
@@ -67,7 +88,16 @@
     color:#83c5eb;
     font-size: 2.5rem;
     margin-top: -4px;
+    animation:  Second2 2.5s forwards;
 }
+@keyframes Second2 {
+    from {
+      transform: translate(-300px);
+    }
+    to {
+      transform: translate(0px);
+    }
+  }
 
 .Paragraph2{
     font-size: 1.3rem;
@@ -75,7 +105,16 @@
     justify-content: flex-start; 
     padding-left: 7rem;
     padding-right: 3rem;
+    animation:  Paragraph2 2.5s forwards;
 }
+@keyframes Paragraph2 {
+    from {
+      transform: translate(-300px);
+    }
+    to {
+      transform: translate(0px);
+    }
+  }
 
 .Second3{
     display: flex;
@@ -100,7 +139,16 @@
    margin-top: -6rem;
    padding-right: 3rem;
    width: 35rem;
+   animation: Image-noticie 2s forwards;
 }
+@keyframes Image-noticie {
+    from {
+      transform: translate(300px);
+    }
+    to {
+      transform: translate(0px);
+    }
+  }
 
 .Image-noticie2{
     margin-top: -6rem;
@@ -120,8 +168,8 @@
 }
 
 .products-home{
-    background-color: #E3FAF1;
-    height: 26rem;
+    background-color: #d3ebf7;
+    height: 22rem;
 }
 
 .title-home{
