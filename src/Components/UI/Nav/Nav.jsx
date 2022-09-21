@@ -14,7 +14,7 @@ export const Nav = () => {
       <div className='content'>
         <Link to='/' className='a'>Inicio</Link>
         <Link to='/products' className='a'>Productos</Link>
-        <Link to='/register' className='a'>Ingresar</Link>
+        <Link to='/register' className='a'>Mi cuenta</Link>
         <Link to='/Contact' className='a'>Contacto</Link>
       </div>
     </nav>
