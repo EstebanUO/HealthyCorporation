@@ -329,7 +329,7 @@ header img{
 
 .iconos{
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   cursor: pointer;
   margin-left: 8.5rem;
   width: 2.5rem;
