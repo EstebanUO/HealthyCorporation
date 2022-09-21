@@ -2,23 +2,10 @@ import React from 'react'
 import { FaUserAlt,FaShoppingCart,FaMapMarkerAlt,FaHeartbeat,FaSistrix } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 import logo from '../../Image/logo.png';
-// import { Categories } from '../Categories/Categories';
-
 
 export const NavBar = () => {
 
-
-
     window.onscroll = function() {scrollFunction()};
-
-    // const showNavbar = () =>{
-        
-    // }
-
-    // const closeNavbar = () =>{
-        
-    // }
-
 
     window.addEventListener("scroll", () =>{
         console.log("scrollindo...")
