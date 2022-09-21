@@ -8,7 +8,7 @@ import delect from '../../Image/eliminar.gif'
 import img_prueba from '../../Image/assects/pax.jpg'
 
 
-export const Amount = () => {
+export const Amount = (props) => {
 
     const [counter, setCounter] = useState(1);
     const sumar = () => { setCounter(counter + 1); };
@@ -45,7 +45,7 @@ export const Amount = () => {
 
     return (
         <>
-            <Header />
+            <Header valiLoginAdmin={props.valiLoginAdmin}/>
             <div className="content_car">
                 <div className='product'>
                     <div className="product_all">

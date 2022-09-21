@@ -14,11 +14,11 @@ import './Home.css';
 
 export const Home = (props) => {
 
-  const valiadmin=props.valiLoginAdmin;
+
 
   return (
     <div>
-      <Header />
+      <Header valiLoginAdmin={props.valiLoginAdmin} />
       <div>
 
         <Slider2 />

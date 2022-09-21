@@ -44,14 +44,14 @@ function App() {
     <div>
       <Routes>
         <Route path="/" element={<Home valiLoginAdmin={valiLoginAdmin}/>}/>
-        <Route path="/products" element={<Products />}/>
+        <Route path="/products" element={<Products valiLoginAdmin={valiLoginAdmin} />}/>
         <Route path="/register" element={valiLogin? <Navigate replace to="/"/> : <Register />}/>
-        <Route path="/terminos" element={<Terminos />}/>
-        <Route path="/politicas" element={<Politicas />}/>
-        <Route path="/contact" element={<Contact />}/>
+        <Route path="/terminos" element={<Terminos valiLoginAdmin={valiLoginAdmin} />}/>
+        <Route path="/politicas" element={<Politicas valiLoginAdmin={valiLoginAdmin} />}/>
+        <Route path="/contact" element={<Contact valiLoginAdmin={valiLoginAdmin}/>}/>
         <Route path="/login" element={valiLogin? <Navigate replace to="/"/> :<Login userLogin={userLogin} ClickLogin={ClickLogin} passwordUser={passwordUser} onChangePasswordLogin={onChangePasswordLogin} onChangeUserLogin={onChangeUserLogin}/>}/>
-        <Route path="/car" element={<Car />}/>
-        <Route path="/acount" element={<MyAcount />}/>
+        <Route path="/car" element={<Car valiLoginAdmin={valiLoginAdmin} />}/>
+        <Route path="/acount" element={<MyAcount valiLoginAdmin={valiLoginAdmin}/>}/>
         <Route path="/direction" element={<Direction />}/>
         <Route path="/password" element={<Password />}/>
         <Route path="/tarjet" element={<Tarjet />}/>

@@ -5,7 +5,7 @@ import { NavBar } from '../../../UI/NavBar/NavBar';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import { faUserCircle } from '@fortawesome/free-solid-svg-icons'
 
-export const Header = () => {
+export const Header = (props) => {
   return (
     <>
         <header className='Up' id='Up'>
@@ -17,7 +17,7 @@ export const Header = () => {
           </div>
         </header>
         <NavBar/>
-        <Nav />
+        <Nav valiLoginAdmin={props.valiLoginAdmin} />
     </>
   )
 }
