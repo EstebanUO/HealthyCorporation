@@ -310,6 +310,7 @@ header img{
 
 .titleReg{
   text-align: center;
+  font-size: 2rem;
 }
 
 .form-input{
@@ -330,6 +331,9 @@ header img{
   display: flex;
   justify-content: space-around;
   cursor: pointer;
+  margin-left: 8.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
 }
 
 .links{

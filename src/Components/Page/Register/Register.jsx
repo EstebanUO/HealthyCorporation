@@ -2,7 +2,9 @@ import React from 'react';
 import { Header } from '../Layout/Header/Header';
 import { Footer } from '../Layout/Footer/Footer';
 import { Link } from "react-router-dom";
-import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import logofacebook from '../../Image/Icons/facebook.png';
+import logoGoogle from '../../Image/Icons/google.png';
+import logoLinkening from '../../Image/Icons/linkedin.png';
 
 export const Register = () => {
 
@@ -24,13 +26,13 @@ export const Register = () => {
                 <h1 className="titleReg">Registro</h1>
                 <div className="iconos">
                   <div className="border-icon">
-                    <FaFacebook/>
+                    <img src={logofacebook} alt="logofacebook" className="iconos"/>
                   </div>
                   <div className="border-icon">
-                    <FaInstagram/>
+                    <img src={logoGoogle} alt="logoGoogle" className="iconos"/>
                   </div>
                   <div className="border-icon">
-                    <FaLinkedin/>
+                    <img src={logoLinkening} alt="logoLinkening" className="iconos"/>
                   </div>
                 </div><br />
                 <div className="formularioReg">

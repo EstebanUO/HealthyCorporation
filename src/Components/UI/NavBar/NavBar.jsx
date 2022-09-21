@@ -17,11 +17,9 @@ export const NavBar = () => {
         if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
             document.getElementById("navbar").style.display = "flex";
             document.getElementById("nav").style.display = "none";
-            document.getElementById("categorias").style.display = "flex";
         } else {
             document.getElementById("navbar").style.display = "none";
             document.getElementById("nav").style.display = "flex";
-            document.getElementById("categorias").style.display = "none";
         }
       }
 
