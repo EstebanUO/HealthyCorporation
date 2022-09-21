@@ -5,6 +5,21 @@ import { Link } from "react-router-dom"
 import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa';
 
 export const Login = () => {
+
+      /*validaciones login*/ 
+
+
+
+      const [userLogin, setuserLogin] = useState("")
+
+      const [passwordUser, setpasswordUser] = useState("")
+  
+      const onChangeUserLogin = ({ currentTarget }) => setuserLogin(currentTarget.value);
+  
+      const onChangePasswordLogin = ({ currentTarget }) => setpasswordUser(currentTarget.value);
+    
+      /*fin validaciones login*/
+
   return (
     <div>
         <Header/>
@@ -25,10 +40,10 @@ export const Login = () => {
                 </div><br />
                 <div className="formularioLog">
                   <label for="exampleInputEmail1" class="labelsReg"><br/>Email</label>
-                    <input name="correo" type="email" class="form-input" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Example@" autocomplete="off" required/>
+                    <input onChange={onChangeUserLogin} value={userLogin} name="correo" type="email" class="form-input" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Example@" autocomplete="off" required/>
 
                   <label for="inputPassword" class="labelsReg"><br/>Password</label>
-                    <input name="password" type="password" class="form-input" id="inputPassword" placeholder="Password"/>
+                    <input onChange={onChangePasswordLogin} value={passwordUser} name="password" type="password" class="form-input" id="inputPassword" placeholder="Password"/>
 
                   <Link to="/" className="forgetPass">¿Haz olvidado tu contraseña?</Link>
                   

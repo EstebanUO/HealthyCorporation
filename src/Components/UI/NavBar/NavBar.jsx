@@ -41,10 +41,10 @@ export const NavBar = () => {
                 <FaHeartbeat/><p>Lista de Deseos</p>
             </div>
             <div className='navbar2'>
-                <FaUserAlt/><Link to='/register' className='cuenta'>Mi cuenta</Link> 
+                <FaUserAlt/><Link to='/register' className='acount'> Mi cuenta</Link> 
             </div>
             <div className='navbar2'>
-                <FaShoppingCart/><p>0</p>
+            <Link to='/car'  className='car'><FaShoppingCart/></Link><p>0</p>
             </div>
         </div>
     </div>

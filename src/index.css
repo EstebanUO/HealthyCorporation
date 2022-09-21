@@ -104,10 +104,23 @@ header img{
   width: 100%;
   z-index: 100;
   top: 0;
+  transition: margin-left 4s ease-in-out 1s;
+  border-bottom: solid black;
 }
 
 #logo{
   width: 14rem;
+  animation: logo 1s forwards;
+}
+
+@keyframes logo {
+  from {
+    transform: translate(-100px);
+  }
+
+  to {
+    transform: translate(0px);
+  }
 }
 
 .navbar2{
@@ -115,6 +128,20 @@ header img{
   align-items: baseline;
   justify-content: space-around;
   cursor: pointer;
+  margin-top: 1rem;
+  margin-bottom: .5rem;
+  animation: navbar2 1s forwards;
+  font-size: 1.1rem;
+}
+
+@keyframes navbar2 {
+  from {
+    transform: translate(100px);
+  }
+
+  to {
+    transform: translate(0px);
+  }
 }
 
 .navbar2:hover{
@@ -134,14 +161,26 @@ header img{
   color: #2b8dc2;
 }
 
-.cuenta{
+.acount{
   text-decoration: none;
   color: #000000;
 }
 
-.cuenta:hover{
+.acount:hover{
   color: #fff;
 }
+
+.car{
+  text-decoration: none;
+  color: #000000;
+}
+
+.car:hover{
+  color: #fff;
+}
+
+
+
 
 /*---------------- Formulario Registro -------------------*/
 
@@ -490,14 +529,23 @@ textarea{
 }
   
 .textContact{
-  margin: 10px 0;
+  /* margin: 10px 0;
   border-radius: 7px;
-  /* border-bottom: 2px solid #2196F3; */
-  box-shadow:5px 5px 5px #90A4AE; 
+  /* border-bottom: 2px solid #2196F3; 
+  box-shadow:5px 5px 5px #90A4AE;  */
+
+  background-color: #ffffff57;
+  width: 100%;
+  height: 2.5rem;
+  padding: 0.2rem;
+  font-size: 1rem;
+  border: none;
+  border-bottom: solid 1px black;
 }
 
 label{
   font-weight: bold;
+  margin-top: 1rem;
 }
 
 
