@@ -1,5 +1,6 @@
 import React from 'react';
 import { Nav } from '../../../UI/Nav/Nav';
+import { Link } from "react-router-dom";
 import logo from '../../../Image/logo.png'
 import { NavBar } from '../../../UI/NavBar/NavBar';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -10,7 +11,7 @@ export const Header = (props) => {
     <>
         <header className='Up' id='Up'>
           <div className='imgu'>
-              <a href="/"><img src={logo} alt="Logo" /></a>
+              <Link to='/'><img src={logo} alt="Logo" /></Link>
               {/* <div className='userIcon'>
                 <FontAwesomeIcon icon={faUserCircle} />
               </div> */}
