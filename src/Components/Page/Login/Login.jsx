@@ -1,10 +1,25 @@
-import React from 'react'
+import React,{useState} from 'react'
 import { Footer } from '../Layout/Footer/Footer'
 import { Header } from '../Layout/Header/Header'
 import { Link } from "react-router-dom"
 import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import axios from 'axios'
 
 export const Login = () => {
+
+    /*validaciones login*/ 
+
+
+
+    const [userLogin, setuserLogin] = useState("")
+
+    const [passwordUser, setpasswordUser] = useState("")
+
+    const onChangeUserLogin = ({ currentTarget }) => setuserLogin(currentTarget.value);
+
+    const onChangePasswordLogin = ({ currentTarget }) => setpasswordUser(currentTarget.value);
+  
+    /*fin validaciones login*/
   return (
     <div>
         <Header/>
@@ -25,13 +40,13 @@ export const Login = () => {
                 </div><br />
                 <div className="formularioLog">
                   <label for="exampleInputEmail1" class="labelsReg"><br/>Email</label>
-                    <input name="correo" type="email" class="form-input" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Example@" autocomplete="off" required/>
+                    <input value={userLogin} onChange={onChangeUserLogin} name="correo" type="email" class="form-input" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Example@" autocomplete="off" required/>
 
                   <label for="inputPassword" class="labelsReg"><br/>Password</label>
-                    <input name="password" type="password" class="form-input" id="inputPassword" placeholder="Password"/>
+                    <input value={passwordUser} onChange={onChangePasswordLogin} name="password" type="password" class="form-input" id="inputPassword" placeholder="Password"/>
                   
                   <div className="submitReg">
-                    <button type="submit" class="submitReg2">Iniciar Sesion</button>
+                    <button onClick={submitLogin} type="submit" class="submitReg2">Iniciar Sesion</button>
                   </div>
                 </div>
               </form>
