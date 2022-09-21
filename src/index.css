@@ -516,12 +516,7 @@ h3{
 textarea{
   min-height: 200px;
   max-height: 200px;
-<<<<<<< HEAD
-  max-width: 380px;
-  min-width: 380px;
-=======
   width: 36rem;
->>>>>>> ba815920f41c6ceab158949c20d820c7cd7404ee
   border-radius: 7px;
   /* border-bottom: 2px solid #2196F3; */
   box-shadow:9px 6px 6px #90A4AE; 
