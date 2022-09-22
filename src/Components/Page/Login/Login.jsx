@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React from 'react'
 import { Footer } from '../Layout/Footer/Footer'
 import { Header } from '../Layout/Header/Header'
 import { Link } from "react-router-dom"

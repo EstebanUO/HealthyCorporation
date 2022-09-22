@@ -42,7 +42,7 @@ export const Direction = () => {
           </div>
           
             <div className='acount_btn'>
-              <button className='btn_save'>Guardar</button>
+              <button className='btn_save'><s>Guardar</s></button>
             </div>
         </div>
       </div>

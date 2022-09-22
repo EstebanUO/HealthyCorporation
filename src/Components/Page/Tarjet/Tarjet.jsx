@@ -16,12 +16,12 @@ export const Tarjet = () => {
         <div className='acount_content_all'>
           <div className='acount_content_tarjet'>
             <p>Numero de la tarjeta</p>
-            <input className='input_acount3' placeholder='5212 **** **** ****' type="number" value="" required />
+            <input className='input_acount3' placeholder='5212 **** **** ****' minlength="16" type="number" value="" required />
           </div><br />
 
           <div className='acount_content_tarjet'>
             <p>Titular de la tarjeta</p>
-            <input className='input_acount3' placeholder='Ingresa tu nombre y apellido' type="number" value="" required/>
+            <input className='input_acount3' placeholder='Ingresa tu nombre y apellido' minlength="5" type="number" value="" required/>
           </div><br />
 
           <div className='acount_content_row'>
@@ -63,11 +63,11 @@ export const Tarjet = () => {
 
           <div className='acount_content_tarjet'>
             <p>CVV</p>
-            <input className='input_acount5' placeholder='Ej: 456' type="number" value="" required/>
+            <input className='input_acount5' placeholder='Ej: 456' type="number" value="" minlength="3" required/>
           </div>
 
           <div className='acount_btn'>
-              <button type="submit" className='btn_save' su>Guardar</button>
+              <button type="submit" className='btn_save' ><s>Guardar</s></button>
               
             </div>
         </div>
