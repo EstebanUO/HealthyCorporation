@@ -730,22 +730,7 @@ a{
   }
 }
 
-.lineal_img4{
-  z-index: 0;
-   margin-top: 9.6rem;
-  margin-left: 2rem; 
-  height: 4rem;
-  width: 4rem;
-  animation: lineal_img4 .7s forwards;
-}
-@keyframes lineal_img4 {
-  from {
-    transform: translate(-200px);
-  }
-  to {
-    transform: translate(0px);
-  }
-}
+
 
 .acount_all{
   display: flex;
@@ -756,6 +741,12 @@ a{
 /* todo lo de usuario */
 
 /* direction */
+
+.acount_up{
+  display: flex;
+  justify-content: center;
+
+}
 
 .acount_content_all{
   background-color: #d3ebf7;
@@ -769,7 +760,7 @@ a{
 }
 @keyframes acount_content_all {
   from {
-    transform: translate(200px);
+    transform: translate(-70px);
   }
   to {
     transform: translate(0px);
@@ -887,4 +878,121 @@ a{
   border: none;
   border-bottom: solid 1px black;
   margin-right: -2.5rem;
+}
+
+
+/* botones de mi cuenta */
+
+.info{
+    
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border: none;
+  z-index: 1;
+}
+
+
+.all_info{
+  padding-top: 6rem;
+}
+
+/*-------- botones ---------*/
+
+.select_btn{
+  color: black;
+  padding: .6rem;
+  background-color: #d3ebf7;
+  width: 17rem;
+  height: 4.5rem;
+  display: flex;
+  align-items: center;
+  margin-right: -4rem;
+  border-radius: .5rem;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  transition: all 400ms;
+}
+.select_btn:hover{
+  color: black;
+}
+
+.aa{
+  color: black;
+  padding: .6rem;
+  background-color: #5bc3fc;
+  width: 12rem;
+  display: flex;
+  justify-content: center;
+  border-radius: .5rem;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  transition: all 400ms;
+}
+.aa:hover {
+  background-color: #eee7e7;
+  transition: all 300ms;
+  width: 12rem;
+  color: black;
+  border:3px solid black ;
+}
+
+.b{
+  color: black;
+  padding: .6rem;
+  background-color: #5bc3fc;
+  width: 12rem;
+  display: flex;
+  justify-content: center;
+  border-radius: .5rem;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  transition: all 400ms;
+}
+.b:hover {
+  background-color: #eee7e7;
+  transition: all 300ms;
+  width: 12rem;
+  color: black;
+  border:3px solid black ;
+}
+
+.c{
+  color: black;
+  padding: .6rem;
+  background-color: #5bc3fc;
+  width: 12rem;
+  display: flex;
+  justify-content: center;
+  border-radius: .5rem;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  transition: all 400ms;
+}
+.c:hover {
+  background-color: #eee7e7;
+  transition: all 300ms;
+  width: 12rem;
+  color: black;
+  border:3px solid black ;
+}
+
+.d{
+  color: black;
+  padding: .6rem;
+  background-color: #5bc3fc;
+  width: 12rem;
+  display: flex;
+  justify-content: center;
+  border-radius: .5rem;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  transition: all 400ms;
+}
+.d:hover {
+  background-color: #eee7e7;
+  transition: all 300ms;
+  width: 12rem;
+  color: black;
+  border:3px solid black ;
 }

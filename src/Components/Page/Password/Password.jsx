@@ -1,8 +1,8 @@
 import React from 'react'
-import { Info } from '../../UI/Info/Info'
+import { Link } from 'react-router-dom'
 import { Footer } from '../Layout/Footer/Footer'
 import { Header } from '../Layout/Header/Header'
-import img_right from '../../Image/flecha.png'
+
 
 
 
@@ -10,9 +10,21 @@ export const Password = () => {
   return (
     <div>
       <Header />
-      <div className="acount_all">
-        <Info />
-        <img className='lineal_img3' src={img_right} alt="Imagen derecha" />
+      <div className='acount_up'>
+      
+        
+        <div className="acount_all">
+       
+          <div className='all_info'>
+            
+            <div className='info'>
+              <Link to='/acount' className='aa'>Mis datos</Link>
+              <Link to='/direction' className='b'>Mis direcciones</Link>
+              <Link to='/tarjet' className='c'>Mis tarjetas</Link>
+              <Link to='/password' className='select_btn'>Mi contraseña</Link>
+            </div>
+          </div>
+
 
         <div className='acount_content_all'>
           <div className='acount_content_direction'>
@@ -38,6 +50,7 @@ export const Password = () => {
             <button className='btn_save'><s>Guardar</s> </button>
           </div>
         </div>
+      </div>
       </div>
       <Footer />
     </div>
