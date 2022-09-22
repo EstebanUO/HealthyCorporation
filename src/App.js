@@ -46,7 +46,7 @@ function App() {
           .catch(function (error) {
             // handle error
             console.log(error);
-          }) .then(function (response) {
+          }) .then(function () {
             // always executed
 
           });
