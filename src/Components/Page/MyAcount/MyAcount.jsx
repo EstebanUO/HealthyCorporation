@@ -10,7 +10,7 @@ export const MyAcount = (props) => {
   return (
     <div>
 
-      <Header />
+      <Header valiLoginAdmin={props.valiLoginAdmin}/>
 
       <div className="acount_all">
         <Info />
