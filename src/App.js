@@ -1,4 +1,5 @@
 import {Home} from '../src/Components/Page/Home/Home';
+import axios from "axios";
 import {useState} from 'react'
 import { Route, Routes,Navigate } from "react-router-dom"
 import {Products} from '../src/Components/Page/Products/Products';
@@ -29,15 +30,38 @@ function App() {
   
       const onChangePasswordLogin = ({ currentTarget }) => setpasswordUser(currentTarget.value);
 
+      const getApi=()=>{
+          axios.get('http://127.0.0.1:8000/api/users')
+          .then(function (response) {
+            // handle success
+            response.data.map(data=>{
 
+              if (userLogin===data.email && passwordUser===data.password) {
+                  setvaliLogin(true);
+                  alert("bienvenido "+data.name)
+                }
+            });
+
+          })
+          .catch(function (error) {
+            // handle error
+            console.log(error);
+          }) .then(function (response) {
+            // always executed
+
+          });
+      }
       
-      const ClickLogin=()=>{
-
-        if (userLogin==="admin" && passwordUser==="admin1234") {
-            setvaliLogin(true);
-            setvaliLoginAdmin(true)
-        }
-
+      const ClickLogin=(e)=>{
+        e.preventDefault()
+        if (userLogin==="admin@gmail.com" && passwordUser==="admin1234") {
+          setvaliLogin(true);
+          setvaliLoginAdmin(true)
+          alert("bienvenido admin")
+      }else if(userLogin!=="admin@gmail.com" && passwordUser!=="admin1234"){
+        getApi()
+      }
+          
       }
       /*fin validaciones login*/
   return (
