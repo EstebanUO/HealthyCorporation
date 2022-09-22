@@ -43,14 +43,6 @@ export const Politicas = (props) => {
                 También usted puede cambiar la configuración de su ordenador para declinar las cookies. 
                 Si se declinan es posible que no pueda utilizar algunos de nuestros servicios.</p>
 
-                <h3>Enlaces a Terceros</h3>
-                <p className='parrafo'>Este sitio web pudiera contener en laces a otros sitios que pudieran ser de su interés. 
-                Una vez que usted de clic en estos enlaces y abandone nuestra página, 
-                ya no tenemos control sobre al sitio al que es redirigido y por lo 
-                tanto no somos responsables de los términos o privacidad ni de la 
-                protección de sus datos en esos otros sitios terceros. Dichos sitios están sujetos a sus propias políticas 
-                de privacidad por lo cual es recomendable que los consulte para confirmar que usted está de acuerdo con estas.</p>
-
                 <h3>Control de su información personal</h3>
                 <p className='parrafo'>En cualquier momento usted puede restringir la recopilación o el uso de la información personal que es proporcionada a nuestro sitio web.  Cada vez que se le solicite rellenar un formulario, 
                 como el de alta de usuario, puede marcar o desmarcar la opción de recibir información por correo electrónico. En caso de que haya marcado la opción de recibir nuestro boletín o publicidad usted puede cancelarla en cualquier momento.<br/><br/>
