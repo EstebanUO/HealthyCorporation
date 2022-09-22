@@ -4,10 +4,10 @@ import { Footer } from '../../Page/Layout/Footer/Footer';
 import { Form } from '../../UI/Form/Form';
 import image from '../../Image/Noticie/talco2.jpg'
 
-export const Contact = () => {
+export const Contact = (props) => {
   return (
     <div>
-      <Header />
+      <Header valiLoginAdmin={props.valiLoginAdmin}/>
       <img src={image} alt="imagen contacto" srcset="" className='image_contact' />
       <h2 className='text_product'>Contacta</h2>
       <h2 className='text_product2'>con nosotros</h2>

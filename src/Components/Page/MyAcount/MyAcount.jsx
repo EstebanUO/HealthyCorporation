@@ -5,9 +5,10 @@ import { Header } from '../Layout/Header/Header'
 import img_right from '../../Image/flecha.png'
 
 
-export const MyAcount = () => {
+export const MyAcount = (props) => {
   return (
     <div>
+
       <Header />
       <div className="acount_all">
         <Info />
@@ -24,6 +25,12 @@ export const MyAcount = () => {
 
 
       <Footer />
+
+        <Nav valiLoginAdmin={props.valiLoginAdmin}/>
+        <NavCopy />
+        
+        <Footer />
+
     </div>
   )
 }

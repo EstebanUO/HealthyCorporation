@@ -2,23 +2,10 @@ import React from 'react'
 import { FaUserAlt,FaShoppingCart,FaMapMarkerAlt,FaHeartbeat,FaSistrix } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 import logo from '../../Image/logo.png';
-// import { Categories } from '../Categories/Categories';
-
 
 export const NavBar = () => {
 
-
-
     window.onscroll = function() {scrollFunction()};
-
-    // const showNavbar = () =>{
-        
-    // }
-
-    // const closeNavbar = () =>{
-        
-    // }
-
 
     window.addEventListener("scroll", () =>{
         console.log("scrollindo...")
@@ -30,11 +17,9 @@ export const NavBar = () => {
         if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
             document.getElementById("navbar").style.display = "flex";
             document.getElementById("nav").style.display = "none";
-            document.getElementById("categorias").style.display = "flex";
         } else {
             document.getElementById("navbar").style.display = "none";
             document.getElementById("nav").style.display = "flex";
-            document.getElementById("categorias").style.display = "none";
         }
       }
 

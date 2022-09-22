@@ -2,10 +2,10 @@ import React from 'react';
 import { Amount } from '../../UI/Amount/Amount';
 
 
-export const Car = () => {
+export const Car = (props) => {
   return (
     <div>
-        <Amount />
+        <Amount valiLoginAdmin={props.valiLoginAdmin}/>
     </div>
   )
 }

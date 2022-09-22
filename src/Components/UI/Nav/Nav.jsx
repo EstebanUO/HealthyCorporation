@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 
 
-export const Nav = () => {
+export const Nav = (props) => {
 
 
   return (
@@ -16,6 +16,7 @@ export const Nav = () => {
         <Link to='/products' className='a'>Productos</Link>
         <Link to='/register' className='a'>Mi cuenta</Link>
         <Link to='/Contact' className='a'>Contacto</Link>
+        {props.valiLoginAdmin? <Link to='/Contact' className='a'>Administrar productos</Link>:null}
       </div>
     </nav>
   )

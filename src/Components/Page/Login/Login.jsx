@@ -1,10 +1,14 @@
-import React from 'react'
+import React,{useState} from 'react'
 import { Footer } from '../Layout/Footer/Footer'
 import { Header } from '../Layout/Header/Header'
 import { Link } from "react-router-dom"
-import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import logofacebook from '../../Image/Icons/facebook.png';
+import logoGoogle from '../../Image/Icons/google.png';
+import logoLinkening from '../../Image/Icons/linkedin.png';
 
-export const Login = () => {
+export const Login = (props) => {
+
+
   return (
     <div>
         <Header/>
@@ -14,26 +18,25 @@ export const Login = () => {
                 <h1 className="titleReg">Iniciar Sesion</h1>
                 <div className="iconos">
                   <div className="border-icon">
-                    <FaFacebook/>
+                    <img src={logofacebook} alt="logofacebook" className="iconos"/>
                   </div>
                   <div className="border-icon">
-                    <FaInstagram/>
-                  </div>
-                  <div className="border-icon">
-                    <FaLinkedin/>
+                    <img src={logoGoogle} alt="logoGoogle" className="iconos"/>
+                  </div><div className="border-icon">
+                    <img src={logoLinkening} alt="logoLinkening" className="iconos"/>
                   </div>
                 </div><br />
                 <div className="formularioLog">
                   <label for="exampleInputEmail1" class="labelsReg"><br/>Email</label>
-                    <input name="correo" type="email" class="form-input" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Example@" autocomplete="off" required/>
+                    <input onChange={props.onChangeUserLogin} value={props.userLogin} name="correo" type="email" class="form-input" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Example@" autocomplete="off" required/>
 
                   <label for="inputPassword" class="labelsReg"><br/>Password</label>
-                    <input name="password" type="password" class="form-input" id="inputPassword" placeholder="Password"/>
+                    <input onChange={props.onChangePasswordLogin} value={props.passwordUser} name="password" type="password" class="form-input" id="inputPassword" placeholder="Password"/>
 
                   <Link to="/" className="forgetPass">¿Haz olvidado tu contraseña?</Link>
                   
                   <div className="submitReg">
-                    <button type="submit" class="submitReg2">Iniciar Sesion</button>
+                    <button onClick={props.ClickLogin} type="submit" class="submitReg2">Iniciar Sesion</button>
                   </div>
                 </div>
               </form>

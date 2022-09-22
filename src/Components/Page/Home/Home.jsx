@@ -12,10 +12,13 @@ import './Home.css';
 
 
 
-export const Home = () => {
+export const Home = (props) => {
+
+
+
   return (
     <div>
-      <Header />
+      <Header valiLoginAdmin={props.valiLoginAdmin} />
       <div>
 
         <Slider2 />
