@@ -1,6 +1,5 @@
 import React from 'react';
 import img1 from './../../Image/Noticie/talco.jpg'
-import img2 from './../../Image/Noticie/nutribela.jpg'
 import img3 from './../../Image/shampoo_producto.jpg'
 import img4 from './../../Image/Noticie/shampoo.jpg'
 import img5 from './../../Image/Noticie/shampoo2.jpg'
