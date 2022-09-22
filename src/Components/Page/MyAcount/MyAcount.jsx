@@ -8,18 +8,11 @@ import { Header } from '../Layout/Header/Header'
 export const MyAcount = (props) => {
   return (
     <div>
+      <Header valiLoginAdmin={props.valiLoginAdmin} />
 
-
-      <Header valiLoginAdmin={props.valiLoginAdmin}/>
-
-      <Header />
       <div className='acount_up'>
-      
-        
         <div className="acount_all">
-       
           <div className='all_info'>
-            
             <div className='info'>
               <Link to='/acount' className='select_btn'>Mis datos</Link>
               <Link to='/direction' className='b'>Mis direcciones</Link>
@@ -27,8 +20,6 @@ export const MyAcount = (props) => {
               <Link to='/password' className='d'>Mi contraseña</Link>
             </div>
           </div>
-
-
 
           <div className='acount_content_all'>
             <div className='acount_content_tarjet'>

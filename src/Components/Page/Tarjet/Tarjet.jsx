@@ -10,12 +10,8 @@ export const Tarjet = () => {
     <div>
       <Header />
       <div className='acount_up'>
-
-
         <div className="acount_all">
-
           <div className='all_info'>
-
             <div className='info'>
               <Link to='/acount' className='aa'>Mis datos</Link>
               <Link to='/direction' className='b'>Mis direcciones</Link>
