@@ -189,7 +189,7 @@ header img{
   background-color: #ffffff57;
   padding: 3rem;
   box-shadow: 1px 1px 18px black;
-  border-radius: 1rem;
+  border-radius: .6rem;
   width: 34rem;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -226,7 +226,7 @@ header img{
   background-color: #ffffff57;
   padding: 3rem;
   box-shadow: 1px 1px 18px black;
-  border-radius: 1rem;
+  border-radius: .6rem;
   width: 34rem;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -257,6 +257,7 @@ header img{
     transform: translate(0px);
   }
 }
+
 /*-----------------------------*/
 
 .formulario{
@@ -428,7 +429,7 @@ h3{
   background-color: #ffffff57;
   padding: 2rem;
   box-shadow: 1px 1px 18px black;
-  border-radius: 1rem;
+  border-radius: .6rem;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   width: 40rem;
@@ -438,7 +439,7 @@ h3{
   display: flex;
   justify-content: center;
 
-  animation: container_all 2s forwards;
+  animation: container_all 1s forwards;
 }
 @keyframes container_all {
   from {
@@ -461,7 +462,7 @@ h3{
 .about_contact2{
   padding-left: 8rem;
   color: #5bc3fc;
-  animation: about_contact2 2s forwards;
+  animation: about_contact2 1s forwards;
 }
 @keyframes about_contact2 {
   from {
@@ -477,7 +478,7 @@ h3{
 }
 .about_contact4{
   font-size: 1.3rem;
-  animation: about_contact4 2s forwards;
+  animation: about_contact4 1s forwards;
 }
 @keyframes about_contact4 {
   from {
@@ -490,7 +491,7 @@ h3{
 
 .about_where{
   padding-left: 8rem;
-  animation: about_where 2s forwards;
+  animation: about_where 1s forwards;
   display: flex;
   flex-direction: column;
   padding: 2rem;
@@ -669,4 +670,195 @@ a{
   to {
     transform: translate(0px);
   }
+}
+
+/*--------------- acount inicio -------*/
+
+.lineal_img{
+  z-index: 0;
+   margin-top: 5.5rem;
+  margin-left: 2rem; 
+  height: 4rem;
+  width: 4rem;
+  animation: lineal_img .7s forwards;
+}
+@keyframes lineal_img {
+  from {
+    transform: translate(-200px);
+  }
+  to {
+    transform: translate(0px);
+  }
+}
+
+.lineal_img2{
+  z-index: 0;
+   margin-top: 14rem;
+  margin-left: 2rem; 
+  height: 4rem;
+  width: 4rem;
+  animation: lineal_img2 .7s forwards;
+}
+@keyframes lineal_img2 {
+  from {
+    transform: translate(-200px);
+  }
+  to {
+    transform: translate(0px);
+  }
+}
+
+.lineal_img3{
+  z-index: 0;
+   margin-top: 18rem;
+  margin-left: 2rem; 
+  height: 4rem;
+  width: 4rem;
+  animation: lineal_img3 .7s forwards;
+}
+@keyframes lineal_img3 {
+  from {
+    transform: translate(-200px);
+  }
+  to {
+    transform: translate(0px);
+  }
+}
+
+.lineal_img4{
+  z-index: 0;
+   margin-top: 9.6rem;
+  margin-left: 2rem; 
+  height: 4rem;
+  width: 4rem;
+  animation: lineal_img4 .7s forwards;
+}
+@keyframes lineal_img4 {
+  from {
+    transform: translate(-200px);
+  }
+  to {
+    transform: translate(0px);
+  }
+}
+
+.acount_all{
+  display: flex;
+  flex-direction:  row;
+}
+
+
+/* todo lo de usuario */
+
+/* direction */
+
+.acount_content_all{
+  background-color: #d3ebf7;
+  padding: 2.5rem;
+  width: 60%;
+  margin-left: 2rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  border-radius: .5rem;
+  animation: acount_content_all .7s forwards;
+}
+@keyframes acount_content_all {
+  from {
+    transform: translate(200px);
+  }
+  to {
+    transform: translate(0px);
+  }
+}
+
+.input_acount{
+  background-color: #ffffff57;
+  width: 98%;
+  height: 2.5rem;
+  padding: 0.2rem;
+  font-size: 1rem;
+  border: none;
+  border-bottom: solid 1px black;
+}
+
+.input_acount2{
+  background-color: #ffffff57;
+  width: 95%;
+  height: 2.5rem;
+  padding: 0.2rem;
+  font-size: 1rem;
+  border: none;
+  border-bottom: solid 1px black;
+  margin-right: 16rem;
+}
+
+.acount_content_row{
+  display: flex;
+  flex-direction: row;
+}
+
+.btn_save{
+  color: black;
+  padding: .3rem;
+  background-color: #5bc3fc;
+  width: 12rem;
+  display: flex;
+  justify-content: center;
+  border-radius: .5rem;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  transition: all 400ms;
+}
+.btn_save:hover {
+  background-color: #eee7e7;
+  transition: all 300ms;
+  width: 12rem;
+  color: black;
+  border:3px solid black ;
+}
+
+.acount_btn{
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+/* tarjet */
+
+.input_acount3{
+  background-color: #ffffff57;
+  width: 95%;
+  height: 2.5rem;
+  padding: 0.2rem;
+  font-size: 1rem;
+  border: none;
+  border-bottom: solid 1px black;
+  margin-right: 16rem;
+}
+
+.acount_content_tarjet{
+  padding-left: 5rem;
+  padding-right: 4rem;
+}
+
+.input_acount4{
+  background-color: #ffffff57;
+  width: 14rem;
+  height: 2.5rem;
+  padding: 0.2rem;
+  font-size: 1rem;
+  border: none;
+  border-bottom: solid 1px black;
+  margin-right: -2.5rem;
+}
+
+.input_acount5{
+  background-color: #ffffff57;
+  width: 14rem;
+  height: 2.5rem;
+  padding: 0.2rem;
+  font-size: 1rem;
+  border: none;
+  border-bottom: solid 1px black;
+  margin-right: -2.5rem;
 }

@@ -58,7 +58,7 @@
     background-color: #d3ebf7;
     max-height: 20rem;
     padding: 1rem;
-    border-radius: 1rem;
+    border-radius: .7rem;
 }
 
 /*---- transiciones -----*/
@@ -96,7 +96,7 @@
     background-color: #d3ebf7;
     width: 45rem;
     height: 8rem;
-    border-radius: 1rem;
+    border-radius: .7rem;
     animation: product_all 1s forwards;
 }
 

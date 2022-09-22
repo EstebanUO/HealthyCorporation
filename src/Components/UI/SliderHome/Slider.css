@@ -18,7 +18,7 @@
 }
 
 .item-image{
-    border-radius: 1rem;
+    border-radius: .7rem;
 }
 
 
@@ -48,7 +48,7 @@
     height: 68%;
     width: 80%;
     margin-right: 2rem;
-    border-radius: 1rem;
+    border-radius: .6rem;
     margin-left: 2rem;
 }
 

@@ -17,7 +17,7 @@ const SliderHome = () => {
     <>
       <motion.div className='slider-container'>
         <motion.div className='slider' drag='x'
-          dragConstraints={{ right: 0, left: -1323 }} >
+          dragConstraints={{ right: 0, left: -900 }} >
           {images.map(image => ( 
             <motion.div onClick={onSee} className='item'>
               <div className='link'  >
