@@ -179,8 +179,21 @@ header img{
   color: #fff;
 }
 
+.ubicacion{
+  color: #000;
+}
 
+.ubicacion:hover{
+  color: #fff;
+}
 
+.listaDeseos{
+  color: #000000;
+}
+
+.listaDeseos:hover{
+  color: #fff;
+}
 
 /*---------------- Formulario Registro -------------------*/
 

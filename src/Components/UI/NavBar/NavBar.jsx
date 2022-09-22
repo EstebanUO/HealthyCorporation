@@ -7,14 +7,14 @@ export const NavBar = () => {
 
     window.onscroll = function() {scrollFunction()};
 
-    window.addEventListener("scroll", () =>{
-        console.log("scrollindo...")
-        let actual = window.pageYOffset
-        console.log(actual);
-    })
+    // window.addEventListener("scroll", () =>{
+    //     console.log("scrollindo...")
+    //     let actual = window.pageYOffset
+    //     console.log(actual);
+    // })
 
     function scrollFunction() {
-        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
             document.getElementById("navbar").style.display = "flex";
             document.getElementById("nav").style.display = "none";
         } else {
@@ -27,22 +27,22 @@ export const NavBar = () => {
     <div>
         <div className='navbar' id='navbar'>
             <div>
-                <a href="/"><img src={logo} alt="logo" id='logo'/></a>
+                <Link to='/'><img src={logo} alt="logo" id='logo'/></Link>
             </div>
             <div className='navbar2'>
-                <FaMapMarkerAlt/><p>Ubicación</p>
+                <Link to="/" className="ubicacion"><FaMapMarkerAlt/> Ubicación</Link> 
             </div>
             <div className='navbar2'>
                 <input type="text" placeholder='Buscar...' className='buscar'/><button className='buscar2'><FaSistrix/></button> 
             </div>
             <div className='navbar2'>
-                <FaHeartbeat/><p>Lista de Deseos</p>
+                <Link to="/"className="listaDeseos"><FaHeartbeat/> Lista de Deseos</Link>
             </div>
             <div className='navbar2'>
-                <FaUserAlt/><Link to='/register' className='acount'> Mi cuenta</Link> 
+                <Link to='/register' className='acount'><FaUserAlt/> Mi cuenta</Link> 
             </div>
             <div className='navbar2'>
-            <Link to='/car'  className='car'><FaShoppingCart/></Link><p>0</p>
+            <Link to='/car' className='car'><FaShoppingCart/> 0</Link>
             </div>
         </div>
     </div>

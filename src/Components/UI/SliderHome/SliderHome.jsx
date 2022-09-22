@@ -7,10 +7,8 @@ import cancel from '../../Image/x.png'
 
 const SliderHome = () => {
 
-  const Content = document.querySelector("#content_det");
-   
-  const onSee = () => {Content.style.display = 'flex'};
-  const onBlock = () => {Content.style.display = 'none'};
+  const onSee = () => {document.getElementById("content_det").style.display = 'flex'};
+  const onBlock = () => {document.getElementById("content_det").style.display = 'none'};
 
 
   return (
