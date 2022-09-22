@@ -17,7 +17,7 @@ export const Terminos = (props) => {
                 <p className='parrafo'>Es requisito necesario para la adquisición de los productos que se ofrecen en este sitio, que lea y acepte los 
                 siguientes Términos y Condiciones que a continuación se redactan. 
                 El uso de nuestros servicios así como la compra de nuestros productos implicará que usted ha leído y aceptado los Términos y Condiciones de Uso en el presente documento. 
-                Todas los productos  que son ofrecidos por nuestro sitio web pudieran ser creadas, cobradas, enviadas o presentadas por una página web tercera y en tal caso estarían sujetas a sus propios Términos y Condiciones. 
+                Todos los productos  que son ofrecidos por nuestro sitio web estaran sujetas a sus propios Términos y Condiciones. 
                 En algunos casos, para adquirir un producto, será necesario el registro por 
                 parte del usuario, con ingreso de datos personales fidedignos y definición de una contraseña.<br/><br/>
                 El usuario puede elegir y cambiar la clave para su acceso de administración de la cuenta en cualquier momento, en caso de que se haya registrado y que sea necesario para la compra de alguno de nuestros productos. 
@@ -31,7 +31,8 @@ export const Terminos = (props) => {
 
                 <h3>USO NO AUTORIZADO</h3>
 
-                <p className='parrafo'>En caso de que aplique (para venta de software, templetes, u otro producto de diseño y programación) usted no puede colocar uno de nuestros productos, modificado o sin modificar, en un CD, sitio web o ningún otro medio y ofrecerlos para la redistribución o la reventa de ningún tipo.</p>
+                <p className='parrafo'>En caso de que aplique (para venta de software, templetes, u otro producto de diseño y programación) usted no puede colocar uno de nuestros productos, modificado o sin modificar, en un CD, sitio web o ningún otro medio y 
+                ofrecerlos para la redistribución o la reventa de ningún tipo y tambien cabe resaltar que esta pagina tendra restricciones de ingresos de menores de edad solo esta adecuada para personas mayores de 18 años en adelante.</p>
 
                 <h3>PROPIEDAD</h3>
 
@@ -42,7 +43,7 @@ export const Terminos = (props) => {
                 imposibilidad de utilizar nuestros productos.</p>
 
                 <h3>PRIVACIDAD</h3>
-                <p className='parrafo'>Este Healthy_Corporation.com garantiza que la fc barcelona noticias información personal que usted envía cuenta con la seguridad necesaria. 
+                <p className='parrafo'>Healthy_Corporation.com garantiza que la información personal que usted envía cuenta con la seguridad necesaria. 
                 Los datos ingresados por usuario o en el caso de requerir una validación de los pedidos no serán entregados a terceros, salvo que deba ser revelada en cumplimiento a una orden judicial o requerimientos legales.</p>
                 
               </div>
