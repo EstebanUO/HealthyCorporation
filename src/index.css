@@ -760,7 +760,7 @@ a{
 .acount_content_all{
   background-color: #d3ebf7;
   padding: 2.5rem;
-  width: 60%;
+  width: 43.4rem;
   margin-left: 2rem;
   margin-top: 3rem;
   margin-bottom: 3rem;
@@ -825,15 +825,15 @@ a{
 
 .btn_update{
   color: black;
-  padding: .3rem;
+  padding: 0.3rem;
   background-color: #5bc3fc;
   width: 12rem;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   font-size: 1.3rem;
   margin-bottom: 1rem;
   margin-top: 1rem;
   transition: all 400ms;
-  margin-right: 5rem;
+  margin-right: 2rem;
 }
 .btn_update:hover {
   background-color: #eee7e7;
@@ -853,7 +853,7 @@ a{
 
 .input_acount3{
   background-color: #ffffff57;
-  width: 95%;
+  width: 33rem;
   height: 2.5rem;
   padding: 0.2rem;
   font-size: 1rem;
@@ -863,8 +863,8 @@ a{
 }
 
 .acount_content_tarjet{
-  padding-left: 5rem;
-  padding-right: 4rem;
+  padding-left: 3rem;
+  padding-right: 2.5rem;
 }
 
 .input_acount4{

@@ -40,7 +40,7 @@ export const MyAcount = (props) => {
           </div><br />
          
           <div  className='acount_btn'>
-            <h5>Recuerda mantener actualizados tus datos para tener una mejor experiencia.</h5>
+            <h6>Recuerda mantener actualizados tus datos para tener una mejor experiencia.</h6>
           </div>
         </div>
       </div>
