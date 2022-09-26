@@ -34,7 +34,7 @@ export const Products = (props) => {
             <div className='rowProduct'>
               <p className='textProduct'>Despacho</p>
               <p className='textProduct_'>Retiro</p>
-              <p className='textProduct'>Venta directa</p>
+              <p className='textProduct'>Venta directa </p>
             </div>
           </div>
           <div className='addProduct'>
