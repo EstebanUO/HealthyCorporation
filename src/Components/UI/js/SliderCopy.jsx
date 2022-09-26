@@ -23,7 +23,7 @@ const SliderCopy= () => {
             <img src={img1} class="d-block w-100" id='opacidad' alt="..."/>
               <div class="carousel-caption d-none d-md-block">
                 <div className='center_home'>
-                <h2 id='home' >Bienvenidos a heathy corpration donde los precios se ajusta a ti</h2>
+                <h2 id='home' >Bienvenidos a heathy corporation donde los precios se ajusta a ti</h2>
              
                   </div>
                 

@@ -632,7 +632,19 @@ a{
 #home{
   color: white;
   font-size: 3rem;
+  animation: home 1s forwards;
 }
+
+@keyframes home {
+  from {
+   top: (100px)
+  }
+
+  to {
+   bottom: (100);
+  }
+}
+
 .center_home{
   display: flex;
   justify-content: center;

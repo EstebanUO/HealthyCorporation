@@ -5,11 +5,28 @@ import { Categories } from '../../UI/Categories/Categories';
 import { Marks } from '../../UI/Marks/Marks';
 import Slider2 from '../../UI/js/SliderCopy';
 import Slider from '../../UI/SliderHome/SliderHome';
-import noticie from '../../Image/Noticie/tos.jpg';
-import noticie2 from '../../Image/Noticie/enfermera.png';
 import './Home.css';
 
-
+/* imagenes de prodductos */
+import img1 from '../../Image/img_product/bienestar.PNG'
+import img2 from '../../Image/img_product/bienestar2.PNG'
+import img3 from '../../Image/img_product/bienestar3.PNG'
+/* ----------------- */
+import img4 from '../../Image/img_product/cuidado.PNG'
+import img5 from '../../Image/img_product/cuidado2.PNG'
+import img6 from '../../Image/img_product/cuidado3.PNG'
+/* ----------------- */
+import img7 from '../../Image/img_product/deermatologo.PNG'
+import img8 from '../../Image/img_product/deermatologo2.PNG'
+import img9 from '../../Image/img_product/deermatologo3.PNG'
+/* ----------------- */
+import img10 from '../../Image/img_product/salud.PNG'
+import img11 from '../../Image/img_product/salud2.PNG'
+import img12 from '../../Image/img_product/salud3.PNG'
+/* ----------------- */
+import img13 from '../../Image/img_product/medicamento1.PNG'
+import img14 from '../../Image/img_product/medicamento2.PNG'
+import img15 from '../../Image/img_product/medicamento3.PNG'
 
 
 export const Home = (props) => {
@@ -20,7 +37,6 @@ export const Home = (props) => {
     <div>
       <Header valiLoginAdmin={props.valiLoginAdmin} />
       <div>
-
         <Slider2 />
 
         <div>
@@ -32,44 +48,84 @@ export const Home = (props) => {
           <h1 className='title-home'>Productos más vendidos</h1>
           <Slider />
         </div>
+      </div>
 
+      <div>
 
-        <div>
-          <h1 className='title-home3'>Sala de Prensa</h1>
+      <div className='column_all_product'>
+          <h1 className='text_all_product'>Bienestar</h1>
+          <div className='content_all_product'>
 
-          <div>
-            <div className='Noticie'>
-              <h2 className='First'>Noticia principal</h2>
-              <h2 className='Second'>La viruela símica </h2>
-              <div className='Content'>
-                <p className='Paragraph'>La viruela símica es una enfermedad causada por el virus de la viruela símica. Se trata de una infección zoonótica vírica, lo que significa que puede propagarse de animales a seres humanos. También puede propagarse de persona a persona.</p>
-                <img className='Image-noticie' src={noticie} alt="Imagen prueba" />
-              </div>
-            </div>
-
-            <div>
-              <div>
-                <h5 className='Second2'>Sintomas</h5>
-                <p className='Paragraph2'>Los síntomas más comunes de la viruela símica son fiebre, cefalea, dolores musculares, dolor de espalda, falta de energía y ganglios linfáticos inflamados. A estos síntomas les sigue o acompaña una erupción que puede durar de dos a tres semanas. La erupción se puede ubicar en la cara, las palmas de las manos, las plantas de los pies, los ojos, la boca, el cuello, la ingle y las regiones genitales o anales del cuerpo. El número de lesiones puede oscilar entre unas pocas y varios miles. Al principio, las lesiones son planas, luego se llenan de líquido y, a continuación, se forman costras, se secan y se desprenden, y por debajo se forma una capa nueva de piel.  </p>
-              </div>
-            </div>
-
-            <div className='Noticie3'>
-              <h2 className='Second3'>¿Como se puede contagiar?</h2>
-              <div className='Content2'>
-                <p className='Paragraph3'>La viruela símica se propaga de persona a persona mediante contacto directo con alguien que tiene una erupción cutánea de viruela símica, en particular mediante contacto cara con cara, piel con piel, boca con boca o boca con piel, incluido el contacto sexual. Todavía estamos aprendiendo sobre la duración de la capacidad infectante de las personas con viruela símica, pero por lo general se consideran infecciosas hasta que todas las lesiones se han cubierto de costras, las costras se han caído y se ha formado una nueva capa de piel debajo. </p>
-                <img className='Image-noticie2' src={noticie2} alt="Imagen prueba" />
-              </div>
-            </div>
-
-            
-
-            <Marks />
+            <img className='select_product' src={img1} alt="imagen producto" />
+            <img className='select_product' src={img2} alt="imagen producto" />
+            <img className='select_product' src={img3} alt="imagen producto" />
+            <button className='btn_all'>
+              Ver más Productos
+            </button>
           </div>
+        </div>
 
+
+        <div className='column_all_product'>
+          <h1 className='text_all_product2'>Cuidado</h1>
+          <div className='content_all_product2'>
+
+            <img className='select_product' src={img4} alt="imagen producto" />
+            <img className='select_product' src={img5} alt="imagen producto" />
+            <img className='select_product' src={img6} alt="imagen producto" />
+            <button className='btn_all'>
+              Ver más Productos
+            </button>
+          </div>
+        </div>
+
+      
+        <div className='column_all_product'>
+          <h1 className='text_all_product'>Dermatología</h1>
+          <div className='content_all_product'>
+
+            <img className='select_product' src={img7} alt="imagen producto" />
+            <img className='select_product' src={img8} alt="imagen producto" />
+            <img className='select_product' src={img9} alt="imagen producto" />
+            <button className='btn_all'>
+              Ver más Productos
+            </button>
+          </div>
+        </div>
+
+
+        <div className='column_all_product'>
+          <h1 className='text_all_product2'>Salud</h1>
+          <div className='content_all_product2'>
+
+            <img className='select_product' src={img10} alt="imagen producto" />
+            <img className='select_product' src={img11} alt="imagen producto" />
+            <img className='select_product' src={img12} alt="imagen producto" />
+            <button className='btn_all'>
+              Ver más Productos
+            </button>
+          </div>
+        </div>
+
+        <div className='column_all_product'>
+          <h1 className='text_all_product'>Medicamentos</h1>
+          <div className='content_all_product'>
+
+            <img className='select_product' src={img13} alt="imagen producto" />
+            <img className='select_product' src={img14} alt="imagen producto" />
+            <img className='select_product' src={img15} alt="imagen producto" />
+            <button className='btn_all'>
+              Ver más Productos
+            </button>
+          </div>
         </div>
       </div>
 
+
+
+
+
+      <Marks />
       <Footer />
     </div>
   )

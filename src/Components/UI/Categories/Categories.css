@@ -21,7 +21,7 @@
     background-color: #eee7e7;
     transition: all 300ms;
     width: 10.5rem;
-    border:4px solid black ;
+    border:3px solid black ;
 }
 
 .card2 {
@@ -41,7 +41,7 @@
     background-color: #eee7e7;
     transition: all 300ms;
     width: 9.5rem;
-    border:4px solid black ;
+    border:3px solid black ;
 }
 
 .text-card {
