@@ -1,7 +1,7 @@
 import {Home} from '../src/Components/Page/Home/Home';
 import axios from "axios";
 import {useState} from 'react'
-import { Route, Routes,Navigate } from "react-router-dom"
+import { Route, Routes,Navigate,useNavigate } from "react-router-dom"
 import {Products} from '../src/Components/Page/Products/Products';
 import {Register} from '../src/Components/Page/Register/Register';
 import {Terminos} from '../src/Components/Page/Terminos_Condiciones/Terminos';
@@ -17,6 +17,8 @@ import { Tarjet } from './Components/Page/Tarjet/Tarjet';
 
 
 function App() {
+
+    let navigate = useNavigate();
       /*validaciones login*/ 
 
       const [valiLogin, setvaliLogin] = useState(false)
@@ -31,7 +33,7 @@ function App() {
       const onChangePasswordLogin = ({ currentTarget }) => setpasswordUser(currentTarget.value);
 
       const getApi=()=>{
-          axios.get('http://127.0.0.1:8000/api/users')
+          axios.get('http://127.0.0.1:8080/api/users')
           .then(function (response) {
             // handle success
             response.data.map(data=>{
@@ -46,10 +48,7 @@ function App() {
           .catch(function (error) {
             // handle error
             console.log(error);
-          }) .then(function () {
-            // always executed
-
-          });
+          })
       }
       
       const ClickLogin=(e)=>{
@@ -64,12 +63,47 @@ function App() {
           
       }
       /*fin validaciones login*/
+
+      /*inicio validaciones register*/
+
+      const [usernameRegister, setusernameRegister] = useState("")
+      const [passwordRegister, setpasswordRegister] = useState("")
+      const [confrimPasword, setconfrimPasword] = useState("")
+      const [emailRegister, setemailRegister] = useState("")
+      const onChangeusernameRegister = ({ currentTarget }) => setusernameRegister(currentTarget.value);
+      const onChangepasswordRegister = ({ currentTarget }) => setpasswordRegister(currentTarget.value);
+      const onChangeemailRegister = ({ currentTarget }) => setemailRegister(currentTarget.value);
+      const onChangeconfrimPasword = ({ currentTarget }) => setconfrimPasword(currentTarget.value);
+
+      const postApi=(e)=>{
+        e.preventDefault()
+        axios.post('http://127.0.0.1:8080/api/users',{
+            "name":usernameRegister,
+            "email":emailRegister,
+            "password":passwordRegister
+        })
+        .then(function (response) {
+            // handle success
+            console.log(response.data);
+            navigate('login')
+            
+           //response.data.map((data => console.log(data)));
+        })
+        .catch(function (error) {
+            // handle error
+            alert(error.message+" sin conexion");
+        });
+    }
+
+      /*fin validaciones register*/
+
+      
   return (
     <div>
       <Routes>
         <Route path="/" element={<Home valiLoginAdmin={valiLoginAdmin}/>}/>
         <Route path="/products" element={<Products valiLoginAdmin={valiLoginAdmin} />}/>
-        <Route path="/register" element={valiLogin? <Navigate replace to="/"/> : <Register />}/>
+        <Route path="/register" element={valiLogin? <Navigate replace to="/"/> : <Register confrimPasword={confrimPasword} onChangeconfrimPasword={onChangeconfrimPasword} postApi={postApi} emailRegister={emailRegister} passwordRegister={passwordRegister} usernameRegister={usernameRegister} onChangeemailRegister={onChangeemailRegister} onChangepasswordRegister={onChangepasswordRegister} onChangeusernameRegister={onChangeusernameRegister}/>}/>
         <Route path="/terminos" element={<Terminos valiLoginAdmin={valiLoginAdmin} />}/>
         <Route path="/politicas" element={<Politicas valiLoginAdmin={valiLoginAdmin} />}/>
         <Route path="/contact" element={<Contact valiLoginAdmin={valiLoginAdmin}/>}/>

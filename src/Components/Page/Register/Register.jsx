@@ -6,7 +6,7 @@ import logofacebook from '../../Image/Icons/facebook.png';
 import logoGoogle from '../../Image/Icons/google.png';
 import logoLinkening from '../../Image/Icons/linkedin.png';
 
-export const Register = () => {
+export const Register = (props) => {
 
   return (
     <div>
@@ -37,23 +37,23 @@ export const Register = () => {
                 </div><br />
                 <div className="formularioReg">
                   <label for="inputUser" class="labelsReg">User name</label>
-                    <input name="name" type="text" class="form-input" placeholder="User name" autocomplete="off" required/>
+                    <input value={props.usernameRegister} onChange={props.onChangeusernameRegister} name="name" type="text" class="form-input" placeholder="User name" autocomplete="off" required/>
 
                   <label for="exampleInputEmail1" class="labelsReg"><br/>Email</label>
-                    <input name="correo" type="email" class="form-input" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Example@" autocomplete="off" required/>
+                    <input value={props.emailRegister} onChange={props.onChangeemailRegister} name="correo" type="email" class="form-input" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Example@" autocomplete="off" required/>
 
                   <label for="inputPassword" class="labelsReg"><br/>Password</label>
-                    <input name="password" type="password" class="form-input" id="inputPassword" placeholder="Password"/>
+                    <input value={props.passwordRegister} onChange={props.onChangepasswordRegister} name="password" type="password" class="form-input" id="inputPassword" placeholder="Password"/>
 
                   <label for="inputPassword" class="labelsReg"><br/>Confirm password</label>
-                    <input name="password" type="password" class="form-input" id="inputPassword" placeholder="Confirm your password"/>
+                    <input value={props.confrimPasword} onChange={props.onChangeconfrimPasword} name="password" type="password" class="form-input" id="inputPassword" placeholder="Confirm your password"/>
                   <br />
                   <div className="checkTyC">
                     <input type="checkbox" required/><p>Haz click aqui para aceptar nuestros<br/><Link to="/terminos">terminos y condiciones</Link>.</p>
                   </div>
                   
                   <div className="submitReg">
-                    <button type="submit" class="submitReg2">Registrarse</button>
+                    <button onClick={props.postApi} type="submit" class="submitReg2">Registrarse</button>
                   </div>
                 </div>
               </form>
