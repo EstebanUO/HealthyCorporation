@@ -67,7 +67,7 @@ function App() {
 
   /*inicio validaciones register*/
   const [validUsername, setvalidUsername] = useState('');
-  const [message, setmessage] = useState("")
+  const [messages, setmessages] = useState("")
   const [validemail, setvalidemail] = useState('.@');
   const [usernameRegister, setusernameRegister] = useState("")
   const [passwordRegister, setpasswordRegister] = useState("")
@@ -79,6 +79,7 @@ function App() {
   const onChangeconfrimPasword = ({ currentTarget }) => setconfrimPasword(currentTarget.value);
 
   const postApi = (e) => {
+    
     e.preventDefault()
     if ((usernameRegister.indexOf('`') !== -1 || usernameRegister.indexOf('.') !== -1 || usernameRegister.indexOf('@') !== -1 || usernameRegister.indexOf('!') !== -1 || usernameRegister.indexOf('%') !== -1 || usernameRegister.indexOf('$') !== -1 || /\s/.test(usernameRegister)) || (emailRegister.indexOf('.') === -1 || emailRegister.indexOf('@') === -1 || /\s/.test(emailRegister))) {
       console.log("error");
@@ -97,8 +98,9 @@ function App() {
         })
         .catch(function (error) {
           // handle error
-          setmessage(error.message)
+          setmessages(error.message)
           alert(error.message + " sin conexion");
+          
         });
         setusernameRegister("")
         setpasswordRegister("")
@@ -109,6 +111,7 @@ function App() {
 
     setvalidUsername(usernameRegister)
     setvalidemail(emailRegister)
+    console.log(messages);
   }
 
   /*fin validaciones register*/
@@ -119,7 +122,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home valiLoginAdmin={valiLoginAdmin} />} />
         <Route path="/products" element={<Products valiLoginAdmin={valiLoginAdmin} />} />
-        <Route path="/register" element={valiLogin ? <Navigate replace to="/" /> : <Register validemail={validemail} validUsername={validUsername} confrimPasword={confrimPasword} onChangeconfrimPasword={onChangeconfrimPasword} postApi={postApi} emailRegister={emailRegister} passwordRegister={passwordRegister} usernameRegister={usernameRegister} onChangeemailRegister={onChangeemailRegister} onChangepasswordRegister={onChangepasswordRegister} onChangeusernameRegister={onChangeusernameRegister} />} />
+        <Route path="/register" element={valiLogin ? <Navigate replace to="/" /> : <Register setmessages={setmessages} messages={messages} validemail={validemail} validUsername={validUsername} confrimPasword={confrimPasword} onChangeconfrimPasword={onChangeconfrimPasword} postApi={postApi} emailRegister={emailRegister} passwordRegister={passwordRegister} usernameRegister={usernameRegister} onChangeemailRegister={onChangeemailRegister} onChangepasswordRegister={onChangepasswordRegister} onChangeusernameRegister={onChangeusernameRegister} />} />
         <Route path="/terminos" element={<Terminos valiLoginAdmin={valiLoginAdmin} />} />
         <Route path="/politicas" element={<Politicas valiLoginAdmin={valiLoginAdmin} />} />
         <Route path="/contact" element={<Contact valiLoginAdmin={valiLoginAdmin} />} />

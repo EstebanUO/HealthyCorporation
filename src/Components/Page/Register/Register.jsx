@@ -33,6 +33,14 @@ export const Register = (props) => {
       document.getElementById('txtvalidPassword').textContent = 'LA CONTRASEÑA NO COINCIDE';
   }, [props.confrimPasword, props.passwordRegister])
 
+  //envio mensaje 
+  useEffect(() => {
+    if (props.messages === "Request failed with status code 400") {
+      document.getElementById('txtvalidUsername').textContent = `usuario ya registrado`
+      props.setmessages("")
+    } 
+  }, [props.messages]);
+
 
   return (
     <div>
