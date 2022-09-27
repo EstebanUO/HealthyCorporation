@@ -86,7 +86,7 @@ export const Footer = () => {
         </MDBContainer>
       </section>
 
-      <div className='text-center p-4' style={{ backgroundColor: "#4aa5da", color: "white", height: "3.5rem" }}>
+      <div className='text-center p-4' style={{ backgroundColor: "#4aa5da", color: "white", height: "4.5rem" }}>
         <a className='text-reset fw-bold' href='/'>Healthy Corporation </a>©Copyright 2022.
       </div>
     </MDBFooter>

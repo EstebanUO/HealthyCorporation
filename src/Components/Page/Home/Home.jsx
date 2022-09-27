@@ -60,7 +60,7 @@ export const Home = (props) => {
             <img className='select_product' src={img2} alt="imagen producto" />
             <img className='select_product' src={img3} alt="imagen producto" />
             <button className='btn_all'>
-              Ver más Productos
+              Ver más
             </button>
           </div>
         </div>
@@ -74,7 +74,7 @@ export const Home = (props) => {
             <img className='select_product' src={img5} alt="imagen producto" />
             <img className='select_product' src={img6} alt="imagen producto" />
             <button className='btn_all'>
-              Ver más Productos
+              Ver más
             </button>
           </div>
         </div>
@@ -88,7 +88,7 @@ export const Home = (props) => {
             <img className='select_product' src={img8} alt="imagen producto" />
             <img className='select_product' src={img9} alt="imagen producto" />
             <button className='btn_all'>
-              Ver más Productos
+              Ver más
             </button>
           </div>
         </div>
@@ -102,7 +102,7 @@ export const Home = (props) => {
             <img className='select_product' src={img11} alt="imagen producto" />
             <img className='select_product' src={img12} alt="imagen producto" />
             <button className='btn_all'>
-              Ver más Productos
+              Ver más
             </button>
           </div>
         </div>
@@ -115,7 +115,7 @@ export const Home = (props) => {
             <img className='select_product' src={img14} alt="imagen producto" />
             <img className='select_product' src={img15} alt="imagen producto" />
             <button className='btn_all'>
-              Ver más Productos
+              Ver más
             </button>
           </div>
         </div>

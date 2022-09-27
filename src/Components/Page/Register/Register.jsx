@@ -77,10 +77,9 @@ export const Register = (props) => {
               <input value={props.emailRegister} onChange={props.onChangeemailRegister} name="correo" type="email" class="form-input" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Example@" autocomplete="off" required />
               <p className='pvaliRegister' id='txtvalidEmail'></p>
               <label for="inputPassword" class="labelsReg"><br />Password</label>
-              <input value={props.passwordRegister} onChange={props.onChangepasswordRegister} name="password" type="password" class="form-input" id="inputPassword" placeholder="Password" />
-
+              <input value={props.passwordRegister} onChange={props.onChangepasswordRegister} name="password" type="password" class="form-input" placeholder="Password" />
               <label for="inputPassword" class="labelsReg"><br />Confirm password</label>
-              <input value={props.confrimPasword} onChange={props.onChangeconfrimPasword} name="password" type="password" class="form-input" id="inputPassword" placeholder="Confirm your password" />
+              <input value={props.confrimPasword} onChange={props.onChangeconfrimPasword} name="password" type="password" class="form-input" placeholder="Confirm your password" />
               <p className='pvaliRegister' id='txtvalidPassword'></p>
               <br />
               <div className="checkTyC">
