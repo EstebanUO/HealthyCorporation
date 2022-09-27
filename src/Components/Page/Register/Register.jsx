@@ -43,10 +43,10 @@ export const Register = (props) => {
                     <input value={props.emailRegister} onChange={props.onChangeemailRegister} name="correo" type="email" class="form-input" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Example@" autocomplete="off" required/>
 
                   <label for="inputPassword" class="labelsReg"><br/>Password</label>
-                    <input value={props.passwordRegister} onChange={props.onChangepasswordRegister} name="password" type="password" class="form-input" id="inputPassword" placeholder="Password"/>
+                    <input value={props.passwordRegister} onChange={props.onChangepasswordRegister} name="password" type="password" class="form-input" placeholder="Password"/>
 
                   <label for="inputPassword" class="labelsReg"><br/>Confirm password</label>
-                    <input value={props.confrimPasword} onChange={props.onChangeconfrimPasword} name="password" type="password" class="form-input" id="inputPassword" placeholder="Confirm your password"/>
+                    <input value={props.confrimPasword} onChange={props.onChangeconfrimPasword} name="password" type="password" class="form-input" placeholder="Confirm your password"/>
                   <br />
                   <div className="checkTyC">
                     <input type="checkbox" required/><p>Haz click aqui para aceptar nuestros<br/><Link to="/terminos">terminos y condiciones</Link>.</p>
