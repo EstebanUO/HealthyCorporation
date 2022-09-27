@@ -99,7 +99,6 @@ function App() {
         .catch(function (error) {
           // handle error
           setmessages(error.message)
-          alert(error.message + " sin conexion");
           
         });
         setusernameRegister("")

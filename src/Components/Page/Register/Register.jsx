@@ -38,6 +38,9 @@ export const Register = (props) => {
     if (props.messages === "Request failed with status code 400") {
       document.getElementById('txtvalidUsername').textContent = `usuario ya registrado`
       props.setmessages("")
+    }else if (props.messages === "Network Error") {
+      document.getElementById('txtvalidUsername').textContent = `no hay conexion`
+      props.setmessages("")
     } 
   }, [props.messages]);
 
