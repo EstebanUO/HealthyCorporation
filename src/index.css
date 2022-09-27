@@ -1021,3 +1021,8 @@ a{
   color: black;
   border:3px solid black ;
 }
+
+.pvaliRegister{
+  color: red;
+  text-align: center;
+}
