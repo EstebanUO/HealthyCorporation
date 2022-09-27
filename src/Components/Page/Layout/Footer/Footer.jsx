@@ -42,53 +42,18 @@ export const Footer = () => {
                 <MDBIcon icon="gem" className="me-3" />
                 Healthy Corporation
               </h6>
-              <p>
-                Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet,
-                consectetur adipisicing elit.
-              </p>
             </MDBCol>
 
             <MDBCol md="2" lg="2" xl="2" className='mx-auto mb-4' >
-              <h6 className='text-uppercase fw-bold mb-4'>Lenguajes</h6>
+              <h6 className='text-uppercase fw-bold mb-4'>Ubicación</h6>
               <p>
-                <a href='#!' className='text-reset'>
-                  JavaScript
-                </a>
-              </p>
-              <p>
-                <a href='#!' className='text-reset'>
-                  React
-                </a>
-              </p>
-              <p>
-                <a href='#!' className='text-reset'>
-                  Python
-                </a>
-              </p>
-              <p>
-                <a href='#!' className='text-reset'>
-                  SQLite
-                </a>
+                <MDBIcon icon="home" className="me-2" />
+                Armenia Quindio
               </p>
             </MDBCol>
 
             <MDBCol md="3" lg="2" xl="2" className='mx-auto mb-4'>
-              <h6 className='text-uppercase fw-bold mb-4'>Recursos</h6>
-              <p>
-                <a href='#!' className='text-reset'>
-                  Blog
-                </a>
-              </p>
-              <p>
-                <a href='#!' className='text-reset'>
-                  Meet
-                </a>
-              </p>
-              <p>
-                <a href='#!' className='text-reset'>
-                  Jira
-                </a>
-              </p>
+              <h6 className='text-uppercase fw-bold mb-4'>Nosotros</h6>
               <p><b>
                 <a href='#!' className='text-reset' >
                   <Link to='/terminos' className='a'>Términos</Link>
@@ -102,11 +67,7 @@ export const Footer = () => {
             </MDBCol>
 
             <MDBCol md="4" lg="3" xl="3" className='mx-auto mb-md-0 mb-4'>
-              <h6 className='text-uppercase fw-bold mb-4'>Contact</h6>
-              <p>
-                <MDBIcon icon="home" className="me-2" />
-                Armenia Quindio
-              </p>
+              <h6 className='text-uppercase fw-bold mb-4'>Contacto</h6>
               <p>
                 <MDBIcon icon="envelope" className="me-3" />
                 Healthy_Contact@gmail.com
@@ -125,7 +86,7 @@ export const Footer = () => {
         </MDBContainer>
       </section>
 
-      <div className='text-center p-4' style={{ backgroundColor: "#4aa5da", color: "white" }}>
+      <div className='text-center p-4' style={{ backgroundColor: "#4aa5da", color: "white", height: "3.5rem" }}>
         <a className='text-reset fw-bold' href='/'>Healthy Corporation </a>©Copyright 2022.
       </div>
     </MDBFooter>

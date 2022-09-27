@@ -36,7 +36,7 @@ export const NavBar = () => {
                 <input type="text" placeholder='Buscar...' className='buscar'/><button className='buscar2'><FaSistrix/></button> 
             </div>
             <div className='navbar2'>
-                <Link to="/"className="listaDeseos"><FaHeartbeat/> Lista de Deseos</Link>
+                <Link to="/lista-deseos"className="listaDeseos"><FaHeartbeat/> Lista de Deseos</Link>
             </div>
             <div className='navbar2'>
                 <Link to='/register' className='acount'><FaUserAlt/> Mi cuenta</Link> 

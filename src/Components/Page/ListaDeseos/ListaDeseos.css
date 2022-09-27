@@ -1,0 +1,15 @@
+.titleDeseos{
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.subtitleDeseos{
+    color: #505050;
+}
+
+.containerDeseos{
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    border-color: azure;
+}

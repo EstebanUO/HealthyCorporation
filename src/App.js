@@ -13,6 +13,7 @@ import { MyAcount } from './Components/Page/MyAcount/MyAcount';
 import { Direction } from './Components/Page/Direction/Direction';
 import { Password } from './Components/Page/Password/Password';
 import { Tarjet } from './Components/Page/Tarjet/Tarjet';
+import { ListaDeseos } from './Components/Page/ListaDeseos/ListaDeseos';
 
 
 
@@ -113,6 +114,7 @@ function App() {
         <Route path="/direction" element={<Direction />}/>
         <Route path="/password" element={<Password />}/>
         <Route path="/tarjet" element={<Tarjet />}/>
+        <Route path="/lista-deseos" element={<ListaDeseos />}/>
       </Routes>
     </div>
     
