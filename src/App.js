@@ -13,6 +13,7 @@ import { MyAcount } from './Components/Page/MyAcount/MyAcount';
 import { Direction } from './Components/Page/Direction/Direction';
 import { Password } from './Components/Page/Password/Password';
 import { Tarjet } from './Components/Page/Tarjet/Tarjet';
+import { ListaDeseos } from './Components/Page/ListaDeseos/ListaDeseos';
 
 
 
@@ -116,6 +117,7 @@ function App() {
   return (
     <div>
       <Routes>
+<<<<<<< HEAD
         <Route path="/" element={<Home valiLoginAdmin={valiLoginAdmin} />} />
         <Route path="/products" element={<Products valiLoginAdmin={valiLoginAdmin} />} />
         <Route path="/register" element={valiLogin ? <Navigate replace to="/" /> : <Register validemail={validemail} validUsername={validUsername} confrimPasword={confrimPasword} onChangeconfrimPasword={onChangeconfrimPasword} postApi={postApi} emailRegister={emailRegister} passwordRegister={passwordRegister} usernameRegister={usernameRegister} onChangeemailRegister={onChangeemailRegister} onChangepasswordRegister={onChangepasswordRegister} onChangeusernameRegister={onChangeusernameRegister} />} />
@@ -128,6 +130,21 @@ function App() {
         <Route path="/direction" element={<Direction />} />
         <Route path="/password" element={<Password />} />
         <Route path="/tarjet" element={<Tarjet />} />
+=======
+        <Route path="/" element={<Home valiLoginAdmin={valiLoginAdmin}/>}/>
+        <Route path="/products" element={<Products valiLoginAdmin={valiLoginAdmin} />}/>
+        <Route path="/register" element={valiLogin? <Navigate replace to="/"/> : <Register confrimPasword={confrimPasword} onChangeconfrimPasword={onChangeconfrimPasword} postApi={postApi} emailRegister={emailRegister} passwordRegister={passwordRegister} usernameRegister={usernameRegister} onChangeemailRegister={onChangeemailRegister} onChangepasswordRegister={onChangepasswordRegister} onChangeusernameRegister={onChangeusernameRegister}/>}/>
+        <Route path="/terminos" element={<Terminos valiLoginAdmin={valiLoginAdmin} />}/>
+        <Route path="/politicas" element={<Politicas valiLoginAdmin={valiLoginAdmin} />}/>
+        <Route path="/contact" element={<Contact valiLoginAdmin={valiLoginAdmin}/>}/>
+        <Route path="/login" element={valiLogin? <Navigate replace to="/"/> :<Login userLogin={userLogin} ClickLogin={ClickLogin} passwordUser={passwordUser} onChangePasswordLogin={onChangePasswordLogin} onChangeUserLogin={onChangeUserLogin}/>}/>
+        <Route path="/car" element={<Car valiLoginAdmin={valiLoginAdmin} />}/>
+        <Route path="/acount" element={<MyAcount valiLoginAdmin={valiLoginAdmin}/>}/>
+        <Route path="/direction" element={<Direction />}/>
+        <Route path="/password" element={<Password />}/>
+        <Route path="/tarjet" element={<Tarjet />}/>
+        <Route path="/lista-deseos" element={<ListaDeseos />}/>
+>>>>>>> c50f2b625029e9cc4643ad64b4b26bb575792eac
       </Routes>
     </div>
 
