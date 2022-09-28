@@ -7,7 +7,7 @@
 .card {
     width: 10rem;
     height: 9rem;
-    background-color: #4aa5da;
+    background-color: #efecec;
     border-radius: .7rem;
     display: flex;
     justify-content: center;
@@ -27,7 +27,7 @@
 .card2 {
     width: 10rem;
     height: 9rem;
-    background-color: #ff4848;
+    background-color: #5bc3fc;
     border-radius: .7rem;
     display: flex;
     align-content: center;
@@ -38,7 +38,6 @@
 }
 
 .card2:hover {
-    background-color: #eee7e7;
     transition: all 300ms;
     width: 9.5rem;
     border:3px solid black ;

@@ -14,6 +14,7 @@ import { Direction } from './Components/Page/Direction/Direction';
 import { Password } from './Components/Page/Password/Password';
 import { Tarjet } from './Components/Page/Tarjet/Tarjet';
 import { ListaDeseos } from './Components/Page/ListaDeseos/ListaDeseos';
+import { Buy } from './Components/Page/Buy/Buy';
 
 
 
@@ -136,6 +137,7 @@ function App() {
         <Route path="/password" element={<Password />} />
         <Route path="/tarjet" element={<Tarjet />} />
         <Route path="/lista-deseos" element={<ListaDeseos />}/>
+        <Route path="/compra" element={<Buy />}/>
       </Routes>
     </div>
 
