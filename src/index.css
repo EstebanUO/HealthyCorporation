@@ -1028,10 +1028,16 @@ a{
   text-align: center;
 }
 
-/*------------------- RESPONSIVE 758PX -----------------------*/
+/*-------- Responsive 1200px ---------*/
 
-@media screen and (max-width:756px){
-
+@media screen and (max-width:1200px) { 
+  .formulario{
+    display: inline-block;
+  }
+  .formulario2{
+    margin: 18rem;
+    margin-top: 0rem;
+  }
   .select_product1{
     width: 16rem;
     height: 14rem;
@@ -1049,4 +1055,40 @@ a{
   .btn_all{
     margin-top: 1rem;
   }
+
+}
+/*-------- Responsive 768px ---------*/
+
+@media screen and (max-width:768px) { 
+  .formulario{
+    display: inline-block;
+  }
+  .formulario2{
+    margin: 4rem;
+    margin-top: 0rem;
+  }
+/*-------- Responsive 480px ---------*/
+  @media screen and (max-width:480px) { 
+
+    .message{
+    padding: 2;
+    margin-right: 0rem;
+    margin-left: 0rem;
+    }
+
+    .iconos{
+      margin-left: 5.5rem;
+    }
+
+    .formulario{
+      display: inline-block;
+    }
+    .formulario2{
+      width: auto;
+      margin: 0rem;
+      margin-top: 0rem;
+      
+    }
+  }
+
 }
