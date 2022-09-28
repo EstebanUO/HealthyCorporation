@@ -1,12 +1,15 @@
-import React, { useEffect } from 'react';
+import React, { useEffect  } from 'react';
 import { Header } from '../Layout/Header/Header';
 import { Footer } from '../Layout/Footer/Footer';
 import { Link } from "react-router-dom";
 import logofacebook from '../../Image/Icons/facebook.png';
 import logoGoogle from '../../Image/Icons/google.png';
 import logoLinkening from '../../Image/Icons/linkedin.png';
+import Alert from '@mui/material/Alert';
 
 export const Register = (props) => {
+
+
   //validaciones username
   useEffect(() => {
     props.validUsername.indexOf('`') !== -1 || props.validUsername.indexOf('.') !== -1 || props.validUsername.indexOf('@') !== -1 || props.validUsername.indexOf('!') !== -1 || props.validUsername.indexOf('%') !== -1 || props.validUsername.indexOf('$') !== -1 || /\s/.test(props.validUsername) ?
@@ -38,9 +41,12 @@ export const Register = (props) => {
     if (props.messages === "Request failed with status code 400") {
       document.getElementById('txtvalidUsername').textContent = `usuario ya registrado`
       props.setmessages("")
+      props.setalertUser(true)
+      props.setalertMessage("usuario ya registrado")
     }else if (props.messages === "Network Error") {
       document.getElementById('txtvalidUsername').textContent = `no hay conexion`
       props.setmessages("")
+      props.setalertConexion(true)
     } 
   }, [props.messages]);
 
@@ -48,6 +54,7 @@ export const Register = (props) => {
   return (
     <div>
       <Header />
+      
       <div className="formulario">
         <div className="welcome-back">
           <div className="message">
@@ -88,6 +95,7 @@ export const Register = (props) => {
               <div className="checkTyC">
                 <input type="checkbox" required /><p>Haz click aqui para aceptar nuestros<br /><Link to="/terminos">terminos y condiciones</Link>.</p>
               </div>
+              {props.alertUser? <Alert variant="filled" severity="warning">usuario ya registrado!</Alert>:null}
 
               <div className="submitReg">
                 <input disabled id='buttonRegister' value="registrarse" type="submit" class="submitReg2" />

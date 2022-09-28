@@ -19,6 +19,10 @@ import { ListaDeseos } from './Components/Page/ListaDeseos/ListaDeseos';
 
 function App() {
 
+  const [alertUser, setalertUser] = useState(false)
+  const [alertConexion, setalertConexion] = useState(false)
+  const [alertMessage, setalertMessage] = useState("")
+
   let navigate = useNavigate();
   /*validaciones login*/
 
@@ -121,7 +125,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home valiLoginAdmin={valiLoginAdmin} />} />
         <Route path="/products" element={<Products valiLoginAdmin={valiLoginAdmin} />} />
-        <Route path="/register" element={valiLogin ? <Navigate replace to="/" /> : <Register setmessages={setmessages} messages={messages} validemail={validemail} validUsername={validUsername} confrimPasword={confrimPasword} onChangeconfrimPasword={onChangeconfrimPasword} postApi={postApi} emailRegister={emailRegister} passwordRegister={passwordRegister} usernameRegister={usernameRegister} onChangeemailRegister={onChangeemailRegister} onChangepasswordRegister={onChangepasswordRegister} onChangeusernameRegister={onChangeusernameRegister} />} />
+        <Route path="/register" element={valiLogin ? <Navigate replace to="/" /> : <Register alertMessage={alertMessage} setalertMessage={setalertMessage} alertConexion={alertConexion} setalertConexion={setalertConexion} alertUser={alertUser} setalertUser={setalertUser} setmessages={setmessages} messages={messages} validemail={validemail} validUsername={validUsername} confrimPasword={confrimPasword} onChangeconfrimPasword={onChangeconfrimPasword} postApi={postApi} emailRegister={emailRegister} passwordRegister={passwordRegister} usernameRegister={usernameRegister} onChangeemailRegister={onChangeemailRegister} onChangepasswordRegister={onChangepasswordRegister} onChangeusernameRegister={onChangeusernameRegister} />} />
         <Route path="/terminos" element={<Terminos valiLoginAdmin={valiLoginAdmin} />} />
         <Route path="/politicas" element={<Politicas valiLoginAdmin={valiLoginAdmin} />} />
         <Route path="/contact" element={<Contact valiLoginAdmin={valiLoginAdmin} />} />
