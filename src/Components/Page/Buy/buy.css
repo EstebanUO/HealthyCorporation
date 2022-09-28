@@ -32,6 +32,14 @@
     font-size: 1.2rem;
     color: #00a650;
 }
+.up_buy_3{
+    padding: 1rem;
+    width: 20rem;
+    color: gray;
+    font-size: .8rem;
+    margin-top: -15px;
+    margin-bottom: 0;
+}
 
 .row_buy{
     display: flex;
@@ -61,6 +69,7 @@
     border: 2px solid gray;
     border-radius: .7rem;
     box-shadow: 2px 5px 10px gray;
+    width: 22rem;
 }
 
 .name_buy{
@@ -84,6 +93,7 @@
     font-size: 1.7rem;
     padding-left: 1rem;
     margin-bottom: 0;
+    margin-top: -1rem;
 }
 
 
@@ -186,7 +196,7 @@
 
 .img_up_close{
     display: flex;
-    margin-top: -25rem;
+    margin-top: -32rem;
     margin-right: -3rem;
     margin-left: -4rem;
 }

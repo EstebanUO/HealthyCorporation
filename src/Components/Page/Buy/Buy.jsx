@@ -52,7 +52,9 @@ export const Buy = () => {
                             <div>
                                 <p className='name_buy'>Medicasp</p>
                             </div>
-
+                            <div className='up_buy_3'>
+                                <p><b>Descripción:</b> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo vel fugit maxime temporibus tempore eum voluptas odio neque quidem officia dolor praesentium, possimus mollitia aperiam? Ad similique ut vero optio.</p>
+                            </div>
                             <div>
                                 <p className='price_buy'>$ 40.000</p>
                             </div>

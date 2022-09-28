@@ -1,5 +1,5 @@
 import React from 'react';
-import img from '../../Image/assects/pax.jpg';
+import img from '../../Image/assects/medicasp.jpg';
 import { Link } from "react-router-dom";
 import { FaShoppingCart } from "react-icons/fa";
 import './Card.css'
@@ -14,7 +14,7 @@ export const Card = () => {
                     </div>
                     <div className='padding_product'>
                         <div>
-                            <p className='name_Product'>Pax noche </p>
+                            <p className='name_Product'>Medicasp </p>
                         </div>
 
                         <div>
