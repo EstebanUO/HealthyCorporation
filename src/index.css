@@ -461,8 +461,8 @@ h3{
   box-shadow: 1px 1px 18px black;
   border-radius: .6rem;
   backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  width: 40rem;
+  /* -webkit-backdrop-filter: blur(10px); */
+  width: 100%;
 }
 
 .container_all{
