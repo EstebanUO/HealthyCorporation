@@ -6,6 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   height: auto;
+  width: 100%;
 }
 
 code {
@@ -1025,4 +1026,69 @@ a{
 .pvaliRegister{
   color: red;
   text-align: center;
+}
+
+/*-------- Responsive 1200px ---------*/
+
+@media screen and (max-width:1200px) { 
+  .formulario{
+    display: inline-block;
+  }
+  .formulario2{
+    margin: 18rem;
+    margin-top: 0rem;
+  }
+  .select_product1{
+    width: 16rem;
+    height: 14rem;
+  }
+
+  .select_product2{
+    width: 15rem;
+    height: 14rem;
+  }
+
+  .select_product3{
+    width: 12rem;
+  }
+
+  .btn_all{
+    margin-top: 1rem;
+  }
+
+}
+/*-------- Responsive 768px ---------*/
+
+@media screen and (max-width:768px) { 
+  .formulario{
+    display: inline-block;
+  }
+  .formulario2{
+    margin: 4rem;
+    margin-top: 0rem;
+  }
+/*-------- Responsive 480px ---------*/
+  @media screen and (max-width:480px) { 
+
+    .message{
+    padding: 2;
+    margin-right: 0rem;
+    margin-left: 0rem;
+    }
+
+    .iconos{
+      margin-left: 5.5rem;
+    }
+
+    .formulario{
+      display: inline-block;
+    }
+    .formulario2{
+      width: auto;
+      margin: 0rem;
+      margin-top: 0rem;
+      
+    }
+  }
+
 }

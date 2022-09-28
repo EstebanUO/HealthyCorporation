@@ -20,6 +20,9 @@ import { Buy } from './Components/Page/Buy/Buy';
 
 function App() {
 
+  const [alertUser, setalertUser] = useState(false)
+  const [alertConexion, setalertConexion] = useState(false)
+
   let navigate = useNavigate();
   /*validaciones login*/
 
@@ -93,6 +96,7 @@ function App() {
         .then(function (response) {
           // handle success
           console.log(response.data);
+
           navigate('login')
 
           //response.data.map((data => console.log(data)));
@@ -100,13 +104,15 @@ function App() {
         .catch(function (error) {
           // handle error
           setmessages(error.message)
-          alert(error.message + " sin conexion");
           
         });
         setusernameRegister("")
         setpasswordRegister("")
         setconfrimPasword("")
         setemailRegister("")
+        setalertUser(false)
+        setalertConexion(false)
+
 
     }
 
@@ -123,7 +129,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home valiLoginAdmin={valiLoginAdmin} />} />
         <Route path="/products" element={<Products valiLoginAdmin={valiLoginAdmin} />} />
-        <Route path="/register" element={valiLogin ? <Navigate replace to="/" /> : <Register setmessages={setmessages} messages={messages} validemail={validemail} validUsername={validUsername} confrimPasword={confrimPasword} onChangeconfrimPasword={onChangeconfrimPasword} postApi={postApi} emailRegister={emailRegister} passwordRegister={passwordRegister} usernameRegister={usernameRegister} onChangeemailRegister={onChangeemailRegister} onChangepasswordRegister={onChangepasswordRegister} onChangeusernameRegister={onChangeusernameRegister} />} />
+        <Route path="/register" element={valiLogin ? <Navigate replace to="/" /> : <Register alertConexion={alertConexion} setalertConexion={setalertConexion} alertUser={alertUser} setalertUser={setalertUser} setmessages={setmessages} messages={messages} validemail={validemail} validUsername={validUsername} confrimPasword={confrimPasword} onChangeconfrimPasword={onChangeconfrimPasword} postApi={postApi} emailRegister={emailRegister} passwordRegister={passwordRegister} usernameRegister={usernameRegister} onChangeemailRegister={onChangeemailRegister} onChangepasswordRegister={onChangepasswordRegister} onChangeusernameRegister={onChangeusernameRegister} />} />
         <Route path="/terminos" element={<Terminos valiLoginAdmin={valiLoginAdmin} />} />
         <Route path="/politicas" element={<Politicas valiLoginAdmin={valiLoginAdmin} />} />
         <Route path="/contact" element={<Contact valiLoginAdmin={valiLoginAdmin} />} />
