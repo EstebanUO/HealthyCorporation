@@ -5,6 +5,7 @@ import { Categories } from '../../UI/Categories/Categories';
 import { Marks } from '../../UI/Marks/Marks';
 import Slider2 from '../../UI/js/SliderCopy';
 import Slider from '../../UI/SliderHome/SliderHome';
+import { Link } from "react-router-dom";
 import './Home.css';
 
 /* imagenes de prodductos */
@@ -27,6 +28,7 @@ import img12 from '../../Image/img_product/salud3.PNG'
 import img13 from '../../Image/img_product/medicamento1.PNG'
 import img14 from '../../Image/img_product/medicamento2.PNG'
 import img15 from '../../Image/img_product/medicamento3.PNG'
+import flecha from '../../Image/flecha.png'
 
 
 export const Home = (props) => {
@@ -45,7 +47,7 @@ export const Home = (props) => {
         </div>
 
         <div className='products-home'>
-          <h1 className='title-home'>Productos más vendidos</h1>
+          <h1 className='title-home'> Productos más vendidos</h1>
           <Slider />
         </div>
       </div>
@@ -59,9 +61,9 @@ export const Home = (props) => {
             <img className='select_product' src={img1} alt="imagen producto" />
             <img className='select_product' src={img2} alt="imagen producto" />
             <img className='select_product' src={img3} alt="imagen producto" />
-            <button className='btn_all'>
-              Ver más
-            </button>
+            <Link to="/products"><button className='btn_all'>
+              Ver más <img className='flecha' src={flecha} alt="" />
+            </button></Link>
           </div>
         </div>
 
@@ -73,9 +75,9 @@ export const Home = (props) => {
             <img className='select_product' src={img4} alt="imagen producto" />
             <img className='select_product' src={img5} alt="imagen producto" />
             <img className='select_product' src={img6} alt="imagen producto" />
-            <button className='btn_all'>
-              Ver más
-            </button>
+            <Link to="/products"><button className='btn_all'>
+              Ver más <img className='flecha' src={flecha} alt="" />
+            </button></Link>
           </div>
         </div>
 
@@ -87,9 +89,9 @@ export const Home = (props) => {
             <img className='select_product' src={img7} alt="imagen producto" />
             <img className='select_product' src={img8} alt="imagen producto" />
             <img className='select_product' src={img9} alt="imagen producto" />
-            <button className='btn_all'>
-              Ver más
-            </button>
+            <Link to="/products"><button className='btn_all'>
+              Ver más <img className='flecha' src={flecha} alt="" />
+            </button></Link>
           </div>
         </div>
 
@@ -101,9 +103,9 @@ export const Home = (props) => {
             <img className='select_product' src={img10} alt="imagen producto" />
             <img className='select_product' src={img11} alt="imagen producto" />
             <img className='select_product' src={img12} alt="imagen producto" />
-            <button className='btn_all'>
-              Ver más
-            </button>
+            <Link to="/products"><button className='btn_all'>
+              Ver más <img className='flecha' src={flecha} alt="" />
+            </button></Link>
           </div>
         </div>
 
@@ -114,9 +116,9 @@ export const Home = (props) => {
             <img className='select_product' src={img13} alt="imagen producto" />
             <img className='select_product' src={img14} alt="imagen producto" />
             <img className='select_product' src={img15} alt="imagen producto" />
-            <button className='btn_all'>
-              Ver más
-            </button>
+            <Link to="/products"><button className='btn_all'>
+              Ver más <img className='flecha' src={flecha} alt="" />
+            </button></Link>
           </div>
         </div>
       </div>

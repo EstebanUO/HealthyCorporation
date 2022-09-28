@@ -247,6 +247,9 @@
   background-color: #83c5eb;
   transition: 1s all;
   border-radius: .7rem;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
 }
 
 .btn_all:hover {
@@ -270,3 +273,7 @@
   transform: scale(1000);
   background: #269de2;
 } */
+
+.flecha{
+  width: 3rem;
+}

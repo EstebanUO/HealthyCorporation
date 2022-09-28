@@ -1,7 +1,7 @@
 .column_all{
     width: 15rem;
     border-radius: .5rem;
-    border: solid 1px gray;
+    border: solid 2px gray;
     background-color: white;
     margin-left: 1rem;
     margin-right: 1rem;
@@ -42,10 +42,6 @@
     font-size: 1.3rem;
     padding-left: 1rem;
     margin-bottom: 0;
-}
-
-.padding_product{
-   
 }
 
 .rowProduct{

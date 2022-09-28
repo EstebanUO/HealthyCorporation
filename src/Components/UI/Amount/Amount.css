@@ -59,6 +59,7 @@
     max-height: 20rem;
     padding: 1rem;
     border-radius: .7rem;
+    border: 2px solid gray;
 }
 
 /*---- transiciones -----*/
@@ -97,6 +98,7 @@
     width: 45rem;
     height: 8rem;
     border-radius: .7rem;
+    border: 2px solid gray;
     animation: product_all 1s forwards;
 }
 

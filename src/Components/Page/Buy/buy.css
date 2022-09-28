@@ -1,0 +1,233 @@
+.imgBuy{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img_buy{
+    width: 24rem;
+    cursor: zoom-in;
+}
+
+.up_buy{
+    padding: 1rem;
+    color: gray;
+}
+
+.up_buy_{
+    padding: 1rem;
+    margin-top: -1rem ;
+    cursor: pointer;
+}
+
+.up_buy_1{
+    padding: 1rem;
+    margin-top: -2rem ;
+    color: gray;
+    font-size: .8rem;
+}
+.up_buy_2{
+    padding-left: 1rem;
+    margin-top: -1rem ;
+    font-size: 1.2rem;
+    color: #00a650;
+}
+
+.row_buy{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 2rem;
+    background-color: white;
+    width: 65rem;
+    align-items: center;
+    border: 2px solid gray;
+    border-radius: .7rem;
+    box-shadow: 2px 15px 20px gray;
+    margin-top: -23rem;
+    margin-bottom: 7rem;
+}
+
+.content_buy{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+ /* background-color: gray; */
+ 
+}
+
+.columm_buy{
+    border: 2px solid gray;
+    border-radius: .7rem;
+    box-shadow: 2px 5px 10px gray;
+}
+
+.name_buy{
+    color: #5bc3fc;
+    font-size: 2.7rem;
+    padding-left: 1rem;
+    margin-bottom: 0;
+    margin-top: -2rem;
+}
+
+.name_buy_{
+    color: #5bc3fc;
+    font-size: 1.3rem;
+    padding-left: 1rem;
+    margin-top: -1rem;
+}
+
+
+
+.price_buy{
+    font-size: 1.7rem;
+    padding-left: 1rem;
+    margin-bottom: 0;
+}
+
+
+.rowBuy{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.textBuy{
+    padding-left: .5rem;
+    padding-right: .5rem;
+    font-size: .7rem;
+   
+}
+
+.textBuy_{
+    padding-left: .5rem;
+    padding-right: .5rem;
+    font-size: .7rem;
+    border-left: solid 1px black;
+    border-right: solid 1px black;
+}
+
+.addBuy{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.addBuy_{
+    border-radius: .5rem;
+    background-color: #5bc3fc;
+    border: none;
+    transition: all 300ms;
+    width: 18rem;
+    height: 3rem;
+}
+
+.addBuy_:hover {
+    background-color: #eee7e7;
+    transition: all 300ms;
+    border: 2px solid black;
+}
+
+/* metodos  de pago */
+.content_metodos{
+    display: flex;
+    justify-content: center;
+}
+
+.metodos{
+    background-color: white;
+    width: 60rem;
+    display: flex;
+    flex-direction: column;
+    border: 2px  solid gray;
+    border-radius: .7rem;
+    box-shadow: 10px 50px 130px black;
+    z-index: 1;
+    margin-top: -45rem;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    animation: metodos 500ms forwards;
+}
+
+@keyframes metodos {
+    from {
+      transform: translate(-500px);
+    }
+    to {
+      transform: translate(0px);
+    }
+  }
+
+.medoto_up{
+    background-color: white;
+    border: none; 
+    padding: 3rem;
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    width: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    border-radius: .7rem;
+    box-shadow: 2px 7px 10px gray;
+}
+
+.img_up{
+    width: 3rem;
+    cursor: pointer;
+}
+
+.img_up_{
+    width: 3rem;
+    cursor: pointer;
+}
+
+.img_up_close{
+    display: flex;
+    margin-top: -25rem;
+    margin-right: -3rem;
+    margin-left: -4rem;
+}
+
+.text_metodos_nav{
+    margin-bottom: 0;
+}
+
+.text_metodos{
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 4rem;
+    font-size: 1.2rem;
+}
+
+.text_metodos_{
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 4rem;
+    font-size: 1.2rem;
+    margin-top: -2rem;
+}
+
+.text_metodos_1{
+    font-size: 1.8rem;
+}
+
+.text_metodos_2{
+    font-size: 1rem;
+    margin-top: -1rem;
+    color: gray;
+}
+
+
+.trajetas_metodo{
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.fondo_buy{
+    width: 100%;
+}
