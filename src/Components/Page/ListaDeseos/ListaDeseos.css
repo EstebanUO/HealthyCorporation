@@ -14,12 +14,37 @@
 .containerDeseos{
     /* display: flex;
     flex-direction: column; */
-    background-color: black;
+    padding: 2rem;
+    /* background-color: black; */
     margin: 1rem;
     border-color: azure;
 }
 
 .descripcionDeseos{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+}
+
+.prod1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.imgProd1{
+    width: 15rem;
+}
+
+.prod2{
+    display: flex;
+    align-items: center;
+    /* align-content: stretch; */
+    /* flex-wrap: nowrap; */
+    flex-direction: column;
+}
+
+.cardProducts{
+    background-color: #cacaca;
+    border-radius: 1rem;
+    padding: 1rem;
 }
