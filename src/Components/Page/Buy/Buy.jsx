@@ -31,6 +31,7 @@ export const Buy = () => {
     const onSee = () => { document.getElementById("content_det").style.display = 'flex' };
     const onBlock = () => { document.getElementById("content_det").style.display = 'none' };
 
+   
     return (
 
         <>
@@ -68,13 +69,10 @@ export const Buy = () => {
                                 <p>Puedes comprar solo 1 unidad</p>
                             </div>
                             <div className='up_buy_2'>
-                                <p>Envio nacional gratis</p>
+                                <p>Envio gratis</p>
                             </div>
                             <div className='up_buy_1'>
                                 <p>Llega dentro de las 24 horas</p>
-                            </div>
-                            <div className='up_buy_2'>
-                                <p>Sin costos de importación</p>
                             </div>
 
                         </div>

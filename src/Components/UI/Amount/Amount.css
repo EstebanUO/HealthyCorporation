@@ -55,10 +55,11 @@
 
 .amount_content{
     width: 22rem;
-    background-color: #d3ebf7;
+    background-color: white;
     max-height: 20rem;
     padding: 1rem;
     border-radius: .7rem;
+    box-shadow: 15px 5px 20px grey;
     border: 2px solid gray;
 }
 
@@ -94,11 +95,12 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    background-color: #d3ebf7;
+    background-color: white;
     width: 45rem;
     height: 8rem;
     border-radius: .7rem;
     border: 2px solid gray;
+    box-shadow: 15px 5px 20px grey;
     animation: product_all 1s forwards;
 }
 
@@ -161,9 +163,6 @@
     padding: .3rem;
 }
 
-.product_btn{
-   
-}
 
 .counter{
     padding: .9rem;
@@ -181,6 +180,7 @@
 .delect_producto{
     width: 3rem;
     border-radius: 1rem;
+    cursor: pointer;
 }
 
 .product_name{

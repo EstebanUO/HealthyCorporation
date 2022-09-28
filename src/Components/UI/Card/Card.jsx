@@ -2,9 +2,18 @@ import React from 'react';
 import img from '../../Image/assects/medicasp.jpg';
 import { Link } from "react-router-dom";
 import { FaShoppingCart } from "react-icons/fa";
+import swal from 'sweetalert';
 import './Card.css'
 
 export const Card = () => {
+  const add = () => {
+    swal({
+    title: "Genial",
+    text: "Se a añadido este producto al carrito",
+    icon: "success",
+    button: "Continuar viendo productos",
+  });}
+
     return (
         <div className='content_Product'>
             <div className='card_product'>
@@ -30,7 +39,7 @@ export const Card = () => {
                         </div>
                     </div>
                     <div className='addProduct'>
-                        <button className='addProduct_'>
+                        <button onClick={add} className='addProduct_'>
                             <FaShoppingCart /> Aregar al carrito
                         </button>
                     </div>

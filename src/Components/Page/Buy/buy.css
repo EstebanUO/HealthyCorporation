@@ -195,7 +195,7 @@
 }
 
 .img_up_close{
-    display: flex;
+    display: block;
     margin-top: -32rem;
     margin-right: -3rem;
     margin-left: -4rem;

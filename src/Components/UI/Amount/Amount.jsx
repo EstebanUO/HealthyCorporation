@@ -4,9 +4,9 @@ import { FaShoppingCart } from "react-icons/fa";
 import { Footer } from '../../Page/Layout/Footer/Footer';
 import { Header } from '../../Page/Layout/Header/Header';
 import { Link } from 'react-router-dom';
-import delect from '../../Image/eliminar.gif'
+import delect from '../../Image/eliminar.png'
 import img_prueba from '../../Image/assects/pax.jpg'
-
+import swal from 'sweetalert';
 
 export const Amount = (props) => {
 
@@ -39,7 +39,22 @@ export const Amount = (props) => {
     /*----------- eliminar -------------- */
 
     const delectt = () =>{
-
+        swal({
+            title: "¿Estas seguro?",
+            text: "Al eliminar el producto del carrito ya no se tendra en cuanta en la compra total!",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+          })
+          .then((willDelete) => {
+            if (willDelete) {
+              swal("Has eliminado el producto sactifactoriamente", {
+                icon: "success",
+              });
+            } else {
+              swal("Esra bien no se quitará este producto de carrito!");
+            }
+          });
     }
     
 
