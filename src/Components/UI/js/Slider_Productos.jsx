@@ -178,7 +178,7 @@ export const Slider_Productos = () => {
     position: absolute;
     bottom: 0;
 
-    @media screen and (max-width:700px){
+    @media screen and (max-width:756px){
       position: relative;
       background: #000;
     }
