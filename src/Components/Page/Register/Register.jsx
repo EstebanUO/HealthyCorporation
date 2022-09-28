@@ -28,24 +28,22 @@ export const Register = (props) => {
 
   useEffect(() => {
     props.confrimPasword === props.passwordRegister ? document.getElementById('buttonRegister').removeAttribute('disabled') : document.getElementById('buttonRegister').setAttribute('disabled', 'true')
-  }, [props.confrimPasword, props.passwordRegister])
+  }, [props.confrimPasword, props.passwordRegister]);
 
   useEffect(() => {
     props.confrimPasword === props.passwordRegister ?
       document.getElementById('txtvalidPassword').textContent = '' :
       document.getElementById('txtvalidPassword').textContent = 'LA CONTRASEÑA NO COINCIDE';
-  }, [props.confrimPasword, props.passwordRegister])
+  }, [props.confrimPasword, props.passwordRegister]);
 
   //envio mensaje 
   useEffect(() => {
     if (props.messages === "Request failed with status code 400") {
       document.getElementById('txtvalidUsername').textContent = `usuario ya registrado`
-      props.setmessages("")
       props.setalertUser(true)
-      props.setalertMessage("usuario ya registrado")
+      
     }else if (props.messages === "Network Error") {
       document.getElementById('txtvalidUsername').textContent = `no hay conexion`
-      props.setmessages("")
       props.setalertConexion(true)
     } 
   }, [props.messages]);
@@ -95,7 +93,8 @@ export const Register = (props) => {
               <div className="checkTyC">
                 <input type="checkbox" required /><p>Haz click aqui para aceptar nuestros<br /><Link to="/terminos">terminos y condiciones</Link>.</p>
               </div>
-              {props.alertUser? <Alert variant="filled" severity="warning">usuario ya registrado!</Alert>:null}
+              {props.alertUser? <Alert variant="filled" severity="warning">Usuario ya Registrado!</Alert>:null}
+              {props.alertConexion? <Alert variant="filled" severity="error">Sin Conexión!</Alert>:null}
 
               <div className="submitReg">
                 <input disabled id='buttonRegister' value="registrarse" type="submit" class="submitReg2" />
