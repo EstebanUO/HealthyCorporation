@@ -1040,6 +1040,19 @@ a{
   }
 
 }
+
+/*-------- Responsive 900px ---------*/
+
+@media screen and (max-width:900px) { 
+  .formulario{
+    display: inline-block;
+  }
+  .formulario2{
+    margin: 8.5rem;
+    margin-top: 0rem;
+  }
+}
+
 /*-------- Responsive 768px ---------*/
 
 @media screen and (max-width:768px) { 
@@ -1050,6 +1063,18 @@ a{
     margin: 4rem;
     margin-top: 0rem;
   }
+
+  /*-------- Responsive 600px ---------*/
+
+@media screen and (max-width:600px) { 
+  .formulario{
+    display: inline-block;
+  }
+  .formulario2{
+    margin: -1rem;
+    margin-top: 0rem;
+  }
+}
 /*-------- Responsive 480px ---------*/
   @media screen and (max-width:480px) { 
 
@@ -1066,7 +1091,7 @@ a{
     .formulario{
       display: inline-block;
     }
-    .formulario2{
+    .formulario3{
       width: auto;
       margin: 0rem;
       margin-top: 0rem;
