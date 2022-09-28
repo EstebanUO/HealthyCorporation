@@ -3,13 +3,23 @@
     text-align: center;
 }
 
+.titleDescripcionDeseos2{
+    font-size: 1.2rem;
+}
+
 .subtitleDeseos{
     color: #505050;
 }
 
 .containerDeseos{
-    display: flex;
-    flex-direction: column;
+    /* display: flex;
+    flex-direction: column; */
+    background-color: black;
     margin: 1rem;
     border-color: azure;
+}
+
+.descripcionDeseos{
+    display: flex;
+    justify-content: space-evenly;
 }
