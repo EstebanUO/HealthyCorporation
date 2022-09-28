@@ -58,9 +58,9 @@ export const Home = (props) => {
           <h1 className='text_all_product'>Bienestar</h1>
           <div className='content_all_product'>
 
-            <img className='select_product' src={img1} alt="imagen producto" />
-            <img className='select_product' src={img2} alt="imagen producto" />
-            <img className='select_product' src={img3} alt="imagen producto" />
+            <img className='select_product1' src={img1} alt="imagen producto" />
+            <img className='select_product2' src={img2} alt="imagen producto" />
+            <img className='select_product3' src={img3} alt="imagen producto" />
             <Link to="/products"><button className='btn_all'>
               Ver más <img className='flecha' src={flecha} alt="" />
             </button></Link>
@@ -72,9 +72,9 @@ export const Home = (props) => {
           <h1 className='text_all_product2'>Cuidado</h1>
           <div className='content_all_product2'>
 
-            <img className='select_product' src={img4} alt="imagen producto" />
-            <img className='select_product' src={img5} alt="imagen producto" />
-            <img className='select_product' src={img6} alt="imagen producto" />
+            <img className='select_product1' src={img4} alt="imagen producto" />
+            <img className='select_product2' src={img5} alt="imagen producto" />
+            <img className='select_product3' src={img6} alt="imagen producto" />
             <Link to="/products"><button className='btn_all'>
               Ver más <img className='flecha' src={flecha} alt="" />
             </button></Link>
@@ -86,9 +86,9 @@ export const Home = (props) => {
           <h1 className='text_all_product'>Dermatología</h1>
           <div className='content_all_product'>
 
-            <img className='select_product' src={img7} alt="imagen producto" />
-            <img className='select_product' src={img8} alt="imagen producto" />
-            <img className='select_product' src={img9} alt="imagen producto" />
+            <img className='select_product1' src={img7} alt="imagen producto" />
+            <img className='select_product2' src={img8} alt="imagen producto" />
+            <img className='select_product3' src={img9} alt="imagen producto" />
             <Link to="/products"><button className='btn_all'>
               Ver más <img className='flecha' src={flecha} alt="" />
             </button></Link>
@@ -100,9 +100,9 @@ export const Home = (props) => {
           <h1 className='text_all_product2'>Salud</h1>
           <div className='content_all_product2'>
 
-            <img className='select_product' src={img10} alt="imagen producto" />
-            <img className='select_product' src={img11} alt="imagen producto" />
-            <img className='select_product' src={img12} alt="imagen producto" />
+            <img className='select_product1' src={img10} alt="imagen producto" />
+            <img className='select_product2' src={img11} alt="imagen producto" />
+            <img className='select_product3' src={img12} alt="imagen producto" />
             <Link to="/products"><button className='btn_all'>
               Ver más <img className='flecha' src={flecha} alt="" />
             </button></Link>
@@ -113,9 +113,9 @@ export const Home = (props) => {
           <h1 className='text_all_product'>Medicamentos</h1>
           <div className='content_all_product'>
 
-            <img className='select_product' src={img13} alt="imagen producto" />
-            <img className='select_product' src={img14} alt="imagen producto" />
-            <img className='select_product' src={img15} alt="imagen producto" />
+            <img className='select_product1' src={img13} alt="imagen producto" />
+            <img className='select_product2' src={img14} alt="imagen producto" />
+            <img className='select_product3' src={img15} alt="imagen producto" />
             <Link to="/products"><button className='btn_all'>
               Ver más <img className='flecha' src={flecha} alt="" />
             </button></Link>

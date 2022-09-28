@@ -1027,3 +1027,35 @@ a{
   color: red;
   text-align: center;
 }
+
+/*------------------- RESPONSIVE 758PX -----------------------*/
+
+@media screen and (max-width:756px){
+
+  .select_product1{
+    width: 16rem;
+    height: 14rem;
+  }
+
+  .select_product2{
+    width: 15rem;
+    height: 14rem;
+  }
+
+  .select_product3{
+    width: 12rem;
+  }
+
+  .btn_all{
+    margin-top: 1rem;
+  }
+  
+  .text_all_product{
+    justify-content: center;
+  }
+
+  .text_all_product2{
+    text-align: center;
+  }
+
+}
