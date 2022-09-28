@@ -14,6 +14,18 @@ code {
     monospace;
 }
 
+.input-password{
+  display: flex;
+}
+
+.button-show{
+  margin-left: 10px;
+  font-size: 25px;
+  border: none;
+  background-color: #ffffff57;
+  cursor: pointer;
+}
+
 /*---------------- Nav -------------------*/
 
 
@@ -426,7 +438,7 @@ header img{
 
 h1{
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -449,8 +461,8 @@ h3{
   box-shadow: 1px 1px 18px black;
   border-radius: .6rem;
   backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  width: 40rem;
+  /* -webkit-backdrop-filter: blur(10px); */
+  width: 100%;
 }
 
 .container_all{
@@ -1057,6 +1069,19 @@ a{
   }
 
 }
+
+/*-------- Responsive 900px ---------*/
+
+@media screen and (max-width:900px) { 
+  .formulario{
+    display: inline-block;
+  }
+  .formulario2{
+    margin: 8.5rem;
+    margin-top: 0rem;
+  }
+}
+
 /*-------- Responsive 768px ---------*/
 
 @media screen and (max-width:768px) { 
@@ -1067,6 +1092,18 @@ a{
     margin: 4rem;
     margin-top: 0rem;
   }
+
+  /*-------- Responsive 600px ---------*/
+
+@media screen and (max-width:600px) { 
+  .formulario{
+    display: inline-block;
+  }
+  .formulario2{
+    margin: -1rem;
+    margin-top: 0rem;
+  }
+}
 /*-------- Responsive 480px ---------*/
   @media screen and (max-width:480px) { 
 
@@ -1083,12 +1120,12 @@ a{
     .formulario{
       display: inline-block;
     }
-    .formulario2{
+    .formulario3{
       width: auto;
       margin: 0rem;
       margin-top: 0rem;
       
     }
   }
-
+/* Era gol de yepes */
 }

@@ -6,6 +6,7 @@ import logofacebook from '../../Image/Icons/facebook.png';
 import logoGoogle from '../../Image/Icons/google.png';
 import logoLinkening from '../../Image/Icons/linkedin.png';
 import Alert from '@mui/material/Alert';
+import { BsEyeFill,BsEyeSlashFill } from "react-icons/bs";
 
 export const Register = (props) => {
 
@@ -39,7 +40,7 @@ export const Register = (props) => {
   //envio mensaje 
   useEffect(() => {
     if (props.messages === "Request failed with status code 400") {
-      document.getElementById('txtvalidUsername').textContent = `usuario ya registrado`
+      document.getElementById('valiExiste').textContent = `Usuario o Email ya registrado`
       props.setalertUser(true)
       
     }else if (props.messages === "Network Error") {
@@ -47,6 +48,10 @@ export const Register = (props) => {
       props.setalertConexion(true)
     } 
   }, [props.messages]);
+
+  const onclick=()=>{
+    props.onClick()
+  }
 
 
   return (
@@ -59,7 +64,7 @@ export const Register = (props) => {
             <h2>Bienvenido a HealthyCorporation</h2>
             <p>Si ya tienes una cuenta por favor inicia sesion aqui</p>
             <Link to="/login" className="links">
-              <button className="signUpBtn">Iniciar Sesion</button>
+              <button onClick={onclick} className="signUpBtn">Iniciar Sesion</button>
             </Link>
           </div>
         </div>
@@ -78,6 +83,7 @@ export const Register = (props) => {
               </div>
             </div><br />
             <div className="formularioReg">
+              <p className='pvaliRegister' id='valiExiste'></p>
               <label for="inputUser" class="labelsReg">User name</label>
               <input minLength="3" maxLength="20" value={props.usernameRegister} onChange={props.onChangeusernameRegister} name="name" type="text" class="form-input" placeholder="User name" autocomplete="off" required />
               <p className='pvaliRegister' id='txtvalidUsername'></p>
@@ -87,13 +93,16 @@ export const Register = (props) => {
               <label for="inputPassword" class="labelsReg"><br />Password</label>
               <input value={props.passwordRegister} onChange={props.onChangepasswordRegister} name="password" type="password" class="form-input" placeholder="Password" />
               <label for="inputPassword" class="labelsReg"><br />Confirm password</label>
-              <input value={props.confrimPasword} onChange={props.onChangeconfrimPasword} name="password" type="password" class="form-input" placeholder="Confirm your password" />
+              <div className='input-password'>  
+                <input value={props.confrimPasword} onChange={props.onChangeconfrimPasword} name="password" type={props.shown ? 'text' : 'password'} class="form-input" placeholder="Confirm your password" />
+                <button className='button-show' onClick={props.switchShown}>{props.shown? <BsEyeFill />:<BsEyeSlashFill />}</button>
+              </div>
               <p className='pvaliRegister' id='txtvalidPassword'></p>
               <br />
               <div className="checkTyC">
                 <input type="checkbox" required /><p>Haz click aqui para aceptar nuestros<br /><Link to="/terminos">terminos y condiciones</Link>.</p>
               </div>
-              {props.alertUser? <Alert variant="filled" severity="warning">Usuario ya Registrado!</Alert>:null}
+              {props.alertUser? <Alert variant="filled" severity="warning">Usuario o Email ya Registrado!</Alert>:null}
               {props.alertConexion? <Alert variant="filled" severity="error">Sin Conexión!</Alert>:null}
 
               <div className="submitReg">
