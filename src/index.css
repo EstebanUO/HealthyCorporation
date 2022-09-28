@@ -1038,6 +1038,23 @@ a{
     margin: 18rem;
     margin-top: 0rem;
   }
+  .select_product1{
+    width: 16rem;
+    height: 14rem;
+  }
+
+  .select_product2{
+    width: 15rem;
+    height: 14rem;
+  }
+
+  .select_product3{
+    width: 12rem;
+  }
+
+  .btn_all{
+    margin-top: 1rem;
+  }
 
 }
 /*-------- Responsive 768px ---------*/
@@ -1072,7 +1089,6 @@ a{
       margin-top: 0rem;
       
     }
-  /*Hola*/
   }
 
 }
