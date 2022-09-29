@@ -77,9 +77,9 @@ export const Buy = () => {
 
                         </div>
                         <div className='addBuy'>
-                            <button className='addBuy_'>
+                        <Link to="/pago"><button className='addBuy_'>
                                 Comprar ahora
-                            </button>
+                            </button></Link>
                         </div>
                     </div>
                     <div className='img_up_close' >

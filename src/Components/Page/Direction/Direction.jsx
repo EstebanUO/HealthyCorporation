@@ -24,34 +24,34 @@ export const Direction = () => {
 
           <div className='acount_content_all'>
             <div className='acount_content_direction'>
-              <p>Dirección</p>
+              <p className='text_check'>Dirección</p>
               <input className='input_acount' placeholder='Ingresa tu direccion de residencia' type="text" value="" />
             </div><br />
 
             <div className='acount_content_row'>
               <div className='acount_content_direction2'>
-                <p>Ingresa tu ciudad</p>
+                <p className='text_check'>Ingresa tu ciudad</p>
                 <input className='input_acount2' placeholder='Ingresa tu ciudad' type="text" value="" />
               </div>
               <div className='acount_content_direction2'>
-                <p>Ingresa tu localidad</p>
+                <p className='text_check'>Ingresa tu localidad</p>
                 <input className='input_acount2' placeholder='Ingresa tu localidad' type="text" value="" />
               </div>
             </div><br />
 
             <div className='acount_content_row'>
               <div className='acount_content_direction2'>
-                <p>Casa / Departamento / Oficina </p>
+                <p className='text_check'>Casa | Depto | Oficina </p>
                 <input className='input_acount2' placeholder='Ingresa la numeración' type="number" value="" />
               </div>
               <div className='acount_content_direction2'>
-                <p>Nombre de la dirección</p>
+                <p className='text_check'>Nombre de la dirección</p>
                 <input className='input_acount2' placeholder='Ej: Departamento' type="text" value="" />
               </div>
             </div>
 
             <div className='acount_btn'>
-              <button className='btn_save'><s>Guardar</s></button>
+              <button className='btn_save'>Guardar</button>
             </div>
           </div>
         </div>

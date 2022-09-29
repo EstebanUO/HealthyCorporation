@@ -5,14 +5,43 @@
     background-color: white;
     margin-left: 1rem;
     margin-right: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.title-product {
+    color: rgb(131, 131, 131);
+    display: flex;
+    justify-content: center;
+    padding: 3rem;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+
+.content_Product{
+    border: solid gray;
+    border-radius: .7rem;
+    box-shadow: 2px 2px 20px gray;
+    padding: 1rem;
+    z-index: 2;
+    background-color: white;
 }
 
 .card_product{
     display: flex;
     flex-wrap: wrap;    
+    justify-content: center;
 }
 
 .imgProduct{
+    width: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgProduct2{
     width: 14rem;
     display: flex;
     justify-content: center;

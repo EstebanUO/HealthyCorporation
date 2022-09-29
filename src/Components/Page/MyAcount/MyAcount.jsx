@@ -23,13 +23,13 @@ export const MyAcount = (props) => {
 
           <div className='acount_content_all'>
             <div className='acount_content_tarjet'>
-              <p>Nombre</p>
+              <p  className='text_check'>Nombre</p>
               <input className='input_acount' placeholder='none' type="text" value="" />
 
             </div><br />
 
             <div className='acount_content_tarjet'>
-              <p>Correo</p>
+              <p  className='text_check'>Correo</p>
               <input className='input_acount' placeholder='none' type="text" value="" />
 
             </div><br />
@@ -38,7 +38,7 @@ export const MyAcount = (props) => {
 
             <div className='acount_content_row'>
               <div className='acount_content_tarjet'>
-                <p>Ingresa tu contraseña para guardar los cambios</p>
+                <p  className='text_check'>Ingresa tu contraseña para guardar los cambios</p>
                 <input className='input_acount2' placeholder='************' minlength="8" type="password" value="" required />
               </div>
               <button className='btn_update' disabled><s>Actualizar</s> </button>

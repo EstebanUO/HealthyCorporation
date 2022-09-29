@@ -26,24 +26,24 @@ export const Password = () => {
             <div className='acount_content_direction'>
 
               <div className='acount_content_direction'>
-                <p>Contraseña actual</p>
+                <p  className='text_check'>Contraseña actual</p>
                 <input className='input_acount' placeholder='Ingresa tu contraseña actual' minlength="8" type="password" value="" />
               </div><br />
 
               <div className='acount_content_row'>
                 <div className='acount_content_direction2'>
-                  <p>Nueva contraseña</p>
+                  <p  className='text_check'>Nueva contraseña</p>
                   <input className='input_acount2' placeholder='Ingresa la nueva contraseña' minlength="8" type="password" value="" />
                 </div>
                 <div className='acount_content_direction2'>
-                  <p>Confirmar contraseña</p>
+                  <p  className='text_check'>Confirmar contraseña</p>
                   <input className='input_acount2' placeholder='Ingresa de nuevo la contraseña' minlength="8" type="password" value="" />
                 </div>
               </div>
             </div>
 
             <div className='acount_btn'>
-              <button className='btn_save'><s>Guardar</s> </button>
+              <button className='btn_save'>Guardar</button>
             </div>
           </div>
         </div>

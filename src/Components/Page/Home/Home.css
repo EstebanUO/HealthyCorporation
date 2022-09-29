@@ -187,6 +187,7 @@
 .title-home {
   color: rgb(131, 131, 131);  padding-top: 1rem;
   font-size: 2.5rem;
+  justify-content: center;
 }
 
 

@@ -14,6 +14,14 @@ code {
     monospace;
 }
 
+.orden_product{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 2rem;
+  margin-top: -20rem;
+}
+
 .input-password{
   display: flex;
 }
@@ -22,7 +30,7 @@ code {
   margin-left: 10px;
   font-size: 25px;
   border: none;
-  background-color: #ffffff57;
+  background-color: #ffffff00;
   cursor: pointer;
 }
 
@@ -857,10 +865,11 @@ a{
   padding: 0.3rem;
   background-color: #5bc3fc;
   width: 12rem;
+  height: 3rem;
   border-radius: 0.5rem;
   font-size: 1.3rem;
   margin-bottom: 1rem;
-  margin-top: 1rem;
+  margin-top: 3rem;
   transition: all 400ms;
   margin-right: 2rem;
 }
@@ -1040,6 +1049,23 @@ a{
   text-align: center;
 }
 
+.nom_check{
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.text_check {
+  color: gray;
+  font-size: 1.5rem;
+}
+
+.text_check2 {
+  color: gray;
+  font-size: 1.5rem;
+  font-size: 2rem;
+  margin-bottom: -3rem;
+}
 /*-------- Responsive 1200px ---------*/
 
 @media screen and (max-width:1200px) { 
@@ -1128,4 +1154,6 @@ a{
     }
   }
 /* Era gol de yepes */
+
+/* nah */
 }

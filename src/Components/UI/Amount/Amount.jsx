@@ -52,7 +52,7 @@ export const Amount = (props) => {
                 icon: "success",
               });
             } else {
-              swal("Esra bien no se quitará este producto de carrito!");
+              swal("Esta bien no se quitará este producto de carrito!");
             }
           });
     }

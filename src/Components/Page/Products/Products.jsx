@@ -7,12 +7,15 @@ import { Card } from '../../UI/Card/Card';
 
 
 export const Products = (props) => {
-  
+
   return (
     <div>
       <Header valiLoginAdmin={props.valiLoginAdmin} />
-      <br /><Slider /><br />
-      <Card />
+      <Slider /><br />
+      <div className='orden_product'>
+        <Card />
+      </div>
+
       <Footer />
     </div>
   )

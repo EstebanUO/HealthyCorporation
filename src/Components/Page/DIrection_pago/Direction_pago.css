@@ -1,0 +1,83 @@
+.imgu2{
+    width: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+  }
+
+
+.check_all{
+    display: flex;
+    justify-content: center;
+    padding: 4rem;
+}
+
+.up_check{
+    height: 7rem;
+    border-bottom: solid black;
+}
+
+.content_check{
+    background-color: white;
+    width: 50rem;
+    border: solid gray;
+    border-radius: .7rem;
+    box-shadow: 3px 4px 20px gray;
+    padding: 3rem;
+}
+
+.nav_check{
+    background-color: white;
+    border: none;
+    display: flex;
+    justify-content: flex-start;
+    font-size: 2rem;
+    /* height: 7rem; */
+    border-radius: .7rem;
+}
+
+.check_btn{
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+}
+
+.pad_check{
+   color: #5bc3fc;
+   font-size: 2.1rem;
+}
+
+
+.addProduct_check{
+    border-radius: .5rem;
+    background-color: #5bc3fc;
+    border: none;
+    height: 3rem;
+    transition: all 300ms;
+    margin-top: 2rem;
+    padding: 1.7rem;
+    display: flex;
+    align-items: center;
+}
+
+.addProduct_check:hover {
+    background-color: #eee7e7;
+    transition: all 300ms;
+    border: 2px solid black;
+}
+
+.input_check{
+    background-color: #ffffff57;
+    width: 100%;
+    height: 2.5rem;
+    padding: 0.2rem;
+    font-size: 1rem;
+    border: none;
+    border-bottom: solid 1px black;
+}
+
+.text_check{
+    color: gray;
+    font-size: 1.5rem;
+}

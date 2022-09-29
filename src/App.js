@@ -15,6 +15,8 @@ import { Password } from './Components/Page/Password/Password';
 import { Tarjet } from './Components/Page/Tarjet/Tarjet';
 import { ListaDeseos } from './Components/Page/ListaDeseos/ListaDeseos';
 import { Buy } from './Components/Page/Buy/Buy';
+import { Direction_pago } from './Components/Page/DIrection_pago/Direction_pago';
+import { Pago } from './Components/Page/Pago/Pago';
 
 
 
@@ -173,6 +175,8 @@ function App() {
         <Route path="/tarjet" element={<Tarjet />} />
         <Route path="/lista-deseos" element={<ListaDeseos />} />
         <Route path="/compra" element={<Buy />} />
+        <Route path="/pago" element={<Direction_pago />} />
+        <Route path="/pago_final" element={<Pago />} />
       </Routes>
     </div>
 

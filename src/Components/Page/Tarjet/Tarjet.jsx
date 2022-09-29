@@ -22,18 +22,18 @@ export const Tarjet = () => {
 
           <div className='acount_content_all'>
             <div className='acount_content_tarjet'>
-              <p>Numero de la tarjeta</p>
+              <p className='text_check'>Numero de la tarjeta</p>
               <input className='input_acount3' placeholder='5212 **** **** ****' minlength="16" type="number" value="" required />
             </div><br />
 
             <div className='acount_content_tarjet'>
-              <p>Titular de la tarjeta</p>
+              <p  className='text_check'>Titular de la tarjeta</p>
               <input className='input_acount3' placeholder='Ingresa tu nombre y apellido' minlength="5" type="number" value="" required />
             </div><br />
 
             <div className='acount_content_row'>
               <div className='acount_content_tarjet'>
-                <p>Fecha de vencimiento</p>
+                <p  className='text_check'>Fecha de vencimiento</p>
                 <select className='input_acount4' name="mes" required>
                   <option value="">Enero</option>
                   <option value="">Febrero</option>
@@ -51,7 +51,7 @@ export const Tarjet = () => {
               </div>
 
               <div className='acount_content_tarjet'>
-                <p>Año</p>
+                <p  className='text_check'>Año</p>
                 <select className='input_acount4' name="mes" required>
                   <option value="">2022</option>
                   <option value="">2023</option>
@@ -70,12 +70,12 @@ export const Tarjet = () => {
             </div><br />
 
             <div className='acount_content_tarjet'>
-              <p>CVV</p>
+              <p  className='text_check'>CVV</p>
               <input className='input_acount5' placeholder='Ej: 456' type="number" value="" minlength="3" required />
             </div>
 
             <div className='acount_btn'>
-              <button type="submit" className='btn_save' ><s>Guardar</s></button>
+              <button type="submit" className='btn_save' >Guardar</button>
             </div>
           </div>
         </div>

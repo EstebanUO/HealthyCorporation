@@ -140,9 +140,10 @@
 }
 
 /* metodos  de pago */
-.content_metodos{
+#content_det{
     display: flex;
     justify-content: center;
+    display: none;
 }
 
 .metodos{
