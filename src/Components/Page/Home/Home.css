@@ -1,7 +1,3 @@
-.title-home {
-  color: rgb(131, 131, 131);
-}
-
 .title-home2 {
   color: rgb(131, 131, 131);
   font-size: 4rem;
@@ -188,6 +184,7 @@
   color: rgb(131, 131, 131);  padding-top: 1rem;
   font-size: 2.5rem;
   justify-content: center;
+  display: flex;
 }
 
 
