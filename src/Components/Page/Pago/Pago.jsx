@@ -60,6 +60,23 @@ export const Pago = () => {
                 </div>
             </header>
 
+            <div className='center_'>
+                <div className='circles'>
+                    1
+                </div>
+
+                <div className='linea_procesing'>
+                </div>
+                <div className='circles_'>
+                </div>
+                <div className='linea_procesing2'>
+                </div>
+
+                <div className='circles3'>
+                    2
+                </div>
+            </div>
+
             <div className='nom_check'>
                 <p className='text_check2' >[Nombre] ya casi terminas tu compra!</p>
             </div>
@@ -77,12 +94,12 @@ export const Pago = () => {
                             <div className='acount_content_all2' id='content_det2'>
                                 <div className='acount_content_tarjet'>
                                     <p className='text_check'>Numero de la tarjeta</p>
-                                    <input className='input_acount3' placeholder='5212 **** **** ****' minlength="16" type="number" value="" required />
+                                    <input className='input_acount3' placeholder='5212 **** **** ****' minlength="16" type="number" required />
                                 </div><br />
 
                                 <div className='acount_content_tarjet'>
                                     <p className='text_check'>Titular de la tarjeta</p>
-                                    <input className='input_acount3' placeholder='Ingresa tu nombre y apellido' minlength="5" type="text" value="" required />
+                                    <input className='input_acount3' placeholder='Ingresa tu nombre y apellido' minlength="5" type="text" required />
                                 </div><br />
 
                                 <div className='acount_content_row'>
@@ -125,7 +142,7 @@ export const Pago = () => {
 
                                 <div className='acount_content_tarjet'>
                                     <p className='text_check'>CVV</p>
-                                    <input className='input_acount5' placeholder='Ej: 456' type="number" value="" minlength="3" required />
+                                    <input className='input_acount5' placeholder='Ej: 456' type="number" minlength="3" required />
                                 </div>
 
                                 <div className='acount_btn2'>
@@ -170,13 +187,13 @@ export const Pago = () => {
 
                                 <div className='acount_content_tarjet2'>
                                     <p className='text_check'>Número de documento</p>
-                                    <input type="text" className='textContact' name='user-name' placeholder="Digite su documeto" required></input><br /><br />
+                                    <input type="text" className='textContact' name='user-name' placeholder="Digite su documento" required></input><br /><br />
                                 </div><br />
 
 
                                 <div className='acount_btn2'>
                                     <button type="submit" className='btn_save2' onClick={onBlock2}>Cancelar</button>
-                                    <button type="submit" className='btn_save' onClick={check}>Comprar</button>
+                                    <button type="submit" className='btn_save' onClick={check2}>Comprar</button>
                                 </div>
                             </div>
                         </div>

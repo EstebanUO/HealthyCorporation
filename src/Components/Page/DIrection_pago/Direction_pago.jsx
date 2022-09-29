@@ -13,6 +13,24 @@ export const Direction_pago = () => {
                     <Link to='/'><img src={logo2} alt="Logo" /></Link>
                 </div>
             </header>
+
+            <div className='center_'>
+                <div className='circles'>
+                    1
+                </div>
+
+                <div className='linea_procesing'>
+                </div>
+                <div className='circles_'>
+                </div>
+                <div className='linea_procesing_'>
+                </div>
+
+                <div className='circles2'>
+                    2
+                </div>
+            </div>
+
             <div className='nom_check'>
                 <p className='text_check2' >[Nombre] Dijita tu dirección para saber en donde te encuentras</p>
             </div>

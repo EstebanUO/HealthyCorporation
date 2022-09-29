@@ -70,13 +70,14 @@
     flex-direction: row;
     justify-content: space-around;
     padding: 3rem;
-    margin-top: -3rem;
+    /* margin-top: -3rem; */
+    flex-wrap: wrap;
 }
 
 .amount_calculate{
     display: flex;
     justify-content: center;
-    padding: 3rem;
+    padding: 2rem;
     animation: amount_calculate 1s forwards;
 }
 
@@ -97,7 +98,7 @@
     justify-content: space-around;
     background-color: white;
     width: 45rem;
-    height: 8rem;
+    /* height: 8rem; */
     border-radius: .7rem;
     border: 2px solid gray;
     box-shadow: 15px 5px 20px grey;
@@ -153,8 +154,7 @@
 
 .product{
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-around;
     flex-direction: column;
 }
 
