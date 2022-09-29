@@ -170,7 +170,7 @@ export const Pago = () => {
 
                                 <div className='acount_content_tarjet2'>
                                     <p className='text_check'>Número de documento</p>
-                                    <input type="text" className='textContact' name='user-name' placeholder="Digite su dirección" required></input><br /><br />
+                                    <input type="text" className='textContact' name='user-name' placeholder="Digite su documeto" required></input><br /><br />
                                 </div><br />
 
 
