@@ -1030,7 +1030,7 @@ a{
 
 /*------------------- RESPONSIVE 758PX -----------------------*/
 
-@media screen and (max-width:756px){
+@media screen and (min-width:756px){
 
   .select_product1{
     width: 16rem;
@@ -1049,4 +1049,9 @@ a{
   .btn_all{
     margin-top: 1rem;
   }
+
+  .burguer{
+    display: none;
+  }
+
 }

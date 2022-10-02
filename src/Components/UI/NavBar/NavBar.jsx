@@ -1,9 +1,12 @@
 import React from 'react'
+import styled from 'styled-components'
 import { FaUserAlt,FaShoppingCart,FaMapMarkerAlt,FaHeartbeat,FaSistrix } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 import logo from '../../Image/logo.png';
+import { BurguerButton } from '../BuguerButton/BurguerButton';
 
 export const NavBar = () => {
+
 
     window.onscroll = function() {scrollFunction()};
 
@@ -24,27 +27,37 @@ export const NavBar = () => {
       }
 
   return (
-    <div>
-        <div className='navbar' id='navbar'>
-            <div>
-                <Link to='/'><img src={logo} alt="logo" id='logo'/></Link>
-            </div>
-            <div className='navbar2'>
-                <Link to="/" className="ubicacion"><FaMapMarkerAlt/> Ubicación</Link> 
-            </div>
-            <div className='navbar2'>
-                <input type="text" placeholder='Buscar...' className='buscar'/><button className='buscar2'><FaSistrix/></button> 
-            </div>
-            <div className='navbar2'>
-                <Link to="/lista-deseos"className="listaDeseos"><FaHeartbeat/> Lista de Deseos</Link>
-            </div>
-            <div className='navbar2'>
-                <Link to='/register' className='acount'><FaUserAlt/> Mi cuenta</Link> 
-            </div>
-            <div className='navbar2'>
-            <Link to='/car' className='car'><FaShoppingCart/> 0</Link>
-            </div>
+        <div>
+            <Navcontainer>
+                <div className='navbar' id='navbar'>
+                    <div>
+                        <Link to='/'><img src={logo} alt="logo" id='logo'/></Link>
+                    </div>
+                    <div className='navbar2 active'>
+                        <Link to="/" className="ubicacion"><FaMapMarkerAlt/> Ubicación</Link> 
+                    </div>
+                    <div className='navbar2 active'>
+                        <input type="text" placeholder='Buscar...' className='buscar'/><button className='buscar2'><FaSistrix/></button> 
+                    </div>
+                    <div className='navbar2 active'>
+                        <Link to="/lista-deseos"className="listaDeseos"><FaHeartbeat/> Lista de Deseos</Link>
+                    </div>
+                    <div className='navbar2 active'>
+                        <Link to='/register' className='acount'><FaUserAlt/> Mi cuenta</Link> 
+                    </div>
+                    <div className='navbar2 active'>
+                        <Link to='/car' className='car'><FaShoppingCart/> 0</Link>
+                    </div>
+                    <div className='burguer'>
+                        <BurguerButton/>
+                    </div>
+                </div>
+            </Navcontainer>
         </div>
-    </div>
   )
 }
+
+const Navcontainer = styled.nav`
+
+
+`
