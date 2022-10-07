@@ -242,3 +242,32 @@
 .fondo_buy{
     width: 100%;
 }
+
+
+@media screen and (max-width:600px) {
+    .row_buy {
+        width: 30rem;
+        flex-direction: column;
+        height: 60rem;
+        margin-top: -10rem;
+    }
+    .img_buy {
+        width: 17rem;
+        margin-top: -91rem;
+        margin-bottom: -1rem;
+    }
+    .columm_buy {
+        width: 22rem;
+        margin-top: -140rem;
+        margin-bottom: -26rem;
+    }
+    .img_up_ {
+        width: 3rem;
+        cursor: pointer;
+    }
+    .img_up_close {
+        margin-top: -140rem;
+        margin-right: -3rem;
+        margin-left: 19rem;
+    }
+}

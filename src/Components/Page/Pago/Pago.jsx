@@ -87,7 +87,7 @@ export const Pago = () => {
 
                     <div>
                         <div className='content_tarjet_div' onClick={onSee}>
-                            <p className='pad_check2'>Tarjeta de Credito o de Debito</p>
+                            <p className='pad_check2'>Tarjeta de Crédito o de Débito</p>
                             <img className='img-tarjet2' src={master} alt="tarjeta imagen" />
                         </div>
                         <div>

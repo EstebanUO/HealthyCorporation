@@ -54,7 +54,11 @@ export const Home = (props) => {
       <Header valiLoginAdmin={props.valiLoginAdmin} />
       <div>
         <Slider2 />
+
         <div>
+
+
+        <div className="Content_categorias">
           <h1 className='title-home2'>Categorias</h1>
           <Categories />
         </div>
@@ -242,6 +246,7 @@ export const Home = (props) => {
         </div>
       </div><br /><br />
       <Footer />
+    </div>
     </div>
   )
 }
