@@ -28,7 +28,6 @@ export const NavBar = () => {
 
   return (
         <div>
-            <Navcontainer>
                 <div className='navbar' id='navbar'>
                     <div>
                         <Link to='/'><img src={logo} alt="logo" id='logo'/></Link>
@@ -52,7 +51,6 @@ export const NavBar = () => {
                         <BurguerButton/>
                     </div>
                 </div>
-            </Navcontainer>
         </div>
   )
 }
