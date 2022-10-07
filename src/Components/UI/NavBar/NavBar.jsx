@@ -29,9 +29,9 @@ export const NavBar = () => {
             <div>
                 <Link to='/'><img src={logo} alt="logo" id='logo'/></Link>
             </div>
-            <div className='navbar2'>
+            {/* <div className='navbar2'>
                 <Link to="/" className="ubicacion"><FaMapMarkerAlt/> Ubicación</Link> 
-            </div>
+            </div> */}
             <div className='navbar2'>
                 <input type="text" placeholder='Buscar...' className='buscar'/><button className='buscar2'><FaSistrix/></button> 
             </div>

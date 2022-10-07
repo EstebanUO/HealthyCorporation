@@ -4,7 +4,7 @@ import { Header } from '../Layout/Header/Header'
 import { Link } from "react-router-dom"
 import logofacebook from '../../Image/Icons/facebook.png';
 import logoGoogle from '../../Image/Icons/google.png';
-import logoLinkening from '../../Image/Icons/linkedin.png';
+import logoTwitter from '../../Image/Icons/twiter.png';
 import { BsEyeFill,BsEyeSlashFill } from "react-icons/bs";
 
 export const Login = (props) => {
@@ -28,7 +28,7 @@ export const Login = (props) => {
               <div className="border-icon">
                 <img src={logoGoogle} alt="logoGoogle" className="iconos" />
               </div><div className="border-icon">
-                <img src={logoLinkening} alt="logoLinkening" className="iconos" />
+                <img src={logoTwitter} alt="logoTwitter" className="iconos" />
               </div>
             </div><br />
             <div className="formularioLog">
@@ -40,10 +40,7 @@ export const Login = (props) => {
                 <input onChange={props.onChangePasswordLogin} value={props.passwordUser} name="password" type={props.shown2 ? 'text' : 'password'} class="form-input" id="inputPassword" placeholder="Password" />
                 <button className='button-show' onClick={props.switchShown2}>{props.shown2 ? <BsEyeFill /> : <BsEyeSlashFill />}</button>
               </div>
-             
-
               <Link to="/" className="forgetPass">¿Haz olvidado tu contraseña?</Link>
-
               <div className="submitReg">
                 <button onClick={props.ClickLogin} type="submit" class="submitReg2">Iniciar Sesion</button>
               </div>

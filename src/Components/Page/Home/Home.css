@@ -181,7 +181,8 @@
 }
 
 .title-home {
-  color: rgb(131, 131, 131);  padding-top: 1rem;
+  color: #605e5e;  
+  padding-top: 1rem;
   font-size: 2.5rem;
   justify-content: center;
   display: flex;
@@ -214,7 +215,7 @@
 }
 
 .text_all_product{
-  color: rgb(131, 131, 131);
+  color: #605e5e;
   display: flex;
   justify-content: flex-start;
   padding-left: 9rem;
@@ -224,7 +225,7 @@
 }
 
 .text_all_product2{
-  color: rgb(131, 131, 131);
+  color: #605e5e;
   display: flex;
   justify-content: flex-start;
   padding-left: 9rem;
@@ -274,4 +275,11 @@
 
 .flecha{
   width: 3rem;
+}
+
+.productosVistos{
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #605e5e;
 }

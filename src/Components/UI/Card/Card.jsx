@@ -1,8 +1,8 @@
 import React from 'react';
-import img from '../../Image/assects/medicasp.jpg';
-import img2 from '../../Image/assects/pax.jpg';
-import img3 from '../../Image/assects/nutribela.jpg';
-import img4 from '../../Image/assects/acetaminofen.jpg';
+import medicasp from '../../Image/assects/medicasp.jpg';
+import pax from '../../Image/assects/pax.jpg';
+import nutribela from '../../Image/assects/nutribela.jpg';
+import acetaminofen from '../../Image/assects/acetaminofen.jpg';
 import { Link } from "react-router-dom";
 import { FaShoppingCart } from "react-icons/fa";
 import swal from 'sweetalert';
@@ -24,7 +24,7 @@ export const Card = () => {
       <div className='card_product'>
         <div className='column_all'>
           <div className='imgProduct_' >
-            <Link to="/compra"><img className='imgProduct' src={img} alt="Producto imagen" /></Link>
+            <Link to="/compra"><img className='imgProduct' src={medicasp} alt="Producto imagen" /></Link>
           </div>
           <div className='padding_product'>
             <div>
@@ -45,17 +45,13 @@ export const Card = () => {
           </div>
           <div className='addProduct'>
             <button onClick={add} className='addProduct_'>
-              <FaShoppingCart /> Aregar al carrito
+              Agregar <FaShoppingCart />
             </button>
           </div>
         </div>
-
-
-
-
         <div className='column_all'>
           <div className='imgProduct_' >
-          <Link to="/compra"><img className='imgProduct2' src={img2} alt="Producto imagen" /></Link>
+          <Link to="/compra"><img className='imgProduct2' src={pax} alt="Producto imagen" /></Link>
           </div>
           <div className='padding_product'>
             <div>
@@ -76,15 +72,13 @@ export const Card = () => {
           </div>
           <div className='addProduct'>
           <button onClick={add} className='addProduct_'>
-              <FaShoppingCart /> Aregar al carrito
+              Agregar <FaShoppingCart />
             </button>
           </div>
         </div>
-
-
         <div className='column_all'>
           <div className='imgProduct_' >
-          <Link to="/compra"><img className='imgProduct' src={img3} alt="Producto imagen" /></Link>
+          <Link to="/compra"><img className='imgProduct' src={nutribela} alt="Producto imagen" /></Link>
           </div>
           <div className='padding_product'>
             <div>
@@ -105,16 +99,13 @@ export const Card = () => {
           </div>
           <div className='addProduct'>
           <button onClick={add} className='addProduct_'>
-              <FaShoppingCart /> Aregar al carrito
+              Agregar <FaShoppingCart />
             </button>
           </div>
         </div>
-
-
-
         <div className='column_all'>
           <div className='imgProduct_' >
-          <Link to="/compra"><img className='imgProduct2' src={img4} alt="Producto imagen" /></Link>
+          <Link to="/compra"><img className='imgProduct2' src={acetaminofen} alt="Producto imagen" /></Link>
           </div>
           <div className='padding_product'>
             <div>
@@ -135,13 +126,10 @@ export const Card = () => {
           </div>
           <div className='addProduct'>
           <button onClick={add} className='addProduct_'>
-              <FaShoppingCart /> Aregar al carrito
+              Agregar <FaShoppingCart /> 
             </button>
           </div>
-
         </div>
-
-
       </div><br />
     </div>
   )

@@ -4,7 +4,7 @@ import { Footer } from '../Layout/Footer/Footer';
 import { Link } from "react-router-dom";
 import logofacebook from '../../Image/Icons/facebook.png';
 import logoGoogle from '../../Image/Icons/google.png';
-import logoLinkening from '../../Image/Icons/linkedin.png';
+import logoTwitter from '../../Image/Icons/twiter.png';
 import Alert from '@mui/material/Alert';
 import { BsEyeFill,BsEyeSlashFill } from "react-icons/bs";
 
@@ -57,7 +57,6 @@ export const Register = (props) => {
   return (
     <div>
       <Header />
-      
       <div className="formulario">
         <div className="welcome-back">
           <div className="message">
@@ -79,7 +78,7 @@ export const Register = (props) => {
                 <img src={logoGoogle} alt="logoGoogle" className="iconos" />
               </div>
               <div className="border-icon">
-                <img src={logoLinkening} alt="logoLinkening" className="iconos" />
+                <img src={logoTwitter} alt="logoTwitter" className="iconos" />
               </div>
             </div><br />
             <div className="formularioReg">

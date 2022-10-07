@@ -73,6 +73,13 @@
     margin-bottom: 0;
 }
 
+.price_product_ofert{
+    font-size: .9rem;
+    padding-left: 1rem;
+    margin-bottom: 0;
+    color: firebrick;
+}
+
 .rowProduct{
     display: flex;
     flex-direction: row;
@@ -105,6 +112,8 @@
     background-color: #5bc3fc;
     border: none;
     transition: all 300ms;
+    width: auto;
+    height: 2.3rem;
 }
 
 .addProduct_:hover {
