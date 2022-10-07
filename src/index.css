@@ -646,6 +646,10 @@ a{
   animation: home 1s forwards;
 }
 
+.Content_categorias{
+  padding: 4rem;
+}
+
 @keyframes home {
   from {
    top: (100px)
@@ -1102,7 +1106,7 @@ a{
 
 /*-------- Responsive 768px ---------*/
 
-@media screen and (max-width:768px) { 
+@media screen and (max-width:780px) { 
   .formulario{
     display: inline-block;
   }
@@ -1111,7 +1115,7 @@ a{
     margin-top: 0rem;
   }
 
-  /*-------- Responsive 600px ---------*/
+  /*-------- Responsive 673px ---------*/
 
 @media screen and (max-width:600px) { 
   .formulario{
@@ -1121,6 +1125,10 @@ a{
     margin: -1rem;
     margin-top: 0rem;
   }
+  .formulario2 {
+    width: 34rem;
+}
+ 
 }
 /*-------- Responsive 480px ---------*/
   @media screen and (max-width:480px) { 
@@ -1142,9 +1150,10 @@ a{
       width: auto;
       margin: 0rem;
       margin-top: 0rem;
-      
     }
-  }
+    .formulario2 {
+      width: 26rem;
+  }}
 /* Era gol de yepes */
 
 /* nah */

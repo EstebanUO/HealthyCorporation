@@ -41,7 +41,7 @@ export const Home = (props) => {
       <div>
         <Slider2 />
 
-        <div>
+        <div className="Content_categorias">
           <h1 className='title-home2'>Categorias</h1>
           <Categories />
         </div>
