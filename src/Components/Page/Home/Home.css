@@ -275,4 +275,137 @@
 
 .flecha {
   width: 3rem;
+
+}
+
+
+@media screen and (max-width:600px) {
+  .select_product2 {
+    width: 12rem;
+    height: 14rem;
+  }
+
+  .select_product3 {
+    width: 12rem;
+    height: 14rem; 
+  }
+
+  .select_product1 {
+    width: 27rem;
+    height: 18rem;
+    padding: 1rem;
+  }
+
+  .btn_all {
+    width: 25rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  .text_all_product {
+    display: flex;
+    justify-content: center;
+    padding-left: 0;
+    font-size: 3rem;
+  }
+
+  .text_all_product2 {
+    display: flex;
+    justify-content: center;
+    padding-left: 0;
+    font-size: 3rem;
+  }
+
+  .text-marks {
+    margin-top: 0rem;
+  }
+
+  .marks {
+    height: 23rem;
+  }
+
+  .title-home2 {
+    font-size: 3rem;
+  }
+
+  .title-home {
+    font-size: 2.3rem;
+  }
+
+  #home {
+    margin-top: 33rem;
+    font-size: .5rem;
+  }
+
+  .Content_categorias {
+    padding: 2rem;
+  }
+
+  nav .a {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: 1.2rem;
+  }
+
+  header img {
+    width: 22rem;
+    padding: 0%;
+  }
+
+  /* contacto */
+  .text_product2 {
+    font-size: 3rem;
+    margin-top: -2rem;
+    padding-left: 3rem;
+  }
+
+  .text_product {
+    font-size: 3rem;
+    margin-top: -8rem;
+    margin-bottom: 1rem;
+    padding-left: 3rem;
+  }
+
+  .about_all {
+    display: flex;
+    flex-direction: column;
+    margin-top: -3rem;
+  }
+
+  .about_contact4 {
+    font-size: 1.3rem;
+    width: 27rem;
+    animation: about_contact4 1s forwards;
+  }
+
+  .container1 {
+    padding: 2rem;
+    width: 100%;
+    padding: 3rem;
+  }
+
+  .container_all {
+    margin-right: 0rem;
+    padding: 0rem;
+  }
+
+  textarea {
+    min-height: 200px;
+    max-height: 200px;
+    width: 21rem;
+    border-radius: 7px;
+  }
+
+  .row_buy {
+    width: 6rem;
+  }
+
+  .text_check2 {
+    font-size: 1.3rem;
+  }
+
+  .check_all {
+    padding: 2rem;
+  }
+
 }
