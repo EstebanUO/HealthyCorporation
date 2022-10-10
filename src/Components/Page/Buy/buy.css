@@ -51,9 +51,7 @@
     align-items: center;
     border: 2px solid gray;
     border-radius: .7rem;
-    box-shadow: 2px 15px 20px gray;
-    margin-top: -23rem;
-    margin-bottom: 7rem;
+    box-shadow: 2px 3px 25px gray;
 }
 
 .content_buy{
@@ -153,10 +151,9 @@
     flex-direction: column;
     border: 2px  solid gray;
     border-radius: .7rem;
-    box-shadow: 10px 50px 130px black;
+    box-shadow: 10px 50px 110px black;
     z-index: 1;
-    margin-top: -45rem;
-    margin-bottom: 2rem;
+    margin-top:2rem;
     padding: 2rem;
     animation: metodos 500ms forwards;
 }
@@ -243,6 +240,78 @@
     width: 100%;
 }
 
+.center_2{
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    align-items: center;
+    margin-bottom: -2rem;
+}
+
+.linea_procesing{
+    background-color: #5ba6fc;
+    height: 3px;
+    width: 10rem;
+    display: flex;
+    align-items: center;
+}
+
+.linea_procesing_{
+    background-color: gray;
+    height: 3px;
+    width: 10rem;
+    display: flex;
+    align-items: center;
+}
+
+.circles{
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 8rem;
+    padding: 1rem;
+    border: 4px solid #5ba6fc;
+    background-color: #5bc3fc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: gray;
+    font-size: 1.3rem;
+}
+
+.circles2{
+    width: 3.5rem;
+    height: 3.5rem;
+    padding: 1rem;
+    border-radius: 8rem;
+    border: 3px solid gray;
+    background-color: white;
+    display: flex;
+    color: gray;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+}
+
+.circles_2{
+    width: .3px;
+    height: .3px;
+    padding: 1rem;
+    border-radius: 2rem;
+    border: 3px solid gray;
+    background-color: gray;
+}
+
+.Trasparent{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    background-color: #00000033;
+}
 
 @media screen and (max-width:600px) {
     .row_buy {
@@ -269,5 +338,46 @@
         margin-top: -140rem;
         margin-right: -3rem;
         margin-left: 19rem;
+    }
+    .center_2 {
+        padding-bottom: 12rem;
+    }
+}
+
+@media screen and (max-width:776px) {
+    .row_buy {
+        width: 30rem;
+        flex-direction: column;
+        height: 60rem;
+        margin-top: -10rem;
+    }
+    .img_buy {
+        width: 17rem;
+        margin-top: -91rem;
+        margin-bottom: -1rem;
+    }
+    .columm_buy {
+        width: 22rem;
+        margin-top: -140rem;
+        margin-bottom: -26rem;
+    }
+    .img_up_ {
+        width: 3rem;
+        cursor: pointer;
+    }
+    .img_up_close {
+        margin-top: -140rem;
+        margin-right: -3rem;
+        margin-left: 19rem;
+    }
+    .center_2 {
+        padding-bottom: 12rem;
+    }
+}
+
+
+@media screen and (max-width:448px) {
+    .center_2 {
+        padding-bottom: 12rem;
     }
 }

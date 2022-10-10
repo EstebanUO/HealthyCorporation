@@ -1,10 +1,12 @@
 import React from 'react'
-import logo2 from '../../Image/logo.png'
 import { Link } from "react-router-dom";
 import { Footer } from "../Layout/Footer/Footer";
-import master from '../../Image/Tarjetas/master.PNG'
-import pse from '../../Image/Tarjetas/pse.PNG'
+import master from '../../Image/Tarjetas/master2.PNG'
+import visa from '../../Image/Tarjetas/visa2.PNG'
+import pse from '../../Image/Tarjetas/pse2.PNG'
 import swal from 'sweetalert';
+import logo2 from '../../Image/logo.png'
+import back from '../../Image/back.png';
 import './Pago.css'
 
 export const Pago = () => {
@@ -83,12 +85,15 @@ export const Pago = () => {
 
             <div className='check_all'>
                 <div className='content_check' >
-                    <nav className='nav_check'><p className='pad_check'>Método de pago</p></nav>
+                    <nav className='nav_check'><p className='pad_check'>Método de pago</p>
+                        <div className='back_up'><Link to="/pago"><img className='img_up2' src={back} alt="atras" /><p className='back'>Atras</p></Link>
+                        </div></nav>
 
                     <div>
                         <div className='content_tarjet_div' onClick={onSee}>
                             <p className='pad_check2'>Tarjeta de Crédito o de Débito</p>
-                            <img className='img-tarjet2' src={master} alt="tarjeta imagen" />
+                            <img className='img-tarjet_' src={master} alt="tarjeta imagen" />
+                            <img className='img-tarjet_' src={visa} alt="tarjeta imagen" />
                         </div>
                         <div>
                             <div className='acount_content_all2' id='content_det2'>
@@ -154,7 +159,7 @@ export const Pago = () => {
 
                         <div className='content_tarjet_div' onClick={onSee2}>
                             <p className='pad_check2'>PSE</p>
-                            <img className='img-tarjet' src={pse} alt="tarjeta imagen" />
+                            <img className='img-tarjet_2' src={pse} alt="tarjeta imagen" />
                         </div>
 
                         <div>

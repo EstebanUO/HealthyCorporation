@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { Footer } from "../Layout/Footer/Footer";
 
 import './Direction_pago.css'
+import back from '../../Image/back.png';
 
 export const Direction_pago = () => {
     return (
@@ -36,7 +37,9 @@ export const Direction_pago = () => {
             </div>
             <div className='check_all'>
                 <div className='content_check'>
-                    <nav className='nav_check'><p className='pad_check'>Método de entrega</p></nav>
+                    <nav className='nav_check'><p className='pad_check'>Método de entrega</p>
+                        <div className='back_up'><Link to="/compra"><img className='img_up2' src={back} alt="atras" /><p className='back'>Atras</p></Link>
+                        </div></nav>
 
                     <div className='container_check'>
 
@@ -83,9 +86,8 @@ export const Direction_pago = () => {
                     </div>
 
                     <div className='check_btn'>
-                        <Link to='/compra'><button className='addProduct_check'>Volver</button></Link>
-                        <button className='addProduct_check'>Agregar la dirección automaticamente </button>
-                        <Link to='/pago_final'><button className='addProduct_check'>Siguiente</button></Link>
+                        <button className='addProduct_check4'>Agregar la dirección automaticamente </button>
+                        <Link to='/pago_final'><button className='addProduct_check3'>Siguiente</button></Link>
                     </div>
 
                 </div>

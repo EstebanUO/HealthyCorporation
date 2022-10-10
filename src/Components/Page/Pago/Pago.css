@@ -58,10 +58,20 @@
     width: 4rem;
 }
 
+.img-tarjet_{
+    width: 3.5rem;
+    padding: .5rem;
+}
+.img-tarjet_2{
+    width: 2.3rem;
+    padding: .3rem;
+}
+
 .acount_btn2 {
     display: flex;
     justify-content: space-evenly;
-    margin-top: 2rem;
+    padding: 2rem;
+    align-items: center;
 }
 
 .btn_save2 {
@@ -73,7 +83,6 @@
     justify-content: center;
     border-radius: 0.5rem;
     font-size: 1.3rem;
-    margin-bottom: 1rem;
     transition: all 400ms;
 }
 
@@ -98,15 +107,6 @@
     font-size: 1.3rem;
     z-index: 1;
     color: gray;
-    animation: circles3 .7s forwards;
-}
-@keyframes circles3 {
-  from {
-    transform: translate(-170px);
-  }
-  to {
-    transform: translate(0px);
-  }
 }
 
 .linea_procesing2{
@@ -117,13 +117,5 @@
     z-index: 1;
     display: flex;
     align-items: center;
-    animation: linea_procesing2 .7s forwards;
-}
-@keyframes linea_procesing2 {
-  from {
-    transform: translate(-170px);
-  }
-  to {
-    transform: translate(0px);
-  }
+
 }
