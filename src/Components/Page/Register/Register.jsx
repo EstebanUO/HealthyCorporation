@@ -105,7 +105,7 @@ export const Register = (props) => {
               {props.alertConexion? <Alert variant="filled" severity="error">Sin Conexión!</Alert>:null}
 
               <div className="submitReg">
-                <input disabled id='buttonRegister' value="registrarse" type="submit" class="submitReg2" />
+                <input disabled id='buttonRegister' value="Registrarse" type="submit" class="submitReg2" />
               </div>
             </div>
           </form>

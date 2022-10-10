@@ -8,3 +8,5 @@ instalar sweetalert
     
     -npm install sweetalert --save
 
+    npm install @mui/icons-material @mui/material @emotion/styled @emotion/react
+

@@ -1,13 +1,27 @@
-import React from 'react'
+import React,{useEffect} from 'react'
+import AlertTitle from '@mui/material/AlertTitle';
 import { Footer } from '../Layout/Footer/Footer'
 import { Header } from '../Layout/Header/Header'
 import { Link } from "react-router-dom"
+import Alert from '@mui/material/Alert';
 import logofacebook from '../../Image/Icons/facebook.png';
 import logoGoogle from '../../Image/Icons/google.png';
 import logoTwitter from '../../Image/Icons/twiter.png';
 import { BsEyeFill,BsEyeSlashFill } from "react-icons/bs";
 
 export const Login = (props) => {
+  const [open, setOpen] = React.useState(true);
+
+  useEffect(() => {
+    if (props.messagesLogin === "usuario no registrado") {
+      
+      props.setalertUserLogin(true)
+      
+    }else if (props.messagesLogin === "Network Error") {
+      
+      props.setalertConexionLogin(true)
+    } 
+  }, [props.messagesLogin]);
 
   const onclick=()=>{
     props.onClick2()
@@ -19,7 +33,7 @@ export const Login = (props) => {
       <Header />
       <div className="formulario">
         <div>
-          <form className="formulario3">
+          <form className="formulario3" onSubmit={props.ClickLogin}>
             <h1 className="titleReg">Iniciar Sesion</h1>
             <div className="iconos">
               <div className="border-icon">
@@ -41,8 +55,10 @@ export const Login = (props) => {
                 <button className='button-show' onClick={props.switchShown2}>{props.shown2 ? <BsEyeFill /> : <BsEyeSlashFill />}</button>
               </div>
               <Link to="/" className="forgetPass">¿Haz olvidado tu contraseña?</Link>
+              {props.alertUserLogin? <Alert severity="error"><AlertTitle>Error</AlertTitle>Usuario no registrado — <strong>Registrate!</strong></Alert>:null}
+              {props.alertConexionLogin? <Alert severity="warning"><AlertTitle>warning</AlertTitle>Sin conexion — <strong>conectate a una red!</strong></Alert>:<p></p>}
               <div className="submitReg">
-                <button onClick={props.ClickLogin} type="submit" class="submitReg2">Iniciar Sesion</button>
+                <input  type="submit" value={"Iniciar sesion"} class="submitReg2"/>
               </div>
             </div>
           </form>

@@ -22,12 +22,13 @@ import { Pago } from './Components/Page/Pago/Pago';
 
 function App() {
 
-  const [alertUser, setalertUser] = useState(false)
-  const [alertConexion, setalertConexion] = useState(false)
+
 
   let navigate = useNavigate();
   /*validaciones login*/
-
+  const [messagesLogin, setmessagesLogin] = useState("")
+  const [alertUserLogin, setalertUserLogin] = useState(false)
+  const [alertConexionLogin, setalertConexionLogin] = useState(false)
   const [valiLogin, setvaliLogin] = useState(false)
   const [valiLoginAdmin, setvaliLoginAdmin] = useState(false)
 
@@ -47,7 +48,11 @@ function App() {
 
           if (userLogin === data.email && passwordUser === data.password) {
             setvaliLogin(true);
-            alert("bienvenido " + data.name)
+            setmessagesLogin("bienvenido "+data.name)
+            
+          } else if(userLogin !== data.email && passwordUser !== data.password){
+            setmessagesLogin("usuario no registrado")
+           
           }
           return console.log("data obtenida");
         });
@@ -58,6 +63,7 @@ function App() {
       .catch(function (error) {
         // handle error
         console.log(error);
+        setmessagesLogin(error.message);
       })
   }
 
@@ -79,6 +85,8 @@ function App() {
   };
 
   const onClick2 = () => {
+    setalertUserLogin(false)
+    setmessagesLogin("")
     setuserLogin("")
     setpasswordUser("")
 
@@ -86,6 +94,8 @@ function App() {
   /*fin validaciones login*/
 
   /*inicio validaciones register*/
+  const [alertUser, setalertUser] = useState(false)
+  const [alertConexion, setalertConexion] = useState(false)
   const [validUsername, setvalidUsername] = useState('');
   const [messages, setmessages] = useState("")
   const [validemail, setvalidemail] = useState('.@');
@@ -128,6 +138,7 @@ function App() {
       setpasswordRegister("")
       setconfrimPasword("")
       setemailRegister("")
+      setmessages("")
       setalertUser(false)
       setalertConexion(false)
 
@@ -144,18 +155,20 @@ function App() {
     setShown(!shown)
     event.preventDefault()
   };
-
-  /*fin validaciones register*/
-
   const onClick = () => {
     setusernameRegister("")
     setpasswordRegister("")
     setconfrimPasword("")
     setemailRegister("")
+    setmessages("")
     setalertUser(false)
     setalertConexion(false)
 
   }
+
+  /*fin validaciones register*/
+
+
 
 
   return (
@@ -167,7 +180,7 @@ function App() {
         <Route path="/terminos" element={<Terminos valiLoginAdmin={valiLoginAdmin} />} />
         <Route path="/politicas" element={<Politicas valiLoginAdmin={valiLoginAdmin} />} />
         <Route path="/contact" element={<Contact valiLoginAdmin={valiLoginAdmin} />} />
-        <Route path="/login" element={valiLogin ? <Navigate replace to="/" /> : <Login onClick2={onClick2} switchShown2={switchShown2} shown2={shown2} userLogin={userLogin} ClickLogin={ClickLogin} passwordUser={passwordUser} onChangePasswordLogin={onChangePasswordLogin} onChangeUserLogin={onChangeUserLogin} />} />
+        <Route path="/login" element={valiLogin ? <Navigate replace to="/" /> : <Login setalertConexionLogin={setalertConexionLogin} alertConexionLogin={alertConexionLogin} alertUserLogin={alertUserLogin} setalertUserLogin={setalertUserLogin} messagesLogin={messagesLogin} onClick2={onClick2} switchShown2={switchShown2} shown2={shown2} userLogin={userLogin} ClickLogin={ClickLogin} passwordUser={passwordUser} onChangePasswordLogin={onChangePasswordLogin} onChangeUserLogin={onChangeUserLogin} />} />
         <Route path="/car" element={<Car valiLoginAdmin={valiLoginAdmin} />} />
         <Route path="/acount" element={<MyAcount valiLoginAdmin={valiLoginAdmin} />} />
         <Route path="/direction" element={<Direction />} />
