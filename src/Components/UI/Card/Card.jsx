@@ -11,16 +11,25 @@ import './Card.css'
 export const Card = () => {
   const add = () => {
     swal({
-      title: "Genial",
-      text: "Se a añadido este producto al carrito",
+      title: "Producto agregado al carrito",
+      text: "Se ha añadido correctamente",
       icon: "success",
-      button: "Continuar viendo productos",
+      button: "Seguir comprando",
     });
   }
 
   return (
     <div className='content_Product'>
-      <h1 className='title-product'>Productos más comprados</h1>
+      {/* <h1 className='title-product'>Productos más comprados</h1> */}
+      <div>
+        <h4>Filtrar por:</h4>
+        <div>
+          <button>Marca</button>
+          <br />
+          <button>Precios</button>
+          
+        </div>
+      </div>
       <div className='card_product'>
         <div className='column_all'>
           <div className='imgProduct_' >
@@ -30,7 +39,6 @@ export const Card = () => {
             <div>
               <p className='name_Product'>Medicasp </p>
             </div>
-
             <div>
               <p className='price_product'>$ 40.000</p>
             </div>

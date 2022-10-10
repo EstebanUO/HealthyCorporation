@@ -13,7 +13,7 @@ export const Tarjet = () => {
         <div className="acount_all">
           <div className='all_info'>
             <div className='info'>
-              <Link to='/acount' className='aa'>Mis datos</Link>
+              <Link to='/account' className='aa'>Mis datos</Link>
               <Link to='/direction' className='b'>Mis direcciones</Link>
               <Link to='/tarjet' className='select_btn'>Mis tarjetas</Link>
               <Link to='/password' className='d'>Mi contraseña</Link>
@@ -23,12 +23,12 @@ export const Tarjet = () => {
           <div className='acount_content_all'>
             <div className='acount_content_tarjet'>
               <p className='text_check'>Numero de la tarjeta</p>
-              <input className='input_acount3' placeholder='5212 **** **** ****' minlength="16" type="number" value="" required />
+              <input className='input_acount3' placeholder='5212 **** **** ****' minlength="16" type="text" value="" required />
             </div><br />
 
             <div className='acount_content_tarjet'>
               <p  className='text_check'>Titular de la tarjeta</p>
-              <input className='input_acount3' placeholder='Ingresa tu nombre y apellido' minlength="5" type="number" value="" required />
+              <input className='input_acount3' placeholder='Ingresa tu nombre y apellido' minlength="5" type="text" value="" required />
             </div><br />
 
             <div className='acount_content_row'>
@@ -71,7 +71,7 @@ export const Tarjet = () => {
 
             <div className='acount_content_tarjet'>
               <p  className='text_check'>CVV</p>
-              <input className='input_acount5' placeholder='Ej: 456' type="number" value="" minlength="3" required />
+              <input className='input_acount5' placeholder='Ej: 456' type="text" value="" minlength="3" required />
             </div>
 
             <div className='acount_btn'>

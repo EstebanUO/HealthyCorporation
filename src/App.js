@@ -182,7 +182,7 @@ function App() {
         <Route path="/contact" element={<Contact valiLoginAdmin={valiLoginAdmin} />} />
         <Route path="/login" element={valiLogin ? <Navigate replace to="/" /> : <Login setalertConexionLogin={setalertConexionLogin} alertConexionLogin={alertConexionLogin} alertUserLogin={alertUserLogin} setalertUserLogin={setalertUserLogin} messagesLogin={messagesLogin} onClick2={onClick2} switchShown2={switchShown2} shown2={shown2} userLogin={userLogin} ClickLogin={ClickLogin} passwordUser={passwordUser} onChangePasswordLogin={onChangePasswordLogin} onChangeUserLogin={onChangeUserLogin} />} />
         <Route path="/car" element={<Car valiLoginAdmin={valiLoginAdmin} />} />
-        <Route path="/acount" element={<MyAcount valiLoginAdmin={valiLoginAdmin} />} />
+        <Route path="/account" element={<MyAcount valiLoginAdmin={valiLoginAdmin} />} />
         <Route path="/direction" element={<Direction />} />
         <Route path="/password" element={<Password />} />
         <Route path="/tarjet" element={<Tarjet />} />

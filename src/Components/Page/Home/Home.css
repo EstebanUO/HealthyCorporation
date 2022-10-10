@@ -1,6 +1,6 @@
 .title-home2 {
   color: rgb(131, 131, 131);
-  font-size: 4rem;
+  font-size: 2.5rem;
   display: flex;
   justify-content: center;
 }
@@ -275,7 +275,12 @@
 
 .flecha {
   width: 3rem;
+}
 
+/*-------------Productos---------------*/
+.productosVistos{
+  /* margin-top: 1rem; */
+  text-align: center;
 }
 
 

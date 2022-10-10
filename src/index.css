@@ -27,11 +27,25 @@ code {
 }
 
 .button-show{
-  margin-left: 10px;
   font-size: 20px;
   border: none;
-  background-color: #ffffff00;
+  background-color: #00000000;
   cursor: pointer;
+  position: absolute;
+  display: block;
+  margin-left: 82%;
+  margin-top: 25rem;
+}
+
+.button-show2{
+  font-size: 20px;
+  border: none;
+  background-color: #00000000;
+  cursor: pointer;
+  position: absolute;
+  display: block;
+  margin-left: 28rem;
+  margin-top: -2.3rem;
 }
 
 /*---------------- Nav -------------------*/
@@ -352,9 +366,9 @@ header img{
 
 .form-input{
   background-color: #ffffff57;
-  width: 91%;
+  width: 100%;
   height: 2rem;
-  padding: .2rem;
+  padding: 1.2rem;
   font-size: 1rem;
   border: none;
   border-bottom: solid 1px black;
@@ -364,23 +378,69 @@ header img{
   outline: none;
 }
 
-.iconos{
+/* .iconos{
   display: flex;
   justify-content: space-evenly;
   cursor: pointer;
   margin-left: 8.5rem;
   width: 2.5rem;
   height: 2.5rem;
+} */
+
+.iconUser{
+  position: absolute;
+  display: block;
+  margin-top: .7rem;
+  margin-left: 0.1rem;
+  cursor: pointer;
+}
+
+.iconPass{
+  position: absolute;
+  display: block;
+  margin-top: .7rem;
+  margin-left: 0.1rem;
+  cursor: pointer;
+}
+
+.iconUserReg{
+  position: absolute;
+  display: block;
+  margin-top: 4.2rem;
+  margin-left: 0.1rem;
+  cursor: pointer;
+}
+
+.iconUserEmailReg{
+  position: absolute;
+  display: block;
+  margin-top: 11.7rem;
+  margin-left: 0.1rem;
+  cursor: pointer;
+}
+
+.iconPassReg{
+  position: absolute;
+  display: block;
+  margin-top: 19.1rem;
+  margin-left: 0.1rem;
+}
+
+.iconPassReg2{
+  position: absolute;
+  display: block;
+  margin-top: 25.5rem;
+  margin-left: 0.1rem;
 }
 
 .links{
   text-decoration: none;
 }
 
-.border-icon{
+/* .border-icon{
   font-size: 2rem;
   padding: 0.5rem;
-}
+} */
 
 .message h2 {
   font-size: 1.7rem;
@@ -649,7 +709,7 @@ a{
 }
 
 .Content_categorias{
-  padding: 4rem;
+  padding: 1rem;
 }
 
 @keyframes home {

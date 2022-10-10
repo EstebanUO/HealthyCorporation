@@ -1,6 +1,6 @@
 .content-marks{
     background-color: #d3ebf7;
-    margin-bottom: 5rem;
+    /* margin-bottom: 12rem; */
     margin-top: 3rem;
     display: flex;
     flex-direction: row;
@@ -11,20 +11,19 @@
 }
 
 .marks{
-    height: 13rem;
+    margin-top: 5rem;
+    height: 10rem;
 }
 
 .text-marks{
     color: #44D2F2;
     font-size: 2rem;
-    margin-bottom: -2rem;
-    padding-top: 1rem;
-
+    /* margin-bottom: -4rem; */
+    /* padding-top: 0rem; */
     text-align: center;
-
     display: flex;
     justify-content: center;
-
+    margin-top: -3rem;
 }
 
 .image-marks{

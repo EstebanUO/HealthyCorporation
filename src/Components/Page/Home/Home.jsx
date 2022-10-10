@@ -59,7 +59,7 @@ export const Home = (props) => {
 
 
         <div className="Content_categorias">
-          <h1 className='title-home2'>Categorias</h1>
+          <h1 className='title-home2'>Categorías</h1>
           <Categories />
         </div>
         <div className='products-home'>

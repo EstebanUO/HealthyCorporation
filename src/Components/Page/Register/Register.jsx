@@ -2,11 +2,12 @@ import React, { useEffect  } from 'react';
 import { Header } from '../Layout/Header/Header';
 import { Footer } from '../Layout/Footer/Footer';
 import { Link } from "react-router-dom";
-import logofacebook from '../../Image/Icons/facebook.png';
-import logoGoogle from '../../Image/Icons/google.png';
-import logoTwitter from '../../Image/Icons/twiter.png';
+// import logofacebook from '../../Image/Icons/facebook.png';
+// import logoGoogle from '../../Image/Icons/google.png';
+// import logoTwitter from '../../Image/Icons/twiter.png';
 import Alert from '@mui/material/Alert';
 import { BsEyeFill,BsEyeSlashFill } from "react-icons/bs";
+import { FaUserAlt, FaLock } from "react-icons/fa";
 
 export const Register = (props) => {
 
@@ -70,7 +71,7 @@ export const Register = (props) => {
         <div>
           <form className="formulario2" onSubmit={props.postApi}>
             <h1 className="titleReg">Registro</h1>
-            <div className="iconos">
+            {/* <div className="iconos">
               <div className="border-icon">
                 <img src={logofacebook} alt="logofacebook" className="iconos" />
               </div>
@@ -80,26 +81,30 @@ export const Register = (props) => {
               <div className="border-icon">
                 <img src={logoTwitter} alt="logoTwitter" className="iconos" />
               </div>
-            </div><br />
+            </div><br /> */}
             <div className="formularioReg">
               <p className='pvaliRegister' id='valiExiste'></p>
               <label for="inputUser" class="labelsReg">User name</label>
+              <FaUserAlt className='iconUserReg'/>
               <input minLength="3" maxLength="20" value={props.usernameRegister} onChange={props.onChangeusernameRegister} name="name" type="text" class="form-input" placeholder="User name" autocomplete="off" required />
               <p className='pvaliRegister' id='txtvalidUsername'></p>
               <label for="exampleInputEmail1" class="labelsReg"><br />Email</label>
+              <FaUserAlt className='iconUserEmailReg'/>
               <input value={props.emailRegister} onChange={props.onChangeemailRegister} name="correo" type="email" class="form-input" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Example@" autocomplete="off" required />
               <p className='pvaliRegister' id='txtvalidEmail'></p>
               <label for="inputPassword" class="labelsReg"><br />Password</label>
+              <FaLock className='iconPassReg'/>
               <input value={props.passwordRegister} onChange={props.onChangepasswordRegister} name="password" type="password" class="form-input" placeholder="Password" />
               <label for="inputPassword" class="labelsReg"><br />Confirm password</label>
+              <FaLock className='iconPassReg2'/>
               <div className='input-password'>  
                 <input value={props.confrimPasword} onChange={props.onChangeconfrimPasword} name="password" type={props.shown ? 'text' : 'password'} class="form-input" placeholder="Confirm your password" />
-                <button className='button-show' onClick={props.switchShown}>{props.shown? <BsEyeFill />:<BsEyeSlashFill />}</button>
               </div>
+              <button className='button-show' onClick={props.switchShown}>{props.shown? <BsEyeFill />:<BsEyeSlashFill />}</button>  
               <p className='pvaliRegister' id='txtvalidPassword'></p>
               <br />
               <div className="checkTyC">
-                <input type="checkbox" required /><p>Haz click aqui para aceptar nuestros<br /><Link to="/terminos">terminos y condiciones</Link>.</p>
+                <input type="checkbox" required /><p>Haz click aqui para aceptar nuestros<br /><Link to="/terminos">Terminos y condiciones</Link>.</p>
               </div>
               {props.alertUser? <Alert variant="filled" severity="warning">Usuario o Email ya Registrado!</Alert>:null}
               {props.alertConexion? <Alert variant="filled" severity="error">Sin Conexión!</Alert>:null}

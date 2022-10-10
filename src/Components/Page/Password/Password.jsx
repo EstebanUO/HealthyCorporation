@@ -14,14 +14,12 @@ export const Password = () => {
         <div className="acount_all">
           <div className='all_info'>
             <div className='info'>
-              <Link to='/acount' className='aa'>Mis datos</Link>
+              <Link to='/account' className='aa'>Mis datos</Link>
               <Link to='/direction' className='b'>Mis direcciones</Link>
               <Link to='/tarjet' className='c'>Mis tarjetas</Link>
               <Link to='/password' className='select_btn'>Mi contraseña</Link>
             </div>
           </div>
-
-
           <div className='acount_content_all'>
             <div className='acount_content_direction'>
 
@@ -29,7 +27,6 @@ export const Password = () => {
                 <p  className='text_check'>Contraseña actual</p>
                 <input className='input_acount' placeholder='Ingresa tu contraseña actual' minlength="8" type="password" value="" />
               </div><br />
-
               <div className='acount_content_row'>
                 <div className='acount_content_direction2'>
                   <p  className='text_check'>Nueva contraseña</p>
@@ -41,7 +38,6 @@ export const Password = () => {
                 </div>
               </div>
             </div>
-
             <div className='acount_btn'>
               <button className='btn_save'>Guardar</button>
             </div>

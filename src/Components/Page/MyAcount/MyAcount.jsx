@@ -9,33 +9,25 @@ export const MyAcount = (props) => {
   return (
     <div>
       <Header valiLoginAdmin={props.valiLoginAdmin} />
-
       <div className='acount_up'>
         <div className="acount_all">
           <div className='all_info'>
             <div className='info'>
-              <Link to='/acount' className='select_btn'>Mis datos</Link>
+              <Link to='/account' className='select_btn'>Mis datos</Link>
               <Link to='/direction' className='b'>Mis direcciones</Link>
               <Link to='/tarjet' className='c'>Mis tarjetas</Link>
               <Link to='/password' className='d'>Mi contraseña</Link>
             </div>
           </div>
-
           <div className='acount_content_all'>
             <div className='acount_content_tarjet'>
               <p  className='text_check'>Nombre</p>
               <input className='input_acount' placeholder='none' type="text" value="" />
-
             </div><br />
-
             <div className='acount_content_tarjet'>
               <p  className='text_check'>Correo</p>
               <input className='input_acount' placeholder='none' type="text" value="" />
-
             </div><br />
-
-
-
             <div className='acount_content_row'>
               <div className='acount_content_tarjet'>
                 <p  className='text_check'>Ingresa tu contraseña para guardar los cambios</p>
@@ -43,21 +35,15 @@ export const MyAcount = (props) => {
               </div>
               <button className='btn_update' disabled><s>Actualizar</s> </button>
             </div><br />
-
             <div className='acount_btn'>
               <h6>Recuerda mantener actualizados tus datos para tener una mejor experiencia.</h6>
             </div>
           </div>
         </div>
-
       </div>
-
-
       {/* <Nav valiLoginAdmin={props.valiLoginAdmin} />
       <NavCopy /> */}
-
       <Footer />
-
     </div>
   )
 }
