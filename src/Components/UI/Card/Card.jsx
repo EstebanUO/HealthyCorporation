@@ -4,7 +4,7 @@ import pax from '../../Image/assects/pax.jpg';
 import nutribela from '../../Image/assects/nutribela.jpg';
 import acetaminofen from '../../Image/assects/acetaminofen.jpg';
 import { Link } from "react-router-dom";
-import { FaShoppingCart } from "react-icons/fa";
+import { FaShoppingCart, FaArrowDown } from "react-icons/fa";
 import swal from 'sweetalert';
 import './Card.css'
 
@@ -24,10 +24,40 @@ export const Card = () => {
       <div>
         <h4>Filtrar por:</h4>
         <div>
-          <button>Marca</button>
-          <br />
-          <button>Precios</button>
-          <br />
+          <div role="button" tabIndex="0">
+            <div>
+              <span>Categoría</span>
+              <span>
+                <FaArrowDown />
+              </span>
+            </div>
+            <div>
+              <span>Marca</span>
+              <span>
+                <FaArrowDown />
+              </span>
+            </div>
+          </div>
+          <div className='wrapper'>
+            <span>Precios</span><br />
+            <div>
+              <div className='field'>
+                <span>Min</span>
+                <input type="number" className="input-min" value="2500"/>
+              </div>
+              <div className='separator'>-</div>
+              <div className='field'>
+                <span>Max</span>
+                <input type="number" className="input-min" value="100.000"/>
+              </div>
+            </div>
+            <div className='slider'>
+              <div className="progress">
+
+              </div>
+            </div>
+          </div>
+
           <p>|Ordenar por:</p>
           <select name="" id=""></select>
         </div>

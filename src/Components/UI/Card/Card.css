@@ -123,6 +123,14 @@
     border: 2px solid black;
 }
 
+/*------------------ Rango de precios------------*/
+.wrapper{
+    width: 400px;
+    background-color: rgb(175, 174, 174);
+    border-radius: 10px;
+    padding: 20px 25px 40px;
+}
+
 @media screen and (max-width:600px) {
     .title-product {
         padding: 0rem;
