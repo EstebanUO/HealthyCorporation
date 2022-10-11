@@ -28,6 +28,7 @@ function App() {
   /*validaciones login*/
   const [messagesLogin, setmessagesLogin] = useState("")
   const [alertUserLogin, setalertUserLogin] = useState(false)
+  const [alertHome, setalertHome] = useState(false)
   const [alertConexionLogin, setalertConexionLogin] = useState(false)
   const [valiLogin, setvaliLogin] = useState(false)
   const [valiLoginAdmin, setvaliLoginAdmin] = useState(false)
@@ -48,6 +49,7 @@ function App() {
 
           if (userLogin === data.email && passwordUser === data.password) {
             setvaliLogin(true);
+            setalertHome(true);
             setmessagesLogin("bienvenido "+data.name)
             
           } else if(userLogin !== data.email && passwordUser !== data.password){
@@ -71,9 +73,10 @@ function App() {
     e.preventDefault()
     if (userLogin === "admin@gmail.com" && passwordUser === "admin1234") {
       setvaliLogin(true);
+      setalertHome(true);
       setvaliLoginAdmin(true)
-      alert("bienvenido admin")
-    } else if (userLogin !== "admin@gmail.com" && passwordUser !== "admin1234") {
+      setmessagesLogin("Bienvenido admin")
+    } else if (userLogin !== "admin@gmail.com" || passwordUser !== "admin1234") {
       getApi()
     }
 
@@ -174,13 +177,13 @@ function App() {
   return (
     <div>
       <Routes>
-        <Route path="/" element={<Home valiLoginAdmin={valiLoginAdmin} />} />
+        <Route path="/" element={<Home setalertHome={setalertHome} alertHome={alertHome} valiLoginAdmin={valiLoginAdmin} />} />
         <Route path="/products" element={<Products valiLoginAdmin={valiLoginAdmin} />} />
-        <Route path="/register" element={valiLogin ? <Navigate replace to="/" /> : <Register switchShown={switchShown} shown={shown} onClick={onClick} alertConexion={alertConexion} setalertConexion={setalertConexion} alertUser={alertUser} setalertUser={setalertUser} setmessages={setmessages} messages={messages} validemail={validemail} validUsername={validUsername} confrimPasword={confrimPasword} onChangeconfrimPasword={onChangeconfrimPasword} postApi={postApi} emailRegister={emailRegister} passwordRegister={passwordRegister} usernameRegister={usernameRegister} onChangeemailRegister={onChangeemailRegister} onChangepasswordRegister={onChangepasswordRegister} onChangeusernameRegister={onChangeusernameRegister} />} />
+        <Route path="/register" element={valiLogin ? <Navigate replace to="/account" /> : <Register switchShown={switchShown} shown={shown} onClick={onClick} alertConexion={alertConexion} setalertConexion={setalertConexion} alertUser={alertUser} setalertUser={setalertUser} setmessages={setmessages} messages={messages} validemail={validemail} validUsername={validUsername} confrimPasword={confrimPasword} onChangeconfrimPasword={onChangeconfrimPasword} postApi={postApi} emailRegister={emailRegister} passwordRegister={passwordRegister} usernameRegister={usernameRegister} onChangeemailRegister={onChangeemailRegister} onChangepasswordRegister={onChangepasswordRegister} onChangeusernameRegister={onChangeusernameRegister} />} />
         <Route path="/terminos" element={<Terminos valiLoginAdmin={valiLoginAdmin} />} />
         <Route path="/politicas" element={<Politicas valiLoginAdmin={valiLoginAdmin} />} />
         <Route path="/contact" element={<Contact valiLoginAdmin={valiLoginAdmin} />} />
-        <Route path="/login" element={valiLogin ? <Navigate replace to="/" /> : <Login setalertConexionLogin={setalertConexionLogin} alertConexionLogin={alertConexionLogin} alertUserLogin={alertUserLogin} setalertUserLogin={setalertUserLogin} messagesLogin={messagesLogin} onClick2={onClick2} switchShown2={switchShown2} shown2={shown2} userLogin={userLogin} ClickLogin={ClickLogin} passwordUser={passwordUser} onChangePasswordLogin={onChangePasswordLogin} onChangeUserLogin={onChangeUserLogin} />} />
+        <Route path="/login" element={valiLogin ? <Navigate replace to="/account" /> : <Login setalertConexionLogin={setalertConexionLogin} alertConexionLogin={alertConexionLogin} alertUserLogin={alertUserLogin} setalertUserLogin={setalertUserLogin} messagesLogin={messagesLogin} onClick2={onClick2} switchShown2={switchShown2} shown2={shown2} userLogin={userLogin} ClickLogin={ClickLogin} passwordUser={passwordUser} onChangePasswordLogin={onChangePasswordLogin} onChangeUserLogin={onChangeUserLogin} />} />
         <Route path="/car" element={<Car valiLoginAdmin={valiLoginAdmin} />} />
         <Route path="/account" element={<MyAcount valiLoginAdmin={valiLoginAdmin} />} />
         <Route path="/direction" element={<Direction />} />

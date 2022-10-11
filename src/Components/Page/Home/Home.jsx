@@ -1,4 +1,10 @@
 import React from 'react';
+import Box from '@mui/material/Box';
+import Alert from '@mui/material/Alert';
+import IconButton from '@mui/material/IconButton';
+import Collapse from '@mui/material/Collapse';
+import Button from '@mui/material/Button';
+import CloseIcon from '@mui/icons-material/Close';
 import { Header } from '../Layout/Header/Header';
 import { Footer } from '../Layout/Footer/Footer';
 import { Categories } from '../../UI/Categories/Categories';
@@ -39,6 +45,7 @@ import acetaminofen from '../../Image/assects/acetaminofen.jpg';
 
 
 export const Home = (props) => {
+  const [open, setOpen] = React.useState(true);
 
   const add = () => {
     swal({
@@ -51,10 +58,11 @@ export const Home = (props) => {
 
   return (
     <div>
+      {props.alertHome? <Box sx={{ width: '200%' }}><Collapse in={open}><Alert action={<IconButton aria-label="close"color="inherit"size="small"onClick={() => {setOpen(false);props.setalertHome(false)}}><CloseIcon fontSize="inherit" /></IconButton>}sx={{ mb: 2 }}>Close me!</Alert></Collapse></Box>:null}
       <Header valiLoginAdmin={props.valiLoginAdmin} />
       <div>
         <Slider2 />
-
+        
         <div>
 
 
