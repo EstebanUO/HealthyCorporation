@@ -1,4 +1,10 @@
 import React from 'react'
+import Box from '@mui/material/Box';
+import Alert from '@mui/material/Alert';
+import IconButton from '@mui/material/IconButton';
+import Collapse from '@mui/material/Collapse';
+import Button from '@mui/material/Button';
+import CloseIcon from '@mui/icons-material/Close';
 import { Link } from 'react-router-dom'
 import { Footer } from '../Layout/Footer/Footer'
 import { Header } from '../Layout/Header/Header'
@@ -6,9 +12,11 @@ import { Header } from '../Layout/Header/Header'
 
 
 export const MyAcount = (props) => {
+  const [open, setOpen] = React.useState(true);
   return (
     <div>
       <Header valiLoginAdmin={props.valiLoginAdmin} />
+      {props.alertHome? <Box sx={{ width: '100%', height: "50px" }}><Collapse in={open}><Alert action={<IconButton aria-label="close"color="inherit"size="small"onClick={() => {setOpen(false);props.setalertHome(false)}}><CloseIcon fontSize="inherit" /></IconButton>}sx={{ mb: 2 }}>sesion iniciada correctamente!</Alert></Collapse></Box>:null}
       <div className='acount_up'>
         <div className="acount_all">
           <div className='all_info'>
