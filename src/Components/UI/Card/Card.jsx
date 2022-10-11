@@ -27,7 +27,9 @@ export const Card = () => {
           <button>Marca</button>
           <br />
           <button>Precios</button>
-          
+          <br />
+          <p>|Ordenar por:</p>
+          <select name="" id=""></select>
         </div>
       </div>
       <div className='card_product'>
