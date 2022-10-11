@@ -1,24 +1,24 @@
-.imgu2{
+.imgu2 {
     width: 5rem;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 1rem;
-  }
+}
 
 
-.check_all{
+.check_all {
     display: flex;
     justify-content: center;
     padding: 4rem;
 }
 
-.up_check{
+.up_check {
     height: 7rem;
     border-bottom: solid black;
 }
 
-.content_check{
+.content_check {
     background-color: white;
     width: 50rem;
     border: solid gray;
@@ -28,7 +28,7 @@
     margin-top: -2rem;
 }
 
-.nav_check{
+.nav_check {
     background-color: white;
     border: none;
     display: flex;
@@ -38,38 +38,60 @@
     border-radius: .7rem;
 }
 
-.check_btn{
+.check_btn {
     display: flex;
     justify-content: space-evenly;
     align-content: center;
     flex-wrap: wrap;
 }
 
-.pad_check{
-   color: #5bc3fc;
-   font-size: 2.1rem;
+.pad_check {
+    color: #5bc3fc;
+    font-size: 2.1rem;
 }
 
 
-.addProduct_check{
+.addProduct_check3 {
     border-radius: .5rem;
     background-color: #5bc3fc;
     border: none;
-    height: 3rem;
+    height: .5rem;
     transition: all 300ms;
-    margin-top: 2rem;
-    padding: 1.7rem;
+    height: 3.4rem;
+    width: 7rem;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
-.addProduct_check:hover {
+.addProduct_check4 {
+    border-radius: .5rem;
+    background-color: #5bc3fc;
+    border: none;
+    height: .5rem;
+    transition: all 300ms;
+    height: 3.4rem;
+    width: 19rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.addProduct_check4:hover {
     background-color: #eee7e7;
     transition: all 300ms;
     border: 2px solid black;
+
 }
 
-.input_check{
+.addProduct_check3:hover {
+    background-color: #eee7e7;
+    transition: all 300ms;
+    border: 2px solid black;
+
+}
+
+.input_check {
     background-color: #ffffff57;
     width: 100%;
     height: 2.5rem;
@@ -79,38 +101,37 @@
     border-bottom: solid 1px black;
 }
 
-.text_check{
+.text_check {
     color: gray;
     font-size: 1.5rem;
 }
 
 
-.center_{
+.center_ {
     display: flex;
     justify-content: center;
     padding: 2rem;
     align-items: center;
 }
 
-.linea_procesing{
+.linea_procesing {
     background-color: #5ba6fc;
     height: 3px;
     width: 10rem;
-    z-index: 1;
     display: flex;
     align-items: center;
 }
 
-.linea_procesing_{
+.linea_procesing_ {
     background-color: gray;
     height: 3px;
     width: 10rem;
-    z-index: 1;
+ 
     display: flex;
     align-items: center;
 }
 
-.circles{
+.circles {
     width: 3.5rem;
     height: 3.5rem;
     border-radius: 8rem;
@@ -124,7 +145,7 @@
     font-size: 1.3rem;
 }
 
-.circles2{
+.circles2 {
     width: 3.5rem;
     height: 3.5rem;
     padding: 1rem;
@@ -138,7 +159,7 @@
     font-size: 1.3rem;
 }
 
-.circles_{
+.circles_ {
     width: .3px;
     height: .3px;
     z-index: 2;
@@ -148,3 +169,19 @@
     background-color: #5ba6fc;
 }
 
+.img_up2 {
+    width: 2rem;
+    cursor: pointer;
+    margin-left: 19rem;
+}
+
+.back_up{
+    display: flex;
+    flex-direction: row;   
+}
+
+.back{
+    margin-left: 21rem;
+    color: black;
+    margin-top: -2.8rem;
+}
