@@ -1124,6 +1124,9 @@ a{
   margin-bottom: -3rem;
   margin-top: -2rem;
 }
+
+
+
 /*-------- Responsive 1200px ---------*/
 
 @media screen and (max-width:1200px) { 
@@ -1154,6 +1157,44 @@ a{
 
 }
 
+
+/*-------- Responsive 1100px ---------*/
+
+@media screen and (max-width:1100px) { 
+  .formulario{
+    display: inline-block;
+  }
+  .formulario2{
+    margin: 16rem;
+    margin-top: 0rem;
+  }
+}
+
+/*-------- Responsive 1000px ---------*/
+
+@media screen and (max-width:1000px) { 
+  .formulario{
+    display: inline-block;
+  }
+  .formulario2{
+    margin: 12rem;
+    margin-top: 0rem;
+  }
+}
+
+
+/*-------- Responsive 950px ---------*/
+
+@media screen and (max-width:950px) { 
+  .formulario{
+    display: inline-block;
+  }
+  .formulario2{
+    margin: 11rem;
+    margin-top: 0rem;
+  }
+}
+
 /*-------- Responsive 900px ---------*/
 
 @media screen and (max-width:900px) { 
@@ -1165,6 +1206,8 @@ a{
     margin-top: 0rem;
   }
 }
+
+
 
 /*-------- Responsive 768px ---------*/
 
@@ -1193,6 +1236,34 @@ a{
   }
 }
 
+  /*-------- Responsive 673px ---------*/
+
+  @media screen and (max-width:673px) { 
+    .formulario{
+      display: inline-block;
+    }
+    .formulario2{
+      margin-left: 4.8rem;
+      margin-top: 0rem;
+    }
+    .formulario2 {
+      width: 26rem;
+  }
+  .welcome-back{
+    margin-left: -2.5rem;
+  }
+  
+  .iconos{
+    margin-left: 6rem;
+  }
+  
+  .button-show{
+    margin-left: 20rem;
+  }
+  
+  }
+  
+
   /*-------- Responsive 500px ---------*/
   @media screen and (max-width:500px) {
 
@@ -1203,40 +1274,20 @@ a{
     .formulario2{
       
         width: 0rem;
-        margin: -30rem;
+        margin-left: -2rem;
         margin-top: 0rem;
-        width: 30rem;
+        width: 29rem;
     }
     .iconos{
       margin-left: 6rem;
     }
   
-    
+    .button-show{
+      margin-left: 22rem;
+    }
     
     
   }
-
-  /*-------- Responsive 673px ---------*/
-
-@media screen and (max-width:673px) { 
-  .formulario{
-    display: inline-block;
-  }
-  .formulario2{
-    margin: -1rem;
-    margin-top: 0rem;
-  }
-  .formulario2 {
-    width: 26rem;
-}
-.welcome-back{
-  margin-left: -2.5rem;
-}
-
-.iconos{
-  margin-left: 6rem;
-}
-}
 
 /*-------- Responsive 480px ---------*/
   @media screen and (max-width:480px) { 
@@ -1259,6 +1310,10 @@ a{
       margin: 0rem;
       margin-top: 0rem;
       width: 24rem;
+  }
+
+  .button-show{
+    margin-left: 18rem;
   }
 }
 /* Era gol de yepes */
