@@ -41,11 +41,9 @@ export const Register = (props) => {
   //envio mensaje 
   useEffect(() => {
     if (props.messages === "Request failed with status code 400") {
-      document.getElementById('valiExiste').textContent = `Usuario o Email ya registrado`
       props.setalertUser(true)
       
     }else if (props.messages === "Network Error") {
-      document.getElementById('txtvalidUsername').textContent = `no hay conexion`
       props.setalertConexion(true)
     } 
   }, [props.messages]);
@@ -88,19 +86,23 @@ export const Register = (props) => {
               <FaUserAlt className='iconUserReg'/>
               <input minLength="3" maxLength="20" value={props.usernameRegister} onChange={props.onChangeusernameRegister} name="name" type="text" class="form-input" placeholder="User name" autocomplete="off" required />
               <p className='pvaliRegister' id='txtvalidUsername'></p>
-              <label for="exampleInputEmail1" class="labelsReg"><br />Email</label>
-              <FaUserAlt className='iconUserEmailReg'/>
-              <input value={props.emailRegister} onChange={props.onChangeemailRegister} name="correo" type="email" class="form-input" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Example@" autocomplete="off" required />
-              <p className='pvaliRegister' id='txtvalidEmail'></p>
-              <label for="inputPassword" class="labelsReg"><br />Password</label>
-              <FaLock className='iconPassReg'/>
-              <input value={props.passwordRegister} onChange={props.onChangepasswordRegister} name="password" type="password" class="form-input" placeholder="Password" />
-              <label for="inputPassword" class="labelsReg"><br />Confirm password</label>
-              <FaLock className='iconPassReg2'/>
-              <div className='input-password'>  
-                <input value={props.confrimPasword} onChange={props.onChangeconfrimPasword} name="password" type={props.shown ? 'text' : 'password'} class="form-input" placeholder="Confirm your password" />
+              <div>
+                  <label for="exampleInputEmail1" class="labelsReg"><br />Email</label>
+                  <FaUserAlt className='iconUserEmailReg'/>
+                  <input value={props.emailRegister} onChange={props.onChangeemailRegister} name="correo" type="email" class="form-input" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Example@" autocomplete="off" required />
               </div>
-              <button className='button-show' onClick={props.switchShown}>{props.shown? <BsEyeFill />:<BsEyeSlashFill />}</button>  
+              <p className='pvaliRegister' id='txtvalidEmail'></p>
+              <div>
+                  <label for="inputPassword" class="labelsReg"><br />Password</label>
+                  <FaLock className='iconPassReg'/>
+                  <input minLength="8" maxLength="20" value={props.passwordRegister} onChange={props.onChangepasswordRegister} name="password" type="password" class="form-input" placeholder="Password" />
+              </div>
+              <div>
+                  <label for="inputPassword" class="labelsReg"><br />Confirm password</label>
+                  <FaLock className='iconPassReg2'/>
+                  <button className='button-show' onClick={props.switchShown}>{props.shown? <BsEyeFill />:<BsEyeSlashFill />}</button>
+                  <input minLength="8" maxLength="20" value={props.confrimPasword} onChange={props.onChangeconfrimPasword} name="password" type={props.shown ? 'text' : 'password'} class="form-input" placeholder="Confirm your password" /> 
+              </div>
               <p className='pvaliRegister' id='txtvalidPassword'></p>
               <br />
               <div className="checkTyC">
