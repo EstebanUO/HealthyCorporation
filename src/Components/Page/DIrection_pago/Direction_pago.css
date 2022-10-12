@@ -28,6 +28,16 @@
     margin-top: -2rem;
 }
 
+.content_check2 {
+    background-color: white;
+    width: 50rem;
+    border: solid gray;
+    border-radius: .7rem;
+    box-shadow: 3px 4px 20px gray;
+    padding: 3rem;
+    margin-top: -4rem;
+}
+
 .nav_check {
     background-color: white;
     border: none;
@@ -80,14 +90,14 @@
 .addProduct_check4:hover {
     background-color: #eee7e7;
     transition: all 300ms;
-    border: 2px solid black;
+    border:  solid #5bc3fc;
 
 }
 
 .addProduct_check3:hover {
     background-color: #eee7e7;
     transition: all 300ms;
-    border: 2px solid black;
+    border:  solid #5bc3fc;
 
 }
 
@@ -156,7 +166,7 @@
     color: gray;
     justify-content: center;
     align-items: center;
-    font-size: 1.3rem;
+    font-size: 1.3rem; 
 }
 
 .circles_ {
