@@ -34,8 +34,6 @@ export const Direction_pago = () => {
             <div className='check_all'>
                 <div className='content_check'>
 
-                    <nav className='nav_check'><p className='pad_check'>Método de entrega</p></nav>
-
                     <nav className='nav_check'><p className='pad_check'>Método de entrega</p>
                         <div className='back_up'><Link to="/compra"><img className='img_up2' src={back} alt="atras" /><p className='back'>Atras</p></Link>
                         </div></nav>
@@ -84,8 +82,8 @@ export const Direction_pago = () => {
                         <button className='addProduct_check4'>Agregar la dirección automaticamente </button>
                         <Link to='/pago_final'><button className='addProduct_check3'>Siguiente</button></Link>
                     </div>
-                </div>
-            </div>
+                </div>          
+            </div>  
             <Footer />
         </>
     )

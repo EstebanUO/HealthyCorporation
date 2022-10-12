@@ -4,21 +4,21 @@ import { Link } from "react-router-dom";
 import { Footer } from '../Layout/Footer/Footer';
 import './buy.css'
 
-/* imagenes de las tarjetas */
-import tarjeta from '../../Image/Tarjetas/banco.PNG'
-import tarjeta1 from '../../Image/Tarjetas/davivienda.PNG'
-import tarjeta2 from '../../Image/Tarjetas/bancolombia.PNG'
-import tarjeta3 from '../../Image/Tarjetas/bbva.PNG'
-import tarjeta4 from '../../Image/Tarjetas/bogota.PNG'
-import tarjeta5 from '../../Image/Tarjetas/itau.PNG'
-import tarjeta11 from '../../Image/Tarjetas/visa.PNG'
-import tarjeta8 from '../../Image/Tarjetas/master.PNG'
-import tarjeta9 from '../../Image/Tarjetas/popular.PNG'
-/* imagenes de las tarjetas  debito*/
-import tarjeta6 from '../../Image/Tarjetas/master_debito.PNG'
-import tarjeta7 from '../../Image/Tarjetas/visa_debito.PNG'
-/* otros */
-import tarjeta10 from '../../Image/Tarjetas/pse.PNG'
+// /* imagenes de las tarjetas */
+// import tarjeta from '../../Image/Tarjetas/banco.PNG'
+// import tarjeta1 from '../../Image/Tarjetas/davivienda.PNG'
+// import tarjeta2 from '../../Image/Tarjetas/bancolombia.PNG'
+// import tarjeta3 from '../../Image/Tarjetas/bbva.PNG'
+// import tarjeta4 from '../../Image/Tarjetas/bogota.PNG'
+// import tarjeta5 from '../../Image/Tarjetas/itau.PNG'
+// import tarjeta11 from '../../Image/Tarjetas/visa.PNG'
+// import tarjeta8 from '../../Image/Tarjetas/master.PNG'
+// import tarjeta9 from '../../Image/Tarjetas/popular.PNG'
+// /* imagenes de las tarjetas  debito*/
+// import tarjeta6 from '../../Image/Tarjetas/master_debito.PNG'
+// import tarjeta7 from '../../Image/Tarjetas/visa_debito.PNG'
+// /* otros */
+// import tarjeta10 from '../../Image/Tarjetas/pse.PNG'
 import img from '../../Image/assects/medicasp.jpg';
 import img2 from '../../Image/cancelar.gif';
 import logo2 from '../../Image/logo.png'
@@ -79,7 +79,7 @@ export const Buy = () => {
                                 <p className='name_buy'>Medicasp</p>
                             </div>
                             <div className='up_buy_3'>
-                                <p><b>Descripción:</b> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo vel fugit maxime temporibus tempore eum voluptas odio neque quidem officia dolor praesentium, possimus mollitia aperiam? Ad similique ut vero optio.</p>
+                                <p><b>Descripción:</b> Lorem, ipsum dolor sit amet consectetur adipisicing elit.eriam? Ad similique ut vero optio.</p>
                             </div>
                             <div>
                                 <p className='price_buy'>$ 40.000</p>
@@ -115,7 +115,7 @@ export const Buy = () => {
 
           
               
-                    <div className='content_metodos' id='content_det'>
+                    {/* <div className='content_metodos' id='content_det'>
                     <div className='Trasparent'>
                         <div className='opacidad'>
                             <div className='metodos'>
@@ -175,7 +175,7 @@ export const Buy = () => {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                 
           
             <Footer />

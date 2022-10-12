@@ -45,9 +45,8 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    padding: 2rem;
     background-color: white;
-    width: 65rem;
+    width: 60rem;
     align-items: center;
     border: 2px solid gray;
     border-radius: .7rem;
@@ -64,10 +63,9 @@
 }
 
 .columm_buy{
-    border: 2px solid gray;
-    border-radius: .7rem;
-    box-shadow: 2px 5px 10px gray;
-    width: 22rem;
+    width: 32rem;
+    background-color: #817f7f21;
+    padding: 1rem;
 }
 
 .name_buy{
