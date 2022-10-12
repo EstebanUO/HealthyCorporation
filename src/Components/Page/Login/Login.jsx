@@ -69,9 +69,7 @@ export const Login = (props) => {
           <div className="message2">
             <h2>Bienvenido a HealthyCorporation</h2>
             <p>Aun no tienes cuenta? por favor registrate aqui</p>
-            <Link to="/register" className="links">
-              <button onClick={onclick} className="signUpBtn">Registrarse</button>
-            </Link>
+            <button onClick={onclick} className="signUpBtn"><Link to="/register" className="linkLog">Registrarse</Link></button>
           </div>
         </div>
       </div>
