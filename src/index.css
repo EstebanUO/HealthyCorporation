@@ -15,11 +15,7 @@ code {
 }
 
 .orden_product{
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
   padding: 2rem;
-  margin-top: -20rem;
 }
 
 .input-password{
@@ -378,15 +374,6 @@ header img{
   outline: none;
 }
 
-/* .iconos{
-  display: flex;
-  justify-content: space-evenly;
-  cursor: pointer;
-  margin-left: 8.5rem;
-  width: 2.5rem;
-  height: 2.5rem;
-} */
-
 .iconUser{
   position: absolute;
   display: block;
@@ -445,11 +432,6 @@ header img{
 .linkLog:hover{
   color: #fff;
 }
-
-/* .border-icon{
-  font-size: 2rem;
-  padding: 0.5rem;
-} */
 
 .message h2 {
   font-size: 1.7rem;
@@ -1132,6 +1114,43 @@ a{
   margin-bottom: -3rem;
   margin-bottom: -3rem;
   margin-top: -2rem;
+}
+
+/*------------------ Filtrado productos ------------*/
+.containerFilter{
+  background-color: #f5f5f5;
+  height: 100%;
+}
+
+.conteinerProducts{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 142vh;
+  margin-left: 12%;
+}
+
+.titleFilter{
+  font-size: 1rem;
+  text-align: center;
+}
+
+.filterCategoria{
+  background-color: #f5f5f5;
+}
+
+hr{
+  color: #000;
+  width: 100%;
+}
+
+.slider-box-filter{
+  background-color: #525151;
+  padding: 1rem;
+  position: absolute;
+  top: 50%;
+  left: 1%;
+  border-radius: 1rem;
 }
 
 /*-------- Responsive 1920px ---------*/

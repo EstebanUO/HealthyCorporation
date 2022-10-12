@@ -2,9 +2,6 @@ import React, { useEffect  } from 'react';
 import { Header } from '../Layout/Header/Header';
 import { Footer } from '../Layout/Footer/Footer';
 import { Link } from "react-router-dom";
-// import logofacebook from '../../Image/Icons/facebook.png';
-// import logoGoogle from '../../Image/Icons/google.png';
-// import logoTwitter from '../../Image/Icons/twiter.png';
 import Alert from '@mui/material/Alert';
 import { BsEyeFill,BsEyeSlashFill } from "react-icons/bs";
 import { FaUserAlt, FaLock } from "react-icons/fa";
@@ -67,17 +64,6 @@ export const Register = (props) => {
         <div>
           <form className="formulario2" onSubmit={props.postApi}>
             <h1 className="titleReg">Registro</h1>
-            {/* <div className="iconos">
-              <div className="border-icon">
-                <img src={logofacebook} alt="logofacebook" className="iconos" />
-              </div>
-              <div className="border-icon">
-                <img src={logoGoogle} alt="logoGoogle" className="iconos" />
-              </div>
-              <div className="border-icon">
-                <img src={logoTwitter} alt="logoTwitter" className="iconos" />
-              </div>
-            </div><br /> */}
             <div className="formularioReg">
               <p className='pvaliRegister' id='valiExiste'></p>
               <label for="inputUser" class="labelsReg">User name</label>

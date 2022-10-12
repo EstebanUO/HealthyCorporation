@@ -4,9 +4,6 @@ import { Footer } from '../Layout/Footer/Footer'
 import { Header } from '../Layout/Header/Header'
 import { Link } from "react-router-dom"
 import Alert from '@mui/material/Alert';
-// import logofacebook from '../../Image/Icons/facebook.png';
-// import logoGoogle from '../../Image/Icons/google.png';
-// import logoTwitter from '../../Image/Icons/twiter.png';
 import { BsEyeFill,BsEyeSlashFill } from "react-icons/bs";
 import { FaUserAlt,FaKey } from "react-icons/fa";
 
@@ -36,16 +33,6 @@ export const Login = (props) => {
         <div>
           <form className="formulario3" onSubmit={props.ClickLogin}>
             <h1 className="titleReg">Iniciar Sesion</h1>
-            {/* <div className="iconos">
-              <div className="border-icon">
-                <img src={logofacebook} alt="logofacebook" className="iconos" />
-              </div>
-              <div className="border-icon">
-                <img src={logoGoogle} alt="logoGoogle" className="iconos" />
-              </div><div className="border-icon">
-                <img src={logoTwitter} alt="logoTwitter" className="iconos" />
-              </div>
-            </div><br /> */}
             <div className="formularioLog">
               <label for="exampleInputEmail1" class="labelsReg"><br />Email</label>
               <FaUserAlt className='iconUser'/>

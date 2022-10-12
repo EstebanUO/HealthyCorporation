@@ -21,64 +21,6 @@ export const Card = () => {
   return (
     <div className='content_Product'>
       {/* <h1 className='title-product'>Productos más comprados</h1> */}
-      <div className='containerFilter'>
-        <div className='containerFiltrado'>
-          <div className='titleFiltro'>
-            <h4><FaSlidersH/> Filtrar por:</h4>
-          </div>
-          <div>
-            <div role="button" tabIndex="0">
-              <div>
-                <span>Categoría</span>
-                <span>
-                  <FaArrowDown />
-                </span>
-              </div>
-              <div>
-                <span>Marca</span>
-                <span>
-                  <FaArrowDown />
-                </span>
-              </div>
-            </div>
-            <div className='wrapper'>
-              <span>Precios</span><br />
-              <div className='price-input'>
-                <div className='field'>
-                  <span>Min</span>
-                  <input type="number" className="input-min" value="2500"/>
-                </div>
-                <div className='separator'>-</div>
-                <div className='field'>
-                  <span>Max</span>
-                  <input type="number" className="input-min" value="100.000"/>
-                </div>
-              </div>
-              <div className='slider'>
-                <div className="progress"></div>
-              </div>
-              <div className="range-input">
-                <input type="range" className='range-min' min="0" max="10000" value="2500"/>
-                <input type="range" className='range-max' min="0" max="10000" value="7500"/>
-              </div>
-            </div>
-          </div>
-          <div className='containerOrder'>
-            <div className='iconsList'>
-              <FaTh/> | <FaThList/> |
-            </div>
-            <p>Ordenar por: </p>
-            <select name="" id="">
-              <option value="">Relevancia</option>
-              <option value="">Más vendidos</option>
-              <option value="">Más reciente</option>
-              <option value="">Descuento</option>
-              <option value="">Precio más alto</option>
-              <option value="">Precio más bajo</option>
-            </select>
-          </div>
-        </div>
-      </div>
       <div className='card_product'>
         <div className='column_all'>
           <div className='imgProduct_' >
@@ -190,5 +132,4 @@ export const Card = () => {
       </div><br />
     </div>
   )
-
 }
