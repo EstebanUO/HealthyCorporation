@@ -1226,9 +1226,11 @@ a{
     margin-top: 0rem;
   }
 
+
+
   /*-------- Responsive 700px ---------*/
 
-@media screen and (max-width:700px) { 
+@media screen and (-width:700px) { 
   .formulario{
     display: inline-block;
   }
@@ -1237,9 +1239,17 @@ a{
     margin-top: 0rem;
   }
 
-  .welcome-back{
+  #welcome-back{
     margin-left: -3rem;
   }
+}
+.formulario3{
+  margin-left: 4rem;
+  width: 32rem;
+}
+
+.button-show2{
+  margin-left: 26rem;
 }
 
   /*-------- Responsive 673px ---------*/
@@ -1256,7 +1266,7 @@ a{
       width: 26rem;
   }
   .welcome-back{
-    margin-left: -2.5rem;
+    margin-left: 3rem;
   }
   
   .iconos{
@@ -1291,6 +1301,18 @@ a{
     .button-show{
       margin-left: 22rem;
     }
+
+    .formulario3{
+      margin-left: -1rem;
+      width: 28rem;
+    }
+  
+    .message2{
+      margin-top: 2rem;
+      margin-left: 8rem;
+      margin-right: 6rem;
+    }
+  }
     
     
   }
@@ -1321,10 +1343,22 @@ a{
   .button-show{
     margin-left: 18rem;
   }
+
+
+
+  .formulario3{
+    margin-left: -1rem;
+    width: 27rem;
+  }
+
+  .message2{
+    margin-top: 2rem;
+    margin-left: 2rem;
+    margin-right: 4rem;
+  }
 }
 /* Era gol de yepes */
 
 /* nah */
 
 /* KOMO */
-}
