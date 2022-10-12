@@ -1340,12 +1340,31 @@ hr{
     margin-top: 1rem;
   }
 
+  .formulario3{
+    margin-top: 2rem;
+    margin-left: 20rem;
+  }
+
+  .message2{
+    margin-top: 1rem;
+    margin-left: 10rem;
+  }
+
 }
 
 
 /*-------- Responsive 1100px ---------*/
 
 @media screen and (max-width:1100px) { 
+
+  .formulario3{
+    margin-left: 16rem;
+  }
+  
+  .message2{
+    margin-left: 8.5rem;
+  }
+
   .formulario{
     display: inline-block;
   }
@@ -1353,7 +1372,11 @@ hr{
     margin: 16rem;
     margin-top: 0rem;
   }
+
+
 }
+
+
 
 /*-------- Responsive 1000px ---------*/
 
@@ -1364,6 +1387,13 @@ hr{
   .formulario2{
     margin: 12rem;
     margin-top: 0rem;
+  }
+  .formulario3{
+    margin-left: 13.5rem;
+  }
+
+  .message2{
+    margin-left: 11rem;
   }
 }
 
@@ -1378,6 +1408,15 @@ hr{
     margin: 11rem;
     margin-top: 0rem;
   }
+  .formulario3{
+    margin-left: 11rem;
+    }
+  
+  .message2{
+    margin-left: 9rem;
+  }
+  
+
 }
 
 /*-------- Responsive 900px ---------*/
@@ -1390,7 +1429,16 @@ hr{
     margin: 8.5rem;
     margin-top: 0rem;
   }
+  .formulario3{
+    margin-left: 8.8rem;
+    }
+  
+    .message2{
+    margin-left: 7.1rem;
+    }
+  
 }
+
 
 
 
@@ -1400,16 +1448,23 @@ hr{
   .formulario{
     display: inline-block;
   }
-  .formulario2{
-    margin: 4rem;
-    margin-top: 0rem;
+
+
+  .formulario3{
+    margin: 5.5rem;
+    margin-top: 2rem;
   }
 
+  .message2{
+    margin-left: 10rem;
+    margin-top: -5rem;
+  }
+}
 
 
   /*-------- Responsive 700px ---------*/
 
-@media screen and (-width:700px) { 
+@media screen and (max-width:700px) { 
   .formulario{
     display: inline-block;
   }
@@ -1421,14 +1476,22 @@ hr{
   #welcome-back{
     margin-left: -3rem;
   }
-}
+
 .formulario3{
-  margin-left: 4rem;
+  margin-top: 3rem;
+  margin-left: 1rem;
   width: 32rem;
+}
+
+.message2{
+  margin-top: 2rem;
+  padding: 0rem;
+  margin-left: 3rem;
 }
 
 .button-show2{
   margin-left: 26rem;
+}
 }
 
   /*-------- Responsive 673px ---------*/
@@ -1454,6 +1517,16 @@ hr{
   
   .button-show{
     margin-left: 20rem;
+  }
+
+  .formulario3{
+    margin-left: 0.1rem;
+  }
+
+  .message2{
+    margin-top: 1rem;
+    padding: 0rem;
+    margin-left: 0rem;
   }
   
   }
@@ -1482,19 +1555,23 @@ hr{
     }
 
     .formulario3{
-      margin-left: -1rem;
-      width: 28rem;
+      margin-left: -1.5rem;
+      width: 25rem;
     }
   
     .message2{
-      margin-top: 2rem;
-      margin-left: 8rem;
+      margin-top: 1rem;
+      margin-left: 0rem;
       margin-right: 6rem;
+    }
+
+    .button-show2{
+      margin-left: 19rem;
     }
   }
     
     
-  }
+  
 
 /*-------- Responsive 480px ---------*/
   @media screen and (max-width:480px) { 
