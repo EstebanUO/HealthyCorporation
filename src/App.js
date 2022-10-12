@@ -42,7 +42,7 @@ function App() {
   const onChangePasswordLogin = ({ currentTarget }) => setpasswordUser(currentTarget.value);
 
   const getApi = () => {
-    axios.get('http://127.0.0.1:8080/api/users')
+    axios.get('https://apiprojectmain.herokuapp.com/api/users')
       .then(function (response) {
         // handle success
         response.data.map(data => {
@@ -119,7 +119,7 @@ function App() {
     if ((usernameRegister.indexOf('`') !== -1 || usernameRegister.indexOf('.') !== -1 || usernameRegister.indexOf('@') !== -1 || usernameRegister.indexOf('!') !== -1 || usernameRegister.indexOf('%') !== -1 || usernameRegister.indexOf('$') !== -1 || /\s/.test(usernameRegister)) || (emailRegister.indexOf('.') === -1 || emailRegister.indexOf('@') === -1 || /\s/.test(emailRegister))) {
       console.log("error");
     } else {
-      axios.post('http://127.0.0.1:8080/api/users', {
+      axios.post('https://apiprojectmain.herokuapp.com/api/users', {
         "name": usernameRegister,
         "email": emailRegister,
         "password": passwordRegister
