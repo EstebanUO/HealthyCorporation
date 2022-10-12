@@ -1136,6 +1136,7 @@ a{
 .containerFilter{
   background-color: #f5f5f5;
   height: 100%;
+  margin-top: 6rem;
 }
 
 .conteinerProducts{
@@ -1143,11 +1144,16 @@ a{
   flex-wrap: wrap;
   align-items: center;
   width: 142vh;
-  margin-left: 12%;
+  margin-left: 15%;
 }
 
 .titleFilter{
   font-size: 1rem;
+  text-align: center;
+}
+
+.titleCategoria{
+  font-size: 1.5rem;
   text-align: center;
 }
 
@@ -1168,6 +1174,135 @@ hr{
   left: 1%;
   border-radius: 1rem;
 }
+
+.container-Orden-Productos{
+  display: flex;
+  align-items: baseline;
+  margin-left: 40rem;
+  margin-top: -8rem;
+}
+
+.column_all{
+  width: 15rem;
+  border-radius: .5rem;
+  border: solid 2px gray;
+  background-color: white;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.title-product {
+  color: rgb(131, 131, 131);
+  display: flex;
+  justify-content: center;
+  padding: 3rem;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.content_Product {
+  margin-top: 9rem;
+}
+
+.card_all_product {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  margin-left: 10rem;
+  margin-top: -21rem;
+}
+
+.imgProduct{
+  width: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imgProduct2{
+  width: 14rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imgProduct_{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.name_Product{
+  color: #5bc3fc;
+  font-size: 1.7rem;
+  padding-left: 1rem;
+  margin-bottom: 0;
+}
+
+.name_Product_{
+  color: #5bc3fc;
+  font-size: .9rem;
+  padding-left: 1rem;
+}
+
+.price_product{
+  font-size: 1.3rem;
+  padding-left: 1rem;
+  margin-bottom: 0;
+}
+
+.price_product_ofert{
+  font-size: .9rem;
+  padding-left: 1rem;
+  margin-bottom: 0;
+  color: firebrick;
+}
+
+.rowProduct{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.textProduct{
+  padding-left: .5rem;
+  padding-right: .5rem;
+  font-size: .7rem;
+}
+
+.textProduct_{
+  padding-left: .5rem;
+  padding-right: .5rem;
+  font-size: .7rem;
+  border-left: solid 1px black;
+  border-right: solid 1px black;
+}
+
+.addProduct{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.addProduct_{
+  border-radius: .5rem;
+  background-color: #5bc3fc;
+  border: none;
+  transition: all 300ms;
+  width: auto;
+  height: 2.3rem;
+}
+
+.addProduct_:hover {
+  background-color: #eee7e7;
+  transition: all 300ms;
+  border: 2px solid black;
+}
+
 
 /*-------- Responsive 1920px ---------*/
 @media screen and (min-width:1920px) {
