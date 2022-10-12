@@ -2,7 +2,9 @@ import React from 'react'
 import logo2 from '../../Image/logo.png'
 import { Link } from "react-router-dom";
 import { Footer } from "../Layout/Footer/Footer";
-
+import icon_direction from '../../Image/icon_direction.png'
+import icon_buy from '../../Image/icon_buy.png'
+import icon_regresar from '../../Image/icon_regresar.png'
 import './Direction_pago.css'
 import back from '../../Image/back.png';
 
@@ -14,18 +16,21 @@ export const Direction_pago = () => {
                     <Link to='/'><img src={logo2} alt="Logo" /></Link>
                 </div>
             </header>
-            <div className='center_'>
+            <div className='center_2'>
                 <div className='circles'>
-                    1
+                    <img className='icon' src={icon_direction} alt="icon" />
                 </div>
-                <div className='linea_procesing'>
+
+                <div className='linea_procesing_'>
                 </div>
-                <div className='circles_'>
+                <div className='circles_2'>
+                    <img className='icon2' src={icon_regresar} alt="icon" />
                 </div>
                 <div className='linea_procesing_'>
                 </div>
+
                 <div className='circles2'>
-                    2
+                    <img className='icon' src={icon_buy} alt="" />
                 </div>
             </div>
             <div className='nom_check'>

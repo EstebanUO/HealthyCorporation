@@ -20,8 +20,7 @@
 .card:hover {
     background-color: #eee7e7;
     transition: all 300ms;
-    width: 10.5rem;
-    border:3px solid black ;
+    border:  solid #5bc3fc;
 }
 
 /* .card2 {

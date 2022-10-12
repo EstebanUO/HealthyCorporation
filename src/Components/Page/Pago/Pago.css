@@ -84,14 +84,13 @@
     border-radius: 0.5rem;
     font-size: 1.3rem;
     transition: all 400ms;
+    border: none;
 }
 
 .btn_save2:hover {
     background-color: #eee7e7;
     transition: all 300ms;
-    width: 12rem;
-    color: black;
-    border: 3px solid black;
+    border:  solid #fc5b5b;
 }
 
 .circles3{
