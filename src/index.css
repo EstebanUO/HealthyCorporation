@@ -895,7 +895,6 @@ a{
   justify-content: center;
   border-radius: .5rem;
   font-size: 1.3rem;
-  margin-bottom: 1rem;
   transition: all 400ms;
 }
 .btn_save:hover {
