@@ -23,6 +23,9 @@ import tarjeta6 from '../../Image/Tarjetas/master_debito.PNG'
 import tarjeta7 from '../../Image/Tarjetas/visa_debito.PNG'
 /* otros */
 import tarjeta10 from '../../Image/Tarjetas/pse.PNG'
+import icon_direction from '../../Image/icon_direction.png'
+import icon_buy from '../../Image/icon_buy.png'
+import icon_regresar from '../../Image/icon_regresar.png'
 
 export const Pago = () => {
     const check = () => {
@@ -84,27 +87,28 @@ export const Pago = () => {
 
             <div className='center_'>
                 <div className='circles'>
-                    1
+                <img className='icon' src={icon_direction} alt="icon" />
                 </div>
 
                 <div className='linea_procesing'>
                 </div>
                 <div className='circles_'>
+                <img className='icon2' src={icon_regresar} alt="icon" />
                 </div>
                 <div className='linea_procesing2'>
                 </div>
 
                 <div className='circles3'>
-                    2
+                <img className='icon' src={icon_buy} alt="" />
                 </div>
             </div>
 
             <div className='nom_check'>
-                <p className='text_check2' >[Nombre] ya casi terminas tu compra!</p>
+                <p className='text_check_2' >[Nombre] ya casi terminas tu compra!</p>
             </div>
 
             <div className='check_all'>
-                <div className='content_check' >
+                <div className='content_check2' >
                     <nav className='nav_check'><p className='pad_check'>Método de pago</p>
                         <div className='back_up'><Link to="/pago"><img className='img_up2' src={back} alt="atras" /><p className='back'>Atras</p></Link>
                         </div></nav>

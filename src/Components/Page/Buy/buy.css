@@ -63,9 +63,10 @@
 }
 
 .columm_buy{
-    width: 32rem;
+    width: 29rem;
     background-color: #817f7f21;
     padding: 1rem;
+    margin-left: -5rem;
 }
 
 .name_buy{
@@ -83,15 +84,20 @@
     margin-top: -1rem;
 }
 
-
-
 .price_buy{
     font-size: 1.7rem;
     padding-left: 1rem;
-    margin-bottom: 0;
     margin-top: -1rem;
+    color: white;
 }
 
+.Content_price{
+    background-color: #00d466d9;
+    width: 9rem;
+    border-radius: .7rem;
+    margin-left: 1rem;
+    margin-bottom: 2rem;
+}
 
 .rowBuy{
     display: flex;
@@ -117,7 +123,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1rem;
+    flex-direction: column;
+    padding: .7rem;
 }
 
 .addBuy_{
@@ -125,14 +132,29 @@
     background-color: #5bc3fc;
     border: none;
     transition: all 300ms;
-    width: 18rem;
-    height: 3rem;
+    width: 20rem;
+    height: 2.8rem;
+}
+
+.addBuy_2{
+    border-radius: .5rem;
+    border: solid #5bc3fc;
+    transition: all 300ms;
+    width: 20rem;
+    height: 2.8rem;
+    margin-top: 0.5rem;
+    
 }
 
 .addBuy_:hover {
     background-color: #eee7e7;
     transition: all 300ms;
-    border: 2px solid black;
+    border:  solid #5bc3fc;
+}
+
+.addBuy_2:hover {
+    background-color: #5bc3fc;
+    transition: all 300ms;
 }
 
 /* metodos  de pago */
@@ -192,9 +214,9 @@
 
 .img_up_close{
     display: block;
-    margin-top: -32rem;
+    margin-top: -28rem;
     margin-right: -3rem;
-    margin-left: -4rem;
+    margin-left: -12rem;
 }
 
 .text_metodos_nav{

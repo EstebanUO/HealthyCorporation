@@ -9,6 +9,15 @@ body {
   width: 100%;
 }
 
+.icon{
+  width: 1.7rem;
+}
+.icon2{
+  width: 1.5rem;
+  margin-top: -1.6rem;
+  margin-left: -12px;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -913,14 +922,13 @@ a{
   justify-content: center;
   border-radius: .5rem;
   font-size: 1.3rem;
+  border: none;
   transition: all 400ms;
 }
 .btn_save:hover {
   background-color: #eee7e7;
   transition: all 300ms;
-  width: 12rem;
-  color: black;
-  border:3px solid black ;
+  border:  solid #5bc3fc;
 }
 
 
@@ -1130,7 +1138,16 @@ a{
   font-size: 2rem;
   margin-bottom: -3rem;
   margin-bottom: -3rem;
-  margin-top: -2rem;
+  margin-top: -1rem;
+}
+
+.text_check_2 {
+  color: gray;
+  font-size: 1.5rem;
+  font-size: 2rem;
+  margin-bottom: -3rem;
+  margin-bottom: -3rem;
+  margin-top: -3rem;
 }
 
 /*-------- Responsive 1920px ---------*/
