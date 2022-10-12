@@ -18,12 +18,12 @@ export const CardAllProducts = () => {
   }
 
   return (
-    <div className='content_Product'>
+    <div className='content_all_Product'>
       {/* <h1 className='title-product'>Productos más comprados</h1> */}
       <div className='card_all_product'>
         <div className='column_all'>
           <div className='imgProduct_' >
-            <Link to="/compra"><img className='imgProduct' src={medicasp} alt="Producto imagen" /></Link>
+            <Link to="/compra"><img className='imgAllProduct' src={medicasp} alt="Producto imagen" /></Link>
           </div>
           <div className='padding_product'>
             <div>
@@ -49,7 +49,7 @@ export const CardAllProducts = () => {
         </div>
         <div className='column_all'>
           <div className='imgProduct_' >
-          <Link to="/compra"><img className='imgProduct2' src={pax} alt="Producto imagen" /></Link>
+          <Link to="/compra"><img className='imgAllProduct' src={pax} alt="Producto imagen" /></Link>
           </div>
           <div className='padding_product'>
             <div>
@@ -76,7 +76,7 @@ export const CardAllProducts = () => {
         </div>
         <div className='column_all'>
           <div className='imgProduct_' >
-          <Link to="/compra"><img className='imgProduct' src={nutribela} alt="Producto imagen" /></Link>
+          <Link to="/compra"><img className='imgAllProduct' src={nutribela} alt="Producto imagen" /></Link>
           </div>
           <div className='padding_product'>
             <div>
@@ -103,7 +103,7 @@ export const CardAllProducts = () => {
         </div>
         <div className='column_all'>
           <div className='imgProduct_' >
-          <Link to="/compra"><img className='imgProduct2' src={acetaminofen} alt="Producto imagen" /></Link>
+          <Link to="/compra"><img className='imgAllProduct' src={acetaminofen} alt="Producto imagen" /></Link>
           </div>
           <div className='padding_product'>
             <div>

@@ -1135,16 +1135,16 @@ a{
 /*------------------ Filtrado productos ------------*/
 .containerFilter{
   background-color: #f5f5f5;
-  height: 100%;
-  margin-top: 6rem;
+  display: grid;
+  justify-content: start;
 }
 
 .conteinerProducts{
-  display: flex;
+  /* display: flex;
   flex-wrap: wrap;
   align-items: center;
   width: 142vh;
-  margin-left: 15%;
+  margin-left: 15%; */
 }
 
 .titleFilter{
@@ -1176,10 +1176,9 @@ hr{
 }
 
 .container-Orden-Productos{
-  display: flex;
-  align-items: baseline;
-  margin-left: 40rem;
-  margin-top: -8rem;
+  display: grid;
+  justify-content: end;
+  margin-top: -17rem;
 }
 
 .column_all{
@@ -1203,24 +1202,30 @@ hr{
   margin-top: 0;
 }
 
-.content_Product {
+.content_all_Product {
   margin-top: 9rem;
 }
 
 .card_all_product {
-  display: flex;
+  /* display: flex;
   flex-wrap: wrap;
   justify-content: center;
   width: 100%;
   margin-left: 10rem;
-  margin-top: -21rem;
+  margin-top: -21rem; */
+  display: grid;
+  gap: 3rem;
+  grid-auto-rows: 20rem;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
 }
 
-.imgProduct{
-  width: 10rem;
-  display: flex;
+.imgAllProduct{
+  width: 5rem;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
+  display: grid;
+  gap: 3rem;
 }
 
 .imgProduct2{
@@ -1285,7 +1290,7 @@ hr{
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
+  padding: 1rem; 
 }
 
 .addProduct_{
