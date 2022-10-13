@@ -165,12 +165,6 @@ header img{
 .acount{
   text-decoration: none;
   color: #000000;
-  position: absolute;
-  top: -700px;
-  left: -2000;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
 }
 
 .acount:hover{
@@ -180,12 +174,6 @@ header img{
 .car{
   text-decoration: none;
   color: #000000;
-  position: absolute;
-  top: -700px;
-  left: -2000;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
 }
 
 .car:hover{
@@ -194,12 +182,6 @@ header img{
 
 .ubicacion{
   color: #000;
-  position: absolute;
-  top: -700px;
-  left: -2000;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
 }
 
 .ubicacion:hover{
@@ -208,65 +190,11 @@ header img{
 
 .listaDeseos{
   color: #000000;
-  position: absolute;
-  top: -700px;
-  left: -2000;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
 }
 
 .listaDeseos:hover{
   color: #fff;
 }
-
-/*---------------------------------------------------------*/
-
-
-.ubicacion.active{
-  width: 100%;
-  position: absolute;
-  margin-left: auto;
-  margin-right: auto;
-  top: 30%;
-  left: 0;
-  right: 0;
-  text-align: center;
-
-}
-
-.listaDeseos.active{
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  top: 30%;
-  left: 0;
-  right: 0;
-  text-align: center;
-}
-
-.acount.active{
-  width: 100%;
-  position: absolute;
-  margin-left: auto;
-  margin-right: auto;
-  top: 30%;
-  left: 0;
-  right: 0;
-  text-align: center;
-}
-
-.car.active{
-  width: 100%;
-  position: absolute;
-  margin-left: auto;
-  margin-right: auto;
-  top: 30%;
-  left: 0;
-  right: 0;
-  text-align: center;
-}
-
 
 
 
@@ -1104,7 +1032,7 @@ a{
 
 /*------------------- RESPONSIVE 758PX -----------------------*/
 
-@media screen and (min-width:756px){
+@media screen and (max-width:756px){
 
   .select_product1{
     width: 16rem;
@@ -1122,10 +1050,6 @@ a{
 
   .btn_all{
     margin-top: 1rem;
-  }
-
-  .burguer{
-        display: none;
   }
 
 }
