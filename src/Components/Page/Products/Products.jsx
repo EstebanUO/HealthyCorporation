@@ -12,24 +12,9 @@ export const Products = (props) => {
     <div>
       <Header valiLoginAdmin={props.valiLoginAdmin} /><br /><br />
       <h2 className='titleCategoria'>Compra por categoría</h2>
-      <div className='conteinerProducts'>
-        <Categories/>
-        <div className='containerFilter'>
-            <h2 className='titleFilter'><FaSlidersH/>Filtrar por:</h2>
-            <div className='filterCategoria'>
-              <label>Catergoría</label>
-            </div>
-            <hr />
-            <div className='filterCategoria'>
-              <label>Marca</label>
-            </div>
-            <hr />
-            <label for='priceRange'>Precios</label>
-            <br />
-            <input type="text" id='priceRange' readOnly/>
-            <div id='price-range' className='sliderFilter'></div>
-        </div>
-        <div className='container-Orden-Productos'>
+      <Categories/>
+      <br /><br />
+      <div className='container-Orden-Productos'>
           <p>6363 | Productos Encontrados</p> 
           | <FaTh/> | <FaThList/> | 
           <p>Ordenar por:</p>
@@ -42,8 +27,31 @@ export const Products = (props) => {
             <option value="">Precio más bajo</option>
           </select>
         </div>
+      <div className='containerFilter'>
+      
+        <div className='containerCategorias'>
+          <div className='containerTitle'>
+            <h2 className='titleFilter'><FaSlidersH className='iconFilter'/> Filtrar por:</h2>
+          </div>
+          <div className='containerFiltros'>
+            <div className='filterCategoria'>
+              <label>Catergoría</label>
+            </div>
+            <hr />
+            <div className='filterCategoria'>
+              <label>Marca</label>
+            </div>
+            <hr />
+            <label for='priceRange'>Precios</label>
+            <br />
+            <input type="text" id='priceRange' readOnly/>
+            <div id='price-range' className='sliderFilter'></div>
+          </div>
+        </div>
+        
         <CardAllProducts />
       </div>
+      
       <Footer />
     </div>
   )
