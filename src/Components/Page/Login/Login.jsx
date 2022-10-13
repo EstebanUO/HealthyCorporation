@@ -43,7 +43,7 @@ export const Login = (props) => {
                 <input onChange={props.onChangePasswordLogin} value={props.passwordUser} name="password" type={props.shown2 ? 'text' : 'password'} class="form-input" id="inputPassword" placeholder="Password" />
               </div>
               <button className='button-show2' onClick={props.switchShown2}>{props.shown2 ? <BsEyeFill /> : <BsEyeSlashFill />}</button>
-              <Link to="/" className="forgetPass">¿Haz olvidado tu contraseña?</Link>
+              <p className="forgetPass"><Link to="/recoverPassword" >¿Haz olvidado tu contraseña?</Link></p>
               {props.alertUserLogin? <Alert severity="error"><AlertTitle>Error</AlertTitle>Usuario no registrado — <strong>Registrate!</strong></Alert>:null}
               {props.alertConexionLogin? <Alert severity="warning"><AlertTitle>warning</AlertTitle>Sin conexion — <strong>conectate a una red!</strong></Alert>:<p></p>}
               <div className="submitReg">

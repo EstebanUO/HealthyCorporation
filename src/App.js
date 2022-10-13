@@ -17,6 +17,7 @@ import { ListaDeseos } from './Components/Page/ListaDeseos/ListaDeseos';
 import { Buy } from './Components/Page/Buy/Buy';
 import { Direction_pago } from './Components/Page/DIrection_pago/Direction_pago';
 import { Pago } from './Components/Page/Pago/Pago';
+import RecoverPassword from './Components/Page/MyAcount/RecoverPassword';
 
 
 
@@ -41,8 +42,15 @@ function App() {
 
   const onChangePasswordLogin = ({ currentTarget }) => setpasswordUser(currentTarget.value);
 
+  /*datos de usuario*/
+  const [idUser, setidUser] = useState(null)
+  const [usernameUser, setusernameUser] = useState("")
+  const [emailUser, setemailUser] = useState("")
+  const [password, setpassword] = useState("")
+  /*fin datos de usuario*/
+
   const getApi = () => {
-    axios.get('https://apiprojectmain.herokuapp.com/api/users')
+    axios.get('https://apiprojectmain.herokuapp.com/api/users') 
       .then(function (response) {
         // handle success
         response.data.map(data => {
@@ -50,6 +58,11 @@ function App() {
           if (userLogin === data.email && passwordUser === data.password) {
             setvaliLogin(true);
             setalertHome(true);
+            setidUser(data.id);
+            setusernameUser(data.name);
+            setemailUser(data.email);
+            setpassword(data.password);
+
             setmessagesLogin("bienvenido "+data.name)
             
           } else if(userLogin !== data.email && passwordUser !== data.password){
@@ -193,6 +206,7 @@ function App() {
         <Route path="/compra" element={<Buy />} />
         <Route path="/pago" element={<Direction_pago />} />
         <Route path="/pago_final" element={<Pago />} />
+        <Route path="/recoverPassword" element={<RecoverPassword />} />
       </Routes>
     </div>
 

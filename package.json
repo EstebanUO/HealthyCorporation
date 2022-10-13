@@ -20,6 +20,8 @@
     "axios": "^0.27.2",
     "bootstrap": "^5.2.1",
     "detect-element-overflow": "^1.2.0",
+    "emailjs-com": "^3.2.0",
+    "firebase": "^9.12.1",
     "framer-motion": "^7.3.5",
     "jquery": "^3.6.1",
     "mdb-react-ui-kit": "^4.2.0",
