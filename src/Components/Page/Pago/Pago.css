@@ -1,4 +1,4 @@
-.content_tarjet_div{
+.content_tarjet_div {
     border: 2px solid gray;
     display: flex;
     align-items: center;
@@ -11,12 +11,12 @@
 
 
 
-.content_tarjet_div:hover{
+.content_tarjet_div:hover {
     background-color: #d3ebf7;
     transition: 300ms all;
 }
 
-.pad_check2{
+.pad_check2 {
     margin-bottom: 0;
     font-size: 18px;
 }
@@ -44,25 +44,26 @@
     animation: acount_content_all .7s forwards;
 }
 
-.acount_content_tarjet2{
+.acount_content_tarjet2 {
     padding-left: 0;
     padding-right: 0;
 }
 
-.img-tarjet{
+.img-tarjet {
     width: 5rem;
 }
 
 
-.img-tarjet2{
+.img-tarjet2 {
     width: 4rem;
 }
 
-.img-tarjet_{
+.img-tarjet_ {
     width: 3.5rem;
     padding: .5rem;
 }
-.img-tarjet_2{
+
+.img-tarjet_2 {
     width: 2.3rem;
     padding: .3rem;
 }
@@ -90,10 +91,10 @@
 .btn_save2:hover {
     background-color: #eee7e7;
     transition: all 300ms;
-    border:  solid #fc5b5b;
+    border: solid #fc5b5b;
 }
 
-.circles3{
+.circles3 {
     width: 3.5rem;
     height: 3.5rem;
     padding: 1rem;
@@ -108,7 +109,7 @@
     color: gray;
 }
 
-.linea_procesing2{
+.linea_procesing2 {
     background-color: #5ba6fc;
     height: 3px;
     width: 10rem;
@@ -120,7 +121,7 @@
 }
 
 
-.methot_buy{
+.methot_buy {
     display: flex;
     justify-content: center;
     margin-top: 1rem;
@@ -130,7 +131,7 @@
     transition: all ease-in 300ms;
 }
 
-.methot_buy:hover{
- 
+.methot_buy:hover {
+
     transition: all ease-in 300ms;
 }
