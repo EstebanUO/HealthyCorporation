@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from "react-router-dom";
 import { Footer } from '../Layout/Footer/Footer';
 import { Header } from '../Layout/Header/Header';
+import { Card } from '../../UI/Card/Card';
 
 import './buy.css'
 import img from '../../Image/assects/medicasp.jpg';
@@ -12,14 +13,14 @@ import Swal from 'sweetalert2';
 
 export const Buy = () => {
 
-    const onHeart = () =>{
+    const onHeart = () => {
         document.querySelector(".material-symbols-outlined").style.color = 'red';
         Swal.fire({
             icon: 'success',
             title: 'Se ha agregado el producto a la lista de deseos',
             showConfirmButton: false,
             timer: 1500
-          })
+        })
     };
 
     return (
@@ -76,6 +77,36 @@ export const Buy = () => {
                     </div>
                     <div className='img_up_close' >
                         <Link to="/products"><img className='img_up_' src={back} alt="atras" /></Link>
+                    </div>
+                </div>
+            </div>
+            <div className='space_of_contents'>
+            <hr className='hr2'/>
+                </div>
+
+
+            <div className="description_all">
+                <div className="content_description">
+                    <h1 className='text-descrip'>Características</h1>
+                    <ul>
+                        <li>asd</li>
+                        <li>qwe</li>
+                        <li>we</li>
+                        <li>12</li>
+                        <li>asd</li>
+                        <li>s</li>
+                    </ul><hr />
+
+                    <h1 className='text-descrip'>Modo de uso</h1>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla veniam, iure quasi alias expedita repellat tenetur, nisi dolore iste, impedit soluta culpa. Amet consequuntur autem tempore explicabo et eos itaque.</p><hr />
+                </div>
+
+                <div>
+                    <h1 className='text-descrip2'>
+                        Otras personas tambien vieron
+                    </h1>
+                    <div className='Content-card'>
+                        <Card />
                     </div>
                 </div>
             </div>

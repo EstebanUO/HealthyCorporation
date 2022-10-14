@@ -46,7 +46,7 @@ export const Amount = (props) => {
             showCancelButton: true,
             confirmButtonColor: '#3085d6',
             cancelButtonColor: '#d33',
-            confirmButtonText: '!Si!, quiero elimiarlo',
+            confirmButtonText: '!Si!, quiero eliminarlo',
             cancelButtonText: 'Cancelar'
           }).then((result) => {
             if (result.isConfirmed) {
