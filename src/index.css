@@ -1433,7 +1433,7 @@ hr {
   }
 
 
-  
+
 }
 @media screen and (max-width:1100px) {
   .formulario {
@@ -1444,6 +1444,11 @@ hr {
   .formulario2 {
     margin: 16rem;
     margin-top: 0rem;
+  }
+
+  .containerCategorias{
+    display: none;
+
   }
 
 
@@ -1468,6 +1473,10 @@ hr {
 
   .message2{
     margin-left: 11rem;
+  }
+
+  .containerFilter{
+    margin-left: 100rem;
   }
 }
 
