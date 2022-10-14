@@ -69,7 +69,7 @@ export const Pago = () => {
     const onSee = () => { document.getElementById("content_det2").style.display = 'flex' };
     const onBlock = () => { document.getElementById("content_det2").style.display = 'none' };
 
-    const onSee2 = () => { document.getElementById("content_det3").style.display = 'flex' };
+    const onSee2 = () => { document.getElementById("content_det3").style.display = 'flex'};
     const onBlock2 = () => { document.getElementById("content_det3").style.display = 'none' };
 
     const onSee3 = () => { document.getElementById("content_det").style.display = 'flex' };

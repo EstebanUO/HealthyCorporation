@@ -20,7 +20,7 @@
 .card:hover {
     background-color: #eee7e7;
     transition: all 300ms;
-    border:  solid #5bc3fc;
+    border: solid #5bc3fc;
 }
 
 /* .card2 {
@@ -44,7 +44,7 @@
 
 .text-card {
     font-size: 1.2rem;
-} 
+}
 
 .Image-card {
     width: 4rem;
