@@ -1446,9 +1446,11 @@ hr {
     margin-top: 0rem;
   }
 
+  .container
+  
   .containerCategorias{
     display: none;
-
+    display: flow-root;
   }
 
 
@@ -1476,7 +1478,7 @@ hr {
   }
 
   .containerFilter{
-    margin-left: 100rem;
+    margin-left: 10rem;
   }
 }
 
