@@ -47,7 +47,7 @@ function App() {
   const [usernameUser, setusernameUser] = useState("")
   const [emailUser, setemailUser] = useState("")
   const [password, setpassword] = useState("")
-  /*fin datos de usuario*/
+
 
   const getApi = () => {
     axios.get('https://apiprojectmain.herokuapp.com/api/users') 
@@ -67,6 +67,7 @@ function App() {
             
           } else if(userLogin !== data.email && passwordUser !== data.password){
             setmessagesLogin("usuario no registrado")
+            setalertConexionLogin(false)
            
           }
           return console.log("data obtenida");
