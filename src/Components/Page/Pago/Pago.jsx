@@ -4,7 +4,7 @@ import { Footer } from "../Layout/Footer/Footer";
 import master from '../../Image/Tarjetas/master2.PNG'
 import visa from '../../Image/Tarjetas/visa2.PNG'
 import pse from '../../Image/Tarjetas/pse2.PNG'
-import swal from 'sweetalert';
+import Swal from 'sweetalert2';
 import logo2 from '../../Image/logo.png'
 import back from '../../Image/back.png';
 import './Pago.css'
@@ -29,41 +29,47 @@ import icon_regresar from '../../Image/icon_regresar.png'
 
 export const Pago = () => {
     const check = () => {
-        swal({
-            title: "¿Estas seguro?",
-            text: "Al aceptar se hará la compra sactifactoriamente",
-            icon: "warning",
-            buttons: true,
-            dangerMode: true,
-        })
-            .then((willDelete) => {
-                if (willDelete) {
-                    swal("Has comprado el producto perfectamente, te llegará un correo co los datos de la compra", {
-                        icon: "success",
-                    });
-                } else {
-                    swal("Esta bien no se hará la compra!");
-                }
-            });
+        Swal.fire({
+            title: '¿Estas seguro?',
+            text: "¡No podrás revertir esto!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: '!Si!, quiero comprarlo',
+            cancelButtonText: 'Cancelar'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Se ha hecho la compra sactifactiriamente',
+                    showConfirmButton: false,
+                    timer: 1400
+                })
+            }
+        });
     }
 
     const check2 = () => {
-        swal({
-            title: "¿Estas seguro?",
-            text: "Al aceptar se hará la compra sactifactoriamente",
-            icon: "warning",
-            buttons: true,
-            dangerMode: true,
-        })
-            .then((willDelete) => {
-                if (willDelete) {
-                    swal("Has comprado el producto perfectamente, redirigiendo", {
-                        icon: "success",
-                    });
-                } else {
-                    swal("Esta bien no se hará la compra!");
-                }
-            });
+        Swal.fire({
+            title: '¿Estas seguro?',
+            text: "¡No podrás revertir esto!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: '!Si!, quiero comprarlo',
+            cancelButtonText: 'Cancelar'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Redirigiendo a la pagina PSE',
+                    showConfirmButton: false,
+                    timer: 1400
+                })
+            }
+        });
     }
 
     const onSee = () => { document.getElementById("content_det2").style.display = 'flex' };
@@ -120,7 +126,7 @@ export const Pago = () => {
                             <img className='img-tarjet_' src={visa} alt="tarjeta imagen" />
                         </div>
                         <div>
-                            <div className='acount_content_all2' id='content_det2'>
+                            <form className='acount_content_all2' id='content_det2'>
                                 <div className='acount_content_tarjet'>
                                     <p className='text_check'>Numero de la tarjeta</p>
                                     <input className='input_acount3' placeholder='5212 **** **** ****' minlength="16" type="number" required />
@@ -178,7 +184,7 @@ export const Pago = () => {
                                     <button type="submit" className='btn_save2' onClick={onBlock}>Cancelar</button>
                                     <button type="submit" className='btn_save' onClick={check}>Comprar</button>
                                 </div>
-                            </div>
+                            </form>
                         </div>
 
                         <div className='content_tarjet_div' onClick={onSee2}>
@@ -187,7 +193,7 @@ export const Pago = () => {
                         </div>
 
                         <div>
-                            <div className='acount_content_all3' id='content_det3'>
+                            <from className='acount_content_all3' id='content_det3'>
                                 <div className='acount_content_tarjet-' >
                                     <p className='text_check'>Banco</p>
                                     <select className='input_check' name="ciudad" required>
@@ -224,7 +230,7 @@ export const Pago = () => {
                                     <button type="submit" className='btn_save2' onClick={onBlock2}>Cancelar</button>
                                     <button type="submit" className='btn_save' onClick={check2}>Comprar</button>
                                 </div>
-                            </div>
+                            </from>
                         </div>
                     </div>
                     <p className='methot_buy' onClick={onSee3}>Ver los metodos de pago</p>

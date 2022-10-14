@@ -6,7 +6,7 @@ import { Header } from '../../Page/Layout/Header/Header';
 import { Link } from 'react-router-dom';
 import delect from '../../Image/eliminar.png'
 import img_prueba from '../../Image/assects/pax.jpg'
-import swal from 'sweetalert';
+import Swal from 'sweetalert2';
 
 export const Amount = (props) => {
 
@@ -39,22 +39,25 @@ export const Amount = (props) => {
     /*----------- eliminar -------------- */
 
     const delectt = () =>{
-        swal({
-            title: "¿Estas seguro?",
-            text: "Al eliminar el producto del carrito ya no se tendra en cuanta en la compra total!",
-            icon: "warning",
-            buttons: true,
-            dangerMode: true,
-          })
-          .then((willDelete) => {
-            if (willDelete) {
-              swal("Has eliminado el producto sactifactoriamente", {
-                icon: "success",
-              });
-            } else {
-              swal("Esta bien no se quitará este producto de carrito!");
+        Swal.fire({
+            title: '¿Estas seguro?',
+            text: "¡No podrás revertir esto!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: '!Si!, quiero elimiarlo',
+            cancelButtonText: 'Cancelar'
+          }).then((result) => {
+            if (result.isConfirmed) {
+              Swal.fire({
+                icon: 'success',
+                title: 'Se ha eliminado el producto del carrito',
+                showConfirmButton: false,
+                timer: 1400
+              })
             }
-          });
+          })
     }
     
 
@@ -68,7 +71,7 @@ export const Amount = (props) => {
                             <img className='product_img' src={img_prueba} alt="imagen prodcuto" />
                         </div>
                         <div className='product_name'>
-                            <p className='error'>Pax noche </p>
+                            <p className='error_'>Pax noche </p>
                         </div>
                         <div className='product_price'>
                             <p className='error'>$ 30000</p>
@@ -84,8 +87,6 @@ export const Amount = (props) => {
                             <img onClick={delectt} className='delect_producto' src={delect} alt="eiminar producto" />
                         </div>
                     </div> <br />
-
-
 
                     {/* prueba al amontonar todad las cards */}
                 </div>
@@ -115,8 +116,8 @@ export const Amount = (props) => {
                             </div>
                         </div>
                         <div className='amount_btn'>
-                            <Link to='/products'><button className='btn_back'>Segir comprando</button></Link>
-                            <button onClick={calcular} className='btn_buy'>Ir a pagar</button>
+                            <button onClick={calcular} className='btn_back'>Calcular</button>
+                            <Link to='/pago'><button  className='btn_buy'>Ir a pagar</button></Link>
                         </div>
                     </div>
                 </div>

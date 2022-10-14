@@ -6,14 +6,20 @@ import { Header } from '../Layout/Header/Header';
 import './buy.css'
 import img from '../../Image/assects/medicasp.jpg';
 import back from '../../Image/x.png';
-
+import Swal from 'sweetalert2';
 
 
 
 export const Buy = () => {
 
     const onHeart = () =>{
-        document.querySelector(".material-symbols-outlined").style.color = 'red'
+        document.querySelector(".material-symbols-outlined").style.color = 'red';
+        Swal.fire({
+            icon: 'success',
+            title: 'Se ha agregado el producto a la lista de deseos',
+            showConfirmButton: false,
+            timer: 1500
+          })
     };
 
     return (
