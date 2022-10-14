@@ -889,10 +889,7 @@ a {
   background-color: #d3ebf7;
   padding: 2.5rem;
   width: 43.4rem;
-  margin-left: 2rem;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   animation: acount_content_all .7s forwards;
 }
 
@@ -1034,7 +1031,7 @@ a {
 
 
 .all_info {
-  padding-top: 6rem;
+  padding-top: 3rem;
 }
 
 /*-------- botones ---------*/

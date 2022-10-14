@@ -35,7 +35,7 @@ export const Products = (props) => {
           </div>
           <div className='containerFiltros'>
             <div className='filterCategoria'>
-              <label>Catergoría</label>
+              <label>Categoría</label>
             </div>
             <hr />
             <div className='filterCategoria'>
