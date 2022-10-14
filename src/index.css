@@ -1441,8 +1441,8 @@ hr {
     margin-left: 8.5rem;
   }
 
-  .formulario{
-  }
+
+  
 }
 @media screen and (max-width:1100px) {
   .formulario {
@@ -1637,9 +1637,7 @@ hr {
       margin-left: 20rem;
     }
 
-  }
-
-  .welcome-back{
+      .welcome-back{
     margin-left: 3rem;
   }
   
@@ -1659,6 +1657,8 @@ hr {
     margin-top: 1rem;
     padding: 0rem;
     margin-left: 0rem;
+  }
+
   }
 
   
