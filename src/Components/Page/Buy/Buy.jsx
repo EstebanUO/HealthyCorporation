@@ -1,29 +1,30 @@
 import React from 'react'
-// import { Header } from '../Layout/Header/Header';
 import { Link } from "react-router-dom";
 import { Footer } from '../Layout/Footer/Footer';
 import { Header } from '../Layout/Header/Header';
+
 import './buy.css'
 import img from '../../Image/assects/medicasp.jpg';
 import back from '../../Image/x.png';
-// import fondo from '../../Image/fondo_compra.jpg'
-
-
+import Swal from 'sweetalert2';
 
 
 
 export const Buy = () => {
 
+    const onHeart = () =>{
+        document.querySelector(".material-symbols-outlined").style.color = 'red';
+        Swal.fire({
+            icon: 'success',
+            title: 'Se ha agregado el producto a la lista de deseos',
+            showConfirmButton: false,
+            timer: 1500
+          })
+    };
 
     return (
-
         <>
             <Header />
-           
-
-
-
-
             <div className='content_buy'>
 
                 <div className='row_buy'>
@@ -60,6 +61,11 @@ export const Buy = () => {
 
                         </div>
                         <div className='addBuy'>
+                            <div>
+                                <span onClick={onHeart} className="material-symbols-outlined">
+                                    favorite
+                                </span>
+                            </div>
                             <Link to="/pago"><button className='addBuy_'>
                                 Comprar ahora
                             </button></Link>
@@ -73,11 +79,6 @@ export const Buy = () => {
                     </div>
                 </div>
             </div>
-
-
-
-
-
 
             <Footer />
         </>

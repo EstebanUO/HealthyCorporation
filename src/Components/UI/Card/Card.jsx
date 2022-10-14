@@ -4,18 +4,18 @@ import pax from '../../Image/assects/pax.jpg';
 import nutribela from '../../Image/assects/nutribela.jpg';
 import acetaminofen from '../../Image/assects/acetaminofen.jpg';
 import { Link } from "react-router-dom";
-import { FaShoppingCart, FaArrowDown, FaSlidersH,FaTh,FaThList } from "react-icons/fa";
-import swal from 'sweetalert';
+import { FaShoppingCart } from "react-icons/fa";
+import Swal from 'sweetalert2'
 import './Card.css'
 
 export const Card = () => {
   const add = () => {
-    swal({
-      title: "Producto agregado al carrito",
-      text: "Se ha añadido correctamente",
-      icon: "success",
-      button: "Seguir comprando",
-    });
+    Swal.fire({
+      icon: 'success',
+      title: 'Se ha agregado el producto al carrito',
+      showConfirmButton: false,
+      timer: 1500
+    })
   }
 
   return (
@@ -28,7 +28,7 @@ export const Card = () => {
           </div>
           <div className='padding_product'>
             <div>
-              <p className='name_Product'>Medicasp </p>
+            <Link to="/compra"><p className='name_Product'>Medicasp </p></Link>
             </div>
             <div>
               <p className='price_product'>$ 40.000</p>
@@ -54,7 +54,7 @@ export const Card = () => {
           </div>
           <div className='padding_product'>
             <div>
-              <p className='name_Product'>Pax noche </p>
+            <Link to="/compra"><p className='name_Product'>Pax noche </p></Link>
             </div>
 
             <div>
@@ -81,7 +81,7 @@ export const Card = () => {
           </div>
           <div className='padding_product'>
             <div>
-              <p className='name_Product'>Nutribela 10</p>
+            <Link to="/compra"><p className='name_Product'>Nutribela 10</p></Link>
             </div>
 
             <div>
@@ -108,7 +108,7 @@ export const Card = () => {
           </div>
           <div className='padding_product'>
             <div>
-              <p className='name_Product'>Acetaminofén  </p>
+            <Link to="/compra"><p className='name_Product'>Acetaminofén  </p></Link>
             </div>
 
             <div>

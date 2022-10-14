@@ -4,7 +4,7 @@ import { Footer } from "../Layout/Footer/Footer";
 import master from '../../Image/Tarjetas/master2.PNG'
 import visa from '../../Image/Tarjetas/visa2.PNG'
 import pse from '../../Image/Tarjetas/pse2.PNG'
-import swal from 'sweetalert';
+import Swal from 'sweetalert2';
 import logo2 from '../../Image/logo.png'
 import back from '../../Image/back.png';
 import './Pago.css'
@@ -29,41 +29,47 @@ import icon_regresar from '../../Image/icon_regresar.png'
 
 export const Pago = () => {
     const check = () => {
-        swal({
-            title: "¿Estas seguro?",
-            text: "Al aceptar se hará la compra sactifactoriamente",
-            icon: "warning",
-            buttons: true,
-            dangerMode: true,
-        })
-            .then((willDelete) => {
-                if (willDelete) {
-                    swal("Has comprado el producto perfectamente, te llegará un correo co los datos de la compra", {
-                        icon: "success",
-                    });
-                } else {
-                    swal("Esta bien no se hará la compra!");
-                }
-            });
+        Swal.fire({
+            title: '¿Estas seguro?',
+            text: "¡No podrás revertir esto!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: '!Si!, quiero comprarlo',
+            cancelButtonText: 'Cancelar'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Se ha hecho la compra sactifactiriamente',
+                    showConfirmButton: false,
+                    timer: 1400
+                })
+            }
+        });
     }
 
     const check2 = () => {
-        swal({
-            title: "¿Estas seguro?",
-            text: "Al aceptar se hará la compra sactifactoriamente",
-            icon: "warning",
-            buttons: true,
-            dangerMode: true,
-        })
-            .then((willDelete) => {
-                if (willDelete) {
-                    swal("Has comprado el producto perfectamente, redirigiendo", {
-                        icon: "success",
-                    });
-                } else {
-                    swal("Esta bien no se hará la compra!");
-                }
-            });
+        Swal.fire({
+            title: '¿Estas seguro?',
+            text: "¡No podrás revertir esto!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: '!Si!, quiero comprarlo',
+            cancelButtonText: 'Cancelar'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Redirigiendo a la pagina PSE',
+                    showConfirmButton: false,
+                    timer: 1400
+                })
+            }
+        });
     }
 
     const onSee = () => { document.getElementById("content_det2").style.display = 'flex' };
@@ -87,19 +93,19 @@ export const Pago = () => {
 
             <div className='center_'>
                 <div className='circles'>
-                <img className='icon' src={icon_direction} alt="icon" />
+                    <img className='icon' src={icon_direction} alt="icon" />
                 </div>
 
                 <div className='linea_procesing'>
                 </div>
                 <div className='circles_'>
-                <img className='icon2' src={icon_regresar} alt="icon" />
+                    <img className='icon2' src={icon_regresar} alt="icon" />
                 </div>
                 <div className='linea_procesing2'>
                 </div>
 
                 <div className='circles3'>
-                <img className='icon' src={icon_buy} alt="" />
+                    <img className='icon' src={icon_buy} alt="" />
                 </div>
             </div>
 
@@ -120,7 +126,7 @@ export const Pago = () => {
                             <img className='img-tarjet_' src={visa} alt="tarjeta imagen" />
                         </div>
                         <div>
-                            <div className='acount_content_all2' id='content_det2'>
+                            <form className='acount_content_all2' id='content_det2'>
                                 <div className='acount_content_tarjet'>
                                     <p className='text_check'>Numero de la tarjeta</p>
                                     <input className='input_acount3' placeholder='5212 **** **** ****' minlength="16" type="number" required />
@@ -178,7 +184,7 @@ export const Pago = () => {
                                     <button type="submit" className='btn_save2' onClick={onBlock}>Cancelar</button>
                                     <button type="submit" className='btn_save' onClick={check}>Comprar</button>
                                 </div>
-                            </div>
+                            </form>
                         </div>
 
                         <div className='content_tarjet_div' onClick={onSee2}>
@@ -187,7 +193,7 @@ export const Pago = () => {
                         </div>
 
                         <div>
-                            <div className='acount_content_all3' id='content_det3'>
+                            <from className='acount_content_all3' id='content_det3'>
                                 <div className='acount_content_tarjet-' >
                                     <p className='text_check'>Banco</p>
                                     <select className='input_check' name="ciudad" required>
@@ -224,7 +230,7 @@ export const Pago = () => {
                                     <button type="submit" className='btn_save2' onClick={onBlock2}>Cancelar</button>
                                     <button type="submit" className='btn_save' onClick={check2}>Comprar</button>
                                 </div>
-                            </div>
+                            </from>
                         </div>
                     </div>
                     <p className='methot_buy' onClick={onSee3}>Ver los metodos de pago</p>
@@ -233,66 +239,66 @@ export const Pago = () => {
 
 
             <div className='content_metodos' id='content_det'>
-                    <div className='Trasparent'>
-                        <div className='opacidad'>
-                            <div className='metodos'>
-                                <nav className='medoto_up'>
-                                    <p className='text_metodos_nav'>Medios de pago para este producto</p>
-                                    <img onClick={onBlock3} className='img_up' src={back} alt="atras" />
-                                </nav>
+                <div className='Trasparent'>
+                    <div className='opacidad'>
+                        <div className='metodos'>
+                            <nav className='medoto_up'>
+                                <p className='text_metodos_nav'>Medios de pago para este producto</p>
+                                <img onClick={onBlock3} className='img_up' src={back} alt="atras" />
+                            </nav>
 
-                                <div className='text_metodos'>
-                                    <p>Puedes pagar con cualquiera de estos medios. Es rápido, seguro y no tiene costo adicional.</p>
-                                    <hr />
+                            <div className='text_metodos'>
+                                <p>Puedes pagar con cualquiera de estos medios. Es rápido, seguro y no tiene costo adicional.</p>
+                                <hr />
+                            </div>
+
+                            <div className='text_metodos_'>
+                                <p className='text_metodos_1'><b>Tarjeta de Crédito</b></p>
+                                <p className='text_metodos_2'>Acreditación instantánea.</p>
+
+
+                                <div className='trajetas_metodo'>
+                                    <img src={tarjeta} alt="imagen_tarjeta" />
+                                    <img src={tarjeta1} alt="imagen_tarjeta" />
+                                    <img src={tarjeta2} alt="imagen_tarjeta" />
+                                    <img src={tarjeta3} alt="imagen_tarjeta" />
+                                    <img src={tarjeta4} alt="imagen_tarjeta" />
+                                    <img src={tarjeta5} alt="imagen_tarjeta" />
+                                    <img src={tarjeta9} alt="imagen_tarjeta" />
+                                    <img src={tarjeta8} alt="imagen_tarjeta" />
+                                    <img src={tarjeta11} alt="imagen_tarjeta" />
                                 </div>
-
-                                <div className='text_metodos_'>
-                                    <p className='text_metodos_1'><b>Tarjeta de Crédito</b></p>
-                                    <p className='text_metodos_2'>Acreditación instantánea.</p>
+                                <hr />
+                            </div>
 
 
-                                    <div className='trajetas_metodo'>
-                                        <img src={tarjeta} alt="imagen_tarjeta" />
-                                        <img src={tarjeta1} alt="imagen_tarjeta" />
-                                        <img src={tarjeta2} alt="imagen_tarjeta" />
-                                        <img src={tarjeta3} alt="imagen_tarjeta" />
-                                        <img src={tarjeta4} alt="imagen_tarjeta" />
-                                        <img src={tarjeta5} alt="imagen_tarjeta" />
-                                        <img src={tarjeta9} alt="imagen_tarjeta" />
-                                        <img src={tarjeta8} alt="imagen_tarjeta" />
-                                        <img src={tarjeta11} alt="imagen_tarjeta" />
-                                    </div>
-                                    <hr />
+                            <div className='text_metodos_'>
+                                <p className='text_metodos_1'><b>Tarjeta de Débito</b></p>
+                                <p className='text_metodos_2'>Acreditación instantánea.</p>
+
+
+                                <div className='trajetas_metodo'>
+                                    <img src={tarjeta7} alt="imagen_tarjeta" />
+                                    <img src={tarjeta6} alt="imagen_tarjeta" />
                                 </div>
+                                <hr />
+                            </div>
 
 
-                                <div className='text_metodos_'>
-                                    <p className='text_metodos_1'><b>Tarjeta de Débito</b></p>
-                                    <p className='text_metodos_2'>Acreditación instantánea.</p>
+                            <div className='text_metodos_'>
+                                <p className='text_metodos_1'><b>Otros medios de pago</b></p>
+                                <p className='text_metodos_1'><b>Transferencia desde tu banco</b></p>
+                                <p className='text_metodos_2'>Acreditación instantánea.</p>
 
 
-                                    <div className='trajetas_metodo'>
-                                        <img src={tarjeta7} alt="imagen_tarjeta" />
-                                        <img src={tarjeta6} alt="imagen_tarjeta" />
-                                    </div>
-                                    <hr />
-                                </div>
-
-
-                                <div className='text_metodos_'>
-                                    <p className='text_metodos_1'><b>Otros medios de pago</b></p>
-                                    <p className='text_metodos_1'><b>Transferencia desde tu banco</b></p>
-                                    <p className='text_metodos_2'>Acreditación instantánea.</p>
-
-
-                                    <div className='trajetas_metodo'>
-                                        <img src={tarjeta10} alt="imagen_tarjeta" />
-                                    </div>
-                                </div>
+                                <div className='trajetas_metodo'>
+                                    <img src={tarjeta10} alt="imagen_tarjeta" />
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
             <Footer />
         </>
     )
