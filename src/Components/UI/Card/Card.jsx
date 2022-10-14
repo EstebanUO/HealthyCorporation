@@ -14,7 +14,7 @@ export const Card = () => {
       icon: 'success',
       title: 'Se ha agregado el producto al carrito',
       showConfirmButton: false,
-      timer: 1500
+      timer: 1600
     })
   }
 

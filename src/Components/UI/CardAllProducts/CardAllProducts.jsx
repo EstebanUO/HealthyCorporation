@@ -5,16 +5,16 @@ import nutribela from '../../Image/assects/nutribela.jpg';
 import acetaminofen from '../../Image/assects/acetaminofen.jpg';
 import { Link } from "react-router-dom";
 import { FaShoppingCart, FaArrowDown, FaSlidersH,FaTh,FaThList } from "react-icons/fa";
-import swal from 'sweetalert';
+import Swal from 'sweetalert2'
 
 export const CardAllProducts = () => {
   const add = () => {
-    swal({
-      title: "Producto agregado al carrito",
-      text: "Se ha añadido correctamente",
-      icon: "success",
-      button: "Seguir comprando",
-    });
+    Swal.fire({
+      icon: 'success',
+      title: 'Se ha agregado el producto al carrito',
+      showConfirmButton: false,
+      timer: 1600
+    })
   }
 
   return (
