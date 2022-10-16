@@ -1,41 +1,91 @@
 .material-symbols-outlined {
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: rgb(146, 146, 146);
     cursor: pointer;
     transition: all 400ms ease;
     font-variation-settings:
-    'FILL' 1,
-    'wght' 400,
-    'GRAD' 200,
-    'opsz' 40
-  }
+        'FILL' 1,
+        'wght' 400,
+        'GRAD' 200,
+        'opsz' 40
+}
 
-  .material-symbols-outlined:hover {
+/*contador*/
+.product_btn_ {
+    padding-top: .7rem;
+    padding-bottom: .7rem;
+}
+
+.btn_sum2 {
+    border: none;
+    border-radius: 0.8rem;
+    background-color: #5bc3fc;
+    width: 2.4rem;
+    height: 2.4rem;
+}
+
+.product_btn3 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 1.6rem;
+    font-size: 1.5rem;
+}
+
+.btn_res2 {
+    border: none;
+    border-radius: 0.8rem;
+    background-color: #5bc3fc;
+    width: 2.4rem;
+    height: 2.4rem;
+}
+
+.Content_favorite {
+    border: solid gray 2.9px;
+    border-radius: .7rem;
+    width: 8rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
     transition: all 300ms ease;
-    color: rgb(249, 94, 94);
-  }
+    cursor: pointer;
+}
 
-  /*descripcion dell producto*/
-.content_description{
+.Content_favorite:hover {
+    transition: all 300ms ease;
+    border: 2px solid rgb(249, 94, 94);
+    background-color: rgb(251, 227, 227);
+    ;
+}
+
+.like {
+    margin-top: 14px;
+    color: gray;
+}
+
+/*descripcion dell producto*/
+.content_description {
     width: 27rem;
     margin-left: 2rem;
 }
 
-.description_all{
+.description_all {
     display: flex;
     justify-content: space-around;
 }
-.text-descrip{
+
+.text-descrip {
     color: gray;
 }
 
-.text-descrip2{
+.text-descrip2 {
     color: gray;
     display: flex;
     justify-content: center;
 }
 
-hr{
+hr {
     color: gray;
     background-color: gray;
     height: .2rem;
@@ -43,7 +93,7 @@ hr{
     box-shadow: 2px 7px 15px black;
 }
 
-.hr2{
+.hr2 {
     color: gray;
     background-color: gray;
     height: .2rem;
@@ -51,12 +101,12 @@ hr{
     box-shadow: 2px 7px 15px black;
 }
 
-.space_of_contents{
+.space_of_contents {
     display: flex;
     justify-content: center;
 }
 
-.Content-card{
+.Content-card {
     width: 40rem;
     margin-top: -6rem;
 }
@@ -198,7 +248,7 @@ hr{
     background-color: #5bc3fc;
     border: none;
     transition: all 300ms;
-    width: 11rem;
+    width: 8rem;
     height: 2.8rem;
     margin-left: 0.7rem;
 }
@@ -213,13 +263,13 @@ hr{
 }
 
 .addBuy_:hover {
-    background-color: #eee7e7;
+    background-color: #ace3ff;
     transition: all 300ms;
     border: solid #5bc3fc;
 }
 
 .addBuy_2:hover {
-    background-color: #5bc3fc;
+    background-color: #ace3ff;
     transition: all 300ms;
 }
 
@@ -281,7 +331,7 @@ hr{
 
 .img_up_close {
     display: block;
-    margin-top: -26rem;
+    margin-top: -28rem;
     margin-right: -3rem;
     margin-left: -12rem;
 }
@@ -480,22 +530,35 @@ hr{
 }
 
 @media screen and (max-width:1920px) {
-   
-.description_all{
-    display: flex;
-    justify-content: center;
+
+    .description_all {
+        display: flex;
+        justify-content: center;
+    }
+
+    .content_description {
+        width: 47rem;
+    }
+
+    .hr2 {
+        color: gray;
+        background-color: gray;
+        height: .2rem;
+        width: 85rem;
+        margin-bottom: 2rem;
+        box-shadow: 2px 7px 15px black;
+    }
 }
 
-.content_description{
-    width: 47rem;
-}
+@media screen and (max-width:1400px) {
 
-.hr2{
-    color: gray;
-    background-color: gray;
-    height: .2rem;
-    width: 85rem;
-    margin-bottom: 2rem;
-    box-shadow: 2px 7px 15px black;
-}
+    .hr2 {
+        color: gray;
+        background-color: gray;
+        height: .2rem;
+        width: 80rem;
+        margin-bottom: 2rem;
+        box-shadow: 2px 7px 15px black;
+        margin-left: -0.7rem;
+    }
 }
