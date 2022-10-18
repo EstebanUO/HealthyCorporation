@@ -11,7 +11,8 @@ export const ListaDeseos = () => {
     <div>
         <Header/>
         <div className="containerDeseos">
-          <h1 className="titleDeseos">LISTA DE DESEOS</h1><br />
+          <h1 className="titleDeseos">LISTA DE DESEOS</h1>
+          <hr />
           <div className="descripcionDeseos">
             <h3 className="titleDescripcionDeseos2">NOMBRE DEL PRODUCTO</h3>
             <h3 className="titleDescripcionDeseos2">PRECIO UNITARIO</h3>
