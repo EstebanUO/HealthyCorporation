@@ -21,7 +21,7 @@ export const NavBar = () => {
             document.getElementById("navbar").style.display = "none";
             document.getElementById("nav").style.display = "flex";
         }
-      }
+    }
 
   return (
     <div>

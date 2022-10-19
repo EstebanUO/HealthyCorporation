@@ -1202,7 +1202,7 @@ a {
   background: whitesmoke;
   border-radius: 1rem;
   width: 15rem;
-  height: 26rem;
+  height: 35rem;
 }
 
 .iconFilter{
@@ -1364,6 +1364,40 @@ hr {
   border: 2px solid black;
 }
 
+.categIcon{
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.subCategorias{
+  background-color: #f5f5f5;
+  max-height: 10rem;
+  overflow-y: auto;
+}
+
+.subCategorias2{
+  display: flex;
+  align-items: baseline;
+  gap: .5rem;
+  display: none;
+}
+
+.iconArrow{
+  position: absolute;
+  display: block;
+  margin-left: 12rem;
+}
+
+#selectPrecios{
+  border-radius: 1rem;
+  padding: .2rem;
+  margin: .5rem;
+}
+
+.productsEncontrados{
+  padding: .5rem;
+}
 /*---------- Range input ------------*/
 .wrapper{
   position: relative;

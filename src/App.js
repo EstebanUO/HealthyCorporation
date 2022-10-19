@@ -68,7 +68,6 @@ function App() {
           } else if(userLogin !== data.email && passwordUser !== data.password){
             setmessagesLogin("usuario no registrado")
             setalertConexionLogin(false)
-           
           }
           return console.log("data obtenida");
         });
