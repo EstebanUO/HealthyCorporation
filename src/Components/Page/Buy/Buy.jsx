@@ -17,6 +17,12 @@ export const Buy = () => {
     const [amount, setAmount] = useState(1);
     const [valor, setValor] = useState(10);
 
+    /* Actualizar la cantidad disponible*/
+    // const URl = '';
+    // const hola= () => {
+    //     setValor
+    // }
+
     const sumar = () => {
         setAmount(amount + 1);
         if (amount === valor) {
@@ -45,23 +51,15 @@ export const Buy = () => {
 
     const onHeart = () => {
         document.querySelector(".material-symbols-outlined").style.color = 'red';
-        document.querySelector(".Content_favorite").style.border = '3px solid red';
+        document.querySelector(".Content_favorite").style.border = ' solid red';
         // document.querySelector(".Content_favorite").style.backgroundColor = '';
         setCounter(counter + 1);
-
-        Swal.fire({
-            icon: 'success',
-            title: 'Se ha agregado el producto a la lista de deseos',
-            showConfirmButton: false,
-            timer: 1500
-        })
     };
 
     return (
         <>
             <Header />
             <div className='content_buy'>
-
                 <div className='row_buy'>
                     <div className='imgBuy'>
                         <img className='img_buy' src={img} alt="Imagen compra" />
@@ -131,12 +129,12 @@ export const Buy = () => {
                 <div className="content_description">
                     <h1 className='text-descrip'>Características</h1>
                     <ul>
-                        <li>asd</li>
-                        <li>qwe</li>
-                        <li>we</li>
-                        <li>12</li>
-                        <li>asd</li>
-                        <li>s</li>
+                        <li>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li>5</li>
+                        <li>6</li>
                     </ul><hr />
 
                     <h1 className='text-descrip'>Modo de uso</h1>
