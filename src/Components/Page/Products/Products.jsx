@@ -19,29 +19,28 @@ export const Products = (props) => {
   let displayValOne = document.getElementById("range1");
   let displayValTwo = document.getElementById("range2");
   let minGap = 0;
-  let sliderTrack = document.getElementById("slider-track");
   let sliderMaxValue = document.getElementById("slider-1");
 
   function slideOne() {
     if (slider1 - slider2 >= minGap) {
       setSlider1(slider2 - minGap)
     }
-    displayValOne.textContent = document.getElementById("slider-1").value;
+    displayValOne.textContent = slider1;
     fillColor();
   }
 
   function slideTwo() {
-    if (document.getElementById("slider-2").value - document.getElementById("slider-1").value <= minGap) {
-      document.getElementById("slider-2").value = document.getElementById("slider-1").value + minGap;
+    if (slider2 - slider1 <= minGap) {
+      slider2 = slider1 + minGap;
     }
-    displayValTwo.textContent = document.getElementById("slider-2").value;
+    displayValTwo.textContent = slider2;
     fillColor();
   }
 
   function fillColor() {
-    const percent1 = (document.getElementById("slider-1").value / sliderMaxValue) * 100;
-    const percent2 = (document.getElementById("slider-2").value * 100);
-    sliderTrack.style.background = `linear-gradient(to right, #dadae5 ${percent1}% , #3264fe ${percent1}% , #3264fe ${percent2}%, #dadae5 ${percent2}%)`;
+    const percent1 = slider1 / sliderMaxValue * 100;
+    const percent2 = slider2* 100;
+    document.getElementById("slider-track").style.background = `linear-gradient(to right, #dadae5 ${percent2}% , #3264fe ${percent2}% , #3264fe ${percent1}%, #dadae5 ${percent1}%)`;
   }
 
   return (
@@ -52,7 +51,9 @@ export const Products = (props) => {
       <br /><br />
       <div className='container-Orden-Productos'>
         <p className='productsEncontrados'>6363 | Productos Encontrados</p>
-        | <FaTh /> | <FaThList /> |
+        <div className='iconsOrderProducts'>
+          | <FaTh className='iconOrder'/> | <FaThList className='iconOrder'/> |
+        </div>
         <p className='productsEncontrados'>Ordenar por:</p>
         <select name="" id="selectPrecios">
           <option value="">Relevancia</option>
@@ -64,7 +65,6 @@ export const Products = (props) => {
         </select>
       </div>
       <div className='containerFilter'>
-
         <div className='containerCategorias'>
           <div className='containerTitle'>
             <h2 className='titleFilter'><FaSlidersH className='iconFilter' /> Filtrar por:</h2>

@@ -346,8 +346,8 @@ header img {
 .submitReg2 {
   padding: 1rem;
   font-weight: 400;
-  background-color: #4a4aee;
-  border-radius: 2rem;
+  background-color: #0a58ca;
+  border-radius: 1rem;
   border: none;
   outline: none;
   cursor: pointer;
@@ -370,6 +370,16 @@ header img {
   align-items: baseline;
   text-align: center;
   justify-content: center;
+}
+
+input[type="checkbox"] {
+  background-color: initial;
+  cursor: pointer;
+  appearance: auto;
+  box-sizing: border-box;
+  margin: 3px 3px 3px 4px;
+  padding: initial;
+  border: initial;
 }
 
 .titleReg {
@@ -458,8 +468,8 @@ header img {
 .message button {
   padding: 1rem;
   font-weight: 400;
-  background-color: #4a4aee;
-  border-radius: 2rem;
+  background-color: #0a58ca;
+  border-radius: 1rem;
   border: none;
   outline: none;
   cursor: pointer;
@@ -485,8 +495,8 @@ header img {
 .message2 button {
   padding: 1rem;
   font-weight: 400;
-  background-color: #4a4aee;
-  border-radius: 2rem;
+  background-color: #0a58ca;
+  border-radius: 1rem;
   border: none;
   outline: none;
   cursor: pointer;
@@ -1393,11 +1403,21 @@ hr {
   border-radius: 1rem;
   padding: .2rem;
   margin: .5rem;
+  /* background: #5bc3fc; */
 }
 
 .productsEncontrados{
   padding: .5rem;
 }
+
+.iconsOrderProducts{
+  font-size: 1.5rem;
+}
+
+.iconOrder{
+  color: #0896e2;
+}
+
 /*---------- Range input ------------*/
 .wrapper{
   position: relative;
