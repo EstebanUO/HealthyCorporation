@@ -1565,6 +1565,10 @@ input[type="range"]:active::-webkit-slider-thumb{
     margin-left: 10rem;
   }
 
+  .containerCategorias{
+    display: none;
+  }  
+
 }
 
 
@@ -1581,12 +1585,7 @@ input[type="range"]:active::-webkit-slider-thumb{
     margin-left: 8.5rem;
   }
 
-
-
-}
-@media screen and (max-width:1100px) {
   .formulario {
-
     display: inline-block;
   }
 
@@ -1595,12 +1594,10 @@ input[type="range"]:active::-webkit-slider-thumb{
     margin-top: 0rem;
   }
 
-  .container
   
   .containerCategorias{
     display: none;
-    display: flow-root;
-  }
+  }  
 
 
 }
@@ -1629,6 +1626,14 @@ input[type="range"]:active::-webkit-slider-thumb{
   .containerFilter{
     margin-left: 10rem;
   }
+
+  .containerCategorias{
+    display: none;
+  }
+
+  .card_all_product{
+    margin-right: 12rem;
+  }
 }
 
 
@@ -1654,6 +1659,8 @@ input[type="range"]:active::-webkit-slider-thumb{
 
 }
 
+
+
 /*-------- Responsive 900px ---------*/
 
 @media screen and (max-width:900px) {
@@ -1667,15 +1674,23 @@ input[type="range"]:active::-webkit-slider-thumb{
   }
   .formulario3{
     margin-left: 8.8rem;
-    }
+  }
   
-    .message2{
+  .message2{
     margin-left: 7.1rem;
-    }
+  }
+
+  .card_all_product{
+      margin-right: 13rem;
+  }
   
 }
+/*-------- Responsive 850px ---------*/
+@media  screen and (max-width:850px) {
 
 
+  
+}
 
 
 /*-------- Responsive 768px ---------*/
@@ -1701,6 +1716,10 @@ input[type="range"]:active::-webkit-slider-thumb{
     margin-left: 10rem;
     margin-top: -5rem;
   }
+
+  .card_all_product{
+    margin-left: 5rem;
+  }
 }
 
 
@@ -1715,20 +1734,17 @@ input[type="range"]:active::-webkit-slider-thumb{
     margin: 1rem;
     margin-top: 0rem;
   }
-  @media screen and (-width:700px) {
-    .formulario {
+  .formulario {
       display: inline-block;
-    }
+  }
 
-    .formulario2 {
+  .formulario2 {
       margin: 1rem;
       margin-top: 0rem;
-    }
+  }
 
-    #welcome-back {
+  #welcome-back {
       margin-left: -3rem;
-    }
-
   }
 
   .formulario3 {
@@ -1737,27 +1753,39 @@ input[type="range"]:active::-webkit-slider-thumb{
   }
 
 
-.formulario3{
+  .formulario3{
   margin-top: 3rem;
   margin-left: 1rem;
   width: 32rem;
-}
+  }
 
-.message2{
+  .message2{
   margin-top: 2rem;
   padding: 0rem;
   margin-left: 3rem;
-}
+  }
 
-.button-show2{
+  .button-show2{
   margin-left: 26rem;
-}
-}
+  }
 
+  .card_all_product{
+    margin-right: 12rem;
+    grid-template-columns: 13rem 15rem 15rem;
+    justify-items: end;
+  }
 
   .button-show2 {
     margin-left: 26rem;
   }
+
+}
+
+ 
+
+
+
+
 
 
   /*-------- Responsive 673px ---------*/
@@ -1808,6 +1836,9 @@ input[type="range"]:active::-webkit-slider-thumb{
     margin-top: 1rem;
     padding: 0rem;
     margin-left: 0rem;
+  }
+  .card_all_product{
+    margin-right: 10rem;
   }
 
   }
@@ -1862,6 +1893,12 @@ input[type="range"]:active::-webkit-slider-thumb{
     .button-show2{
       margin-left: 19rem;
     }
+
+    .card_all_product{
+      display: inline-block;
+      margin-left: -10rem;
+      margin-right: 1rem;
+    }
   }
 
 /*-------- Responsive 480px ---------*/
@@ -1904,6 +1941,12 @@ input[type="range"]:active::-webkit-slider-thumb{
     margin-left: 2rem;
     margin-right: 4rem;
   }
+
+  .all{
+    margin-right: 0rem;
+  }
+
+
 }
 
 /* Era gol de yepes */
