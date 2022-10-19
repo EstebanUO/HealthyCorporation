@@ -968,7 +968,7 @@ a {
   border-radius: 0.5rem;
   font-size: 1.3rem;
   margin-bottom: 1rem;
-  margin-top: 3rem;
+  margin-top: 5.5rem;
   transition: all 400ms;
   margin-right: 2rem;
 }
@@ -1039,9 +1039,18 @@ a {
   z-index: 1;
 }
 
-
 .all_info {
   padding-top: 3rem;
+}
+
+.cerrarSesion{
+  width: 2rem;
+}
+
+.btnCerrarSesion{
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: center;
 }
 
 /*-------- botones ---------*/
@@ -1534,6 +1543,61 @@ input[type="range"]:active::-webkit-slider-thumb{
   bottom: -14px;
   left: 0;
   right: 0;
+}
+
+/*--------------- Forgot Password --------*/
+.forgotPass{
+  width: 25rem;
+  height: 18rem;
+  margin: 5rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: #0e1e251f 0px 2px 4px 0px, #0e1e2552 0px 2px 16px 0px;
+}
+
+.recuperarPass{
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 1rem;
+}
+
+.inputRecuperar{
+  border-style: none;
+  width: 70%;
+  border-radius: 5px;
+  padding: 5px 0px 5px 40px;
+  box-shadow: #0e1e251f 0px 4px 8px 0px, #0e1e2552 0px 4px 32px 0px;
+  outline: none;
+}
+
+.inputRecuperar:hover{
+  border-color: #067cbb;
+}
+
+.btnRecuperar{
+  border-style: none;
+  width: 70%;
+  height: 16%;
+  padding: .5rem;
+  border-radius: 10px;
+  background: #067cbb;
+  color: #fff;
+  font-weight: 600;
+}
+
+.alertError{
+  color: #970303;
+  text-align: center;
+}
+
+.iconEmailRecuperar{
+  position: absolute;
+  font-size: 1.5rem;
+  margin-left: -7.5rem;
+  margin-top: 0.2rem;
+  color: #2a9bd1;
 }
 
 

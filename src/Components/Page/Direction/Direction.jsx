@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-
+import cerrar from '../../Image/Icons/cerrar.png';
 import { Footer } from '../Layout/Footer/Footer'
 import { Header } from '../Layout/Header/Header'
 
@@ -10,7 +10,7 @@ import { Header } from '../Layout/Header/Header'
 export const Direction = () => {
   return (
     <div>
-      <Header />
+      <Header /><br /><br />
       <div className='acount_up'>
         <div className="acount_all">
           <div className='all_info'>
@@ -19,6 +19,7 @@ export const Direction = () => {
               <Link to='/direction' className='select_btn'>Mis direcciones</Link>
               <Link to='/tarjet' className='c'>Mis tarjetas</Link>
               <Link to='/password' className='d'>Mi contraseña</Link>
+              <span className='btnCerrarSesion' role="button"><img src={cerrar} alt="cerrarSesion" className='cerrarSesion'/> Cerrar sesión</span>
             </div>
           </div>
           <div className='acount_content_all'>
@@ -51,7 +52,7 @@ export const Direction = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div><br /><br />
       <Footer />
     </div>
   )

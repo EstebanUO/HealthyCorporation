@@ -2,13 +2,14 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { Footer } from '../Layout/Footer/Footer'
 import { Header } from '../Layout/Header/Header'
+import cerrar from '../../Image/Icons/cerrar.png';
 
 
 
 export const Tarjet = () => {
   return (
     <div>
-      <Header />
+      <Header /><br /><br />
       <div className='acount_up'>
         <div className="acount_all">
           <div className='all_info'>
@@ -17,6 +18,7 @@ export const Tarjet = () => {
               <Link to='/direction' className='b'>Mis direcciones</Link>
               <Link to='/tarjet' className='select_btn'>Mis tarjetas</Link>
               <Link to='/password' className='d'>Mi contraseña</Link>
+              <span className='btnCerrarSesion' role="button"><img src={cerrar} alt="cerrarSesion" className='cerrarSesion'/> Cerrar sesión</span>
             </div>
           </div>
 
@@ -79,7 +81,7 @@ export const Tarjet = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div><br /><br />
       <Footer />
     </div>
   )

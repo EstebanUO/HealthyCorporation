@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { Footer } from '../Layout/Footer/Footer'
 import { Header } from '../Layout/Header/Header'
+import cerrar from '../../Image/Icons/cerrar.png';
 
 
 
@@ -9,7 +10,7 @@ import { Header } from '../Layout/Header/Header'
 export const Password = () => {
   return (
     <div>
-      <Header />
+      <Header /><br /><br />
       <div className='acount_up'>
         <div className="acount_all">
           <div className='all_info'>
@@ -18,6 +19,7 @@ export const Password = () => {
               <Link to='/direction' className='b'>Mis direcciones</Link>
               <Link to='/tarjet' className='c'>Mis tarjetas</Link>
               <Link to='/password' className='select_btn'>Mi contraseña</Link>
+              <span className='btnCerrarSesion' role="button"><img src={cerrar} alt="cerrarSesion" className='cerrarSesion'/> Cerrar sesión</span>
             </div>
           </div>
           <div className='acount_content_all'>
@@ -43,7 +45,7 @@ export const Password = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div><br /><br />
       <Footer />
     </div>
   )

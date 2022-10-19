@@ -1,6 +1,9 @@
 import emailjs from 'emailjs-com'
 import React,{useState} from 'react';
 import axios from "axios";
+import { Header } from '../Layout/Header/Header';
+import { Footer } from '../Layout/Footer/Footer';
+import { FaEnvelope } from "react-icons/fa";
 
 function RecoverPassword(props) {
 
@@ -65,7 +68,7 @@ function RecoverPassword(props) {
         let valid = true
 
         if(email.indexOf('.') === -1 || email.indexOf('@') === -1 || /\s/.test(email) || email==="" ){
-            seterrorEmail("debes ingresar un email valido")
+            seterrorEmail("Debes ingresar un email valido!!")
             valid=false
         }
 
@@ -94,15 +97,18 @@ function RecoverPassword(props) {
 
     return (
         <div>
+            <Header/>
             {/* no eliminar ni modificar nada de esto, solo estilos */}
-            <div>
-                <h1>recuperar contraseña</h1>
-                <input type="email" placeholder='ingresa tu Email' onChange={(e)=>setemail(e.target.value)} value={email} />
-                <button onClick={getApi}>Recuperar contraseña</button>
-                <p>{errorEmail}</p>
+            <div className='containerForgotPass'>
+                <div className='forgotPass'>
+                    <span className='recuperarPass'>Recuperar contraseña</span><br />
+                    <input type="email" placeholder='Ingresa tu correo' className='inputRecuperar' onChange={(e)=>setemail(e.target.value)} value={email} /><FaEnvelope className='iconEmailRecuperar'/><br/>
+                    <button onClick={getApi} className="btnRecuperar">Enviar contraseña</button>
+                    <p className='alertError'>{errorEmail}</p>
+                </div>
             </div>
             {/* hasta aca*/}
-       
+            <Footer/>
         </div>
     );
 }
