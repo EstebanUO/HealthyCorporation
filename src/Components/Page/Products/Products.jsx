@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import { Header } from '../Layout/Header/Header';
 import { Footer } from '../Layout/Footer/Footer';
 // import Slider from '../../UI/js/Slider';
@@ -7,6 +7,42 @@ import { FaArrowDown, FaSlidersH,FaTh,FaThList } from "react-icons/fa";
 import { Categories } from '../../UI/Categories/Categories';
 
 export const Products = (props) => {
+
+  const [slider1, setSlider1] = useState(30);
+  const [slider2, setSlider2] = useState(70);
+
+  window.onload = function(){
+    slideOne()
+    slideTwo()
+  };
+
+  let displayValOne = document.getElementById("range1");
+  let displayValTwo = document.getElementById("range2");
+  let minGap = 0;
+  let sliderTrack = document.getElementById("slider-track");
+  let sliderMaxValue = document.getElementById("slider-1");
+
+  function slideOne(){
+      if(slider1 - slider2 >= minGap){
+        setSlider1(slider2-minGap) 
+      }
+      displayValOne.textContent = document.getElementById("slider-1").value;
+      fillColor();
+  }
+
+  function slideTwo(){
+      if(document.getElementById("slider-2").value - document.getElementById("slider-1").value <= minGap){
+        document.getElementById("slider-2").value = document.getElementById("slider-1").value + minGap;
+      }
+      displayValTwo.textContent = document.getElementById("slider-2").value;
+      fillColor();
+  }
+
+  function fillColor(){
+      const percent1 = (document.getElementById("slider-1").value / sliderMaxValue) * 100;
+      const percent2 = (document.getElementById("slider-2").value * 100);
+      sliderTrack.style.background = `linear-gradient(to right, #dadae5 ${percent1}% , #3264fe ${percent1}% , #3264fe ${percent2}%, #dadae5 ${percent2}%)`;
+  }
 
   return (
     <div>
@@ -35,7 +71,7 @@ export const Products = (props) => {
           </div>
           <div className='containerFiltros'>
             <div className='filterCategoria'>
-              <label>Catergoría</label>
+              <label>Categoría</label>
             </div>
             <hr />
             <div className='filterCategoria'>
@@ -44,14 +80,29 @@ export const Products = (props) => {
             <hr />
             <label for='priceRange'>Precios</label>
             <br />
-            <input type="text" id='priceRange' readOnly/>
-            <div id='price-range' className='sliderFilter'></div>
+            <div class="wrapper">
+              <div class="values">
+                  <span id="range1">
+                      0
+                  </span>
+                  <span> - </span>
+                  <span id="range2">
+                      100
+                  </span>
+              </div>
+              <div class="containerPrices">
+                  <div class="slider-track" id='slider-track'></div>
+                  <input type="range" min="0" max="100" value={slider1}  id="slider-1" onChange={(e)=>{setSlider1(e.target.value)
+                     slideOne()}}/>
+                  <input type="range" min="0" max="100" value={slider2}  id="slider-2" onChange={(e)=>{setSlider2(e.target.value) 
+                    slideTwo()}}/>
+              </div>
+            </div>
+            
           </div>
         </div>
-        
         <CardAllProducts />
       </div>
-      
       <Footer />
     </div>
   )

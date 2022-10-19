@@ -11,8 +11,34 @@ import Swal from 'sweetalert2';
 export const Amount = (props) => {
 
     const [counter, setCounter] = useState(1);
-    const sumar = () => { setCounter(counter + 1); };
-    const restar = () => { setCounter(counter - 1); };
+    const [valor, setValor] = useState(10);
+
+    /* Actualizar la cantidad disponible*/
+    // const URl = '';
+    // const hola= () => {
+    //     setValor
+    // }
+
+    const sumar = () => {
+        setCounter(counter + 1);
+        if (counter === valor) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Cantidad disponible en este momento solo es '+ valor ,
+                showConfirmButton: false,
+                timer: 1500
+            });
+            setCounter(counter);
+        }
+    };
+    const restar = () => {
+        setCounter(counter - 1);
+        if (counter === 1) {
+            setCounter(counter)
+        };
+
+    };
+
 
     /*----------- condicion de cantidad, supera el limite -------------- */
     // useEffect(() => {
@@ -46,7 +72,7 @@ export const Amount = (props) => {
             showCancelButton: true,
             confirmButtonColor: '#3085d6',
             cancelButtonColor: '#d33',
-            confirmButtonText: '!Si!, quiero elimiarlo',
+            confirmButtonText: '!Si!, quiero eliminarlo',
             cancelButtonText: 'Cancelar'
           }).then((result) => {
             if (result.isConfirmed) {
