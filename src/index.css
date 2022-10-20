@@ -1324,6 +1324,7 @@ hr {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
 }
 
 .column_all_products:hover{
@@ -1599,7 +1600,7 @@ input[type="range"]:active::-webkit-slider-thumb{
 /*--------------- Forgot Password --------*/
 .forgotPass{
   width: 25rem;
-  height: 18rem;
+  height: 20rem;
   margin: 5rem auto;
   display: flex;
   flex-direction: column;

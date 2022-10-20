@@ -59,7 +59,7 @@ export const Login = (props) => {
             <button onClick={onclick} className="signUpBtn"><Link to="/register" className="linkLog">Registrarse</Link></button>
           </div>
         </div>
-      </div>
+      </div><br /><br />
       <Footer />
     </div>
   )

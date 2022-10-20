@@ -39,8 +39,8 @@ export const Products = (props) => {
 
   function fillColor() {
     const percent1 = slider1 / sliderMaxValue * 100;
-    const percent2 = slider2* 100;
-    document.getElementById("slider-track").style.background = `linear-gradient(to right, #dadae5 ${percent2}% , #3264fe ${percent2}% , #3264fe ${percent1}%, #dadae5 ${percent1}%)`;
+    const percent2 = slider2 * 100;
+    document.getElementById("slider-track").style.background = `linear-gradient(to right, #dadae5 ${percent1}% , #3264fe ${percent1}% , #3264fe ${percent2}%, #dadae5 ${percent2}%)`;
   }
 
   return (
