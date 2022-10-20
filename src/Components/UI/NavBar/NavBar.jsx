@@ -1,4 +1,4 @@
-import React from 'react'
+import {React, useState} from 'react'
 import { FaUserAlt,FaShoppingCart,FaMapMarkerAlt,FaHeartbeat,FaSistrix } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 import logo from '../../Image/logo.png';
@@ -23,6 +23,12 @@ export const NavBar = () => {
         }
       }
 
+    const [sum, setSum] = useState(10)
+
+    const counter = () =>{
+        setSum(sum + 1);
+    }
+
   return (
     <div>
         <div className='navbar' id='navbar'>
@@ -42,7 +48,7 @@ export const NavBar = () => {
                 <Link to='/register' className='acount'><FaUserAlt/> Mi cuenta</Link> 
             </div>
             <div className='navbar2'>
-            <Link to='/car' className='car'><FaShoppingCart/> 0</Link>
+            <Link to='/car' className='car'><FaShoppingCart/>{sum}</Link>
             </div>
         </div>
     </div>

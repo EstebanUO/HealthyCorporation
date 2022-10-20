@@ -23,6 +23,17 @@ export const Buy = () => {
     //     setValor
     // }
 
+    const add = () => {
+        Swal.fire({
+          icon: 'success',
+          title: 'Se ha agregado el producto al carrito',
+          showConfirmButton: false,
+          timer: 3400,
+          timerProgressBar: true,
+          html: '<div class="pse_content"> <a class="text_link" href="/car"><button class="confirm">Ver mi carrito</button></a></div>'
+        })
+      }
+
     const sumar = () => {
         setAmount(amount + 1);
         if (amount === valor) {
@@ -38,12 +49,6 @@ export const Buy = () => {
     const restar = () => {
         setAmount(amount - 1);
         if (amount === 1) {
-            // Swal.fire({
-            //     icon: 'error',
-            //     title: 'Opps... No puedes dejar la cantidad en cero',
-            //     showConfirmButton: false,
-            //     timer: 1500
-            // })
             setAmount(amount)
         };
 
@@ -55,6 +60,17 @@ export const Buy = () => {
         // document.querySelector(".Content_favorite").style.backgroundColor = '';
         setCounter(counter + 1);
     };
+
+//    class Plus extends React.Component{
+//         constructor (props) {
+//             super(props);
+//             this.state = {
+//             message: ''
+//             };
+//             this.channel = null;
+//         }
+//    } 
+    
 
     return (
         <>
@@ -110,12 +126,12 @@ export const Buy = () => {
                             <Link to="/pago"><button className='addBuy_'>
                                 Comprar ahora
                             </button></Link>
-                            <button className='addBuy_2'>
+                            <button className='addBuy_2' onClick={add}>
                                 Agregar al carrito
                             </button>
                         </div>
                     </div>
-                    <div className='img_up_close' >
+                    <div className='img_up_close'>
                         <Link to="/products"><img className='img_up_' src={back} alt="atras" /></Link>
                     </div>
                 </div>

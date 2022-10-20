@@ -14,7 +14,9 @@ export const Card = () => {
       icon: 'success',
       title: 'Se ha agregado el producto al carrito',
       showConfirmButton: false,
-      timer: 1600
+      timer: 3400,
+      timerProgressBar: true,
+      html: '<div class="pse_content"> <a class="text_link" href="/car"><button class="confirm">Ver mi carrito</button></a></div>'
     })
   }
 

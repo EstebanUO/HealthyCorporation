@@ -33,43 +33,25 @@ export const Pago = () => {
             title: '¿Estas seguro?',
             text: "¡No podrás revertir esto!",
             icon: 'warning',
-            showCancelButton: true,
-            confirmButtonColor: '#3085d6',
-            cancelButtonColor: '#d33',
-            confirmButtonText: '!Si!, quiero comprarlo',
-            cancelButtonText: 'Cancelar'
-        }).then((result) => {
-            if (result.isConfirmed) {
-                Swal.fire({
-                    icon: 'success',
-                    title: 'Se ha hecho la compra sactifactiriamente',
-                    showConfirmButton: false,
-                    timer: 1400
-                })
-            }
+            showCancelButton: false,
+            showConfirmButton: false,
+            timer: 5400,
+            timerProgressBar: true,
+            html: '<div class="pse_content"> <a class="text_link" href="/"><button class="confirm">!Si!, quiero comprarlo</button></a></div>'
         });
     }
 
     const check2 = () => {
         Swal.fire({
-            title: '¿Estas seguro?',
-            text: "¡No podrás revertir esto!",
-            icon: 'warning',
-            showCancelButton: true,
-            confirmButtonColor: '#3085d6',
-            cancelButtonColor: '#d33',
-            confirmButtonText: '!Si!, quiero comprarlo',
-            cancelButtonText: 'Cancelar'
-        }).then((result) => {
-            if (result.isConfirmed) {
-                Swal.fire({
-                    icon: 'success',
-                    title: 'Redirigiendo a la pagina PSE',
-                    showConfirmButton: false,
-                    timer: 1400
-                })
-            }
-        });
+                title: '¿Estas seguro?',
+                text: "¡No podrás revertir esto!",
+                icon: 'warning',
+                showCancelButton: false,
+                showConfirmButton: false,
+                timer: 5400,
+                timerProgressBar: true,
+                html: '<div class="pse_content"> <a class="text_link" href="https://registro.pse.com.co/PSEUserRegister/StartTransaction.htm?enc=tnPcJHMKlSnmRpHM8fAbu2zgkcv6e0mh%2bc%2fLmvf0zeC1nJ8xJutrLyQ6DzhIIQnz"><button class="confirm">!Si!, quiero comprarlo</button></a></div>'
+            });
     }
 
     const onSee = () => { document.getElementById("content_det2").style.display = 'flex' };
