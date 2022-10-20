@@ -36,7 +36,7 @@ export const Card = () => {
               <p className='price_product'>$ 40.000</p>
             </div>
             <div>
-              <p className='name_Product_'>Cantidad disponible:  4</p>
+              <p className='name_Product_'>Cantidad disponible:4</p>
             </div>
             <div className='rowProduct'>
               <p className='textProduct'>Despacho</p>
