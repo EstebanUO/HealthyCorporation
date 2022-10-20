@@ -105,6 +105,7 @@ function App() {
     setmessagesLogin("")
     setuserLogin("")
     setpasswordUser("")
+    navigate('register')
 
   }
   /*fin validaciones login*/
@@ -179,6 +180,7 @@ function App() {
     setmessages("")
     setalertUser(false)
     setalertConexion(false)
+    navigate('login')
 
   }
 
@@ -197,13 +199,13 @@ function App() {
         <Route path="/politicas" element={<Politicas valiLoginAdmin={valiLoginAdmin} />} />
         <Route path="/contact" element={<Contact valiLoginAdmin={valiLoginAdmin} />} />
         <Route path="/login" element={valiLogin ? <Navigate replace to="/account" /> : <Login setalertConexionLogin={setalertConexionLogin} alertConexionLogin={alertConexionLogin} alertUserLogin={alertUserLogin} setalertUserLogin={setalertUserLogin} messagesLogin={messagesLogin} onClick2={onClick2} switchShown2={switchShown2} shown2={shown2} userLogin={userLogin} ClickLogin={ClickLogin} passwordUser={passwordUser} onChangePasswordLogin={onChangePasswordLogin} onChangeUserLogin={onChangeUserLogin} />} />
-        <Route path="/car" element={<Car valiLoginAdmin={valiLoginAdmin} />} />
+        <Route path="/car" element={<Car  valiLoginAdmin={valiLoginAdmin} />} />
         <Route path="/account" element={valiLogin ? <MyAcount setalertHome={setalertHome} alertHome={alertHome} valiLoginAdmin={valiLoginAdmin} />:<Navigate replace to="/" />} />
-        <Route path="/direction" element={<Direction />} />
-        <Route path="/password" element={<Password />} />
-        <Route path="/tarjet" element={<Tarjet />} />
+        <Route path="/direction" element={<Direction valiLoginAdmin={valiLoginAdmin} />} />
+        <Route path="/password" element={<Password valiLoginAdmin={valiLoginAdmin}/>} />
+        <Route path="/tarjet" element={<Tarjet valiLoginAdmin={valiLoginAdmin}/>} />
         <Route path="/lista-deseos" element={<ListaDeseos />} />
-        <Route path="/compra" element={<Buy />} />
+        <Route path="/compra" element={<Buy valiLoginAdmin={valiLoginAdmin}/>} />
         <Route path="/pago" element={<Direction_pago />} />
         <Route path="/pago_final" element={<Pago />} />
         <Route path="/recoverPassword" element={<RecoverPassword />} />

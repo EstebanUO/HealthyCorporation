@@ -11,7 +11,7 @@ import Swal from 'sweetalert2';
 
 
 
-export const Buy = () => {
+export const Buy = (props) => {
 
     const [counter, setCounter] = useState(6);
     const [amount, setAmount] = useState(1);
@@ -74,7 +74,7 @@ export const Buy = () => {
 
     return (
         <>
-            <Header />
+            <Header valiLoginAdmin={props.valiLoginAdmin}/>
             <div className='content_buy'>
                 <div className='row_buy'>
                     <div className='imgBuy'>

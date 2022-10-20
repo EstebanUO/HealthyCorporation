@@ -7,10 +7,10 @@ import cerrar from '../../Image/Icons/cerrar.png';
 
 
 
-export const Password = () => {
+export const Password = (props) => {
   return (
     <div>
-      <Header /><br /><br />
+      <Header valiLoginAdmin={props.valiLoginAdmin}/><br /><br />
       <div className='acount_up'>
         <div className="acount_all">
           <div className='all_info'>
