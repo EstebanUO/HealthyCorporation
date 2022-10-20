@@ -36,7 +36,6 @@ export const Amount = (props) => {
         if (counter === 1) {
             setCounter(counter)
         };
-
     };
 
 
@@ -73,7 +72,12 @@ export const Amount = (props) => {
             confirmButtonColor: '#3085d6',
             cancelButtonColor: '#d33',
             confirmButtonText: '!Si!, quiero eliminarlo',
-            cancelButtonText: 'Cancelar'
+            cancelButtonText: 'Cancelar',
+            buttonsStyling: false,
+            customClass:{
+                confirmButton: "confirm",
+                cancelButton: "Cancel"
+            }
           }).then((result) => {
             if (result.isConfirmed) {
               Swal.fire({
