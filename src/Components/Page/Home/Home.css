@@ -177,7 +177,7 @@
 
 .products-home {
   background-color: #d3ebf7;
-  height: 22rem;
+  height: 18rem;
 }
 
 .title-home {
@@ -220,7 +220,6 @@
   padding-left: 9rem;
   margin-bottom: -1rem;
   padding-top: 1rem;
-  z-index: 1;
 }
 
 .text_all_product2{

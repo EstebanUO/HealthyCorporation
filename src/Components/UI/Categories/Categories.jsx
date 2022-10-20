@@ -13,43 +13,43 @@ export const Categories = () => {
     return (
         <div className='all' >
             <div className='contents' >
-                <div className='card'>
+                <div className='card2'>
                     <img src={ofertas} alt="Prueba de imagen" className='Image-card' />
                     <p className='text-card'>Ofertas</p>
                 </div>
             </div>
             <div className='contents' >
-                <div className='card'>
+                <div className='card2'>
                     <img src={sexual} alt="Prueba de imagen" className='Image-card' />
                     <p className='text-card'>Salud Sexual</p>
                 </div>
             </div>
             <div className='contents'>
-                <div className='card'>
+                <div className='card2'>
                     <img src={bienestar} alt="Prueba de imagen" className='Image-card' />
                     <p className='text-card'>Bienestar</p>
                 </div>
             </div>
             <div className='contents'>
-                <div className='card'>
+                <div className='card2'>
                     <img src={cuidado} alt="Prueba de imagen" className='Image-card' />
                     <p className='text-card'>Cuidado Personal</p>
                 </div>
             </div>
             <div className='contents'>
-                <div className='card'>
+                <div className='card2'>
                     <img src={belleza} alt="Prueba de imagen" className='Image-card' />
                     <p className='text-card'>Belleza</p>
                 </div>
             </div>
             <div className='contents'>
-                <div className='card'>
+                <div className='card2'>
                     <img src={medicamento} alt="Prueba de imagen" className='Image-card' />
                     <p className='text-card'>Medicamentos</p>
                 </div>
             </div>
             <div className='contents'>
-                <div className='card'>
+                <div className='card2'>
                     <img src={dermocosméticos} alt="Prueba de imagen" className='Image-card' />
                     <p className='text-card'>Dermocosméticos</p>
                 </div>
