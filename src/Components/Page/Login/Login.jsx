@@ -8,7 +8,6 @@ import { BsEyeFill,BsEyeSlashFill } from "react-icons/bs";
 import { FaUserAlt,FaKey } from "react-icons/fa";
 
 export const Login = (props) => {
-  const [open, setOpen] = React.useState(true);
 
   useEffect(() => {
     if (props.messagesLogin === "usuario no registrado") {
