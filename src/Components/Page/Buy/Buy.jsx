@@ -61,15 +61,30 @@ export const Buy = () => {
         setCounter(counter + 1);
     };
 
-//    class Plus extends React.Component{
-//         constructor (props) {
-//             super(props);
-//             this.state = {
-//             message: ''
-//             };
-//             this.channel = null;
-//         }
-//    } 
+    window.onmousemove = function () { see() };
+
+    function see(e) {
+      let x, y, y1, y2, x1, x2;
+      let fact = 800 / 400;
+      let opp = 120;
+  
+      if (e == null) e = window.event;
+      x = e.clientX;
+      y = e.clientY;
+  
+      x1 = - opp + (x) * fact;
+      y1 = - opp + (y) * fact;
+      x2 = + opp + (x) * fact;
+      y2 = + opp + (y) * fact;
+  
+      (() => {
+        document.getElementById('img_2').style.display = "inline";
+        document.getElementById('img_2').style.left = (x) * (1 - fact);
+        document.getElementById('img_2').style.top = (y) * (1 - fact);
+        document.getElementById('img_2').style.clip = "rect(" + y1 + "px," + x2 + "px," + y2 + "px," + x1 + "px)";
+      })();
+  
+    }
     
 
     return (
@@ -78,7 +93,9 @@ export const Buy = () => {
             <div className='content_buy'>
                 <div className='row_buy'>
                     <div className='imgBuy'>
-                        <img className='img_buy' src={img} alt="Imagen compra" />
+                        {/* <img className='img_buy' src={img} alt="Imagen compra" /> */}
+                        <img id='img_1' src={img} alt="Imagen compra" style={{ width: 450 }} />
+                        <img id='img_2' src={img} alt="Imagen compra" style={{ width: 800 }} />
                     </div>
                     <div className='columm_buy'>
                         <div className='padding_buy'>
@@ -166,6 +183,8 @@ export const Buy = () => {
                     </div>
                 </div>
             </div>
+
+            
 
             <Footer />
         </>

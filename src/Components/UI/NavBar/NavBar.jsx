@@ -1,4 +1,4 @@
-import { React, useState, useEffect} from 'react'
+import { React } from 'react'
 import { FaUserAlt, FaShoppingCart, FaHeartbeat, FaSistrix } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 import logo from '../../Image/logo.png';
@@ -23,14 +23,14 @@ export const NavBar = () => {
         }
     }
 
-    const [items, setItems] = useState([]);
+    // const [items, setItems] = useState([]);
 
-    useEffect(() => {
-        const items = JSON.parse(localStorage.getItem('items'));
-        if (items) {
-            setItems(items);
-        }
-    }, []);
+    // useEffect(() => {
+    //     const items = JSON.parse(localStorage.getItem('items'));
+    //     if (items) {
+    //         setItems(items);
+    //     }
+    // }, []);
 
     return (
         <div>

@@ -1,4 +1,4 @@
-import React,{useEffect} from 'react'
+import React,{useEffect, useRef} from 'react'
 import AlertTitle from '@mui/material/AlertTitle';
 import { Footer } from '../Layout/Footer/Footer'
 import { Header } from '../Layout/Header/Header'
@@ -6,6 +6,8 @@ import { Link } from "react-router-dom"
 import Alert from '@mui/material/Alert';
 import { BsEyeFill,BsEyeSlashFill } from "react-icons/bs";
 import { FaUserAlt,FaKey } from "react-icons/fa";
+import { Api } from '@mui/icons-material';
+import { get } from 'jquery';
 
 export const Login = (props) => {
   const [open, setOpen] = React.useState(true);
@@ -24,6 +26,37 @@ export const Login = (props) => {
   const onclick=()=>{
     props.onClick2()
   }
+
+  /* recorre la api users */
+
+
+  /* local Storage */
+  // const email_ = useRef();
+  // const password_ = useRef();
+
+  // const handleSumit = () => {
+  //   if(email_.current.value == Api.email){
+  //     localStorage.setItem("EmailValid", Api.email_);
+  //     localStorage.setItem("PassValid", Api.name_);
+  //   }
+  // }
+
+  /* Eliminar el user del local storage  para vista de mi cuenta*/
+
+  // const getEmail = localStorage.getItem(); validacion de los datos pero ya funciona pailas
+  // const getPass = localStorage.getItem();
+
+  // getEmail&&getPass ? <mi cuenta />: 
+  /* aqui hace la condicion de volver a login ya que no hay datos */
+
+
+
+  // eliminar el user de local storage
+  // const handleClik = () => {
+  //     localStorage.clear();
+  //     window.location.reload();
+  //   }
+  // }
 
 
   return (

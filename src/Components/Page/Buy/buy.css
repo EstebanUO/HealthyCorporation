@@ -450,6 +450,28 @@ hr {
     background-color: #00000033;
 }
 
+/* zoom en la imagen */
+
+#img_1 {
+    border: 0px;
+    display: block;
+    overflow: hidden;
+    /* position: absolute; */
+   /* margin-top: 10rem; */
+   margin-left: -2rem; 
+   margin-right: -2rem;
+}
+
+#img_2 {
+    border: 0px;
+    display: block;
+    overflow: hidden;
+    position: absolute;
+    margin-left: 0rem;
+    margin-top: -5rem;
+    clip-path: rect(0px, 100px, 100px, 0px);
+}
+
 @media screen and (max-width:600px) {
     .row_buy {
         width: 30rem;
