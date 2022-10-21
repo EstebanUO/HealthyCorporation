@@ -24,17 +24,17 @@ export const Products = (props) => {
   function slideOne() {
     if (slider1 - slider2 >= minGap) {
       setSlider1(slider2 - minGap)
+      fillColor();
     }
     displayValOne.textContent = slider1;
-    fillColor();
   }
 
   function slideTwo() {
     if (slider2 - slider1 <= minGap) {
       slider2 = slider1 + minGap;
+      fillColor();
     }
     displayValTwo.textContent = slider2;
-    fillColor();
   }
 
   function fillColor() {
