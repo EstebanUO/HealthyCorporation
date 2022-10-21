@@ -143,8 +143,8 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 3rem;
-  border-bottom: solid #000000;
+  height: 2.5rem;
+  box-shadow: #0e1e251f 0px 2px 4px 0px, #0e1e2552 0px 2px 7px 0px;
 }
 
 .Logo_nav {
@@ -171,7 +171,7 @@ header {
   background-color: #44D2F2;
   justify-content: center;
   height: 3rem;
-  padding: 2.5rem;
+  padding: 3rem;
 }
 
 header img {
@@ -195,14 +195,14 @@ header img {
   align-items: baseline;
   justify-content: space-around;
   background-color: #44D2F2;
-  /* border-bottom:solid #000000; */
   display: none;
   position: fixed;
   width: 100%;
   z-index: 100;
   top: 0;
   transition: margin-left 4s ease-in-out 1s;
-  border-bottom: solid black;
+  border-end-end-radius: 1rem;
+  border-end-start-radius: 1rem;
 }
 
 #logo {
@@ -247,7 +247,12 @@ header img {
 
 .buscar {
   width: 26rem;
-  border-radius: .3rem;
+  border-radius: 5px;
+  border: none;
+}
+
+.buscar:focus{
+  outline: none;
 }
 
 .buscar2 {
@@ -298,11 +303,11 @@ header img {
   animation: slidein 1s forwards;
   background-color: #ffffff57;
   padding: 3rem;
-  box-shadow: 1px 1px 18px black;
   border-radius: .6rem;
   width: 34rem;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
+  box-shadow: #0e1e251f 0px 2px 4px 0px, #0e1e2552 0px 2px 16px 0px;
 }
 
 @keyframes slidein {
@@ -338,11 +343,11 @@ header img {
   animation: slidein2 1s forwards;
   background-color: #ffffff57;
   padding: 3rem;
-  box-shadow: 1px 1px 18px black;
   border-radius: .6rem;
   width: 34rem;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
+  box-shadow: #0e1e251f 0px 2px 4px 0px, #0e1e2552 0px 2px 16px 0px;
 }
 
 @keyframes slidein2 {
@@ -1272,7 +1277,7 @@ a {
   background: whitesmoke;
   border-radius: 1rem;
   width: 15rem;
-  height: 35rem;
+  height: 45rem;
 }
 
 .iconFilter{
@@ -1318,18 +1323,17 @@ hr {
 .column_all_products{
   width: 15rem;
   border-radius: .5rem;
-  border: solid 2px gray;
   background-color: white;
   margin: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+  box-shadow: #0e1e251f 0px 2px 4px 0px, #0e1e2552 0px 2px 16px 0px;
 }
 
 .column_all_products:hover{
   transition: all 300ms ease;
-  border:2px solid #5bc3fc;
+  /* border:2px solid #5bc3fc; */
 }
 
 .title-product {
@@ -1445,19 +1449,32 @@ hr {
   background-color: #f5f5f5;
   max-height: 10rem;
   overflow-y: auto;
+  display: none;
+  align-items: baseline;
+  flex-direction: column;
+}
+
+.subCategorias0{
+  background-color: #f5f5f5;
+  max-height: 10rem;
+  overflow-y: auto;
+  display: none;
+  align-items: baseline;
+  flex-direction: column;
 }
 
 .subCategorias2{
   display: flex;
   align-items: baseline;
   gap: .5rem;
-  display: none;
+  /* display: none; */
 }
 
 .iconArrow{
   position: absolute;
   display: block;
   margin-left: 12rem;
+  color: #44D2F2;
 }
 
 #selectPrecios{
@@ -1469,16 +1486,8 @@ hr {
 
 .productsEncontrados{
   padding: .5rem;
+  font-weight: 700;
 }
-
-.iconsOrderProducts{
-  font-size: 1.5rem;
-}
-
-.iconOrder{
-  color: #0896e2;
-}
-
 /*---------- Range input ------------*/
 .wrapper{
   position: relative;
@@ -1617,7 +1626,7 @@ input[type="range"]:active::-webkit-slider-thumb{
 
 .inputRecuperar{
   border-style: none;
-  width: 70%;
+  width: 100%;
   border-radius: 5px;
   padding: 5px 0px 5px 40px;
   box-shadow: #0e1e251f 0px 4px 8px 0px, #0e1e2552 0px 4px 32px 0px;
@@ -1644,11 +1653,15 @@ input[type="range"]:active::-webkit-slider-thumb{
   text-align: center;
 }
 
+.div-recoverPassword{
+  width: 69%;
+}
+
 .iconEmailRecuperar{
   position: absolute;
   font-size: 1.5rem;
-  margin-left: -7.5rem;
-  margin-top: 0.2rem;
+  margin-top: 0.3rem;
+  margin-left: 0.5rem;
   color: #2a9bd1;
 }
 

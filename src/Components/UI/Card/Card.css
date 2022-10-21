@@ -117,12 +117,13 @@
     transition: all 300ms;
     width: auto;
     height: 2.3rem;
+    color:#fff;
 }
 
 .addProduct_:hover {
     background-color: #eee7e7;
     transition: all 300ms ease;
-    border: solid #5bc3fc;
+    color: #000;
 }
 
 @media screen and (max-width:600px) {

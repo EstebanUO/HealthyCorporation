@@ -12,29 +12,30 @@ function RecoverPassword(props) {
   const [email, setemail] = useState("")
   const [errorEmail, seterrorEmail] = useState(null)
 
-  const [usaername, setusaername] = useState(null)
-  const [password, setpassword] = useState(null)
-  const [emailSend, setemailSend] = useState(null)
+
   /**/ 
   const getApi = (event) => {
     axios.get('https://apiprojectmain.herokuapp.com/api/users') 
       .then(function (response) {
         // handle success
         let validacion=true;
+        let usaername=""
+        let password=""
+        let emailSend=""
         
         response.data.map(data => {
 
             if (email===data.email) {
                 validacion=false;
-                setusaername(data.name)
-                setpassword(data.password)
-                setemailSend(data.email)
+                usaername=data.name
+                password=data.password
+                emailSend=data.email
        
             }
             return "termino map";
         });
         
-        onsubmit(event,validacion)
+        onsubmit(usaername,password,emailSend,event,validacion)
       })
       .catch(function (error) {
         // handle error
@@ -46,7 +47,7 @@ function RecoverPassword(props) {
     
     
 
-    const sendEmail=()=>{
+    const sendEmail=(usaername,password,emailSend)=>{
         var templateParams = {
             to_name: usaername,
             email: emailSend,
@@ -75,13 +76,13 @@ function RecoverPassword(props) {
         return valid;
     }
 
-    const onsubmit=(event,validacion)=>{
+    const onsubmit=(usaername,password,emailSend,event,validacion)=>{
         if(!validateData()){
             return console.log("invalido");
         }else if(validateData()){
             
             if(!validacion){
-                sendEmail()
+                sendEmail(usaername,password,emailSend)
                 setemail("")
                 seterrorEmail("le hemos enviamos un correo con su contraseña!")
                 return console.log("valido")
@@ -102,7 +103,11 @@ function RecoverPassword(props) {
             <div className='containerForgotPass'>
                 <div className='forgotPass'>
                     <span className='recuperarPass'>Recuperar contraseña</span><br />
-                    <input type="email" placeholder='Ingresa tu correo' className='inputRecuperar' onChange={(e)=>setemail(e.target.value)} value={email} /><FaEnvelope className='iconEmailRecuperar'/><br/>
+                    <div className='div-recoverPassword'>
+                        <FaEnvelope className='iconEmailRecuperar'/>
+                        <input type="email" placeholder='Ingresa tu correo' className='inputRecuperar' onChange={(e)=>setemail(e.target.value)} value={email} /><br/>
+                    </div>
+                    <br />
                     <button onClick={getApi} className="btnRecuperar">Enviar contraseña</button>
                     <p className='alertError'>{errorEmail}</p>
                 </div>
