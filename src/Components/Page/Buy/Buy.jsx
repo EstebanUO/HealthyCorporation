@@ -3,12 +3,13 @@ import { Link } from "react-router-dom";
 import { Footer } from '../Layout/Footer/Footer';
 import { Header } from '../Layout/Header/Header';
 import { Card } from '../../UI/Card/Card';
-
+import ReactImageMagnify from 'react-image-magnify';
 import './buy.css'
-import img from '../../Image/assects/medicasp.jpg';
+// import img from '../../Image/assects/medicasp.jpg';
 import back from '../../Image/x.png';
 import Swal from 'sweetalert2';
-
+import watchImg300 from '../../Image/assects/acetaminofen300.jpg';
+import watchImg1200 from '../../Image/assects/acetaminofen.jpg';
 
 
 export const Buy = (props) => {
@@ -61,41 +62,24 @@ export const Buy = (props) => {
         setCounter(counter + 1);
     };
 
-    window.onmousemove = function () { see() };
-
-    function see(e) {
-      let x, y, y1, y2, x1, x2;
-      let fact = 800 / 400;
-      let opp = 120;
-  
-      if (e == null) e = window.event;
-      x = e.clientX;
-      y = e.clientY;
-  
-      x1 = - opp + (x) * fact;
-      y1 = - opp + (y) * fact;
-      x2 = + opp + (x) * fact;
-      y2 = + opp + (y) * fact;
-  
-      (() => {
-        document.getElementById('img_2').style.display = "inline";
-        document.getElementById('img_2').style.left = (x) * (1 - fact);
-        document.getElementById('img_2').style.top = (y) * (1 - fact);
-        document.getElementById('img_2').style.clip = "rect(" + y1 + "px," + x2 + "px," + y2 + "px," + x1 + "px)";
-      })();
-  
-    }
-    
-
     return (
         <>
             <Header valiLoginAdmin={props.valiLoginAdmin}/>
             <div className='content_buy'>
                 <div className='row_buy'>
                     <div className='imgBuy'>
-                        {/* <img className='img_buy' src={img} alt="Imagen compra" /> */}
-                        <img id='img_1' src={img} alt="Imagen compra" style={{ width: 450 }} />
-                        <img id='img_2' src={img} alt="Imagen compra" style={{ width: 800 }} />
+                        <ReactImageMagnify {...{
+                            smallImage: {
+                                alt: 'Wristwatch by Ted Baker London',
+                                isFluidWidth: true,
+                                src: watchImg300,
+                            },
+                            largeImage: {
+                                src: watchImg1200,
+                                width: 1000,
+                                height: 667
+                            }
+                        }} />
                     </div>
                     <div className='columm_buy'>
                         <div className='padding_buy'>
