@@ -86,7 +86,7 @@ export const Register = (props) => {
                   <FaLock className='iconPassReg2'/>
                   <button className='button-show' onClick={props.switchShown}>{props.shown? <BsEyeFill />:<BsEyeSlashFill />}</button>
                   <input minLength="8" maxLength="20" value={props.confrimPasword} onChange={props.onChangeconfrimPasword} name="password" type={props.shown ? 'text' : 'password'} class="form-input" placeholder="Confirm your password" /> 
-              </div>
+              </div><br />
               <p className='pvaliRegister' id='txtvalidPassword'></p>
               <br />
               <div className="checkTyC">

@@ -48,20 +48,7 @@ export const Direction_pago = () => {
                         <form action="">
                             <label className='text_check'>Dirección</label><br />
                             <input type="text" className='textContact' name='user-name' placeholder="Digite su dirección" required></input><br /><br />
-                            <div className='acount_content_tarjet-'>
-                                <b><label className='text_check'>Ingresa tu ciudad</label></b>
-                                <select className='input_check' name="ciudad" required>
-                                    <option value="" disabled>Ciudad</option>
-                                    <option value="">Armenia</option>
-                                    {/* <option value=""></option>
-                                    <option value=""></option>
-                                    <option value=""></option>
-                                    <option value=""></option>
-                                    <option value=""></option>
-                                    <option value=""></option>
-                                    <option value=""></option> */}
-                                </select>
-                            </div><br />
+                            
                             <div className='acount_content_tarjet-'>
                                 <b><label className='text_check'>Ingresa tu locaidad</label></b>
                                 <select className='input_check' name="localidad" required>

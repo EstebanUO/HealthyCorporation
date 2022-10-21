@@ -19,6 +19,8 @@ import { Direction_pago } from './Components/Page/DIrection_pago/Direction_pago'
 import { Pago } from './Components/Page/Pago/Pago';
 import RecoverPassword from './Components/Page/MyAcount/RecoverPassword';
 
+// import { Zoom_in } from './Components/UI/Zoom_in/Zoom_in';
+
 
 
 function App() {
@@ -209,6 +211,8 @@ function App() {
         <Route path="/pago" element={<Direction_pago />} />
         <Route path="/pago_final" element={<Pago />} />
         <Route path="/recoverPassword" element={<RecoverPassword />} />
+
+        {/* <Route path="/prueba" element={<Zoom_in />} /> */}
       </Routes>
     </div>
 
