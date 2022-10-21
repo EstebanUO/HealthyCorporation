@@ -8,6 +8,8 @@ import { BsEyeFill,BsEyeSlashFill } from "react-icons/bs";
 import { FaUserAlt,FaKey } from "react-icons/fa";
 import { Api } from '@mui/icons-material';
 import { get } from 'jquery';
+import { MyAcount } from '../MyAcount/MyAcount';
+
 
 export const Login = (props) => {
 
@@ -42,10 +44,10 @@ export const Login = (props) => {
 
   /* Eliminar el user del local storage  para vista de mi cuenta*/
 
-  // const getEmail = localStorage.getItem(); validacion de los datos pero ya funciona pailas
+ //validacion de los datos pero ya funciona pailas
   // const getPass = localStorage.getItem();
 
-  // getEmail&&getPass ? <mi cuenta />: 
+  // getEmail && getPass ? <mi cuenta />: 
   /* aqui hace la condicion de volver a login ya que no hay datos */
 
 
@@ -57,12 +59,15 @@ export const Login = (props) => {
   //   }
   // }
 
-
+  
   return (
+    
     <div>
+      
       <Header />
       <div className="formulario">
         <div>
+        
           <form className="formulario3" onSubmit={props.ClickLogin}>
             <h1 className="titleReg">Iniciar Sesion</h1>
             <div className="formularioLog">
@@ -91,7 +96,7 @@ export const Login = (props) => {
             <button onClick={onclick} className="signUpBtn"><Link to="/register" className="linkLog">Registrarse</Link></button>
           </div>
         </div>
-      </div><br /><br />
+      </div>
       <Footer />
     </div>
   )
