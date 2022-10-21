@@ -27,6 +27,7 @@ function App() {
 
 
   const valiLoginAdmin = localStorage.getItem("EmailValidAdmin");
+  const valiLogin = localStorage.getItem("EmailValid");
 
   let navigate = useNavigate();
   /*validaciones login*/
@@ -34,7 +35,7 @@ function App() {
   const [alertUserLogin, setalertUserLogin] = useState(false)
   const [alertHome, setalertHome] = useState(false)
   const [alertConexionLogin, setalertConexionLogin] = useState(false)
-  const [valiLogin, setvaliLogin] = useState(false)
+  // const [valiLogin, setvaliLogin] = useState(false)
   // const [valiLoginAdmin, setvaliLoginAdmin] = useState(false)
 
   const [userLogin, setuserLogin] = useState("")
@@ -59,7 +60,7 @@ function App() {
         response.data.map(data => {
 
           if (userLogin === data.email && passwordUser === data.password) {
-            setvaliLogin(true);
+            localStorage.setItem("EmailValid", true);
             setalertHome(true);
             setidUser(data.id);
             setusernameUser(data.name);
@@ -88,7 +89,7 @@ function App() {
   const ClickLogin = (e) => {
     e.preventDefault()
     if (userLogin === "admin@gmail.com" && passwordUser === "admin1234") {
-      setvaliLogin(true);
+      localStorage.setItem("EmailValid", true);
       setalertHome(true);
       // setvaliLoginAdmin(true)
       setmessagesLogin("Bienvenido admin")
