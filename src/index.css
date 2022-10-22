@@ -225,6 +225,7 @@ header img {
   align-items: baseline;
   justify-content: space-around;
   cursor: pointer;
+  margin-left: 2rem;
   margin-top: 1rem;
   margin-bottom: .5rem;
   animation: navbar2 1s forwards;
@@ -263,21 +264,12 @@ header img {
   color: #44D2F2;
 }
 
-.acount {
+.links {
   text-decoration: none;
   color: #000000;
 }
 
-.acount:hover {
-  color: #fff;
-}
-
-.car {
-  text-decoration: none;
-  color: #000000;
-}
-
-.car:hover {
+.links:hover {
   color: #fff;
 }
 
@@ -286,14 +278,6 @@ header img {
 }
 
 .ubicacion:hover {
-  color: #fff;
-}
-
-.listaDeseos {
-  color: #000000;
-}
-
-.listaDeseos:hover {
   color: #fff;
 }
 
@@ -1799,6 +1783,22 @@ input[type="range"]:active::-webkit-slider-thumb{
 }
 
 
+  .column_nav_content{
+    display: flex;
+    flex-direction: row;
+    margin-left: 1rem;
+  }
+
+/*-------- Responsive 968px ---------*/
+@media screen and (max-width:968px) {
+  .buscar{
+    width: 38rem;
+  }
+
+  .column_nav_content{
+    display: block;
+}
+}
 /*-------- Responsive 950px ---------*/
 
 @media screen and (max-width:950px) {
@@ -1898,11 +1898,14 @@ input[type="range"]:active::-webkit-slider-thumb{
     margin-left: 5rem;
   }
 
+<<<<<<< HEAD
   .card_all_product{
     display: grid;
     grid-template-columns: 15.5rem 15.4rem 15.4rem;
   }
 
+=======
+>>>>>>> Stiven
 }
 
 
