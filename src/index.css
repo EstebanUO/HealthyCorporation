@@ -503,7 +503,6 @@ input[type="checkbox"] {
 
 .message h2 {
   font-size: 1.7rem;
-  padding: 1rem 0;
 }
 
 .message button {
@@ -531,6 +530,7 @@ input[type="checkbox"] {
   text-align: right;
   display: flex;
   flex-direction: column-reverse;
+  margin-top: 0.8rem;
 }
 
 .message2 button {
@@ -1659,6 +1659,9 @@ input[type="range"]:active::-webkit-slider-thumb{
   color: #2a9bd1;
 }
 
+.text_welcome{
+  font-size: 1.7rem;
+}
 
 /*-------- Responsive 1920px ---------*/
 @media screen and (min-width:1920px) {
@@ -1711,6 +1714,10 @@ input[type="range"]:active::-webkit-slider-thumb{
   .containerCategorias{
     display: none;
   }  
+
+  .text_welcome {
+    font-size: 1.8rem;
+}
 
 }
 

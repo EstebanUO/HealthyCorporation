@@ -166,8 +166,6 @@ export const Buy = (props) => {
                 </div>
             </div>
 
-            
-
             <Footer />
         </>
     )
