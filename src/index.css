@@ -1897,15 +1897,12 @@ input[type="range"]:active::-webkit-slider-thumb{
   .card_all_product{
     margin-left: 5rem;
   }
-
-<<<<<<< HEAD
+  
   .card_all_product{
     display: grid;
     grid-template-columns: 15.5rem 15.4rem 15.4rem;
   }
 
-=======
->>>>>>> Stiven
 }
 
 
