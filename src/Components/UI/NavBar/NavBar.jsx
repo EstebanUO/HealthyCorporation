@@ -7,7 +7,19 @@ import styled from 'styled-components';
 
 export const NavBar = () => {
 
+
     window.onscroll = function() {scrollFunction()};
+
+    /*-------------------------- Funcion del menu ---------------------------- */
+    const [clicked, setclicked] = useState(false)
+
+    const handleClick = () => {
+        setclicked(!clicked)
+
+    }
+
+    /*----------------------------------yfyjfhgyfgdhdht-------------------------------------- */
+
 
     // window.addEventListener("scroll", () =>{
     //     console.log("scrollindo...")
@@ -32,28 +44,36 @@ export const NavBar = () => {
     }
 
   return (
-    <div>
-        <div className='navbar' id='navbar'>
-            <div>
-                <Link to='/'><img src={logo} alt="logo" id='logo'/></Link>
-            </div>
-            {/* <div className='navbar2'>
-                <Link to="/" className="ubicacion"><FaMapMarkerAlt/> Ubicación</Link> 
-            </div> */}
-            <div className='navbar2'>
-                <input type="text" placeholder='Buscar...' className='buscar'/><button className='buscar2'><FaSistrix/></button> 
-            </div>
-            <div className='navbar2'>
-                <Link to="/lista-deseos"className="listaDeseos"><FaHeartbeat/> Lista de Deseos</Link>
-            </div>
-            <div className='navbar2'>
-                <Link to='/register' className='acount'><FaUserAlt/> Mi cuenta</Link> 
-            </div>
-            <div className='navbar2'>
-            <Link to='/car' className='car'><FaShoppingCart/>{sum}</Link>
+    <Navcontainer>
+        <div>
+            <div className='navbar' id='navbar'>
+                <div>
+                    <Link to='/'><img src={logo} alt="logo" id='logo' /></Link>
+                </div>
+                {/* <div className='navbar2'>
+                    <Link to="/" className="ubicacion"><FaMapMarkerAlt/> Ubicación</Link> 
+                </div> */}
+                <div className='navbar2'>
+                    <input type="text" placeholder='Buscar...' className='buscar' /><button className='buscar2'><FaSistrix /></button>
+                </div>
+                <div className="column_nav_content">
+                    <div className='navbar2'>
+                        <Link to="/lista-deseos" onClick={handleClick} className={`links ${clicked ? 'active' : ''}`}><FaHeartbeat /> Lista de Deseos </Link>
+                    </div>
+                    <div className='navbar2'>
+                        <Link to='/register' onClick={handleClick} className={`links ${clicked ? 'active' : ''}`}><FaUserAlt /> Mi cuenta</Link>
+                    </div>
+                    <div className='navbar2'>
+                        <Link to='/car' onClick={handleClick} className={`links ${clicked ? 'active' : ''}`}><FaShoppingCart />{sum}</Link>
+                    </div>
+                </div>
+                <div className='burguer'>
+                    <MenuBurguer clicked={clicked} handleClick={handleClick} />
+                </div>
+                <BgDiv className={`initial ${clicked ? 'active' : ''}`}></BgDiv> 
             </div>
         </div>
-    </div>
+    </Navcontainer>
   )
 }
 
