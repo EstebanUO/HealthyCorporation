@@ -28,6 +28,7 @@ function App() {
 
   const valiLoginAdmin = localStorage.getItem("EmailValidAdmin");
   const valiLogin = localStorage.getItem("EmailValid");
+  const valiLoginUser = localStorage.getItem("EmailValidUser");
 
   let navigate = useNavigate();
   /*validaciones login*/
@@ -98,12 +99,25 @@ function App() {
       getApi()
     }
 
-    // else if (userLogin == data.email) {
-    //   localStorage.setItem("EmailValid", data.email);
-    //   localStorage.setItem("NameValid", data.name);
-    // }
-
+    (function () {
+      axios.get('https://apiprojectmain.herokuapp.com/api/users')
+        .then(function (response) {
+          response.data.map(data => {
+            if (userLogin === data.email && passwordUser === data.password) {
+              localStorage.setItem("EmailValid", true);
+              localStorage.setItem("EmalValidUser", true);
+              localStorage.setItem("nameUser", data.name);
+            };
+          })
+        })
+        .catch(function (error) {
+          // handle error
+          console.log(error);
+          setmessagesLogin(error.message);
+        })
+    })();
   }
+
   const [shown2, setShown2] = useState(false);
   const switchShown2 = (event) => {
     setShown2(!shown2)
@@ -210,12 +224,12 @@ function App() {
         <Route path="/contact" element={<Contact valiLoginAdmin={valiLoginAdmin} />} />
         <Route path="/login" element={valiLogin ? <Navigate replace to="/account" /> : <Login setalertConexionLogin={setalertConexionLogin} alertConexionLogin={alertConexionLogin} alertUserLogin={alertUserLogin} setalertUserLogin={setalertUserLogin} messagesLogin={messagesLogin} onClick2={onClick2} switchShown2={switchShown2} shown2={shown2} userLogin={userLogin} ClickLogin={ClickLogin} passwordUser={passwordUser} onChangePasswordLogin={onChangePasswordLogin} onChangeUserLogin={onChangeUserLogin} />} />
         <Route path="/car" element={<Car valiLoginAdmin={valiLoginAdmin} />} />
-        <Route path="/account" element={valiLogin ? <MyAcount setalertHome={setalertHome} alertHome={alertHome} valiLoginAdmin={valiLoginAdmin} />:<Navigate replace to="/" />} />
+        <Route path="/account" element={valiLogin ? <MyAcount setalertHome={setalertHome} alertHome={alertHome} valiLoginAdmin={valiLoginAdmin} /> : <Navigate replace to="/" />} />
         <Route path="/direction" element={<Direction />} />
         <Route path="/password" element={<Password />} />
         <Route path="/tarjet" element={<Tarjet />} />
         <Route path="/lista-deseos" element={<ListaDeseos />} />
-        <Route path="/compra" element={<Buy valiLoginAdmin={valiLoginAdmin}/>} />
+        <Route path="/compra" element={<Buy valiLoginAdmin={valiLoginAdmin} />} />
         <Route path="/pago" element={<Direction_pago />} />
         <Route path="/pago_final" element={<Pago />} />
         <Route path="/recoverPassword" element={<RecoverPassword />} />

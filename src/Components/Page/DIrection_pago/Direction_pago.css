@@ -44,8 +44,7 @@
     display: flex;
     justify-content: flex-start;
     font-size: 2rem;
-    /* height: 7rem; */
-    border-radius: .7rem;
+    box-shadow: none;
 }
 
 .check_btn {

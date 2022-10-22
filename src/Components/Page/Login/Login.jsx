@@ -67,7 +67,6 @@ export const Login = (props) => {
       <Header />
       <div className="formulario">
         <div>
-        
           <form className="formulario3" onSubmit={props.ClickLogin}>
             <h1 className="titleReg">Iniciar Sesion</h1>
             <div className="formularioLog">

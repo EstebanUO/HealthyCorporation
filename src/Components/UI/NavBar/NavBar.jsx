@@ -39,9 +39,9 @@ export const NavBar = () => {
 
     // const [items, setItems] = useState([]);
 
-    const counter = () =>{
-        setSum(sum + 1);
-    }
+    // const counter = () =>{
+    //     setSum(sum + 1);
+    // }
 
   return (
     <Navcontainer>
@@ -64,7 +64,7 @@ export const NavBar = () => {
                         <Link to='/register' onClick={handleClick} className={`links ${clicked ? 'active' : ''}`}><FaUserAlt /> Mi cuenta</Link>
                     </div>
                     <div className='navbar2'>
-                        <Link to='/car' onClick={handleClick} className={`links ${clicked ? 'active' : ''}`}><FaShoppingCart />{sum}</Link>
+                        <Link to='/car' onClick={handleClick} className={`links ${clicked ? 'active' : ''}`}><FaShoppingCart />0</Link>
                     </div>
                 </div>
                 <div className='burguer'>

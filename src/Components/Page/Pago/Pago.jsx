@@ -63,7 +63,7 @@ export const Pago = () => {
     const onSee3 = () => { document.getElementById("content_det").style.display = 'flex' };
     const onBlock3 = () => { document.getElementById("content_det").style.display = 'none' };
 
-
+    const valiLoginName = localStorage.getItem("nameUser");
 
     return (
         <>
@@ -92,7 +92,7 @@ export const Pago = () => {
             </div>
 
             <div className='nom_check'>
-                <p className='text_check_2' >[Nombre] ya casi terminas tu compra!</p>
+                <p className='text_check_2' ><b>{valiLoginName}</b> ya casi terminas tu compra!</p>
             </div>
 
             <div className='check_all'>
