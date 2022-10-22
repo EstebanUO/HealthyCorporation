@@ -193,7 +193,7 @@ header img {
 .navbar {
   display: flex;
   align-items: baseline;
-  justify-content: space-around;
+  justify-content: space-evenly;
   background-color: #44D2F2;
   display: none;
   position: fixed;

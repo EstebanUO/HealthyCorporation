@@ -7,7 +7,7 @@ export const Footer = () => {
   return (
 
     <MDBFooter bgColor='light' className='text-center text-lg-start text-muted' >
-      <section className='d-flex justify-content-center justify-content-lg-between p-4 border-bottom' style={{ backgroundColor: "#83c5eb", borderTop: "solid black" }}>
+      <section className='d-flex justify-content-center justify-content-lg-between p-4 border-bottom' style={{ backgroundColor: "#83c5eb", boxShadow: "0 -6px 7px -2px gray" }}>
         <div className='me-5 d-none d-lg-block'>
           <span>Mira nuestras redes sociales:</span>
         </div>

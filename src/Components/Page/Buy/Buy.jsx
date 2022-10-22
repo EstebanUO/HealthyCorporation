@@ -45,6 +45,7 @@ export const Buy = (props) => {
                 timer: 1500
             });
             setAmount(amount);
+            // document.querySelector(".btn_res2").style.backgroundColor = 'gray';
         }
     };
     const restar = () => {
@@ -78,7 +79,7 @@ export const Buy = (props) => {
                                 src: watchImg1200,
                                 width: 1000,
                                 height: 667,
-                                marginTop: "20px"
+                                
                             }
                         }} />
                     </div>
@@ -101,9 +102,9 @@ export const Buy = (props) => {
                                 <p className='name_buy_'>Cantidad disponible: <b>{valor}</b>
                                     <div className='product_btn_'>
                                         <div className='product_btn3'>
-                                            <button className='btn_sum2' onClick={restar}>-</button>
+                                            <button className='btn_res2' onClick={restar}>-</button>
                                             <p className='counter'>{amount}</p>
-                                            <button className='btn_res2' onClick={sumar}>+</button>
+                                            <button className='btn_sum2' onClick={sumar}>+</button>
                                         </div>
                                     </div></p>
                             </div>
@@ -113,10 +114,6 @@ export const Buy = (props) => {
                             <div className='up_buy_2'>
                                 <p>Envio gratis</p>
                             </div>
-                            <div className='up_buy_1'>
-                                <p>Llega dentro de las 24 horas</p>
-                            </div>
-
                         </div>
                         <div className='addBuy'>
                             <div className="Content_favorite" onClick={onHeart}>
