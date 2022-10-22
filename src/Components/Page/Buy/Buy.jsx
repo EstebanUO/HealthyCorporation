@@ -26,7 +26,7 @@ export const Buy = (props) => {
 
     const add = () => {
         Swal.fire({
-          icon: 'success',
+          icon: 'success', 
           title: 'Se ha agregado el producto al carrito',
           showConfirmButton: false,
           timer: 3400,
@@ -77,7 +77,8 @@ export const Buy = (props) => {
                             largeImage: {
                                 src: watchImg1200,
                                 width: 1000,
-                                height: 667
+                                height: 667,
+                                marginTop: "20px"
                             }
                         }} />
                     </div>

@@ -18,7 +18,7 @@ export const NavBar = () => {
 
     }
 
-    /*----------------------------------yfyjfhgyfgdhdht-------------------------------------- */
+    /*---------------------------------- ? -------------------------------------- */
 
 
     // window.addEventListener("scroll", () =>{
@@ -36,12 +36,6 @@ export const NavBar = () => {
             document.getElementById("nav").style.display = "flex";
         }
     }
-
-    // const [items, setItems] = useState([]);
-
-    // const counter = () =>{
-    //     setSum(sum + 1);
-    // }
 
   return (
     <Navcontainer>

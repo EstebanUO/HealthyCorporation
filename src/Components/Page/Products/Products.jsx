@@ -100,7 +100,7 @@ export const Products = (props) => {
       <div className='containerFilter'>
         <div className='containerCategorias'>
           <div className='containerTitle'>
-            <h2 className='titleFilter'><FaSlidersH className='iconFilter' /> Filtrar por:</h2>
+            <h2 className='titleFilter'><FaSlidersH className='iconFilter' /> Filtrar por</h2>
           </div>
           <div className='containerFiltros'>
             <div className='filterCategoria'>
