@@ -43,7 +43,7 @@ export const Direction_pago = () => {
                 </div>
             </div>
             <div className='nom_check'>
-                <p className='text_check2' ><b>{valiLoginName}</b> Dijita tu dirección para saber en donde te encuentras</p>
+                <p className='text_check2' ><b>{valiLoginName}</b> dijita tu dirección para saber en donde te encuentras</p>
             </div>
             <div className='check_all'>
                 <div className='content_check'>
