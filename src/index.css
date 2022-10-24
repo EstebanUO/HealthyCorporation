@@ -282,6 +282,8 @@ header img {
   color: #fff;
 }
 
+
+
 /*---------------- Formulario Registro -------------------*/
 
 .formulario2 {
@@ -1975,9 +1977,6 @@ input[type="range"]:active::-webkit-slider-thumb{
     justify-items: end;
   }
 
-  .button-show2 {
-    margin-left: 26rem;
-  }
 
 }
 
@@ -2039,7 +2038,7 @@ input[type="range"]:active::-webkit-slider-thumb{
   }
   .card_all_product{
     display: grid;
-    grid-template-columns: 14rem 14rem 14rem;
+    grid-template-columns: 13rem 14rem 14rem;
   }
 
   html{
@@ -2062,9 +2061,14 @@ input[type="range"]:active::-webkit-slider-thumb{
     .formulario2 {
 
       width: 0rem;
-      margin-left: -2rem;
+      margin-left: 6rem;
       margin-top: 0rem;
       width: 29rem;
+    }
+
+    .button-show2{
+      margin-top: -3rem;
+      margin-left: 22rem;
     }
 
     .iconos {
@@ -2072,13 +2076,8 @@ input[type="range"]:active::-webkit-slider-thumb{
     }
 
     .button-show {
-      margin-left: 22rem;
-    }
-
-
-    .formulario3{
-      margin-left: -1.5rem;
-      width: 25rem;
+      margin-top: -0.7rem;
+      margin-left: 23rem;
     }
   
     .message2{
@@ -2086,7 +2085,7 @@ input[type="range"]:active::-webkit-slider-thumb{
       margin-left: 0rem;
     }
     .formulario3 {
-      margin-left: -1rem;
+      margin-left: 5.5rem;
       width: 28rem;
     }
 
@@ -2096,14 +2095,13 @@ input[type="range"]:active::-webkit-slider-thumb{
       margin-right: 6rem;
     }
 
-    .button-show2{
-      margin-left: 19rem;
-    }
-
     .card_all_product{
       display: inline-block;
-      margin-left: -10rem;
+      margin-left: -3rem;
       margin-right: 1rem;
+      display: grid;
+      grid-template-columns: 13rem 14rem;
+
     }
   }
 
@@ -2152,6 +2150,20 @@ input[type="range"]:active::-webkit-slider-thumb{
     margin-right: 0rem;
   }
 
+  .card_all_product{
+    margin-right: 1rem;
+    display: grid;
+    grid-template-columns: 13rem 14rem;
+  }
+}
+
+@media screen and (max-width:375px) {
+
+  .card_all_product{
+    margin-right: 3rem;
+    display: grid;
+    grid-template-columns: 13rem 14rem;
+  }
 
 }
 
