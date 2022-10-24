@@ -1977,9 +1977,6 @@ input[type="range"]:active::-webkit-slider-thumb{
     justify-items: end;
   }
 
-  .button-show2 {
-    margin-left: 26rem;
-  }
 
 }
 
@@ -2067,6 +2064,11 @@ input[type="range"]:active::-webkit-slider-thumb{
       margin-left: 6rem;
       margin-top: 0rem;
       width: 29rem;
+    }
+
+    .button-show2{
+      margin-top: -3rem;
+      margin-left: 22rem;
     }
 
     .iconos {
