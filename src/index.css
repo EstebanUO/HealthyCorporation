@@ -2102,8 +2102,11 @@ input[type="range"]:active::-webkit-slider-thumb{
 
     .card_all_product{
       display: inline-block;
-      margin-left: -10rem;
+      margin-left: -3rem;
       margin-right: 1rem;
+      display: grid;
+      grid-template-columns: 13rem 14rem;
+
     }
   }
 
@@ -2152,6 +2155,20 @@ input[type="range"]:active::-webkit-slider-thumb{
     margin-right: 0rem;
   }
 
+  .card_all_product{
+    margin-right: 1rem;
+    display: grid;
+    grid-template-columns: 13rem 14rem;
+  }
+}
+
+@media screen and (max-width:375px) {
+
+  .card_all_product{
+    margin-right: 3rem;
+    display: grid;
+    grid-template-columns: 13rem 14rem;
+  }
 
 }
 
