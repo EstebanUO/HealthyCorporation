@@ -2009,7 +2009,7 @@ input[type="range"]:active::-webkit-slider-thumb{
   }
   .card_all_product{
     display: grid;
-    grid-template-columns: 14rem 14rem 14rem;
+    grid-template-columns: 13rem 14rem 14rem;
   }
 
   html{
