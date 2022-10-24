@@ -15,7 +15,9 @@
 
 .up_check {
     height: 7rem;
-    border-bottom: solid black;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 6px 7px -2px grey;
 }
 
 .content_check {
@@ -42,10 +44,9 @@
     background-color: white;
     border: none;
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     font-size: 2rem;
-    /* height: 7rem; */
-    border-radius: .7rem;
+    box-shadow: none;
 }
 
 .check_btn {

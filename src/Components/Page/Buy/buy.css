@@ -38,6 +38,7 @@
     background-color: #5bc3fc;
     width: 2.4rem;
     height: 2.4rem;
+    transition: all 300ms ease;
 }
 
 .Content_favorite {
@@ -143,7 +144,7 @@ hr {
 .up_buy_2 {
     padding-left: 1rem;
     margin-top: -1rem;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     color: #00a650;
 }
 
@@ -161,7 +162,7 @@ hr {
     flex-direction: row;
     justify-content: space-around;
     background-color: white;
-    width: 60rem;
+    width: 57rem;
     align-items: center;
     border: 2px solid gray;
     border-radius: .7rem;
@@ -178,7 +179,7 @@ hr {
 }
 
 .columm_buy {
-    width: 34rem;
+    width: 31rem;
     background-color: #817f7f21;
     padding: 1rem;
     margin-left: -5rem;
@@ -263,13 +264,13 @@ hr {
 }
 
 .addBuy_:hover {
-    background-color: #ace3ff;
+    background-color: #50c4ff2e;
     transition: all 300ms;
     border: solid #5bc3fc;
 }
 
 .addBuy_2:hover {
-    background-color: #ace3ff;
+    background-color: #50c4ff2e;
     transition: all 300ms;
 }
 

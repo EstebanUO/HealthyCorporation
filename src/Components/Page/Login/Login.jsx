@@ -67,7 +67,6 @@ export const Login = (props) => {
       <Header />
       <div className="formulario">
         <div>
-        
           <form className="formulario3" onSubmit={props.ClickLogin}>
             <h1 className="titleReg">Iniciar Sesion</h1>
             <div className="formularioLog">
@@ -91,8 +90,8 @@ export const Login = (props) => {
         </div>
         <div className="welcome-back">
           <div className="message2">
-            <h2>Bienvenido a HealthyCorporation</h2>
-            <p>Aun no tienes cuenta? por favor registrate aqui</p>
+            <h2 className="text_welcome">Bienvenido a HealthyCorporation</h2>
+            <p>¿Aun no tienes cuenta? por favor registrate aqui</p>
             <button onClick={onclick} className="signUpBtn"><Link to="/register" className="linkLog">Registrarse</Link></button>
           </div>
         </div>
