@@ -2064,7 +2064,7 @@ input[type="range"]:active::-webkit-slider-thumb{
     .formulario2 {
 
       width: 0rem;
-      margin-left: 5.5rem;
+      margin-left: 6rem;
       margin-top: 0rem;
       width: 29rem;
     }
@@ -2074,13 +2074,8 @@ input[type="range"]:active::-webkit-slider-thumb{
     }
 
     .button-show {
-      margin-left: 22rem;
-    }
-
-
-    .formulario3{
-      margin-left: -1.5rem;
-      width: 25rem;
+      margin-top: -0.7rem;
+      margin-left: 23rem;
     }
   
     .message2{
@@ -2088,7 +2083,7 @@ input[type="range"]:active::-webkit-slider-thumb{
       margin-left: 0rem;
     }
     .formulario3 {
-      margin-left: -1rem;
+      margin-left: 5.5rem;
       width: 28rem;
     }
 
@@ -2096,10 +2091,6 @@ input[type="range"]:active::-webkit-slider-thumb{
       margin-top: 2rem;
       margin-left: 8rem;
       margin-right: 6rem;
-    }
-
-    .button-show2{
-      margin-left: 19rem;
     }
 
     .card_all_product{
