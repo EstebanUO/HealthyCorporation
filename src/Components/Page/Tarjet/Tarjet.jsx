@@ -6,10 +6,10 @@ import cerrar from '../../Image/Icons/cerrar.png';
 
 
 
-export const Tarjet = () => {
+export const Tarjet = (props) => {
   return (
     <div>
-      <Header /><br /><br />
+      <Header valiLoginAdmin={props.valiLoginAdmin}/><br /><br />
       <div className='acount_up'>
         <div className="acount_all">
           <div className='all_info'>

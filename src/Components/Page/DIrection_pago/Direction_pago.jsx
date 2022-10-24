@@ -7,9 +7,18 @@ import icon_buy from '../../Image/icon_buy.png'
 import icon_regresar from '../../Image/icon_regresar.png'
 import './Direction_pago.css'
 import back from '../../Image/back.png';
+import { Login } from '../Login/Login'
+
 
 export const Direction_pago = () => {
+
+    // const valiLoginUser = localStorage.getItem("EmailValidUser");
+    // const valiEmail = localStorage.getItem("EmalValid");
+    const valiLoginName = localStorage.getItem("nameUser");
+
+    
     return (
+        // valiLoginUser && valiEmail !== true ? <Login/> :
         <>
             <header className='up_check'>
                 <div className='imgu2'>
@@ -34,7 +43,7 @@ export const Direction_pago = () => {
                 </div>
             </div>
             <div className='nom_check'>
-                <p className='text_check2' >[Nombre] Dijita tu dirección para saber en donde te encuentras</p>
+                <p className='text_check2' ><b>{valiLoginName}</b> Dijita tu dirección para saber en donde te encuentras</p>
             </div>
             <div className='check_all'>
                 <div className='content_check'>
@@ -48,20 +57,7 @@ export const Direction_pago = () => {
                         <form action="">
                             <label className='text_check'>Dirección</label><br />
                             <input type="text" className='textContact' name='user-name' placeholder="Digite su dirección" required></input><br /><br />
-                            <div className='acount_content_tarjet-'>
-                                <b><label className='text_check'>Ingresa tu ciudad</label></b>
-                                <select className='input_check' name="ciudad" required>
-                                    <option value="" disabled>Ciudad</option>
-                                    <option value="">Armenia</option>
-                                    {/* <option value=""></option>
-                                    <option value=""></option>
-                                    <option value=""></option>
-                                    <option value=""></option>
-                                    <option value=""></option>
-                                    <option value=""></option>
-                                    <option value=""></option> */}
-                                </select>
-                            </div><br />
+                            
                             <div className='acount_content_tarjet-'>
                                 <b><label className='text_check'>Ingresa tu locaidad</label></b>
                                 <select className='input_check' name="localidad" required>
@@ -70,7 +66,7 @@ export const Direction_pago = () => {
                                     {/* <option value=""></option>
                                     <option value=""></option>
                                     <option value=""></option>
-                                    <option value=""></option>
+                                    <option value=""></option> 
                                     <option value=""></option>
                                     <option value=""></option>
                                     <option value=""></option> */}
@@ -90,6 +86,6 @@ export const Direction_pago = () => {
                 </div>          
             </div>  
             <Footer />
-        </>
-    )
+        </>  
+    ) 
 }

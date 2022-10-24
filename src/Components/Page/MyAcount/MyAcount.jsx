@@ -16,6 +16,14 @@ export const MyAcount = (props) => {
 
   const [open, setOpen] = React.useState(true);
 
+  
+  // eliminar el user de local storage
+  const handleClik = () => {
+      localStorage.clear();
+      window.location.reload();
+    }
+  
+
   return (
     <div>
       <Header valiLoginAdmin={props.valiLoginAdmin} />
@@ -29,7 +37,7 @@ export const MyAcount = (props) => {
               <Link to='/direction' className='b'>Mis direcciones</Link>
               <Link to='/tarjet' className='c'>Mis tarjetas</Link>
               <Link to='/password' className='d'>Mi contraseña</Link>
-              <span className='btnCerrarSesion' role="button"><img src={cerrar} alt="cerrarSesion" className='cerrarSesion'/> Cerrar sesión</span>
+              <span  onClick={handleClik} className='btnCerrarSesion' role="button"><img onClick={handleClik} src={cerrar} alt="cerrarSesion" className='cerrarSesion'/> Cerrar sesión</span>
             </div>
           </div>
           <div className='acount_content_all'>

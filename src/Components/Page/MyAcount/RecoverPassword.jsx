@@ -1,6 +1,7 @@
 import emailjs from 'emailjs-com'
 import React,{useState} from 'react';
 import axios from "axios";
+import Swal from 'sweetalert2';
 import { Header } from '../Layout/Header/Header';
 import { Footer } from '../Layout/Footer/Footer';
 import { FaEnvelope } from "react-icons/fa";
@@ -10,31 +11,32 @@ function RecoverPassword(props) {
     
   /*validaciones usuario*/
   const [email, setemail] = useState("")
-  const [errorEmail, seterrorEmail] = useState(null)
+//   const [errorEmail, seterrorEmail] = useState(null)
 
-  const [usaername, setusaername] = useState(null)
-  const [password, setpassword] = useState(null)
-  const [emailSend, setemailSend] = useState(null)
+
   /**/ 
   const getApi = (event) => {
     axios.get('https://apiprojectmain.herokuapp.com/api/users') 
       .then(function (response) {
         // handle success
         let validacion=true;
+        let usaername=""
+        let password=""
+        let emailSend=""
         
         response.data.map(data => {
 
             if (email===data.email) {
                 validacion=false;
-                setusaername(data.name)
-                setpassword(data.password)
-                setemailSend(data.email)
+                usaername=data.name
+                password=data.password
+                emailSend=data.email
        
             }
             return "termino map";
         });
         
-        onsubmit(event,validacion)
+        onsubmit(usaername,password,emailSend,event,validacion)
       })
       .catch(function (error) {
         // handle error
@@ -46,11 +48,11 @@ function RecoverPassword(props) {
     
     
 
-    const sendEmail=()=>{
+    const sendEmail=(usaername,password,emailSend)=>{
         var templateParams = {
             to_name: usaername,
             email: emailSend,
-            mensaje:'esta es su contraseña: "'+password+'" ,le recomendamos cambiarla desde las configuraciones de su cuenta'
+            mensaje:'Esta es su contraseña: "'+password+'" ,le recomendamos cambiarla desde las configuraciones de su cuenta'
 
         };
 
@@ -64,30 +66,48 @@ function RecoverPassword(props) {
     }
 
     const validateData=()=>{
-        seterrorEmail(null)
+        // seterrorEmail(null)
         let valid = true
 
         if(email.indexOf('.') === -1 || email.indexOf('@') === -1 || /\s/.test(email) || email==="" ){
-            seterrorEmail("Debes ingresar un email valido!!")
+            // seterrorEmail(
+                Swal.fire({
+                    icon: 'error',
+                    title: "¡Debes ingresar un email valido!",
+                    showConfirmButton: false,
+                    timer: 1500
+                })
             valid=false
         }
-
         return valid;
     }
 
-    const onsubmit=(event,validacion)=>{
+    const onsubmit=(usaername,password,emailSend,event,validacion)=>{
         if(!validateData()){
             return console.log("invalido");
         }else if(validateData()){
             
             if(!validacion){
-                sendEmail()
+                sendEmail(usaername,password,emailSend)
                 setemail("")
-                seterrorEmail("le hemos enviamos un correo con su contraseña!")
+                // seterrorEmail("le hemos enviamos un correo con su contraseña!")
+                Swal.fire({
+                    icon: 'success',
+                    title: "¡le hemos enviamos un correo con su contraseña!",
+                    showConfirmButton: false,
+                    timer: 1500
+                })
                 return console.log("valido")
 
             }else if(validacion){
-                seterrorEmail("Email no registrado en nuestra base de datos")
+                // seterrorEmail("Email no registrado en nuestra base de datos")
+                Swal.fire({
+                    icon: 'warning',
+                    title: "Email no registrado en nuestra base de datos",
+                    html: "<p>Por favor verifica si escribistes bien el <b>Email</b></p>",
+                    showConfirmButton: false,
+                    timer: 2000
+                })
                 console.log("email no encontrado");
             } 
         }
@@ -102,9 +122,13 @@ function RecoverPassword(props) {
             <div className='containerForgotPass'>
                 <div className='forgotPass'>
                     <span className='recuperarPass'>Recuperar contraseña</span><br />
-                    <input type="email" placeholder='Ingresa tu correo' className='inputRecuperar' onChange={(e)=>setemail(e.target.value)} value={email} /><FaEnvelope className='iconEmailRecuperar'/><br/>
+                    <div className='div-recoverPassword'>
+                        <FaEnvelope className='iconEmailRecuperar'/>
+                        <input type="email" placeholder='Ingresa tu correo' className='inputRecuperar' onChange={(e)=>setemail(e.target.value)} value={email} /><br/>
+                    </div>
+                    <br />
                     <button onClick={getApi} className="btnRecuperar">Enviar contraseña</button>
-                    <p className='alertError'>{errorEmail}</p>
+                    {/* <p className='alertError'>{errorEmail}</p> */}
                 </div>
             </div>
             {/* hasta aca*/}

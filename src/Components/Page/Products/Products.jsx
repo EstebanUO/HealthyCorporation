@@ -24,24 +24,60 @@ export const Products = (props) => {
   function slideOne() {
     if (slider1 - slider2 >= minGap) {
       setSlider1(slider2 - minGap)
+      fillColor();
     }
     displayValOne.textContent = slider1;
-    fillColor();
   }
 
   function slideTwo() {
     if (slider2 - slider1 <= minGap) {
       slider2 = slider1 + minGap;
+      fillColor();
     }
     displayValTwo.textContent = slider2;
-    fillColor();
   }
 
   function fillColor() {
     const percent1 = slider1 / sliderMaxValue * 100;
-    const percent2 = slider2* 100;
-    document.getElementById("slider-track").style.background = `linear-gradient(to right, #dadae5 ${percent2}% , #3264fe ${percent2}% , #3264fe ${percent1}%, #dadae5 ${percent1}%)`;
+    const percent2 = slider2 * 100;
+    document.getElementById("slider-track").style.background = `linear-gradient(to right, #dadae5 ${percent1}% , #3264fe ${percent1}% , #3264fe ${percent2}%, #dadae5 ${percent2}%)`;
   }
+
+  const [shown, setShown] = useState(false);
+  const switchShown = (event) => {
+    setShown(!shown)
+    filterFunction()
+    event.preventDefault()
+  };
+
+  const [shown2, setShown2] = useState(false);
+  const switchShown2 = (event) => {
+    setShown2(!shown2)
+    filterFunction2()
+    event.preventDefault()
+  };
+
+  function filterFunction(){
+    if (shown === false) {
+      document.querySelector(".subCategorias").style.display = "flex";
+    }else if(shown === true){
+      document.querySelector(".subCategorias").style.display = "none";
+    }
+  }
+
+  function filterFunction2(){
+    if (shown2 === false) {
+      document.querySelector(".subCategorias0").style.display = "flex";
+    }else if(shown2 === true){
+      document.querySelector(".subCategorias0").style.display = "none";
+    }
+  }
+
+  const [changeStyle, sethangeStyle] = useState()
+  const changeStyle2 = (event) => {
+    sethangeStyle(!changeStyle)
+    event.preventDefault()
+  };
 
   return (
     <div>
@@ -50,10 +86,7 @@ export const Products = (props) => {
       <Categories />
       <br /><br />
       <div className='container-Orden-Productos'>
-        <p className='productsEncontrados'>6363 | Productos Encontrados</p>
-        <div className='iconsOrderProducts'>
-          | <FaTh className='iconOrder'/> | <FaThList className='iconOrder'/> |
-        </div>
+        <p className='productsEncontrados'>6363 | Productos Encontrados</p>|
         <p className='productsEncontrados'>Ordenar por:</p>
         <select name="" id="selectPrecios">
           <option value="">Relevancia</option>
@@ -67,12 +100,12 @@ export const Products = (props) => {
       <div className='containerFilter'>
         <div className='containerCategorias'>
           <div className='containerTitle'>
-            <h2 className='titleFilter'><FaSlidersH className='iconFilter' /> Filtrar por:</h2>
+            <h2 className='titleFilter'><FaSlidersH className='iconFilter' /> Filtrar por</h2>
           </div>
           <div className='containerFiltros'>
             <div className='filterCategoria'>
-              <label className='categIcon' role="button">Categoría<FaArrowCircleDown className='iconArrow'/><FaArrowCircleUp className='iconArrow'/></label>
-              <div className='subCategorias'>
+              <label onClick={switchShown} className='categIcon' role="button">Categoría  {shown? <FaArrowCircleUp onClick={switchShown} className='iconArrow'/>:<FaArrowCircleDown onClick={switchShown} className='iconArrow'/>}</label>
+              <div className='subCategorias' id='subCategorias'>
                 <div className='subCategorias2'>
                   <input type="checkbox" /><p>Medicamentos</p>
                 </div>
@@ -122,8 +155,8 @@ export const Products = (props) => {
             </div>
             <hr />
             <div className='filterCategoria'>
-              <label className='categIcon' role="button">Marca<FaArrowCircleDown className='iconArrow'/><FaArrowCircleUp className='iconArrow'/></label>
-                <div className='subCategorias'>
+              <label onClick={switchShown2} className='categIcon' role="button">Marca{shown2? <FaArrowCircleUp onClick={switchShown2} className='iconArrow'/>:<FaArrowCircleDown onClick={switchShown2} className='iconArrow'/>}</label>
+                <div className='subCategorias0'>
                   <div className='subCategorias2'>
                     <input type="checkbox" /><p>Mk</p>
                   </div>

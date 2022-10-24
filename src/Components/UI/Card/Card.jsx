@@ -36,7 +36,7 @@ export const Card = () => {
               <p className='price_product'>$ 40.000</p>
             </div>
             <div>
-              <p className='name_Product_'>Cantidad disponible:  4</p>
+              <p className='name_Product_'>Cantidad disponible:4</p>
             </div>
             <div className='rowProduct'>
               <p className='textProduct'>Despacho</p>
@@ -108,9 +108,9 @@ export const Card = () => {
           <div className='imgProduct_' >
           <Link to="/compra"><img className='imgProduct2' src={acetaminofen} alt="Producto imagen" /></Link>
           </div>
-          <div className='padding_product'>
+          <Link to="/compra"><div className='padding_product'>
             <div>
-            <Link to="/compra"><p className='name_Product'>Acetaminofén  </p></Link>
+           <p className='name_Product'>Acetaminofén  </p>
             </div>
 
             <div>
@@ -129,7 +129,7 @@ export const Card = () => {
           <button onClick={add} className='addProduct_'>
               Agregar <FaShoppingCart /> 
             </button>
-          </div>
+          </div></Link>
         </div>
       </div><br />
     </div>

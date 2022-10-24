@@ -3,15 +3,16 @@ import { Link } from "react-router-dom";
 import { Footer } from '../Layout/Footer/Footer';
 import { Header } from '../Layout/Header/Header';
 import { Card } from '../../UI/Card/Card';
-
+import ReactImageMagnify from 'react-image-magnify';
 import './buy.css'
-import img from '../../Image/assects/medicasp.jpg';
+// import img from '../../Image/assects/medicasp.jpg';
 import back from '../../Image/x.png';
 import Swal from 'sweetalert2';
+import watchImg300 from '../../Image/assects/acetaminofen300.jpg';
+import watchImg1200 from '../../Image/assects/acetaminofen.jpg';
 
 
-
-export const Buy = () => {
+export const Buy = (props) => {
 
     const [counter, setCounter] = useState(6);
     const [amount, setAmount] = useState(1);
@@ -25,7 +26,7 @@ export const Buy = () => {
 
     const add = () => {
         Swal.fire({
-          icon: 'success',
+          icon: 'success', 
           title: 'Se ha agregado el producto al carrito',
           showConfirmButton: false,
           timer: 3400,
@@ -44,6 +45,7 @@ export const Buy = () => {
                 timer: 1500
             });
             setAmount(amount);
+            // document.querySelector(".btn_res2").style.backgroundColor = 'gray';
         }
     };
     const restar = () => {
@@ -61,24 +63,25 @@ export const Buy = () => {
         setCounter(counter + 1);
     };
 
-//    class Plus extends React.Component{
-//         constructor (props) {
-//             super(props);
-//             this.state = {
-//             message: ''
-//             };
-//             this.channel = null;
-//         }
-//    } 
-    
-
     return (
         <>
-            <Header />
+            <Header valiLoginAdmin={props.valiLoginAdmin}/>
             <div className='content_buy'>
                 <div className='row_buy'>
                     <div className='imgBuy'>
-                        <img className='img_buy' src={img} alt="Imagen compra" />
+                        <ReactImageMagnify {...{
+                            smallImage: {
+                                alt: 'Wristwatch by Ted Baker London',
+                                isFluidWidth: true,
+                                src: watchImg300,
+                            },
+                            largeImage: {
+                                src: watchImg1200,
+                                width: 1000,
+                                height: 667,
+                                
+                            }
+                        }} />
                     </div>
                     <div className='columm_buy'>
                         <div className='padding_buy'>
@@ -99,9 +102,9 @@ export const Buy = () => {
                                 <p className='name_buy_'>Cantidad disponible: <b>{valor}</b>
                                     <div className='product_btn_'>
                                         <div className='product_btn3'>
-                                            <button className='btn_sum2' onClick={restar}>-</button>
+                                            <button className='btn_res2' onClick={restar}>-</button>
                                             <p className='counter'>{amount}</p>
-                                            <button className='btn_res2' onClick={sumar}>+</button>
+                                            <button className='btn_sum2' onClick={sumar}>+</button>
                                         </div>
                                     </div></p>
                             </div>
@@ -111,10 +114,6 @@ export const Buy = () => {
                             <div className='up_buy_2'>
                                 <p>Envio gratis</p>
                             </div>
-                            <div className='up_buy_1'>
-                                <p>Llega dentro de las 24 horas</p>
-                            </div>
-
                         </div>
                         <div className='addBuy'>
                             <div className="Content_favorite" onClick={onHeart}>

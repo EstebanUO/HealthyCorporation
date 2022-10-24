@@ -1,4 +1,4 @@
-import React,{useEffect} from 'react'
+import React,{useEffect, useRef} from 'react'
 import AlertTitle from '@mui/material/AlertTitle';
 import { Footer } from '../Layout/Footer/Footer'
 import { Header } from '../Layout/Header/Header'
@@ -6,9 +6,12 @@ import { Link } from "react-router-dom"
 import Alert from '@mui/material/Alert';
 import { BsEyeFill,BsEyeSlashFill } from "react-icons/bs";
 import { FaUserAlt,FaKey } from "react-icons/fa";
+import { Api } from '@mui/icons-material';
+import { get } from 'jquery';
+import { MyAcount } from '../MyAcount/MyAcount';
+
 
 export const Login = (props) => {
-  const [open, setOpen] = React.useState(true);
 
   useEffect(() => {
     if (props.messagesLogin === "usuario no registrado") {
@@ -25,9 +28,42 @@ export const Login = (props) => {
     props.onClick2()
   }
 
+  /* recorre la api users */
 
+
+  /* local Storage */
+  // const email_ = useRef();
+  // const password_ = useRef();
+
+  // const handleSumit = () => {
+  //   if(email_.current.value == Api.email){
+  //     localStorage.setItem("EmailValid", Api.email_);
+  //     localStorage.setItem("PassValid", Api.name_);
+  //   }
+  // }
+
+  /* Eliminar el user del local storage  para vista de mi cuenta*/
+
+ //validacion de los datos pero ya funciona pailas
+  // const getPass = localStorage.getItem();
+
+  // getEmail && getPass ? <mi cuenta />: 
+  /* aqui hace la condicion de volver a login ya que no hay datos */
+
+
+
+  // eliminar el user de local storage
+  // const handleClik = () => {
+  //     localStorage.clear();
+  //     window.location.reload();
+  //   }
+  // }
+
+  
   return (
+    
     <div>
+      
       <Header />
       <div className="formulario">
         <div>
@@ -54,8 +90,8 @@ export const Login = (props) => {
         </div>
         <div className="welcome-back">
           <div className="message2">
-            <h2>Bienvenido a HealthyCorporation</h2>
-            <p>Aun no tienes cuenta? por favor registrate aqui</p>
+            <h2 className="text_welcome">Bienvenido a HealthyCorporation</h2>
+            <p>¿Aun no tienes cuenta? por favor registrate aqui</p>
             <button onClick={onclick} className="signUpBtn"><Link to="/register" className="linkLog">Registrarse</Link></button>
           </div>
         </div>

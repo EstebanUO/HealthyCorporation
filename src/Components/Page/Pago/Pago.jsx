@@ -63,7 +63,7 @@ export const Pago = () => {
     const onSee3 = () => { document.getElementById("content_det").style.display = 'flex' };
     const onBlock3 = () => { document.getElementById("content_det").style.display = 'none' };
 
-
+    const valiLoginName = localStorage.getItem("nameUser");
 
     return (
         <>
@@ -92,7 +92,7 @@ export const Pago = () => {
             </div>
 
             <div className='nom_check'>
-                <p className='text_check_2' >[Nombre] ya casi terminas tu compra!</p>
+                <p className='text_check_2' ><b>{valiLoginName}</b> ya casi terminas tu compra!</p>
             </div>
 
             <div className='check_all'>
@@ -111,7 +111,7 @@ export const Pago = () => {
                             <form className='acount_content_all2' id='content_det2'>
                                 <div className='acount_content_tarjet'>
                                     <p className='text_check'>Numero de la tarjeta</p>
-                                    <input className='input_acount3' placeholder='5212 **** **** ****' minlength="16" type="number" required />
+                                    <input className='input_acount3' placeholder='5212 **** **** ****' minlength="16" maxLength="16" type="text"  pattern="[0-9]+" required />
                                 </div><br />
 
                                 <div className='acount_content_tarjet'>
@@ -181,8 +181,9 @@ export const Pago = () => {
                                     <select className='input_check' name="ciudad" required>
                                         <option value="" >Banco</option>
                                         <option value="">Bancolombia</option>
-                                        <option value="">Banco agr ario</option>
+                                        <option value="">Banco agrario</option>
                                         <option value="">BBVA</option>
+                                        <option value="">Nequi</option>
                                         <option value="">Colpatria</option>
                                         <option value="">NuBan</option>
                                         <option value="">Caja social</option>
@@ -204,7 +205,7 @@ export const Pago = () => {
 
                                 <div className='acount_content_tarjet2'>
                                     <p className='text_check'>Número de documento</p>
-                                    <input type="text" className='textContact' name='user-name' placeholder="Digite su documento" required></input><br /><br />
+                                    <input type="text" className='textContact' name='user-name' placeholder="Digite su documento" minLength="5" required></input><br /><br />
                                 </div><br />
 
 
