@@ -1,8 +1,13 @@
 import React from 'react';
 import emailjs from '@emailjs/browser';
+import { SlUser} from 'react-icons/sl';
+import {TfiEmail} from 'react-icons/tfi';
+import {BsTelephone} from 'react-icons/bs';
+import {FiMapPin} from 'react-icons/fi';
+import {RiMessage2Line} from 'react-icons/ri';
 
 export const Form = () => {
-
+  
 
   const sendEmail =(event) =>{
     event.preventDefault();
@@ -17,22 +22,44 @@ export const Form = () => {
       <form className="contact" onSubmit={sendEmail}>
             <div>
               <div className="container1">
-               
+                
                 <label>Nombres</label><br/>
-                <input type="text" className='textContact' name='user-name' placeholder="Digite sus respectivos nombre.."></input>
-               
+                <div className="bg-input">
+                  <i className='icons'><SlUser/></i>
+                  <input type="text" className='nombres' name='user-name' placeholder="Digite sus respectivos nombre.."></input>
+                </div>
 
                 <label>Apellidos</label><br/>
-                <input type="text" className='textContact' name='user-surname' placeholder="Digite sus respectivos apellido.."></input>
-               
-
+                <div className="bg-input">
+                  <i className='icons'><SlUser/></i>
+                  <input type="text" className='nombres' name='user-surname' placeholder="Digite sus respectivos apellido.."></input>
+                </div>
+                
                 <label>Correo</label><br/>
-                <input type="email" className='textContact' name='user-email' placeholder="Digite su correo.."></input>
+                <div className="bg-input">
+                  <i className='icons'><TfiEmail/></i>
+                  <input type="email" className='nombres'   name='user-email' placeholder="Digite su correo.."></input>
+                </div>
+                
                
 
-                <label>Telefono</label><br/>
-                <input type="number" className='textContact' name='user-number' placeholder="Digite su numero.."></input>
+                <label>Teléfono </label><br/>
+                <div className="bg-input">
+                  <i className='icons'><BsTelephone/></i>
+                  <input type="number" className='nombres'  name='user-number' placeholder="Digite su numero.."></input>
+                </div>
+                
+                <label>Dirección</label><br/>
+                <div className="bg-input">
+                  <i className='icons'><FiMapPin/></i>
+                  <input type="text" className='nombres' name='user-surname' placeholder="Digite su direccion.."></input>
+                </div>
                
+                <label>Asunto</label><br/>
+                <div className="bg-input">
+                  <i className='icons'><RiMessage2Line/></i>
+                  <input type="text"  className='nombres' name='user-surname' placeholder="Escribe tu asunto aqui.."></input>
+                </div>
 
                 <label>Mensaje</label>
                 <br />
