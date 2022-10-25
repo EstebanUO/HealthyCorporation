@@ -587,10 +587,10 @@ input[type="checkbox"] {
 }
 
 .container1 {
-  background-color: #ffffff57;
+  background: radial-gradient(circle, #44D2F2 0%, rgb(236, 236, 236) 100%);
   padding: 2rem;
   box-shadow: 1px 1px 18px black;
-  border-radius: .6rem;
+  border-radius: 2.6rem;
   backdrop-filter: blur(10px);
   /* -webkit-backdrop-filter: blur(10px); */
   width: 100%;
@@ -599,7 +599,6 @@ input[type="checkbox"] {
 .container_all {
   display: flex;
   justify-content: center;
-
   animation: container_all 1s forwards;
 }
 
@@ -616,12 +615,14 @@ input[type="checkbox"] {
 .about_all {
   display: flex;
   flex-direction: row;
+  margin-top: -37rem;
 }
 
 .about_contact {
   margin-top: 8rem;
-  width: 118rem;
+  width: 68rem;
   margin-left: -6rem;
+  box-shadow: #0e1e251f 0px 2px 4px 0px, #0e1e2552 0px 2px 10px 0px;
 }
 
 .about_contact2 {
@@ -661,12 +662,14 @@ input[type="checkbox"] {
 }
 
 .about_where {
-  padding-left: 8rem;
+  padding-left: 3rem;
   animation: about_where 1s forwards;
   display: flex;
   flex-direction: column;
-  padding: 2rem;
-  margin-top: 5.8rem;
+  width: 87rem;
+  margin-left: 2rem;
+  margin-top: 8.1rem;
+  box-shadow: #0e1e251f 0px 2px 4px 0px, #0e1e2552 0px 2px 10px 0px;
 }
 
 @keyframes about_where {
@@ -689,6 +692,34 @@ input[type="checkbox"] {
 
 
 /*---------------- ContactUS -------------------*/
+
+.bg-input{
+  background: #F1F1F1;
+  border-radius: 100px;
+  position: relative;
+  text-decoration: none;
+}
+
+.icons{
+  color: #2742db;
+  display: inline-block;
+  position: absolute;
+  left: 14px;
+  top: 10px;
+}
+
+.nombres{
+  padding: 10px;
+  padding-left: 37px;
+  width: 100%;
+  color: #AEB3B7;
+  text-decoration: none;
+  border: none;
+  border-radius: 0.5rem;
+  border-bottom: solid 1px black;
+}
+
+
 textarea {
   min-height: 200px;
   max-height: 200px;
@@ -703,21 +734,8 @@ textarea {
   display: flex;
   justify-content: center;
   padding: 2.5rem;
-}
-
-.textContact {
-  /* margin: 10px 0;
-  border-radius: 7px;
-  /* border-bottom: 2px solid #2196F3; 
-  box-shadow:5px 5px 5px #90A4AE;  */
-
-  background-color: #ffffff57;
-  width: 100%;
-  height: 2.5rem;
-  padding: 0.2rem;
-  font-size: 1rem;
-  border: none;
-  border-bottom: solid 1px black;
+  padding: 3.5rem;
+  margin-left: 28rem;
 }
 
 label {
@@ -747,23 +765,24 @@ label {
 
 .boton {
   padding: 1rem;
+  width: 9rem;
   font-weight: 400;
-  background-color: #4a4aee;
+  background-color: #fff;
   border-radius: 2rem;
   border: none;
   outline: none;
   cursor: pointer;
-  font-size: .9rem;
+  font-size: 1rem;
   margin-top: 2rem;
   transition: all .3s ease-in;
-  color: #fff;
+  color: #000;
   margin: auto;
   display: block;
   margin-top: 2rem;
 }
 
 .boton:hover {
-  background-color: #6464f8;
+  background-color: #44D2F2;
 }
 
 /* --------------------Footer --------------------*/
@@ -823,22 +842,19 @@ a {
   background-color: rgba(0, 0, 0, 0.6);
 }
 
-
-.image_contact {
-  width: 100%;
-  z-index: 0;
-}
-
 .text_product {
-  margin-top: -14.8rem;
+  width: 26rem;
   margin-bottom: 1rem;
   display: flex;
   justify-content: flex-start;
-  font-size: 5rem;
+  font-size: 3.5rem;
   padding-left: 6rem;
-  color: white;
+  color: rgb(0, 0, 0);
   animation: text_product 1s forwards;
+  margin-top: 18rem;
+  text-align: center;
 }
+
 
 @keyframes text_product {
   from {
@@ -848,16 +864,6 @@ a {
   to {
     transform: translate(0px);
   }
-}
-
-.text_product2 {
-  margin-top: -3rem;
-  display: flex;
-  justify-content: flex-start;
-  font-size: 5rem;
-  padding-left: 6rem;
-  color: white;
-  animation: text_product2 1.2s forwards;
 }
 
 @keyframes text_product2 {
