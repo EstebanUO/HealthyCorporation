@@ -5,7 +5,7 @@ import master from '../../Image/Tarjetas/master2.PNG'
 import visa from '../../Image/Tarjetas/visa2.PNG'
 import pse from '../../Image/Tarjetas/pse2.PNG'
 import Swal from 'sweetalert2';
-import logo2 from '../../Image/logo.png'
+import logo2 from '../../Image/logo.png';
 import back from '../../Image/back.png';
 import './Pago.css'
 /* imagenes de las tarjetas */

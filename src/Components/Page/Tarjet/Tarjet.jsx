@@ -6,7 +6,12 @@ import cerrar from '../../Image/Icons/cerrar.png';
 
 
 
-export const Tarjet = (props) => {
+export const Tarjet = (props) => { 
+  const handleClik = () => {
+    localStorage.clear();
+    window.location.reload();
+  }
+
   return (
     <div>
       <Header valiLoginAdmin={props.valiLoginAdmin}/><br /><br />
@@ -18,7 +23,7 @@ export const Tarjet = (props) => {
               <Link to='/direction' className='b'>Mis direcciones</Link>
               <Link to='/tarjet' className='select_btn'>Mis tarjetas</Link>
               <Link to='/password' className='d'>Mi contraseña</Link>
-              <span className='btnCerrarSesion' role="button"><img src={cerrar} alt="cerrarSesion" className='cerrarSesion'/> Cerrar sesión</span>
+              <span onClick={handleClik} className='btnCerrarSesion' role="button"><img src={cerrar} alt="cerrarSesion" className='cerrarSesion'/> Cerrar sesión</span>
             </div>
           </div>
 

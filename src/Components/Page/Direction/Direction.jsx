@@ -7,7 +7,12 @@ import { Header } from '../Layout/Header/Header'
 
 
 
-export const Direction = (props) => {
+export const Direction = (props) => { 
+  const handleClik = () => {
+    localStorage.clear();
+    window.location.reload();
+  }
+
   return (
     <div>
       <Header valiLoginAdmin={props.valiLoginAdmin}/><br /><br />
@@ -19,7 +24,7 @@ export const Direction = (props) => {
               <Link to='/direction' className='select_btn'>Mis direcciones</Link>
               <Link to='/tarjet' className='c'>Mis tarjetas</Link>
               <Link to='/password' className='d'>Mi contraseña</Link>
-              <span className='btnCerrarSesion' role="button"><img src={cerrar} alt="cerrarSesion" className='cerrarSesion'/> Cerrar sesión</span>
+              <span onClick={handleClik} className='btnCerrarSesion' role="button"><img src={cerrar} alt="cerrarSesion" className='cerrarSesion'/> Cerrar sesión</span>
             </div>
           </div>
           <div className='acount_content_all'>

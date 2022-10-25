@@ -42,6 +42,7 @@ export const Footer = () => {
                 <MDBIcon icon="gem" className="me-3" />
                 Healthy Corporation
               </h6>
+              <p>Somos una pagina web local, con la finalidad de ayudar a aquellas personas que no viva cerca de una farmacia</p>
             </MDBCol>
 
             <MDBCol md="2" lg="2" xl="2" className='mx-auto mb-4' >

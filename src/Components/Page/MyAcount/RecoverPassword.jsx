@@ -75,7 +75,8 @@ function RecoverPassword(props) {
                     icon: 'error',
                     title: "¡Debes ingresar un email valido!",
                     showConfirmButton: false,
-                    timer: 1500
+                    timer: 3500,
+                    timerProgressBar: true
                 })
             valid=false
         }
@@ -95,7 +96,8 @@ function RecoverPassword(props) {
                     icon: 'success',
                     title: "¡le hemos enviamos un correo con su contraseña!",
                     showConfirmButton: false,
-                    timer: 1500
+                    timerProgressBar: true,
+                    timer: 2000
                 })
                 return console.log("valido")
 
@@ -106,7 +108,8 @@ function RecoverPassword(props) {
                     title: "Email no registrado en nuestra base de datos",
                     html: "<p>Por favor verifica si escribistes bien el <b>Email</b></p>",
                     showConfirmButton: false,
-                    timer: 2000
+                    timerProgressBar: true,
+                    timer: 5000
                 })
                 console.log("email no encontrado");
             } 

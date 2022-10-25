@@ -7,6 +7,8 @@ import { Link } from 'react-router-dom';
 import delect from '../../Image/eliminar.png'
 import img_prueba from '../../Image/assects/pax.jpg'
 import Swal from 'sweetalert2';
+import logo2 from '../../Image/logo.png'
+import back from '../../Image/back.png';
 
 export const Amount = (props) => {
 
@@ -24,7 +26,7 @@ export const Amount = (props) => {
         if (counter === valor) {
             Swal.fire({
                 icon: 'error',
-                title: 'Cantidad disponible en este momento solo es '+ valor ,
+                title: 'Cantidad disponible en este momento solo es ' + valor,
                 showConfirmButton: false,
                 timer: 1500
             });
@@ -63,7 +65,7 @@ export const Amount = (props) => {
 
     /*----------- eliminar -------------- */
 
-    const delectt = () =>{
+    const delectt = () => {
         Swal.fire({
             title: '¿Estas seguro?',
             text: "¡No podrás revertir esto!",
@@ -74,29 +76,38 @@ export const Amount = (props) => {
             confirmButtonText: '!Si!, quiero eliminarlo',
             cancelButtonText: 'Cancelar',
             buttonsStyling: false,
-            customClass:{
+            customClass: {
                 confirmButton: "confirm",
                 cancelButton: "Cancel"
             }
-          }).then((result) => {
+        }).then((result) => {
             if (result.isConfirmed) {
-              Swal.fire({
-                icon: 'success',
-                title: 'Se ha eliminado el producto del carrito',
-                showConfirmButton: false,
-                timer: 1400
-              })
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Se ha eliminado el producto del carrito',
+                    showConfirmButton: false,
+                    timer: 1400
+                })
             }
-          })
+        })
     }
-    
+
 
     return (
         <>
-            <Header valiLoginAdmin={props.valiLoginAdmin}/>
+            {/* <Header valiLoginAdmin={props.valiLoginAdmin}/> */}
+            <header className='up_check'>
+                <div className='imgu2'>
+                    <Link to='/'><img src={logo2} alt="Logo" /></Link>
+                </div>
+            </header>
             <div className="content_car">
+                <nav className='nav_check_'><p className='pad_check_'>Tu carrito de compras</p>
+                    <div className='back_up_'><Link to="/products"><img className='img_up2' src={back} alt="atras" /><p className='back'>Atras</p></Link>
+                    </div></nav>
                 <div className='product'>
                     <div className="product_all">
+                        <input type="checkbox" name="Product_select" id="Product_select" />
                         <div>
                             <img className='product_img' src={img_prueba} alt="imagen prodcuto" />
                         </div>
@@ -119,6 +130,88 @@ export const Amount = (props) => {
                     </div> <br />
 
                     {/* prueba al amontonar todad las cards */}
+                    <div className="product_all">
+                        <div>
+                            <img className='product_img' src={img_prueba} alt="imagen prodcuto" />
+                        </div>
+                        <div className='product_name'>
+                            <p className='error_'>Pax noche </p>
+                        </div>
+                        <div className='product_price'>
+                            <p className='error'>$ 30000</p>
+                        </div>
+                        <div className='product_btn'>
+                            <div className='product_btn2'>
+                                <button className='btn_sum' onClick={restar}>-</button>
+                                <p className='counter'>{counter}</p>
+                                <button className='btn_res' onClick={sumar}>+</button>
+                            </div>
+                        </div>
+                        <div className='delect'>
+                            <img onClick={delectt} className='delect_producto' src={delect} alt="eiminar producto" />
+                        </div>
+                    </div> <br />
+                    <div className="product_all">
+                        <div>
+                            <img className='product_img' src={img_prueba} alt="imagen prodcuto" />
+                        </div>
+                        <div className='product_name'>
+                            <p className='error_'>Pax noche </p>
+                        </div>
+                        <div className='product_price'>
+                            <p className='error'>$ 30000</p>
+                        </div>
+                        <div className='product_btn'>
+                            <div className='product_btn2'>
+                                <button className='btn_sum' onClick={restar}>-</button>
+                                <p className='counter'>{counter}</p>
+                                <button className='btn_res' onClick={sumar}>+</button>
+                            </div>
+                        </div>
+                        <div className='delect'>
+                            <img onClick={delectt} className='delect_producto' src={delect} alt="eiminar producto" />
+                        </div>
+                    </div> <br /><div className="product_all">
+                        <div>
+                            <img className='product_img' src={img_prueba} alt="imagen prodcuto" />
+                        </div>
+                        <div className='product_name'>
+                            <p className='error_'>Pax noche </p>
+                        </div>
+                        <div className='product_price'>
+                            <p className='error'>$ 30000</p>
+                        </div>
+                        <div className='product_btn'>
+                            <div className='product_btn2'>
+                                <button className='btn_sum' onClick={restar}>-</button>
+                                <p className='counter'>{counter}</p>
+                                <button className='btn_res' onClick={sumar}>+</button>
+                            </div>
+                        </div>
+                        <div className='delect'>
+                            <img onClick={delectt} className='delect_producto' src={delect} alt="eiminar producto" />
+                        </div>
+                    </div> <br /><div className="product_all">
+                        <div>
+                            <img className='product_img' src={img_prueba} alt="imagen prodcuto" />
+                        </div>
+                        <div className='product_name'>
+                            <p className='error_'>Pax noche </p>
+                        </div>
+                        <div className='product_price'>
+                            <p className='error'>$ 30000</p>
+                        </div>
+                        <div className='product_btn'>
+                            <div className='product_btn2'>
+                                <button className='btn_sum' onClick={restar}>-</button>
+                                <p className='counter'>{counter}</p>
+                                <button className='btn_res' onClick={sumar}>+</button>
+                            </div>
+                        </div>
+                        <div className='delect'>
+                            <img onClick={delectt} className='delect_producto' src={delect} alt="eiminar producto" />
+                        </div>
+                    </div> <br />
                 </div>
 
 
@@ -129,7 +222,7 @@ export const Amount = (props) => {
                     <div className='amount_content'>
                         <div className="amount_up">
                             <FaShoppingCart />
-                            <p className='error'> Tu carrito de compras</p>
+                            <p className='error'> Calcular tus productos</p>
                         </div>
                         <div className="amount_number">
                             <div className='amount_text'>
@@ -147,7 +240,7 @@ export const Amount = (props) => {
                         </div>
                         <div className='amount_btn'>
                             <button onClick={calcular} className='btn_back'>Calcular</button>
-                            <Link to='/pago'><button  className='btn_buy'>Ir a pagar</button></Link>
+                            <Link to='/pago'><button className='btn_buy'>Ir a pagar</button></Link>
                         </div>
                     </div>
                 </div>
