@@ -2000,13 +2000,11 @@ input[type="range"]:active::-webkit-slider-thumb{
     }
 
     .formulario2 {
-      margin-left: 4.8rem;
+      margin-left: 14rem;
       margin-top: 0rem;
+      width: 28rem;
     }
 
-    .formulario2 {
-      width: 26rem;
-    }
 
     .welcome-back {
       margin-left: 3rem;
@@ -2017,38 +2015,41 @@ input[type="range"]:active::-webkit-slider-thumb{
     }
 
     .button-show {
-      margin-left: 20rem;
+      margin-left: 22rem;
+      margin-top: -1rem;
     }
 
       .welcome-back{
     margin-left: 3rem;
-  }
+    }
   
   .iconos{
     margin-left: 6rem;
-  }
+    }
   
-  .button-show{
-    margin-left: 20rem;
-  }
+ 
 
   .formulario3{
-    margin-left: 0.1rem;
-  }
+   margin-left: 0.1rem;
+    }
 
   .message2{
     margin-top: 1rem;
     padding: 0rem;
     margin-left: 0rem;
-  }
+    }
   .card_all_product{
     display: grid;
     grid-template-columns: 13rem 14rem 14rem;
-  }
+    }
 
   html{
     font-size: 70%;
-  }
+    }
+
+    .message{
+      margin-right: 1rem;
+    }
 
 
   }
@@ -2106,7 +2107,10 @@ input[type="range"]:active::-webkit-slider-thumb{
       margin-right: 1rem;
       display: grid;
       grid-template-columns: 13rem 14rem;
+    }
 
+    .message{
+      margin-left: 2rem;
     }
   }
 
