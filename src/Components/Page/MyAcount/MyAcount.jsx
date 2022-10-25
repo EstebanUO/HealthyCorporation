@@ -23,6 +23,8 @@ export const MyAcount = (props) => {
       window.location.reload();
     }
   
+  const valiLoginName = localStorage.getItem("nameUser");
+  const valiLoginEmail = localStorage.getItem("EmalValidUser");
 
   return (
     <div>
@@ -43,11 +45,11 @@ export const MyAcount = (props) => {
           <div className='acount_content_all'>
             <div className='acount_content_tarjet'>
               <p  className='text_check'>Nombre</p>
-              <input className='input_acount' placeholder='none' type="text" value="" />
+              <input className='input_acount' placeholder={valiLoginName} type="text" value="" />
             </div><br />
             <div className='acount_content_tarjet'>
               <p  className='text_check'>Correo</p>
-              <input className='input_acount' placeholder='none' type="text" value="" />
+              <input className='input_acount' placeholder={valiLoginEmail} type="text" value="" />
             </div><br />
             <div className='acount_content_row'>
               <div className='acount_content_tarjet'>
@@ -56,7 +58,7 @@ export const MyAcount = (props) => {
               </div>
               <button className='btn_update' disabled><s>Actualizar</s> </button>
             </div><br />
-            <div className='acount_btn'>
+            <div className='acount_btn_'>
               <h6>Recuerda mantener actualizados tus datos para tener una mejor experiencia.</h6>
             </div>
           </div>

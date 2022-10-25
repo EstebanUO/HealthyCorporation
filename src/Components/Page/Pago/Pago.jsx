@@ -117,7 +117,7 @@ export const Pago = () => {
                                 <div className='acount_content_tarjet'>
                                     <p className='text_check'>Titular de la tarjeta</p>
                                     <input className='input_acount3' placeholder='Ingresa tu nombre y apellido' minlength="5" type="text" required />
-                                </div><br />
+                                </div><br /> 
 
                                 <div className='acount_content_row'>
                                     <div className='acount_content_tarjet'>

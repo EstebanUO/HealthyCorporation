@@ -105,7 +105,7 @@ function App() {
           response.data.map(data => {
             if (userLogin === data.email && passwordUser === data.password) {
               localStorage.setItem("EmailValid", true);
-              localStorage.setItem("EmalValidUser", true);
+              localStorage.setItem("EmalValidUser", data.email);
               localStorage.setItem("nameUser", data.name);
             };
           })
