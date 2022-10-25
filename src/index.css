@@ -578,10 +578,10 @@ input[type="checkbox"] {
 }
 
 .container1 {
-  background: linear-gradient(to bottom, #56a8f5 0%, #44D2F2 50%, #44D2F2 50%, #56a8f5  100%);
+  background: radial-gradient(circle, #44D2F2 0%, rgb(236, 236, 236) 100%);
   padding: 2rem;
   box-shadow: 1px 1px 18px black;
-  border-radius: .6rem;
+  border-radius: 2.6rem;
   backdrop-filter: blur(10px);
   /* -webkit-backdrop-filter: blur(10px); */
   width: 100%;
@@ -590,7 +590,6 @@ input[type="checkbox"] {
 .container_all {
   display: flex;
   justify-content: center;
-
   animation: container_all 1s forwards;
 }
 
@@ -611,8 +610,9 @@ input[type="checkbox"] {
 
 .about_contact {
   margin-top: 8rem;
-  width: 118rem;
+  width: 68rem;
   margin-left: -6rem;
+  box-shadow: #0e1e251f 0px 2px 4px 0px, #0e1e2552 0px 2px 10px 0px;
 }
 
 .about_contact2 {
@@ -652,12 +652,14 @@ input[type="checkbox"] {
 }
 
 .about_where {
-  padding-left: 8rem;
+  padding-left: 3rem;
   animation: about_where 1s forwards;
   display: flex;
   flex-direction: column;
-  padding: 2rem;
-  margin-top: 5.8rem;
+  width: 87rem;
+  margin-left: 2rem;
+  margin-top: 8.1rem;
+  box-shadow: #0e1e251f 0px 2px 4px 0px, #0e1e2552 0px 2px 10px 0px;
 }
 
 @keyframes about_where {
@@ -702,8 +704,9 @@ input{
   width: 100%;
   color: #AEB3B7;
   text-decoration: none;
-  border-radius: 100px;
   border: none;
+  border-radius: 0.5rem;
+  border-bottom: solid 1px black;
 }
 
 
@@ -750,23 +753,24 @@ label {
 
 .boton {
   padding: 1rem;
+  width: 9rem;
   font-weight: 400;
   background-color: #fff;
   border-radius: 2rem;
   border: none;
   outline: none;
   cursor: pointer;
-  font-size: .9rem;
+  font-size: 1rem;
   margin-top: 2rem;
   transition: all .3s ease-in;
-  color: #fff;
+  color: #000;
   margin: auto;
   display: block;
   margin-top: 2rem;
 }
 
 .boton:hover {
-  background-color: #6464f8;
+  background-color: #44D2F2;
 }
 
 /* --------------------Footer --------------------*/
@@ -833,13 +837,14 @@ a {
 }
 
 .text_product {
-  margin-top: -14.8rem;
+  margin-top: -15.8rem;
   margin-bottom: 1rem;
   display: flex;
   justify-content: flex-start;
   font-size: 5rem;
   padding-left: 6rem;
   color: white;
+  text-shadow: 6px 1px 12px rgb(255 255 255);
   animation: text_product 1s forwards;
 }
 
@@ -860,6 +865,7 @@ a {
   font-size: 5rem;
   padding-left: 6rem;
   color: white;
+  text-shadow: 6px 1px 12px rgb(255 255 255);
   animation: text_product2 1.2s forwards;
 }
 
