@@ -105,7 +105,7 @@
 .content_car {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
     padding: 3rem;
     /* margin-top: -3rem; */
     flex-wrap: wrap;
@@ -216,6 +216,7 @@
 .product_img {
     width: 8rem;
     padding: .3rem;
+    margin-left: -1rem;
 }
 
 
