@@ -88,8 +88,8 @@ const Navcontainer = styled.div`
 .links.active{
     display: block;
     position: absolute;
-    top: 95px;
-    left: -1457px;
+    top: 106px;
+    left: -1331px;
     font-size: 1.3rem;
 }
 
@@ -110,11 +110,11 @@ height:50%;
 z-index: -1;
 
 &.active{
-    top: 109px;
+    top: 74px;
     left: 0;
     width: 38%;
     height: 17rem;
-    border-radius: 0 0 80% 0;
+    border-radius: 6% 0 80% 0;
     box-shadow: 5px 5px 5px #90A4AE; 
 }
 `

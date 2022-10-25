@@ -8,9 +8,7 @@ export const Contact = (props) => {
   return (
     <div>
       <Header valiLoginAdmin={props.valiLoginAdmin}/>
-      <img src={image} alt="imagen contacto" srcset="" className='image_contact' />
-      <h2 className='text_product'>Contacta</h2>
-      <h2 className='text_product2'>con nosotros</h2>
+      <h2 className='text_product'>Contacta con nosotros</h2>
       <div className="about_all">
         <div className="about_contact">
           <h2 className="about_contact2">Cuéntanos qué nesecitas</h2>
