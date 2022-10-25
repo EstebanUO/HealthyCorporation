@@ -578,7 +578,7 @@ input[type="checkbox"] {
 }
 
 .container1 {
-  background-color: #ffffff57;
+  background: linear-gradient(to bottom, #56a8f5 0%, #44D2F2 50%, #44D2F2 50%, #56a8f5  100%);
   padding: 2rem;
   box-shadow: 1px 1px 18px black;
   border-radius: .6rem;
@@ -680,6 +680,33 @@ input[type="checkbox"] {
 
 
 /*---------------- ContactUS -------------------*/
+
+.bg-input{
+  background: #F1F1F1;
+  border-radius: 100px;
+  position: relative;
+  text-decoration: none;
+}
+
+.icons{
+  color: #2742db;
+  display: inline-block;
+  position: absolute;
+  left: 14px;
+  top: 10px;
+}
+
+input{
+  padding: 10px;
+  padding-left: 37px;
+  width: 100%;
+  color: #AEB3B7;
+  text-decoration: none;
+  border-radius: 100px;
+  border: none;
+}
+
+
 textarea {
   min-height: 200px;
   max-height: 200px;
@@ -694,21 +721,6 @@ textarea {
   display: flex;
   justify-content: center;
   padding: 2.5rem;
-}
-
-.textContact {
-  /* margin: 10px 0;
-  border-radius: 7px;
-  /* border-bottom: 2px solid #2196F3; 
-  box-shadow:5px 5px 5px #90A4AE;  */
-
-  background-color: #ffffff57;
-  width: 100%;
-  height: 2.5rem;
-  padding: 0.2rem;
-  font-size: 1rem;
-  border: none;
-  border-bottom: solid 1px black;
 }
 
 label {
@@ -739,7 +751,7 @@ label {
 .boton {
   padding: 1rem;
   font-weight: 400;
-  background-color: #4a4aee;
+  background-color: #fff;
   border-radius: 2rem;
   border: none;
   outline: none;
