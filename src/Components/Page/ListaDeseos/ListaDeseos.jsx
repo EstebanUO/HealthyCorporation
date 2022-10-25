@@ -17,16 +17,17 @@ export const ListaDeseos = () => {
             <h3 className="titleDescripcionDeseos2">NOMBRE DEL PRODUCTO</h3>
             <h3 className="titleDescripcionDeseos2">PRECIO UNITARIO</h3>
             <h3 className="titleDescripcionDeseos2">ESTADO DEL STOCK</h3>
-          </div><br /><br />
+          </div><br />
             <div className="cardProducts">
-              <div className="prod1">
-                <div className="prod2">
-                  <img src={producto} className="imgProd1" alt="producto"/>  
-                  <p className="subtitleDeseos">Pax noche</p>
-                </div>
+              <div className='prod1'>
+                <img src={producto} className="imgProd1" alt="producto"/>
+                <p className="subtitleDeseos">Pax noche</p>
+              </div>
+              <div className='priceStock'>
                 <p>$5000</p>
                 <p>Agotado</p>
               </div>
+              
               {/* Esta es una simulacion de como quedaria el producto */}
             </div><br />
             <Link to="/"><button className="btn btn-primary">Volver a la Tienda</button></Link>
