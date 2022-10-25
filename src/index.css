@@ -1039,6 +1039,10 @@ a {
   margin-top: 2rem;
 }
 
+.acount_btn_ {
+  display: flex;
+  justify-content: center;
+}
 /* tarjet */
 
 .input_acount3 {

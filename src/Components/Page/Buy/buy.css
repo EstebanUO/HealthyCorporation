@@ -284,6 +284,7 @@ hr {
 .metodos {
     background-color: white;
     width: 60rem;
+    height: 71rem;
     display: flex;
     flex-direction: column;
     border: 2px solid gray;
@@ -292,6 +293,7 @@ hr {
     z-index: 1;
     margin-top: 2rem;
     padding: 2rem;
+    overflow-y: auto;
     animation: metodos 500ms forwards;
 }
 
@@ -448,7 +450,6 @@ hr {
     justify-content: center;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    background-color: #00000033;
 }
 
 /* zoom en la imagen */
