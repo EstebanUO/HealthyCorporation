@@ -24,8 +24,8 @@ export const ListaDeseos = () => {
                 <p className="subtitleDeseos">Pax noche</p>
               </div>
               <div className='priceStock'>
-                <p>$5000</p>
-                <p>Agotado</p>
+                <p className='precioDeseos'>$5000</p>
+                <p className='disponibilidad'>Agotado</p>
               </div>
               
               {/* Esta es una simulacion de como quedaria el producto */}
