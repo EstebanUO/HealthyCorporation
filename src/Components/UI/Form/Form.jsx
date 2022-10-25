@@ -26,19 +26,19 @@ export const Form = () => {
                 <label>Nombres</label><br/>
                 <div className="bg-input">
                   <i className='icons'><SlUser/></i>
-                  <input type="text"  name='user-name' placeholder="Digite sus respectivos nombre.."></input>
+                  <input type="text" className='nombres' name='user-name' placeholder="Digite sus respectivos nombre.."></input>
                 </div>
 
                 <label>Apellidos</label><br/>
                 <div className="bg-input">
                   <i className='icons'><SlUser/></i>
-                  <input type="text" name='user-surname' placeholder="Digite sus respectivos apellido.."></input>
+                  <input type="text" className='nombres' name='user-surname' placeholder="Digite sus respectivos apellido.."></input>
                 </div>
                 
                 <label>Correo</label><br/>
                 <div className="bg-input">
                   <i className='icons'><TfiEmail/></i>
-                  <input type="email"  name='user-email' placeholder="Digite su correo.."></input>
+                  <input type="email" className='nombres'   name='user-email' placeholder="Digite su correo.."></input>
                 </div>
                 
                
@@ -46,19 +46,19 @@ export const Form = () => {
                 <label>Teléfono </label><br/>
                 <div className="bg-input">
                   <i className='icons'><BsTelephone/></i>
-                  <input type="number"  name='user-number' placeholder="Digite su numero.."></input>
+                  <input type="number" className='nombres'  name='user-number' placeholder="Digite su numero.."></input>
                 </div>
                 
                 <label>Dirección</label><br/>
                 <div className="bg-input">
                   <i className='icons'><FiMapPin/></i>
-                  <input type="text" name='user-surname' placeholder="Digite su direccion.."></input>
+                  <input type="text" className='nombres' name='user-surname' placeholder="Digite su direccion.."></input>
                 </div>
                
                 <label>Asunto</label><br/>
                 <div className="bg-input">
                   <i className='icons'><RiMessage2Line/></i>
-                  <input type="text" name='user-surname' placeholder="Escribe tu asunto aqui.."></input>
+                  <input type="text"  className='nombres' name='user-surname' placeholder="Escribe tu asunto aqui.."></input>
                 </div>
 
                 <label>Mensaje</label>

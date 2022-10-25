@@ -606,6 +606,7 @@ input[type="checkbox"] {
 .about_all {
   display: flex;
   flex-direction: row;
+  margin-top: -37rem;
 }
 
 .about_contact {
@@ -698,7 +699,7 @@ input[type="checkbox"] {
   top: 10px;
 }
 
-input{
+.nombres{
   padding: 10px;
   padding-left: 37px;
   width: 100%;
@@ -724,6 +725,8 @@ textarea {
   display: flex;
   justify-content: center;
   padding: 2.5rem;
+  padding: 3.5rem;
+  margin-left: 28rem;
 }
 
 label {
@@ -830,23 +833,19 @@ a {
   background-color: rgba(0, 0, 0, 0.6);
 }
 
-
-.image_contact {
-  width: 100%;
-  z-index: 0;
-}
-
 .text_product {
-  margin-top: -15.8rem;
+  width: 26rem;
   margin-bottom: 1rem;
   display: flex;
   justify-content: flex-start;
-  font-size: 5rem;
+  font-size: 3.5rem;
   padding-left: 6rem;
-  color: white;
-  text-shadow: 6px 1px 12px rgb(255 255 255);
+  color: rgb(0, 0, 0);
   animation: text_product 1s forwards;
+  margin-top: 18rem;
+  text-align: center;
 }
+
 
 @keyframes text_product {
   from {
@@ -856,17 +855,6 @@ a {
   to {
     transform: translate(0px);
   }
-}
-
-.text_product2 {
-  margin-top: -3rem;
-  display: flex;
-  justify-content: flex-start;
-  font-size: 5rem;
-  padding-left: 6rem;
-  color: white;
-  text-shadow: 6px 1px 12px rgb(255 255 255);
-  animation: text_product2 1.2s forwards;
 }
 
 @keyframes text_product2 {
