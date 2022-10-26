@@ -949,8 +949,7 @@ a {
 
 .acount_up {
   display: flex;
-  justify-content: center;
-
+  justify-content: center;              
 }
 
 .acount_content_all {

@@ -11,7 +11,7 @@ instalar sweetalert
     
     -npm install sweetalert2
 
-    -npm i react-image-magnify
+    -npm i react-image-magnify 
 
     -npm install react-icons --save
 
