@@ -58,7 +58,7 @@ export const MyAcount = (props) => {
               </div>
               <button className='btn_update' disabled><s>Actualizar</s> </button>
             </div><br />
-            <div className='acount_btn_'>
+            <div className='acount_btn_'> 
               <h6>Recuerda mantener actualizados tus datos para tener una mejor experiencia.</h6>
             </div>
           </div>
