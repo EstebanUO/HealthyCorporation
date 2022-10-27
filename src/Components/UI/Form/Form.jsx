@@ -21,7 +21,7 @@ export const Form = () => {
     <div className='container_all'>
       <form className="contact" onSubmit={sendEmail}>
             <div>
-              <div className="container1">
+              <div className="container_1">
                 
                 <label>Nombres</label><br/>
                 <div className="bg-input">
@@ -63,7 +63,7 @@ export const Form = () => {
 
                 <label>Mensaje</label>
                 <br />
-                <textarea rows="10" cols="50" name='user-message' placeholder="Escriba tu mensaje...."></textarea>
+                <textarea rows="10" cols="50" name='user-message' placeholder="Escribe tu mensaje...."></textarea>
                
 
                 <button className='boton'>Enviar</button>

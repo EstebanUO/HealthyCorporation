@@ -589,46 +589,51 @@ input[type="checkbox"] {
 .container1 {
   background: radial-gradient(circle, #44D2F2 0%, rgb(236, 236, 236) 100%);
   padding: 2rem;
-  box-shadow: 1px 1px 18px black;
+  box-shadow: 0px 0px 6px black;
   border-radius: 2.6rem;
   backdrop-filter: blur(10px);
   /* -webkit-backdrop-filter: blur(10px); */
   width: 100%;
 }
 
+.container_1 {
+  background: radial-gradient(circle, #44D2F2 0%, rgb(236, 236, 236) 100%);
+  padding: 2rem;
+  box-shadow: 0px 0px 6px black;
+  border-radius: 2.6rem;
+  backdrop-filter: blur(10px);
+  /* -webkit-backdrop-filter: blur(10px); */
+  width: 100%;
+}
+
+.info_contact {
+  display: flex;
+  justify-content: center;
+}
+
 .container_all {
   display: flex;
   justify-content: center;
-  animation: container_all 1s forwards;
+  /* animation: container_all 1s forwards; */
 }
 
-@keyframes container_all {
-  from {
-    transform: translate(-500px);
-  }
-
-  to {
-    transform: translate(0px);
-  }
-}
 
 .about_all {
   display: flex;
-  flex-direction: row;
-  margin-top: -37rem;
+  flex-direction: column;
+  margin-top: -3rem;
+  margin-bottom: 4rem;
+  /* margin-left: -84rem; */
 }
 
 .about_contact {
   margin-top: 8rem;
-  width: 68rem;
-  margin-left: -6rem;
-  box-shadow: #0e1e251f 0px 2px 4px 0px, #0e1e2552 0px 2px 10px 0px;
 }
 
 .about_contact2 {
-  padding-left: 8rem;
+  padding-left: 6.2rem;
   color: #5bc3fc;
-  animation: about_contact2 1s forwards;
+  animation: about_contact2 1.5s forwards;
 }
 
 @keyframes about_contact2 {
@@ -642,13 +647,15 @@ input[type="checkbox"] {
 }
 
 .about_contact3 {
-  padding-left: 8rem;
-  margin-bottom: -3rem;
+  padding-left: 6.2rem;
+  margin-bottom: -5rem;
 }
 
 .about_contact4 {
   font-size: 1.3rem;
-  animation: about_contact4 1s forwards;
+  width: 27rem;
+  color: gray;
+  animation: about_contact4 1.5s forwards;
 }
 
 @keyframes about_contact4 {
@@ -663,13 +670,11 @@ input[type="checkbox"] {
 
 .about_where {
   padding-left: 3rem;
-  animation: about_where 1s forwards;
+  animation: about_where 1.7s forwards;
   display: flex;
   flex-direction: column;
-  width: 87rem;
   margin-left: 2rem;
   margin-top: 8.1rem;
-  box-shadow: #0e1e251f 0px 2px 4px 0px, #0e1e2552 0px 2px 10px 0px;
 }
 
 @keyframes about_where {
@@ -684,10 +689,47 @@ input[type="checkbox"] {
 
 .about_where1 {
   color: #5bc3fc;
+  margin-left: 1.2rem;
+}
+
+.text_product_ {
+    font-size: 4.2rem;
+    padding-left: 6rem;
+    color:#44D2F2;
+    animation: text_product 1s forwards;
+    margin-top: 6rem;
+    margin-right: -21rem;
+}
+
+.text_product_2 {
+  font-size: 4rem;
+  padding-left: 6rem;
+  color: gray;
+  animation: text_product_2 1.4s forwards;
+  margin-right: -21rem;
+  width: 30rem;
+  margin-top: -1rem;
+}
+
+@keyframes text_product_2 {
+  from {
+    transform: translate(-500px);
+  }
+
+  to {
+    transform: translate(0px);
+  }
 }
 
 .about_where3 {
   font-size: 1.3rem;
+  margin-left: 1.2rem;
+  width: 28rem;
+  color: gray;
+}
+
+.info_all_ {
+  margin-right: -30rem
 }
 
 
@@ -962,7 +1004,7 @@ a {
 
 @keyframes acount_content_all {
   from {
-    transform: translate(-70px);
+    transform: translate(-200px);
   }
 
   to {
@@ -1129,6 +1171,7 @@ a {
   font-size: 1.3rem;
   margin-bottom: 1rem;
   transition: all 400ms;
+  padding-left: 2rem;
 }
 
 .select_btn:hover {
