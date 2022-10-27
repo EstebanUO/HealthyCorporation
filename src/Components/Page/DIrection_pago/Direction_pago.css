@@ -23,9 +23,8 @@
 .content_check {
     background-color: white;
     width: 50rem;
-    border: solid gray;
     border-radius: .7rem;
-    box-shadow: 3px 4px 20px gray;
+    box-shadow: 0px 2px 20px gray;
     padding: 3rem;
     margin-top: -2rem;
 }
@@ -33,9 +32,9 @@
 .content_check2 {
     background-color: white;
     width: 50rem;
-    border: solid gray;
+    /* border: solid gray; */
     border-radius: .7rem;
-    box-shadow: 3px 4px 20px gray;
+    box-shadow: 0px 2px 20px gray;
     padding: 3rem;
     margin-top: -4rem;
 }
