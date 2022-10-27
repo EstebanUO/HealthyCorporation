@@ -601,14 +601,15 @@ input[type="checkbox"] {
   padding: 2rem;
   box-shadow: 0px 0px 6px black;
   border-radius: 2.6rem;
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
-  /* -webkit-backdrop-filter: blur(10px); */
-  width: 100%;
+  width: 34rem;
 }
 
 .info_contact {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
+  align-items: baseline;
 }
 
 .container_all {
@@ -621,13 +622,11 @@ input[type="checkbox"] {
 .about_all {
   display: flex;
   flex-direction: column;
-  margin-top: -3rem;
   margin-bottom: 4rem;
-  /* margin-left: -84rem; */
 }
 
 .about_contact {
-  margin-top: 8rem;
+  margin-top: 5rem;
 }
 
 .about_contact2 {
@@ -693,12 +692,10 @@ input[type="checkbox"] {
 }
 
 .text_product_ {
-    font-size: 4.2rem;
-    padding-left: 6rem;
-    color:#5bc3fc;
-    animation: text_product 1s forwards;
-    margin-top: 6rem;
-    margin-right: -21rem;
+  font-size: 4.2rem;
+  padding-left: 6rem;
+  color: #5bc3fc;
+  animation: text_product 1s forwards;
 }
 
 .text_product_2 {
@@ -706,9 +703,6 @@ input[type="checkbox"] {
   padding-left: 6rem;
   color: gray;
   animation: text_product_2 1.4s forwards;
-  margin-right: -21rem;
-  width: 30rem;
-  margin-top: -1rem;
 }
 
 @keyframes text_product_2 {
@@ -765,7 +759,7 @@ input[type="checkbox"] {
 textarea {
   min-height: 200px;
   max-height: 200px;
-  width: 36rem;
+  width: 30rem;
   border-radius: 7px;
   /* border-bottom: 2px solid #2196F3; */
   box-shadow: 9px 6px 6px #90A4AE;
@@ -776,8 +770,6 @@ textarea {
   display: flex;
   justify-content: center;
   padding: 2.5rem;
-  padding: 3.5rem;
-  margin-left: 28rem;
 }
 
 label {
