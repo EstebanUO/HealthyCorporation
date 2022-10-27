@@ -2,14 +2,17 @@ import React from 'react';
 import { Header } from '../../Page/Layout/Header/Header';
 import { Footer } from '../../Page/Layout/Footer/Footer';
 import { Form } from '../../UI/Form/Form';
-import image from '../../Image/Noticie/talco2.jpg'
+import Logo_move from '../../Image/logo.gif'
 
 export const Contact = (props) => {
   return (
     <div>
-      <Header valiLoginAdmin={props.valiLoginAdmin}/>
-      <h2 className='text_product'>Contacta con nosotros</h2>
-      <div className="about_all">
+      <Header valiLoginAdmin={props.valiLoginAdmin} />
+      <div className="info_contact">
+        <div className="info_all_">
+          <h2 className='text_product_'>Contacta</h2>
+          <h2 className='text_product_2'>con nosotros</h2>
+          <div className="about_all">
         <div className="about_contact">
           <h2 className="about_contact2">Cuéntanos qué nesecitas</h2>
           <div className="about_contact3">
@@ -19,15 +22,20 @@ export const Contact = (props) => {
         <div className="about_where">
           <h2 className="about_where1">Dónde estamos</h2>
           <div className="about_where2">
-            <h3 className="about_where3">C/ Calderers nº 44, 46 y 48.
-              Polígono Industrial El Mar,
-              46120 Alboraia (Valencia)
-              Tel: 961 853 827 | Fax:  01 234 567 88
+            <h3 className="about_where3">Barrio puerto espejo | Caminos de cocora |
+              Tel: 3177896243 | Fax:  01 234 567 88 | 
               e-mail: healthy_ifo@outlook.com</h3>
           </div>
         </div>
+        <div className="img_contact">
+          <img src={Logo_move} alt="gif_logo" />
+        </div>
       </div>
-      <Form />
+        </div>
+        <Form />
+      
+      </div>
+
       <Footer />
     </div>
   )

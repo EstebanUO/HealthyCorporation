@@ -7,7 +7,6 @@ import icon_buy from '../../Image/icon_buy.png'
 import icon_regresar from '../../Image/icon_regresar.png'
 import './Direction_pago.css'
 import back from '../../Image/back.png';
-import { Login } from '../Login/Login'
 
 
 export const Direction_pago = () => {
@@ -56,7 +55,7 @@ export const Direction_pago = () => {
                     <div className='container_check'>
                         <form action="">
                             <label className='text_check'>Dirección</label><br />
-                            <input type="text" className='textContact' name='user-name' placeholder="Digite su dirección" required></input><br /><br />
+                            <input type="text" className='input_acount' name='user-name' placeholder="Digite su dirección" required></input><br /><br />
                             
                             <div className='acount_content_tarjet-'>
                                 <b><label className='text_check'>Ingresa tu locaidad</label></b>
@@ -73,10 +72,10 @@ export const Direction_pago = () => {
                                 </select>
                             </div><br />
                             <label className='text_check'>Casa | Depto | Oficina</label>
-                            <input type="text" className='textContact' name='user-name' placeholder="Digite la numeración" required></input><br /><br />
+                            <input type="text" className='input_acount' name='user-name' placeholder="Digite la numeración" required></input><br /><br />
 
                             <label className='text_check'>Nombre de dirección</label>
-                            <input type="text" className='textContact' name='user-name' placeholder="Ej: Departameto" required></input>
+                            <input type="text" className='input_acount' name='user-name' placeholder="Ej: Departameto" required></input>
                         </form><br />
                     </div>
                     <div className='check_btn'>

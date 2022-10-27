@@ -10,6 +10,7 @@ import { Footer } from '../Layout/Footer/Footer'
 import { Header } from '../Layout/Header/Header'
 // import { Nav } from '../../UI/Nav/Nav'
 import cerrar from '../../Image/Icons/cerrar.png';
+import { NavBar } from '../../UI/NavBar/NavBar';
 
 
 export const MyAcount = (props) => {
@@ -27,7 +28,7 @@ export const MyAcount = (props) => {
   const valiLoginEmail = localStorage.getItem("EmalValidUser");
 
   return (
-    <div>
+    <div><NavBar />
       <Header valiLoginAdmin={props.valiLoginAdmin} />
       {props.alertHome? <Box sx={{ width: '100%', height: "50px" }}><Collapse in={open}><Alert action={<IconButton aria-label="close"color="inherit"size="small"onClick={() => {setOpen(false);props.setalertHome(false)}}><CloseIcon fontSize="inherit" /></IconButton>}sx={{ mb: 2 }}>sesion iniciada correctamente!</Alert></Collapse></Box>:null}
       <br /><br />
