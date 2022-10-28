@@ -6,9 +6,9 @@ import { Link } from "react-router-dom"
 import Alert from '@mui/material/Alert';
 import { BsEyeFill,BsEyeSlashFill } from "react-icons/bs";
 import { FaUserAlt,FaKey } from "react-icons/fa";
-import { Api } from '@mui/icons-material';
-import { get } from 'jquery';
-import { MyAcount } from '../MyAcount/MyAcount';
+// import { Api } from '@mui/icons-material';
+// import { get } from 'jquery';
+// import { MyAcount } from '../MyAcount/MyAcount';
 
 
 export const Login = (props) => {
@@ -27,38 +27,6 @@ export const Login = (props) => {
   const onclick=()=>{
     props.onClick2()
   }
-
-  /* recorre la api users */
-
-
-  /* local Storage */
-  // const email_ = useRef();
-  // const password_ = useRef();
-
-  // const handleSumit = () => {
-  //   if(email_.current.value == Api.email){
-  //     localStorage.setItem("EmailValid", Api.email_);
-  //     localStorage.setItem("PassValid", Api.name_);
-  //   }
-  // }
-
-  /* Eliminar el user del local storage  para vista de mi cuenta*/
-
- //validacion de los datos pero ya funciona pailas
-  // const getPass = localStorage.getItem();
-
-  // getEmail && getPass ? <mi cuenta />: 
-  /* aqui hace la condicion de volver a login ya que no hay datos */
-
-
-
-  // eliminar el user de local storage
-  // const handleClik = () => {
-  //     localStorage.clear();
-  //     window.location.reload();
-  //   }
-  // }
-
   
   return (
     
@@ -70,13 +38,13 @@ export const Login = (props) => {
           <form className="formulario3" onSubmit={props.ClickLogin}>
             <h1 className="titleReg">Iniciar Sesion</h1>
             <div className="formularioLog">
-              <label for="exampleInputEmail1" class="labelsReg"><br />Email</label>
+              <label for="exampleInputEmail1" class="labelsReg"><br />Correo</label>
               <FaUserAlt className='iconUser'/>
-              <input onChange={props.onChangeUserLogin} value={props.userLogin} name="correo" type="email" class="form-input" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Example@" autocomplete="off" required />
-              <label for="inputPassword" class="labelsReg"><br />Password</label>
+              <input onChange={props.onChangeUserLogin} value={props.userLogin} name="correo" type="email" class="form-input" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ejemplo@healthy.com" autocomplete="off" required />
+              <label for="inputPassword" class="labelsReg"><br />Contraseña</label>
               <FaKey className='iconPass'/>
               <div className='input-password'>
-                <input onChange={props.onChangePasswordLogin} value={props.passwordUser} name="password" type={props.shown2 ? 'text' : 'password'} class="form-input" id="inputPassword" placeholder="Password" />
+                <input onChange={props.onChangePasswordLogin} value={props.passwordUser} name="password" type={props.shown2 ? 'text' : 'password'} class="form-input" id="inputPassword" placeholder="************" />
               </div>
               <button className='button-show2' onClick={props.switchShown2}>{props.shown2 ? <BsEyeFill /> : <BsEyeSlashFill />}</button>
               <p className="forgetPass"><Link to="/recoverPassword" >¿Haz olvidado tu contraseña?</Link></p>

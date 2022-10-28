@@ -68,26 +68,26 @@ export const Register = (props) => {
             <h1 className="titleReg">Registro</h1>
             <div className="formularioReg">
               <p className='pvaliRegister' id='valiExiste'></p>
-              <label for="inputUser" class="labelsReg">User name</label>
+              <label for="inputUser" class="labelsReg">Nobre de usuario</label>
               <FaUserAlt className='iconUserReg' />
               <input minLength="3" maxLength="20" value={props.usernameRegister} onChange={props.onChangeusernameRegister} name="name" type="text" class="form-input" placeholder="User name" autocomplete="off" required />
               <p className='pvaliRegister' id='txtvalidUsername'></p>
               <div>
-                <label for="exampleInputEmail1" class="labelsReg"><br />Email</label>
+                <label for="exampleInputEmail1" class="labelsReg"><br />Correo</label>
                 <FaUserAlt className='iconUserEmailReg' />
-                <input value={props.emailRegister} onChange={props.onChangeemailRegister} name="correo" type="email" class="form-input" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Example@" autocomplete="off" required />
+                <input value={props.emailRegister} onChange={props.onChangeemailRegister} name="correo" type="email" class="form-input" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ejemplo@healhty.com" autocomplete="off" required />
               </div>
               <p className='pvaliRegister' id='txtvalidEmail'></p>
               <div>
-                <label for="inputPassword" class="labelsReg"><br />Password</label>
+                <label for="inputPassword" class="labelsReg"><br />Contraseña</label>
                 <FaLock className='iconPassReg' />
-                <input minLength="8" maxLength="20" value={props.passwordRegister} onChange={props.onChangepasswordRegister} name="password" type="password" class="form-input" placeholder="Password" />
+                <input minLength="8" maxLength="20" value={props.passwordRegister} onChange={props.onChangepasswordRegister} name="password" type="password" class="form-input" placeholder="************" />
               </div>
               <div>
-                <label for="inputPassword" class="labelsReg"><br />Confirm password</label>
+                <label for="inputPassword" class="labelsReg"><br />Confirmar contraseña</label>
                 <FaLock className='iconPassReg2' />
                 <button className='button-show' onClick={props.switchShown}>{props.shown ? <BsEyeFill /> : <BsEyeSlashFill />}</button>
-                <input minLength="8" maxLength="20" value={props.confrimPasword} onChange={props.onChangeconfrimPasword} name="password" type={props.shown ? 'text' : 'password'} class="form-input" placeholder="Confirm your password" />
+                <input minLength="8" maxLength="20" value={props.confrimPasword} onChange={props.onChangeconfrimPasword} name="password" type={props.shown ? 'text' : 'password'} class="form-input" placeholder="************" />
               </div><br />
               <p className='pvaliRegister' id='txtvalidPassword'></p>
               <br />

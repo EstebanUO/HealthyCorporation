@@ -9,6 +9,10 @@ body {
   width: 100%;
 }
 
+img {
+  border-radius: 0.6rem;
+}
+
 .Terms_and_cont {
   cursor: pointer;
 }
@@ -775,6 +779,7 @@ textarea {
 label {
   font-weight: bold;
   margin-top: 1rem;
+  color: gray;
 }
 
 
@@ -1331,8 +1336,9 @@ a {
 }
 
 .titleCategoria{
-  font-size: 1.5rem;
+  font-size: 2.2rem;
   text-align: center;
+  color: gray;
 }
 
 .filterCategoria {
@@ -1487,6 +1493,7 @@ hr {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  color: gray;
 }
 
 .subCategorias{
@@ -1531,6 +1538,7 @@ hr {
 .productsEncontrados{
   padding: .5rem;
   font-weight: 700;
+  color: gray;
 }
 /*---------- Range input ------------*/
 .wrapper{
