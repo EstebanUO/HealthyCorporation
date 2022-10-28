@@ -164,9 +164,8 @@ hr {
     background-color: white;
     width: 57rem;
     align-items: center;
-    border: 2px solid gray;
-    border-radius: .7rem;
-    box-shadow: 2px 3px 25px gray;
+    border-radius: 0.7rem;
+    box-shadow: #0e1e251f 0px 2px 4px 0px, #0e1e2552 0px 2px 10px 0px;
 }
 
 .content_buy {
@@ -182,7 +181,9 @@ hr {
     width: 31rem;
     background-color: #817f7f21;
     padding: 1rem;
-    margin-left: -5rem;
+    margin-left: -4.5rem;
+    border-bottom-right-radius: .8rem;
+    border-top-right-radius: .8rem;
 }
 
 .name_buy {
