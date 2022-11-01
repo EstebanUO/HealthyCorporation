@@ -727,7 +727,7 @@ input[type="checkbox"] {
 }
 
 .info_all_ {
-  margin-right: -30rem
+  margin-right:  -12rem;
 }
 
 
@@ -1776,9 +1776,52 @@ input[type="range"]:active::-webkit-slider-thumb{
 
   .text_welcome {
     font-size: 1.8rem;
+  }
+
+  /*Page Contacto*/
+
+  .text_product_{
+    font-size: 3.7rem;
+    
+  }
+
+  .text_product_2{
+    font-size: 3.7rem;
+  }
+
+  .about_contact2{
+    font-size: 1.9rem;
+  }
+
+  .about_all{
+    margin-right: 7rem;
+
+  }
+
+  .about_contact4{
+    font-size: 1.2rem;
+    width: 23rem;
+  }
+
+  .about_where1{
+    font-size: 1.9rem;
+  }
+
+  .about_where3{
+    font-size: 1.2rem;
+    width: 23rem;
+  }
+
+  .contact{
+    margin-top: 1rem;
+  }
+  
+  .logito{
+    width: 30rem;
+    margin-top: -4rem;
+  }
 }
 
-}
 
 
 /*-------- Responsive 1100px ---------*/
@@ -1806,7 +1849,15 @@ input[type="range"]:active::-webkit-slider-thumb{
   
   .containerCategorias{
     display: none;
-  }  
+  }
+
+  .about_all{
+    margin-right: 10rem;
+  }
+
+  .logito{
+    margin-top: -4rem;
+  }
 
 
 }
@@ -1858,7 +1909,6 @@ input[type="range"]:active::-webkit-slider-thumb{
 
 }
 
-
   .column_nav_content{
     display: flex;
     flex-direction: row;
@@ -1873,7 +1923,47 @@ input[type="range"]:active::-webkit-slider-thumb{
 
   .column_nav_content{
     display: block;
-}
+  }
+
+  /* Page contacto*/
+  .contact{
+    margin-right: 12rem;
+  }
+
+  .text_product_{
+    margin-left: 7rem;
+  }
+
+  .text_product_2{
+    margin-left: 7rem;
+  }
+
+  .about_contact2{
+    margin-left: 7rem;
+  }
+
+  .about_contact4{
+    margin-left: 7rem;
+  }
+
+  .about_where1{
+    margin-left: 8rem;
+  }
+
+  .about_where3{
+    margin-left: 8rem;
+  }
+
+  .about_all{
+    margin-right: 13rem;
+  }
+
+  .logito{
+    margin-left: 8rem;
+  }
+
+
+
 }
 /*-------- Responsive 950px ---------*/
 
@@ -1922,6 +2012,17 @@ input[type="range"]:active::-webkit-slider-thumb{
       margin-right: 13rem;
   }
   
+  .about_all{
+    margin-left: 3rem;
+  }
+
+  .text_product_{
+    margin-left: 10rem;
+  }
+
+  .text_product_2{
+    margin-left: 10rem;
+  }
 }
 /*-------- Responsive 850px ---------*/
 @media  screen and (max-width:850px) {
@@ -1929,6 +2030,53 @@ input[type="range"]:active::-webkit-slider-thumb{
   .card_all_product{
     display: grid;
     grid-template-columns: 20rem 18rem 18rem;
+  }
+
+  .text_product_{
+    font-size: 3.3rem;
+    margin-left: 13rem;
+  }
+
+  .text_product_2{
+    font-size: 3.3rem;
+    margin-left: 13rem;
+  }
+
+  .about_contact2{
+    font-size: 1.7rem;
+    margin-left: 10rem;
+  }
+  .about_contact4{
+    font-size: 1.1rem;
+    width: 19rem;
+    margin-left: 10rem;
+  }
+
+  .about_where1{
+    font-size: 1.7rem;
+    margin-left: 11rem;
+  }
+
+  .about_where3{
+    font-size: 1.1rem;
+    width: 20rem;
+    margin-left: 11rem;
+  }
+
+  .bg-input{
+    width: 100%;
+  }
+
+  .container_1{
+    width: 28rem;
+  }
+
+  .reclamo{
+    width: 24rem;
+  }
+
+  .logito{
+    margin-left: 10rem;
   }
 
   
@@ -1942,6 +2090,14 @@ input[type="range"]:active::-webkit-slider-thumb{
     grid-template-columns: 20rem 16rem 16rem;
   }
 
+  .contact{
+    margin-right: 8rem;
+  }
+
+  .buscar{
+    width: 36rem;
+  }
+
   
 }
 
@@ -1952,8 +2108,6 @@ input[type="range"]:active::-webkit-slider-thumb{
   .formulario {
     display: inline-block;
   }
-
-
 
   .formulario3{
     margin: 5.5rem;
@@ -1977,6 +2131,73 @@ input[type="range"]:active::-webkit-slider-thumb{
   .card_all_product{
     display: grid;
     grid-template-columns: 15.5rem 15.4rem 15.4rem;
+  }
+
+  /*Page conctato*/
+  .info_contact{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .text_product_{
+    margin-top: 4rem;
+    font-size: 5rem;
+    margin-left:  21rem;
+  }
+
+  .text_product_2{
+    font-size: 5rem;
+    margin-left: 16rem;
+  }
+
+  .about_contact2{
+    margin-left: 1rem;
+    font-size: 2.2rem;
+  }
+
+  .about_contact4{
+    margin-left: 1rem;
+    width: 25rem;
+  }
+
+  .about_where1{
+    font-size: 2.2rem;
+    margin-top: -3rem;
+    margin-left: -1rem;
+  }
+
+  .about_where3{
+    width: 29rem;
+    margin-left: -1rem;
+
+  }
+
+  .about_all{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .logito{
+    margin-top: 8rem;
+    margin-left: -49rem;
+    width: 35rem;
+  }
+
+  .contact{
+    margin-top: -7rem;
+    margin-left: 10rem;
+  }
+
+  .container_1{
+    width: 39rem;
+  }
+
+  .reclamo{
+    width: 35rem;
+  }
+
+  .buscar{
+    width: 29rem;
   }
 
 }
@@ -2037,12 +2258,6 @@ input[type="range"]:active::-webkit-slider-thumb{
 
 }
 
- 
-
-
-
-
-
 
   /*-------- Responsive 673px ---------*/
 
@@ -2071,7 +2286,7 @@ input[type="range"]:active::-webkit-slider-thumb{
       margin-top: -1rem;
     }
 
-      .welcome-back{
+    .welcome-back{
     margin-left: 3rem;
     }
   
@@ -2079,7 +2294,6 @@ input[type="range"]:active::-webkit-slider-thumb{
     margin-left: 6rem;
     }
   
- 
 
   .formulario3{
    margin-left: 0.1rem;
@@ -2106,7 +2320,33 @@ input[type="range"]:active::-webkit-slider-thumb{
 
   }
 
-  
+  @media screen and (max-width:560px) {
+    .buscar{
+      width: 23rem;
+    }
+
+    .text_product_{
+      margin-left: 5.5rem;
+      font-size: 4rem;
+    }
+
+    .text_product_2{
+      font-size: 4rem;
+      margin-left: 2rem;
+    }
+
+    .about_contact2{
+      margin-left: -8rem;
+      margin-top: 1rem;
+      font-size: 2.3rem;
+    }
+
+    .about_contact4{
+      width: 32rem;
+    }
+
+  }
+
 
 
   /*-------- Responsive 500px ---------*/

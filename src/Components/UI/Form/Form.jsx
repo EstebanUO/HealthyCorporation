@@ -41,8 +41,6 @@ export const Form = () => {
                   <input type="email" className='nombres'   name='user-email' placeholder="Digite su correo.."></input>
                 </div>
                 
-               
-
                 <label>Teléfono </label><br/>
                 <div className="bg-input">
                   <i className='icons'><BsTelephone/></i>
@@ -63,9 +61,8 @@ export const Form = () => {
 
                 <label>Mensaje</label>
                 <br />
-                <textarea rows="10" cols="50" name='user-message' placeholder="Escribe tu mensaje...."></textarea>
+                <textarea className='reclamo' name='user-message' placeholder="Escribe tu mensaje...."></textarea>
                
-
                 <button className='boton'>Enviar</button>
 
               </div>

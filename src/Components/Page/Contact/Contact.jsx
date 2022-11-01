@@ -23,12 +23,12 @@ export const Contact = (props) => {
               <h2 className="about_where1">Dónde estamos</h2>
               <div className="about_where2">
                 <h3 className="about_where3">Barrio puerto espejo | Caminos de cocora |
-                  Tel: 3177896243 | Fax:  01 234 567 88 | 
+                  Tel: 3177896243 | Fax:  01 234 567 88 03 | 
                   e-mail: healthy_ifo@outlook.com</h3>
               </div>
             </div>
             <div className="img_contact">
-              <img src={Logo_move} alt="gif_logo" />
+              <img className="logito" src={Logo_move} alt="gif_logo" />
             </div>
           </div>
         </div>
