@@ -26,21 +26,24 @@ const SliderHome = () => {
         <motion.div className='slider' drag='x'
           dragConstraints={{ right: 0, left: -420 }} >
 
-          {img.map(data => {
-            <motion.div className='item'>
+          {img.map((data) => (
+          
+            <motion.div key={data.id} className='item'>
+              
               <div class="card">
                 <div class="card-img">
-                  <img className='item-image' src={data.imagen} alt="Imagen producto" />
+                  <img className='item-image' src={"https://api-products-healthy.herokuapp.com"+data.imagen} alt="Imagen producto" />
                 </div>
                 <div class="card-info">
-                  <p class="text-title">{ }</p>
+                  <p class="text-title">{data.nombre}</p>
 
-                  <p class="text-body"><b>{ }</b></p>
+                  <p class="text-body"><b>{data.price }</b></p>
                   <Link to='/compra'><button class="card-button">Ver más</button></Link>
                 </div>
               </div>
             </motion.div>
-          })
+
+          ))
 
           }
 
