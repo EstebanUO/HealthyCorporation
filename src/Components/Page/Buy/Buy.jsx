@@ -9,7 +9,7 @@ import './buy.css'
 import back from '../../Image/x.png';
 import Swal from 'sweetalert2';
 import watchImg300 from '../../Image/assects/acetaminofen300.jpg';
-import watchImg1200 from '../../Image/assects/acetaminofen.jpg';
+// import watchImg1200 from '../../Image/assects/acetaminofen.jpg';
 
 
 export const Buy = (props) => {
@@ -76,7 +76,7 @@ export const Buy = (props) => {
                                 src: watchImg300,
                             },
                             largeImage: {
-                                src: watchImg1200,
+                                src: watchImg300,
                                 width: 1000,
                                 height: 667,
                                 
