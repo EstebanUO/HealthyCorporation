@@ -1659,7 +1659,7 @@ input[type="range"]:active::-webkit-slider-thumb{
 }
 
 /*--------------- Forgot Password --------*/
-.forgotPass{
+.forgotPass{ 
   width: 25rem;
   height: 20rem;
   margin: 4.1rem auto;
@@ -1846,7 +1846,6 @@ input[type="range"]:active::-webkit-slider-thumb{
     margin-top: 0rem;
   }
 
-  
   .containerCategorias{
     display: none;
   }
@@ -1907,13 +1906,15 @@ input[type="range"]:active::-webkit-slider-thumb{
     font-size: 80%;
   }
 
-}
 
   .column_nav_content{
     display: flex;
     flex-direction: row;
     margin-left: 1rem;
   }
+
+}
+
 
 /*-------- Responsive 968px ---------*/
 @media screen and (max-width:968px) {
@@ -2024,6 +2025,8 @@ input[type="range"]:active::-webkit-slider-thumb{
     margin-left: 10rem;
   }
 }
+
+
 /*-------- Responsive 850px ---------*/
 @media  screen and (max-width:850px) {
 
@@ -2078,8 +2081,6 @@ input[type="range"]:active::-webkit-slider-thumb{
   .logito{
     margin-left: 10rem;
   }
-
-  
 }
 
 /*-------- Responsive 800px ---------*/
@@ -2097,8 +2098,6 @@ input[type="range"]:active::-webkit-slider-thumb{
   .buscar{
     width: 36rem;
   }
-
-  
 }
 
 
@@ -2132,6 +2131,7 @@ input[type="range"]:active::-webkit-slider-thumb{
     display: grid;
     grid-template-columns: 15.5rem 15.4rem 15.4rem;
   }
+
 
   /*Page conctato*/
   .info_contact{
@@ -2309,8 +2309,8 @@ input[type="range"]:active::-webkit-slider-thumb{
     grid-template-columns: 13rem 14rem 14rem;
     }
 
-  html{
-    font-size: 70%;
+    html{
+      font-size: 70%;
     }
 
     .message{
