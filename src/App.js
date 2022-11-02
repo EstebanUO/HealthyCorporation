@@ -25,7 +25,7 @@ import RecoverPassword from './Components/Page/MyAcount/RecoverPassword';
 
 function App() {
 
-
+  
   const valiLoginAdmin = localStorage.getItem("EmailValidAdmin");
   const valiLogin = localStorage.getItem("EmailValid");
   const valiLoginUser = localStorage.getItem("EmailValidUser");
@@ -67,7 +67,6 @@ function App() {
             setusernameUser(data.name);
             setemailUser(data.email);
             setpassword(data.password);
-
             setmessagesLogin("bienvenido " + data.name)
 
           } else if (userLogin !== data.email && passwordUser !== data.password) {
@@ -76,9 +75,6 @@ function App() {
           }
           return console.log("data obtenida");
         });
-
-
-
       })
       .catch(function (error) {
         // handle error
