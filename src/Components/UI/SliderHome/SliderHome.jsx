@@ -1,10 +1,8 @@
 import React, { useState } from "react";
 import './Slider.css'
 import { motion } from 'framer-motion'
-// import images from '../../../exports/images'
 import { Link } from "react-router-dom"
 import axios from "axios"
-
 
 
 const SliderHome = () => {
@@ -18,8 +16,6 @@ const SliderHome = () => {
     });
   }, []);
 
-
-
   return (
     <>
       <motion.div className='slider-container'>
@@ -29,7 +25,6 @@ const SliderHome = () => {
           {img.map((data) => (
           
             <motion.div key={data.id} className='item'>
-              
               <div class="card">
                 <div class="card-img">
                   <img className='item-image' src={"https://api-products-healthy.herokuapp.com"+data.imagen} alt="Imagen producto" />
@@ -41,15 +36,9 @@ const SliderHome = () => {
                   <Link to='/compra'><button class="card-button">Ver más</button></Link>
                 </div>
               </div>
-            </motion.div>
-
+            </motion.div> 
           ))
-
           }
-
-
-
-
         </motion.div>
       </motion.div>
     </>
