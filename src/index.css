@@ -296,7 +296,9 @@ header img {
   color: #fff;
 }
 
-
+.column_nav_content{
+  display: flex;
+}
 
 /*---------------- Formulario Registro -------------------*/
 
