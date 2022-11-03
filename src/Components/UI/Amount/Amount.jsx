@@ -2,7 +2,6 @@ import { React, useState } from 'react'
 import './Amount.css';
 import { FaShoppingCart } from "react-icons/fa";
 import { Footer } from '../../Page/Layout/Footer/Footer';
-import { Header } from '../../Page/Layout/Header/Header';
 import { Link } from 'react-router-dom';
 import delect from '../../Image/eliminar.png'
 import img_prueba from '../../Image/assects/pax.jpg'
@@ -16,7 +15,7 @@ export const Amount = (props) => {
     const [valor, setValor] = useState(10);
 
     /* Actualizar la cantidad disponible*/
-    // const URl = '';
+    // const URl = ''; 
     // const hola= () => {
     //     setValor
     // }
@@ -48,19 +47,19 @@ export const Amount = (props) => {
 
 
     /*----------- calcular -------------- */
-    let total = [];
-    let buy = [];
+    // let total = [];
+    // let buy = [];
 
-    const calcular = () => {
-        let subTotal = counter * 30000
-        total.push(subTotal);
-        console.log(total);
+    // const calcular = () => {
+    //     let subTotal = counter * 30000
+    //     total.push(subTotal);
+    //     console.log(total);
 
-        let total_all = 12 / 100
-        let total_all2 = total_all * total
-        buy.push(total_all2);
-        console.log(buy);
-    }
+    //     let total_all = 12 / 100
+    //     let total_all2 = total_all * total
+    //     buy.push(total_all2);
+    //     console.log(buy);
+    // }
 
 
     /*----------- eliminar -------------- */
@@ -92,6 +91,13 @@ export const Amount = (props) => {
         })
     }
 
+    // const [products, setProducts] = useState([])
+
+    // (function () {
+    //     setProducts(JSON.parse(localStorage.getItem("car")))
+    //  })();
+
+
 
     return (
         <>
@@ -106,7 +112,8 @@ export const Amount = (props) => {
                     <div className='back_up_'><Link to="/products"><img className='img_up2' src={back} alt="atras" /><p className='back'>Atras</p></Link>
                     </div></nav>
                 <div className='product'>
-                    <div className="product_all">
+                    {/* {products.map((data) => ( */}
+                       <> <div className="product_all">
                         <input type="checkbox" name="Product_select" id="Product_select" />
                         <div>
                             <img className='product_img' src={img_prueba} alt="imagen prodcuto" />
@@ -127,93 +134,13 @@ export const Amount = (props) => {
                         <div className='delect'>
                             <img onClick={delectt} className='delect_producto' src={delect} alt="eiminar producto" />
                         </div>
-                    </div> <br />
+                    </div> <br /></>
+                    {/* ))} */}
+                    
 
                     {/* prueba al amontonar todad las cards */}
-                    <div className="product_all">
-                        <div>
-                            <img className='product_img' src={img_prueba} alt="imagen prodcuto" />
-                        </div>
-                        <div className='product_name'>
-                            <p className='error_'>Pax noche </p>
-                        </div>
-                        <div className='product_price'>
-                            <p className='error'>$ 30000</p>
-                        </div>
-                        <div className='product_btn'>
-                            <div className='product_btn2'>
-                                <button className='btn_sum' onClick={restar}>-</button>
-                                <p className='counter'>{counter}</p>
-                                <button className='btn_res' onClick={sumar}>+</button>
-                            </div>
-                        </div>
-                        <div className='delect'>
-                            <img onClick={delectt} className='delect_producto' src={delect} alt="eiminar producto" />
-                        </div>
-                    </div> <br />
-                    <div className="product_all">
-                        <div>
-                            <img className='product_img' src={img_prueba} alt="imagen prodcuto" />
-                        </div>
-                        <div className='product_name'>
-                            <p className='error_'>Pax noche </p>
-                        </div>
-                        <div className='product_price'>
-                            <p className='error'>$ 30000</p>
-                        </div>
-                        <div className='product_btn'>
-                            <div className='product_btn2'>
-                                <button className='btn_sum' onClick={restar}>-</button>
-                                <p className='counter'>{counter}</p>
-                                <button className='btn_res' onClick={sumar}>+</button>
-                            </div>
-                        </div>
-                        <div className='delect'>
-                            <img onClick={delectt} className='delect_producto' src={delect} alt="eiminar producto" />
-                        </div>
-                    </div> <br /><div className="product_all">
-                        <div>
-                            <img className='product_img' src={img_prueba} alt="imagen prodcuto" />
-                        </div>
-                        <div className='product_name'>
-                            <p className='error_'>Pax noche </p>
-                        </div>
-                        <div className='product_price'>
-                            <p className='error'>$ 30000</p>
-                        </div>
-                        <div className='product_btn'>
-                            <div className='product_btn2'>
-                                <button className='btn_sum' onClick={restar}>-</button>
-                                <p className='counter'>{counter}</p>
-                                <button className='btn_res' onClick={sumar}>+</button>
-                            </div>
-                        </div>
-                        <div className='delect'>
-                            <img onClick={delectt} className='delect_producto' src={delect} alt="eiminar producto" />
-                        </div>
-                    </div> <br /><div className="product_all">
-                        <div>
-                            <img className='product_img' src={img_prueba} alt="imagen prodcuto" />
-                        </div>
-                        <div className='product_name'>
-                            <p className='error_'>Pax noche </p>
-                        </div>
-                        <div className='product_price'>
-                            <p className='error'>$ 30000</p>
-                        </div>
-                        <div className='product_btn'>
-                            <div className='product_btn2'>
-                                <button className='btn_sum' onClick={restar}>-</button>
-                                <p className='counter'>{counter}</p>
-                                <button className='btn_res' onClick={sumar}>+</button>
-                            </div>
-                        </div>
-                        <div className='delect'>
-                            <img onClick={delectt} className='delect_producto' src={delect} alt="eiminar producto" />
-                        </div>
-                    </div> <br />
-                </div>
-
+                    
+                </div> 
 
 
 
@@ -239,7 +166,6 @@ export const Amount = (props) => {
                             </div>
                         </div>
                         <div className='amount_btn'>
-                            <button onClick={calcular} className='btn_back'>Calcular</button>
                             <Link to='/pago'><button className='btn_buy'>Ir a pagar</button></Link>
                         </div>
                     </div>

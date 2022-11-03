@@ -203,7 +203,6 @@ function App() {
     navigate('login')
 
   }
-
   /*fin validaciones register*/
 
 
