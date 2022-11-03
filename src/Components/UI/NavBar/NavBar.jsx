@@ -61,10 +61,10 @@ export const NavBar = () => {
                         <Link to='/car' onClick={handleClick} className={`links ${clicked ? 'active' : ''}`}><FaShoppingCart />0</Link>
                     </div>
                 </div>
-                <div className='burguer'>
+                {/* <div className='burguer'>
                     <MenuBurguer clicked={clicked} handleClick={handleClick} />
                 </div>
-                <BgDiv className={`initial ${clicked ? 'active' : ''}`}></BgDiv> 
+                <BgDiv className={`initial ${clicked ? 'active' : ''}`}></BgDiv>  */}
             </div>
         </div>
     </Navcontainer>

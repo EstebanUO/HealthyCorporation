@@ -121,7 +121,7 @@ export const Home = (props) => {
       </div>
       <Marks />
       <br /><br />
-      <Card/>
+      {/* <Card/> */}
       <Footer />
     </div>
     </div>

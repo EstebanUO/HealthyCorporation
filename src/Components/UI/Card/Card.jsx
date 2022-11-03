@@ -22,7 +22,6 @@ export const Card = () => {
 
   return (
     <div className='content_Product'>
-      {/* <h1 className='title-product'>Productos más comprados</h1> */}
       <div className='card_product'>
         <div className='column_all'>
           <div className='imgProduct_' >
