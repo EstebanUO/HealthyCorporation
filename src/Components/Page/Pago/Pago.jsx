@@ -178,7 +178,7 @@ export const Pago = () => {
                             <from className='acount_content_all3' id='content_det3'>
                                 <div className='acount_content_tarjet-' >
                                     <p className='text_check'>Banco</p>
-                                    <select className='input_check' name="ciudad" required>
+                                    <select className='input_acount' name="ciudad" required>
                                         <option value="" >Banco</option>
                                         <option value="">Bancolombia</option>
                                         <option value="">Banco agrario</option>
@@ -189,12 +189,12 @@ export const Pago = () => {
                                         <option value="">Caja social</option>
                                         <option value="">Davivienda</option>
                                         <option value="">Banco Popular</option>
-                                    </select>
+                                    </select> 
                                 </div><br />
 
                                 <div className='acount_content_tarjet-'>
                                     <p className='text_check'>Tipo de documento</p>
-                                    <select className='input_check' name="ciudad" required>
+                                    <select className='input_acount' name="ciudad" required>
                                         <option value="" disabled>Documeto</option>
                                         <option value="">Cédula de ciudadanía</option>
                                         <option value="">Cédula de extranjería</option>

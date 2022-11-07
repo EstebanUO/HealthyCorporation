@@ -105,18 +105,18 @@ code {
   cursor: pointer;
   position: absolute;
   display: block;
-  margin-left: 82%;
+  margin-left: 73%;
 }
 
 .button-show2 {
-  font-size: 20px;
+  font-size: 25px;
   border: none;
   background-color: #00000000;
   cursor: pointer;
   position: absolute;
   display: block;
-  margin-left: 28rem;
-  margin-top: -2.3rem;
+  margin-left: 24.9rem;
+    margin-top: -45px;
 }
 
 /*---------------- Nav -------------------*/
@@ -304,13 +304,15 @@ header img {
 
 .formulario2 {
   animation: slidein 1s forwards;
-  background-color: #ffffff57;
+  background: radial-gradient(circle, #44D2F2 0%, rgb(236, 236, 236) 100%);
   padding: 3rem;
-  border-radius: .6rem;
+  border-radius: 1.6rem;
   width: 34rem;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  box-shadow: #0e1e251f 0px 2px 4px 0px, #0e1e2552 0px 2px 16px 0px;
+  /* box-shadow: #0e1e251f 0px 2px 4px 0px, #0e1e2552 0px 2px 16px 0px; */
+  box-shadow: 0px 0px 6px gray;
+  
 }
 
 @keyframes slidein {
@@ -344,13 +346,14 @@ header img {
 
 .formulario3 {
   animation: slidein2 1s forwards;
-  background-color: #ffffff57;
+  background: radial-gradient(circle, #44D2F2 0%, rgb(236, 236, 236) 100%);
   padding: 3rem;
-  border-radius: .6rem;
+  border-radius: 1.6rem;
+  box-shadow: 0px 0px 6px gray;
   width: 34rem;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  box-shadow: #0e1e251f 0px 2px 4px 0px, #0e1e2552 0px 2px 16px 0px;
+  /* box-shadow: #0e1e251f 0px 2px 4px 0px, #0e1e2552 0px 2px 16px 0px; */
 }
 
 @keyframes slidein2 {
@@ -389,7 +392,7 @@ header img {
   width: 100%;
   justify-content: center;
   padding: 2.5rem;
-  background-image: url(/src/Components/Image/fondoReg.png);
+  /* background-image: url(/src/Components/Image/fondoReg.png); */
 }
 
 .formularioReg {
@@ -446,12 +449,13 @@ input[type="checkbox"] {
 }
 
 .form-input {
-  background-color: #ffffff57;
+  background-color: white;
+  padding: 10px;
+  padding-left: 37px;
   width: 100%;
-  height: 2rem;
-  padding: 1.2rem;
-  font-size: 1rem;
+  text-decoration: none;
   border: none;
+  border-radius: 0.5rem;
   border-bottom: solid 1px black;
 }
 
@@ -462,47 +466,47 @@ input[type="checkbox"] {
 .iconUser {
   position: absolute;
   display: block;
-  margin-top: .7rem;
-  margin-left: 0.1rem;
+  margin-top: .9rem;
+  margin-left: 0.7rem;
   cursor: pointer;
 }
 
 .iconPass {
   position: absolute;
   display: block;
-  margin-top: .7rem;
-  margin-left: 0.1rem;
+  margin-top: .9rem;
+  margin-left: 0.7rem;
   cursor: pointer;
 }
 
 .iconUserReg {
   position: absolute;
   display: block;
-  margin-top: 4.2rem;
-  margin-left: 0.1rem;
+  margin-top: 4.3rem;
+  margin-left: 0.7rem;
   cursor: pointer;
 }
 
 .iconUserEmailReg {
   position: absolute;
   display: block;
-  margin-top: 0.7rem;
-  margin-left: 0.1rem;
+  margin-top: .9rem;
+  margin-left: 0.7rem;
   cursor: pointer;
 }
 
 .iconPassReg {
   position: absolute;
   display: block;
-  margin-top: 0.7rem;
-  margin-left: 0.1rem;
+  margin-top: .9rem;
+  margin-left: 0.7rem;
 }
 
 .iconPassReg2 {
   position: absolute;
   display: block;
-  margin-top: 0.7rem;
-  margin-left: 0.1rem;
+  margin-top: .9rem;
+  margin-left: 0.7rem;
 }
 
 .links {
@@ -595,7 +599,7 @@ input[type="checkbox"] {
 .container1 {
   background: radial-gradient(circle, #44D2F2 0%, rgb(236, 236, 236) 100%);
   padding: 2rem;
-  box-shadow: 0px 0px 6px black;
+  box-shadow: 0px 0px 6px gray;
   border-radius: 2.6rem;
   backdrop-filter: blur(10px);
   /* -webkit-backdrop-filter: blur(10px); */
@@ -605,8 +609,8 @@ input[type="checkbox"] {
 .container_1 {
   background: radial-gradient(circle, #44D2F2 0%, rgb(236, 236, 236) 100%);
   padding: 2rem;
-  box-shadow: 0px 0px 6px black;
-  border-radius: 2.6rem;
+  box-shadow: 0px 0px 6px gray;
+  border-radius: 1.6rem;
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   width: 34rem;
@@ -747,7 +751,7 @@ input[type="checkbox"] {
   display: inline-block;
   position: absolute;
   left: 14px;
-  top: 10px;
+  top: 8px;
 }
 
 .nombres{
@@ -770,6 +774,7 @@ textarea {
   /* border-bottom: 2px solid #2196F3; */
   box-shadow: 9px 6px 6px #90A4AE;
   background-color: #ffffff57;
+  margin-bottom: 1rem;
 }
 
 .contact {
@@ -805,31 +810,31 @@ label {
 }
 
 .boton {
-  padding: 1rem;
   width: 9rem;
-  font-weight: 400;
-  background-color: #fff;
-  border-radius: 2rem;
-  border: none;
   outline: none;
   cursor: pointer;
   font-size: 1rem;
-  margin-top: 2rem;
+  padding: 1rem;
+  font-weight: 400;
+  background-color: #0a58ca;
+  border-radius: 1rem;
+  border: none;
+  outline: none;
   transition: all .3s ease-in;
-  color: #000;
+  color: #fff;
   margin: auto;
   display: block;
-  margin-top: 2rem;
 }
 
 .boton:hover {
-  background-color: #44D2F2;
+  background-color: #033d93;
 }
 
 /* --------------------Footer --------------------*/
 
 a {
   text-decoration: none;
+  color: #3f3f3f;
 }
 
 /*utilidad*/
@@ -1012,24 +1017,38 @@ a {
 }
 
 .input_acount {
-  background-color: #ffffff57;
-  width: 98%;
-  height: 2.5rem;
-  padding: 0.2rem;
-  font-size: 1rem;
-  border: none;
-  border-bottom: solid 1px black;
+  background-color: white;
+    padding: 10px;
+    padding-left: 17px;
+    width: 100%;
+    text-decoration: none;
+    border: none;
+    border-radius: 0.5rem;
+    border-bottom: solid 1px black;
 }
 
 .input_acount2 {
-  background-color: #ffffff57;
+  /* background-color: #ffffff57;
   width: 95%;
   height: 2.5rem;
   padding: 0.2rem;
   font-size: 1rem;
   border: none;
   border-bottom: solid 1px black;
-  margin-right: 16rem;
+  margin-right: 16rem; */
+
+
+  background-color: white;
+    padding: 10px;
+    margin-right: 16rem; 
+    padding-left: 17px;
+    
+    width: 95%;
+    color: #AEB3B7;
+    text-decoration: none;
+    border: none;
+    border-radius: 0.5rem;
+    border-bottom: solid 1px black;
 }
 
 .acount_content_row {
@@ -1092,14 +1111,14 @@ a {
 /* tarjet */
 
 .input_acount3 {
-  background-color: #ffffff57;
-  width: 33rem;
-  height: 2.5rem;
-  padding: 0.2rem;
-  font-size: 1rem;
+  background-color: white;
+  padding: 10px;
+  padding-left: 17px;
+  width: 100%;
+  text-decoration: none;
   border: none;
-  border-bottom: solid 1px black;
-  margin-right: 16rem;
+  border-radius: 0.5rem;
+  border-bottom: solid 1px black;
 }
 
 .acount_content_tarjet {
@@ -1108,25 +1127,25 @@ a {
 }
 
 .input_acount4 {
-  background-color: #ffffff57;
-  width: 14rem;
-  height: 2.5rem;
-  padding: 0.2rem;
-  font-size: 1rem;
-  border: none;
-  border-bottom: solid 1px black;
-  margin-right: -2.5rem;
+  background-color: white;
+  width: 12rem;
+    padding: 10px;
+    padding-left: 17px;
+    text-decoration: none;
+    border: none;
+    border-radius: 0.5rem;
+    border-bottom: solid 1px black;
 }
 
 .input_acount5 {
-  background-color: #ffffff57;
-  width: 14rem;
-  height: 2.5rem;
-  padding: 0.2rem;
-  font-size: 1rem;
-  border: none;
-  border-bottom: solid 1px black;
-  margin-right: -2.5rem;
+  background-color: white;
+    padding: 10px;
+    padding-left: 17px;
+    width: 100%;
+    text-decoration: none;
+    border: none;
+    border-radius: 0.5rem;
+    border-bottom: solid 1px black;
 }
 
 
@@ -1669,7 +1688,9 @@ input[type="range"]:active::-webkit-slider-thumb{
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  box-shadow: #0e1e251f 0px 2px 4px 0px, #0e1e2552 0px 2px 16px 0px;
+  /* box-shadow: #0e1e251f 0px 2px 4px 0px, #0e1e2552 0px 2px 16px 0px; */
+  box-shadow: 0px 0px 6px gray;
+  background: radial-gradient(circle, #44D2F2 0%, rgb(236, 236, 236) 100%);
   border-radius: 0.7rem;
 }
 
@@ -1680,12 +1701,15 @@ input[type="range"]:active::-webkit-slider-thumb{
 }
 
 .inputRecuperar{
-  border-style: none;
+  background-color: white;
+  padding: 10px;
+  padding-left: 37px;
   width: 100%;
-  border-radius: 5px;
-  padding: 5px 0px 5px 40px;
-  box-shadow: #0e1e251f 0px 4px 8px 0px, #0e1e2552 0px 4px 32px 0px;
-  outline: none;
+  text-decoration: none;
+  border: none;
+  border-radius: 0.5rem;
+  border-bottom: solid 1px black;
+  
 }
 
 .inputRecuperar:hover{
@@ -1715,7 +1739,7 @@ input[type="range"]:active::-webkit-slider-thumb{
 .iconEmailRecuperar{
   position: absolute;
   font-size: 1.5rem;
-  margin-top: 0.3rem;
+  margin-top: 10px;
   margin-left: 0.5rem;
   color: #2a9bd1;
 }
@@ -2248,7 +2272,8 @@ input[type="range"]:active::-webkit-slider-thumb{
   }
 
   .button-show2{
-  margin-left: 26rem;
+    margin-left: 23rem;
+    margin-top: -37px;
   }
 
   .card_all_product{
@@ -2284,8 +2309,9 @@ input[type="range"]:active::-webkit-slider-thumb{
     }
 
     .button-show {
-      margin-left: 22rem;
-      margin-top: -1rem;
+      margin-left: 18.5rem;
+      margin-top: -2px;
+      font-size: 1.9rem;
     }
 
     .welcome-back{
@@ -2367,8 +2393,8 @@ input[type="range"]:active::-webkit-slider-thumb{
     }
 
     .button-show2{
-      margin-top: -3rem;
-      margin-left: 22rem;
+      margin-top: -37px;
+      margin-left: 19rem;
     }
 
     .iconos {
@@ -2376,8 +2402,8 @@ input[type="range"]:active::-webkit-slider-thumb{
     }
 
     .button-show {
-      margin-top: -0.7rem;
-      margin-left: 23rem;
+      margin-left: 19.5rem;
+      font-size: 1.9rem;
     }
   
     .message2{
