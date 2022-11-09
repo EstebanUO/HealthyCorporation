@@ -17,7 +17,7 @@ export const Header = (props) => {
               </div> */}
           </div>
         </header>
-        <NavBar/>
+        <NavBar counter_h={props.counter_h}/>
         <Nav valiLoginAdmin={props.valiLoginAdmin} />
     </>
   )
