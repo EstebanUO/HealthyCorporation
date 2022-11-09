@@ -72,7 +72,7 @@ export const Register = (props) => {
               <FaUserAlt className='iconUserReg' />
               <input minLength="3" maxLength="20" value={props.usernameRegister} onChange={props.onChangeusernameRegister} name="name" type="text" class="form-input" placeholder="User name" autocomplete="off" required />
               <p className='pvaliRegister' id='txtvalidUsername'></p>
-              <div>
+              <div> 
                 <label for="exampleInputEmail1" class="labelsReg"><br />Correo</label>
                 <FaUserAlt className='iconUserEmailReg' />
                 <input value={props.emailRegister} onChange={props.onChangeemailRegister} name="correo" type="email" class="form-input" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ejemplo@healhty.com" autocomplete="off" required />

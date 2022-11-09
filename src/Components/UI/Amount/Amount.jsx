@@ -108,8 +108,8 @@ export const Amount = (props) => {
                     <div className='back_up_'><Link to="/products"><img className='img_up2' src={back} alt="atras" /><p className='back'>Atras</p></Link>
                     </div></nav>
                 <div className='product'>
-                    {products.map((data) => (
-                        <> <div className="product_all">
+                    {products.map((data,index) => (
+                        <> <div key={index} className="product_all">
                             <div>
                                 <img className='product_img' src={"https://api-products-healthy.herokuapp.com" + data.imagen} alt="imagen prodcuto" />
                             </div>
@@ -119,10 +119,10 @@ export const Amount = (props) => {
                             <div className='product_price'>
                                 <p className='error'>$ {data.price}</p>
                             </div>
-                            <div className='product_btn'>
+                            <div className='product_btn'> 
                                 <div className='product_btn2'>
                                     <button className='btn_sum' onClick={restar}>-</button>
-                                    <p className='counter'>{counter}</p>
+                                    <p  className='counter'>{counter}</p>
                                     <button className='btn_res' onClick={sumar}>+</button>
                                 </div>
                             </div>

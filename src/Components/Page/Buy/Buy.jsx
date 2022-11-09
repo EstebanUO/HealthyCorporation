@@ -1,14 +1,14 @@
-import { React, useState } from 'react'
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Footer } from '../Layout/Footer/Footer';
 import { Header } from '../Layout/Header/Header';
 import { Card } from '../../UI/Card/Card';
 import ReactImageMagnify from 'react-image-magnify';
-import './buy.css'
-// import img from '../../Image/assects/medicasp.jpg';
 import back from '../../Image/x.png';
 import Swal from 'sweetalert2';
 import watchImg300 from '../../Image/assects/acetaminofen300.jpg';
+import axios from "axios"
+import './buy.css'
 // import watchImg1200 from '../../Image/assects/acetaminofen.jpg';
 
 
@@ -17,6 +17,7 @@ export const Buy = (props) => {
     const [counter, setCounter] = useState(6);
     const [amount, setAmount] = useState(1);
     const [valor, setValor] = useState(10);
+    const [ id, setId] = useState([])
 
     /* Actualizar la cantidad disponible*/
     // const URl = '';
@@ -63,6 +64,17 @@ export const Buy = (props) => {
         setCounter(counter + 1);
     };
 
+    const productId = localStorage.getItem("products")
+    console.log(id);
+
+    const baseURL = "https://api-products-healthy.herokuapp.com/api/healthyapp";
+    React.useEffect(() => {
+      axios.get(baseURL).then((response) => {
+        setId(response.data);
+      });
+    }, []);
+
+    
     return (
         <>
             <Header valiLoginAdmin={props.valiLoginAdmin}/>
