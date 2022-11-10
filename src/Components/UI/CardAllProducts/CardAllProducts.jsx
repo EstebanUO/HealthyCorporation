@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FaShoppingCart } from "react-icons/fa";
 // import { MdAttachMoney } from "react-icons/Md";
@@ -32,12 +32,13 @@ export const CardAllProducts = (props) => {
   }
 
 
-
+  console.log("hola");
 
   const baseURL = "https://api-products-healthy.herokuapp.com/api/healthyapp";
-  React.useEffect(() => {
+  useEffect(() => {
     axios.get(baseURL).then((response) => {
-      setProducts(response.data);
+      setProducts(response.data)
+      
     });
   }, []);
 
@@ -85,7 +86,7 @@ export const CardAllProducts = (props) => {
                 Agregar <FaShoppingCart />
               </button>
               <Link to="/compra"><button onClick={(e) => { add_2(e) }} className='addProduct_2' value={data.id}>
-                Comprar 
+                Ver más
               </button></Link>
             </div>
           </div>
