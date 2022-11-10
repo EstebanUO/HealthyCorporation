@@ -57,7 +57,7 @@
 }
 
 #content_det2 {
-    background-color: #d3ebf7;
+    background: radial-gradient(circle, #44D2F2 0%, rgb(236, 236, 236) 100%);background-color: #d3ebf7;
     padding: 2.5rem;
     margin-top: 2rem;
     border-radius: 0.5rem;
@@ -69,7 +69,8 @@
 
 
 #content_det3 {
-    background-color: #d3ebf7;
+    /* background-color: #d3ebf7; */
+    background: radial-gradient(circle, #44D2F2 0%, rgb(236, 236, 236) 100%);
     padding: 2.5rem;
     margin-top: 2rem;
     border-radius: 0.5rem;
@@ -106,7 +107,7 @@
 .acount_btn2 {
     display: flex;
     justify-content: space-evenly;
-    padding: 2rem;
+    padding: 1rem;
     align-items: center;
 }
 

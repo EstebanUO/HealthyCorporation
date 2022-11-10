@@ -1,13 +1,26 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaShoppingCart } from "react-icons/fa";
+// import { MdAttachMoney } from "react-icons/Md";
 import Swal from 'sweetalert2'
 import axios from "axios"
 
-export const CardAllProducts = () => {
+export const CardAllProducts = (props) => {
+  const [products, setProducts] = useState([])
+  const [products_2, setProducts_2] = useState([])
 
 
-  const add = () => {
+  let validDatos = (localStorage.getItem("car"))
+  // let array = JSON.parse(localStorage.getItem("car"))
+  const add = (e) => {
+
+
+    setProducts_2(products_2 => products_2.concat(e.target.value))
+    validDatos === null ? validDatos = [] : validDatos = JSON.parse(validDatos);
+
+    localStorage.setItem("car", JSON.stringify(validDatos.concat(e.target.value)))
+    // props.setcounter_h(array)
+
     Swal.fire({
       icon: 'success',
       title: 'Se ha agregado el producto al carrito',
@@ -16,34 +29,40 @@ export const CardAllProducts = () => {
       timerProgressBar: true,
       html: '<div class="pse_content"> <a class="text_link" href="/car"><button class="confirm">Ver mi carrito</button></a></div>'
     });
-
-    (function () {
-      axios.get('https://apiprojectmain.herokuapp.com/api/users')
-        .then(function (response) {
-          localStorage.setItem("car", JSON.stringify(response));
-        })
-      
-    })();
   }
-  
+
+
+
 
   const baseURL = "https://api-products-healthy.herokuapp.com/api/healthyapp";
-  const [products, setProducts] = useState([])
-
   React.useEffect(() => {
     axios.get(baseURL).then((response) => {
       setProducts(response.data);
     });
   }, []);
 
-  return (
 
+  // --------------------- compra  ----------------------------
+
+  const [products_3, setProducts_3] = useState([]);
+  let validDatos_2 = (localStorage.getItem("product"));
+  const add_2 = (e) => {
+      setProducts_3(products_3 => products_3.concat(e.target.value)) 
+     
+      validDatos_2 === null ? validDatos_2=[] : validDatos_2=JSON.parse(validDatos_2)
+      localStorage.setItem('product', JSON.stringify(validDatos_2))
+
+      JSON.stringify(localStorage.setItem("product", e.target.value))
+      console.log(e.target.value)
+  }
+
+  return (
     <div className='content_all_Product'>
       <div className='card_all_product'>
         {products.map((data) => (
-          <div key={data.id} className='column_all_products'>
-            <div className='imgProduct_' >
-              <Link to="/compra"><img className='imgAllProduct' src={"https://api-products-healthy.herokuapp.com" + data.imagen} alt="Producto imagen" /></Link>
+          <div className='column_all_products'>
+            <div className='imgProduct_'>
+              <img className='imgAllProduct'  src={"https://api-products-healthy.herokuapp.com" + data.imagen} alt="Producto imagen" />
             </div>
             <div className='padding_product'>
               <div>
@@ -62,9 +81,12 @@ export const CardAllProducts = () => {
               </div>
             </div>
             <div className='addProduct'>
-              <button onClick={add} className='addProduct_'>
+              <button onClick={(e) => { add(e) }} className='addProduct_' value={data.id}>
                 Agregar <FaShoppingCart />
               </button>
+              <Link to="/compra"><button onClick={(e) => { add_2(e) }} className='addProduct_2' value={data.id}>
+                Comprar 
+              </button></Link>
             </div>
           </div>
         ))

@@ -1,4 +1,4 @@
-import { React, useState } from 'react'
+import React, { useState } from 'react'
 import './Amount.css';
 import { FaShoppingCart } from "react-icons/fa";
 import { Footer } from '../../Page/Layout/Footer/Footer';
@@ -8,17 +8,12 @@ import img_prueba from '../../Image/assects/pax.jpg'
 import Swal from 'sweetalert2';
 import logo2 from '../../Image/logo.png'
 import back from '../../Image/back.png';
+import axios from "axios"
 
 export const Amount = (props) => {
 
     const [counter, setCounter] = useState(1);
     const [valor, setValor] = useState(10);
-
-    /* Actualizar la cantidad disponible*/
-    // const URl = ''; 
-    // const hola= () => {
-    //     setValor
-    // }
 
     const sumar = () => {
         setCounter(counter + 1);
@@ -40,26 +35,20 @@ export const Amount = (props) => {
     };
 
 
-    /*----------- condicion de cantidad, supera el limite -------------- */
-    // useEffect(() => {
-    //       counter >= 10 ? "no puedes añadir más productos" : "hola";
-    //     }, [counter]);
-
-
     /*----------- calcular -------------- */
-    // let total = [];
-    // let buy = [];
+    let total = [];
+    let buy = [];
 
-    // const calcular = () => {
-    //     let subTotal = counter * 30000
-    //     total.push(subTotal);
-    //     console.log(total);
+    const calcular = () => {
+        let subTotal = counter * 30000
+        total.push(subTotal);
+        console.log(total);
 
-    //     let total_all = 12 / 100
-    //     let total_all2 = total_all * total
-    //     buy.push(total_all2);
-    //     console.log(buy);
-    // }
+        let total_all = 1000 / 100
+        let total_all2 = total_all * total
+        buy.push(total_all2);
+        console.log(buy);
+    }
 
 
     /*----------- eliminar -------------- */
@@ -91,13 +80,20 @@ export const Amount = (props) => {
         })
     }
 
-    // const [products, setProducts] = useState([])
+    const [products, setProducts] = useState([])
+    const [products_, setProducts_] = useState()
+    let validDatos = localStorage.getItem("car")
 
-    // (function () {
-    //     setProducts(JSON.parse(localStorage.getItem("car")))
-    //  })();
+    // validDatos.forEach(function (comida, index) {
+    //     console.log(`${index} : ${comida}`);
+    // });
 
-
+    const baseURL = "https://api-products-healthy.herokuapp.com/api/healthyapp";
+    React.useEffect(() => {
+        axios.get(baseURL).then((response) => {
+            setProducts(response.data);
+        });
+    }, []);
 
     return (
         <>
@@ -112,36 +108,33 @@ export const Amount = (props) => {
                     <div className='back_up_'><Link to="/products"><img className='img_up2' src={back} alt="atras" /><p className='back'>Atras</p></Link>
                     </div></nav>
                 <div className='product'>
-                    {/* {products.map((data) => ( */}
-                       <> <div className="product_all">
-                        <input type="checkbox" name="Product_select" id="Product_select" />
-                        <div>
-                            <img className='product_img' src={img_prueba} alt="imagen prodcuto" />
-                        </div>
-                        <div className='product_name'>
-                            <p className='error_'>Pax noche </p>
-                        </div>
-                        <div className='product_price'>
-                            <p className='error'>$ 30000</p>
-                        </div>
-                        <div className='product_btn'>
-                            <div className='product_btn2'>
-                                <button className='btn_sum' onClick={restar}>-</button>
-                                <p className='counter'>{counter}</p>
-                                <button className='btn_res' onClick={sumar}>+</button>
+                    {products.map((data,index) => (
+                        <> <div key={index} className="product_all">
+                            <div>
+                                <img className='product_img' src={"https://api-products-healthy.herokuapp.com" + data.imagen} alt="imagen prodcuto" />
                             </div>
-                        </div>
-                        <div className='delect'>
-                            <img onClick={delectt} className='delect_producto' src={delect} alt="eiminar producto" />
-                        </div>
-                    </div> <br /></>
-                    {/* ))} */}
-                    
+                            <div className='product_name'>
+                                <p className='error_'>{data.nombre} </p>
+                            </div>
+                            <div className='product_price'>
+                                <p className='error'>$ {data.price}</p>
+                            </div>
+                            <div className='product_btn'> 
+                                <div className='product_btn2'>
+                                    <button className='btn_sum' onClick={restar}>-</button>
+                                    <p  className='counter'>{counter}</p>
+                                    <button className='btn_res' onClick={sumar}>+</button>
+                                </div>
+                            </div>
+                            <div className='delect'>
+                                <img onClick={delectt} className='delect_producto' src={delect} alt="eiminar producto" />
+                            </div>
+                        </div> <br /></>
+                    ))}
 
-                    {/* prueba al amontonar todad las cards */}
-                    
-                </div> 
 
+
+                </div>
 
 
                 {/* ---------precios----------- */}
@@ -158,7 +151,7 @@ export const Amount = (props) => {
                             </div>
                             <div className='amount_text2'>
                                 <p>Descuento: </p>
-                                <p>% 12</p>
+                                <p>$ 1000</p>
                             </div><hr className='lineal' />
                             <div className="amount_total">
                                 <p>Total a pagar:</p>
@@ -171,6 +164,7 @@ export const Amount = (props) => {
                     </div>
                 </div>
             </div>
+
             <Footer />
         </>
     )

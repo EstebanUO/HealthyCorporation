@@ -1,15 +1,26 @@
-import {React, useState} from 'react'
-import { FaUserAlt,FaShoppingCart,FaMapMarkerAlt,FaHeartbeat,FaSistrix } from "react-icons/fa";
+import {React, useState,useEffect} from 'react'
+import { FaUserAlt,FaShoppingCart,FaHeartbeat,FaSistrix } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 import logo from '../../Image/logo.png';
-import { MenuBurguer } from '../../UI/MenuBurguer/MenuBurguer'
+// import { MenuBurguer } from '../../UI/MenuBurguer/MenuBurguer'
 import styled from 'styled-components';
 
-export const NavBar = () => {
+export const NavBar = (props) => {
+
+
+    const [counter, setCounter] = useState()
+
+    useEffect(() => {   
+        console.log(props.counter_h);
+        console.log(counter);
+        setCounter(props.counter_h +1)
+    }, [props.counter_h])
+    
+
+    
 
 
     window.onscroll = function() {scrollFunction()};
-
     /*-------------------------- Funcion del menu ---------------------------- */
     const [clicked, setclicked] = useState(false)
 
@@ -58,7 +69,7 @@ export const NavBar = () => {
                         <Link to='/register' onClick={handleClick} className={`links ${clicked ? 'active' : ''}`}><FaUserAlt /> Mi cuenta</Link>
                     </div>
                     <div className='navbar2'>
-                        <Link to='/car' onClick={handleClick} className={`links ${clicked ? 'active' : ''}`}><FaShoppingCart />0</Link>
+                        <Link to='/car' onClick={handleClick} className={`links ${clicked ? 'active' : ''}`}><FaShoppingCart />{counter}</Link>
                     </div>
                 </div>
                 {/* <div className='burguer'>
