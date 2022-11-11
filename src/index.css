@@ -259,9 +259,7 @@ header img {
   align-items: baseline;
   justify-content: space-around;
   cursor: pointer;
-  margin-left: 2rem;
-  margin-top: 1rem;
-  margin-bottom: .5rem;
+  padding: 0.5rem;
   animation: navbar2 1s forwards;
   font-size: 1.1rem;
 }
@@ -1362,7 +1360,7 @@ a {
   background: #f3f1f1;
   border-radius: 1rem;
   width: 15rem;
-  height: 45rem;
+  height: 30rem;
 }
 
 .iconFilter{

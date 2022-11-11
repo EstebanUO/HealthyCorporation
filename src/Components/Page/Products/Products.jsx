@@ -156,57 +156,6 @@ export const Products = (props) => {
               </div>
             </div>
             <hr />
-            <div className='filterCategoria'>
-              <label onClick={switchShown2} className='categIcon' role="button">Marca{shown2? <FaArrowCircleUp onClick={switchShown2} className='iconArrow'/>:<FaArrowCircleDown onClick={switchShown2} className='iconArrow'/>}</label>
-                <div className='subCategorias0'>
-                  <div className='subCategorias2'>
-                    <input type="checkbox" /><p>Mk</p>
-                  </div>
-                  <div className='subCategorias2'>
-                    <input type="checkbox" /><p>La santé</p>
-                  </div>
-                  <div className='subCategorias2'>
-                    <input type="checkbox" /><p>Genfar</p>
-                  </div>
-                  <div className='subCategorias2'>
-                    <input type="checkbox" /><p>Coaspharma</p>
-                  </div>
-                  <div className='subCategorias2'>
-                    <input type="checkbox" /><p>Ag</p>
-                  </div>
-                  <div className='subCategorias2'>
-                    <input type="checkbox" /><p>Colmed</p>
-                  </div>
-                  <div className='subCategorias2'>
-                    <input type="checkbox" /><p>Drogam</p>
-                  </div>
-                  <div className='subCategorias2'>
-                    <input type="checkbox" /><p>Alfasafe</p>
-                  </div>
-                  <div className='subCategorias2'>
-                    <input type="checkbox" /><p>Noravel</p>
-                  </div>
-                  <div className='subCategorias2'>
-                    <input type="checkbox" /><p>Vitalis</p>
-                  </div>
-                  <div className='subCategorias2'>
-                    <input type="checkbox" /><p>Dolex</p>
-                  </div>
-                  <div className='subCategorias2'>
-                    <input type="checkbox" /><p>Ensure</p>
-                  </div>
-                  <div className='subCategorias2'>
-                    <input type="checkbox" /><p>Nexcare</p>
-                  </div>
-                  <div className='subCategorias2'>
-                    <input type="checkbox" /><p>Cureband</p>
-                  </div>
-                  <div className='subCategorias2'>
-                    <input type="checkbox" /><p>Today</p>
-                  </div>
-                </div>
-            </div>
-            <hr />
             <label for='priceRange'>Precios</label>
             <br />
             <div class="wrapper">
