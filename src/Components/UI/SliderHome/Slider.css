@@ -196,9 +196,10 @@
  }
  
  .card-info {
-  width: 100%;
+  width: 13.4rem;
   height: 100%;
   position: relative;
+  margin-right: -1.8rem;
   color:#83c5eb;
   opacity: 0;
   transform: translateY(10%);
@@ -208,6 +209,12 @@
   display: flex;
   justify-content: center ;
   flex-direction: column;
+  align-items: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 7rem;
+  padding-bottom: 8rem;
+  margin-top: -1.6rem;
  }
  
  /*Text*/

@@ -12,12 +12,9 @@ export const Header = (props) => {
         <header className='Up' id='Up'>
           <div className='imgu'>
               <Link to='/'><img src={logo} alt="Logo" /></Link>
-              {/* <div className='userIcon'>
-                <FontAwesomeIcon icon={faUserCircle} />
-              </div> */}
           </div>
         </header>
-        <NavBar counter_h={props.counter_h}/>
+        <NavBar />
         <Nav valiLoginAdmin={props.valiLoginAdmin} />
     </>
   )

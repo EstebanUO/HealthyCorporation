@@ -10,7 +10,7 @@ export const Politicas = (props) => {
             <div>
               <div className="container1">
 
-                <h3>POLÍTICA DE PRIVACIDAD</h3>
+                <h3>Política de privacidad</h3>
 
                 <p className='parrafo'>El presente Política de Privacidad establece los términos en que Healthy Corporation usa y protege la información que es proporcionada por sus usuarios al momento de utilizar su sitio web. 
                 Esta compañía está comprometida con la seguridad de los datos de sus usuarios. 

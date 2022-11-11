@@ -27,35 +27,35 @@ export const Direction = (props) => {
               <span onClick={handleClik} className='btnCerrarSesion' role="button"><img src={cerrar} alt="cerrarSesion" className='cerrarSesion'/> Cerrar sesión</span>
             </div>
           </div>
-          <div className='acount_content_all'>
+          <form className='acount_content_all' onSubmit={props.postApiDirection}>
             <div className='acount_content_direction'>
               <p className='text_check'>Dirección</p>
-              <input className='input_acount' placeholder='Ingresa tu direccion de residencia' type="text" value="" />
+              <input className='input_acount' placeholder='Ingresa tu direccion de residencia' autocomplete="off" type="text" value={props.direction} required />
             </div><br />
             <div className='acount_content_row'>
               <div className='acount_content_direction2'>
                 <p className='text_check'>Ingresa tu ciudad</p>
-                <input className='input_acount2' placeholder='Ingresa tu ciudad' type="text" value="" />
+                <input className='input_acount2' placeholder='Ingresa tu ciudad' type="text" autocomplete="off" value={props.city} required/>
               </div>
               <div className='acount_content_direction2'>
                 <p className='text_check'>Ingresa tu localidad</p>
-                <input className='input_acount2' placeholder='Ingresa tu localidad' type="text" value="" />
+                <input className='input_acount2' placeholder='Ingresa tu localidad' type="text" autocomplete="off" value={props.location} required/>
               </div>
             </div><br />
             <div className='acount_content_row'>
               <div className='acount_content_direction2'>
                 <p className='text_check'>Casa | Depto | Oficina </p>
-                <input className='input_acount2' placeholder='Ingresa la numeración' type="text" value="" />
+                <input className='input_acount2' placeholder='Ingresa la numeración' type="text" autocomplete="off" value={props.typeHome} required/>
               </div>
               <div className='acount_content_direction2'>
                 <p className='text_check'>Nombre de la dirección</p>
-                <input className='input_acount2' placeholder='Ej: Departamento' type="text" value="" />
+                <input className='input_acount2' placeholder='Ej: Departamento' type="text" autocomplete="off" value={props.details} required/>
               </div>
             </div>
             <div className='acount_btn'>
-              <button className='btn_save'>Guardar</button>
+              <input className='btn_save' value="Guardar" type="submit"/>
             </div>
-          </div>
+          </form>
         </div>
       </div><br /><br />
       <Footer />

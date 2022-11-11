@@ -33,25 +33,35 @@ export const Pago = () => {
             title: '¿Estas seguro?',
             text: "¡No podrás revertir esto!",
             icon: 'warning',
-            showCancelButton: false,
+            showCancelButton: true,
             showConfirmButton: false,
             timer: 5400,
             timerProgressBar: true,
+            buttonsStyling: false,
+            cancelButtonText: 'Cancelar',
+            customClass: {
+                cancelButton: "Cancel_"
+            },
             html: '<div class="pse_content"> <a class="text_link" href="/"><button class="confirm">!Si!, quiero comprarlo</button></a></div>'
         });
     }
 
     const check2 = () => {
         Swal.fire({
-                title: '¿Estas seguro?',
-                text: "¡No podrás revertir esto!",
-                icon: 'warning',
-                showCancelButton: false,
-                showConfirmButton: false,
-                timer: 5400,
-                timerProgressBar: true,
-                html: '<div class="pse_content"> <a class="text_link" href="https://registro.pse.com.co/PSEUserRegister/StartTransaction.htm?enc=tnPcJHMKlSnmRpHM8fAbu2zgkcv6e0mh%2bc%2fLmvf0zeC1nJ8xJutrLyQ6DzhIIQnz"><button class="confirm">!Si!, quiero comprarlo</button></a></div>'
-            });
+            title: '¿Estas seguro?',
+            text: "¡No podrás revertir esto!",
+            icon: 'warning',
+            showCancelButton: true,
+            showConfirmButton: false,
+            timer: 5400,
+            timerProgressBar: true,
+            buttonsStyling: false,
+            cancelButtonText: 'Cancelar',
+            customClass: {
+                cancelButton: "Cancel_"
+            },
+            html: '<div class="pse_content"> <a class="text_link" href="https://registro.pse.com.co/PSEUserRegister/StartTransaction.htm?enc=tnPcJHMKlSnmRpHM8fAbu2zgkcv6e0mh%2bc%2fLmvf0zeC1nJ8xJutrLyQ6DzhIIQnz"><button class="confirm">!Si!, quiero comprarlo</button></a></div>'
+        });
     }
 
     const onSee = () => { document.getElementById("content_det2").style.display = 'flex' };
@@ -111,13 +121,13 @@ export const Pago = () => {
                             <form className='acount_content_all2' id='content_det2'>
                                 <div className='acount_content_tarjet'>
                                     <p className='text_check'>Numero de la tarjeta</p>
-                                    <input className='input_acount3' placeholder='5212 **** **** ****' minlength="16" maxLength="16" type="text"  pattern="[0-9]+" required />
+                                    <input className='input_acount3' placeholder='5212 **** **** ****' minlength="16" maxLength="16" type="text" pattern="[0-9]+" required />
                                 </div><br />
 
                                 <div className='acount_content_tarjet'>
                                     <p className='text_check'>Titular de la tarjeta</p>
                                     <input className='input_acount3' placeholder='Ingresa tu nombre y apellido' minlength="5" type="text" required />
-                                </div><br /> 
+                                </div><br />
 
                                 <div className='acount_content_row'>
                                     <div className='acount_content_tarjet'>
@@ -189,7 +199,7 @@ export const Pago = () => {
                                         <option value="">Caja social</option>
                                         <option value="">Davivienda</option>
                                         <option value="">Banco Popular</option>
-                                    </select> 
+                                    </select>
                                 </div><br />
 
                                 <div className='acount_content_tarjet-'>

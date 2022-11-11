@@ -79,11 +79,11 @@ export const Products = (props) => {
     event.preventDefault()
   };
 
-  const [counter_h, setcounter_h] = useState([0])
+  // const [counter_h, setcounter_h] = useState([0])
 
   return (
     <div>
-      <Header counter_h={counter_h.length} valiLoginAdmin={props.valiLoginAdmin} /><br /><br />
+      <Header valiLoginAdmin={props.valiLoginAdmin} /><br /><br />
       <h2 className='titleCategoria'>Compra por categoría</h2>
       <Categories />
       <br /><br />
@@ -183,7 +183,7 @@ export const Products = (props) => {
 
           </div>
         </div>
-        <CardAllProducts setcounter_h={setcounter_h}/>
+        <CardAllProducts />
       </div>
       <Footer />
     </div>

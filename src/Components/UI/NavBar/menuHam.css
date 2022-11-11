@@ -1,0 +1,30 @@
+.bars__menu{
+    width: 2rem;
+    height: 2rem;
+    margin-top: 0.5rem;
+    transform: translate(68%, -16%) scale(1);
+    cursor: pointer;
+}
+
+.bars__menu span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: #1785c0;
+    margin-top: .4rem;
+    transform-origin: 0px 100%;
+    transition: all 600ms;
+}
+
+.activeline1__bars-menu{
+    transform: rotate(45deg) translate(-1px, 2px);
+}
+
+.activeline2__bars-menu{
+    opacity: 0;
+    margin-left: -30px;
+}
+
+.activeline3__bars-menu{
+    transform: rotate(-45deg) translate(-4px, 2px);
+}

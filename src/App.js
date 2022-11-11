@@ -187,6 +187,40 @@ function App() {
     console.log(messages);
   }
 
+
+
+
+  /*----------------- post direccion  falta que identifique el usuario que sera la ubicacion-------------------*/
+  
+  const [direction, setDirection] = useState("")
+  const [location, setLocation] = useState("")
+  const [city, setCity] = useState("")
+  const [details, setDetails] = useState("")
+  const [typeHome, setTypeHome] = useState("")
+
+  const postApiDirection = (e) => {
+    
+    axios.post('https://apiprojectmain.herokuapp.com/api/users', {
+        "direccion": direction,
+        "localidad": location,
+        "ciudad": city,
+        "detalles": details,
+        "tipoVivienda": typeHome
+      })
+      .catch(function (error) {
+        // handle error
+        setmessages(error.message)
+      });
+      setDirection("")
+      setLocation("")
+      setCity("")
+      setDetails("")
+      setTypeHome("")
+
+  }
+
+/* ----------------------------------------------------------------------- */
+
   const [shown, setShown] = useState(false);
   const switchShown = (event) => {
     setShown(!shown)
@@ -220,7 +254,7 @@ function App() {
         <Route path="/login" element={valiLogin ? <Navigate replace to="/account" /> : <Login setalertConexionLogin={setalertConexionLogin} alertConexionLogin={alertConexionLogin} alertUserLogin={alertUserLogin} setalertUserLogin={setalertUserLogin} messagesLogin={messagesLogin} onClick2={onClick2} switchShown2={switchShown2} shown2={shown2} userLogin={userLogin} ClickLogin={ClickLogin} passwordUser={passwordUser} onChangePasswordLogin={onChangePasswordLogin} onChangeUserLogin={onChangeUserLogin} />} />
         <Route path="/car" element={<Car valiLoginAdmin={valiLoginAdmin} />} />
         <Route path="/account" element={valiLogin ? <MyAcount setalertHome={setalertHome} alertHome={alertHome} valiLoginAdmin={valiLoginAdmin} /> : <Navigate replace to="/" />} />
-        <Route path="/direction" element={valiLogin ? <Direction />:<Navigate replace to="/" />} />
+        <Route path="/direction" element={valiLogin ? <Direction />:<Navigate replace to="/" postApiDirection={postApiDirection} direction={direction} typeHome={typeHome} location={location} city={city} details={details} />} />
         <Route path="/password" element={valiLogin ? <Password />:<Navigate replace to="/" />} />
         <Route path="/tarjet" element={valiLogin ? <Tarjet />:<Navigate replace to="/" />} />
         <Route path="/lista-deseos" element={<ListaDeseos />} />

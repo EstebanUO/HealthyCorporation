@@ -59,7 +59,26 @@ img {
   transition: all 400ms;
 }
 
+.Cancel_{
+  color: #ffffff;
+  padding: 0.3rem;
+  background-color: #fc5b5b;
+  width: 10rem;
+  margin-top: -1rem;
+  border-radius: .5rem;
+  font-size: 1.3rem;
+  border: none;
+  transition: all 400ms;
+}
+
 .Cancel:hover {
+  background-color: #eee7e7;
+  transition: all 300ms;
+  border: solid #fc5b5b;
+  color: #000000;
+}
+
+.Cancel_:hover {
   background-color: #eee7e7;
   transition: all 300ms;
   border: solid #fc5b5b;
@@ -240,9 +259,7 @@ header img {
   align-items: baseline;
   justify-content: space-around;
   cursor: pointer;
-  margin-left: 2rem;
-  margin-top: 1rem;
-  margin-bottom: .5rem;
+  padding: 0.5rem;
   animation: navbar2 1s forwards;
   font-size: 1.1rem;
 }
@@ -603,6 +620,9 @@ input[type="checkbox"] {
   backdrop-filter: blur(10px);
   /* -webkit-backdrop-filter: blur(10px); */
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .container_1 {
