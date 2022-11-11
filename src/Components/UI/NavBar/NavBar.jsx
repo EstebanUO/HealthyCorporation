@@ -3,7 +3,6 @@ import { FaUserAlt,FaShoppingCart,FaHeartbeat,FaSistrix } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 import logo from '../../Image/logo.png';
 import './menuHam.css'
-import './menuHam.js'
 
 export const NavBar = () => {
 
@@ -31,16 +30,24 @@ export const NavBar = () => {
         
     }, [Counter2])
     
-    
-
-
-    window.onscroll = function() {scrollFunction()};
     /*-------------------------- Funcion del menu ---------------------------- */
     const [clicked, setclicked] = useState(false)
 
     const handleClick = () => {
         setclicked(!clicked)
+    }
 
+    /*---------------------------------- Menu Hamburguesa -------------------------------------- */
+    const line1__bars = document.querySelector(".line1__bars-menu");
+    const line2__bars = document.querySelector(".line2__bars-menu");
+    const line3__bars = document.querySelector(".line3__bars-menu");
+
+    window.onClick = function () {animateBars()}
+
+    function animateBars(){
+        line1__bars.classList.toggle("activeline1__bars-menu");
+        line2__bars.classList.toggle("activeline2__bars-menu");
+        line3__bars.classList.toggle("activeline3__bars-menu");
     }
 
     /*---------------------------------- second nav -------------------------------------- */
@@ -51,6 +58,8 @@ export const NavBar = () => {
     //     let actual = window.pageYOffset 
     //     console.log(actual);
     // })
+
+    window.onscroll = function() {scrollFunction()};
 
     function scrollFunction() {
         if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
@@ -81,7 +90,7 @@ export const NavBar = () => {
                 <div className='navbar2'>
                     <Link to='/car' onClick={handleClick} className={`links ${clicked ? 'active' : ''}`}><FaShoppingCart />{counter}</Link>
                 </div>
-                <div class="bars__menu">
+                <div class="bars__menu" onClick={animateBars}>
                     <span class="line1__bars-menu"></span>
                     <span class="line2__bars-menu"></span>
                     <span class="line3__bars-menu"></span>
