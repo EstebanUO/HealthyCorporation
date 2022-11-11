@@ -99,13 +99,13 @@ export const Buy = (props) => {
                                 <p>Nuevo  |  85 Vendidos</p>
                             </div>
                             <div>
-                                <p className='name_buy'>Medicasp</p>
+                                <p className='name_buy'>Acetaminofén</p>
                             </div>
                             <div className='up_buy_3'>
                                 <p><b>Descripción:</b> Lorem, ipsum dolor sit amet consectetur adipisicing elit.eriam? Ad similique ut vero optio.</p>
                             </div>
                             <div className='Content_price'>
-                                <p className='price_buy'>$ 40.000</p>
+                                <p className='price_buy'>$ 18.360</p>
                             </div>
 
                             <div>

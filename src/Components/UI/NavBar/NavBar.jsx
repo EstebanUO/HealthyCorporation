@@ -19,8 +19,18 @@ export const NavBar = () => {
     /* ------------------- contador -------------------------- */
 
     const [counter, setCounter] = useState(0);
-    const Counter = localStorage.getItem("car");
-    // setCounter(Counter.length);
+    const Counter2 = JSON.parse(localStorage.getItem("car"));
+    
+    useEffect(() => {
+        if (Counter2==null){
+            console.log(Counter2)
+        } else if(Counter2!=null){
+            setCounter(Counter2.length)
+            console.log(Counter2.length)
+        }
+        
+    }, [Counter2])
+    
     
 
 

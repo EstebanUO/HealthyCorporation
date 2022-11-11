@@ -9,7 +9,7 @@ import { Header } from '../Layout/Header/Header'
 
 export const Direction = (props) => { 
   const handleClik = () => {
-    localStorage.clear();
+    localStorage.clear(); 
     window.location.reload();
   }
 
@@ -30,7 +30,7 @@ export const Direction = (props) => {
           <form className='acount_content_all' onSubmit={props.postApiDirection}>
             <div className='acount_content_direction'>
               <p className='text_check'>Dirección</p>
-              <input className='input_acount' placeholder='Ingresa tu direccion de residencia' autocomplete="off" type="text" value={props.direction} required />
+              <input className='input_acount'value={props.direction} onChange={(e)=>{props.setDirection(e.target.value)}}  placeholder='Ingresa tu direccion de residencia' autocomplete="off" type="text"  required />
             </div><br />
             <div className='acount_content_row'>
               <div className='acount_content_direction2'>
