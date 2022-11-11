@@ -52,7 +52,9 @@ export const CardAllProducts = (props) => {
 
   // --------------------- compra  ----------------------------
 
+  /*no eliminar este usestate por que se cae la pagina*/
   const [products_3, setProducts_3] = useState([]);
+  /*/////////////////////////////////////////////////*/
   let validDatos_2 = (localStorage.getItem("product"));
   const add_2 = (e) => {
       setProducts_3(products_3 => products_3.concat(e.target.value)) 
@@ -62,6 +64,12 @@ export const CardAllProducts = (props) => {
 
       JSON.stringify(localStorage.setItem("product", e.target.value))
       console.log(e.target.value)
+  }
+
+  const formatoMexico = (number) => {
+    const exp = /(\d)(?=(\d{3})+(?!\d))/g;
+    const rep = '$1,';
+    return number.toString().replace(exp,rep);
   }
 
   return (
@@ -77,7 +85,7 @@ export const CardAllProducts = (props) => {
                 <p className='name_Product'>{data.nombre}</p>
               </div>
               <div>
-                <p className='price_product'>$ {data.price}</p>
+                <p className='price_product'>$ {formatoMexico(data.price)}</p>
               </div>
               <div>
                 <p className='name_Product_'>Cantidad disponible: <b>{data.cantidad}</b></p>
