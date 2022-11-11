@@ -46,7 +46,7 @@ export const Register = (props) => {
   }, [props.messages]);
 
   const onclick = () => {
-    props.onClick()
+    props.onClick() 
   }
 
   const onSee3 = () => { document.getElementById("content_det").style.display = 'flex' };

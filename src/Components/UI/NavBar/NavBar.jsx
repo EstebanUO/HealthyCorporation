@@ -5,18 +5,22 @@ import logo from '../../Image/logo.png';
 // import { MenuBurguer } from '../../UI/MenuBurguer/MenuBurguer'
 import styled from 'styled-components';
 
-export const NavBar = (props) => {
+export const NavBar = () => {
 
 
-    const [counter, setCounter] = useState()
-
-    useEffect(() => {   
-        console.log(props.counter_h);
-        console.log(counter);
-        setCounter(props.counter_h +1)
-    }, [props.counter_h])
     
 
+    // useEffect(() => {   
+    //     console.log(props.counter_h);
+    //     console.log(counter);
+    //     setCounter(props.counter_h +1)
+    // }, [props.counter_h])
+    
+    /* ------------------- contador -------------------------- */
+
+    const [counter, setCounter] = useState(0);
+    const Counter = localStorage.getItem("car");
+    // setCounter(Counter.length);
     
 
 
@@ -29,7 +33,7 @@ export const NavBar = (props) => {
 
     }
 
-    /*---------------------------------- ? -------------------------------------- */
+    /*---------------------------------- second nav -------------------------------------- */
 
 
     // window.addEventListener("scroll", () =>{
@@ -55,11 +59,8 @@ export const NavBar = (props) => {
                 <div>
                     <Link to='/'><img src={logo} alt="logo" id='logo' /></Link>
                 </div>
-                {/* <div className='navbar2'>
-                    <Link to="/" className="ubicacion"><FaMapMarkerAlt/> Ubicación</Link> 
-                </div> */}
                 <div className='navbar2'>
-                    <input type="text" placeholder='Buscar...' className='buscar' /><button className='buscar2'><FaSistrix /></button>
+                    <input type="text" placeholder='Buscar...' className='buscar'/><button className='buscar2'><FaSistrix /></button>
                 </div>
                 <div className="column_nav_content">
                     <div className='navbar2'>

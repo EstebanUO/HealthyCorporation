@@ -32,7 +32,7 @@ const SliderHome = () => {
                 <div class="card-info">
                   <p class="text-title">{data.nombre}</p>
 
-                  <p class="text-body"><b>{data.price }</b></p>
+                  <p class="text-body"><b>Precio:</b> {data.price}</p>
                   <Link to='/compra'><button class="card-button">Ver más</button></Link>
                 </div>
               </div>
