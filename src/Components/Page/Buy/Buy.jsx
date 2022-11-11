@@ -54,7 +54,6 @@ export const Buy = (props) => {
         if (amount === 1) {
             setAmount(amount)
         };
-
     };
 
     const onHeart = () => {
@@ -67,14 +66,13 @@ export const Buy = (props) => {
     const productId = localStorage.getItem("products")
     console.log(id);
 
-    const baseURL = "https://api-products-healthy.herokuapp.com/api/healthyapp";
+    const baseURL = "https://api-products-healthy.herokuapp.com/api/healthyapp/" + productId;
     React.useEffect(() => {
       axios.get(baseURL).then((response) => {
         setId(response.data);
       });
     }, []);
 
-    
     return (
         <>
             <Header valiLoginAdmin={props.valiLoginAdmin}/>
