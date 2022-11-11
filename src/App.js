@@ -103,6 +103,7 @@ function App() {
               localStorage.setItem("EmailValid", true);
               localStorage.setItem("EmalValidUser", data.email);
               localStorage.setItem("nameUser", data.name);
+              localStorage.setItem("idUser", data.id);
             };
           })
         })
@@ -198,9 +199,11 @@ function App() {
   const [details, setDetails] = useState("")
   const [typeHome, setTypeHome] = useState("")
 
+  const iduser= localStorage.getItem("idUser")
+
   const postApiDirection = (e) => {
     
-    axios.post('https://apiprojectmain.herokuapp.com/api/users', {
+    axios.post(`https://apiprojectmain.herokuapp.com/api/users/${iduser}`, {
         "direccion": direction,
         "localidad": location,
         "ciudad": city,
@@ -254,7 +257,7 @@ function App() {
         <Route path="/login" element={valiLogin ? <Navigate replace to="/account" /> : <Login setalertConexionLogin={setalertConexionLogin} alertConexionLogin={alertConexionLogin} alertUserLogin={alertUserLogin} setalertUserLogin={setalertUserLogin} messagesLogin={messagesLogin} onClick2={onClick2} switchShown2={switchShown2} shown2={shown2} userLogin={userLogin} ClickLogin={ClickLogin} passwordUser={passwordUser} onChangePasswordLogin={onChangePasswordLogin} onChangeUserLogin={onChangeUserLogin} />} />
         <Route path="/car" element={<Car valiLoginAdmin={valiLoginAdmin} />} />
         <Route path="/account" element={valiLogin ? <MyAcount setalertHome={setalertHome} alertHome={alertHome} valiLoginAdmin={valiLoginAdmin} /> : <Navigate replace to="/" />} />
-        <Route path="/direction" element={valiLogin ? <Direction />:<Navigate replace to="/" postApiDirection={postApiDirection} direction={direction} typeHome={typeHome} location={location} city={city} details={details} />} />
+        <Route path="/direction" element={valiLogin ? <Direction setDirection={setDirection} postApiDirection={postApiDirection} direction={direction} typeHome={typeHome} location={location} city={city} details={details}/>:<Navigate replace to="/"  />} />
         <Route path="/password" element={valiLogin ? <Password />:<Navigate replace to="/" />} />
         <Route path="/tarjet" element={valiLogin ? <Tarjet />:<Navigate replace to="/" />} />
         <Route path="/lista-deseos" element={<ListaDeseos />} />
