@@ -76,7 +76,7 @@ export const Direction_pago = () => {
 
                             <label className='text_check'>Nombre de dirección</label>
                             <input type="text" className='input_check' name='user-name' placeholder="Ej: Departameto" required></input>
-                        </form><br />
+                        </form><br /> 
                     </div>
                     <div className='check_btn'>
                         <button className='addProduct_check4'>Agregar la dirección automaticamente </button>
