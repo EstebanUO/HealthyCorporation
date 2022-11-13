@@ -38,7 +38,7 @@ export const MyAcount = (props) => {
             <div className='info'>
               <Link to='/account' className='select_btn'>Mis datos</Link>
               <Link to='/direction' className='b'>Mis direcciones</Link>
-              <Link to='/tarjet' className='c'>Mis tarjetas</Link>
+              {/* <Link to='/tarjet' className='c'>Mis tarjetas</Link> */}
               <Link to='/password' className='d'>Mi contraseña</Link>
               <span  onClick={handleClik} className='btnCerrarSesion' role="button"><img onClick={handleClik} src={cerrar} alt="cerrarSesion" className='cerrarSesion'/> Cerrar sesión</span>
             </div>
@@ -57,7 +57,7 @@ export const MyAcount = (props) => {
                 <p  className='text_check'>Ingresa tu contraseña para guardar los cambios</p>
                 <input className='input_acount2' placeholder='************' minlength="8" type="password" value="" required />
               </div>
-              <button className='btn_update' disabled><s>Actualizar</s> </button>
+              <button className='btn_update' disabled>Actualizar </button>
             </div><br />
             <div className='acount_btn_'> 
               <h6>Recuerda mantener actualizados tus datos para tener una mejor experiencia.</h6>

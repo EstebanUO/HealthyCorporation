@@ -28,6 +28,7 @@ import icon_buy from '../../Image/icon_buy.png'
 import icon_regresar from '../../Image/icon_regresar.png'
 
 export const Pago = () => {
+
     const check = () => {
         Swal.fire({
             title: '¿Estas seguro?',

@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
 import { Footer } from '../Layout/Footer/Footer'
 import { Header } from '../Layout/Header/Header'
 import cerrar from '../../Image/Icons/cerrar.png';
-import axios from "axios";
-import Swal from 'sweetalert2'
+// import axios from "axios";
+// import Swal from 'sweetalert2'
 
 
 
@@ -60,7 +60,7 @@ export const Password = (props) => {
             <div className='info'>
               <Link to='/account' className='aa'>Mis datos</Link>
               <Link to='/direction' className='b'>Mis direcciones</Link>
-              <Link to='/tarjet' className='c'>Mis tarjetas</Link>
+              {/* <Link to='/tarjet' className='c'>Mis tarjetas</Link> */}
               <Link to='/password' className='select_btn'>Mi contraseña</Link>
               <span onClick={handleClik} className='btnCerrarSesion' role="button"><img src={cerrar} alt="cerrarSesion" className='cerrarSesion' /> Cerrar sesión</span>
             </div>

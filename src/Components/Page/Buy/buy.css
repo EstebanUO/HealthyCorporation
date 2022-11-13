@@ -333,9 +333,13 @@ hr {
     cursor: pointer;
 }
 
+.imagen_buy{
+    width: 3rem;
+}
+
 .img_up_close {
     display: block;
-    margin-top: -28rem;
+    margin-top: -23rem;
     margin-right: -3rem;
     margin-left: -12rem;
 }

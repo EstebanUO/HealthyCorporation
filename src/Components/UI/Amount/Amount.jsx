@@ -4,11 +4,11 @@ import { FaShoppingCart } from "react-icons/fa";
 import { Footer } from '../../Page/Layout/Footer/Footer';
 import { Link } from 'react-router-dom';
 import delect from '../../Image/eliminar.png'
-import img_prueba from '../../Image/assects/pax.jpg'
 import Swal from 'sweetalert2';
-import logo2 from '../../Image/logo.png'
+// import logo2 from '../../Image/logo.png'
 import back from '../../Image/back.png';
 import axios from "axios"
+import { Header } from '../../Page/Layout/Header/Header';
 
 export const Amount = (props) => {
 
@@ -36,19 +36,19 @@ export const Amount = (props) => {
 
 
     /*----------- calcular -------------- */
-    let total = [];
-    let buy = [];
+    // let total = [];
+    // let buy = [];
 
-    const calcular = () => {
-        let subTotal = counter * 30000
-        total.push(subTotal);
-        console.log(total);
+    // const calcular = () => {
+    //     let subTotal = counter * 30000
+    //     total.push(subTotal);
+    //     console.log(total);
 
-        let total_all = 1000 / 100
-        let total_all2 = total_all * total
-        buy.push(total_all2);
-        console.log(buy);
-    }
+    //     let total_all = 1000 / 100
+    //     let total_all2 = total_all * total
+    //     buy.push(total_all2);
+    //     console.log(buy);
+    // }
 
 
     /*----------- eliminar -------------- */
@@ -81,8 +81,8 @@ export const Amount = (props) => {
     }
 
     const [products, setProducts] = useState([])
-    const [products_, setProducts_] = useState()
-    let validDatos = localStorage.getItem("car")
+    // const [products_, setProducts_] = useState()
+    // let validDatos = localStorage.getItem("car")
 
     // validDatos.forEach(function (comida, index) {
     //     console.log(`${index} : ${comida}`);
@@ -97,12 +97,12 @@ export const Amount = (props) => {
 
     return (
         <>
-            {/* <Header valiLoginAdmin={props.valiLoginAdmin}/> */}
-            <header className='up_check'>
+            <Header valiLoginAdmin={props.valiLoginAdmin}/>
+            {/* <header className='up_check'>
                 <div className='imgu2'>
                     <Link to='/'><img src={logo2} alt="Logo" /></Link>
                 </div>
-            </header>
+            </header> */}
             <div className="content_car">
                 <nav className='nav_check_'><p className='pad_check_'>Tu carrito de compras</p>
                     <div className='back_up_'><Link to="/products"><img className='img_up2' src={back} alt="atras" /><p className='back'>Atras</p></Link>

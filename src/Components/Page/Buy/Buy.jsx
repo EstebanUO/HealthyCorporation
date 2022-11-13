@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Footer } from '../Layout/Footer/Footer';
 import { Header } from '../Layout/Header/Header';
@@ -16,37 +16,52 @@ export const Buy = (props) => {
 
     const [counter, setCounter] = useState(6);
     const [amount, setAmount] = useState(1);
-    const [valor, setValor] = useState(10);
-    const [ id, setId] = useState([])
+    const [valor, setValor] = useState(1);
+    const [Id, setId] = useState([])
 
-    /* Actualizar la cantidad disponible*/
-    // const URl = '';
-    // const hola= () => {
-    //     setValor
-    // }
 
-    const add = () => {
+
+
+    /* ------------------------------ add product ---------------------------- */
+    const [products_2, setProducts_2] = useState([])
+    let validDatos = (localStorage.getItem("car"))
+    // let array = JSON.parse(localStorage.getItem("car"))
+    const add = (e) => {
+
+        setProducts_2(products_2 => products_2.concat(e.target.value))
+        validDatos === null ? validDatos = [] : validDatos = JSON.parse(validDatos);
+    
+        localStorage.setItem("car", JSON.stringify(validDatos.concat(e.target.value)))
+        // props.setcounter_h(array)
+
         Swal.fire({
-          icon: 'success', 
-          title: 'Se ha agregado el producto al carrito',
-          showConfirmButton: false,
-          timer: 3400,
-          timerProgressBar: true,
-          html: '<div class="pse_content"> <a class="text_link" href="/car"><button class="confirm">Ver mi carrito</button></a></div>'
-        })
-      }
+            icon: 'success',
+            title: 'Se ha agregado el producto al carrito',
+            showConfirmButton: false,
+            showCancelButton: true,
+            cancelButtonText: 'Cancelar',
+            cancelButtonColor: '#d33',
+            timer: 3400,
+            timerProgressBar: true,
+            buttonsStyling: false,
+            customClass: {
+              cancelButton: "Cancel_"
+          },
+            html: '<div class="pse_content"><a class="text_link" href="/car"><button class="confirm">Ver mi carrito</button></a> </div>'
+          });
+    }
 
     const sumar = () => {
         setAmount(amount + 1);
         if (amount === valor) {
             Swal.fire({
                 icon: 'error',
-                title: 'Cantidad disponible en este momento solo es '+ valor ,
+                title: 'Cantidad disponible en este momento solo es ' + valor,
                 showConfirmButton: false,
                 timer: 1500
             });
             setAmount(amount);
-            // document.querySelector(".btn_res2").style.backgroundColor = 'gray';
+            
         }
     };
     const restar = () => {
@@ -61,21 +76,38 @@ export const Buy = (props) => {
         document.querySelector(".Content_favorite").style.border = ' solid red';
         // document.querySelector(".Content_favorite").style.backgroundColor = '';
         setCounter(counter + 1);
+        if (counter === 7) {
+            document.querySelector(".material-symbols-outlined").style.color = 'gray';
+            document.querySelector(".Content_favorite").style.border = ' solid gray';
+            setCounter(counter - 1);
+        }
     };
 
-    const productId = localStorage.getItem("products")
-    console.log(id);
+    /* ------------------------------ product ---------------------------- */
 
-    const baseURL = "https://api-products-healthy.herokuapp.com/api/healthyapp/" + productId;
+    const productId = localStorage.getItem("product")
+
+    // useEffect(() => {
+    //     if (productId==null){
+    //         console.log(productId)
+    //     } else if(productId!=null){
+    //         setValor(Id.cantidad)
+    //     }
+    // }, [productId])
+
+    const baseURL = `https://api-products-healthy.herokuapp.com/api/healthyapp/${productId}`;
     React.useEffect(() => {
-      axios.get(baseURL).then((response) => {
-        setId(response.data);
-      });
+        axios.get(baseURL).then((response) => {
+            setId(response.data);
+        });
     }, []);
+
+
+    /*----------------------------------------------------------------------*/
 
     return (
         <>
-            <Header valiLoginAdmin={props.valiLoginAdmin}/>
+            <Header valiLoginAdmin={props.valiLoginAdmin} />
             <div className='content_buy'>
                 <div className='row_buy'>
                     <div className='imgBuy'>
@@ -84,12 +116,13 @@ export const Buy = (props) => {
                                 alt: 'Wristwatch by Ted Baker London',
                                 isFluidWidth: true,
                                 src: watchImg300,
+                                
                             },
                             largeImage: {
-                                src: watchImg300,
+                                src: "https://api-products-healthy.herokuapp.com" + Id.imagen,
                                 width: 1000,
                                 height: 667,
-                                
+
                             }
                         }} />
                     </div>
@@ -99,13 +132,12 @@ export const Buy = (props) => {
                                 <p>Nuevo  |  85 Vendidos</p>
                             </div>
                             <div>
-                                <p className='name_buy'>Acetaminofén</p>
+                                <p className='name_buy'>{Id.nombre}</p>
                             </div>
                             <div className='up_buy_3'>
-                                <p><b>Descripción:</b> Lorem, ipsum dolor sit amet consectetur adipisicing elit.eriam? Ad similique ut vero optio.</p>
                             </div>
                             <div className='Content_price'>
-                                <p className='price_buy'>$ 18.360</p>
+                                <p className='price_buy'>$ {Id.price}</p>
                             </div>
 
                             <div>
@@ -135,7 +167,7 @@ export const Buy = (props) => {
                             <Link to="/pago"><button className='addBuy_'>
                                 Comprar ahora
                             </button></Link>
-                            <button className='addBuy_2' onClick={add}>
+                            <button className='addBuy_2' onClick={(e) => { add(e) }} value={Id.id}>
                                 Agregar al carrito
                             </button>
                         </div>
@@ -162,9 +194,8 @@ export const Buy = (props) => {
                         <li>6</li>
                     </ul><hr />
 
-                    <h1 className='text-descrip'>Modo de uso</h1>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla veniam, iure quasi alias expedita repellat tenetur, nisi dolore iste, impedit soluta culpa. Amet consequuntur autem tempore explicabo et eos itaque.</p><hr />
-                </div>
+                    <h1 className='text-descrip'>Descripción</h1>
+                    <p>{Id.descripcion}</p></div>
 
                 <div>
                     <h1 className='text-descrip2'>

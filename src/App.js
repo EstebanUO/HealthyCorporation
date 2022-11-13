@@ -12,7 +12,7 @@ import { Car } from './Components/Page/Car/Car';
 import { MyAcount } from './Components/Page/MyAcount/MyAcount';
 import { Direction } from './Components/Page/Direction/Direction';
 import { Password } from './Components/Page/Password/Password';
-import { Tarjet } from './Components/Page/Tarjet/Tarjet';
+// import { Tarjet } from './Components/Page/Tarjet/Tarjet';
 import { ListaDeseos } from './Components/Page/ListaDeseos/ListaDeseos';
 import { Buy } from './Components/Page/Buy/Buy';
 import { Direction_pago } from './Components/Page/DIrection_pago/Direction_pago';
@@ -28,7 +28,7 @@ function App() {
   
   const valiLoginAdmin = localStorage.getItem("EmailValidAdmin");
   const valiLogin = localStorage.getItem("EmailValid");
-  const valiLoginUser = localStorage.getItem("EmailValidUser");
+  // const valiLoginUser = localStorage.getItem("EmailValidUser");
 
   let navigate = useNavigate();
   /*validaciones login*/
@@ -48,10 +48,10 @@ function App() {
   const onChangePasswordLogin = ({ currentTarget }) => setpasswordUser(currentTarget.value);
 
   /*datos de usuario*/
-  const [idUser, setidUser] = useState(null)
-  const [usernameUser, setusernameUser] = useState("")
-  const [emailUser, setemailUser] = useState("")
-  const [password, setpassword] = useState("")
+  // const [idUser, setidUser] = useState(null)
+  // const [usernameUser, setusernameUser] = useState("")
+  // const [emailUser, setemailUser] = useState("")
+  // const [password, setpassword] = useState("")
 
 
   const getApi = () => {
@@ -63,10 +63,14 @@ function App() {
           if (userLogin === data.email && passwordUser === data.password) {
             localStorage.setItem("EmailValid", true);
             setalertHome(true);
-            setidUser(data.id);
-            setusernameUser(data.name);
-            setemailUser(data.email);
-            setpassword(data.password);
+            // setidUser(data.id);
+            localStorage.setItem("idUser", data.id);
+            localStorage.setItem("EmailValid", true);
+            localStorage.setItem("EmalValidUser", data.email);
+            localStorage.setItem("nameUser", data.name);
+            // setusernameUser(data.name);
+            // setemailUser(data.email);
+            // setpassword(data.password);
             setmessagesLogin("bienvenido " + data.name)
 
           } else if (userLogin !== data.email && passwordUser !== data.password) {
@@ -95,24 +99,7 @@ function App() {
       getApi()
     }
 
-    (function () {
-      axios.get('https://apiprojectmain.herokuapp.com/api/users')
-        .then(function (response) {
-          response.data.map(data => {
-            if (userLogin === data.email && passwordUser === data.password) {
-              localStorage.setItem("EmailValid", true);
-              localStorage.setItem("EmalValidUser", data.email);
-              localStorage.setItem("nameUser", data.name);
-              localStorage.setItem("idUser", data.id);
-            };
-          })
-        })
-        .catch(function (error) {
-          // handle error
-          console.log(error);
-          setmessagesLogin(error.message);
-        })
-    })();
+
   }
 
   const [shown2, setShown2] = useState(false);
@@ -203,7 +190,7 @@ function App() {
 
   const postApiDirection = (e) => {
     
-    axios.post(`https://apiprojectmain.herokuapp.com/api/users/${iduser}`, {
+    axios.put(`https://apiprojectmain.herokuapp.com/api/users/${iduser}`, {
         "direccion": direction,
         "localidad": location,
         "ciudad": city,
@@ -257,9 +244,9 @@ function App() {
         <Route path="/login" element={valiLogin ? <Navigate replace to="/account" /> : <Login setalertConexionLogin={setalertConexionLogin} alertConexionLogin={alertConexionLogin} alertUserLogin={alertUserLogin} setalertUserLogin={setalertUserLogin} messagesLogin={messagesLogin} onClick2={onClick2} switchShown2={switchShown2} shown2={shown2} userLogin={userLogin} ClickLogin={ClickLogin} passwordUser={passwordUser} onChangePasswordLogin={onChangePasswordLogin} onChangeUserLogin={onChangeUserLogin} />} />
         <Route path="/car" element={<Car valiLoginAdmin={valiLoginAdmin} />} />
         <Route path="/account" element={valiLogin ? <MyAcount setalertHome={setalertHome} alertHome={alertHome} valiLoginAdmin={valiLoginAdmin} /> : <Navigate replace to="/" />} />
-        <Route path="/direction" element={valiLogin ? <Direction setDirection={setDirection} postApiDirection={postApiDirection} direction={direction} typeHome={typeHome} location={location} city={city} details={details}/>:<Navigate replace to="/"  />} />
+        <Route path="/direction" element={valiLogin ? <Direction setDirection={setDirection} setLocation={setLocation} setTypeHome={setTypeHome} setCity={setCity} setDetails={setDetails}  postApiDirection={postApiDirection} direction={direction} typeHome={typeHome} location={location} city={city} details={details}/>:<Navigate replace to="/"  />} />
         <Route path="/password" element={valiLogin ? <Password />:<Navigate replace to="/" />} />
-        <Route path="/tarjet" element={valiLogin ? <Tarjet />:<Navigate replace to="/" />} />
+        {/* <Route path="/tarjet" element={valiLogin ? <Tarjet />:<Navigate replace to="/" />} /> */}
         <Route path="/lista-deseos" element={<ListaDeseos />} />
         <Route path="/compra" element={<Buy valiLoginAdmin={valiLoginAdmin} />} />
         <Route path="/pago" element={valiLogin?  <Direction_pago />:<Navigate replace to="/login" />} />

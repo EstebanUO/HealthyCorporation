@@ -27,7 +27,6 @@ export const NavBar = () => {
             setCounter(Counter2.length)
             console.log(Counter2.length)
         }
-        
     }, [Counter2])
     
     /*-------------------------- Funcion del menu ---------------------------- */
@@ -51,7 +50,6 @@ export const NavBar = () => {
     }
 
     /*---------------------------------- second nav -------------------------------------- */
-
 
     // window.addEventListener("scroll", () =>{
     //     console.log("scrollindo...")

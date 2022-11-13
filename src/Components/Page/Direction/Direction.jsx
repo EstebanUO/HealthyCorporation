@@ -1,8 +1,9 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import { Link } from 'react-router-dom'
 import cerrar from '../../Image/Icons/cerrar.png';
 import { Footer } from '../Layout/Footer/Footer'
 import { Header } from '../Layout/Header/Header'
+import axios from "axios"
 
 
 
@@ -13,6 +14,15 @@ export const Direction = (props) => {
     window.location.reload();
   }
 
+  const [direction_2, setDirection_2] = useState([])
+  let idUser = localStorage.getItem("idUser")
+  const baseURL = `https://apiprojectmain.herokuapp.com/api/users/${idUser}`;
+  useEffect(() => {
+    axios.get(baseURL).then((response) => {
+      setDirection_2(response.data)
+    });
+  }, []);
+
   return (
     <div>
       <Header valiLoginAdmin={props.valiLoginAdmin}/><br /><br />
@@ -22,34 +32,35 @@ export const Direction = (props) => {
             <div className='info'>
               <Link to='/account' className='aa'>Mis datos</Link>
               <Link to='/direction' className='select_btn'>Mis direcciones</Link>
-              <Link to='/tarjet' className='c'>Mis tarjetas</Link>
+              {/* <Link to='/tarjet' className='c'>Mis tarjetas</Link> */}
               <Link to='/password' className='d'>Mi contraseña</Link>
               <span onClick={handleClik} className='btnCerrarSesion' role="button"><img src={cerrar} alt="cerrarSesion" className='cerrarSesion'/> Cerrar sesión</span>
             </div>
           </div>
+          
           <form className='acount_content_all' onSubmit={props.postApiDirection}>
             <div className='acount_content_direction'>
               <p className='text_check'>Dirección</p>
-              <input className='input_acount'value={props.direction} onChange={(e)=>{props.setDirection(e.target.value)}}  placeholder='Ingresa tu direccion de residencia' autocomplete="off" type="text"  required />
+              <input className='input_acount'value={props.direction} onChange={(e)=>{props.setDirection(e.target.value)}}  placeholder={direction_2.direccion}autocomplete="off" type="text"  required />
             </div><br />
             <div className='acount_content_row'>
               <div className='acount_content_direction2'>
                 <p className='text_check'>Ingresa tu ciudad</p>
-                <input className='input_acount2' placeholder='Ingresa tu ciudad' type="text" autocomplete="off" value={props.city} required/>
+                <input className='input_acount2'  value={props.city}  onChange={(e)=>{props.setCity(e.target.value)}}  placeholder={direction_2.ciudad} type="text" autocomplete="off" required/>
               </div>
               <div className='acount_content_direction2'>
                 <p className='text_check'>Ingresa tu localidad</p>
-                <input className='input_acount2' placeholder='Ingresa tu localidad' type="text" autocomplete="off" value={props.location} required/>
+                <input className='input_acount2' value={props.location} onChange={(e)=>{props.setLocation(e.target.value)}}  placeholder={direction_2.localidad} type="text" autocomplete="off"  required/>
               </div>
             </div><br />
             <div className='acount_content_row'>
               <div className='acount_content_direction2'>
                 <p className='text_check'>Casa | Depto | Oficina </p>
-                <input className='input_acount2' placeholder='Ingresa la numeración' type="text" autocomplete="off" value={props.typeHome} required/>
+                <input className='input_acount2'  value={props.typeHome}  onChange={(e)=>{props.setTypeHome(e.target.value)}}  placeholder={direction_2.tipoVivienda}type="text" autocomplete="off"required/>
               </div>
               <div className='acount_content_direction2'>
                 <p className='text_check'>Nombre de la dirección</p>
-                <input className='input_acount2' placeholder='Ej: Departamento' type="text" autocomplete="off" value={props.details} required/>
+                <input className='input_acount2' value={props.details}  onChange={(e)=>{props.setDetails(e.target.value)}}  placeholder={direction_2.detalles} type="text" autocomplete="off" required/>
               </div>
             </div>
             <div className='acount_btn'>
