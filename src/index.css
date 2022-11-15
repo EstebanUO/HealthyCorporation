@@ -472,7 +472,8 @@ input[type="checkbox"] {
   width: 100%;
   text-decoration: none;
   border: none;
-  border-bottom: solid 1px black;
+  color: black;
+  border-bottom: solid 2px gray;
 }
 
 .form-input:focus {
@@ -777,10 +778,10 @@ input[type="checkbox"] {
   padding: 10px;
   padding-left: 37px;
   width: 100%;
-  color: #AEB3B7;
   text-decoration: none;
   border: none;
-  border-bottom: solid 1px black;
+  color: black;
+  border-bottom: solid 2px gray;
 }
 
 
@@ -1041,19 +1042,12 @@ a {
     width: 100%;
     text-decoration: none;
     border: none;
-    border-radius: 0.5rem;
-    border-bottom: solid 1px black;
+    color: black;
+    border-bottom: solid 2px gray;
 }
 
 .input_acount2 {
-  /* background-color: #ffffff57;
-  width: 95%;
-  height: 2.5rem;
-  padding: 0.2rem;
-  font-size: 1rem;
-  border: none;
-  border-bottom: solid 1px black;
-  margin-right: 16rem; */
+
 
 
   background-color: white;
@@ -1065,8 +1059,8 @@ a {
     color: #AEB3B7;
     text-decoration: none;
     border: none;
-    border-radius: 0.5rem;
-    border-bottom: solid 1px black;
+    color: black;
+    border-bottom: solid 2px gray;
 }
 
 .acount_content_row {
@@ -1135,8 +1129,8 @@ a {
   width: 100%;
   text-decoration: none;
   border: none;
-  border-radius: 0.5rem;
-  border-bottom: solid 1px black;
+  color: black;
+  border-bottom: solid 2px gray;
 }
 
 .acount_content_tarjet {
@@ -1151,8 +1145,8 @@ a {
     padding-left: 17px;
     text-decoration: none;
     border: none;
-    border-radius: 0.5rem;
-    border-bottom: solid 1px black;
+    color: black;
+    border-bottom: solid 2px gray;
 }
 
 .input_acount5 {
@@ -1162,8 +1156,8 @@ a {
     width: 100%;
     text-decoration: none;
     border: none;
-    border-radius: 0.5rem;
-    border-bottom: solid 1px black;
+    color: black;
+    border-bottom: solid 2px gray;
 }
 
 

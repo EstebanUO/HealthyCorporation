@@ -104,9 +104,9 @@ export const NavBar = () => {
             <div>
                 <Link to='/'><img src={logo} alt="logo" id='logo' /></Link>
             </div>
-            <div  className='navbar3'>
+            {/* <div  className='navbar3'>
                 <input type="text" placeholder='Buscar...' className='buscar' /><button className='buscar2'><FaSistrix /></button>
-            </div>
+            </div> */}
             <div className='bars__menu'onClick={switchShown2}>
                 <span class="line1__bars-menu"></span>
                 <span class="line2__bars-menu"></span>

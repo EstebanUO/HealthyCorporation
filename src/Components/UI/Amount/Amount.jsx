@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState,  useEffect} from 'react'
 import './Amount.css';
 import { FaShoppingCart } from "react-icons/fa";
 import { Footer } from '../../Page/Layout/Footer/Footer';
@@ -80,44 +80,57 @@ export const Amount = (props) => {
         })
     }
 
-    const [products, setProducts] = useState([])
-    // const [products_, setProducts_] = useState()
-    // let validDatos = localStorage.getItem("car")
+    const [products, setProducts] = useState([null])
+    const [Car, setCar] = useState([])
+    
+    let arr = JSON.parse(localStorage.getItem("car"))
+  
 
-    // validDatos.forEach(function (comida, index) {
-    //     console.log(`${index} : ${comida}`);
-    // });
+    useEffect(() => {
+        setCar(arr);
+    }, [arr])
+    
 
-    const baseURL = "https://api-products-healthy.herokuapp.com/api/healthyapp";
-    React.useEffect(() => {
-        axios.get(baseURL).then((response) => {
-            setProducts(response.data);
-        });
-    }, []);
+    useEffect(() => {
+        alert(products)
+    }, [products])
+
+
+    // let car_2 = Car[2]
+
+    for (let index = 0; index < Car.length; index++) {
+        const baseURL = `https://api-products-healthy.herokuapp.com/api/healthyapp/${Car[index]}`;
+            axios.get(baseURL).then((response) => { 
+                if(products === null){
+                    setProducts(response.data)
+
+                } else if (products !== null){
+                        setProducts(response.data.concat(products))
+                }
+            });
+    }
+
+ 
 
     return (
         <>
             <Header valiLoginAdmin={props.valiLoginAdmin}/>
-            {/* <header className='up_check'>
-                <div className='imgu2'>
-                    <Link to='/'><img src={logo2} alt="Logo" /></Link>
-                </div>
-            </header> */}
+            
             <div className="content_car">
                 <nav className='nav_check_'><p className='pad_check_'>Tu carrito de compras</p>
                     <div className='back_up_'><Link to="/products"><img className='img_up2' src={back} alt="atras" /><p className='back'>Atras</p></Link>
                     </div></nav>
                 <div className='product'>
-                    {products.map((data,index) => (
-                        <> <div key={index} className="product_all">
+                     {products.map((data) => (
+                        <> <div  className="product_all">
                             <div>
-                                <img className='product_img' src={"https://api-products-healthy.herokuapp.com" + data.imagen} alt="imagen prodcuto" />
+                                <img className='product_img'  alt="imagen prodcuto" />
                             </div>
                             <div className='product_name'>
-                                <p className='error_'>{data.nombre} </p>
+                                <p className='error_'></p>
                             </div>
                             <div className='product_price'>
-                                <p className='error'>$ {data.price}</p>
+                                <p className='error'>$ </p>
                             </div>
                             <div className='product_btn'> 
                                 <div className='product_btn2'>
