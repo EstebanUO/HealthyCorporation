@@ -108,9 +108,9 @@ export const NavBar = () => {
                 <input type="text" placeholder='Buscar...' className='buscar' /><button className='buscar2'><FaSistrix /></button>
             </div> */}
             <div className='bars__menu'onClick={switchShown2}>
-                <span class="line1__bars-menu"></span>
-                <span class="line2__bars-menu"></span>
-                <span class="line3__bars-menu"></span>
+                <span className="line1__bars-menu"></span>
+                <span className="line2__bars-menu"></span>
+                <span className="line3__bars-menu"></span>
             </div>
             {/* <input type="checkbox" id='menu'className='menuInput'/> */}
             <div className="column_nav_content">

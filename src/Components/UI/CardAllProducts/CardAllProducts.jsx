@@ -4,6 +4,7 @@ import { FaShoppingCart } from "react-icons/fa";
 // import { MdAttachMoney } from "react-icons/Md";
 import Swal from 'sweetalert2'
 import axios from "axios"
+import { keyboard } from "@testing-library/user-event/dist/keyboard";
 
 export const CardAllProducts = (props) => {
   const [products, setProducts] = useState([])
@@ -75,8 +76,8 @@ export const CardAllProducts = (props) => {
   return (
     <div className='content_all_Product'>
       <div className='card_all_product'>
-        {products.map((data) => (
-          <div className='column_all_products'>
+        {products.map((data, key) => (
+          <div className='column_all_products'key={key}>
             <div className='imgProduct_'>
               <img className='imgAllProduct'  src={"https://api-products-healthy.herokuapp.com" + data.imagen} alt="Producto imagen" />
             </div>

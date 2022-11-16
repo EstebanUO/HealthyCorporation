@@ -3,7 +3,7 @@ import { Header } from '../Layout/Header/Header';
 import { Footer } from '../Layout/Footer/Footer';
 // import Slider from '../../UI/js/Slider';
 import { CardAllProducts } from '../../UI/CardAllProducts/CardAllProducts';
-import { FaArrowCircleDown, FaArrowCircleUp, FaSlidersH, FaTh, FaThList } from "react-icons/fa";
+import { FaArrowCircleDown, FaArrowCircleUp, FaSlidersH } from "react-icons/fa";
 import { Categories } from '../../UI/Categories/Categories';
 
 export const Products = (props) => {
@@ -16,8 +16,8 @@ export const Products = (props) => {
     slideTwo()
   };
 
-  let displayValOne = document.getElementById("range1");
-  let displayValTwo = document.getElementById("range2");
+  // let displayValOne = document.getElementById("range1");
+  // let displayValTwo = document.getElementById("range2");
   let minGap = 0;
   let sliderMaxValue = document.getElementById("slider-1");
 
@@ -26,7 +26,7 @@ export const Products = (props) => {
       setSlider1(slider2 - minGap)
       fillColor();
     }
-    displayValOne.textContent = slider1;
+    document.getElementById("range1").textContent = slider1;
   }
 
   function slideTwo() {
@@ -34,7 +34,7 @@ export const Products = (props) => {
       slider2 = slider1 + minGap;
       fillColor();
     }
-    displayValTwo.textContent = slider2;
+    document.getElementById("range2").textContent = slider2;
   }
 
   function fillColor() {
@@ -156,10 +156,10 @@ export const Products = (props) => {
               </div>
             </div>
             <hr />
-            <label for='priceRange'>Precios</label>
+            <label className='priceRange'>Precios</label>
             <br />
-            <div class="wrapper">
-              <div class="values">
+            <div className="wrapper">
+              <div className="values">
                 <span id="range1">
                   0
                 </span>
@@ -168,8 +168,8 @@ export const Products = (props) => {
                   100
                 </span>
               </div>
-              <div class="containerPrices">
-                <div class="slider-track" id='slider-track'></div>
+              <div className="containerPrices">
+                <div className="slider-track" id='slider-track'></div>
                 <input type="range" min="0" max="100" value={slider1} id="slider-1" onChange={(e) => {
                   setSlider1(e.target.value)
                   slideOne()
