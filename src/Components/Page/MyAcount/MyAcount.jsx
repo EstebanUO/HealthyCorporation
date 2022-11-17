@@ -46,16 +46,16 @@ export const MyAcount = (props) => {
           <div className='acount_content_all'>
             <div className='acount_content_tarjet'>
               <p  className='text_check'>Nombre</p>
-              <input className='input_acount' placeholder={valiLoginName} type="text" value="" />
+              <input className='input_acount' placeholder={valiLoginName} type="text" />
             </div><br />
             <div className='acount_content_tarjet'>
               <p  className='text_check'>Correo</p>
-              <input className='input_acount' placeholder={valiLoginEmail} type="text" value="" />
+              <input className='input_acount' placeholder={valiLoginEmail} type="text" />
             </div><br />
             <div className='acount_content_row'>
               <div className='acount_content_tarjet'>
                 <p  className='text_check'>Ingresa tu contraseña para guardar los cambios</p>
-                <input className='input_acount2' placeholder='************' minlength="8" type="password" value="" required />
+                <input className='input_acount2' placeholder='************' minLength="8" type="password" required />
               </div>
               <button className='btn_update' disabled>Actualizar </button>
             </div><br />
