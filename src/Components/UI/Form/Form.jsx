@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import emailjs from '@emailjs/browser';
 import { SlUser} from 'react-icons/sl';
 import {TfiEmail} from 'react-icons/tfi';
@@ -9,17 +9,28 @@ import {RiMessage2Line} from 'react-icons/ri';
 export const Form = () => {
   
 
+  /*------- Envia informacion al correo ----- */
   const sendEmail =(event) =>{
     event.preventDefault();
-
+    
     emailjs.sendForm('service_6dqf022','template_bb6l1lz',event.target,'mcEONDbylMN22nNiz')
     .then(resposive => console.log(resposive))
     .catch(error => console.log(error))
   }
 
+  /*----------- Reload Contacto ------------ */
+  const reloadForms = () =>{
+    // console.log("entrando....");
+    document.getElementById('reloadForm').reset();
+    // console.log("saliendo!!");
+  }
+  
   return (
     <div className='container_all'>
-      <form className="contact" onSubmit={sendEmail}>
+      <form className="contact" action='' onSubmit={ (e) => {
+          sendEmail(e);
+          reloadForms();
+        }} id="reloadForm">
             <div>
               <div className="container_1">
                 
@@ -52,7 +63,7 @@ export const Form = () => {
                   <i className='icons'><FiMapPin/></i>
                   <input type="text" className='nombres' name='user-surname' placeholder="Digite su direccion.."></input>
                 </div>
-               
+
                 <label>Asunto</label><br/>
                 <div className="bg-input">
                   <i className='icons'><RiMessage2Line/></i>
@@ -62,7 +73,7 @@ export const Form = () => {
                 <label>Mensaje</label>
                 <br />
                 <textarea className='reclamo' name='user-message' placeholder="Escribe tu mensaje...." required></textarea>
-               
+
                 <button className='boton'>Enviar</button>
 
               </div>
