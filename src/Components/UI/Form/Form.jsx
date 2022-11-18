@@ -56,7 +56,7 @@ export const Form = () => {
                 <label>Asunto</label><br/>
                 <div className="bg-input">
                   <i className='icons'><RiMessage2Line/></i>
-                  <input type="text"  className='nombres' name='user-surname' placeholder="Escribe tu asunto aqui.."></input>
+                  <input type="text"  className='nombres' name='user-asunto' placeholder="Escribe tu asunto aqui.."></input>
                 </div>
 
                 <label>Mensaje</label>
