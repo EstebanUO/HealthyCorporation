@@ -26,19 +26,19 @@ export const Form = () => {
                 <label>Nombres</label><br/>
                 <div className="bg-input">
                   <i className='icons'><SlUser/></i>
-                  <input type="text" className='nombres' name='user-name' placeholder="Digite sus respectivos nombre.."></input>
+                  <input type="text" className='nombres' name='user-name' placeholder="Digite sus respectivos nombre.." required></input>
                 </div>
 
                 <label>Apellidos</label><br/>
                 <div className="bg-input">
                   <i className='icons'><SlUser/></i>
-                  <input type="text" className='nombres' name='user-surname' placeholder="Digite sus respectivos apellido.."></input>
+                  <input type="text" className='nombres' name='user-surname' placeholder="Digite sus respectivos apellido.." required></input>
                 </div>
                 
                 <label>Correo</label><br/>
                 <div className="bg-input">
                   <i className='icons'><TfiEmail/></i>
-                  <input type="email" className='nombres'   name='user-email' placeholder="Digite su correo.."></input>
+                  <input type="email" className='nombres'   name='user-email' placeholder="Digite su correo.." required></input>
                 </div>
                 
                 <label>Teléfono </label><br/>
@@ -56,12 +56,12 @@ export const Form = () => {
                 <label>Asunto</label><br/>
                 <div className="bg-input">
                   <i className='icons'><RiMessage2Line/></i>
-                  <input type="text"  className='nombres' name='user-asunto' placeholder="Escribe tu asunto aqui.."></input>
+                  <input type="text"  className='nombres' name='user-asunto' placeholder="Escribe tu asunto aqui.." required></input>
                 </div>
 
                 <label>Mensaje</label>
                 <br />
-                <textarea className='reclamo' name='user-message' placeholder="Escribe tu mensaje...."></textarea>
+                <textarea className='reclamo' name='user-message' placeholder="Escribe tu mensaje...." required></textarea>
                
                 <button className='boton'>Enviar</button>
 

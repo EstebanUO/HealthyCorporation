@@ -120,9 +120,9 @@ export const NavBar = () => {
                 <div id='nav3' className='navbar2'>
                     <Link to='/register' onClick={handleClick} className={`links ${clicked ? 'active' : ''}`}><FaUserAlt /> Mi cuenta</Link>
                 </div>
-                <div id='nav4' className='navbar2'>
+                {/* <div id='nav4' className='navbar2'>
                     <Link to='/car' onClick={handleClick} className={`links ${clicked ? 'active' : ''}`}><FaShoppingCart />{counter}</Link>
-                </div>
+                </div> */}
             </div>
         </div>
     </div>
