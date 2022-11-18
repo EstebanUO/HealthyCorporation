@@ -24,6 +24,7 @@
     "emailjs-com": "^3.2.0",
     "firebase": "^9.12.1",
     "framer-motion": "^7.3.5",
+    "i": "^0.3.7",
     "jquery": "^3.6.1",
     "mdb-react-ui-kit": "^4.2.0",
     "react": "^18.2.0",

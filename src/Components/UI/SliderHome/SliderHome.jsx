@@ -11,10 +11,26 @@ const SliderHome = () => {
 
   React.useEffect(() => {
     axios.get(baseURL).then((response) => {
-      setimg(response.data);
+      setimg(response.data); 
 
     });
   }, []);
+
+  // --------------------- compra  ----------------------------
+
+  /*no eliminar este usestate por que se cae la pagina*/
+  const [products_3, setProducts_3] = useState([]);
+  /*/////////////////////////////////////////////////*/
+  let validDatos_2 = (localStorage.getItem("product"));
+  const add_2 = (e) => {
+      setProducts_3(products_3 => products_3.concat(e.target.value)) 
+     
+      validDatos_2 === null ? validDatos_2=[] : validDatos_2=JSON.parse(validDatos_2)
+      localStorage.setItem('product', JSON.stringify(validDatos_2))
+
+      JSON.stringify(localStorage.setItem("product", e.target.value))
+      console.log(e.target.value)
+  }
 
   return (
     <>
@@ -33,7 +49,7 @@ const SliderHome = () => {
                   <p className="text-title">{data.nombre}</p>
 
                   <p className="text-body"><b>Precio:</b> {data.price}</p>
-                  <Link to='/compra'><button className="card-button">Ver más</button></Link>
+                  <Link to='/compra'><button className="card-button"  onClick={(e) => { add_2(e) }} value={data.id}>Ver más</button></Link>
                 </div>
               </div>
             </motion.div> 

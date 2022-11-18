@@ -7,7 +7,7 @@ import { BsEyeFill, BsEyeSlashFill } from "react-icons/bs";
 import { FaUserAlt, FaLock } from "react-icons/fa";
 
 export const Register = (props) => {
-
+ 
 
   //validaciones username
   useEffect(() => {
