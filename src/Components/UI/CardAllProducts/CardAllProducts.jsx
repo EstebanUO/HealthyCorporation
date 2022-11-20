@@ -39,18 +39,14 @@ export const CardAllProducts = ({data}) => {
   }
 
 
-<<<<<<< HEAD
-  const baseURL = "https://api-products-healthy.herokuapp.com/api/healthyapp";
-  useEffect(() => {
-    axios.get(baseURL).then((response) => {
-      setProducts(response.data)
-=======
+
+
 
   // const baseURL = "https://api-products-healthy.herokuapp.com/api/healthyapp";
   // useEffect(() => {
   //   axios.get(baseURL).then((response) => {
   //     setProducts(response.data)
->>>>>>> 7fed177ed49ffb385cb60656d715c62e6820237b
+
       
   //   });
   // }, []);
