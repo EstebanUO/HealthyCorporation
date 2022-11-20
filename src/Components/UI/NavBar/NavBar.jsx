@@ -1,13 +1,10 @@
-import { React, useState, useEffect } from 'react'
-import { FaUserAlt, FaShoppingCart, FaHeartbeat, FaTags } from "react-icons/fa";
+import {React, useState,useEffect} from 'react'
+import { FaUserAlt,FaShoppingCart,FaHeartbeat,FaTags } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 import logo from '../../Image/logo.png';
 import './menuHam.css'
 
 export const NavBar = () => {
-
-
-
 
     // useEffect(() => {   
     //     console.log(props.counter_h);
@@ -61,13 +58,13 @@ export const NavBar = () => {
     }
 
     useEffect(() => {
-        if (clickMenu === false) {
+        if (clickMenu==false) {
             console.log("menu hamburguesa guardado");
             console.log(clickMenu);
             // nav2.classList.toggle("navbar4");
             // nav3.classList.toggle("navbar4");
             // nav4.classList.toggle("navbar4");
-        } else if (clickMenu == true) {
+        }else if(clickMenu==true){
             nav2.classList.toggle("navbar2");
             nav3.classList.toggle("navbar2");
             nav4.classList.toggle("navbar2");
