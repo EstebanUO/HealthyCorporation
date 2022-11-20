@@ -9,6 +9,16 @@ body {
   width: 100%;
 }
 
+/*search*/
+.search_content2 {
+  display: grid;
+  grid-template-columns: 20rem 20rem 20rem;
+}
+
+.text_nav {
+  color: #000;
+}
+
 img {
   border-radius: 0.6rem;
 }
@@ -226,7 +236,7 @@ header img {
 .navbar {
   display: flex;
   align-items: baseline;
-  justify-content: space-evenly;
+  justify-content:space-between;
   background-color: #44D2F2;
   display: none;
   position: fixed;
@@ -242,6 +252,7 @@ header img {
 #logo {
   width: 14rem;
   animation: logo 1s forwards;
+  margin-left: 4rem;
 }
 
 @keyframes logo {
@@ -281,7 +292,7 @@ header img {
 .buscar {
   width: 26rem;
   border-radius: 5px;
-  border: none;
+  border: solid 1px gray;
 }
 
 .buscar:focus{
@@ -299,10 +310,12 @@ header img {
 .links {
   text-decoration: none;
   color: #000000;
+  transition: all 200ms ease-in;
 }
 
 .links:hover {
   color: #fff;
+  transition: all 200ms ease-out;
 }
 
 .ubicacion {
@@ -315,6 +328,7 @@ header img {
 
 .column_nav_content{
   display: flex;
+  margin-right: 4rem;
 }
 
 /*---------------- Formulario Registro -------------------*/
@@ -526,9 +540,7 @@ input[type="checkbox"] {
   margin-left: 0.7rem;
 }
 
-.links {
-  text-decoration: none;
-}
+
 
 .linkLog {
   color: #fff;
@@ -1354,6 +1366,7 @@ a {
   background: #f3f1f1;
   border-radius: 1rem;
   width: 15rem;
+  margin-bottom: 3rem;
   height: 30rem;
 }
 
@@ -1395,7 +1408,7 @@ hr {
 .container-Orden-Productos{
   display: flex;
   align-items: baseline;
-  width: 84%;
+  width: 95%;
   height: 2rem;
   justify-content: flex-end;
 }
@@ -1434,6 +1447,7 @@ hr {
   display: grid;
   grid-template-columns: 20rem 20rem 20rem;
   justify-items: end;
+  margin-top: 1.5rem;
 }
 
 .imgAllProduct{

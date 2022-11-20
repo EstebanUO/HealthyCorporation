@@ -56,7 +56,7 @@ function App() {
 
   const getApi = () => {
     axios.get('https://apiprojectmain.herokuapp.com/api/users')
-      .then(function (response) {
+      .then(function (response) { 
         // handle success
         response.data.map(data => {
 
@@ -206,7 +206,6 @@ function App() {
       setCity("")
       setDetails("")
       setTypeHome("")
-
   }
 
 /* ----------------------------------------------------------------------- */
