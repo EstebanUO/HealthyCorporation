@@ -107,9 +107,9 @@ export const NavBar = () => {
             <div>
                 <Link to='/'><img src={logo} alt="logo" id='logo' /></Link>
             </div>
-             <div  className='navbar3'>
+             {/* <div  className='navbar3'>
                 <input type="text" placeholder='Buscar...' className='buscar' /><button className='buscar2'><FaSistrix /></button>
-            </div> 
+            </div>  */}
             <div className='bars__menu'onClick={switchShown2}>
                 <span className="line1__bars-menu"></span>
                 <span className="line2__bars-menu"></span>
@@ -117,6 +117,9 @@ export const NavBar = () => {
             </div>
             {/* <input type="checkbox" id='menu'className='menuInput'/> */}
             <div className="column_nav_content">
+                <div id='nav2' className='navbar2'>
+                    <Link to="/products" onClick={handleClick} className="links"><FaTags /> Productos </Link>
+                </div>
                 <div id='nav2' className='navbar2'>
                     <Link to="/lista-deseos" onClick={handleClick} className={`links ${clicked ? 'active' : ''}`}><FaHeartbeat /> Lista de Deseos </Link>
                 </div>
@@ -128,6 +131,6 @@ export const NavBar = () => {
                 </div>
             </div>
         </div>
-        </>
+        </div>
     )
 }
