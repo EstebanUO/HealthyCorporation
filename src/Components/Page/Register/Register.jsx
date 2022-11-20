@@ -7,7 +7,7 @@ import { BsEyeFill, BsEyeSlashFill } from "react-icons/bs";
 import { FaUserAlt, FaLock } from "react-icons/fa";
 
 export const Register = (props) => {
-
+ 
 
   //validaciones username
   useEffect(() => {
@@ -67,29 +67,29 @@ export const Register = (props) => {
           <form className="formulario2" onSubmit={props.postApi}>
             <h1 className="titleReg">Registro</h1>
             <div className="formularioReg">
-              <p className='pvaliRegister' id='valiExiste'></p>
-              <label for="inputUser" class="labelsReg">Nobre de usuario</label>
+              <p className='pvaliRegister' id='valiExiste' />
+              <label className="labelsReg">Nobre de usuario</label>
               <FaUserAlt className='iconUserReg' />
-              <input minLength="3" maxLength="20" value={props.usernameRegister} onChange={props.onChangeusernameRegister} name="name" type="text" class="form-input" placeholder="User name" autocomplete="off" required />
-              <p className='pvaliRegister' id='txtvalidUsername'></p>
+              <input minLength="3" maxLength="20" value={props.usernameRegister} onChange={props.onChangeusernameRegister} name="name" type="text" className="form-input" placeholder="User name" autoComplete="off" required />
+              <p className='pvaliRegister' id='txtvalidUsername' />
               <div> 
-                <label for="exampleInputEmail1" class="labelsReg"><br />Correo</label>
+                <label className="labelsReg"><br />Correo</label>
                 <FaUserAlt className='iconUserEmailReg' />
-                <input value={props.emailRegister} onChange={props.onChangeemailRegister} name="correo" type="email" class="form-input" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ejemplo@healhty.com" autocomplete="off" required />
+                <input value={props.emailRegister} onChange={props.onChangeemailRegister} name="correo" type="email" className="form-input" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ejemplo@healhty.com" autoComplete="off" required />
               </div>
-              <p className='pvaliRegister' id='txtvalidEmail'></p>
+              <p className='pvaliRegister' id='txtvalidEmail' />
               <div>
-                <label for="inputPassword" class="labelsReg"><br />Contraseña</label>
+                <label className="labelsReg"><br />Contraseña</label>
                 <FaLock className='iconPassReg' />
-                <input minLength="8" maxLength="20" value={props.passwordRegister} onChange={props.onChangepasswordRegister} name="password" type="password" class="form-input" placeholder="************" />
+                <input minLength="8" maxLength="20" value={props.passwordRegister} onChange={props.onChangepasswordRegister} name="password" type="password" className="form-input" placeholder="************" />
               </div>
               <div>
-                <label for="inputPassword" class="labelsReg"><br />Confirmar contraseña</label>
+                <label className="labelsReg"><br />Confirmar contraseña</label>
                 <FaLock className='iconPassReg2' />
                 <button className='button-show' onClick={props.switchShown}>{props.shown ? <BsEyeFill /> : <BsEyeSlashFill />}</button>
-                <input minLength="8" maxLength="20" value={props.confrimPasword} onChange={props.onChangeconfrimPasword} name="password" type={props.shown ? 'text' : 'password'} class="form-input" placeholder="************" />
+                <input minLength="8" maxLength="20" value={props.confrimPasword} onChange={props.onChangeconfrimPasword} name="password" type={props.shown ? 'text' : 'password'} className="form-input" placeholder="************" />
               </div><br />
-              <p className='pvaliRegister' id='txtvalidPassword'></p>
+              <p className='pvaliRegister' id='txtvalidPassword' />
               <br />
               <div className="checkTyC">
                 <input type="checkbox" required /><p>Haz click aqui para aceptar nuestros<br /><b><p className='Terms_and_cont' onClick={onSee3}>Terminos y condiciones.</p></b> </p>
@@ -98,7 +98,7 @@ export const Register = (props) => {
               {props.alertConexion ? <Alert variant="filled" severity="error">Sin Conexión!</Alert> : null}
 
               <div className="submitReg">
-                <input disabled id='buttonRegister' value="Registrarse" type="submit" class="submitReg2" />
+                <input disabled id='buttonRegister' value="Registrarse" type="submit" className="submitReg2" />
               </div>
             </div>
           </form>
@@ -148,7 +148,7 @@ export const Register = (props) => {
                 Los datos ingresados por usuario o en el caso de requerir una validación de los pedidos no serán entregados a terceros, salvo que deba ser revelada en cumplimiento a una orden judicial o requerimientos legales.</p>
 
               <div className='acep_Terms'>
-                <button class="submitReg2" onClick={onBlock3}>Aceptar y continuar</button>
+                <button className="submitReg2" onClick={onBlock3}>Aceptar y continuar</button>
               </div>
             </div>
           </div>

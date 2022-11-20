@@ -41,13 +41,13 @@ export const Login = (props) => {
           <form className="formulario3" onSubmit={props.ClickLogin}>
             <h1 className="titleReg">Iniciar Sesion</h1>
             <div className="formularioLog">
-              <label for="exampleInputEmail1" class="labelsReg"><br />Correo</label>
+              <label className="labelsReg"><br />Correo</label>
               <FaUserAlt className='iconUser'/>
-              <input onChange={props.onChangeUserLogin} value={props.userLogin} name="correo" type="email" class="form-input" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ejemplo@healthy.com" autocomplete="off" required />
-              <label for="inputPassword" class="labelsReg"><br />Contraseña</label>
+              <input onChange={props.onChangeUserLogin} value={props.userLogin} name="correo" type="email" className="form-input" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ejemplo@healthy.com" autoComplete="off" required />
+              <label className="labelsReg"><br />Contraseña</label>
               <FaKey className='iconPass'/>
               <div className='input-password'>
-                <input onChange={props.onChangePasswordLogin} value={props.passwordUser} name="password" type={props.shown2 ? 'text' : 'password'} class="form-input" id="inputPassword" placeholder="************" />
+                <input onChange={props.onChangePasswordLogin} value={props.passwordUser} name="password" type={props.shown2 ? 'text' : 'password'} className="form-input" id="inputPassword" placeholder="************" />
               </div>
               <button className='button-show2' onClick={props.switchShown2}>{props.shown2 ? <BsEyeFill /> : <BsEyeSlashFill />}</button>
               <p className="forgetPass"><Link to="/recoverPassword" >¿Haz olvidado tu contraseña?</Link></p>
@@ -55,7 +55,7 @@ export const Login = (props) => {
               {props.alertUserLoginPassword? <Alert severity="error"><AlertTitle>Error</AlertTitle>contraseña o email incorrectos — <strong>verifica!</strong></Alert>:null}
               {props.alertConexionLogin? <Alert severity="warning"><AlertTitle>warning</AlertTitle>Sin conexion — <strong>conectate a una red!</strong></Alert>:<p></p>}
               <div className="submitReg">
-                <input  type="submit" value={"Iniciar sesion"} class="submitReg2"/>
+                <input  type="submit" value={"Iniciar sesion"} className="submitReg2"/>
               </div>
             </div>
           </form>

@@ -42,7 +42,7 @@ export const Direction = (props) => {
             <div className='acount_content_direction'>
               <p className='text_check'>Dirección</p>
               <input className='input_acount'value={props.direction} onChange={(e)=>{props.setDirection(e.target.value)}}  placeholder={direction_2.direccion}autocomplete="off" type="text"  required />
-            </div><br />
+            </div><br /> 
             <div className='acount_content_row'>
               <div className='acount_content_direction2'>
                 <p className='text_check'>Ingresa tu ciudad</p>

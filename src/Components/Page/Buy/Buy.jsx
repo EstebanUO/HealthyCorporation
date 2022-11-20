@@ -6,7 +6,7 @@ import { Card } from '../../UI/Card/Card';
 import ReactImageMagnify from 'react-image-magnify';
 import back from '../../Image/x.png';
 import Swal from 'sweetalert2';
-import watchImg300 from '../../Image/assects/acetaminofen300.jpg';
+// import watchImg300 from '../../Image/assects/acetaminofen300.jpg';
 import axios from "axios"
 import './buy.css'
 // import watchImg1200 from '../../Image/assects/acetaminofen.jpg';
@@ -105,6 +105,12 @@ export const Buy = (props) => {
 
     /*----------------------------------------------------------------------*/
 
+    const formatoMexico = (number) => {
+        const exp = /(\d)(?=(\d{3})+(?!\d))/g;
+        const rep = '$1,';
+        return number.toString().replace(exp,rep);
+      }
+
     return (
         <>
             <Header valiLoginAdmin={props.valiLoginAdmin} />
@@ -113,9 +119,11 @@ export const Buy = (props) => {
                     <div className='imgBuy'>
                         <ReactImageMagnify {...{
                             smallImage: {
-                                alt: 'Wristwatch by Ted Baker London',
-                                isFluidWidth: true,
-                                src: watchImg300,
+                                alt: '...Cargando',
+                                isFluidWidth: false,
+                                src: "https://api-products-healthy.herokuapp.com" + Id.imagen,
+                                width: 300,
+                                height: 200,
                                 
                             },
                             largeImage: {

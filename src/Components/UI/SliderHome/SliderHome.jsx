@@ -11,10 +11,26 @@ const SliderHome = () => {
 
   React.useEffect(() => {
     axios.get(baseURL).then((response) => {
-      setimg(response.data);
+      setimg(response.data); 
 
     });
   }, []);
+
+  // --------------------- compra  ----------------------------
+
+  /*no eliminar este usestate por que se cae la pagina*/
+  const [products_3, setProducts_3] = useState([]);
+  /*/////////////////////////////////////////////////*/
+  let validDatos_2 = (localStorage.getItem("product"));
+  const add_2 = (e) => {
+      setProducts_3(products_3 => products_3.concat(e.target.value)) 
+     
+      validDatos_2 === null ? validDatos_2=[] : validDatos_2=JSON.parse(validDatos_2)
+      localStorage.setItem('product', JSON.stringify(validDatos_2))
+
+      JSON.stringify(localStorage.setItem("product", e.target.value))
+      console.log(e.target.value)
+  }
 
   return (
     <>
@@ -25,15 +41,15 @@ const SliderHome = () => {
           {img.map((data) => (
           
             <motion.div key={data.id} className='item'>
-              <div class="card">
-                <div class="card-img">
+              <div className="card">
+                <div className="card-img">
                   <img className='item-image' src={"https://api-products-healthy.herokuapp.com"+data.imagen} alt="Imagen producto" />
                 </div>
-                <div class="card-info">
-                  <p class="text-title">{data.nombre}</p>
+                <div className="card-info">
+                  <p className="text-title">{data.nombre}</p>
 
-                  <p class="text-body"><b>Precio:</b> {data.price}</p>
-                  <Link to='/compra'><button class="card-button">Ver más</button></Link>
+                  <p className="text-body"><b>Precio:</b> {data.price}</p>
+                  <Link to='/compra'><button className="card-button"  onClick={(e) => { add_2(e) }} value={data.id}>Ver más</button></Link>
                 </div>
               </div>
             </motion.div> 

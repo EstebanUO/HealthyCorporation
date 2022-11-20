@@ -124,7 +124,6 @@ function App() {
    
     axios.get('https://apiprojectmain.herokuapp.com/api/users')
       .then(function (response) {
-        
         // handle success
         response.data.map(async (data) => {
           
@@ -284,7 +283,6 @@ function App() {
       setCity("")
       setDetails("")
       setTypeHome("")
-
   }
 
 /* ----------------------------------------------------------------------- */

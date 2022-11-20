@@ -4,11 +4,11 @@ import { FaShoppingCart } from "react-icons/fa";
 // import { MdAttachMoney } from "react-icons/Md";
 import Swal from 'sweetalert2'
 import axios from "axios"
+// import { keyboard } from "@testing-library/user-event/dist/keyboard";
 
-export const CardAllProducts = (props) => {
-  const [products, setProducts] = useState([])
+export const CardAllProducts = ({data}) => {
+  // const [products, setProducts] = useState([])
   const [products_2, setProducts_2] = useState([])
-
 
   let validDatos = (localStorage.getItem("car"))
   // let array = JSON.parse(localStorage.getItem("car"))
@@ -39,13 +39,21 @@ export const CardAllProducts = (props) => {
   }
 
 
+<<<<<<< HEAD
   const baseURL = "https://api-products-healthy.herokuapp.com/api/healthyapp";
   useEffect(() => {
     axios.get(baseURL).then((response) => {
       setProducts(response.data)
+=======
+
+  // const baseURL = "https://api-products-healthy.herokuapp.com/api/healthyapp";
+  // useEffect(() => {
+  //   axios.get(baseURL).then((response) => {
+  //     setProducts(response.data)
+>>>>>>> 7fed177ed49ffb385cb60656d715c62e6820237b
       
-    });
-  }, []);
+  //   });
+  // }, []);
 
 
   // --------------------- compra  ----------------------------
@@ -73,10 +81,10 @@ export const CardAllProducts = (props) => {
   return (
     <div className='content_all_Product'>
       <div className='card_all_product'>
-        {products.map((data) => (
+        {/* {products.map((data, key) => ( */}
           <div className='column_all_products'>
             <div className='imgProduct_'>
-              <img className='imgAllProduct'  src={"https://api-products-healthy.herokuapp.com" + data.imagen} alt="Producto imagen" />
+              <img className='imgAllProduct' src={"https://api-products-healthy.herokuapp.com"+data.imagen}  alt="Producto imagen" />
             </div>
             <div className='padding_product'>
               <div>
@@ -103,8 +111,8 @@ export const CardAllProducts = (props) => {
               </button></Link>
             </div>
           </div>
-        ))
-        }
+        {/* ))
+        } */}
       </div>
     </div>
   )

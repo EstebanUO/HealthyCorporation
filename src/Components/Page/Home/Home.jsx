@@ -5,8 +5,6 @@ import { Categories } from '../../UI/Categories/Categories';
 import { Marks } from '../../UI/Marks/Marks';
 import Slider2 from '../../UI/js/SliderCopy';
 import Slider from '../../UI/SliderHome/SliderHome';
-import { Card } from '../../UI/Card/Card';
-import { FaShoppingCart } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import swal from 'sweetalert';
 import './Home.css';
@@ -51,79 +49,79 @@ export const Home = (props) => {
     <div>
       <Header valiLoginAdmin={props.valiLoginAdmin} />
       <div>
-        <Slider2 />
+          <Slider2 />
+          <div>
+            <div className="Content_categorias">
+              <h1 className='title-home2'>Categorías</h1>
+              <Categories />
+            </div>
+            <div className='products-home'>
+              <h1 className='title-home'> Productos más vendidos</h1>
+              <Slider />
+            </div>
+          </div>
         <div>
-        <div className="Content_categorias">
-          <h1 className='title-home2'>Categorías</h1>
-          <Categories />
+          <div className='column_all_product'>
+            <h1 className='text_all_product'>Bienestar</h1>
+            <div className='content_all_product'>
+              <img className='select_product1' src={img1} alt="imagen producto" />
+              <img className='select_product2' src={img2} alt="imagen producto" />
+              <img className='select_product3' src={img3} alt="imagen producto" />
+              <Link to="/products"><button className='btn_all'>
+                Ver más <img className='flecha' src={flecha} alt="flecha" />
+              </button></Link>
+            </div>
+          </div>
+          <div className='column_all_product'>
+            <h1 className='text_all_product2'>Cuidado</h1>
+            <div className='content_all_product2'>
+              <img className='select_product1' src={img4} alt="imagen producto" />
+              <img className='select_product2' src={img5} alt="imagen producto" />
+              <img className='select_product3' src={img6} alt="imagen producto" />
+              <Link to="/products"><button className='btn_all'>
+                Ver más <img className='flecha' src={flecha} alt="flecha" />
+              </button></Link>
+            </div>
+          </div>
+          <div className='column_all_product'>
+            <h1 className='text_all_product'>Dermatología</h1>
+            <div className='content_all_product'>
+              <img className='select_product1' src={img7} alt="imagen producto" />
+              <img className='select_product2' src={img8} alt="imagen producto" />
+              <img className='select_product3' src={img9} alt="imagen producto" />
+              <Link to="/products"><button className='btn_all'>
+                Ver más <img className='flecha' src={flecha} alt="flecha" />
+              </button></Link>
+            </div>
+          </div>
+          <div className='column_all_product'>
+            <h1 className='text_all_product2'>Salud</h1>
+            <div className='content_all_product2'>
+              <img className='select_product1' src={img10} alt="imagen producto" />
+              <img className='select_product2' src={img11} alt="imagen producto" />
+              <img className='select_product3' src={img12} alt="imagen producto" />
+              <Link to="/products"><button className='btn_all'>
+                Ver más <img className='flecha' src={flecha} alt="flecha" />
+              </button></Link>
+            </div>
+          </div>
+          <div className='column_all_product'>
+            <h1 className='text_all_product'>Medicamentos</h1>
+            <div className='content_all_product'>
+              <img className='select_product1' src={img13} alt="imagen producto" />
+              <img className='select_product2' src={img14} alt="imagen producto" />
+              <img className='select_product3' src={img15} alt="imagen producto" />
+              <Link to="/products"><button className='btn_all'>
+                Ver más <img className='flecha' src={flecha} alt="flecha" />
+              </button></Link>
+            </div>
+          </div>
         </div>
-        <div className='products-home'>
-          <h1 className='title-home'> Productos más vendidos</h1>
-          <Slider />
-        </div>
+        <Marks />
+        <br /><br />
+        {/* <Card/> */}
+        <Footer />
       </div>
-      <div>
-        <div className='column_all_product'>
-          <h1 className='text_all_product'>Bienestar</h1>
-          <div className='content_all_product'>
-            <img className='select_product1' src={img1} alt="imagen producto" />
-            <img className='select_product2' src={img2} alt="imagen producto" />
-            <img className='select_product3' src={img3} alt="imagen producto" />
-            <Link to="/products"><button className='btn_all'>
-              Ver más <img className='flecha' src={flecha} alt="flecha" />
-            </button></Link>
-          </div>
-        </div>
-        <div className='column_all_product'>
-          <h1 className='text_all_product2'>Cuidado</h1>
-          <div className='content_all_product2'>
-            <img className='select_product1' src={img4} alt="imagen producto" />
-            <img className='select_product2' src={img5} alt="imagen producto" />
-            <img className='select_product3' src={img6} alt="imagen producto" />
-            <Link to="/products"><button className='btn_all'>
-              Ver más <img className='flecha' src={flecha} alt="flecha" />
-            </button></Link>
-          </div>
-        </div>
-        <div className='column_all_product'>
-          <h1 className='text_all_product'>Dermatología</h1>
-          <div className='content_all_product'>
-            <img className='select_product1' src={img7} alt="imagen producto" />
-            <img className='select_product2' src={img8} alt="imagen producto" />
-            <img className='select_product3' src={img9} alt="imagen producto" />
-            <Link to="/products"><button className='btn_all'>
-              Ver más <img className='flecha' src={flecha} alt="flecha" />
-            </button></Link>
-          </div>
-        </div>
-        <div className='column_all_product'>
-          <h1 className='text_all_product2'>Salud</h1>
-          <div className='content_all_product2'>
-            <img className='select_product1' src={img10} alt="imagen producto" />
-            <img className='select_product2' src={img11} alt="imagen producto" />
-            <img className='select_product3' src={img12} alt="imagen producto" />
-            <Link to="/products"><button className='btn_all'>
-              Ver más <img className='flecha' src={flecha} alt="flecha" />
-            </button></Link>
-          </div>
-        </div>
-        <div className='column_all_product'>
-          <h1 className='text_all_product'>Medicamentos</h1>
-          <div className='content_all_product'>
-            <img className='select_product1' src={img13} alt="imagen producto" />
-            <img className='select_product2' src={img14} alt="imagen producto" />
-            <img className='select_product3' src={img15} alt="imagen producto" />
-            <Link to="/products"><button className='btn_all'>
-              Ver más <img className='flecha' src={flecha} alt="flecha" />
-            </button></Link>
-          </div>
-        </div>
-      </div>
-      <Marks />
-      <br /><br />
-      {/* <Card/> */}
-      <Footer />
-    </div>
     </div>
   )
 }

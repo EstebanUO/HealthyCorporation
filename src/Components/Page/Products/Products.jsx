@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Header } from '../Layout/Header/Header';
 import { Footer } from '../Layout/Footer/Footer';
 // import Slider from '../../UI/js/Slider';
-import { CardAllProducts } from '../../UI/CardAllProducts/CardAllProducts';
-import { FaArrowCircleDown, FaArrowCircleUp, FaSlidersH, FaTh, FaThList } from "react-icons/fa";
+// import { CardAllProducts } from '../../UI/CardAllProducts/CardAllProducts';
+import { FaArrowCircleDown, FaArrowCircleUp, FaSlidersH } from "react-icons/fa";
 import { Categories } from '../../UI/Categories/Categories';
+import { Character } from '../../UI/Character/Character';
+import axios from "axios"
 
 export const Products = (props) => {
 
@@ -16,8 +18,8 @@ export const Products = (props) => {
     slideTwo()
   };
 
-  let displayValOne = document.getElementById("range1");
-  let displayValTwo = document.getElementById("range2");
+  // let displayValOne = document.getElementById("range1");
+  // let displayValTwo = document.getElementById("range2");
   let minGap = 0;
   let sliderMaxValue = document.getElementById("slider-1");
 
@@ -26,7 +28,7 @@ export const Products = (props) => {
       setSlider1(slider2 - minGap)
       fillColor();
     }
-    displayValOne.textContent = slider1;
+    document.getElementById("range1").textContent = slider1;
   }
 
   function slideTwo() {
@@ -34,7 +36,7 @@ export const Products = (props) => {
       slider2 = slider1 + minGap;
       fillColor();
     }
-    displayValTwo.textContent = slider2;
+    document.getElementById("range2").textContent = slider2;
   }
 
   function fillColor() {
@@ -57,18 +59,18 @@ export const Products = (props) => {
     event.preventDefault()
   };
 
-  function filterFunction(){
+  function filterFunction() {
     if (shown === false) {
       document.querySelector(".subCategorias").style.display = "flex";
-    }else if(shown === true){
+    } else if (shown === true) {
       document.querySelector(".subCategorias").style.display = "none";
     }
   }
 
-  function filterFunction2(){
+  function filterFunction2() {
     if (shown2 === false) {
       document.querySelector(".subCategorias0").style.display = "flex";
-    }else if(shown2 === true){
+    } else if (shown2 == true) {
       document.querySelector(".subCategorias0").style.display = "none";
     }
   }
@@ -79,7 +81,28 @@ export const Products = (props) => {
     event.preventDefault()
   };
 
-  // const [counter_h, setcounter_h] = useState([0])
+  /*------------------- buscador ----------------------------- */
+  const [texto, setTexto] = useState('');
+  const inputLoad = (event) => {
+    setTexto(event.target.value)
+    console.log(texto);
+  }
+
+  const [characters, setCharacters] = useState([])
+
+  useEffect(() => {
+    const URL = 'https://api-products-healthy.herokuapp.com/api/healthyapp'
+
+    const asyncFetchData = async () => {
+      const res = await fetch(URL)
+      const data = await res.json()
+      setCharacters(data)
+      // alert(data)
+    }
+    asyncFetchData();
+  }, [])
+
+  const inputCharacters = characters.filter((character) => character.nombre.toLowerCase().includes(texto.toLowerCase()))
 
   return (
     <div>
@@ -88,6 +111,9 @@ export const Products = (props) => {
       <Categories />
       <br /><br />
       <div className='container-Orden-Productos'>
+        <div className='navba__'>
+          <input type="search" placeholder='Buscar producto' className='buscar' value={texto} onChange={inputLoad} />
+        </div>
         <p className='productsEncontrados'>6363 | Productos Encontrados</p>|
         <p className='productsEncontrados'>Ordenar por:</p>
         <select name="" id="selectPrecios">
@@ -106,7 +132,7 @@ export const Products = (props) => {
           </div>
           <div className='containerFiltros'>
             <div className='filterCategoria'>
-              <label onClick={switchShown} className='categIcon' role="button">Categoría  {shown? <FaArrowCircleUp onClick={switchShown} className='iconArrow'/>:<FaArrowCircleDown onClick={switchShown} className='iconArrow'/>}</label>
+              <label onClick={switchShown} className='categIcon' role="button">Categoría  {shown ? <FaArrowCircleUp onClick={switchShown} className='iconArrow' /> : <FaArrowCircleDown onClick={switchShown} className='iconArrow' />}</label>
               <div className='subCategorias' id='subCategorias'>
                 <div className='subCategorias2'>
                   <input type="checkbox" /><p>Medicamentos</p>
@@ -156,10 +182,10 @@ export const Products = (props) => {
               </div>
             </div>
             <hr />
-            <label for='priceRange'>Precios</label>
+            <label className='priceRange'>Precios</label>
             <br />
-            <div class="wrapper">
-              <div class="values">
+            <div className="wrapper">
+              <div className="values">
                 <span id="range1">
                   0
                 </span>
@@ -168,8 +194,8 @@ export const Products = (props) => {
                   100
                 </span>
               </div>
-              <div class="containerPrices">
-                <div class="slider-track" id='slider-track'></div>
+              <div className="containerPrices">
+                <div className="slider-track" id='slider-track'></div>
                 <input type="range" min="0" max="100" value={slider1} id="slider-1" onChange={(e) => {
                   setSlider1(e.target.value)
                   slideOne()
@@ -183,7 +209,9 @@ export const Products = (props) => {
 
           </div>
         </div>
-        <CardAllProducts />
+
+
+        <Character characters={inputCharacters} />
       </div>
       <Footer />
     </div>
