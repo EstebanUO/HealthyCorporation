@@ -80,35 +80,22 @@ export const Amount = (props) => {
         })
     }
 
-    const [products, setProducts] = useState([null])
-    const [Car, setCar] = useState([])
-    
-    let arr = JSON.parse(localStorage.getItem("car"))
-  
 
-    useEffect(() => {
-        setCar(arr);
-    }, [arr])
-    
-
-    useEffect(() => {
-        alert(products)
-    }, [products])
 
 
     // let car_2 = Car[2]
 
-    for (let index = 0; index < Car.length; index++) {
-        const baseURL = `https://api-products-healthy.herokuapp.com/api/healthyapp/${Car[index]}`;
-            axios.get(baseURL).then((response) => { 
-                if(products === null){
-                    setProducts(response.data)
+    // for (let index = 0; index < Car.length; index++) {
+    //     const baseURL = `https://api-products-healthy.herokuapp.com/api/healthyapp/${Car[index]}`;
+    //         axios.get(baseURL).then((response) => { 
+    //             if(products === null){
+    //                 setProducts(response.data)
 
-                } else if (products !== null){
-                        setProducts(response.data.concat(products))
-                }
-            });
-    }
+    //             } else if (products !== null){
+    //                     setProducts(response.data.concat(products))
+    //             }
+    //         });
+    // }
 
  
 
@@ -121,7 +108,7 @@ export const Amount = (props) => {
                     <div className='back_up_'><Link to="/products"><img className='img_up2' src={back} alt="atras" /><p className='back'>Atras</p></Link>
                     </div></nav>
                 <div className='product'>
-                     {products.map((data) => (
+                     {/* {props.productos.map((data) => ( */}
                         <> <div  className="product_all">
                             <div>
                                 <img className='product_img'  alt="imagen prodcuto" />
@@ -143,7 +130,7 @@ export const Amount = (props) => {
                                 <img onClick={delectt} className='delect_producto' src={delect} alt="eiminar producto" />
                             </div>
                         </div> <br /></>
-                    ))}
+                    {/* ))} */}
 
 
 

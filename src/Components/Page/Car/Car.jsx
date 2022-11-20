@@ -5,7 +5,7 @@ import { Amount } from '../../UI/Amount/Amount';
 export const Car = (props) => {
   return (
     <div>
-        <Amount valiLoginAdmin={props.valiLoginAdmin}/>
+        <Amount productos={props.productos} valiLoginAdmin={props.valiLoginAdmin}/>
     </div>
   )
 }

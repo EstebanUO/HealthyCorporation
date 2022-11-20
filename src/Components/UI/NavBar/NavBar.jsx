@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import logo from '../../Image/logo.png';
 import './menuHam.css'
 
-export const NavBar = () => {
+export const NavBar = (props) => {
 
 
     
@@ -25,16 +25,11 @@ export const NavBar = () => {
             console.log(Counter2)
         } else if(Counter2!=null){
             setCounter(Counter2.length)
-            console.log(Counter2.length)
         }
     }, [Counter2])
     
     /*-------------------------- Funcion del menu ---------------------------- */
-    const [clicked, setclicked] = useState(false)
 
-    const handleClick = () => {
-        setclicked(!clicked)
-    }
 
     /*---------------------------------- Menu Hamburguesa -------------------------------------- */
     const [clickMenu, setClickMenu] = useState(false)
@@ -61,13 +56,13 @@ export const NavBar = () => {
     }
 
     useEffect(() => {
-        if (clickMenu==false) {
+        if (clickMenu===false) {
             console.log("menu hamburguesa guardado");
             console.log(clickMenu);
             // nav2.classList.toggle("navbar4");
             // nav3.classList.toggle("navbar4");
             // nav4.classList.toggle("navbar4");
-        }else if(clickMenu==true){
+        }else if(clickMenu===true){
             nav2.classList.toggle("navbar2");
             nav3.classList.toggle("navbar2");
             nav4.classList.toggle("navbar2");
@@ -98,6 +93,8 @@ export const NavBar = () => {
         }
     }
 
+
+
   return (
     <div>
         <div className='navbar' id='navbar'>
@@ -107,7 +104,7 @@ export const NavBar = () => {
             {/* <div  className='navbar3'>
                 <input type="text" placeholder='Buscar...' className='buscar' /><button className='buscar2'><FaSistrix /></button>
             </div> */}
-            <div className='bars__menu'onClick={switchShown2}>
+            <div className='bars__menu'onClick={animateBars}>
                 <span class="line1__bars-menu"></span>
                 <span class="line2__bars-menu"></span>
                 <span class="line3__bars-menu"></span>
@@ -115,13 +112,13 @@ export const NavBar = () => {
             {/* <input type="checkbox" id='menu'className='menuInput'/> */}
             <div className="column_nav_content">
                 <div id='nav2' className='navbar2'>
-                    <Link to="/lista-deseos" onClick={handleClick} className={`links ${clicked ? 'active' : ''}`}><FaHeartbeat /> Lista de Deseos </Link>
+                    <Link to="/lista-deseos"  className={'links active'}><FaHeartbeat /> Lista de Deseos </Link>
                 </div>
                 <div id='nav3' className='navbar2'>
-                    <Link to='/register' onClick={handleClick} className={`links ${clicked ? 'active' : ''}`}><FaUserAlt /> Mi cuenta</Link>
+                    <Link to='/register'  className={'links active'}><FaUserAlt /> Mi cuenta</Link>
                 </div>
                 <div id='nav4' className='navbar2'>
-                    <Link to='/car' onClick={handleClick} className={`links ${clicked ? 'active' : ''}`}><FaShoppingCart />{counter}</Link>
+                    <Link to='/car'   className={'links active'}><FaShoppingCart onClick={props.clickCar}/>{counter}</Link>
                 </div>
             </div>
         </div>

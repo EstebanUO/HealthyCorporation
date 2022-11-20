@@ -39,8 +39,6 @@ export const CardAllProducts = (props) => {
   }
 
 
-  console.log("hola");
-
   const baseURL = "https://api-products-healthy.herokuapp.com/api/healthyapp";
   useEffect(() => {
     axios.get(baseURL).then((response) => {

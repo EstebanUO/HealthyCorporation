@@ -21,7 +21,10 @@ export const Login = (props) => {
     }else if (props.messagesLogin === "Network Error") {
       
       props.setalertConexionLogin(true)
-    } 
+    } else if (props.messagesLogin === "contraseña o email incorrectos") {
+
+      props.setalertUserLoginPassword(true)
+    }
   }, [props.messagesLogin]);
 
   const onclick=()=>{
@@ -49,6 +52,7 @@ export const Login = (props) => {
               <button className='button-show2' onClick={props.switchShown2}>{props.shown2 ? <BsEyeFill /> : <BsEyeSlashFill />}</button>
               <p className="forgetPass"><Link to="/recoverPassword" >¿Haz olvidado tu contraseña?</Link></p>
               {props.alertUserLogin? <Alert severity="error"><AlertTitle>Error</AlertTitle>Usuario no registrado — <strong>Registrate!</strong></Alert>:null}
+              {props.alertUserLoginPassword? <Alert severity="error"><AlertTitle>Error</AlertTitle>contraseña o email incorrectos — <strong>verifica!</strong></Alert>:null}
               {props.alertConexionLogin? <Alert severity="warning"><AlertTitle>warning</AlertTitle>Sin conexion — <strong>conectate a una red!</strong></Alert>:<p></p>}
               <div className="submitReg">
                 <input  type="submit" value={"Iniciar sesion"} class="submitReg2"/>

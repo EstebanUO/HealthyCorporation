@@ -1,6 +1,6 @@
 import { Home } from '../src/Components/Page/Home/Home';
 import axios from "axios";
-import { useState } from 'react'
+import { useState,useEffect } from 'react'
 import { Route, Routes, Navigate, useNavigate } from "react-router-dom"
 import { Products } from '../src/Components/Page/Products/Products';
 import { Register } from '../src/Components/Page/Register/Register';
@@ -25,6 +25,71 @@ import RecoverPassword from './Components/Page/MyAcount/RecoverPassword';
 
 function App() {
 
+      /*datos encriptacion y desencriptado*/
+      const bufferABase64 = buffer => btoa(String.fromCharCode(...new Uint8Array(buffer)));
+      const base64ABuffer = buffer => Uint8Array.from(atob(buffer), c => c.charCodeAt(0));
+      const LONGITUD_SAL = 16;
+      const LONGITUD_VECTOR_INICIALIZACION = LONGITUD_SAL;
+      const contraseñaEncriptar = "lfjdnd193016"
+      const contraseñaDesencriptar = "lfjdnd193016"
+
+      const derivacionDeClaveBasadaEnContraseña = async (contraseña, sal, iteraciones, longitud, hash, algoritmo = 'AES-CBC') => {
+        const encoder = new TextEncoder();
+        let keyMaterial = await window.crypto.subtle.importKey(
+          'raw',
+          encoder.encode(contraseña),
+          { name: 'PBKDF2' },
+          false,
+          ['deriveKey']
+        );
+        return await window.crypto.subtle.deriveKey(
+          {
+            name: 'PBKDF2',
+            salt: encoder.encode(sal),
+            iterations: iteraciones,
+            hash
+          },
+          keyMaterial,
+          { name: algoritmo, length: longitud },
+          false,
+          ['encrypt', 'decrypt']
+        );
+      }
+      const encriptar = async (contraseña, textoPlano) => {
+        const encoder = new TextEncoder();
+        const sal = window.crypto.getRandomValues(new Uint8Array(LONGITUD_SAL));
+        const vectorInicializacion = window.crypto.getRandomValues(new Uint8Array(LONGITUD_VECTOR_INICIALIZACION));
+        const bufferTextoPlano = encoder.encode(textoPlano);
+        const clave = await derivacionDeClaveBasadaEnContraseña(contraseña, sal, 100000, 256, 'SHA-256');
+        const encrypted = await window.crypto.subtle.encrypt(
+          { name: "AES-CBC", iv: vectorInicializacion },
+          clave,
+          bufferTextoPlano
+        );
+        return bufferABase64([
+          ...sal,
+          ...vectorInicializacion,
+          ...new Uint8Array(encrypted)
+        ]);
+      };
+
+      const desencriptar = async (contraseña, encriptadoEnBase64) => {
+        const decoder = new TextDecoder();
+        const datosEncriptados = base64ABuffer(encriptadoEnBase64);
+        const sal = datosEncriptados.slice(0, LONGITUD_SAL);
+        const vectorInicializacion = datosEncriptados.slice(0 + LONGITUD_SAL, LONGITUD_SAL + LONGITUD_VECTOR_INICIALIZACION);
+        const clave = await derivacionDeClaveBasadaEnContraseña(contraseña, sal, 100000, 256, 'SHA-256');
+        const datosDesencriptadosComoBuffer = await window.crypto.subtle.decrypt(
+          { name: "AES-CBC", iv: vectorInicializacion },
+          clave,
+          datosEncriptados.slice(LONGITUD_SAL + LONGITUD_VECTOR_INICIALIZACION)
+        );
+        return decoder.decode(datosDesencriptadosComoBuffer);
+      }
+      
+
+      /*fin datos*/
+
   
   const valiLoginAdmin = localStorage.getItem("EmailValidAdmin");
   const valiLogin = localStorage.getItem("EmailValid");
@@ -34,6 +99,7 @@ function App() {
   /*validaciones login*/
   const [messagesLogin, setmessagesLogin] = useState("")
   const [alertUserLogin, setalertUserLogin] = useState(false)
+  const [alertUserLoginPassword, setalertUserLoginPassword] = useState(false)
   const [alertHome, setalertHome] = useState(false)
   const [alertConexionLogin, setalertConexionLogin] = useState(false)
   // const [valiLogin, setvaliLogin] = useState(false)
@@ -54,13 +120,18 @@ function App() {
   // const [password, setpassword] = useState("")
 
 
-  const getApi = () => {
+  const getApi = async() => {
+   
     axios.get('https://apiprojectmain.herokuapp.com/api/users')
       .then(function (response) {
+        
         // handle success
-        response.data.map(data => {
-
-          if (userLogin === data.email && passwordUser === data.password) {
+        response.data.map(async (data) => {
+          
+          const desencriptado = await desencriptar(contraseñaDesencriptar, data.password);
+          
+          if (userLogin === data.email && passwordUser === desencriptado) {
+            
             localStorage.setItem("EmailValid", true);
             setalertHome(true);
             // setidUser(data.id);
@@ -73,8 +144,13 @@ function App() {
             // setpassword(data.password);
             setmessagesLogin("bienvenido " + data.name)
 
-          } else if (userLogin !== data.email && passwordUser !== data.password) {
+          } else if (userLogin !== data.email && passwordUser !== desencriptado) {
+            
             setmessagesLogin("usuario no registrado")
+            setalertConexionLogin(false)
+          }else if (userLogin !== data.email || passwordUser !== desencriptado) {
+            
+            setmessagesLogin("contraseña o email incorrectos")
             setalertConexionLogin(false)
           }
           return console.log("data obtenida");
@@ -135,16 +211,18 @@ function App() {
 
 
 
-  const postApi = (e) => {
-
+  const postApi = async(e) => {
     e.preventDefault()
+
+    const encriptado = await encriptar(contraseñaEncriptar, passwordRegister);
+
     if ((usernameRegister.indexOf('`') !== -1 || usernameRegister.indexOf('.') !== -1 || usernameRegister.indexOf('@') !== -1 || usernameRegister.indexOf('!') !== -1 || usernameRegister.indexOf('%') !== -1 || usernameRegister.indexOf('$') !== -1 || /\s/.test(usernameRegister)) || (emailRegister.indexOf('.') === -1 || emailRegister.indexOf('@') === -1 || /\s/.test(emailRegister))) {
       console.log("error");
     } else {
       axios.post('https://apiprojectmain.herokuapp.com/api/users', {
         "name": usernameRegister,
         "email": emailRegister,
-        "password": passwordRegister
+        "password": encriptado
       })
         .then(function (response) {
           // handle success
@@ -229,6 +307,25 @@ function App() {
   }
   /*fin validaciones register*/
 
+      /*carga de productos carrito*/
+      const [productos, setProductos] = useState([0,1])
+      const [Car2, setCar2] = useState([])
+      
+      let arr = JSON.parse(localStorage.getItem("car"))
+    
+  
+      useEffect(() => {
+          setCar2(arr);
+      }, [arr])
+      
+  
+      const clickCar=()=>{
+       
+      }
+
+
+      /*fin carga carrito*/
+
 
 
 
@@ -236,13 +333,13 @@ function App() {
     <div>
       <Routes>
         <Route path="/" element={<Home valiLoginAdmin={valiLoginAdmin} />} />
-        <Route path="/products" element={<Products valiLoginAdmin={valiLoginAdmin} />} />
+        <Route path="/products" element={<Products clickCar={clickCar} valiLoginAdmin={valiLoginAdmin} />} />
         <Route path="/register" element={valiLogin ? <Navigate replace to="/account" /> : <Register switchShown={switchShown} shown={shown} onClick={onClick} alertConexion={alertConexion} setalertConexion={setalertConexion} alertUser={alertUser} setalertUser={setalertUser} setmessages={setmessages} messages={messages} validemail={validemail} validUsername={validUsername} confrimPasword={confrimPasword} onChangeconfrimPasword={onChangeconfrimPasword} postApi={postApi} emailRegister={emailRegister} passwordRegister={passwordRegister} usernameRegister={usernameRegister} onChangeemailRegister={onChangeemailRegister} onChangepasswordRegister={onChangepasswordRegister} onChangeusernameRegister={onChangeusernameRegister} />} />
         <Route path="/terminos" element={<Terminos valiLoginAdmin={valiLoginAdmin} />} />
         <Route path="/politicas" element={<Politicas valiLoginAdmin={valiLoginAdmin} />} />
         <Route path="/contact" element={<Contact valiLoginAdmin={valiLoginAdmin} />} />
-        <Route path="/login" element={valiLogin ? <Navigate replace to="/account" /> : <Login setalertConexionLogin={setalertConexionLogin} alertConexionLogin={alertConexionLogin} alertUserLogin={alertUserLogin} setalertUserLogin={setalertUserLogin} messagesLogin={messagesLogin} onClick2={onClick2} switchShown2={switchShown2} shown2={shown2} userLogin={userLogin} ClickLogin={ClickLogin} passwordUser={passwordUser} onChangePasswordLogin={onChangePasswordLogin} onChangeUserLogin={onChangeUserLogin} />} />
-        <Route path="/car" element={<Car valiLoginAdmin={valiLoginAdmin} />} />
+        <Route path="/login" element={valiLogin ? <Navigate replace to="/account" /> : <Login alertUserLoginPassword={alertUserLoginPassword} setalertUserLoginPassword={setalertUserLoginPassword} setalertConexionLogin={setalertConexionLogin} alertConexionLogin={alertConexionLogin} alertUserLogin={alertUserLogin} setalertUserLogin={setalertUserLogin} messagesLogin={messagesLogin} onClick2={onClick2} switchShown2={switchShown2} shown2={shown2} userLogin={userLogin} ClickLogin={ClickLogin} passwordUser={passwordUser} onChangePasswordLogin={onChangePasswordLogin} onChangeUserLogin={onChangeUserLogin} />} />
+        <Route path="/car" element={<Car productos={productos} valiLoginAdmin={valiLoginAdmin} />} />
         <Route path="/account" element={valiLogin ? <MyAcount setalertHome={setalertHome} alertHome={alertHome} valiLoginAdmin={valiLoginAdmin} /> : <Navigate replace to="/" />} />
         <Route path="/direction" element={valiLogin ? <Direction setDirection={setDirection} setLocation={setLocation} setTypeHome={setTypeHome} setCity={setCity} setDetails={setDetails}  postApiDirection={postApiDirection} direction={direction} typeHome={typeHome} location={location} city={city} details={details}/>:<Navigate replace to="/"  />} />
         <Route path="/password" element={valiLogin ? <Password />:<Navigate replace to="/" />} />
