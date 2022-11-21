@@ -2106,12 +2106,22 @@ input[type="range"]:active::-webkit-slider-thumb{
   }
 }
 
-/*-------- Responsive 800px ---------*/
+
+/*-------- Responsive 810px ---------*/
 @media  screen and (max-width:810px) {
 
   .card_all_product{
     display: grid;
-    grid-template-columns: 15rem 10rem 10rem;
+    grid-template-columns: 20rem 20rem 20rem;
+  }
+
+}
+/*-------- Responsive 800px ---------*/
+@media  screen and (max-width:800px) {
+
+  .card_all_product{
+    display: grid;
+    grid-template-columns: 20rem 20rem 20rem;
   }
 
   .contact{
@@ -2144,7 +2154,7 @@ input[type="range"]:active::-webkit-slider-thumb{
 
   .card_all_product{
     display: grid;
-    grid-template-columns: 17rem 8rem 8rem;
+    grid-template-columns: 20rem 17rem 17rem;
   }
 
 
@@ -2369,7 +2379,7 @@ input[type="range"]:active::-webkit-slider-thumb{
 
     .card_all_product{
       display: grid;
-      grid-template-columns: 1fr;
+      grid-template-columns: 20rem 20rem;
     }
 
   }
@@ -2422,7 +2432,7 @@ input[type="range"]:active::-webkit-slider-thumb{
 
     .card_all_product{
       display: grid;
-      grid-template-columns: 1fr;
+      grid-template-columns: 20rem 20rem;
     }
 
     .message{
