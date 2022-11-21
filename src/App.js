@@ -138,6 +138,7 @@ function App() {
             localStorage.setItem("EmailValid", true);
             localStorage.setItem("EmalValidUser", data.email);
             localStorage.setItem("nameUser", data.name);
+          
             // setusernameUser(data.name);
             // setemailUser(data.email);
             // setpassword(data.password);
@@ -342,7 +343,7 @@ function App() {
         <Route path="/direction" element={valiLogin ? <Direction setDirection={setDirection} setLocation={setLocation} setTypeHome={setTypeHome} setCity={setCity} setDetails={setDetails}  postApiDirection={postApiDirection} direction={direction} typeHome={typeHome} location={location} city={city} details={details}/>:<Navigate replace to="/"  />} />
         <Route path="/password" element={valiLogin ? <Password />:<Navigate replace to="/" />} />
         {/* <Route path="/tarjet" element={valiLogin ? <Tarjet />:<Navigate replace to="/" />} /> */}
-        <Route path="/lista-deseos" element={valiLogin ? <ListaDeseos />:<Navigate replace to="/" />} />
+        <Route path="/lista-deseos" element={valiLogin ? <ListaDeseos />:<Navigate replace to="/login" />} />
         <Route path="/compra" element={<Buy valiLoginAdmin={valiLoginAdmin} />} />
         <Route path="/pago" element={valiLogin?  <Direction_pago />:<Navigate replace to="/login" />} />
         <Route path="/pago_final" element={valiLogin? <Pago />:<Navigate replace to="/login" />} />
