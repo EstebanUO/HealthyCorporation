@@ -85,7 +85,7 @@ export const Products = (props) => {
   const [texto, setTexto] = useState('');
   const inputLoad = (event) => {
     setTexto(event.target.value)
-    console.log(texto);
+    // console.log(texto);
   }
 
   const [characters, setCharacters] = useState([])
@@ -102,7 +102,7 @@ export const Products = (props) => {
     asyncFetchData();
   }, [])
 
-  // const inputCharacters = characters.filter((character) => character.nombre.toLowerCase().includes(texto.toLowerCase()))
+  const inputCharacters = characters.filter((character) => character.nombre.toLowerCase().includes(texto.toLowerCase()))
 
   return (
     <div>
@@ -209,7 +209,7 @@ export const Products = (props) => {
 
           </div>
         </div>
-        <CardAllProducts/>
+        <CardAllProducts characters={inputCharacters}/>
         {/* <Character characters={inputCharacters} /> */}
       </div>
       <Footer />
