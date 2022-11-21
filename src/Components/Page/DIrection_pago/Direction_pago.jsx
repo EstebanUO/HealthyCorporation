@@ -19,7 +19,7 @@ export const Direction_pago = (props) => {
 
 
     useEffect(() => {
-        if (Directon_ === " ") {
+        if (Directon_ === "") {
             document.getElementById("form").style.display = 'flex'
             
         } else if (Directon_ !== "") {
@@ -71,7 +71,7 @@ export const Direction_pago = (props) => {
             </div>
             <div className='nom_check'>
                 <p className='text_check2' id='text_check2'><b>¡{valiLoginName}</b> dijita tu dirección para saber en donde te encuentras!</p>
-                <p className='text_check2' id='text_check3'><b>¡{valiLoginName}</b> ya tienes una direccion agregada!</p>
+                <p className='text_check2' id='text_check3'><b>¡{valiLoginName}</b> &nbsp;ya tienes una direccion agregada!</p>
             </div>
             <div className='check_all'>
                 <div className='content_check'>
