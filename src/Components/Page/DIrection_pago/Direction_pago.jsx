@@ -19,7 +19,7 @@ export const Direction_pago = (props) => {
 
 
     useEffect(() => {
-        if (Directon_ === "") {
+        if (Directon_ === " ") {
             document.getElementById("form").style.display = 'flex'
             
         } else if (Directon_ !== "") {
