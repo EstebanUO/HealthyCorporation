@@ -290,7 +290,7 @@ header img {
 }
 
 .buscar {
-  width: 26rem;
+  width: 18rem;
   border-radius: 5px;
   border: solid 1px gray;
 }
@@ -1463,11 +1463,11 @@ hr {
   align-items: center;
 }
 
-.imgProduct_{
+/* .imgProduct_{
   display: flex;
   justify-content: center;
   align-items: center;
-}
+} */
 
 .name_Product{
   color: #5bc3fc;
@@ -1932,22 +1932,22 @@ input[type="range"]:active::-webkit-slider-thumb{
     margin-left: 11rem;
   }
 
-  .containerFilter{
+  /* .containerFilter{
     margin-left: 10rem;
-  }
+  } */
 
   .containerCategorias{
     display: none;
   }
 
-  .card_all_product{
+  /* .card_all_product{
     margin-right: 12rem;
-  }
+  } */
 
   .card_all_product{
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(30rem,1f));
-    gap:2rem;
+    gap:1rem;
     text-align: center;
     padding: 3rem 2rem;
   }
@@ -1968,9 +1968,6 @@ input[type="range"]:active::-webkit-slider-thumb{
 
 /*-------- Responsive 968px ---------*/
 @media screen and (max-width:968px) {
-  .buscar{
-    width: 38rem;
-  }
 
   .column_nav_content{
     display: block;
@@ -2012,9 +2009,6 @@ input[type="range"]:active::-webkit-slider-thumb{
   .logito{
     margin-left: 8rem;
   }
-
-
-
 }
 /*-------- Responsive 950px ---------*/
 
@@ -2034,8 +2028,6 @@ input[type="range"]:active::-webkit-slider-thumb{
   .message2{
     margin-left: 9rem;
   }
-  
-
 }
 
 
@@ -2134,19 +2126,15 @@ input[type="range"]:active::-webkit-slider-thumb{
 }
 
 /*-------- Responsive 800px ---------*/
-@media  screen and (max-width:800px) {
+@media  screen and (max-width:810px) {
 
   .card_all_product{
     display: grid;
-    grid-template-columns: 20rem 16rem 16rem;
+    grid-template-columns: 15rem 10rem 10rem;
   }
 
   .contact{
     margin-right: 8rem;
-  }
-
-  .buscar{
-    width: 36rem;
   }
 }
 
@@ -2174,12 +2162,8 @@ input[type="range"]:active::-webkit-slider-thumb{
   }
 
   .card_all_product{
-    margin-left: 5rem;
-  }
-  
-  .card_all_product{
     display: grid;
-    grid-template-columns: 15.5rem 15.4rem 15.4rem;
+    grid-template-columns: 17rem 8rem 8rem;
   }
 
 
@@ -2246,9 +2230,9 @@ input[type="range"]:active::-webkit-slider-thumb{
     width: 35rem;
   }
 
-  .buscar{
+  /* .buscar{
     width: 29rem;
-  }
+  } */
 
 }
 
@@ -2301,12 +2285,10 @@ input[type="range"]:active::-webkit-slider-thumb{
   }
 
   .card_all_product{
-    margin-right: 12rem;
-    grid-template-columns: 13rem 15rem 15rem;
+    /* margin-right: 12rem; */
+    grid-template-columns: 1fr 1fr;
     justify-items: end;
   }
-
-
 }
 
 
@@ -2358,7 +2340,7 @@ input[type="range"]:active::-webkit-slider-thumb{
     }
   .card_all_product{
     display: grid;
-    grid-template-columns: 13rem 14rem 14rem;
+    grid-template-columns: 1fr 1fr;
     }
 
     html{
@@ -2372,10 +2354,17 @@ input[type="range"]:active::-webkit-slider-thumb{
 
   }
 
+@media screen and (min-width:650px){
+  .card_all_product{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
   @media screen and (max-width:560px) {
-    .buscar{
+    /* .buscar{
       width: 23rem;
-    }
+    } */
 
     .text_product_{
       margin-left: 5.5rem;
@@ -2395,6 +2384,11 @@ input[type="range"]:active::-webkit-slider-thumb{
 
     .about_contact4{
       width: 32rem;
+    }
+
+    .card_all_product{
+      display: grid;
+      grid-template-columns: 1fr;
     }
 
   }
@@ -2446,11 +2440,8 @@ input[type="range"]:active::-webkit-slider-thumb{
     }
 
     .card_all_product{
-      display: inline-block;
-      margin-left: -3rem;
-      margin-right: 1rem;
       display: grid;
-      grid-template-columns: 13rem 14rem;
+      grid-template-columns: 1fr;
     }
 
     .message{
@@ -2504,24 +2495,15 @@ input[type="range"]:active::-webkit-slider-thumb{
   }
 
   .card_all_product{
-    margin-right: 1rem;
     display: grid;
-    grid-template-columns: 13rem 14rem;
+    grid-template-columns: 1fr;
   }
 }
 
 @media screen and (max-width:375px) {
 
   .card_all_product{
-    margin-right: 3rem;
     display: grid;
-    grid-template-columns: 13rem 14rem;
+    grid-template-columns: 1fr;
   }
-
 }
-
-/* Era gol de yepes */
-
-/* nah */
-
-/* KOMO */
