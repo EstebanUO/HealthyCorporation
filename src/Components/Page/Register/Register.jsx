@@ -70,7 +70,7 @@ export const Register = (props) => {
               <p className='pvaliRegister' id='valiExiste' />
               <label className="labelsReg">Nobre de usuario</label>
               <FaUserAlt className='iconUserReg' />
-              <input minLength="3" maxLength="20" value={props.usernameRegister} onChange={props.onChangeusernameRegister} name="name" type="text" className="form-input" placeholder="User name" autoComplete="off" required />
+              <input minLength="4" maxLength="20" value={props.usernameRegister} onChange={props.onChangeusernameRegister} name="name" type="text" className="form-input" placeholder="User name" autoComplete="off" required />
               <p className='pvaliRegister' id='txtvalidUsername' />
               <div> 
                 <label className="labelsReg"><br />Correo</label>
