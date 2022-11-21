@@ -16,7 +16,7 @@
 .up_check {
     height: 7rem;
     display: flex;
-    align-items: center;
+    align-items: center; 
     box-shadow: 0 6px 7px -2px grey;
 }
 
@@ -60,6 +60,20 @@
     font-size: 2.1rem;
 }
 
+#form {
+    display: none;
+    flex-direction: column;
+}
+
+#form2 {
+    display: none;
+    flex-direction: column;
+}
+
+#text_check3 {
+    display: none;
+}
+
 
 .addProduct_check3 {
     border-radius: .5rem;
@@ -68,7 +82,8 @@
     height: .5rem;
     transition: all 300ms;
     height: 3.4rem;
-    width: 7rem;
+    width: 10rem;
+    margin-top: 2rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -81,7 +96,8 @@
     height: .5rem;
     transition: all 300ms;
     height: 3.4rem;
-    width: 19rem;
+    width: 15rem;
+    margin-top: 2rem;
     display: flex;
     align-items: center;
     justify-content: center;

@@ -6,12 +6,6 @@ import './menuHam.css'
 
 export const NavBar = (props) => {
 
-    // useEffect(() => {   
-    //     console.log(props.counter_h);
-    //     console.log(counter);
-    //     setCounter(props.counter_h +1)
-    // }, [props.counter_h])
-
     /* ------------------- contador -------------------------- */
 
     const [counter, setCounter] = useState(0);
@@ -24,8 +18,6 @@ export const NavBar = (props) => {
             setCounter(Counter2.length)
         }
     }, [Counter2])
-
-    /*-------------------------- Funcion del menu ---------------------------- */
 
 
     /*---------------------------------- Menu Hamburguesa -------------------------------------- */

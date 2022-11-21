@@ -138,6 +138,7 @@ function App() {
             localStorage.setItem("EmailValid", true);
             localStorage.setItem("EmalValidUser", data.email);
             localStorage.setItem("nameUser", data.name);
+            localStorage.setItem("direction", data.direccion)
             // setusernameUser(data.name);
             // setemailUser(data.email);
             // setpassword(data.password);

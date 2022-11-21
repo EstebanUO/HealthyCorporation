@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import logo2 from '../../Image/logo.png'
 import { Link } from "react-router-dom";
 import { Footer } from "../Layout/Footer/Footer";
@@ -7,15 +7,43 @@ import icon_buy from '../../Image/icon_buy.png'
 import icon_regresar from '../../Image/icon_regresar.png'
 import './Direction_pago.css'
 import back from '../../Image/back.png';
+import axios from "axios"
 
 
-export const Direction_pago = () => {
+export const Direction_pago = (props) => {
 
     // const valiLoginUser = localStorage.getItem("EmailValidUser");
     // const valiEmail = localStorage.getItem("EmalValid");
     const valiLoginName = localStorage.getItem("nameUser");
+    const Directon_ = localStorage.getItem("direction");
 
-    
+
+    useEffect(() => {
+        if (Directon_ === "") {
+            document.getElementById("form").style.display = 'flex'
+            
+        } else if (Directon_ !== "") {
+            document.getElementById("form").style.display = 'none'
+            document.getElementById("form2").style.display = 'flex'
+            document.getElementById("text_check2").style.display = 'none'
+            document.getElementById("text_check3").style.display = 'flex'
+        }
+    }, [Directon_])
+
+    /*-------------------------- subir direccion --------------------------- */
+
+
+    /*-------------------------- direccion api --------------------------- */
+    const [direction_2, setDirection_2] = useState([])
+    let idUser = localStorage.getItem("idUser")
+    const baseURL = `https://apiprojectmain.herokuapp.com/api/users/${idUser}`;
+    useEffect(() => {
+      axios.get(baseURL).then((response) => {
+        setDirection_2(response.data)
+      });
+    }, []);
+
+
     return (
         // valiLoginUser && valiEmail !== true ? <Login/> :
         <>
@@ -42,7 +70,8 @@ export const Direction_pago = () => {
                 </div>
             </div>
             <div className='nom_check'>
-                <p className='text_check2' ><b>{valiLoginName}</b> dijita tu dirección para saber en donde te encuentras</p>
+                <p className='text_check2' id='text_check2'><b>¡{valiLoginName}</b> dijita tu dirección para saber en donde te encuentras!</p>
+                <p className='text_check2' id='text_check3'><b>¡{valiLoginName}</b> ya tienes una direccion agregada!</p>
             </div>
             <div className='check_all'>
                 <div className='content_check'>
@@ -53,38 +82,53 @@ export const Direction_pago = () => {
 
 
                     <div className='container_check'>
-                        <form action="">
-                            <label className='text_check'>Dirección</label><br />
-                            <input type="text" className='input_check' name='user-name' placeholder="Digite su dirección" required></input><br /><br />
-                            
+                        <form id='form'>
+                            <label className='text_check'>Dirección</label>
+                            <input type="text" className='input_check' name='user-name' placeholder="Digite su dirección" required></input><br />
+                            <div className='acount_content_tarjet-'>
+                                <b><label className='text_check'>Ingresa tu ciudad</label></b>
+                                <input className='input_check' name="localidad" placeholder="..."  autocomplete="off" required/>
+                            </div><br />
                             <div className='acount_content_tarjet-'>
                                 <b><label className='text_check'>Ingresa tu locaidad</label></b>
-                                <select className='input_check' name="localidad" required>
-                                    <option value="" disabled>Localidad</option>
-                                    <option value="">Armenia</option>
-                                    {/* <option value=""></option>
-                                    <option value=""></option>
-                                    <option value=""></option>
-                                    <option value=""></option> 
-                                    <option value=""></option>
-                                    <option value=""></option>
-                                    <option value=""></option> */}
-                                </select>
+                                <input className='input_check' name="localidad" placeholder="urbana..."  autocomplete="off" required/>
                             </div><br />
                             <label className='text_check'>Casa | Depto | Oficina</label>
-                            <input type="text" className='input_check' name='user-name' placeholder="Digite la numeración" required></input><br /><br />
+                            <input type="text" className='input_check' name='user-name' placeholder="Digite la numeración"  autocomplete="off"required></input><br />
 
                             <label className='text_check'>Nombre de dirección</label>
-                            <input type="text" className='input_check' name='user-name' placeholder="Ej: Departameto" required></input>
-                        </form><br /> 
+                            <input type="text" className='input_check' name='user-name' placeholder="Ej: Departameto"  autocomplete="off" required></input>
+                            <div className='check_btn'>
+                                {/* <button className='addProduct_check4' id='addProduct_check4'> Ya tienes una direccion, Seguir con la compra </button> */}
+                                <input className='addProduct_check3' id='addProduct_check3' value="Siguiente" type="submit"/>
+                            </div>
+                        </form>
+
+
+                    {/* ------------------------------- segundo formulario  ---------------------------------*/}
+                        <form id='form2'>
+                            <label className='text_check'>Dirección</label>
+                            <input type="text" className='input_check' name='user-name' placeholder={direction_2.direccion} ></input><br />
+
+                            <div className='acount_content_tarjet-'>
+                                <b><label className='text_check'>Ingresa tu locaidad</label></b>
+                                <input className='input_check' name="localidad" placeholder={direction_2.localidad} />
+
+                            </div><br />
+                            <label className='text_check'>Casa | Depto | Oficina</label>
+                            <input type="text" className='input_check' name='user-name' placeholder={direction_2.tipoVivienda} ></input><br />
+
+                            <label className='text_check'>Nombre de dirección</label>
+                            <input type="text" className='input_check' name='user-name' placeholder={direction_2.detalles} ></input>
+                            <div className='check_btn'>
+                                <Link to='/pago_final'><button className='addProduct_check4' id='addProduct_check4'> Seguir con la compra </button></Link>
+                            </div>
+                        </form>
                     </div>
-                    <div className='check_btn'>
-                        <button className='addProduct_check4'>Agregar la dirección automaticamente </button>
-                        <Link to='/pago_final'><button className='addProduct_check3'>Siguiente</button></Link>
-                    </div>
-                </div>          
-            </div>  
+
+                </div>
+            </div>
             <Footer />
-        </>  
-    ) 
+        </>
+    )
 }
