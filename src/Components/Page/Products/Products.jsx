@@ -2,11 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { Header } from '../Layout/Header/Header';
 import { Footer } from '../Layout/Footer/Footer';
 // import Slider from '../../UI/js/Slider';
-// import { CardAllProducts } from '../../UI/CardAllProducts/CardAllProducts';
+import { CardAllProducts } from '../../UI/CardAllProducts/CardAllProducts';
 import { FaArrowCircleDown, FaArrowCircleUp, FaSlidersH } from "react-icons/fa";
 import { Categories } from '../../UI/Categories/Categories';
-import { Character } from '../../UI/Character/Character';
-import axios from "axios"
+// import { Character } from '../../UI/Character/Character';
+// import axios from "axios"
 
 export const Products = (props) => {
 
@@ -102,7 +102,7 @@ export const Products = (props) => {
     asyncFetchData();
   }, [])
 
-  const inputCharacters = characters.filter((character) => character.nombre.toLowerCase().includes(texto.toLowerCase()))
+  // const inputCharacters = characters.filter((character) => character.nombre.toLowerCase().includes(texto.toLowerCase()))
 
   return (
     <div>
@@ -209,9 +209,8 @@ export const Products = (props) => {
 
           </div>
         </div>
-
-
-        <Character characters={inputCharacters} />
+        <CardAllProducts/>
+        {/* <Character characters={inputCharacters} /> */}
       </div>
       <Footer />
     </div>

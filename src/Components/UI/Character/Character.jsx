@@ -7,7 +7,8 @@ export const Character = ({characters}) => {
   return (
     <div className='search_content'>
         <div className='search_content2'>
-            {characters.map(character => <CardAllProducts data={character}/>)}
+            {/* {characters.map((character,key) => <CardAllProducts data={character} key={key}/>)} */}
+            <CardAllProducts/>
         </div>
     </div>
   )
