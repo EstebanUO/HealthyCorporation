@@ -15,27 +15,34 @@ export const Direction_pago = (props) => {
     // const valiLoginUser = localStorage.getItem("EmailValidUser");
     // const valiEmail = localStorage.getItem("EmalValid");
     const valiLoginName = localStorage.getItem("nameUser");
-    const Directon_ = localStorage.getItem("direction");
+    
 
 
-    useEffect(() => {
-        if (Directon_ === "") {
-            document.getElementById("form").style.display = 'flex'
-            
-        } else if (Directon_ !== "") {
-            document.getElementById("form").style.display = 'none'
-            document.getElementById("form2").style.display = 'flex'
+    window.onload=()=>{
+        const Directon_ = localStorage.getItem("direction");
+        if (Directon_ !== null) {
             document.getElementById("text_check2").style.display = 'none'
             document.getElementById("text_check3").style.display = 'flex'
-        }
-    }, [Directon_])
+            document.getElementById("form").style.display = 'none' 
+            document.getElementById("form2").style.display = 'flex'
+            
+        } else if (Directon_ === null) {
+            document.getElementById("form").style.display = 'flex'
+            document.getElementById("form2").style.display = 'none'
+            document.getElementById("text_check2").style.display = 'flex'
+            document.getElementById("text_check3").style.display = 'none'
 
+        }
+    }
     /*-------------------------- subir direccion --------------------------- */
+
+
 
 
     /*-------------------------- direccion api --------------------------- */
     const [direction_2, setDirection_2] = useState([])
     let idUser = localStorage.getItem("idUser")
+   
     const baseURL = `https://apiprojectmain.herokuapp.com/api/users/${idUser}`;
     useEffect(() => {
       axios.get(baseURL).then((response) => {
@@ -70,7 +77,7 @@ export const Direction_pago = (props) => {
                 </div>
             </div>
             <div className='nom_check'>
-                <p className='text_check2' id='text_check2'><b>¡{valiLoginName}</b> dijita tu dirección para saber en donde te encuentras!</p>
+                <p className='text_check2' id='text_check2'><b>¡{valiLoginName}</b> &nbsp;dijita tu dirección para saber en donde te encuentras!</p>
                 <p className='text_check2' id='text_check3'><b>¡{valiLoginName}</b> &nbsp;ya tienes una direccion agregada!</p>
             </div>
             <div className='check_all'>

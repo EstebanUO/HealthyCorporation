@@ -316,16 +316,38 @@ function App() {
       useEffect(() => {
           setCar2(arr);
       }, [arr])
-      
   
       const clickCar=()=>{
-       
+        
+          
+        
       }
 
 
       /*fin carga carrito*/
 
+      // /* validaciones direcciones  */
+    
+      
+      // const clickDirection = () => {
+      //   const Directon_ = localStorage.getItem("direction");
+      //     if (Directon_ !== "") {
+      //       document.getElementById("text_check2").style.display = 'none'
+      //       document.getElementById("text_check3").style.display = 'flex'
+      //       document.getElementById("form").style.display = 'none' 
+      //       document.getElementById("form2").style.display = 'flex'
+            
+      //   } else if (Directon_ === null) {
+      //       document.getElementById("form").style.display = 'flex'
+      //       document.getElementById("form2").style.display = 'none'
+      //       document.getElementById("text_check2").style.display = 'flex'
+      //       document.getElementById("text_check3").style.display = 'none'
 
+      //   }
+      // }
+
+
+      // /* fin validaciones direcciones  */
 
 
   return (
@@ -344,7 +366,7 @@ function App() {
         <Route path="/password" element={valiLogin ? <Password />:<Navigate replace to="/" />} />
         {/* <Route path="/tarjet" element={valiLogin ? <Tarjet />:<Navigate replace to="/" />} /> */}
         <Route path="/lista-deseos" element={valiLogin ? <ListaDeseos />:<Navigate replace to="/login" />} />
-        <Route path="/compra" element={<Buy valiLoginAdmin={valiLoginAdmin} />} />
+        <Route path="/compra" element={<Buy  valiLoginAdmin={valiLoginAdmin} />} />
         <Route path="/pago" element={valiLogin?  <Direction_pago />:<Navigate replace to="/login" />} />
         <Route path="/pago_final" element={valiLogin? <Pago />:<Navigate replace to="/login" />} />
         <Route path="/recoverPassword" element={<RecoverPassword />} />

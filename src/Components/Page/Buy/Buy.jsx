@@ -111,6 +111,8 @@ export const Buy = (props) => {
         return number.toString().replace(exp,rep);
       }
 
+   
+
     return (
         <>
             <Header valiLoginAdmin={props.valiLoginAdmin} />
@@ -172,9 +174,9 @@ export const Buy = (props) => {
                                 </span>
                                 <p className="like">{counter} like</p>
                             </div>
-                            <Link to="/pago"><button className='addBuy_'>
+                            <a href="/pago"><button onclick="" className='addBuy_'>
                                 Comprar ahora
-                            </button></Link>
+                            </button></a>
                             <button className='addBuy_2' onClick={(e) => { add(e) }} value={Id.id}>
                                 Agregar al carrito
                             </button>

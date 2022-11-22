@@ -15,12 +15,13 @@ export const Direction = (props) => {
   }
 
   const [direction_2, setDirection_2] = useState([])
-  const direction =   localStorage.setItem("direction", direction_2.direccion)
+  // const direction =   localStorage.setItem("direction", direction_2.direccion)
   let idUser = localStorage.getItem("idUser")
   const baseURL = `https://apiprojectmain.herokuapp.com/api/users/${idUser}`;
   useEffect(() => {
     axios.get(baseURL).then((response) => {
       setDirection_2(response.data)
+      const direction =   localStorage.setItem("direction", response.data.direccion)
     });
   }, []);
 
