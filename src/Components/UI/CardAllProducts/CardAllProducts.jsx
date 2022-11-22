@@ -6,8 +6,7 @@ import Swal from 'sweetalert2'
 import axios from "axios"
 // import { keyboard } from "@testing-library/user-event/dist/keyboard";
 
-export const CardAllProducts = ({data}) => {
-  // const [products, setProducts] = useState([])
+export const CardAllProducts = ({characters}) => {
   const [products_2, setProducts_2] = useState([])
 
   let validDatos = (localStorage.getItem("car"))
@@ -38,20 +37,6 @@ export const CardAllProducts = ({data}) => {
     });
   }
 
-
-
-
-
-  // const baseURL = "https://api-products-healthy.herokuapp.com/api/healthyapp";
-  // useEffect(() => {
-  //   axios.get(baseURL).then((response) => {
-  //     setProducts(response.data)
-
-      
-  //   });
-  // }, []);
-
-
   // --------------------- compra  ----------------------------
 
   /*no eliminar este usestate por que se cae la pagina*/
@@ -60,7 +45,7 @@ export const CardAllProducts = ({data}) => {
   let validDatos_2 = (localStorage.getItem("product"));
   const add_2 = (e) => {
       setProducts_3(products_3 => products_3.concat(e.target.value)) 
-     
+
       validDatos_2 === null ? validDatos_2=[] : validDatos_2=JSON.parse(validDatos_2)
       localStorage.setItem('product', JSON.stringify(validDatos_2))
 
@@ -77,8 +62,8 @@ export const CardAllProducts = ({data}) => {
   return (
     <div className='content_all_Product'>
       <div className='card_all_product'>
-        {/* {products.map((data, key) => ( */}
-          <div className='column_all_products'>
+        {characters.map((data, key) => ( 
+          <div className='column_all_products' key={key}>
             <div className='imgProduct_'>
               <img className='imgAllProduct' src={"https://api-products-healthy.herokuapp.com"+data.imagen}  alt="Producto imagen" />
             </div>
@@ -107,8 +92,8 @@ export const CardAllProducts = ({data}) => {
               </button></Link>
             </div>
           </div>
-        {/* ))
-        } */}
+        ))
+        } 
       </div>
     </div>
   )

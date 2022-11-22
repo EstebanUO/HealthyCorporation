@@ -2,11 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { Header } from '../Layout/Header/Header';
 import { Footer } from '../Layout/Footer/Footer';
 // import Slider from '../../UI/js/Slider';
-// import { CardAllProducts } from '../../UI/CardAllProducts/CardAllProducts';
+import { CardAllProducts } from '../../UI/CardAllProducts/CardAllProducts';
 import { FaArrowCircleDown, FaArrowCircleUp, FaSlidersH } from "react-icons/fa";
 import { Categories } from '../../UI/Categories/Categories';
-import { Character } from '../../UI/Character/Character';
-import axios from "axios"
+// import { Character } from '../../UI/Character/Character';
+// import axios from "axios"
 
 export const Products = (props) => {
 
@@ -85,7 +85,7 @@ export const Products = (props) => {
   const [texto, setTexto] = useState('');
   const inputLoad = (event) => {
     setTexto(event.target.value)
-    console.log(texto);
+    // console.log(texto);
   }
 
   const [characters, setCharacters] = useState([])
@@ -209,9 +209,8 @@ export const Products = (props) => {
 
           </div>
         </div>
-
-
-        <Character characters={inputCharacters} />
+        <CardAllProducts characters={inputCharacters}/>
+        {/* <Character characters={inputCharacters} /> */}
       </div>
       <Footer />
     </div>

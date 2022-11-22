@@ -93,14 +93,14 @@ export const NavBar = (props) => {
             <div>
                 <Link to='/'><img src={logo} alt="logo" id='logo' /></Link>
             </div>
-             {/* <div  className='navbar3'>
+            {/* <div  className='navbar3'>
                 <input type="text" placeholder='Buscar...' className='buscar' /><button className='buscar2'><FaSistrix /></button>
 
             </div> */}
             <div className='bars__menu'onClick={animateBars}>
-                <span class="line1__bars-menu"></span>
-                <span class="line2__bars-menu"></span>
-                <span class="line3__bars-menu"></span>
+                <span className="line1__bars-menu"></span>
+                <span className="line2__bars-menu"></span>
+                <span className="line3__bars-menu"></span>
 
             </div>
             {/* <input type="checkbox" id='menu'className='menuInput'/> */}
@@ -118,6 +118,6 @@ export const NavBar = (props) => {
                 </div>
             </div>
         </div>
-        </div>
+    </div>
     )
 }

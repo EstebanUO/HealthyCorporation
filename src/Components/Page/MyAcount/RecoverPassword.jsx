@@ -11,7 +11,51 @@ function RecoverPassword(props) {
     
   /*validaciones usuario*/
   const [email, setemail] = useState("")
+  const base64ABuffer = buffer => Uint8Array.from(atob(buffer), c => c.charCodeAt(0));
+  const LONGITUD_SAL = 16;
+  const LONGITUD_VECTOR_INICIALIZACION = LONGITUD_SAL;
+  const contraseñaDesencriptar = "lfjdnd193016"
 //   const [errorEmail, seterrorEmail] = useState(null)
+
+/*funciones de desencriptado*/
+const derivacionDeClaveBasadaEnContraseña = async (contraseña, sal, iteraciones, longitud, hash, algoritmo = 'AES-CBC') => {
+    const encoder = new TextEncoder();
+    let keyMaterial = await window.crypto.subtle.importKey(
+      'raw',
+      encoder.encode(contraseña),
+      { name: 'PBKDF2' },
+      false,
+      ['deriveKey']
+    );
+    return await window.crypto.subtle.deriveKey(
+      {
+        name: 'PBKDF2',
+        salt: encoder.encode(sal),
+        iterations: iteraciones,
+        hash
+      },
+      keyMaterial,
+      { name: algoritmo, length: longitud },
+      false,
+      ['encrypt', 'decrypt']
+    );
+  }
+
+  const desencriptar = async (contraseña, encriptadoEnBase64) => {
+    const decoder = new TextDecoder();
+    const datosEncriptados = base64ABuffer(encriptadoEnBase64);
+    const sal = datosEncriptados.slice(0, LONGITUD_SAL);
+    const vectorInicializacion = datosEncriptados.slice(0 + LONGITUD_SAL, LONGITUD_SAL + LONGITUD_VECTOR_INICIALIZACION);
+    const clave = await derivacionDeClaveBasadaEnContraseña(contraseña, sal, 100000, 256, 'SHA-256');
+    const datosDesencriptadosComoBuffer = await window.crypto.subtle.decrypt(
+      { name: "AES-CBC", iv: vectorInicializacion },
+      clave,
+      datosEncriptados.slice(LONGITUD_SAL + LONGITUD_VECTOR_INICIALIZACION)
+    );
+    return decoder.decode(datosDesencriptadosComoBuffer);
+  }
+
+  /*fin funciones de desencriptado*/
 
 
   /**/ 
@@ -21,22 +65,23 @@ function RecoverPassword(props) {
         // handle success
         let validacion=true;
         let usaername=""
-        let password=""
         let emailSend=""
         
-        response.data.map(data => {
+        response.data.map(async(data) => {
 
             if (email===data.email) {
+                
                 validacion=false;
                 usaername=data.name
-                password=data.password
                 emailSend=data.email
+                console.log("paso");
+                onsubmit(usaername,await desencriptar(contraseñaDesencriptar, data.password),emailSend,event,validacion)
        
             }
             return "termino map";
         });
         
-        onsubmit(usaername,password,emailSend,event,validacion)
+        
       })
       .catch(function (error) {
         // handle error
