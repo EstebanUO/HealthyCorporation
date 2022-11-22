@@ -3,13 +3,12 @@ import { Link } from "react-router-dom";
 import { Footer } from '../Layout/Footer/Footer';
 import { Header } from '../Layout/Header/Header';
 import { Card } from '../../UI/Card/Card';
+import { FaShoppingCart } from "react-icons/fa";
 import ReactImageMagnify from 'react-image-magnify';
 import back from '../../Image/x.png';
 import Swal from 'sweetalert2';
-// import watchImg300 from '../../Image/assects/acetaminofen300.jpg';
 import axios from "axios"
 import './buy.css'
-// import watchImg1200 from '../../Image/assects/acetaminofen.jpg';
 
 
 export const Buy = (props) => {
@@ -171,7 +170,7 @@ export const Buy = (props) => {
                                 Comprar ahora
                             </button></a>
                             <button className='addBuy_2' onClick={(e) => { add(e) }} value={Id.id}>
-                                Agregar al carrito
+                                Agregar<FaShoppingCart />
                             </button>
                         </div>
                     </div>
