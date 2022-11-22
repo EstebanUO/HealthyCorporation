@@ -19,9 +19,6 @@ export const Buy = (props) => {
     const [valor, setValor] = useState(1);
     const [Id, setId] = useState([])
 
-
-
-
     /* ------------------------------ add product ---------------------------- */
     const [products_2, setProducts_2] = useState([])
     let validDatos = (localStorage.getItem("car"))
@@ -45,10 +42,10 @@ export const Buy = (props) => {
             timerProgressBar: true,
             buttonsStyling: false,
             customClass: {
-              cancelButton: "Cancel_"
-          },
+                cancelButton: "Cancel_"
+            },
             html: '<div class="pse_content"><a class="text_link" href="/car"><button class="confirm">Ver mi carrito</button></a> </div>'
-          });
+            });
     }
 
     const sumar = () => {
@@ -109,9 +106,7 @@ export const Buy = (props) => {
         const exp = /(\d)(?=(\d{3})+(?!\d))/g;
         const rep = '$1,';
         return number.toString().replace(exp,rep);
-      }
-
-   
+    }
 
     return (
         <>
@@ -126,13 +121,11 @@ export const Buy = (props) => {
                                 src: "https://api-products-healthy.herokuapp.com" + Id.imagen,
                                 width: 300,
                                 height: 200,
-                                
                             },
                             largeImage: {
                                 src: "https://api-products-healthy.herokuapp.com" + Id.imagen,
                                 width: 1000,
                                 height: 667,
-
                             }
                         }} />
                     </div>

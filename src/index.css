@@ -1923,32 +1923,19 @@ input[type="range"]:active::-webkit-slider-thumb{
     margin-left: 11rem;
   }
 
-  /* .containerFilter{
-    margin-left: 10rem;
-  } */
-
   .containerCategorias{
     display: none;
   }
 
-  /* .card_all_product{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap:1rem;
-    
-  } */
-
   html{
     font-size: 80%;
   }
-
 
   .column_nav_content{
     display: flex;
     flex-direction: row;
     margin-left: 1rem;
   }
-
 }
 
 
@@ -2128,6 +2115,17 @@ input[type="range"]:active::-webkit-slider-thumb{
   .contact{
     margin-right: 8rem;
   }
+
+  .addBuy_ {
+    margin: 0.5rem;
+    font-size: .9rem;
+  }
+
+  .addBuy_2 {
+    margin: 0.5rem;
+    font-size: 0.87rem;
+  }
+
 }
 
 
