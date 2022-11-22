@@ -92,7 +92,7 @@ const derivacionDeClaveBasadaEnContraseña = async (contraseña, sal, iteracione
     
     
     
-
+    /*envio de emails*/
     const sendEmail=(usaername,password,emailSend)=>{
         var templateParams = {
             to_name: usaername,
@@ -109,6 +109,7 @@ const derivacionDeClaveBasadaEnContraseña = async (contraseña, sal, iteracione
         });
 
     }
+    /*fin envio de emails*/
 
     const validateData=()=>{
         // seterrorEmail(null)
