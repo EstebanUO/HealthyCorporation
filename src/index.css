@@ -1930,21 +1930,11 @@ input[type="range"]:active::-webkit-slider-thumb{
   html{
     font-size: 80%;
   }
-
-  .column_nav_content{
-    display: flex;
-    flex-direction: row;
-    margin-left: 1rem;
-  }
 }
 
 
 /*-------- Responsive 968px ---------*/
 @media screen and (max-width:968px) {
-
-  .column_nav_content{
-    display: block;
-  }
 
   /* Page contacto*/
   .contact{
