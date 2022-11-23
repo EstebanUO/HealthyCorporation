@@ -109,7 +109,7 @@ const derivacionDeClaveBasadaEnContraseña = async (contraseña, sal, iteracione
         });
 
     }
-    /*fin envio de emails*/
+    /*fin envio de emails */
 
     const validateData=()=>{
         // seterrorEmail(null)
