@@ -109,7 +109,7 @@ export const Pago = () => {
             <div className='check_all'>
                 <div className='content_check2' >
                     <nav className='nav_check'><p className='pad_check'>Método de pago</p>
-                        <div className='back_up'><Link to="/pago"><img className='img_up2' src={back} alt="atras" /><p className='back'>Atras</p></Link>
+                        <div className='back_up'><a href="/pago"><img className='img_up2' src={back} alt="atras" /><p className='back'>Atras</p></a>
                         </div></nav>
 
                     <div>

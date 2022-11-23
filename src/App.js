@@ -256,7 +256,7 @@ function App() {
 
 
 
-  /*----------------- post direccion  falta que identifique el usuario que sera la ubicacion-------------------*/
+  /*----------------- post direccion -------------------*/
   
   const [direction, setDirection] = useState("")
   const [location, setLocation] = useState("")
@@ -326,28 +326,6 @@ function App() {
 
       /*fin carga carrito*/
 
-      // /* validaciones direcciones  */
-    
-      
-      // const clickDirection = () => {
-      //   const Directon_ = localStorage.getItem("direction");
-      //     if (Directon_ !== "") {
-      //       document.getElementById("text_check2").style.display = 'none'
-      //       document.getElementById("text_check3").style.display = 'flex'
-      //       document.getElementById("form").style.display = 'none' 
-      //       document.getElementById("form2").style.display = 'flex'
-            
-      //   } else if (Directon_ === null) {
-      //       document.getElementById("form").style.display = 'flex'
-      //       document.getElementById("form2").style.display = 'none'
-      //       document.getElementById("text_check2").style.display = 'flex'
-      //       document.getElementById("text_check3").style.display = 'none'
-
-      //   }
-      // }
-
-
-      // /* fin validaciones direcciones  */
 
 
   return (
