@@ -63,6 +63,10 @@ export const NavBar = (props) => {
         }
     }
 
+    const click=()=>{
+        
+    }
+
 
 
   return (
@@ -79,7 +83,7 @@ export const NavBar = (props) => {
                     <Link to='/register'  className={'links active'}><FaUserAlt /> Mi cuenta</Link>
                 </div>
                 <div id='nav4' className='navbar2'>
-                    <Link to='/car'   className={'links active'}><FaShoppingCart onClick={props.clickCar}/>{counter}</Link>
+                    <Link to='/car'   className={'links active'}><FaShoppingCart onClick={click}/>{counter}</Link>
                 </div>
                 <div className="burger-menu" onClick={updateMenu}>
                     <div className={burger_class} ></div>

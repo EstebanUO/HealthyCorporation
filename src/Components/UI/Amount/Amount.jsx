@@ -80,6 +80,10 @@ export const Amount = (props) => {
         })
     }
 
+    window.onload=()=>{
+        console.log("cargo");
+    }
+
 
 
 
