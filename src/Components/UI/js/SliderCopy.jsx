@@ -1,5 +1,4 @@
 import React from 'react';
-import img1 from './../../Image/Noticie/talco.jpg'
 import bannerCosmeticos from './../../Image/bannerCosmeticos.png'
 import img3 from './../../Image/shampoo_producto.jpg'
 import img4 from './../../Image/Noticie/shampoo.jpg'

@@ -307,21 +307,21 @@ function App() {
   /*fin validaciones register*/
 
       /*carga de productos carrito*/
-      const [productos, setProductos] = useState([0,1])
-      const [Car2, setCar2] = useState([])
+      // const [productos, setProductos] = useState([0,1])
+      // const [Car2, setCar2] = useState([])
       
-      let arr = JSON.parse(localStorage.getItem("car"))
+      // let arr = JSON.parse(localStorage.getItem("car"))
     
   
-      useEffect(() => {
-          setCar2(arr);
-      }, [arr])
+      // useEffect(() => {
+      //     setCar2(arr);
+      // }, [arr])
   
-      const clickCar=()=>{
+      // const clickCar=()=>{
         
           
         
-      }
+      // }
 
 
       /*fin carga carrito*/
@@ -332,13 +332,13 @@ function App() {
     <div>
       <Routes>
         <Route path="/" element={<Home valiLoginAdmin={valiLoginAdmin} />} />
-        <Route path="/products" element={<Products clickCar={clickCar} valiLoginAdmin={valiLoginAdmin} />} />
+        <Route path="/products" element={<Products valiLoginAdmin={valiLoginAdmin} />} />
         <Route path="/register" element={valiLogin ? <Navigate replace to="/account" /> : <Register switchShown={switchShown} shown={shown} onClick={onClick} alertConexion={alertConexion} setalertConexion={setalertConexion} alertUser={alertUser} setalertUser={setalertUser} setmessages={setmessages} messages={messages} validemail={validemail} validUsername={validUsername} confrimPasword={confrimPasword} onChangeconfrimPasword={onChangeconfrimPasword} postApi={postApi} emailRegister={emailRegister} passwordRegister={passwordRegister} usernameRegister={usernameRegister} onChangeemailRegister={onChangeemailRegister} onChangepasswordRegister={onChangepasswordRegister} onChangeusernameRegister={onChangeusernameRegister} />} />
         <Route path="/terminos" element={<Terminos valiLoginAdmin={valiLoginAdmin} />} />
         <Route path="/politicas" element={<Politicas valiLoginAdmin={valiLoginAdmin} />} />
         <Route path="/contact" element={<Contact valiLoginAdmin={valiLoginAdmin} />} />
         <Route path="/login" element={valiLogin ? <Navigate replace to="/account" /> : <Login alertUserLoginPassword={alertUserLoginPassword} setalertUserLoginPassword={setalertUserLoginPassword} setalertConexionLogin={setalertConexionLogin} alertConexionLogin={alertConexionLogin} alertUserLogin={alertUserLogin} setalertUserLogin={setalertUserLogin} messagesLogin={messagesLogin} onClick2={onClick2} switchShown2={switchShown2} shown2={shown2} userLogin={userLogin} ClickLogin={ClickLogin} passwordUser={passwordUser} onChangePasswordLogin={onChangePasswordLogin} onChangeUserLogin={onChangeUserLogin} />} />
-        <Route path="/car" element={<Car productos={productos} valiLoginAdmin={valiLoginAdmin} />} />
+        <Route path="/car" element={<Car  valiLoginAdmin={valiLoginAdmin} />} />
         <Route path="/account" element={valiLogin ? <MyAcount setalertHome={setalertHome} alertHome={alertHome} valiLoginAdmin={valiLoginAdmin} /> : <Navigate replace to="/" />} />
         <Route path="/direction" element={valiLogin ? <Direction setDirection={setDirection} setLocation={setLocation} setTypeHome={setTypeHome} setCity={setCity} setDetails={setDetails}  postApiDirection={postApiDirection} direction={direction} typeHome={typeHome} location={location} city={city} details={details}/>:<Navigate replace to="/"  />} />
         <Route path="/password" element={valiLogin ? <Password />:<Navigate replace to="/" />} />

@@ -3,13 +3,12 @@ import { Link } from "react-router-dom";
 import { Footer } from '../Layout/Footer/Footer';
 import { Header } from '../Layout/Header/Header';
 import { Card } from '../../UI/Card/Card';
+import { FaShoppingCart } from "react-icons/fa";
 import ReactImageMagnify from 'react-image-magnify';
 import back from '../../Image/x.png';
 import Swal from 'sweetalert2';
-// import watchImg300 from '../../Image/assects/acetaminofen300.jpg';
 import axios from "axios"
 import './buy.css'
-// import watchImg1200 from '../../Image/assects/acetaminofen.jpg';
 
 
 export const Buy = (props) => {
@@ -18,9 +17,6 @@ export const Buy = (props) => {
     const [amount, setAmount] = useState(1);
     const [valor, setValor] = useState(1);
     const [Id, setId] = useState([])
-
-
-
 
     /* ------------------------------ add product ---------------------------- */
     const [products_2, setProducts_2] = useState([])
@@ -45,10 +41,10 @@ export const Buy = (props) => {
             timerProgressBar: true,
             buttonsStyling: false,
             customClass: {
-              cancelButton: "Cancel_"
-          },
+                cancelButton: "Cancel_"
+            },
             html: '<div class="pse_content"><a class="text_link" href="/car"><button class="confirm">Ver mi carrito</button></a> </div>'
-          });
+            });
     }
 
     const sumar = () => {
@@ -105,13 +101,11 @@ export const Buy = (props) => {
 
     /*----------------------------------------------------------------------*/
 
-    const formatoMexico = (number) => {
-        const exp = /(\d)(?=(\d{3})+(?!\d))/g;
-        const rep = '$1,';
-        return number.toString().replace(exp,rep);
-      }
-
-   
+    // const formatoMexico = (number) => {
+    //     const exp = /(\d)(?=(\d{3})+(?!\d))/g;
+    //     const rep = '$1,';
+    //     return number.toString().replace(exp,rep);
+    // }
 
     return (
         <>
@@ -126,13 +120,11 @@ export const Buy = (props) => {
                                 src: "https://api-products-healthy.herokuapp.com" + Id.imagen,
                                 width: 300,
                                 height: 200,
-                                
                             },
                             largeImage: {
                                 src: "https://api-products-healthy.herokuapp.com" + Id.imagen,
                                 width: 1000,
                                 height: 667,
-
                             }
                         }} />
                     </div>
@@ -178,7 +170,7 @@ export const Buy = (props) => {
                                 Comprar ahora
                             </button></a>
                             <button className='addBuy_2' onClick={(e) => { add(e) }} value={Id.id}>
-                                Agregar al carrito
+                                Agregar<FaShoppingCart />
                             </button>
                         </div>
                     </div>
