@@ -71,6 +71,16 @@
     transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s;
 }
 
+@media screen and (min-width:1920px){
+    .navbar3{
+        display: none;
+    }
+
+    .menu{
+        display: none;
+    }
+}
+
 @media screen and (max-width:768px){
     .burger-menu{
         display: flex;
@@ -78,5 +88,9 @@
 
     .navbar2{
         display: none;
+    }
+
+    .navbar3{
+        display: flex;
     }
 }
