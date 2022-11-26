@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import emailjs from '@emailjs/browser';
 import { SlUser} from 'react-icons/sl';
 import {TfiEmail} from 'react-icons/tfi';

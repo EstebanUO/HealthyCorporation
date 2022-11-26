@@ -7,6 +7,8 @@
     margin-top: 2rem;
     transition: 300ms all;
     cursor: pointer;
+    justify-content: center;
+    height: 5rem;
 }
 
 /* botones de seetAlert2 */

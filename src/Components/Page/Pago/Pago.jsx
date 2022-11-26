@@ -1,12 +1,12 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from "react-router-dom";
 import { Footer } from "../Layout/Footer/Footer";
-import master from '../../Image/Tarjetas/master2.PNG'
-import visa from '../../Image/Tarjetas/visa2.PNG'
+// import { Route, Routes, Navigate, useNavigate } from "react-router-dom"
 import pse from '../../Image/Tarjetas/pse2.PNG'
 import Swal from 'sweetalert2';
 import logo2 from '../../Image/logo.png';
 import back from '../../Image/back.png';
+import cash from '../../Image/cash.png';
 import './Pago.css'
 /* imagenes de las tarjetas */
 import tarjeta from '../../Image/Tarjetas/banco.PNG'
@@ -26,25 +26,118 @@ import tarjeta10 from '../../Image/Tarjetas/pse.PNG'
 import icon_direction from '../../Image/icon_direction.png'
 import icon_buy from '../../Image/icon_buy.png'
 import icon_regresar from '../../Image/icon_regresar.png'
+import emailjs from '@emailjs/browser';
+import axios from "axios"
+import imagenLogo from '../../Image/logo.gif'
+
 
 export const Pago = () => {
+
+
+
+    /*------- Envia informacion del producto ----- */
+
+    const productId = localStorage.getItem("product");
+    const [Id, setId] = useState([]);
+
+    const baseURL = `https://api-products-healthy.herokuapp.com/api/healthyapp/${productId}`;
+    React.useEffect(() => {
+        axios.get(baseURL).then((response) => {
+            setId(response.data);
+        });
+    }, []);
+
+    /*------- Envia informacion de la direccion----- */
+
+    const [direction_2, setDirection_2] = useState([])
+    // const direction =   localStorage.setItem("direction", direction_2.direccion)
+    let idUser = localStorage.getItem("idUser")
+    const baseURL_ = `https://apiprojectmain.herokuapp.com/api/users/${idUser}`;
+    useEffect(() => {
+        axios.get(baseURL_).then((response) => {
+            setDirection_2(response.data)
+        });
+    }, []);
 
     const check = () => {
         Swal.fire({
             title: '¿Estas seguro?',
-            text: "¡No podrás revertir esto!",
+            text: "¡No podrás hacer la devolucion!",
             icon: 'warning',
             showCancelButton: true,
-            showConfirmButton: false,
-            timer: 5400,
-            timerProgressBar: true,
-            buttonsStyling: false,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: '!Si!, quiero comprarlo',
             cancelButtonText: 'Cancelar',
+            buttonsStyling: false,
+            timer: 8400,
+            timerProgressBar: true,
             customClass: {
-                cancelButton: "Cancel_"
-            },
-            html: '<div class="pse_content"> <a class="text_link" href="/"><button class="confirm">!Si!, quiero comprarlo</button></a></div>'
-        });
+                confirmButton: "confirm",
+                cancelButton: "Cancel"
+            }
+        }).then((result) => {
+            if (result.isConfirmed) {
+
+                /*------- Envia informacion al correo ----- */
+
+                let detailsParams = {
+                    To_name: direction_2.name,
+                    Email: direction_2.email,
+                    Image: "https://api-products-healthy.herokuapp.com" + Id.imagen,
+                    Logo: imagenLogo,
+                    Mensaje: 'El produto que ha comprado es: ' + Id.nombre + ', con un precio de ' + Id.price + ', espera atentamente tu pedido. llegara pronto a tu puerta',
+                    Mensaje2: 'Gracias por contar con nosotros',
+                    Mensaje3: 'Llegara a la sigiente direccion su producto ' + direction_2.direccion + ' ' + direction_2.detalles + '" '
+
+                }
+                // console.log(detailsParams);
+
+                emailjs.send('service_s5wfqts', 'template_o5eak9o', detailsParams, 'lMUEWcDgk7lIRPBZH')
+                    .then(function (response) {
+                        console.log('SUCCESS!', response.status, response.text);
+                        /* muestra si envio */
+                        Swal.fire({
+                            title: 'Compra exitosa',
+                            text: 'Te hemos enviado los detalles de tu compra al correo',
+                            icon: 'success',
+                            showCancelButton: false,
+                            confirmButtonColor: '#3085d6',
+                            cancelButtonColor: '#d33',
+                            confirmButtonText: 'Aceptar',
+                            buttonsStyling: false,
+                            timer: 6400,
+                            timerProgressBar: true,
+                            customClass: {
+                                confirmButton: "confirm",
+                                cancelButton: "Cancel"
+                            }
+                        })
+
+
+                    }, function (error) {
+                        console.log('FAILED...', error);
+
+                        /* muestra no envio */
+                        Swal.fire({
+                            title: 'Oh no... ha orrido un pequeño error',
+                            text: 'Vuelve a intentarlo revisa tu conexion a internet, si el problema aun persiste contactate con nosotros',
+                            icon: 'warning',
+                            showCancelButton: false,
+                            confirmButtonColor: '#3085d6',
+                            cancelButtonColor: '#d33',
+                            confirmButtonText: 'Aceptar',
+                            buttonsStyling: false,
+                            timer: 8400,
+                            timerProgressBar: true,
+                            customClass: {
+                                confirmButton: "confirm",
+                                cancelButton: "Cancel"
+                            }
+                        })
+                    });
+            }
+        })
     }
 
     const check2 = () => {
@@ -54,9 +147,9 @@ export const Pago = () => {
             icon: 'warning',
             showCancelButton: true,
             showConfirmButton: false,
-            timer: 5400,
-            timerProgressBar: true,
             buttonsStyling: false,
+            timer: 8400,
+            timerProgressBar: true,
             cancelButtonText: 'Cancelar',
             customClass: {
                 cancelButton: "Cancel_"
@@ -65,13 +158,15 @@ export const Pago = () => {
         });
     }
 
-    const onSee = () => { document.getElementById("content_det2").style.display = 'flex' };
-    const onBlock = () => { document.getElementById("content_det2").style.display = 'none' };
+    // tarjeta-------------------------------------------------------------------------------
+    // const onSee = () => { document.getElementById("content_det2").style.display = 'flex' };
+    // const onBlock = () => { document.getElementById("content_det2").style.display = 'none' };
+    // -------------------------------------------------------------------------------
 
     const onSee2 = () => { document.getElementById("content_det3").style.display = 'flex' };
     const onBlock2 = () => { document.getElementById("content_det3").style.display = 'none' };
 
-    const onSee3 = () => { document.getElementById("content_det").style.display = 'flex' };
+    // const onSee3 = () => { document.getElementById("content_det").style.display = 'flex' };
     const onBlock3 = () => { document.getElementById("content_det").style.display = 'none' };
 
     const valiLoginName = localStorage.getItem("nameUser");
@@ -103,7 +198,7 @@ export const Pago = () => {
             </div>
 
             <div className='nom_check'>
-                <p className='text_check_2' >¡<b>{valiLoginName}</b> ya casi terminas tu compra!</p>
+                <p className='text_check_2' ><b>¡{valiLoginName}</b> ya casi terminas tu compra!</p>
             </div>
 
             <div className='check_all'>
@@ -113,12 +208,14 @@ export const Pago = () => {
                         </div></nav>
 
                     <div>
-                        <div className='content_tarjet_div' onClick={onSee}>
-                            <p className='pad_check2'>Tarjeta de Crédito o de Débito</p>
-                            <img className='img-tarjet_' src={master} alt="tarjeta imagen" />
-                            <img className='img-tarjet_' src={visa} alt="tarjeta imagen" />
+                        <div className='content_tarjet_div' onClick={check}>
+                            <p className='pad_check2'>Contraentrega</p>
+                            <img className='img-tarjet_' src={cash} alt="tarjeta imagen" />
                         </div>
-                        <div>
+
+                        {/* // tarjeta------------------------------------------------------------------------------- */}
+
+                        {/* <div>
                             <form className='acount_content_all2' id='content_det2'>
                                 <div className='acount_content_tarjet'>
                                     <p className='text_check'>Numero de la tarjeta</p>
@@ -178,7 +275,7 @@ export const Pago = () => {
                                     <button type="submit" className='btn_save' onClick={check}>Comprar</button>
                                 </div>
                             </form>
-                        </div>
+                        </div> */}
 
                         <div className='content_tarjet_div' onClick={onSee2}>
                             <p className='pad_check2'>PSE</p>
@@ -227,7 +324,7 @@ export const Pago = () => {
                             </from>
                         </div>
                     </div>
-                    <p className='methot_buy' onClick={onSee3}>Ver los metodos de pago</p>
+                    {/* <p className='methot_buy' onClick={onSee3}>Ver los metodos de pago</p> */}
                 </div>
             </div >
 
