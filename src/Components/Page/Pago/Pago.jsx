@@ -45,7 +45,7 @@ export const Pago = () => {
         axios.get(baseURL).then((response) => {
             setId(response.data);
         });
-    }, []);
+    }, []); 
 
     /*------- Envia informacion de la direccion----- */
 
@@ -102,16 +102,15 @@ export const Pago = () => {
                             text: 'Te hemos enviado los detalles de tu compra al correo',
                             icon: 'success',
                             showCancelButton: false,
-                            confirmButtonColor: '#3085d6',
-                            cancelButtonColor: '#d33',
-                            confirmButtonText: 'Aceptar',
-                            buttonsStyling: false,
+                            showConfirmButton: false,
                             timer: 6400,
                             timerProgressBar: true,
                             customClass: {
                                 confirmButton: "confirm",
                                 cancelButton: "Cancel"
-                            }
+                            },
+                            html: '<div class="pse_content"><a class="text_link" href="/"><button class="confirm">Ir a inicio</button></a> </div>'
+
                         })
 
 
