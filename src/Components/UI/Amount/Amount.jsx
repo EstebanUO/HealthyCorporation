@@ -7,7 +7,7 @@ import delect from '../../Image/eliminar.png'
 import Swal from 'sweetalert2';
 // import logo2 from '../../Image/logo.png'
 import back from '../../Image/back.png';
-// import axios from "axios"
+import axios from "axios"
 import { Header } from '../../Page/Layout/Header/Header';
 
 export const Amount = (props) => {

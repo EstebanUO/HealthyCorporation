@@ -67,7 +67,9 @@ const derivacionDeClaveBasadaEnContraseña = async (contraseña, sal, iteracione
         let usaername=""
         let emailSend=""
         
+        
         response.data.map(async(data) => {
+            
 
             if (email===data.email) {
                 
@@ -78,8 +80,27 @@ const derivacionDeClaveBasadaEnContraseña = async (contraseña, sal, iteracione
                 onsubmit(usaername,await desencriptar(contraseñaDesencriptar, data.password),emailSend,event,validacion)
        
             }
+            
             return "termino map";
         });
+
+        if(!validateData()){
+            return console.log("invalido");
+        }else if(validateData()){
+            
+            if(validacion){
+                // seterrorEmail("Email no registrado en nuestra base de datos")
+                Swal.fire({
+                    icon: 'warning',
+                    title: "Email no registrado en nuestra base de datos",
+                    html: "<p>Por favor verifica si escribistes bien el <b>Email</b></p>",
+                    showConfirmButton: false,
+                    timerProgressBar: true,
+                    timer: 5000
+                })
+
+            } 
+        }
         
         
       })
@@ -147,17 +168,6 @@ const derivacionDeClaveBasadaEnContraseña = async (contraseña, sal, iteracione
                 })
                 return console.log("valido")
 
-            }else if(validacion){
-                // seterrorEmail("Email no registrado en nuestra base de datos")
-                Swal.fire({
-                    icon: 'warning',
-                    title: "Email no registrado en nuestra base de datos",
-                    html: "<p>Por favor verifica si escribistes bien el <b>Email</b></p>",
-                    showConfirmButton: false,
-                    timerProgressBar: true,
-                    timer: 5000
-                })
-                console.log("email no encontrado");
             } 
         }
     }

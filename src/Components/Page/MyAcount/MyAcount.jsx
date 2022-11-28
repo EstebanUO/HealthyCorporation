@@ -12,6 +12,7 @@ import { Header } from '../Layout/Header/Header'
 import cerrar from '../../Image/Icons/cerrar.png';
 import { NavBar } from '../../UI/NavBar/NavBar';
 
+import './MyAcount.css'
 
 export const MyAcount = (props) => {
 
