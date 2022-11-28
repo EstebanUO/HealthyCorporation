@@ -82,6 +82,7 @@ export const Amount = (props) => {
 
     // window.onload=()=>{
         
+        
     // }
 
     const arr = JSON.parse(localStorage.getItem("car"));
