@@ -7,7 +7,7 @@ import delect from '../../Image/eliminar.png'
 import Swal from 'sweetalert2';
 // import logo2 from '../../Image/logo.png'
 import back from '../../Image/back.png';
-// import axios from "axios"
+import axios from "axios"
 import { Header } from '../../Page/Layout/Header/Header';
 
 export const Amount = (props) => {
@@ -80,38 +80,41 @@ export const Amount = (props) => {
         })
     }
 
-    window.onload=()=>{
-        console.log("cargo");
+    // window.onload=()=>{
+        
+        
+    // }
+
+    const arr = JSON.parse(localStorage.getItem("car"));
+    const [productos, setproductos] = useState("")
+
+    const carge=()=>{
+        console.log(arr);
+        for (let index = 0; index < arr.length; index++) {
+            const baseURL = `https://api-products-healthy.herokuapp.com/api/healthyapp/${arr[index]}`;
+                axios.get(baseURL).then((response) => { 
+                    if(productos === null){
+                        setproductos(response.data)
+    
+                    } else if (productos !== null){
+                        setproductos(response.data.concat(productos))
+                    }
+                });
+        }
+        
     }
 
 
-
-
-    // let car_2 = Car[2]
-
-    // for (let index = 0; index < Car.length; index++) {
-    //     const baseURL = `https://api-products-healthy.herokuapp.com/api/healthyapp/${Car[index]}`;
-    //         axios.get(baseURL).then((response) => { 
-    //             if(products === null){
-    //                 setProducts(response.data)
-
-    //             } else if (products !== null){
-    //                     setProducts(response.data.concat(products))
-    //             }
-    //         });
-    // }
-
- 
 
     return (
         <>
             <Header valiLoginAdmin={props.valiLoginAdmin}/>
             
-            <div className="content_car">
+            <div   className="content_car">
                 <nav className='nav_check_'><p className='pad_check_'>Tu carrito de compras</p>
                     <div className='back_up_'><Link to="/products"><img className='img_up2' src={back} alt="atras" /><p className='back'>Atras</p></Link>
                     </div></nav>
-                <div className='product'>
+                <div onLoad={carge} className='product'>
                      {/* {props.productos.map((data) => ( */}
                         <> <div  className="product_all">
                             <div>
@@ -134,7 +137,7 @@ export const Amount = (props) => {
                                 <img onClick={delectt} className='delect_producto' src={delect} alt="eiminar producto" />
                             </div>
                         </div> <br /></>
-                    {/* ))} */}
+                     {/* ))}  */}
 
 
 
