@@ -77,6 +77,7 @@
 
 .text-descrip {
     color: gray;
+    margin-top: -1rem;
 }
 
 .text-descrip2 {
@@ -152,7 +153,7 @@ hr {
     flex-direction: row;
     justify-content: space-around;
     background-color: white;
-    width: 57rem;
+    width: 57.5rem;
     align-items: center;
     border-radius: 0.7rem;
     box-shadow: #0e1e251f 0px 2px 4px 0px, #0e1e2552 0px 2px 10px 0px;
@@ -223,7 +224,6 @@ hr {
 .addBuy {
     display: flex;
     align-items: center;
-    width: 22.5rem;
 }
 
 .addBuy_ {
@@ -499,7 +499,7 @@ hr {
     }
 
     .row_buy {
-        width: 62rem;
+        width: 62.5rem;
     }
 }
 

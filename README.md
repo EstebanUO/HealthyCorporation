@@ -14,3 +14,8 @@ instalar sweetalert
     -npm i react-image-magnify 
 
     -npm install react-icons --force
+
+    Para hacer el filtrado por categoria.
+        https://www.youtube.com/watch?v=JY7eV4VMeV0 
+        https://www.youtube.com/watch?v=3_sj5tfs05g
+        https://www.youtube.com/watch?v=gPH7sCyXFb4

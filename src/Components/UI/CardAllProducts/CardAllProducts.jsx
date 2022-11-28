@@ -28,7 +28,7 @@ export const CardAllProducts = ({characters}) => {
       showCancelButton: true,
       cancelButtonText: 'Cancelar',
       cancelButtonColor: '#d33',
-      timer: 3400,
+      timer: 7400,
       timerProgressBar: true,
       buttonsStyling: false,
       customClass: {
