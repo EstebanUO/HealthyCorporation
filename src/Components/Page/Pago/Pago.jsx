@@ -33,8 +33,6 @@ import imagenLogo from '../../Image/logo.gif'
 
 export const Pago = () => {
 
-
-
     /*------- Envia informacion del producto ----- */
 
     const productId = localStorage.getItem("product");
@@ -80,12 +78,13 @@ export const Pago = () => {
             if (result.isConfirmed) {
 
                 /*------- Envia informacion al correo ----- */
-
+                let randomNumber = Math.round(Math.random(1000)*100000);
                 let detailsParams = {
                     To_name: direction_2.name,
                     Email: direction_2.email,
                     Image: "https://api-products-healthy.herokuapp.com" + Id.imagen,
                     Logo: imagenLogo,
+                    numero: randomNumber,
                     Mensaje: 'El produto que ha comprado es: ' + Id.nombre + ', con un precio de ' + Id.price + ', espera atentamente tu pedido. llegara pronto a tu puerta',
                     Mensaje2: 'Gracias por contar con nosotros',
                     Mensaje3: 'Llegara a la sigiente direccion su producto ' + direction_2.direccion + ' ' + direction_2.detalles + '" '

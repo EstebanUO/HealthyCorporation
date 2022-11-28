@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaShoppingCart } from "react-icons/fa";
 // import { MdAttachMoney } from "react-icons/Md";
 import Swal from 'sweetalert2'
-import axios from "axios"
+// import axios from "axios"
 // import { keyboard } from "@testing-library/user-event/dist/keyboard";
 
 export const CardAllProducts = ({characters}) => {
