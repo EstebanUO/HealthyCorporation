@@ -14,9 +14,13 @@ export const NavBar = (props) => {
     useEffect(() => {
         if (Counter2 === null) {
             console.log(Counter2)
-        } else if (Counter2 != null) {
+            
+        } else if (Counter2 !== null) {
+            
             setCounter(Counter2.length)
+            
         }
+        
     }, [Counter2])
 
 
@@ -63,9 +67,7 @@ export const NavBar = (props) => {
         }
     }
 
-    const click=()=>{
-        
-    }
+
 
 
 
@@ -83,7 +85,7 @@ export const NavBar = (props) => {
                     <Link to='/register'  className={'links active'}><FaUserAlt /> Mi cuenta</Link>
                 </div>
                 <div id='nav4' className='navbar2'>
-                    <Link to='/car'   className={'links active'}><FaShoppingCart onClick={click}/>{counter}</Link>
+                    <Link to='/car'   className={'links active'}><FaShoppingCart />{counter}</Link>
                 </div>
                 <div className="burger-menu" onClick={updateMenu}>
                     <div className={burger_class} ></div>

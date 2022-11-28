@@ -11,6 +11,7 @@ export const CardAllProducts = ({characters}) => {
 
   let validDatos = (localStorage.getItem("car"))
   // let array = JSON.parse(localStorage.getItem("car"))
+  
   const add = (e) => {
 
 
