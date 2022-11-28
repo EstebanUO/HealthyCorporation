@@ -2269,6 +2269,8 @@ input[type="range"]:active::-webkit-slider-thumb{
     grid-template-columns: 1fr 1fr;
     justify-items: end;
   }
+
+
 }
 
 
