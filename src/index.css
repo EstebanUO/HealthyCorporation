@@ -1059,14 +1059,9 @@ a {
 }
 
 .input_acount2 {
-
-
-
-  background-color: white;
+    background-color: white;
     padding: 10px;
-    margin-right: 16rem; 
     padding-left: 17px;
-    
     width: 95%;
     color: #AEB3B7;
     text-decoration: none;
@@ -1108,10 +1103,7 @@ a {
   height: 3rem;
   border-radius: 0.5rem;
   font-size: 1.3rem;
-  margin-bottom: 1rem;
-  margin-top: 5.5rem;
   transition: all 400ms;
-  margin-right: 2rem;
 }
 
 .btn_update:hover {
@@ -1146,8 +1138,7 @@ a {
 }
 
 .acount_content_tarjet {
-  padding-left: 3rem;
-  padding-right: 2.5rem;
+  padding-left: 1rem;
 }
 
 .input_acount4 {
