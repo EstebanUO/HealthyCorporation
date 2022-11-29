@@ -100,7 +100,7 @@ export const NavBar = (props) => {
                         <Link to='/register'  className={'links active'}><FaUserAlt /> Mi cuenta</Link>
                     </div>
                     <div id='nav4' className='navbar3'>
-                        <Link to='/car'   className={'links active'}><FaShoppingCart onClick={props.clickCar}/>{counter}</Link>
+                        <Link to='/car'   className={'links active'}><FaShoppingCart />{counter}</Link>
                     </div>
                 </div>
             </div>

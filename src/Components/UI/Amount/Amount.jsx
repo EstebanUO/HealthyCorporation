@@ -79,52 +79,29 @@ export const Amount = (props) => {
             }
         })
     }
-
-    // window.onload=()=>{
-        
-        
-    // }
-
-    const arr = JSON.parse(localStorage.getItem("car"));
-    const [productos, setproductos] = useState("")
-
-    const carge=()=>{
-        console.log(arr);
-        for (let index = 0; index < arr.length; index++) {
-            const baseURL = `https://api-products-healthy.herokuapp.com/api/healthyapp/${arr[index]}`;
-                axios.get(baseURL).then((response) => { 
-                    if(productos === null){
-                        setproductos(response.data)
     
-                    } else if (productos !== null){
-                        setproductos(response.data.concat(productos))
-                    }
-                });
-        }
-        
-    }
-
+    const arr = JSON.parse(localStorage.getItem("car"));
 
 
     return (
         <>
-            <Header valiLoginAdmin={props.valiLoginAdmin}/>
+            <Header  valiLoginAdmin={props.valiLoginAdmin}/>
             
-            <div   className="content_car">
+            <div  className="content_car">
                 <nav className='nav_check_'><p className='pad_check_'>Tu carrito de compras</p>
                     <div className='back_up_'><Link to="/products"><img className='img_up2' src={back} alt="atras" /><p className='back'>Atras</p></Link>
                     </div></nav>
-                <div onLoad={carge} className='product'>
-                     {/* {props.productos.map((data) => ( */}
-                        <> <div  className="product_all">
+                <div   className='product'>
+                     {arr.map((data) => (
+                        <> <div id={data.ids}  className="product_all">
                             <div>
-                                <img className='product_img'  alt="imagen prodcuto" />
+                                <img className='product_img'  src={"https://api-products-healthy.herokuapp.com"+data.imagenes} />
                             </div>
                             <div className='product_name'>
-                                <p className='error_'></p>
+                                <p className='error_'>{data.nombres}</p>
                             </div>
                             <div className='product_price'>
-                                <p className='error'>$ </p>
+                                <p className='error'>${data.prices} </p>
                             </div>
                             <div className='product_btn'> 
                                 <div className='product_btn2'>
@@ -137,7 +114,7 @@ export const Amount = (props) => {
                                 <img onClick={delectt} className='delect_producto' src={delect} alt="eiminar producto" />
                             </div>
                         </div> <br /></>
-                     {/* ))}  */}
+                       ))}   
 
 
 
@@ -171,6 +148,7 @@ export const Amount = (props) => {
                     </div>
                 </div>
             </div>
+
 
             <Footer />
         </>

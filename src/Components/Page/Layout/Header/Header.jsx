@@ -14,7 +14,7 @@ export const Header = (props) => {
               <Link to='/'><img src={logo} alt="Logo" /></Link>
           </div>
         </header>
-        <NavBar clickCar={props.clickCar} />
+        <NavBar />
         <Nav valiLoginAdmin={props.valiLoginAdmin} />
     </>
   )

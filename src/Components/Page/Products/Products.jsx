@@ -106,7 +106,7 @@ export const Products = (props) => {
 
   return (
     <div>
-      <Header clickCar={props.clickCar} valiLoginAdmin={props.valiLoginAdmin} /><br /><br />
+      <Header valiLoginAdmin={props.valiLoginAdmin} /><br /><br />
       <h2 className='titleCategoria'>Compra por categoría</h2>
       <Categories />
       <br /><br />
