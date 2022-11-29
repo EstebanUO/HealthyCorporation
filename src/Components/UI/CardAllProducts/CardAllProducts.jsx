@@ -10,15 +10,18 @@ export const CardAllProducts = ({characters}) => {
   const [products_2, setProducts_2] = useState([])
 
   let validDatos = (localStorage.getItem("car"))
+
   // let array = JSON.parse(localStorage.getItem("car"))
   
-  const add = (e) => {
+  const add = (nombre,price,imagen,id) => {
 
+    var datos={nombres:nombre,prices:price,imagenes:imagen,ids:id}
 
-    setProducts_2(products_2 => products_2.concat(e.target.value))
+    setProducts_2(products_2 => products_2.concat(datos))
     validDatos === null ? validDatos = [] : validDatos = JSON.parse(validDatos);
 
-    localStorage.setItem("car", JSON.stringify(validDatos.concat(e.target.value)))
+    localStorage.setItem("car", JSON.stringify(validDatos.concat(datos)))
+
     // props.setcounter_h(array)
 
     Swal.fire({
@@ -85,7 +88,7 @@ export const CardAllProducts = ({characters}) => {
               </div>
             </div>
             <div className='addProduct'>
-              <button onClick={(e) => { add(e) }} className='addProduct_' value={data.id}>
+              <button onClick={(e) => { add(data.nombre,data.price,data.imagen,data.id) }} className='addProduct_' value={{'id':data.id,'imagen':data.imagen,'price':data.price,'nombre':data.nombre}}>
                 Agregar <FaShoppingCart />
               </button>
               <Link to="/compra"><button onClick={(e) => { add_2(e) }} className='addProduct_2' value={data.id}>

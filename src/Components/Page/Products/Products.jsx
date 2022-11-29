@@ -33,7 +33,7 @@ export const Products = (props) => {
 
   function slideTwo() {
     if (slider2 - slider1 <= minGap) {
-      slider2 = slider1 + minGap;
+      slider2 = slider1 - minGap;
       fillColor();
     }
     document.getElementById("range2").textContent = slider2;
@@ -104,9 +104,33 @@ export const Products = (props) => {
 
   const inputCharacters = characters.filter((character) => character.nombre.toLowerCase().includes(texto.toLowerCase()))
 
+  /*------------------- Categorias ----------------------------- */
+
+  const [categorias, setCategorias] = useState([])
+
+  useEffect(() => {
+    const URL2 = 'https://api-products-healthy.herokuapp.com/api/categorias'
+
+    const asyncFetchData2 = async () => {
+      const res = await fetch(URL2)
+      const data = await res.json()
+      setCategorias(data)
+      // console.log(data);
+    }
+    asyncFetchData2();
+  }, [])
+
+  const filterResult = (cat) =>{
+    const result = categorias.filter((character) => {
+      return character.nombre !== cat
+    })
+    setCategorias(result)
+    console.log(result);
+  }
+
   return (
     <div>
-      <Header clickCar={props.clickCar} valiLoginAdmin={props.valiLoginAdmin} /><br /><br />
+      <Header valiLoginAdmin={props.valiLoginAdmin} /><br /><br />
       <h2 className='titleCategoria'>Compra por categoría</h2>
       <Categories />
       <br /><br />
@@ -134,15 +158,11 @@ export const Products = (props) => {
             <div className='filterCategoria'>
               <label onClick={switchShown} className='categIcon' role="button">Categoría  {shown ? <FaArrowCircleUp onClick={switchShown} className='iconArrow' /> : <FaArrowCircleDown onClick={switchShown} className='iconArrow' />}</label>
               <div className='subCategorias' id='subCategorias'>
-                <div className='subCategorias2'>
-                  <input type="checkbox" /><p>Medicamentos</p>
+                {categorias.map((data, key) => (
+                <div className='subCategorias2' key={key}>
+                  <p type='button'><input type="checkbox" onClick={() => filterResult()}/>{data.nombre}</p>
                 </div>
-                <div className='subCategorias2'>
-                  <input type="checkbox" /><p>Dolor e inflamación</p>
-                </div>
-                <div className='subCategorias2'>
-                  <input type="checkbox" /><p>Gripa y tos</p>
-                </div>
+                ))}
               </div>
             </div>
             <hr />

@@ -350,6 +350,8 @@ function App() {
       // /* fin validaciones direcciones  */
 
 
+
+
   return (
     <div>
       <Routes>
@@ -360,7 +362,7 @@ function App() {
         <Route path="/politicas" element={<Politicas valiLoginAdmin={valiLoginAdmin} />} />
         <Route path="/contact" element={<Contact valiLoginAdmin={valiLoginAdmin} />} />
         <Route path="/login" element={valiLogin ? <Navigate replace to="/account" /> : <Login alertUserLoginPassword={alertUserLoginPassword} setalertUserLoginPassword={setalertUserLoginPassword} setalertConexionLogin={setalertConexionLogin} alertConexionLogin={alertConexionLogin} alertUserLogin={alertUserLogin} setalertUserLogin={setalertUserLogin} messagesLogin={messagesLogin} onClick2={onClick2} switchShown2={switchShown2} shown2={shown2} userLogin={userLogin} ClickLogin={ClickLogin} passwordUser={passwordUser} onChangePasswordLogin={onChangePasswordLogin} onChangeUserLogin={onChangeUserLogin} />} />
-        <Route path="/car" element={<Car  valiLoginAdmin={valiLoginAdmin} />} />
+        <Route path="/car" element={<Car   valiLoginAdmin={valiLoginAdmin} />} />
         <Route path="/account" element={valiLogin ? <MyAcount setalertHome={setalertHome} alertHome={alertHome} valiLoginAdmin={valiLoginAdmin} /> : <Navigate replace to="/" />} />
         <Route path="/direction" element={valiLogin ? <Direction setDirection={setDirection} setLocation={setLocation} setTypeHome={setTypeHome} setCity={setCity} setDetails={setDetails}  postApiDirection={postApiDirection} direction={direction} typeHome={typeHome} location={location} city={city} details={details}/>:<Navigate replace to="/"  />} />
         <Route path="/password" element={valiLogin ? <Password />:<Navigate replace to="/" />} />
