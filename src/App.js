@@ -128,7 +128,7 @@ function App() {
         response.data.map(async (data) => {
           
           const desencriptado = await desencriptar(contraseñaDesencriptar, data.password);
-          
+          // console.log(desencriptado);
           if (userLogin === data.email && passwordUser === desencriptado) {
             
             localStorage.setItem("EmailValid", true);
@@ -136,7 +136,7 @@ function App() {
             // setidUser(data.id);
             localStorage.setItem("idUser", data.id);
             localStorage.setItem("EmailValid", true);
-            localStorage.setItem("EmalValidUser", data.email);
+            // localStorage.setItem("EmalValidUser", data.email);
             localStorage.setItem("nameUser", data.name);
           
             // setusernameUser(data.name);
