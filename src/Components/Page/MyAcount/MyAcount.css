@@ -1,0 +1,87 @@
+@media screen and (max-width:740px) {
+    .acount_content_all{
+        padding: 1rem;
+        width: 35rem;
+      }
+
+      .btn_update{
+        width: 10rem;
+        font-size: 1rem;
+    }
+}
+
+
+@media screen and (max-width:550px) {
+    .acount_content_all{
+        padding: 1rem;
+        width: 30rem;
+      }
+
+    .btn_update{
+        margin-left: -2rem;
+        width: 5rem;
+        font-size: 1rem;
+    }
+
+    .input_acount{
+        width: 84%;
+    }
+
+    .input_acount2{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:490px) {
+
+    .text_check{
+        font-size: 1rem;
+    }
+
+    .acount_content_all{
+        width: 27rem;
+    }
+
+    .btn_update{
+        margin-top: 8rem;
+        margin-left: -27rem;
+        width: 7rem;
+        font-size: 1rem;
+    }
+
+    .input_acount2{
+        width: 63%;
+    }
+
+    .input_acount{
+        width: 100%;
+    }
+
+
+}
+
+@media screen and (max-width:360px) {
+
+    .text_check{
+        font-size: 1rem;
+    }
+
+    .acount_content_all{
+        width: 17rem;
+    }
+
+    .btn_update{
+        margin-top: 10.5rem;
+        margin-left: -32rem;
+        width: 7rem;
+        font-size: 1rem;
+    }
+
+    .input_acount2{
+        width: 50%;
+    }
+
+    .input_acount{
+        width: 120%;
+    }
+}

@@ -143,42 +143,6 @@ export const Products = (props) => {
                 <div className='subCategorias2'>
                   <input type="checkbox" /><p>Gripa y tos</p>
                 </div>
-                <div className='subCategorias2'>
-                  <input type="checkbox" /><p>Nutrición especializada</p>
-                </div>
-                <div className='subCategorias2'>
-                  <input type="checkbox" /><p>Salud sexual</p>
-                </div>
-                <div className='subCategorias2'>
-                  <input type="checkbox" /><p>Antialergicos y descongestionantes</p>
-                </div>
-                <div className='subCategorias2'>
-                  <input type="checkbox" /><p>Medicamentos con prescripción medica</p>
-                </div>
-                <div className='subCategorias2'>
-                  <input type="checkbox" /><p>Piel</p>
-                </div>
-                <div className='subCategorias2'>
-                  <input type="checkbox" /><p>Rehidratación</p>
-                </div>
-                <div className='subCategorias2'>
-                  <input type="checkbox" /><p>Antiparasitos</p>
-                </div>
-                <div className='subCategorias2'>
-                  <input type="checkbox" /><p>Cuidado intimo</p>
-                </div>
-                <div className='subCategorias2'>
-                  <input type="checkbox" /><p>Nutrición infantil</p>
-                </div>
-                <div className='subCategorias2'>
-                  <input type="checkbox" /><p>Sistema infantil</p>
-                </div>
-                <div className='subCategorias2'>
-                  <input type="checkbox" /><p>Cuidado de la herida</p>
-                </div>
-                <div className='subCategorias2'>
-                  <input type="checkbox" /><p>Vitaminas y minerales</p>
-                </div>
               </div>
             </div>
             <hr />
