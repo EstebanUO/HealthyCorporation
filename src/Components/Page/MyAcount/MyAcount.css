@@ -18,7 +18,6 @@
       }
 
     .btn_update{
-        margin-left: -2rem;
         width: 5rem;
         font-size: 1rem;
     }
@@ -32,10 +31,12 @@
     }
 }
 
+
+
 @media screen and (max-width:490px) {
 
     .text_check{
-        font-size: 1rem;
+        width: 23rem;
     }
 
     .acount_content_all{
@@ -43,45 +44,71 @@
     }
 
     .btn_update{
-        margin-top: 8rem;
-        margin-left: -27rem;
         width: 7rem;
         font-size: 1rem;
     }
 
     .input_acount2{
-        width: 63%;
+        width: 104%;
     }
 
     .input_acount{
         width: 100%;
     }
-
-
 }
+
+
+
+@media screen and (max-width:420px) {
+    .text_check{
+        width: 11rem;
+    }
+
+
+    .acount_content_all{
+        width: 20rem;
+    }
+
+    .input_acount2{
+        width: 45%;
+    }
+
+    .btn_update {
+        width: 7rem;
+        font-size: 1rem;
+    }
+}
+
 
 @media screen and (max-width:360px) {
 
     .text_check{
+        width: 12rem;
         font-size: 1rem;
     }
 
     .acount_content_all{
-        width: 17rem;
+        display: flex;
+   
     }
 
     .btn_update{
-        margin-top: 10.5rem;
-        margin-left: -32rem;
         width: 7rem;
         font-size: 1rem;
     }
 
     .input_acount2{
-        width: 50%;
+        width: 42%;
     }
 
     .input_acount{
         width: 120%;
     }
+
+    .acount_content_tarjet{
+        
+    }
 }
+
+
+
