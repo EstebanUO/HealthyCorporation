@@ -21,13 +21,14 @@ export const Amount = (props) => {
     const onload= ()=> {
         let total=0;
         
-        
-        for(let i = 0; i <= arrs.length-1; i++){
-            total+=arrs[i].prices
-            console.log(arrs[i].prices);
-        } ;  
+        if (priceTotal===0) {
+            for(let i = 0; i <= arrs.length-1; i++){
+                total+=arrs[i].prices
+            } ;  
+    
+            setpriceTotal(total)
+        }
 
-        setpriceTotal(total)
         
     }
 
@@ -108,13 +109,8 @@ export const Amount = (props) => {
                 const datos=arr.indexOf(data)
                 const filtro = arr.filter((item) => item !== arr[datos]) 
                 localStorage.setItem("car", JSON.stringify(filtro))
-                setarr(filtro)  
-                const price = document.getElementById("price"+data.ids)
-                const priceLimpio=parseInt(price.innerHTML.slice(1))
-                const newValor=priceTotal-priceLimpio
-                setpriceTotal(newValor)
-
-                 
+                setarr(filtro) 
+                window.location.reload()    
             }
         })
     }
