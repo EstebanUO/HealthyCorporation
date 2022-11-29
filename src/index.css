@@ -1462,25 +1462,6 @@ hr {
   align-items: center;
 } */
 
-.name_Product{
-  color: #5bc3fc;
-  font-size: 1.7rem;
-  padding-left: 1rem;
-  margin-bottom: 0;
-}
-
-.name_Product_{
-  color: #5bc3fc;
-  font-size: .9rem;
-  padding-left: 1rem;
-}
-
-.price_product{
-  font-size: 1.3rem;
-  padding-left: 1rem;
-  margin-bottom: 0;
-}
-
 .price_product_ofert{
   font-size: .9rem;
   padding-left: 1rem;
@@ -1505,13 +1486,6 @@ hr {
   font-size: .7rem;
   border-left: solid 1px black;
   border-right: solid 1px black;
-}
-
-.addProduct{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem; 
 }
 
 .addProduct_{
@@ -1763,6 +1737,24 @@ input[type="range"]:active::-webkit-slider-thumb{
 
 .text_welcome{
   font-size: 1.7rem;
+}
+
+/*Scrollbar styles*/
+::-webkit-scrollbar{
+  width: 9px;
+}
+
+::-webkit-scrollbar-track{
+  background: #fff;
+}
+
+::-webkit-scrollbar-thumb{
+  background: #44D2F2;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+  background: #000;
 }
 
 /*-------- Responsive 1920px ---------*/
@@ -2217,6 +2209,7 @@ input[type="range"]:active::-webkit-slider-thumb{
 }
 
 
+
   /*-------- Responsive 700px ---------*/
 
 
@@ -2312,8 +2305,8 @@ input[type="range"]:active::-webkit-slider-thumb{
   
 
   .formulario3{
-   margin-left: 0.1rem;
-    }
+    margin-left: 0.1rem;
+  }
 
   .message2{
     margin-top: 1rem;
