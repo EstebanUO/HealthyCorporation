@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaShoppingCart } from "react-icons/fa";
 // import { MdAttachMoney } from "react-icons/Md";
 import Swal from 'sweetalert2'
-import axios from "axios"
 // import { keyboard } from "@testing-library/user-event/dist/keyboard";
 
 export const CardAllProducts = ({characters,datosFiltrados,texto}) => {
@@ -53,11 +52,11 @@ export const CardAllProducts = ({characters,datosFiltrados,texto}) => {
   // --------------------- compra  ----------------------------
 
   /*no eliminar este usestate por que se cae la pagina*/
-  const [products_3, setProducts_3] = useState([]);
+
   /*/////////////////////////////////////////////////*/
   let validDatos_2 = (localStorage.getItem("product"));
   const add_2 = (e) => {
-      setProducts_3(products_3 => products_3.concat(e.target.value)) 
+
 
       validDatos_2 === null ? validDatos_2=[] : validDatos_2=JSON.parse(validDatos_2)
       localStorage.setItem('product', JSON.stringify(validDatos_2))
