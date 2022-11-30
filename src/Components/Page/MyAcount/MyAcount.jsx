@@ -14,7 +14,6 @@ import { NavBar } from '../../UI/NavBar/NavBar';
 import axios from "axios"
 import Swal from 'sweetalert2';
 import './MyAcount.css'
-
 import { SettingsInputCompositeRounded } from '@mui/icons-material';
 
 export const MyAcount = (props) => {
@@ -32,6 +31,8 @@ export const MyAcount = (props) => {
   const [email, setEmail] = useState("");
   const [pass, setPass] = useState("");
   const [user_, setUser_] = useState([]);
+  const [encrypted_, setEncrypted_] = useState([]);
+
 
   // trae la informacion del usuario
   const idUser = localStorage.getItem("idUser")
@@ -43,15 +44,14 @@ export const MyAcount = (props) => {
     });
   }, []);
 
-  // desncriptar contraseña
-  /*validaciones usuario*/
+  // encriptar contraseña
+  const bufferABase64 = buffer => btoa(String.fromCharCode(...new Uint8Array(buffer)));
   const base64ABuffer = buffer => Uint8Array.from(atob(buffer), c => c.charCodeAt(0));
   const LONGITUD_SAL = 16;
   const LONGITUD_VECTOR_INICIALIZACION = LONGITUD_SAL;
-  const contraseñaDesencriptar = "lfjdnd193016"
-  //   const [errorEmail, seterrorEmail] = useState(null)
+  const contraseñaEncriptar = "lfjdnd193016"
+  // const contraseñaDesencriptar = "lfjdnd193016"
 
-  /*funciones de desencriptado*/
   const derivacionDeClaveBasadaEnContraseña = async (contraseña, sal, iteraciones, longitud, hash, algoritmo = 'AES-CBC') => {
     const encoder = new TextEncoder();
     let keyMaterial = await window.crypto.subtle.importKey(
@@ -74,7 +74,6 @@ export const MyAcount = (props) => {
       ['encrypt', 'decrypt']
     );
   }
-
   const desencriptar = async (contraseña, encriptadoEnBase64) => {
     const decoder = new TextDecoder();
     const datosEncriptados = base64ABuffer(encriptadoEnBase64);
@@ -91,21 +90,16 @@ export const MyAcount = (props) => {
 
 
 
+  (async function () {
+    const encriptado = await desencriptar(contraseñaEncriptar,   localStorage.getItem("Password"));
+    // console.log(encriptado);
+    setEncrypted_(encriptado);
+  })();
+// console.log(encrypted_);
 
   // subir los datos 
-  const validation = async () => {
-
-    const desencriptado = await desencriptar(contraseñaDesencriptar, user_.password);
-    console.log(desencriptado);
-
-    if (desencriptado === pass) {
-      Swal.fire({
-        title: 'Se han actualizado tus datos',
-        icon: 'success',
-        showCancelButton: false,
-        showConfirmButton: false
-        
-      })
+  const validation = () => {
+    if (encrypted_ === user_.password) {
       axios.put(`https://apiprojectmain.herokuapp.com/api/users/${idUser}`, {
         "name": user,
         "email": email
@@ -118,7 +112,7 @@ export const MyAcount = (props) => {
       setUser("");
       setEmail("");
 
-    } else if (desencriptado !== pass) {
+    } else if (encrypted_ !== pass) {
       Swal.fire({
         title: 'Contraseña incorrecta',
         text: 'Vuelve a intentarlo',
@@ -130,9 +124,7 @@ export const MyAcount = (props) => {
         confirmButtonText: 'Aceptar',
         buttonsStyling: false,
       })
-
     }
-
   }
 
   return (
