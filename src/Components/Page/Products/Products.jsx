@@ -70,7 +70,7 @@ export const Products = (props) => {
   function filterFunction2() {
     if (shown2 === false) {
       document.querySelector(".subCategorias0").style.display = "flex";
-    } else if (shown2 == true) {
+    } else if (shown2 === true) {
       document.querySelector(".subCategorias0").style.display = "none";
     }
   }
@@ -123,7 +123,7 @@ export const Products = (props) => {
 
   /*------------ Filtro categorias -----------*/
 
-  const [categoriaSeleccionada, setcategoriaSeleccionada] = useState(false)
+  const [categoriaSeleccionada, setcategoriaSeleccionada] = useState([])
   const [datosFiltrados, setDatosFiltrados] = useState([])
 
   const handleOneCheckbox = (e) =>{
@@ -132,21 +132,20 @@ export const Products = (props) => {
       [e.target.value]: e.target.checked,
     })
     if (e.target.checked) {
-      const resultadoCategoria = categorias.filter(item => item.nombre === e.target.value)
+
+      const resultadoCategoria = characters.filter((character) => character.categoria === parseInt(e.target.value))
 
       setDatosFiltrados([
         ...datosFiltrados,
         ...resultadoCategoria
       ])
-      // console.log(datosFiltrados)
     }else{
-      const resultadoCategoria = datosFiltrados.filter(item => item.nombre !== e.target.value)
+      const resultadoCategoria = datosFiltrados.filter(item => item.categoria !== parseInt(e.target.value))
 
       setDatosFiltrados([...resultadoCategoria])
     }
   }
-
-  console.log(datosFiltrados)
+  // console.log(datosFiltrados)
 
   return (
     <div>
@@ -180,7 +179,7 @@ export const Products = (props) => {
               <div className='subCategorias' id='subCategorias'>
                 {categorias.map((data, key) => (
                 <div className='subCategorias2' key={key}>
-                  <p><input type="checkbox" value={data.nombre} onChange={handleOneCheckbox}/>{data.nombre}</p>
+                  <p><input type="checkbox" value={data.id} onChange={handleOneCheckbox}/>{data.nombre}</p>
                 </div>
                 ))}
               </div>
@@ -213,7 +212,7 @@ export const Products = (props) => {
 
           </div>
         </div>
-        <CardAllProducts characters={inputCharacters}/>
+        <CardAllProducts texto={texto} datosFiltrados={datosFiltrados}  characters={inputCharacters}/>
         {/* <Character characters={inputCharacters} /> */}
       </div>
       <Footer />

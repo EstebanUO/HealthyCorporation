@@ -6,8 +6,17 @@ import Swal from 'sweetalert2'
 import axios from "axios"
 // import { keyboard } from "@testing-library/user-event/dist/keyboard";
 
-export const CardAllProducts = ({characters}) => {
+export const CardAllProducts = ({characters,datosFiltrados,texto}) => {
   const [products_2, setProducts_2] = useState([])
+
+  /*------------ Filtros categoria y buscador --------------*/
+  let datosProductos=characters 
+
+  if (texto === '') {
+    datosProductos = datosFiltrados.length !==0 ? datosFiltrados : characters;
+  }
+
+  /*-------------------------------------------------------*/
 
   let validDatos = (localStorage.getItem("car"))
 
@@ -66,7 +75,7 @@ export const CardAllProducts = ({characters}) => {
   return (
     <div className='content_all_Product'>
       <div className='card_all_product'>
-        {characters.map((data, key) => ( 
+        {datosProductos.map((data, key) => ( 
           <div className='column_all_products' key={key}>
             <div className='imgProduct_'>
               <img className='imgAllProduct' src={"https://api-products-healthy.herokuapp.com"+data.imagen}  alt="Producto imagen" />
