@@ -19,3 +19,5 @@ instalar sweetalert
         https://www.youtube.com/watch?v=JY7eV4VMeV0 
         https://www.youtube.com/watch?v=3_sj5tfs05g
         https://www.youtube.com/watch?v=gPH7sCyXFb4
+
+        mejor https://www.youtube.com/watch?v=94CVSF0Gr-w

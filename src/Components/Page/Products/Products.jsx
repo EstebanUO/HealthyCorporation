@@ -70,7 +70,7 @@ export const Products = (props) => {
   function filterFunction2() {
     if (shown2 === false) {
       document.querySelector(".subCategorias0").style.display = "flex";
-    } else if (shown2 == true) {
+    } else if (shown2 === true) {
       document.querySelector(".subCategorias0").style.display = "none";
     }
   }
@@ -120,26 +120,45 @@ export const Products = (props) => {
     asyncFetchData2();
   }, [])
 
-  const filterResult = (cat) =>{
-    const result = categorias.filter((character) => {
-      return character.nombre !== cat
+
+  /*------------ Filtro categorias -----------*/
+
+  const [categoriaSeleccionada, setcategoriaSeleccionada] = useState([])
+  const [datosFiltrados, setDatosFiltrados] = useState([])
+
+  const handleOneCheckbox = (e) =>{
+    setcategoriaSeleccionada({
+      ...categoriaSeleccionada,
+      [e.target.value]: e.target.checked,
     })
-    setCategorias(result)
-    console.log(result);
+    if (e.target.checked) {
+
+      const resultadoCategoria = characters.filter((character) => character.categoria === parseInt(e.target.value))
+
+      setDatosFiltrados([
+        ...datosFiltrados,
+        ...resultadoCategoria
+      ])
+    }else{
+      const resultadoCategoria = datosFiltrados.filter(item => item.categoria !== parseInt(e.target.value))
+
+      setDatosFiltrados([...resultadoCategoria])
+    }
   }
+  // console.log(datosFiltrados)
 
   return (
     <div>
       <Header valiLoginAdmin={props.valiLoginAdmin} /><br /><br />
-      <h2 className='titleCategoria'>Compra por categoría</h2>
-      <Categories />
+      {/* <h2 className='titleCategoria'>Compra por categoría</h2> */}
+      {/* <Categories /> */}
       <br /><br />
       <div className='container-Orden-Productos'>
         <div className='navba__'>
           <input type="search" placeholder='Buscar producto' className='buscar' value={texto} onChange={inputLoad} />
         </div>
-        <p className='productsEncontrados'>6363 | Productos Encontrados</p>|
-        <p className='productsEncontrados'>Ordenar por:</p>
+        <p className='productsEncontrados'>6363 Productos Encontrados</p>
+        {/* <p className='productsEncontrados'>Ordenar por:</p>
         <select name="" id="selectPrecios">
           <option value="">Relevancia</option>
           <option value="">Más vendidos</option>
@@ -147,7 +166,7 @@ export const Products = (props) => {
           <option value="">Descuento</option>
           <option value="">Precio más alto</option>
           <option value="">Precio más bajo</option>
-        </select>
+        </select> */}
       </div>
       <div className='containerFilter'>
         <div className='containerCategorias'>
@@ -160,7 +179,7 @@ export const Products = (props) => {
               <div className='subCategorias' id='subCategorias'>
                 {categorias.map((data, key) => (
                 <div className='subCategorias2' key={key}>
-                  <p type='button'><input type="checkbox" onClick={() => filterResult()}/>{data.nombre}</p>
+                  <p><input type="checkbox" value={data.id} onChange={handleOneCheckbox}/>{data.nombre}</p>
                 </div>
                 ))}
               </div>
@@ -193,7 +212,7 @@ export const Products = (props) => {
 
           </div>
         </div>
-        <CardAllProducts characters={inputCharacters}/>
+        <CardAllProducts texto={texto} datosFiltrados={datosFiltrados}  characters={inputCharacters}/>
         {/* <Character characters={inputCharacters} /> */}
       </div>
       <Footer />
