@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import logo from '../../Image/logo.png';
 import './menuHam.css'
 
-export const NavBar = (props) => {
+export const NavBar = () => {
 
     /* ------------------- contador -------------------------- */
 
@@ -13,14 +13,10 @@ export const NavBar = (props) => {
 
     useEffect(() => {
         if (Counter2 === null) {
-            console.log(Counter2)
-            
+            // console.log(Counter2)
         } else if (Counter2 !== null) {
-            
             setCounter(Counter2.length)
-            
         }
-        
     }, [Counter2])
 
 
@@ -67,11 +63,7 @@ export const NavBar = (props) => {
         }
     }
 
-
-
-
-
-  return (
+    return (
     <div>
         <div className='navbar' id='navbar'>
             <div>

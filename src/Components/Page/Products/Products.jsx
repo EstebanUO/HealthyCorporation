@@ -150,15 +150,15 @@ export const Products = (props) => {
   return (
     <div>
       <Header valiLoginAdmin={props.valiLoginAdmin} /><br /><br />
-      <h2 className='titleCategoria'>Compra por categoría</h2>
-      <Categories />
+      {/* <h2 className='titleCategoria'>Compra por categoría</h2> */}
+      {/* <Categories /> */}
       <br /><br />
       <div className='container-Orden-Productos'>
         <div className='navba__'>
           <input type="search" placeholder='Buscar producto' className='buscar' value={texto} onChange={inputLoad} />
         </div>
-        <p className='productsEncontrados'>6363 | Productos Encontrados</p>|
-        <p className='productsEncontrados'>Ordenar por:</p>
+        <p className='productsEncontrados'>6363 Productos Encontrados</p>
+        {/* <p className='productsEncontrados'>Ordenar por:</p>
         <select name="" id="selectPrecios">
           <option value="">Relevancia</option>
           <option value="">Más vendidos</option>
@@ -166,7 +166,7 @@ export const Products = (props) => {
           <option value="">Descuento</option>
           <option value="">Precio más alto</option>
           <option value="">Precio más bajo</option>
-        </select>
+        </select> */}
       </div>
       <div className='containerFilter'>
         <div className='containerCategorias'>
