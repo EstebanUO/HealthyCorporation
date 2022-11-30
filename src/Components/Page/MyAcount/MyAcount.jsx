@@ -57,7 +57,7 @@ export const MyAcount = (props) => {
               <div className='acount_content_tarjet'>
                 <p  className='text_check'>Ingresa tu contraseña para guardar los cambios</p>
                 <input className='input_acount2' placeholder='************' minLength="8" type="password" required />
-              </div>
+              </div><br />
               <button className='btn_update' disabled>Actualizar </button>
             </div><br />
             <div className='acount_btn_'> 

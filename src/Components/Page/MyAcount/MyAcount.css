@@ -1,3 +1,17 @@
+.acount_content_row{
+
+    flex-direction: column;
+
+}
+
+.btn_update{
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+
+
 @media screen and (max-width:740px) {
     .acount_content_all{
         padding: 1rem;
@@ -82,32 +96,29 @@
 
 @media screen and (max-width:360px) {
 
-    .text_check{
-        width: 12rem;
-        font-size: 1rem;
-    }
+    .acount_content_row{
 
-    .acount_content_all{
-        display: flex;
-   
+        flex-direction: column;
+    
     }
-
+    
     .btn_update{
-        width: 7rem;
+        display: flex;
+        margin: 0 auto;
+        justify-content: center;
+    }
+
+
+    .text_check{
+        width: 8rem;
         font-size: 1rem;
     }
 
-    .input_acount2{
-        width: 42%;
+    .acount_up{
+        display: flex;
+        justify-content: center;
     }
 
-    .input_acount{
-        width: 120%;
-    }
-
-    .acount_content_tarjet{
-        
-    }
 }
 
 
