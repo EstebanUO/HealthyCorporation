@@ -76,7 +76,7 @@ export const Password = (props) => {
                 <div className='acount_content_direction2'>
                   <p className='text_check'>Nueva contraseña</p>
                   <input className='input_acount2' placeholder='Ingresa la nueva contraseña' minlength="8" type="password" value="" />
-                </div>
+                </div><br />
                 <div className='acount_content_direction2'>
                   <p className='text_check'>Confirmar contraseña</p>
                   <input className='input_acount2' placeholder='Ingresa de nuevo la contraseña' minlength="8" type="password" value="" />
