@@ -1,7 +1,5 @@
 .acount_content_row{
-
     flex-direction: column;
-
 }
 
 .btn_update{
@@ -21,6 +19,11 @@
       .btn_update{
         width: 10rem;
         font-size: 1rem;
+    }
+    .info {
+
+        justify-content: center;
+
     }
 }
 
@@ -74,13 +77,13 @@
 
 
 @media screen and (max-width:420px) {
-    .text_check{
+    /* .text_check{
         width: 11rem;
-    }
+    } */
 
 
     .acount_content_all{
-        width: 20rem;
+        width: 24rem;
     }
 
     .input_acount2{
@@ -90,6 +93,10 @@
     .btn_update {
         width: 7rem;
         font-size: 1rem;
+    }
+
+    .all_info {
+        padding-top: 0rem;
     }
 }
 
@@ -112,11 +119,11 @@
     }
 
 
-    .menu{
+    /* .menu{
         display: flex;
         justify-content: center;
         left: 4.5rem;
-    }
+    } */
 
 
     .info{
@@ -125,11 +132,12 @@
         border: none;
         z-index: 1;
         align-items: center;
+        padding: 2rem;
     }
 
 
     .select_btn{
-        width: 12rem;
+        /* width: 12rem; */
         display: flex;
         justify-content: center;
     }

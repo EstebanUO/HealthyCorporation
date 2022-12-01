@@ -70,9 +70,9 @@ export const NavBar = () => {
                 <Link to='/'><img src={logo} alt="logo" id='logo' /></Link>
             </div>
             <div className="column_nav_content">
-                <div id='nav2' className='navbar2'>
+                {/* <div id='nav2' className='navbar2'>
                     <Link to="/lista-deseos"  className={'links active'}><FaHeartbeat /> Lista de Deseos </Link>
-                </div>
+                </div> */}
                 <div id='nav3' className='navbar2'>
                     <Link to='/register'  className={'links active'}><FaUserAlt /> Mi cuenta</Link>
                 </div>
@@ -85,9 +85,9 @@ export const NavBar = () => {
                     <div className={burger_class} ></div>
                 </div>
                 <div className={menu_class}>
-                    <div id='nav2' className='navbar3'>
+                    {/* <div id='nav2' className='navbar3'>
                         <Link to="/lista-deseos"  className={'links active'}><FaHeartbeat /> Lista de Deseos </Link>
-                    </div>
+                    </div> */}
                     <div id='nav3' className='navbar3'>
                         <Link to='/register'  className={'links active'}><FaUserAlt /> Mi cuenta</Link>
                     </div>

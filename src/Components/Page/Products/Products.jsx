@@ -1,48 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { Header } from '../Layout/Header/Header';
 import { Footer } from '../Layout/Footer/Footer';
-// import Slider from '../../UI/js/Slider';
 import { CardAllProducts } from '../../UI/CardAllProducts/CardAllProducts';
 import { FaArrowCircleDown, FaArrowCircleUp, FaSlidersH } from "react-icons/fa";
 // import { Character } from '../../UI/Character/Character';
-// import axios from "axios"
+// import { Categories } from '../../UI/Categories/Categories'
+// import Slider from '@mui/material/Slider';
 
 export const Products = (props) => {
-
-  const [slider1, setSlider1] = useState(30);
-  const [slider2, setSlider2] = useState(70);
-
-  window.onload = function () {
-    slideOne()
-    slideTwo()
-  };
-
-  // let displayValOne = document.getElementById("range1");
-  // let displayValTwo = document.getElementById("range2");
-  let minGap = 0;
-  let sliderMaxValue = document.getElementById("slider-1");
-
-  function slideOne() {
-    if (slider1 - slider2 >= minGap) {
-      setSlider1(slider2 - minGap)
-      fillColor();
-    }
-    document.getElementById("range1").textContent = slider1;
-  }
-
-  function slideTwo() {
-    if (slider2 - slider1 <= minGap) {
-      slider2 = slider1 - minGap;
-      fillColor();
-    }
-    document.getElementById("range2").textContent = slider2;
-  }
-
-  function fillColor() {
-    const percent1 = slider1 / sliderMaxValue * 100;
-    const percent2 = slider2 * 100;
-    document.getElementById("slider-track").style.background = `linear-gradient(to right, #dadae5 ${percent1}% , #3264fe ${percent1}% , #3264fe ${percent2}%, #dadae5 ${percent2}%)`;
-  }
 
   const [shown, setShown] = useState(false);
   const switchShown = (event) => {
@@ -150,11 +115,25 @@ export const Products = (props) => {
   }
   // console.log(datosFiltrados)
 
+  /*--------------- Filtro de precios ---------------*/
+
+  // const [prizes, setValue] = useState([1, 100000]);
+
+  // const handleChange = (num1, num2) => {
+
+  //   let filterPrice = characters.map((datas) => datas.price)
+
+  //   filterPrice = Math.max(...filterPrice)
+
+  //   console.log(filterPrice)
+  //   setValue(num2);
+  // };
+
   return (
     <div>
       <Header valiLoginAdmin={props.valiLoginAdmin} /><br /><br />
       {/* <h2 className='titleCategoria'>Compra por categoría</h2> */}
-      {/* <Categories /> */}
+      {/* <Categories/> */}
       <br /><br />
       <div className='container-Orden-Productos'>
         <div className='navba__'>
@@ -182,37 +161,25 @@ export const Products = (props) => {
               <div className='subCategorias' id='subCategorias'>
                 {categorias.map((data, key) => (
                 <div className='subCategorias2' key={key}>
-                  <p><input type="checkbox" value={data.id} onChange={handleOneCheckbox}/>{data.nombre}</p>
+                  <p><input type="checkbox" value={data.id} onChange={handleOneCheckbox} />{data.nombre}</p>
                 </div>
                 ))}
               </div>
             </div>
             <hr />
-            <label className='priceRange'>Precios</label>
+            {/* <label className='priceRange'>Precios</label> */}
             <br />
-            <div className="wrapper">
-              <div className="values">
-                <span id="range1">
-                  0
-                </span>
-                <span> - </span>
-                <span id="range2">
-                  100
-                </span>
-              </div>
-              <div className="containerPrices">
-                <div className="slider-track" id='slider-track'></div>
-                <input type="range" min="0" max="100" value={slider1} id="slider-1" onChange={(e) => {
-                  setSlider1(e.target.value)
-                  slideOne()
-                }} />
-                <input type="range" min="0" max="100" value={slider2} id="slider-2" onChange={(e) => {
-                  setSlider2(e.target.value)
-                  slideTwo()
-                }} />
-              </div>
-            </div>
-
+            {/* <div className="wrapper">
+                <Slider
+                  getAriaLabel={() => 'Temperature range'}
+                  value={prizes}
+                  onChange={handleChange}
+                  valueLabelDisplay="auto"
+                  min={1}
+                  // step={50000}
+                  max={100000}
+                />
+            </div> */}
           </div>
         </div>
         <CardAllProducts texto={texto} datosFiltrados={datosFiltrados}  characters={inputCharacters}/>

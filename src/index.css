@@ -227,7 +227,7 @@ header img {
 
 /* --------------- Slider Home -----------------*/
 #bannerTamaño {
-  height: 20rem;
+  height: 26rem;
 }
 
 
@@ -1062,7 +1062,7 @@ a {
     background-color: white;
     padding: 10px;
     padding-left: 17px;
-    width: 95%;
+    width: 100%;
     color: #AEB3B7;
     text-decoration: none;
     border: none;
@@ -1102,6 +1102,7 @@ a {
   width: 12rem;
   height: 3rem;
   border-radius: 0.5rem;
+  border: none;
   font-size: 1.3rem;
   transition: all 400ms;
 }
@@ -1111,7 +1112,7 @@ a {
   transition: all 300ms;
   width: 12rem;
   color: black;
-  border: 3px solid black;
+  border: 3px solid #5bc3fc;
 }
 
 .acount_btn {
@@ -1137,9 +1138,9 @@ a {
   border-bottom: solid 2px gray;
 }
 
-.acount_content_tarjet {
+/* .acount_content_tarjet {
   padding-left: 1rem;
-}
+} */
 
 .input_acount4 {
   background-color: white;
@@ -1170,8 +1171,9 @@ a {
 
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   border: none;
+  align-items: center;
   z-index: 1;
 }
 
@@ -1187,6 +1189,25 @@ a {
   font-size: 1rem;
   font-weight: 500;
   text-align: center;
+
+
+  color: black;
+  padding: .6rem;
+  background-color: #fcdede;
+  border: solid 2px red;
+  width: 12rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: .5rem;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  transition: all 400ms;
+}
+
+.btnCerrarSesion:hover {
+  background-color: #f0a1a1;
+  transition: all 400ms;
 }
 
 /*-------- botones ---------*/
@@ -1203,7 +1224,8 @@ a {
   font-size: 1.3rem;
   margin-bottom: 1rem;
   transition: all 400ms;
-  padding-left: 2rem;
+  /* padding-left: 2rem; */
+  justify-content: center;
 }
 
 .select_btn:hover {
@@ -1356,7 +1378,7 @@ a {
   background: #f3f1f1;
   border-radius: 1rem;
   width: 15rem;
-  height: 30rem;
+  height: 19rem;
 }
 
 .iconFilter{
@@ -1547,119 +1569,10 @@ hr {
 /*---------- Range input ------------*/
 .wrapper{
   position: relative;
-  height: 7rem;
+  height: auto;
   width: 13rem;
   border-radius: 10px;
   margin-top: 1rem;
-}
-
-.containerPrices{
-  position: relative;
-  width: 100%;
-  height: 35px;
-  margin-top: 30px;
-}
-
-input[type="range"]{
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  width: 100%;
-  outline: none;
-  position: absolute;
-  margin: auto;
-  top: 6px;
-  bottom: 0;
-  background-color: transparent;
-  pointer-events: none;
-}
-
-.slider-track{
-  width: 100%;
-  height: 5px;
-  background-color: #44D2F2;
-  position: absolute;
-  margin: auto;
-  top: 0;
-  bottom: 0;
-  border-radius: 5px;
-}
-
-input[type="range"]::-webkit-slider-runnable-track{
-  -webkit-appearance: none;
-  height: 5px;
-}
-
-input[type="range"]::-moz-range-track{
-  -moz-appearance: none;
-  height: 5px;
-}
-
-input[type="range"]::-ms-track{
-  appearance: none;
-  height: 5px;
-}
-
-input[type="range"]::-webkit-slider-thumb{
-  -webkit-appearance: none;
-  height: 1em;
-  width: 1em;
-  background-color: #0896e2;
-  cursor: pointer;
-  margin-top: -9px;
-  pointer-events: auto;
-  border-radius: 50%;
-}
-
-input[type="range"]::-moz-range-thumb{
-  -webkit-appearance: none;
-  height: 1.7em;
-  width: 1.7em;
-  cursor: pointer;
-  border-radius: 50%;
-  background-color: #5bc3fc;
-  pointer-events: auto;
-}
-
-input[type="range"]::-ms-thumb{
-  appearance: none;
-  height: 1.7em;
-  width: 1.7em;
-  cursor: pointer;
-  border-radius: 50%;
-  background-color: #5bc3fc;
-  pointer-events: auto;
-}
-
-input[type="range"]:active::-webkit-slider-thumb{
-  background-color: #ffffff;
-  border: 3px solid #5bc3fc;
-}
-
-.values{
-  background-color: #5bc3fc;
-  width: 75%;
-  position: relative;
-  margin: auto;
-  border-radius: 5px;
-  text-align: center;
-  font-weight: 500;
-  font-size: 16px;
-  color: #ffffff;
-}
-
-.values:before{
-  content: "";
-  position: absolute;
-  height: 0;
-  width: 0;
-  border-top: 15px solid #5bc3fc;
-  border-left: 15px solid transparent;
-  border-right: 15px solid transparent;
-  margin: auto;
-  bottom: -14px;
-  left: 0;
-  right: 0;
 }
 
 /*--------------- Forgot Password --------*/

@@ -1,6 +1,6 @@
 import { Home } from '../src/Components/Page/Home/Home';
 import axios from "axios";
-import { useState,useEffect } from 'react'
+import { useState } from 'react'
 import { Route, Routes, Navigate, useNavigate } from "react-router-dom"
 import { Products } from '../src/Components/Page/Products/Products';
 import { Register } from '../src/Components/Page/Register/Register';

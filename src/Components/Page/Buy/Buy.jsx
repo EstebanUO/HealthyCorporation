@@ -205,11 +205,9 @@ export const Buy = (props) => {
             <div className='space_of_contents'>
                 <hr className='hr2' />
             </div>
-
-
             <div className="description_all">
                 <div className="content_description">
-                    <h1 className='text-descrip'>Características</h1>
+                    {/* <h1 className='text-descrip'>Características</h1>
                     <ul>
                         <li>1</li>
                         <li>2</li>
@@ -217,11 +215,9 @@ export const Buy = (props) => {
                         <li>4</li>
                         <li>5</li>
                         <li>6</li>
-                    </ul><hr />
-
+                    </ul><hr /> */}
                     <h1 className='text-descrip'>Descripción</h1>
                     <p>{Id.descripcion}</p></div>
-
                 <div>
                     <h1 className='text-descrip2'>
                         Otras personas también vieron
