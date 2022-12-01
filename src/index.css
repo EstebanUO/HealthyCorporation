@@ -1062,7 +1062,7 @@ a {
     background-color: white;
     padding: 10px;
     padding-left: 17px;
-    width: 95%;
+    width: 100%;
     color: #AEB3B7;
     text-decoration: none;
     border: none;
@@ -1102,6 +1102,7 @@ a {
   width: 12rem;
   height: 3rem;
   border-radius: 0.5rem;
+  border: none;
   font-size: 1.3rem;
   transition: all 400ms;
 }
@@ -1111,7 +1112,7 @@ a {
   transition: all 300ms;
   width: 12rem;
   color: black;
-  border: 3px solid black;
+  border: 3px solid #5bc3fc;
 }
 
 .acount_btn {
@@ -1137,9 +1138,9 @@ a {
   border-bottom: solid 2px gray;
 }
 
-.acount_content_tarjet {
+/* .acount_content_tarjet {
   padding-left: 1rem;
-}
+} */
 
 .input_acount4 {
   background-color: white;
@@ -1170,8 +1171,9 @@ a {
 
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   border: none;
+  align-items: center;
   z-index: 1;
 }
 
@@ -1187,6 +1189,25 @@ a {
   font-size: 1rem;
   font-weight: 500;
   text-align: center;
+
+
+  color: black;
+  padding: .6rem;
+  background-color: #fcdede;
+  border: solid 2px red;
+  width: 12rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: .5rem;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  transition: all 400ms;
+}
+
+.btnCerrarSesion:hover {
+  background-color: #f0a1a1;
+  transition: all 400ms;
 }
 
 /*-------- botones ---------*/
@@ -1203,7 +1224,8 @@ a {
   font-size: 1.3rem;
   margin-bottom: 1rem;
   transition: all 400ms;
-  padding-left: 2rem;
+  /* padding-left: 2rem; */
+  justify-content: center;
 }
 
 .select_btn:hover {

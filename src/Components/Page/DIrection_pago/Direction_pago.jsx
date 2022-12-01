@@ -12,8 +12,6 @@ import axios from "axios"
 
 export const Direction_pago = (props) => {
 
-    // const valiLoginUser = localStorage.getItem("EmailValidUser");
-    // const valiEmail = localStorage.getItem("EmalValid");
     const valiLoginName = localStorage.getItem("nameUser");
 
 
@@ -73,7 +71,10 @@ export const Direction_pago = (props) => {
         axios.get(baseURL).then((response) => {
             setDirection_2(response.data)
         });
+        
     }, []);
+
+        
 
 
     return (
@@ -102,8 +103,8 @@ export const Direction_pago = (props) => {
                 </div>
             </div>
             <div className='nom_check'>
-                <p className='text_check2' id='text_check2'><b>¡{valiLoginName}</b> &nbsp;dijita tu dirección para saber en donde te encuentras!</p>
-                <p className='text_check2' id='text_check3'><b>¡{valiLoginName}</b> &nbsp;ya tienes una direccion agregada!</p>
+                <p className='text_check2' id='text_check2'><b>¡{direction_2.name}</b> &nbsp;dijita tu dirección para saber en donde te encuentras!</p>
+                <p className='text_check2' id='text_check3'><b>¡{direction_2.name}</b> &nbsp;ya tienes una direccion agregada!</p>
             </div>
             <div className='check_all'>
                 <div className='content_check'>

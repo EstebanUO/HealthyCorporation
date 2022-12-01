@@ -49,7 +49,7 @@ export const Direction = (props) => {
               <div className='acount_content_direction2'>
                 <p className='text_check'>Ingresa tu ciudad</p>
                 <input className='input_acount2'  value={props.city}  onChange={(e)=>{props.setCity(e.target.value)}}  placeholder={direction_2.ciudad} type="text" autocomplete="off" required/>
-              </div>
+              </div><br />
               <div className='acount_content_direction2'>
                 <p className='text_check'>Ingresa tu localidad</p>
                 <input className='input_acount2' value={props.location} onChange={(e)=>{props.setLocation(e.target.value)}}  placeholder={direction_2.localidad} type="text" autocomplete="off"  required/>
@@ -59,7 +59,7 @@ export const Direction = (props) => {
               <div className='acount_content_direction2'>
                 <p className='text_check'>Casa | Depto | Oficina </p>
                 <input className='input_acount2'  value={props.typeHome}  onChange={(e)=>{props.setTypeHome(e.target.value)}}  placeholder={direction_2.tipoVivienda}type="text" autocomplete="off"required/>
-              </div>
+              </div><br />
               <div className='acount_content_direction2'>
                 <p className='text_check'>Nombre de la dirección</p>
                 <input className='input_acount2' value={props.details}  onChange={(e)=>{props.setDetails(e.target.value)}}  placeholder={direction_2.detalles} type="text" autocomplete="off" required/>
