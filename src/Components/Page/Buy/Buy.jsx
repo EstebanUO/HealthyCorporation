@@ -20,39 +20,43 @@ export const Buy = (props) => {
 
     /* ------------------------------ add product ---------------------------- */
     const [products_2, setProducts_2] = useState([])
+
     let validDatos = (localStorage.getItem("car"))
     // let array = JSON.parse(localStorage.getItem("car"))
-    const add = (e) => {
+    const add = (nombre,price,imagen,id) => {
 
-        setProducts_2(products_2 => products_2.concat(e.target.value))
+        var datos={nombres:nombre,prices:price,imagenes:imagen,ids:id}
+    
+        setProducts_2(products_2 => products_2.concat(datos))
         validDatos === null ? validDatos = [] : validDatos = JSON.parse(validDatos);
     
-        localStorage.setItem("car", JSON.stringify(validDatos.concat(e.target.value)))
+        localStorage.setItem("car", JSON.stringify(validDatos.concat(datos)))
+    
         // props.setcounter_h(array)
-
+    
         Swal.fire({
-            icon: 'success',
-            title: 'Se ha agregado el producto al carrito',
-            showConfirmButton: false,
-            showCancelButton: true,
-            cancelButtonText: 'Cancelar',
-            cancelButtonColor: '#d33',
-            timer: 3400,
-            timerProgressBar: true,
-            buttonsStyling: false,
-            customClass: {
-                cancelButton: "Cancel_"
-            },
-            html: '<div class="pse_content"><a class="text_link" href="/car"><button class="confirm">Ver mi carrito</button></a> </div>'
-            });
-    }
+          icon: 'success',
+          title: 'Se ha agregado el producto al carrito',
+          showConfirmButton: false,
+          showCancelButton: true,
+          cancelButtonText: 'Cancelar',
+          cancelButtonColor: '#d33',
+          timer: 7400,
+          timerProgressBar: true,
+          buttonsStyling: false,
+          customClass: {
+            cancelButton: "Cancel_"
+        },
+          html: '<div class="pse_content"><a class="text_link" href="/car"><button class="confirm">Ver mi carrito</button></a> </div>'
+        });
+      }
 
     const sumar = () => {
         setAmount(amount + 1);
-        if (amount === valor) {
+        if (amount === Id.cantidad) {
             Swal.fire({
                 icon: 'error',
-                title: 'Cantidad disponible en este momento solo es ' + valor,
+                title: 'Cantidad disponible en este momento solo es ' + Id.cantidad,
                 showConfirmButton: false,
                 timer: 1500
             });
@@ -143,7 +147,7 @@ export const Buy = (props) => {
                             </div>
 
                             <div>
-                                <p className='name_buy_'>Cantidad disponible: <b>{valor}</b>
+                                <p className='name_buy_'>Cantidad disponible: <b>{Id.cantidad}</b>
                                     <div className='product_btn_'>
                                         <div className='product_btn3'>
                                             <button className='btn_res2' onClick={restar}>-</button>
@@ -153,7 +157,7 @@ export const Buy = (props) => {
                                     </div></p>
                             </div>
                             <div className='up_buy_1'>
-                                <p>Puedes comprar solo 1 unidad</p>
+                                <p>Puedes comprar esta unidad</p>
                             </div>
                             <div className='up_buy_2'>
                                 <p>Envio gratis</p>
@@ -169,7 +173,7 @@ export const Buy = (props) => {
                             <a href="/pago"><button onclick="" className='addBuy_'>
                                 Comprar ahora
                             </button></a>
-                            <button className='addBuy_2' onClick={(e) => { add(e) }} value={Id.id}>
+                            <button className='addBuy_2' onClick={(e) => { add(Id.nombre,Id.price,Id.imagen,Id.id) }} value={Id.id}>
                                 Agregar<FaShoppingCart />
                             </button>
                         </div>

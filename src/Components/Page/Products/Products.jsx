@@ -4,7 +4,6 @@ import { Footer } from '../Layout/Footer/Footer';
 // import Slider from '../../UI/js/Slider';
 import { CardAllProducts } from '../../UI/CardAllProducts/CardAllProducts';
 import { FaArrowCircleDown, FaArrowCircleUp, FaSlidersH } from "react-icons/fa";
-import { Categories } from '../../UI/Categories/Categories';
 // import { Character } from '../../UI/Character/Character';
 // import axios from "axios"
 
@@ -90,6 +89,10 @@ export const Products = (props) => {
 
   const [characters, setCharacters] = useState([])
 
+    /*-------- Cantidad de productos -------*/ 
+    const [counterProd, setCounterProd] = useState()
+    /*--------------------------------------*/
+
   useEffect(() => {
     const URL = 'https://api-products-healthy.herokuapp.com/api/healthyapp'
 
@@ -97,7 +100,7 @@ export const Products = (props) => {
       const res = await fetch(URL)
       const data = await res.json()
       setCharacters(data)
-      // alert(data)
+      setCounterProd(data.length)
     }
     asyncFetchData();
   }, [])
@@ -157,7 +160,7 @@ export const Products = (props) => {
         <div className='navba__'>
           <input type="search" placeholder='Buscar producto' className='buscar' value={texto} onChange={inputLoad} />
         </div>
-        <p className='productsEncontrados'>6363 Productos Encontrados</p>
+        <p className='productsEncontrados'>{counterProd} Productos Encontrados</p>
         {/* <p className='productsEncontrados'>Ordenar por:</p>
         <select name="" id="selectPrecios">
           <option value="">Relevancia</option>

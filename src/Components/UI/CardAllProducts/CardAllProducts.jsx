@@ -10,7 +10,7 @@ export const CardAllProducts = ({characters,datosFiltrados,texto}) => {
   const [products_2, setProducts_2] = useState([])
 
   /*------------ Filtros categoria y buscador --------------*/
-  let datosProductos=characters 
+  let datosProductos = characters 
 
   if (texto === '') {
     datosProductos = datosFiltrados.length !==0 ? datosFiltrados : characters;
@@ -58,12 +58,11 @@ export const CardAllProducts = ({characters,datosFiltrados,texto}) => {
   let validDatos_2 = (localStorage.getItem("product"));
   const add_2 = (e) => {
 
+    validDatos_2 === null ? validDatos_2=[] : validDatos_2=JSON.parse(validDatos_2)
+    localStorage.setItem('product', JSON.stringify(validDatos_2))
 
-      validDatos_2 === null ? validDatos_2=[] : validDatos_2=JSON.parse(validDatos_2)
-      localStorage.setItem('product', JSON.stringify(validDatos_2))
-
-      JSON.stringify(localStorage.setItem("product", e.target.value))
-      console.log(e.target.value)
+    JSON.stringify(localStorage.setItem("product", e.target.value))
+    console.log(e.target.value)
   }
 
   const formatoMexico = (number) => {
