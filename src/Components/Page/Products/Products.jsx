@@ -108,6 +108,10 @@ export const Products = (props) => {
 
   const [categorias, setCategorias] = useState([])
 
+  /*-------- Cantidad de productos -------*/ 
+  const [counterProd, setCounterProd] = useState()
+  /*--------------------------------------*/
+
   useEffect(() => {
     const URL2 = 'https://api-products-healthy.herokuapp.com/api/categorias'
 
@@ -115,7 +119,8 @@ export const Products = (props) => {
       const res = await fetch(URL2)
       const data = await res.json()
       setCategorias(data)
-      // console.log(data);
+      setCounterProd(data.length)
+      // console.log(data.length);
     }
     asyncFetchData2();
   }, [])
@@ -157,7 +162,7 @@ export const Products = (props) => {
         <div className='navba__'>
           <input type="search" placeholder='Buscar producto' className='buscar' value={texto} onChange={inputLoad} />
         </div>
-        <p className='productsEncontrados'>6363 Productos Encontrados</p>
+        <p className='productsEncontrados'>{counterProd} Productos Encontrados</p>
         {/* <p className='productsEncontrados'>Ordenar por:</p>
         <select name="" id="selectPrecios">
           <option value="">Relevancia</option>
