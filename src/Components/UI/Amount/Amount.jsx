@@ -1,4 +1,4 @@
-import React, { useState,  useEffect} from 'react'
+import React, { useState } from 'react'
 import './Amount.css';
 import { FaShoppingCart } from "react-icons/fa";
 import { Footer } from '../../Page/Layout/Footer/Footer';
@@ -7,7 +7,7 @@ import delect from '../../Image/eliminar.png'
 import Swal from 'sweetalert2';
 // import logo2 from '../../Image/logo.png'
 import back from '../../Image/back.png';
-import axios from "axios"
+// import axios from "axios"
 import { Header } from '../../Page/Layout/Header/Header';
 
 export const Amount = (props) => {
@@ -17,6 +17,7 @@ export const Amount = (props) => {
     const [arr, setarr] = useState(arrs)
     const [priceTotal, setpriceTotal] = useState(0)
     let descuento=1000;
+    localStorage.setItem("priceTotal", priceTotal)
 
     const onload= ()=> {
         let total=0;
@@ -178,7 +179,7 @@ export const Amount = (props) => {
                             </div>
                         </div>
                         <div className='amount_btn'>
-                            <Link to='/pago'><button className='btn_buy'>Ir a pagar</button></Link>
+                            <a href='/pago_car'><button className='btn_buy'>Ir a pagar</button></a>
                         </div>
                     </div>
                 </div>
