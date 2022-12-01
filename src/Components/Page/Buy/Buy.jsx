@@ -49,10 +49,10 @@ export const Buy = (props) => {
 
     const sumar = () => {
         setAmount(amount + 1);
-        if (amount === valor) {
+        if (amount === Id.cantidad) {
             Swal.fire({
                 icon: 'error',
-                title: 'Cantidad disponible en este momento solo es ' + valor,
+                title: 'Cantidad disponible en este momento solo es ' + Id.cantidad,
                 showConfirmButton: false,
                 timer: 1500
             });
@@ -143,7 +143,7 @@ export const Buy = (props) => {
                             </div>
 
                             <div>
-                                <p className='name_buy_'>Cantidad disponible: <b>{valor}</b>
+                                <p className='name_buy_'>Cantidad disponible: <b>{Id.cantidad}</b>
                                     <div className='product_btn_'>
                                         <div className='product_btn3'>
                                             <button className='btn_res2' onClick={restar}>-</button>
@@ -153,7 +153,7 @@ export const Buy = (props) => {
                                     </div></p>
                             </div>
                             <div className='up_buy_1'>
-                                <p>Puedes comprar solo 1 unidad</p>
+                                <p>Puedes comprar esta unidad</p>
                             </div>
                             <div className='up_buy_2'>
                                 <p>Envio gratis</p>

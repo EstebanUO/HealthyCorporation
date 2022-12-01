@@ -4,7 +4,6 @@ import { Footer } from '../Layout/Footer/Footer';
 // import Slider from '../../UI/js/Slider';
 import { CardAllProducts } from '../../UI/CardAllProducts/CardAllProducts';
 import { FaArrowCircleDown, FaArrowCircleUp, FaSlidersH } from "react-icons/fa";
-import { Categories } from '../../UI/Categories/Categories';
 // import { Character } from '../../UI/Character/Character';
 // import axios from "axios"
 
@@ -90,6 +89,10 @@ export const Products = (props) => {
 
   const [characters, setCharacters] = useState([])
 
+    /*-------- Cantidad de productos -------*/ 
+    const [counterProd, setCounterProd] = useState()
+    /*--------------------------------------*/
+
   useEffect(() => {
     const URL = 'https://api-products-healthy.herokuapp.com/api/healthyapp'
 
@@ -97,7 +100,7 @@ export const Products = (props) => {
       const res = await fetch(URL)
       const data = await res.json()
       setCharacters(data)
-      // alert(data)
+      setCounterProd(data.length)
     }
     asyncFetchData();
   }, [])
@@ -108,10 +111,6 @@ export const Products = (props) => {
 
   const [categorias, setCategorias] = useState([])
 
-  /*-------- Cantidad de productos -------*/ 
-  const [counterProd, setCounterProd] = useState()
-  /*--------------------------------------*/
-
   useEffect(() => {
     const URL2 = 'https://api-products-healthy.herokuapp.com/api/categorias'
 
@@ -119,8 +118,7 @@ export const Products = (props) => {
       const res = await fetch(URL2)
       const data = await res.json()
       setCategorias(data)
-      setCounterProd(data.length)
-      // console.log(data.length);
+      // console.log(data);
     }
     asyncFetchData2();
   }, [])
