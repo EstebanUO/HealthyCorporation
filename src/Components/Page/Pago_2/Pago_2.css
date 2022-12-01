@@ -1,0 +1,174 @@
+.content_tarjet_div {
+    border: 2px solid gray;
+    display: flex;
+    align-items: center;
+    border-radius: .6rem;
+    padding: 1.2rem;
+    margin-top: 2rem;
+    transition: 300ms all;
+    cursor: pointer;
+    justify-content: center;
+    height: 5rem;
+}
+
+/* botones de seetAlert2 */
+
+.pse_content{
+    display: flex;
+    justify-content: center;
+}
+
+.confirm{
+    color: #ffffff;
+    padding: 0.3rem;
+    background-color: #5bc3fc;
+    width: 15rem;
+    border-radius: 0.5rem;
+    font-size: 1.3rem;
+    border: none;
+    transition: all 400ms;
+}
+
+.confirm:hover {
+    background-color: #eee7e7;
+    color: black;
+    transition: all 300ms;
+    border: solid #5bc3fc;
+}
+
+.text_link{
+    color: black;
+}
+
+.text_link:hover{
+    color: black;
+}
+
+
+
+
+
+.content_tarjet_div:hover {
+    background-color: #d3ebf7;
+    transition: 300ms all;
+}
+
+.pad_check2 {
+    margin-bottom: 0;
+    font-size: 18px;
+}
+
+#content_det2 {
+    background-color: #d3ebf7;
+    padding: 2.5rem;
+    margin-top: 2rem;
+    border-radius: 0.5rem;
+    display: none;
+    flex-direction: column;
+    border: 2px solid gray;
+    animation: acount_content_all .7s forwards;
+}
+
+
+#content_det3 {
+    background-color: #d3ebf7;
+    padding: 2.5rem;
+    margin-top: 2rem;
+    border-radius: 0.5rem;
+    display: none;
+    flex-direction: column;
+    border: 2px solid gray;
+    animation: acount_content_all .7s forwards;
+}
+
+.acount_content_tarjet2 {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.img-tarjet {
+    width: 5rem;
+}
+
+
+.img-tarjet2 {
+    width: 4rem;
+}
+
+.img-tarjet_ {
+    width: 3.5rem;
+    padding: .5rem;
+}
+
+.img-tarjet_2 {
+    width: 2.3rem;
+    padding: .3rem;
+}
+
+.acount_btn2 {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1rem;
+    align-items: center;
+}
+
+.btn_save2 {
+    color: black;
+    padding: 0.3rem;
+    background-color: #fc5b5b;
+    width: 12rem;
+    display: flex;
+    justify-content: center;
+    border-radius: 0.5rem;
+    font-size: 1.3rem;
+    transition: all 400ms;
+    border: none;
+}
+
+.btn_save2:hover {
+    background-color: #eee7e7;
+    transition: all 300ms;
+    border: solid #fc5b5b;
+}
+
+.circles3 {
+    width: 3.5rem;
+    height: 3.5rem;
+    padding: 1rem;
+    border-radius: 8rem;
+    border: 4px solid #5ba6fc;
+    background-color: #5bc3fc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    z-index: 1;
+    color: gray;
+}
+
+.linea_procesing2 {
+    background-color: #5ba6fc;
+    height: 3px;
+    width: 10rem;
+    /* margin-left: -10rem; */
+    z-index: 1;
+    display: flex;
+    align-items: center;
+
+}
+
+
+.methot_buy {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    margin-bottom: -1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all ease-in 300ms;
+}
+
+.methot_buy:hover {
+
+    transition: all ease-in 300ms;
+}

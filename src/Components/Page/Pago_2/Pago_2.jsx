@@ -7,7 +7,7 @@ import Swal from 'sweetalert2';
 import logo2 from '../../Image/logo.png';
 import back from '../../Image/back.png';
 import cash from '../../Image/cash.png';
-import './Pago.css'
+import './Pago_2.css'
 /* imagenes de las tarjetas */
 import tarjeta from '../../Image/Tarjetas/banco.PNG'
 import tarjeta1 from '../../Image/Tarjetas/davivienda.PNG'
@@ -31,19 +31,24 @@ import axios from "axios"
 import imagenLogo from '../../Image/logo.gif'
 
 
-export const Pago = () => {
+export const Pago_2 = () => {
 
     /*------- Envia informacion del producto ----- */
 
-    const productId = localStorage.getItem("product");
-    const [Id, setId] = useState([]);
+    const arrs = JSON.parse(localStorage.getItem("car"));
+    let priceTotal = localStorage.getItem("priceTotal")
+    const [Id, setId] = useState(arrs);
+    const [all, setAll] = useState("");
 
-    const baseURL = `https://api-products-healthy.herokuapp.com/api/healthyapp/${productId}`;
-    React.useEffect(() => {
-        axios.get(baseURL).then((response) => {
-            setId(response.data);
-        });
-    }, []); 
+    Id.map(function(element){
+        console.log(element);
+    })
+
+    // let claves = Object.keys(Id); 
+    // for (let i = 0; i < claves.length; i++) {
+    //     let clave = claves[i];
+    //     // console.log(Id[clave].prices)
+    // }
 
     /*------- Envia informacion de la direccion----- */
 
@@ -56,6 +61,7 @@ export const Pago = () => {
             setDirection_2(response.data)
         });
     }, []);
+
 
     const check = () => {
         Swal.fire({
@@ -78,21 +84,24 @@ export const Pago = () => {
             if (result.isConfirmed) {
 
                 /*------- Envia informacion al correo ----- */
-                let randomNumber = Math.round(Math.random(1000)*100000);
+
+
+                let randomNumber = Math.round(Math.random(1000) * 100000);
                 let detailsParams = {
                     To_name: direction_2.name,
                     Email: direction_2.email,
-                    Image: "https://api-products-healthy.herokuapp.com" + Id.imagen,
                     Logo: imagenLogo,
                     numero: randomNumber,
-                    Mensaje: 'El produto que ha comprado es: ' + Id.nombre + ', con un precio de ' + Id.price + ', espera atentamente tu pedido. llegara pronto a tu puerta',
+                    Mensaje: all,
                     Mensaje2: 'Gracias por contar con nosotros',
-                    Mensaje3: 'Llegara a la sigiente direccion su producto ' + direction_2.direccion + ' ' + direction_2.detalles + ' '
+                    Mensaje3: 'Llegara a la sigiente direccion su producto ' + direction_2.direccion + ' ' + direction_2.detalles + ' ',
+                    Mensaje4: 'El precio total a pagar es de:' + priceTotal + '',
+                
+                };
 
-                }
-                // console.log(detailsParams);
+                // console.log(Elements);
 
-                emailjs.send('service_s5wfqts', 'template_o5eak9o', detailsParams, 'lMUEWcDgk7lIRPBZH')
+                emailjs.send('service_s5wfqts', 'template_mesmuuq', detailsParams, 'lMUEWcDgk7lIRPBZH')
                     .then(function (response) {
                         console.log('SUCCESS!', response.status, response.text);
                         /* muestra si envio */
@@ -102,7 +111,7 @@ export const Pago = () => {
                             icon: 'success',
                             showCancelButton: false,
                             showConfirmButton: false,
-                            timer: 6400,
+                            timer: 8400,
                             timerProgressBar: true,
                             customClass: {
                                 confirmButton: "confirm",
@@ -196,13 +205,13 @@ export const Pago = () => {
             </div>
 
             <div className='nom_check'>
-                <p className='text_check_2' ><b>¡{valiLoginName}</b> ya casi terminas tu compra!</p>
+                <p className='text_check_2' ><b>¡{direction_2.name}</b> ya casi terminas tu compra!</p>
             </div>
 
             <div className='check_all'>
                 <div className='content_check2' >
                     <nav className='nav_check'><p className='pad_check'>Método de pago</p>
-                        <div className='back_up'><a href="/pago"><img className='img_up2' src={back} alt="atras" /><p className='back'>Atras</p></a>
+                        <div className='back_up'><a href="/pago_car"><img className='img_up2' src={back} alt="atras" /><p className='back'>Atras</p></a>
                         </div></nav>
 
                     <div>
