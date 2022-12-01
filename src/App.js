@@ -16,7 +16,9 @@ import { Password } from './Components/Page/Password/Password';
 import { ListaDeseos } from './Components/Page/ListaDeseos/ListaDeseos';
 import { Buy } from './Components/Page/Buy/Buy';
 import { Direction_pago } from './Components/Page/DIrection_pago/Direction_pago';
+import { DIrection_pago_2 } from './Components/Page/DIrection_pago_2/DIrection_pago_2';
 import { Pago } from './Components/Page/Pago/Pago';
+import { Pago_2 } from './Components/Page/Pago_2/Pago_2';
 import RecoverPassword from './Components/Page/MyAcount/RecoverPassword';
 
 // import { Zoom_in } from './Components/UI/Zoom_in/Zoom_in';
@@ -137,7 +139,7 @@ function App() {
             localStorage.setItem("idUser", data.id);
             localStorage.setItem("EmailValid", true);
             localStorage.setItem("Password", data.password);
-            localStorage.setItem("NameUser", data.name);
+            // localStorage.setItem("NameUser", data.name);
           
             // setusernameUser(data.name);
             // setemailUser(data.email);
@@ -306,51 +308,6 @@ function App() {
   }
   /*fin validaciones register*/
 
-      /*carga de productos carrito*/
-      // const [productos, setProductos] = useState([0,1])
-      // const [Car2, setCar2] = useState([])
-      
-      // let arr = JSON.parse(localStorage.getItem("car"))
-    
-  
-      // useEffect(() => {
-      //     setCar2(arr);
-      // }, [arr])
-  
-      // const clickCar=()=>{
-        
-          
-        
-      // }
-
-
-      /*fin carga carrito*/
-
-      // /* validaciones direcciones  */
-    
-      
-      // const clickDirection = () => {
-      //   const Directon_ = localStorage.getItem("direction");
-      //     if (Directon_ !== "") {
-      //       document.getElementById("text_check2").style.display = 'none'
-      //       document.getElementById("text_check3").style.display = 'flex'
-      //       document.getElementById("form").style.display = 'none' 
-      //       document.getElementById("form2").style.display = 'flex'
-            
-      //   } else if (Directon_ === null) {
-      //       document.getElementById("form").style.display = 'flex'
-      //       document.getElementById("form2").style.display = 'none'
-      //       document.getElementById("text_check2").style.display = 'flex'
-      //       document.getElementById("text_check3").style.display = 'none'
-
-      //   }
-      // }
-
-
-      // /* fin validaciones direcciones  */
-
-
-
 
   return (
     <div>
@@ -370,7 +327,9 @@ function App() {
         <Route path="/lista-deseos" element={valiLogin ? <ListaDeseos />:<Navigate replace to="/login" />} />
         <Route path="/compra" element={<Buy  valiLoginAdmin={valiLoginAdmin} />} />
         <Route path="/pago" element={valiLogin?  <Direction_pago />:<Navigate replace to="/login" />} />
+        <Route path="/pago_car" element={valiLogin?  <DIrection_pago_2 />:<Navigate replace to="/login" />} />
         <Route path="/pago_final" element={valiLogin? <Pago />:<Navigate replace to="/login" />} />
+        <Route path="/pago_final_car" element={valiLogin? <Pago_2 />:<Navigate replace to="/login" />} />
         <Route path="/recoverPassword" element={<RecoverPassword />} />
 
         {/* <Route path="/prueba" element={<Zoom_in />} /> */}

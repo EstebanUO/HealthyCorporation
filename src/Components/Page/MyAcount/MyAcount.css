@@ -96,29 +96,43 @@
 
 @media screen and (max-width:360px) {
 
-    .acount_content_row{
-
+    .acount_all{
+        display: flex;
         flex-direction: column;
-    
-    }
-    
-    .btn_update{
-        display: flex;
-        margin: 0 auto;
-        justify-content: center;
     }
 
 
-    .text_check{
-        width: 8rem;
-        font-size: 1rem;
-    }
-
-    .acount_up{
+    .btnCerrarSesion{
         display: flex;
         justify-content: center;
     }
 
+    .input_acount2{
+        width:100%;
+    }
+
+
+    .menu{
+        display: flex;
+        justify-content: center;
+        left: 4.5rem;
+    }
+
+
+    .info{
+        display: flex;
+        flex-direction: column;
+        border: none;
+        z-index: 1;
+        align-items: center;
+    }
+
+
+    .select_btn{
+        width: 12rem;
+        display: flex;
+        justify-content: center;
+    }
 }
 
 
