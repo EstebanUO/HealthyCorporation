@@ -40,9 +40,16 @@ export const Pago_2 = () => {
     const [Id, setId] = useState(arrs);
     const [all, setAll] = useState("");
 
-    Id.map(function(element){
-        console.log(element);
-    })
+   
+    /** --------------------------------------- solo manda uno----------------------------------- */
+    console.log(all);
+    useEffect(() => {
+        Id.map(function(element){
+            setAll(element.nombres);
+        })
+        // setAll(all.concat(element.nombre))
+    }, [arrs])
+    
 
     // let claves = Object.keys(Id); 
     // for (let i = 0; i < claves.length; i++) {
