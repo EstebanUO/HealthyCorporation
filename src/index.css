@@ -1102,6 +1102,7 @@ a {
   width: 12rem;
   height: 3rem;
   border-radius: 0.5rem;
+  border: none;
   font-size: 1.3rem;
   transition: all 400ms;
 }
@@ -1111,7 +1112,7 @@ a {
   transition: all 300ms;
   width: 12rem;
   color: black;
-  border: 3px solid black;
+  border: 3px solid #5bc3fc;
 }
 
 .acount_btn {
