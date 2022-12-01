@@ -24,7 +24,15 @@ export const Buy = (props) => {
     let validDatos = (localStorage.getItem("car"))
     // let array = JSON.parse(localStorage.getItem("car"))
     const add = (nombre,price,imagen,id) => {
+        let data=JSON.parse(validDatos)
+        let vali=0
+        if (data!==null) {
+          data.map((data) =>{if( data.ids === id){
+            vali=1
+          }})
+        }
 
+    if (vali===0) {
         var datos={nombres:nombre,prices:price,imagenes:imagen,ids:id}
     
         setProducts_2(products_2 => products_2.concat(datos))
@@ -49,6 +57,17 @@ export const Buy = (props) => {
         },
           html: '<div class="pse_content"><a class="text_link" href="/car"><button class="confirm">Ver mi carrito</button></a> </div>'
         });
+
+    }else if(vali===1){
+      Swal.fire({
+        icon: 'warning',
+        title: 'producto ya añadido a carrito',
+        showConfirmButton: false,
+        timer: 1600
+    })
+    }
+
+
       }
 
     const sumar = () => {
