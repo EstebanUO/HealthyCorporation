@@ -4,8 +4,8 @@ import { Footer } from '../Layout/Footer/Footer';
 import { CardAllProducts } from '../../UI/CardAllProducts/CardAllProducts';
 import { FaArrowCircleDown, FaArrowCircleUp, FaSlidersH } from "react-icons/fa";
 // import { Character } from '../../UI/Character/Character';
-import { Categories } from '../../UI/Categories/Categories'
-import Slider from '@mui/material/Slider';
+// import { Categories } from '../../UI/Categories/Categories'
+// import Slider from '@mui/material/Slider';
 
 export const Products = (props) => {
 
@@ -117,20 +117,22 @@ export const Products = (props) => {
 
   /*--------------- Filtro de precios ---------------*/
 
-  const [value, setValue] = useState([0, 100000]);
+  // const [prizes, setValue] = useState([1, 100000]);
 
-  const handleChange = (num1, num2) => {
+  // const handleChange = (num1, num2) => {
 
-    const filterPrice = characters.filter((prices) => console.log(prices.price))
-    
-    // console.log(filterPrice)
-    setValue(num2);
-  };
+  //   let filterPrice = characters.map((datas) => datas.price)
+
+  //   filterPrice = Math.max(...filterPrice)
+
+  //   console.log(filterPrice)
+  //   setValue(num2);
+  // };
 
   return (
     <div>
       <Header valiLoginAdmin={props.valiLoginAdmin} /><br /><br />
-      <h2 className='titleCategoria'>Compra por categoría</h2>
+      {/* <h2 className='titleCategoria'>Compra por categoría</h2> */}
       {/* <Categories/> */}
       <br /><br />
       <div className='container-Orden-Productos'>
@@ -165,19 +167,19 @@ export const Products = (props) => {
               </div>
             </div>
             <hr />
-            <label className='priceRange'>Precios</label>
+            {/* <label className='priceRange'>Precios</label> */}
             <br />
-            <div className="wrapper">
+            {/* <div className="wrapper">
                 <Slider
                   getAriaLabel={() => 'Temperature range'}
-                  value={value}
+                  value={prizes}
                   onChange={handleChange}
                   valueLabelDisplay="auto"
-                  min={0}
+                  min={1}
                   // step={50000}
                   max={100000}
                 />
-            </div>
+            </div> */}
           </div>
         </div>
         <CardAllProducts texto={texto} datosFiltrados={datosFiltrados}  characters={inputCharacters}/>

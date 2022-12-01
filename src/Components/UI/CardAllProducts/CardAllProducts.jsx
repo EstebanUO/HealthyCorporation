@@ -7,6 +7,8 @@ import Swal from 'sweetalert2'
 // import { keyboard } from "@testing-library/user-event/dist/keyboard";
 
 export const CardAllProducts = ({characters,datosFiltrados,texto}) => {
+
+  /*no eliminar este usestate por que se cae la pagina*/
   const [products_2, setProducts_2] = useState([])
 
   /*------------ Filtros categoria y buscador --------------*/
@@ -52,9 +54,6 @@ export const CardAllProducts = ({characters,datosFiltrados,texto}) => {
 
   // --------------------- compra  ----------------------------
 
-  /*no eliminar este usestate por que se cae la pagina*/
-
-  /*/////////////////////////////////////////////////*/
   let validDatos_2 = (localStorage.getItem("product"));
   const add_2 = (e) => {
 
