@@ -9,41 +9,6 @@ import Slider from '@mui/material/Slider';
 
 export const Products = (props) => {
 
-  // const [slider1, setSlider1] = useState(30);
-  // const [slider2, setSlider2] = useState(70);
-
-  // window.onload = function () {
-  //   slideOne()
-  //   slideTwo()
-  // };
-
-  // let displayValOne = document.getElementById("range1");
-  // let displayValTwo = document.getElementById("range2");
-  // let minGap = 0;
-  // let sliderMaxValue = document.getElementById("slider-1");
-
-  // function slideOne() {
-  //   if (slider1 - slider2 >= minGap) {
-  //     setSlider1(slider2 - minGap)
-  //     fillColor();
-  //   }
-  //   document.getElementById("range1").textContent = slider1;
-  // }
-
-  // function slideTwo() {
-  //   if (slider2 - slider1 <= minGap) {
-  //     slider2 = slider1 - minGap;
-  //     fillColor();
-  //   }
-  //   document.getElementById("range2").textContent = slider2;
-  // }
-
-  // function fillColor() {
-  //   const percent1 = slider1 / sliderMaxValue * 100;
-  //   const percent2 = slider2 * 100;
-  //   document.getElementById("slider-track").style.background = `linear-gradient(to right, #dadae5 ${percent1}% , #3264fe ${percent1}% , #3264fe ${percent2}%, #dadae5 ${percent2}%)`;
-  // }
-
   const [shown, setShown] = useState(false);
   const switchShown = (event) => {
     setShown(!shown)
@@ -150,17 +115,23 @@ export const Products = (props) => {
   }
   // console.log(datosFiltrados)
 
+  /*--------------- Filtro de precios ---------------*/
+
   const [value, setValue] = useState([0, 100000]);
 
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
+  const handleChange = (num1, num2) => {
+
+    const filterPrice = characters.filter((prices) => console.log(prices.price))
+    
+    // console.log(filterPrice)
+    setValue(num2);
   };
 
   return (
     <div>
       <Header valiLoginAdmin={props.valiLoginAdmin} /><br /><br />
       <h2 className='titleCategoria'>Compra por categoría</h2>
-      <Categories categorias={categorias}/>
+      {/* <Categories/> */}
       <br /><br />
       <div className='container-Orden-Productos'>
         <div className='navba__'>
@@ -188,7 +159,7 @@ export const Products = (props) => {
               <div className='subCategorias' id='subCategorias'>
                 {categorias.map((data, key) => (
                 <div className='subCategorias2' key={key}>
-                  <p><input type="checkbox" value={data.id} onChange={handleOneCheckbox}/>{data.nombre}</p>
+                  <p><input type="checkbox" value={data.id} onChange={handleOneCheckbox} />{data.nombre}</p>
                 </div>
                 ))}
               </div>
