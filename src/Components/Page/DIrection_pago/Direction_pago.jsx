@@ -12,28 +12,26 @@ import axios from "axios"
 
 export const Direction_pago = (props) => {
 
-    // const valiLoginUser = localStorage.getItem("EmailValidUser");
-    // const valiEmail = localStorage.getItem("EmalValid");
     const valiLoginName = localStorage.getItem("nameUser");
 
 
-    //     /* no terminado no detecta cuando no tiene direccion */
-    // window.onload = () => {
-    //     const Directon_ = localStorage.getItem("direction");
-    //     if (Directon_ !== null) {
-    //         document.getElementById("text_check2").style.display = 'none'
-    //         document.getElementById("text_check3").style.display = 'flex'
-    //         // document.getElementById("form").style.display = 'none'
-    //         document.getElementById("form2").style.display = 'flex'
+        /* no terminado no detecta cuando no tiene direccion */
+    window.onload = () => {
+        const Directon_ = localStorage.getItem("direction");
+        if (Directon_ !== null) {
+            document.getElementById("text_check2").style.display = 'none'
+            document.getElementById("text_check3").style.display = 'flex'
+            // document.getElementById("form").style.display = 'none'
+            document.getElementById("form2").style.display = 'flex'
 
-    //     } else if (Directon_ === null) {
-    //         document.getElementById("form").style.display = 'flex'
-    //         document.getElementById("form2").style.display = 'none'
-    //         document.getElementById("text_check2").style.display = 'flex' 
-    //         document.getElementById("text_check3").style.display = 'none'
+        } else if (Directon_ === null) {
+            document.getElementById("form").style.display = 'flex'
+            document.getElementById("form2").style.display = 'none'
+            document.getElementById("text_check2").style.display = 'flex' 
+            document.getElementById("text_check3").style.display = 'none'
 
-    //     }
-    // }
+        }
+    }
     
     /*-------------------------- subir direccion --------------------------- */
 
@@ -73,21 +71,9 @@ export const Direction_pago = (props) => {
         axios.get(baseURL).then((response) => {
             setDirection_2(response.data)
         });
-        if ( direction_2.direccion !== null) {
-            document.getElementById("text_check2").style.display = 'none'
-            document.getElementById("text_check3").style.display = 'flex'
-            document.getElementById("form").style.display = 'none'
-            document.getElementById("form2").style.display = 'flex'
-
-        } else if ( direction_2.direccion === "") {
-            document.getElementById("form").style.display = 'flex'
-            document.getElementById("form2").style.display = 'none'
-            document.getElementById("text_check2").style.display = 'flex' 
-            document.getElementById("text_check3").style.display = 'none'
-
-        }
+        
     }, []);
-console.log(direction_2.direccion);
+
         
 
 

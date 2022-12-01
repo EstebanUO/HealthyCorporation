@@ -89,20 +89,16 @@ export const Pago_2 = () => {
                     productsConcat=element.nombres.concat(", "+productsConcat)
                 })
 
-
-
-
-
                 let randomNumber = Math.round(Math.random(1000) * 100000);
                 let detailsParams = {
                     To_name: direction_2.name,
                     Email: direction_2.email,
                     Logo: imagenLogo,
-                    numero: randomNumber,
+                    Numero: randomNumber,
                     Mensaje: productsConcat,
                     Mensaje2: 'Gracias por contar con nosotros',
                     Mensaje3: 'Llegara a la sigiente direccion su producto ' + direction_2.direccion + ' ' + direction_2.detalles + ' ',
-                    Mensaje4: 'El precio total a pagar es de:' + priceTotal + '',
+                    Mensaje4: 'El precio total a pagar es de: ' + priceTotal + '',
                 
                 };
 
