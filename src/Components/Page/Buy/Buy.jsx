@@ -20,32 +20,36 @@ export const Buy = (props) => {
 
     /* ------------------------------ add product ---------------------------- */
     const [products_2, setProducts_2] = useState([])
+
     let validDatos = (localStorage.getItem("car"))
     // let array = JSON.parse(localStorage.getItem("car"))
-    const add = (e) => {
+    const add = (nombre,price,imagen,id) => {
 
-        setProducts_2(products_2 => products_2.concat(e.target.value))
+        var datos={nombres:nombre,prices:price,imagenes:imagen,ids:id}
+    
+        setProducts_2(products_2 => products_2.concat(datos))
         validDatos === null ? validDatos = [] : validDatos = JSON.parse(validDatos);
     
-        localStorage.setItem("car", JSON.stringify(validDatos.concat(e.target.value)))
+        localStorage.setItem("car", JSON.stringify(validDatos.concat(datos)))
+    
         // props.setcounter_h(array)
-
+    
         Swal.fire({
-            icon: 'success',
-            title: 'Se ha agregado el producto al carrito',
-            showConfirmButton: false,
-            showCancelButton: true,
-            cancelButtonText: 'Cancelar',
-            cancelButtonColor: '#d33',
-            timer: 3400,
-            timerProgressBar: true,
-            buttonsStyling: false,
-            customClass: {
-                cancelButton: "Cancel_"
-            },
-            html: '<div class="pse_content"><a class="text_link" href="/car"><button class="confirm">Ver mi carrito</button></a> </div>'
-            });
-    }
+          icon: 'success',
+          title: 'Se ha agregado el producto al carrito',
+          showConfirmButton: false,
+          showCancelButton: true,
+          cancelButtonText: 'Cancelar',
+          cancelButtonColor: '#d33',
+          timer: 7400,
+          timerProgressBar: true,
+          buttonsStyling: false,
+          customClass: {
+            cancelButton: "Cancel_"
+        },
+          html: '<div class="pse_content"><a class="text_link" href="/car"><button class="confirm">Ver mi carrito</button></a> </div>'
+        });
+      }
 
     const sumar = () => {
         setAmount(amount + 1);
@@ -169,7 +173,7 @@ export const Buy = (props) => {
                             <a href="/pago"><button onclick="" className='addBuy_'>
                                 Comprar ahora
                             </button></a>
-                            <button className='addBuy_2' onClick={(e) => { add(e) }} value={Id.id}>
+                            <button className='addBuy_2' onClick={(e) => { add(Id.nombre,Id.price,Id.imagen,Id.id) }} value={Id.id}>
                                 Agregar<FaShoppingCart />
                             </button>
                         </div>
