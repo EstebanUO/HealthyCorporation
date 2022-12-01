@@ -10,7 +10,7 @@ export const CardAllProducts = ({characters,datosFiltrados,texto}) => {
   const [products_2, setProducts_2] = useState([])
 
   /*------------ Filtros categoria y buscador --------------*/
-  let datosProductos = characters 
+  let datosProductos = characters
 
   if (texto === '') {
     datosProductos = datosFiltrados.length !==0 ? datosFiltrados : characters;

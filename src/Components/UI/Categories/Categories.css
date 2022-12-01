@@ -58,3 +58,12 @@
     justify-content: center;
     margin-top: -3rem;
 }
+
+/* @media screen and (min-width:768px){
+    .all {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: -3rem;
+    }
+} */
