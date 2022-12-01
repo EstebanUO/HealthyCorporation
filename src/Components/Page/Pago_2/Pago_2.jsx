@@ -37,19 +37,11 @@ export const Pago_2 = () => {
 
     const arrs = JSON.parse(localStorage.getItem("car"));
     let priceTotal = localStorage.getItem("priceTotal")
-    const [Id, setId] = useState(arrs);
-    const [all, setAll] = useState("");
+    const Id=arrs;
 
    
     /** --------------------------------------- solo manda uno----------------------------------- */
-    console.log(all);
-    useEffect(() => {
-        Id.map(function(element){
-            setAll(element.nombres);
-        })
-        // setAll(all.concat(element.nombre))
-    }, [arrs])
-    
+
 
     // let claves = Object.keys(Id); 
     // for (let i = 0; i < claves.length; i++) {
@@ -91,6 +83,14 @@ export const Pago_2 = () => {
             if (result.isConfirmed) {
 
                 /*------- Envia informacion al correo ----- */
+                let productsConcat=''
+
+                Id.map((element)=>{
+                    productsConcat=element.nombres.concat(", "+productsConcat)
+                })
+
+
+
 
 
                 let randomNumber = Math.round(Math.random(1000) * 100000);
@@ -99,14 +99,14 @@ export const Pago_2 = () => {
                     Email: direction_2.email,
                     Logo: imagenLogo,
                     numero: randomNumber,
-                    Mensaje: all,
+                    Mensaje: productsConcat,
                     Mensaje2: 'Gracias por contar con nosotros',
                     Mensaje3: 'Llegara a la sigiente direccion su producto ' + direction_2.direccion + ' ' + direction_2.detalles + ' ',
                     Mensaje4: 'El precio total a pagar es de:' + priceTotal + '',
                 
                 };
 
-                // console.log(Elements);
+                
 
                 emailjs.send('service_s5wfqts', 'template_mesmuuq', detailsParams, 'lMUEWcDgk7lIRPBZH')
                     .then(function (response) {
@@ -127,6 +127,9 @@ export const Pago_2 = () => {
                             html: '<div class="pse_content"><a class="text_link" href="/"><button class="confirm">Ir a inicio</button></a> </div>'
 
                         })
+                        localStorage.removeItem("car");
+                        localStorage.removeItem("priceTotal");
+                        
 
 
                     }, function (error) {

@@ -1377,7 +1377,7 @@ a {
   background: #f3f1f1;
   border-radius: 1rem;
   width: 15rem;
-  height: 30rem;
+  height: 26rem;
 }
 
 .iconFilter{
@@ -1568,119 +1568,10 @@ hr {
 /*---------- Range input ------------*/
 .wrapper{
   position: relative;
-  height: 7rem;
+  height: auto;
   width: 13rem;
   border-radius: 10px;
   margin-top: 1rem;
-}
-
-.containerPrices{
-  position: relative;
-  width: 100%;
-  height: 35px;
-  margin-top: 30px;
-}
-
-input[type="range"]{
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  width: 100%;
-  outline: none;
-  position: absolute;
-  margin: auto;
-  top: 6px;
-  bottom: 0;
-  background-color: transparent;
-  pointer-events: none;
-}
-
-.slider-track{
-  width: 100%;
-  height: 5px;
-  background-color: #44D2F2;
-  position: absolute;
-  margin: auto;
-  top: 0;
-  bottom: 0;
-  border-radius: 5px;
-}
-
-input[type="range"]::-webkit-slider-runnable-track{
-  -webkit-appearance: none;
-  height: 5px;
-}
-
-input[type="range"]::-moz-range-track{
-  -moz-appearance: none;
-  height: 5px;
-}
-
-input[type="range"]::-ms-track{
-  appearance: none;
-  height: 5px;
-}
-
-input[type="range"]::-webkit-slider-thumb{
-  -webkit-appearance: none;
-  height: 1em;
-  width: 1em;
-  background-color: #0896e2;
-  cursor: pointer;
-  margin-top: -9px;
-  pointer-events: auto;
-  border-radius: 50%;
-}
-
-input[type="range"]::-moz-range-thumb{
-  -webkit-appearance: none;
-  height: 1.7em;
-  width: 1.7em;
-  cursor: pointer;
-  border-radius: 50%;
-  background-color: #5bc3fc;
-  pointer-events: auto;
-}
-
-input[type="range"]::-ms-thumb{
-  appearance: none;
-  height: 1.7em;
-  width: 1.7em;
-  cursor: pointer;
-  border-radius: 50%;
-  background-color: #5bc3fc;
-  pointer-events: auto;
-}
-
-input[type="range"]:active::-webkit-slider-thumb{
-  background-color: #ffffff;
-  border: 3px solid #5bc3fc;
-}
-
-.values{
-  background-color: #5bc3fc;
-  width: 75%;
-  position: relative;
-  margin: auto;
-  border-radius: 5px;
-  text-align: center;
-  font-weight: 500;
-  font-size: 16px;
-  color: #ffffff;
-}
-
-.values:before{
-  content: "";
-  position: absolute;
-  height: 0;
-  width: 0;
-  border-top: 15px solid #5bc3fc;
-  border-left: 15px solid transparent;
-  border-right: 15px solid transparent;
-  margin: auto;
-  bottom: -14px;
-  left: 0;
-  right: 0;
 }
 
 /*--------------- Forgot Password --------*/
