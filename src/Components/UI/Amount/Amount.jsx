@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import {  useNavigate,Navigate } from "react-router-dom"
 import './Amount.css';
 import { FaShoppingCart } from "react-icons/fa";
 import { Footer } from '../../Page/Layout/Footer/Footer';
@@ -12,14 +13,17 @@ import { Header } from '../../Page/Layout/Header/Header';
 
 export const Amount = (props) => {
     
-
+    let navigate = useNavigate();
     const arrs = JSON.parse(localStorage.getItem("car"));
-    const [arr, setarr] = useState(arrs)
+    const [arr, setarr] = useState([])
     const [priceTotal, setpriceTotal] = useState(0)
     let descuento=1000;
     localStorage.setItem("priceTotal", priceTotal)
 
     const onload= ()=> {
+        if (arrs!==null) {
+            setarr(arrs)
+        }
         let total=0;
         
         if (priceTotal===0) {
@@ -115,6 +119,20 @@ export const Amount = (props) => {
             }
         })
     }
+    //esta funcion valida si hay productos en el carrito para direccionar
+    const clickCar=()=>{
+        if (priceTotal===0) {
+            Swal.fire({
+                icon: 'warning',
+                title: 'sin productos en el carrito',
+                showConfirmButton: false,
+                timer: 1700
+            })
+        }else if(priceTotal!==0){
+            window.location.href = "/pago_car";
+            
+        }
+    }
     
 
 
@@ -179,7 +197,7 @@ export const Amount = (props) => {
                             </div>
                         </div>
                         <div className='amount_btn'>
-                            <a href='/pago_car'><button className='btn_buy'>Ir a pagar</button></a>
+                            <button onClick={(e)=>clickCar()} className='btn_buy'>Ir a pagar</button>
                         </div>
                     </div>
                 </div>
