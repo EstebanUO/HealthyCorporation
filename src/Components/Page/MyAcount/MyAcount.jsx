@@ -14,7 +14,6 @@ import { NavBar } from '../../UI/NavBar/NavBar';
 import axios from "axios"
 import Swal from 'sweetalert2';
 import './MyAcount.css'
-import { SettingsInputCompositeRounded } from '@mui/icons-material';
 
 export const MyAcount = (props) => {
 
@@ -45,7 +44,7 @@ export const MyAcount = (props) => {
   }, []);
 
   // encriptar contraseña
-  const bufferABase64 = buffer => btoa(String.fromCharCode(...new Uint8Array(buffer)));
+
   const base64ABuffer = buffer => Uint8Array.from(atob(buffer), c => c.charCodeAt(0));
   const LONGITUD_SAL = 16;
   const LONGITUD_VECTOR_INICIALIZACION = LONGITUD_SAL;
