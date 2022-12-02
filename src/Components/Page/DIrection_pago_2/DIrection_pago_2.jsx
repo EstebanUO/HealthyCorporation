@@ -20,13 +20,13 @@ export const DIrection_pago_2 = (props) => {
         /* no terminado no detecta cuando no tiene direccion */
     window.onload = () => {
         const Directon_ = localStorage.getItem("direction");
-        if (Directon_ !== null) {
+        if (Directon_ !== '') {
             document.getElementById("text_check2").style.display = 'none'
             document.getElementById("text_check3").style.display = 'flex'
             // document.getElementById("form").style.display = 'none'
             document.getElementById("form2").style.display = 'flex'
 
-        } else if (Directon_ === null) {
+        } else if (Directon_ === '') {
             document.getElementById("form").style.display = 'flex'
             document.getElementById("form2").style.display = 'none'
             document.getElementById("text_check2").style.display = 'flex' 
