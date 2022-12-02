@@ -196,7 +196,7 @@ export const Pago = () => {
             </div>
 
             <div className='nom_check'>
-                <p className='text_check_2' ><b>¡{valiLoginName}</b> ya casi terminas tu compra!</p>
+                <p className='text_check_2' ><b>¡{direction_2.name}</b> ya casi terminas tu compra!</p>
             </div>
 
             <div className='check_all'>

@@ -156,7 +156,7 @@ export const MyAcount = (props) => {
             <div className='acount_content_row'>
                 <div className='acount_content_tarjet'>
                 <p  className='text_check'>Ingresa tu contraseña para guardar los cambios</p>
-                <input className='input_acount2' placeholder='************' minLength="8" type="password" required />
+                <input className='input_acount2' placeholder='************' minLength="8" value={pass} onChange={(e) => { setPass(e.target.value) }} type="password" required />
                 </div> <br/>
             </div>
             <input className='btn_update' value="Actualizar" type="submit" />
