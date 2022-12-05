@@ -4,7 +4,6 @@
 
 .btn_update{
     display: flex;
-    margin: 0 auto;
     justify-content: center;
 }
 
@@ -30,7 +29,6 @@
 
 @media screen and (max-width:550px) {
     .acount_content_all{
-        padding: 1rem;
         width: 30rem;
       }
 
