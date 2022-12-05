@@ -1675,10 +1675,6 @@ hr {
     display: inline-block;
   }
 
-  .formulario2 {
-    margin: 18rem;
-    margin-top: 0rem;
-  }
 
   .select_product1 {
     width: 16rem;
@@ -1694,19 +1690,6 @@ hr {
     width: 12rem;
   }
 
-  .btn_all {
-    margin-top: 1rem;
-  }
-
-  .formulario3{
-    margin-top: 2rem;
-    margin-left: 20rem;
-  }
-
-  .message2{
-    margin-top: 1rem;
-    margin-left: 10rem;
-  }
 
   .containerCategorias{
     display: none;
@@ -1731,10 +1714,7 @@ hr {
     font-size: 1.9rem;
   }
 
-  .about_all{
-    margin-right: 7rem;
 
-  }
 
   .about_contact4{
     font-size: 1.2rem;
@@ -1750,13 +1730,9 @@ hr {
     width: 23rem;
   }
 
-  .contact{
-    margin-top: 1rem;
-  }
   
   .logito{
     width: 30rem;
-    margin-top: -4rem;
   }
 }
 
@@ -1767,9 +1743,6 @@ hr {
 
 @media screen and (max-width:1100px) { 
 
-  .formulario3{
-    margin-left: 16rem;
-  }
   
   .message2{
     margin-left: 8.5rem;
@@ -1779,10 +1752,6 @@ hr {
     display: inline-block;
   }
 
-  .formulario2 {
-    margin: 16rem;
-    margin-top: 0rem;
-  }
 
   .containerCategorias{
     display: none;
@@ -1792,9 +1761,6 @@ hr {
     margin-right: 10rem;
   }
 
-  .logito{
-    margin-top: -4rem;
-  }
 }
 
 
@@ -1807,15 +1773,12 @@ hr {
   }
 
   .formulario2 {
-    margin: 12rem;
-    margin-top: 0rem;
   }
   .formulario3{
     margin-left: 13.5rem;
   }
 
   .message2{
-    margin-left: 11rem;
   }
 
   .containerCategorias{
@@ -1831,42 +1794,6 @@ hr {
 /*-------- Responsive 968px ---------*/
 @media screen and (max-width:968px) {
 
-  /* Page contacto*/
-  .contact{
-    margin-right: 12rem;
-  }
-
-  .text_product_{
-    margin-left: 7rem;
-  }
-
-  .text_product_2{
-    margin-left: 7rem;
-  }
-
-  .about_contact2{
-    margin-left: 7rem;
-  }
-
-  .about_contact4{
-    margin-left: 7rem;
-  }
-
-  .about_where1{
-    margin-left: 8rem;
-  }
-
-  .about_where3{
-    margin-left: 8rem;
-  }
-
-  .about_all{
-    margin-right: 13rem;
-  }
-
-  .logito{
-    margin-left: 8rem;
-  }
 }
 /*-------- Responsive 950px ---------*/
 
@@ -1874,18 +1801,7 @@ hr {
   .formulario {
     display: inline-block;
   }
-
-  .formulario2 {
-    margin: 11rem;
-    margin-top: 0rem;
-  }
-  .formulario3{
-    margin-left: 11rem;
-    }
   
-  .message2{
-    margin-left: 9rem;
-  }
 }
 
 
@@ -1897,29 +1813,10 @@ hr {
     display: inline-block;
   }
 
-  .formulario2 {
-    margin: 8.5rem;
-    margin-top: 0rem;
-  }
-  .formulario3{
-    margin-left: 8.8rem;
-  }
+ 
   
-  .message2{
-    margin-left: 7.1rem;
-  }
 
-  .about_all{
-    margin-left: 3rem;
-  }
 
-  .text_product_{
-    margin-left: 10rem;
-  }
-
-  .text_product_2{
-    margin-left: 10rem;
-  }
 }
 
 
@@ -1933,33 +1830,31 @@ hr {
 
   .text_product_{
     font-size: 3.3rem;
-    margin-left: 13rem;
   }
 
   .text_product_2{
     font-size: 3.3rem;
-    margin-left: 13rem;
   }
 
   .about_contact2{
     font-size: 1.7rem;
-    margin-left: 10rem;
+
   }
   .about_contact4{
     font-size: 1.1rem;
     width: 19rem;
-    margin-left: 10rem;
+
   }
 
   .about_where1{
     font-size: 1.7rem;
-    margin-left: 11rem;
+
   }
 
   .about_where3{
     font-size: 1.1rem;
     width: 20rem;
-    margin-left: 11rem;
+
   }
 
   .bg-input{
@@ -1975,7 +1870,7 @@ hr {
   }
 
   .logito{
-    margin-left: 10rem;
+
   }
 }
 
@@ -1998,16 +1893,15 @@ hr {
   }
 
   .contact{
-    margin-right: 8rem;
+
   }
 
   .addBuy_ {
-    margin: 0.5rem;
+
     font-size: .9rem;
   }
 
   .addBuy_2 {
-    margin: 0.5rem;
     font-size: 0.87rem;
   }
 
@@ -2022,18 +1916,16 @@ hr {
   }
 
   .formulario3{
-    margin: 5.5rem;
-    margin-top: 2rem;
+
+
   }
   .formulario2 {
-    margin: 4rem;
-    margin-top: 0rem;
+
 
   }
 
   .message2{
-    margin-left: 10rem;
-    margin-top: -5rem;
+
   }
 
   .card_all_product{
@@ -2049,9 +1941,9 @@ hr {
   }
 
   .text_product_{
-    margin-top: 4rem;
+
     font-size: 5rem;
-    margin-left:  21rem;
+
   }
 
   .text_product_2{
@@ -2060,24 +1952,23 @@ hr {
   }
 
   .about_contact2{
-    margin-left: 1rem;
+
     font-size: 2.2rem;
   }
 
   .about_contact4{
-    margin-left: 1rem;
+
     width: 25rem;
   }
 
   .about_where1{
     font-size: 2.2rem;
-    margin-top: -3rem;
-    margin-left: -1rem;
+
   }
 
   .about_where3{
     width: 29rem;
-    margin-left: -1rem;
+
 
   }
 
@@ -2087,14 +1978,12 @@ hr {
   }
 
   .logito{
-    margin-top: 8rem;
-    margin-left: -49rem;
+
     width: 35rem;
   }
 
   .contact{
-    margin-top: -7rem;
-    margin-left: 10rem;
+
   }
 
   .container_1{
@@ -2121,43 +2010,33 @@ hr {
     display: inline-block;
   }
   .formulario2{
-    margin: 1rem;
-    margin-top: 0rem;
   }
   .formulario {
       display: inline-block;
   }
 
   .formulario2 {
-      margin: 1rem;
-      margin-top: 0rem;
+
   }
 
   #welcome-back {
-      margin-left: -3rem;
   }
 
   .formulario3 {
-    margin-left: 4rem;
     width: 32rem;
   }
 
 
   .formulario3{
-  margin-top: 3rem;
-  margin-left: 1rem;
   width: 32rem;
   }
 
   .message2{
-  margin-top: 2rem;
-  padding: 0rem;
-  margin-left: 3rem;
+
   }
 
   .button-show2{
-    margin-left: 23rem;
-    margin-top: -37px;
+
   }
 
   .card_all_product{
@@ -2178,43 +2057,39 @@ hr {
     }
 
     .formulario2 {
-      margin-left: 14rem;
-      margin-top: 0rem;
+
       width: 28rem;
     }
 
 
     .welcome-back {
-      margin-left: 3rem;
+
     }
 
     .iconos {
-      margin-left: 6rem;
+
     }
 
     .button-show {
-      margin-left: 18.5rem;
-      margin-top: -2px;
+
       font-size: 1.9rem;
     }
 
     .welcome-back{
-    margin-left: 3rem;
+
     }
   
   .iconos{
-    margin-left: 6rem;
+
     }
   
 
   .formulario3{
-    margin-left: 0.1rem;
+
   }
 
   .message2{
-    margin-top: 1rem;
-    padding: 0rem;
-    margin-left: 0rem;
+
     }
   .card_all_product{
     display: grid;
@@ -2226,7 +2101,7 @@ hr {
     }
 
     .message{
-      margin-right: 1rem;
+
     }
 
 
@@ -2245,18 +2120,17 @@ hr {
     } */
 
     .text_product_{
-      margin-left: 5.5rem;
+
       font-size: 4rem;
     }
 
     .text_product_2{
       font-size: 4rem;
-      margin-left: 2rem;
+
     }
 
     .about_contact2{
-      margin-left: -8rem;
-      margin-top: 1rem;
+
       font-size: 2.3rem;
     }
 
@@ -2283,38 +2157,32 @@ hr {
     .formulario2 {
 
       width: 0rem;
-      margin-left: 6rem;
-      margin-top: 0rem;
+
       width: 29rem;
     }
 
     .button-show2{
-      margin-top: -37px;
-      margin-left: 19rem;
     }
 
     .iconos {
-      margin-left: 6rem;
+
     }
 
     .button-show {
-      margin-left: 19.5rem;
+
       font-size: 1.9rem;
     }
   
     .message2{
-      margin-top: 1rem;
-      margin-left: 0rem;
+
     }
     .formulario3 {
-      margin-left: 5.5rem;
+
       width: 28rem;
     }
 
     .message2 {
-      margin-top: 2rem;
-      margin-left: 8rem;
-      margin-right: 6rem;
+
     }
 
     .card_all_product{
@@ -2323,7 +2191,7 @@ hr {
     }
 
     .message{
-      margin-left: 2rem;
+
     }
   }
 
@@ -2331,13 +2199,11 @@ hr {
 @media screen and (max-width:480px) {
 
   .message {
-    padding: 2;
-    margin-right: 0rem;
-    margin-left: 0rem;
+
   }
 
   .iconos {
-    margin-left: 5.5rem;
+
   }
 
   .formulario {
@@ -2346,30 +2212,28 @@ hr {
 
   .formulario2 {
     width: auto;
-    margin: 0rem;
-    margin-top: 0rem;
+
+
     width: 24rem;
   }
 
   .button-show {
-    margin-left: 18rem;
+
   }
 
 
 
   .formulario3 {
-    margin-left: -1rem;
+
     width: 27rem;
   }
 
   .message2 {
-    margin-top: 2rem;
-    margin-left: 2rem;
-    margin-right: 4rem;
+
   }
 
   .all{
-    margin-right: 0rem;
+
   }
 
   .card_all_product{
