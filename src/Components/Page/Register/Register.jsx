@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import Alert from '@mui/material/Alert';
 import { BsEyeFill, BsEyeSlashFill } from "react-icons/bs";
 import { FaUserAlt, FaLock } from "react-icons/fa";
+import Logo_move from '../../Image/logo.gif'
 
 export const Register = (props) => {
  
@@ -61,6 +62,9 @@ export const Register = (props) => {
             <h2>Bienvenido a HealthyCorporation</h2>
             <p>Si ya tienes una cuenta por favor inicia sesion aqui</p>
             <button onClick={onclick} className="signUpBtn"><Link to="/login" className="linkLog">Iniciar Sesion</Link></button>
+            <br /><div className="img_contact">
+              <img className="logito" src={Logo_move} alt="gif_logo" />
+            </div>
           </div>
         </div>
         <div>
@@ -68,9 +72,9 @@ export const Register = (props) => {
             <h1 className="titleReg">Registro</h1>
             <div className="formularioReg">
               <p className='pvaliRegister' id='valiExiste' />
-              <label className="labelsReg">Nobre de usuario</label>
+              <label className="labelsReg">Nombre de usuario</label>
               <FaUserAlt className='iconUserReg' />
-              <input minLength="4" maxLength="20" value={props.usernameRegister} onChange={props.onChangeusernameRegister} name="name" type="text" className="form-input" placeholder="User name" autoComplete="off" required />
+              <input minLength="4" maxLength="20" value={props.usernameRegister} onChange={props.onChangeusernameRegister} name="name" type="text" className="form-input" placeholder="@Usurario" autoComplete="off" required />
               <p className='pvaliRegister' id='txtvalidUsername' />
               <div> 
                 <label className="labelsReg"><br />Correo</label>
