@@ -4,8 +4,8 @@ import { Footer } from '../Layout/Footer/Footer';
 import { CardAllProducts } from '../../UI/CardAllProducts/CardAllProducts';
 import { FaArrowCircleDown, FaArrowCircleUp, FaSlidersH } from "react-icons/fa";
 // import { Character } from '../../UI/Character/Character';
-// import { Categories } from '../../UI/Categories/Categories'
-// import Slider from '@mui/material/Slider';
+import { Categories } from '../../UI/Categories/Categories'
+import Slider from '@mui/material/Slider';
 
 export const Products = (props) => {
 
@@ -117,30 +117,58 @@ export const Products = (props) => {
 
   /*--------------- Filtro de precios ---------------*/
 
-  // const [prizes, setValue] = useState([1, 100000]);
+  const [prizes, setValue] = useState([1, 100000]);
+  const [num1, setnum1] = useState(1)
+  const [num2, setnum2] = useState(100000)
+  const [datosFiltrados2, setDatosFiltrados2] = useState([])
 
-  // const handleChange = (num1, num2) => {
+  const handleChange = (num1, num2) => {
 
-  //   let filterPrice = characters.map((datas) => datas.price)
+    let filterPrice = characters.map((datas) => datas.price)
 
-  //   filterPrice = Math.max(...filterPrice)
+    // console.log(filterPrice)
 
-  //   console.log(filterPrice)
-  //   setValue(num2);
-  // };
+    let numVal1 = num1.target.value[0]
+    let numVal2 = num2[1]
+    // console.log(num1.target.value[0])
+    // console.log(num2[1])
+    setnum2(numVal2)
+    setnum1(numVal1)
+    characters.map((datas2) => {
+      if (datas2.price >= numVal1 && datas2.price <= numVal2) {
+        console.log(datas2)
+        // setDatosFiltrados2(datosFiltrados2.concat(datas2))
+
+        // if (datosFiltrados2.length === 0) {
+        //   setDatosFiltrados2([datas2])
+        //   // console.log(datosFiltrados2)
+        //   console.log(datas2)
+        // }else if(datosFiltrados2.length > 0){
+        //   setDatosFiltrados2(datosFiltrados2.concat(datas2))
+        // }
+      }
+    })
+
+    // console.log(numVal2)
+    // console.log(numVal1)
+
+    setValue(num2);
+  };
+
+  console.log(datosFiltrados2)
 
   return (
     <div>
       <Header valiLoginAdmin={props.valiLoginAdmin} /><br /><br />
-      {/* <h2 className='titleCategoria'>Compra por categoría</h2> */}
-      {/* <Categories/> */}
+      <h2 className='titleCategoria'>Compra por categoría</h2>
+      <Categories/>
       <br /><br />
       <div className='container-Orden-Productos'>
         <div className='navba__'>
           <input type="search" placeholder='Buscar producto' className='buscar' value={texto} onChange={inputLoad} />
         </div>
         <p className='productsEncontrados'>{counterProd} Productos Encontrados</p>
-        {/* <p className='productsEncontrados'>Ordenar por:</p>
+        <p className='productsEncontrados'>Ordenar por:</p>
         <select name="" id="selectPrecios">
           <option value="">Relevancia</option>
           <option value="">Más vendidos</option>
@@ -148,7 +176,7 @@ export const Products = (props) => {
           <option value="">Descuento</option>
           <option value="">Precio más alto</option>
           <option value="">Precio más bajo</option>
-        </select> */}
+        </select>
       </div>
       <div className='containerFilter'>
         <div className='containerCategorias'>
@@ -167,9 +195,9 @@ export const Products = (props) => {
               </div>
             </div>
             <hr />
-            {/* <label className='priceRange'>Precios</label> */}
+            <label className='priceRange'>Precios</label>
             <br />
-            {/* <div className="wrapper">
+            <div className="wrapper">
                 <Slider
                   getAriaLabel={() => 'Temperature range'}
                   value={prizes}
@@ -179,7 +207,7 @@ export const Products = (props) => {
                   // step={50000}
                   max={100000}
                 />
-            </div> */}
+            </div>
           </div>
         </div>
         <CardAllProducts texto={texto} datosFiltrados={datosFiltrados}  characters={inputCharacters}/>
