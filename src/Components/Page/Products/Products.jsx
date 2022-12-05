@@ -118,44 +118,44 @@ export const Products = (props) => {
   /*--------------- Filtro de precios ---------------*/
 
   const [prizes, setValue] = useState([1, 100000]);
-  const [num1, setnum1] = useState(1)
-  const [num2, setnum2] = useState(100000)
   const [datosFiltrados2, setDatosFiltrados2] = useState([])
+  const [datosFiltrados3, setdatosFiltrados3] = useState([])
 
-  const handleChange = (num1, num2) => {
+  let handleChange=()=>{};
 
-    let filterPrice = characters.map((datas) => datas.price)
+  if (datosFiltrados.length === 0) {
+    handleChange = (num1, num2) => {
 
-    // console.log(filterPrice)
+      let numVal1 = num1.target.value[0]
+      let numVal2 = num2[1]
+  
+      const resultadoCategoria2 = characters.filter((datas2) => datas2.price >= numVal1 && datas2.price <= numVal2)
+      setDatosFiltrados2(
+        resultadoCategoria2
+      )
+  
+      setValue(num2);
+    };
+  
+  }else if (datosFiltrados.length !== 0) {
+    handleChange = (num1, num2) => {
 
-    let numVal1 = num1.target.value[0]
-    let numVal2 = num2[1]
-    // console.log(num1.target.value[0])
-    // console.log(num2[1])
-    setnum2(numVal2)
-    setnum1(numVal1)
-    characters.map((datas2) => {
-      if (datas2.price >= numVal1 && datas2.price <= numVal2) {
-        console.log(datas2)
-        // setDatosFiltrados2(datosFiltrados2.concat(datas2))
+      let numVal1 = num1.target.value[0]
+      let numVal2 = num2[1]
+  
+      const resultadoCategoria2 = datosFiltrados.filter((datas2) => datas2.price >= numVal1 && datas2.price <= numVal2)
+      setdatosFiltrados3(
+        resultadoCategoria2
+      )
+  
+      setValue(num2);
+    };
+  }
+  
 
-        // if (datosFiltrados2.length === 0) {
-        //   setDatosFiltrados2([datas2])
-        //   // console.log(datosFiltrados2)
-        //   console.log(datas2)
-        // }else if(datosFiltrados2.length > 0){
-        //   setDatosFiltrados2(datosFiltrados2.concat(datas2))
-        // }
-      }
-    })
 
-    // console.log(numVal2)
-    // console.log(numVal1)
 
-    setValue(num2);
-  };
 
-  console.log(datosFiltrados2)
 
   return (
     <div>
@@ -210,7 +210,7 @@ export const Products = (props) => {
             </div>
           </div>
         </div>
-        <CardAllProducts texto={texto} datosFiltrados={datosFiltrados}  characters={inputCharacters}/>
+        <CardAllProducts datosFiltrados3={datosFiltrados3} datosFiltrados2={datosFiltrados2} texto={texto} datosFiltrados={datosFiltrados}  characters={inputCharacters}/>
         {/* <Character characters={inputCharacters} /> */}
       </div>
       <Footer />

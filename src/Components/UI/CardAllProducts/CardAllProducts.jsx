@@ -6,7 +6,7 @@ import Swal from 'sweetalert2'
 
 // import { keyboard } from "@testing-library/user-event/dist/keyboard";
 
-export const CardAllProducts = ({characters,datosFiltrados,texto}) => {
+export const CardAllProducts = ({characters,datosFiltrados,texto,datosFiltrados2,datosFiltrados3}) => {
 
   /*no eliminar este usestate por que se cae la pagina*/
   const [products_2, setProducts_2] = useState([])
@@ -15,7 +15,15 @@ export const CardAllProducts = ({characters,datosFiltrados,texto}) => {
   let datosProductos = characters
 
   if (texto === '') {
-    datosProductos = datosFiltrados.length !==0 ? datosFiltrados : characters;
+    if (datosFiltrados3.length === 0) {
+      if (datosFiltrados.length !== 0) {
+        datosProductos =  datosFiltrados
+      }else if(datosFiltrados2.length !== 0){
+        datosProductos =  datosFiltrados2
+      }
+    }else if (datosFiltrados3.length !== 0) {
+      datosProductos =  datosFiltrados3
+    }
   }
 
   /*-------------------------------------------------------*/
