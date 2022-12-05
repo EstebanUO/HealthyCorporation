@@ -6,6 +6,7 @@ import { Link } from "react-router-dom"
 import Alert from '@mui/material/Alert';
 import { BsEyeFill,BsEyeSlashFill } from "react-icons/bs";
 import { FaUserAlt,FaKey } from "react-icons/fa";
+import Logo_move from '../../Image/logo.gif'
 // import { Api } from '@mui/icons-material';
 // import { get } from 'jquery';
 // import { MyAcount } from '../MyAcount/MyAcount';
@@ -65,7 +66,11 @@ export const Login = (props) => {
             <h2 className="text_welcome">Bienvenido a HealthyCorporation</h2>
             <p>¿Aun no tienes cuenta? por favor registrate aqui</p>
             <button onClick={onclick} className="signUpBtn"><Link to="/register" className="linkLog">Registrarse</Link></button>
+            <br /><div className="img_contact">
+              <img className="logito" src={Logo_move} alt="gif_logo" />
+            </div>
           </div>
+        
         </div>
       </div>
       <Footer />

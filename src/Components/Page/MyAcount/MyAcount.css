@@ -140,6 +140,7 @@
         /* width: 12rem; */
         display: flex;
         justify-content: center;
+        border-radius: .5rem;
     }
 }
 

@@ -9,6 +9,10 @@ body {
   width: 100%;
 }
 
+.logito {
+  width: 25rem;
+}
+
 /*search*/
 /* .search_content {
   display: grid;
@@ -423,7 +427,7 @@ header img {
   width: 100%;
   justify-content: center;
   padding: 2.5rem;
-  /* background-image: url(/src/Components/Image/fondoReg.png); */
+  background-color: #fcfcf9;
 }
 
 .formularioReg {
@@ -1220,7 +1224,8 @@ a {
   height: 4.5rem;
   display: flex;
   align-items: center;
-  border-radius: .5rem;
+  border-top-left-radius: .5rem;
+  border-bottom-left-radius: .5rem;
   font-size: 1.3rem;
   margin-bottom: 1rem;
   transition: all 400ms;
@@ -2384,4 +2389,11 @@ hr {
     display: grid;
     grid-template-columns: 1fr;
   }
+  
+element.style {
+  display: flex;
+}
+.navbar {
+  align-items: center;
+}
 }

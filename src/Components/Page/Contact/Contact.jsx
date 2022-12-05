@@ -2,7 +2,7 @@ import React from 'react';
 import { Header } from '../../Page/Layout/Header/Header';
 import { Footer } from '../../Page/Layout/Footer/Footer';
 import { Form } from '../../UI/Form/Form';
-import Logo_move from '../../Image/logo.gif'
+
 
 export const Contact = (props) => {
   return (
@@ -24,12 +24,10 @@ export const Contact = (props) => {
               <div className="about_where2">
                 <h3 className="about_where3">Barrio puerto espejo | Caminos de cocora |
                   Tel: 3177896243 | Fax:  01 234 567 88 03 | 
-                  e-mail: healthy_ifo@outlook.com</h3>
+                  e-mail: healthyCorporationContact@gmail.com</h3>
               </div>
             </div>
-            <div className="img_contact">
-              <img className="logito" src={Logo_move} alt="gif_logo" />
-            </div>
+          
           </div>
         </div>
         <Form />
