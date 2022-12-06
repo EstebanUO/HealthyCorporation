@@ -676,7 +676,6 @@ input[type="checkbox"] {
 }
 
 .about_contact2 {
-  padding-left: 6.2rem;
   color: #5bc3fc;
   animation: about_contact2 1.5s forwards;
 }
@@ -1717,9 +1716,6 @@ hr {
     
   }
 
-  .text_product_2{
-    font-size: 3.7rem;
-  }
 
   .about_contact2{
     font-size: 1.9rem;
@@ -1843,10 +1839,6 @@ hr {
     font-size: 3.3rem;
   }
 
-  .text_product_2{
-    font-size: 3.3rem;
-  }
-
   .about_contact2{
     font-size: 1.7rem;
 
@@ -1957,10 +1949,6 @@ hr {
 
   }
 
-  .text_product_2{
-    font-size: 5rem;
-    margin-left: 16rem;
-  }
 
   .about_contact2{
 
@@ -2135,10 +2123,6 @@ hr {
       font-size: 4rem;
     }
 
-    .text_product_2{
-      font-size: 4rem;
-
-    }
 
     .about_contact2{
 
@@ -2208,6 +2192,9 @@ hr {
 
 /*-------- Responsive 480px ---------*/
 @media screen and (max-width:480px) {
+  .about_contact2 p{
+      font-size: 15px;
+  }
 
   .message {
 
@@ -2267,3 +2254,6 @@ element.style {
   align-items: center;
 }
 }
+
+
+
