@@ -1561,10 +1561,15 @@ hr {
 }
 
 #selectPrecios{
-  border-radius: 1rem;
-  padding: .2rem;
-  margin: .5rem;
-  /* background: #5bc3fc; */
+  overflow: hidden;
+  top: .5em;  
+  cursor: pointer;
+  text-align: center;
+  color: #444;
+  outline: none;
+  border: .06em solid transparent;
+  border-radius: 1em;
+  background-color: #cde4f5;
 }
 
 .productsEncontrados{
