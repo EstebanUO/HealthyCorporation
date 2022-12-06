@@ -1109,6 +1109,7 @@ a {
   border: none;
   font-size: 1.3rem;
   transition: all 400ms;
+  margin: auto;
 }
 
 .btn_update:hover {
