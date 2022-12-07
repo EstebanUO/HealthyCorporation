@@ -153,9 +153,25 @@ export const Products = (props) => {
   }
   
 
+  /*----------- Filtro de ordenado por: ------------------*/
 
-
-
+  const handleOnClick = (e) =>{
+    let opciones = e.target.value
+    // console.log(opciones);
+    if (opciones === "max") {
+      const ordenMax = characters.map((datas2) => datas2.price)
+      const ordenReal = ordenMax.sort()
+      console.log(ordenReal.reverse())
+    }
+    if (opciones === "min") {
+      const ordenMin = characters.map((datas2) => datas2.price)
+      console.log(ordenMin.sort((a, b) => a - b ))
+    }
+    if (opciones === "reciente") {
+      const ordenRec = characters.map((datas2) => datas2.price)
+      console.log(ordenRec.reverse())
+    }
+  }
 
   return (
     <div>
@@ -167,16 +183,16 @@ export const Products = (props) => {
         <div className='navba__'>
           <input type="search" placeholder='Buscar producto' className='buscar' value={texto} onChange={inputLoad} />
         </div>
-        <p className='productsEncontrados'>{counterProd} Productos Encontrados</p>
-        <p className='productsEncontrados'>Ordenar por:</p>
-        <select name="" id="selectPrecios">
-          <option value="">Relevancia</option>
-          <option value="">Más vendidos</option>
-          <option value="">Más recientes</option>
-          <option value="">Descuento</option>
-          <option value="">Precio más alto</option>
-          <option value="">Precio más bajo</option>
-        </select>
+        <p className='productsEncontrados'>{counterProd} Productos Encontrados |</p>
+        <p className='productsEncontrados'>| Ordenar por:</p>
+        <div className='content-select'>
+          <select name="" id="selectPrecios" onChange={handleOnClick}>
+            <option value="revelancia">Relevancia</option>
+            <option value="reciente">Más recientes</option>
+            <option value="max">Precio más alto</option>
+            <option value="min">Precio más bajo</option>
+          </select>
+        </div>
       </div>
       <div className='containerFilter'>
         <div className='containerCategorias'>
