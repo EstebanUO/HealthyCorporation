@@ -53,17 +53,14 @@
 }
 
 .all {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: -3rem;
+    display: none;
 }
 
-/* @media screen and (min-width:768px){
+@media screen and (max-width:1200px){
     .all {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         margin-top: -3rem;
     }
-} */
+}

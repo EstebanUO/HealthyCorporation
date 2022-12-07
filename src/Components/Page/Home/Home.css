@@ -1,8 +1,5 @@
 .title-home2 {
-  color: rgb(131, 131, 131);
-  font-size: 2.5rem;
-  display: flex;
-  justify-content: center;
+  display: none;
 }
 
 .title-home3 {
@@ -282,6 +279,14 @@
   text-align: center;
 }
 
+@media screen and (max-width:1200px){
+  .title-home2{
+    display: flex;
+    color: rgb(131, 131, 131);
+    font-size: 2.5rem;
+    justify-content: center;
+  }
+}
 
 @media screen and (max-width:600px) {
   .select_product2 {

@@ -1398,6 +1398,7 @@ a {
 }
 
 .titleCategoria{
+  display: none;
   font-size: 2.2rem;
   text-align: center;
   color: gray;
@@ -1685,6 +1686,13 @@ hr {
     display: inline-block;
   }
 
+  .titleCategoria{
+    display: flex;
+    font-size: 2.2rem;
+    text-align: center;
+    color: gray;
+    justify-content: center;
+  }
 
   .select_product1 {
     width: 16rem;
