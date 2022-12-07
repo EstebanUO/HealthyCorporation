@@ -1,23 +1,24 @@
-.titleDeseos{
+.titleDeseos {
     font-size: 1.8rem;
     text-align: center;
 }
 
-.titleDescripcionDeseos2{
+.titleDescripcionDeseos2 {
     font-size: 1.7rem;
     color: gray;
     margin-bottom: 0;
 }
 
-.precioDeseos{
+.precioDeseos {
     padding-left: 4rem;
+    margin-bottom: 0;
 }
 
-.subtitleDeseos{
+.subtitleDeseos {
     color: #505050;
 }
 
-.containerDeseos{
+.containerDeseos {
     /* display: flex;
     flex-direction: column; */
     padding: 2rem;
@@ -26,7 +27,7 @@
     border-color: azure;
 }
 
-.descripcionDeseos{
+.descripcionDeseos {
     display: flex;
     justify-content: space-around;
     background-color: #b8def2;
@@ -35,7 +36,7 @@
     align-items: center;
 }
 
-.prod1{
+.prod1 {
     display: flex;
     align-items: center;
     width: 30rem;
@@ -45,14 +46,14 @@
     padding-left: 3rem;
 }
 
-.imgProd1{
+.imgProd1 {
     /* width: 14rem; */
     height: 10rem;
     border-radius: 10px;
     margin-top: 1rem;
 }
 
-#text_list{
+#text_list {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -62,19 +63,19 @@
     color: gray;
 }
 
-.icon_warning{
+.icon_warning {
     font-size: 4rem;
 }
 
-.priceStock{
+.priceStock {
     display: flex;
     width: 70rem;
     justify-content: space-around;
     font-weight: 500;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
 }
 
-.cardProducts{
+.cardProducts {
     box-shadow: #0e1e251f 0px 2px 4px 0px, #0e1e2552 0px 2px 10px 0px;
     border-radius: 1rem;
     padding: 1rem;
@@ -86,19 +87,37 @@
     animation: cardProducts 1s forwards;
 }
 
-.cardProducts_2{
+.cardProducts_2 {
     display: flex;
     justify-content: space-between;
     align-items: center;
     transition: all 300ms ease-in;
-    cursor: pointer;
-    /* border-radius: 0.5rem; */
-    border-top: solid gray 2px;
+    /* cursor: pointer; */
+    border-radius: 0.5rem;
+    /* border-top: solid gray 2px; */
 }
 
-.cardProducts_2:hover{
-    transition: all 300ms ease-in;
+.btn_ {
+    border: none;
+    width: 7rem;
+    height: 3rem;
     background-color: #b8def2;
+    color: black;
+    border-radius: .5rem;
+    transition: all 300ms ease-in;
+}
+
+.btn_:hover {
+    transition: all 300ms ease-in;
+    border: #7fcaf3 solid 3px;
+    background-color: antiquewhite;
+}
+
+.cardProducts_2:hover {
+    transition: all 300ms ease-in;
+    /* background-color: #d1eefd; */
+    box-shadow: #0e1e251f 0px 8px 16px 0px, #0e1e2552 0px 8px 32px 0px;
+
 }
 
 @keyframes cardProducts {
@@ -111,15 +130,17 @@
     }
 }
 
-.disponibilidad{
+.disponibilidad {
     color: red;
     font-weight: 500;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     display: none;
+    margin-bottom: 0;
 }
 
-.disponibilidad_{
-    color:green;
+.disponibilidad_ {
+    color: green;
     font-weight: 500;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
+    margin-bottom: 0px;
 }

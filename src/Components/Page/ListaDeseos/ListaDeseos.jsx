@@ -52,12 +52,10 @@ export const ListaDeseos = () => {
 
         <div className="cardProducts">
           <div className="descripcionDeseos">
-            <h1 className="titleDescripcionDeseos2">Nombre del producto</h1>
-            <h1 className="titleDescripcionDeseos2">Precio unitario</h1>
-            <h1 className="titleDescripcionDeseos2">Estado del stock</h1>
+            <h1 className="titleDescripcionDeseos2">Datos de los productos</h1>
           </div><br />
           <div id="text_list"><AiOutlineExclamationCircle className='icon_warning'/><p>Aun no has marcado productos que te gusten</p></div>
-          <><Link to="/compra">{arr.map((data) => (
+          <>{arr.map((data) => (
           
             <div className="cardProducts_2">
             
@@ -66,13 +64,15 @@ export const ListaDeseos = () => {
               <p className="subtitleDeseos">{data.nombres}</p>
             </div>
             <div className='priceStock'>
-              <p className='precioDeseos'>$ {data.prices}</p>
+              <p className='precioDeseos'>$ {formatoMexico (data.prices)}</p>
               <p className='disponibilidad'>Agotado</p>
               <p className='disponibilidad_'>Disponible</p>
+              <Link to="/compra"><button className='btn_' onClick={(e) => { add_2(e) }} value={data.ids}>Ver más</button></Link>
+
             </div>
           </div>
           
-          ))}</Link></>
+          ))}</>
           
           
         </div> <br />

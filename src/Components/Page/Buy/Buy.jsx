@@ -70,13 +70,16 @@ export const Buy = (props) => {
         }
     }
 
+    // const [valid, setvalid] = useState(second)
     // const arr = JSON.parse(localStorage.getItem("list"));
     // useEffect(() => {
     //     arr.map((data) => (
-    //         if()
+    //         setvalid(data.ids)
     //     ))
     // }, [arr])
 
+    // useEffect(() => {
+    // }, [])
 
     const sumar = () => {
         setAmount(amount + 1);
