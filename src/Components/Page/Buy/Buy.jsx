@@ -23,52 +23,60 @@ export const Buy = (props) => {
 
     let validDatos = (localStorage.getItem("car"))
     // let array = JSON.parse(localStorage.getItem("car"))
-    const add = (nombre,price,imagen,id) => {
-        let data=JSON.parse(validDatos)
-        let vali=0
-        if (data!==null) {
-          data.map((data) =>{if( data.ids === id){
-            vali=1
-          }})
+    const add = (nombre, price, imagen, id) => {
+        let data = JSON.parse(validDatos)
+        let vali = 0
+        if (data !== null) {
+            data.map((data) => {
+                if (data.ids === id) {
+                    vali = 1
+                }
+            })
         }
 
-    if (vali===0) {
-        var datos={nombres:nombre,prices:price,imagenes:imagen,ids:id}
-    
-        setProducts_2(products_2 => products_2.concat(datos))
-        validDatos === null ? validDatos = [] : validDatos = JSON.parse(validDatos);
-    
-        localStorage.setItem("car", JSON.stringify(validDatos.concat(datos)))
-    
-        // props.setcounter_h(array)
-    
-        Swal.fire({
-          icon: 'success',
-          title: 'Se ha agregado el producto al carrito',
-          showConfirmButton: false,
-          showCancelButton: true,
-          cancelButtonText: 'Cancelar',
-          cancelButtonColor: '#d33',
-          timer: 7400,
-          timerProgressBar: true,
-          buttonsStyling: false,
-          customClass: {
-            cancelButton: "Cancel_"
-        },
-          html: '<div class="pse_content"><a class="text_link" href="/car"><button class="confirm">Ver mi carrito</button></a> </div>'
-        });
+        if (vali === 0) {
+            var datos = { nombres: nombre, prices: price, imagenes: imagen, ids: id }
 
-    }else if(vali===1){
-      Swal.fire({
-        icon: 'warning',
-        title: 'producto ya añadido a carrito',
-        showConfirmButton: false,
-        timer: 1600
-    })
+            setProducts_2(products_2 => products_2.concat(datos))
+            validDatos === null ? validDatos = [] : validDatos = JSON.parse(validDatos);
+
+            localStorage.setItem("car", JSON.stringify(validDatos.concat(datos)))
+
+            // props.setcounter_h(array) 
+
+            Swal.fire({
+                icon: 'success',
+                title: 'Se ha agregado el producto al carrito',
+                showConfirmButton: false,
+                showCancelButton: true,
+                cancelButtonText: 'Cancelar',
+                cancelButtonColor: '#d33',
+                timer: 7400,
+                timerProgressBar: true,
+                buttonsStyling: false,
+                customClass: {
+                    cancelButton: "Cancel_"
+                },
+                html: '<div class="pse_content"><a class="text_link" href="/car"><button class="confirm">Ver mi carrito</button></a> </div>'
+            });
+
+        } else if (vali === 1) {
+            Swal.fire({
+                icon: 'warning',
+                title: 'producto ya añadido a carrito',
+                showConfirmButton: false,
+                timer: 1600 
+            })
+        }
     }
 
+    // const arr = JSON.parse(localStorage.getItem("list"));
+    // useEffect(() => {
+    //     arr.map((data) => (
+    //         if()
+    //     ))
+    // }, [arr])
 
-      }
 
     const sumar = () => {
         setAmount(amount + 1);
@@ -80,7 +88,7 @@ export const Buy = (props) => {
                 timer: 1500
             });
             setAmount(amount);
-            
+
         }
     };
     const restar = () => {
@@ -90,15 +98,50 @@ export const Buy = (props) => {
         };
     };
 
-    const onHeart = () => {
+    const [products_3, setProducts_3] = useState([])
+    let validDatos_ = (localStorage.getItem("list"))
+
+    const onHeart = (nombre,price,imagen,id,cantidad) => {
+        let data=JSON.parse(validDatos)
+        let vali=0
+        if (data!==null) {
+          data.map((data) =>{if( data.ids === id){
+            vali=1
+          }})
+        }
+
+
         document.querySelector(".material-symbols-outlined").style.color = 'red';
         document.querySelector(".Content_favorite").style.border = ' solid red';
         // document.querySelector(".Content_favorite").style.backgroundColor = '';
         setCounter(counter + 1);
+
+        /* ---------------------- producto ----------------------- */
+        if (vali===0) {
+        var datos = { nombres: nombre, prices: price, imagenes: imagen, ids: id, cantidades: cantidad }
+
+        setProducts_3(products_3 => products_3.concat(datos))
+        validDatos_ === null ? validDatos_ = [] : validDatos_ = JSON.parse(validDatos_);
+
+        localStorage.setItem("list", JSON.stringify(validDatos_.concat(datos)))
+        
+        }else if(vali===1){
+            Swal.fire({
+            icon: 'warning',
+            title: 'producto ya añadido a carrito',
+            showConfirmButton: false,
+            timer: 1600
+        })
+        }
+
+
         if (counter === 7) {
             document.querySelector(".material-symbols-outlined").style.color = 'gray';
             document.querySelector(".Content_favorite").style.border = ' solid gray';
             setCounter(counter - 1);
+
+
+            /* ----------------------- eliminar el producto ----------------------- */
         }
     };
 
@@ -183,7 +226,7 @@ export const Buy = (props) => {
                             </div>
                         </div>
                         <div className='addBuy'>
-                            <div className="Content_favorite" onClick={onHeart}>
+                            <div className="Content_favorite" onClick={(e) => { onHeart(Id.nombre, Id.price, Id.imagen, Id.id, Id.cantidad) }}>
                                 <span className="material-symbols-outlined">
                                     favorite
                                 </span>
@@ -192,7 +235,7 @@ export const Buy = (props) => {
                             <a href="/pago"><button onclick="" className='addBuy_'>
                                 Comprar ahora
                             </button></a>
-                            <button className='addBuy_2' onClick={(e) => { add(Id.nombre,Id.price,Id.imagen,Id.id) }} value={Id.id}>
+                            <button className='addBuy_2' onClick={(e) => { add(Id.nombre, Id.price, Id.imagen, Id.id) }} value={Id.id}>
                                 Agregar<FaShoppingCart />
                             </button>
                         </div>
