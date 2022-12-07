@@ -1383,7 +1383,7 @@ a {
   background: #f3f1f1;
   border-radius: 1rem;
   width: 15rem;
-  height: 19rem;
+  height: 26rem;
 }
 
 .iconFilter{
@@ -1398,6 +1398,7 @@ a {
 }
 
 .titleCategoria{
+  display: none;
   font-size: 2.2rem;
   text-align: center;
   color: gray;
@@ -1685,6 +1686,13 @@ hr {
     display: inline-block;
   }
 
+  .titleCategoria{
+    display: flex;
+    font-size: 2.2rem;
+    text-align: center;
+    color: gray;
+    justify-content: center;
+  }
 
   .select_product1 {
     width: 16rem;
@@ -1779,14 +1787,7 @@ hr {
     display: inline-block;
   }
 
-  .formulario2 {
-  }
-  .formulario3{
-    margin-left: 13.5rem;
-  }
 
-  .message2{
-  }
 
   .containerCategorias{
     display: none;
@@ -1798,33 +1799,8 @@ hr {
 }
 
 
-/*-------- Responsive 968px ---------*/
-@media screen and (max-width:968px) {
-
-}
-/*-------- Responsive 950px ---------*/
-
-@media screen and (max-width:950px) {
-  .formulario {
-    display: inline-block;
-  }
-  
-}
 
 
-
-/*-------- Responsive 900px ---------*/
-
-@media screen and (max-width:900px) {
-  .formulario {
-    display: inline-block;
-  }
-
- 
-  
-
-
-}
 
 
 /*-------- Responsive 850px ---------*/
@@ -1872,9 +1848,7 @@ hr {
     width: 24rem;
   }
 
-  .logito{
 
-  }
 }
 
 
@@ -1895,9 +1869,7 @@ hr {
     grid-template-columns: 20rem 20rem 20rem;
   }
 
-  .contact{
 
-  }
 
   .addBuy_ {
 
@@ -1918,18 +1890,6 @@ hr {
     display: inline-block;
   }
 
-  .formulario3{
-
-
-  }
-  .formulario2 {
-
-
-  }
-
-  .message2{
-
-  }
 
   .card_all_product{
     display: grid;
@@ -1981,9 +1941,7 @@ hr {
     width: 35rem;
   }
 
-  .contact{
 
-  }
 
   .container_1{
     width: 39rem;
@@ -2008,38 +1966,19 @@ hr {
   .formulario{
     display: inline-block;
   }
-  .formulario2{
-  }
+
   .formulario {
       display: inline-block;
   }
 
-  .formulario2 {
-
-  }
-
-  #welcome-back {
-  }
-
-  .formulario3 {
-    width: 32rem;
-  }
 
 
   .formulario3{
   width: 32rem;
   }
 
-  .message2{
-
-  }
-
-  .button-show2{
-
-  }
 
   .card_all_product{
-    /* margin-right: 12rem; */
     grid-template-columns: 1fr 1fr;
     justify-items: end;
   }
@@ -2060,36 +1999,11 @@ hr {
       width: 28rem;
     }
 
-
-    .welcome-back {
-
-    }
-
-    .iconos {
-
-    }
-
     .button-show {
 
       font-size: 1.9rem;
     }
 
-    .welcome-back{
-
-    }
-  
-  .iconos{
-
-    }
-  
-
-  .formulario3{
-
-  }
-
-  .message2{
-
-    }
   .card_all_product{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -2098,11 +2012,6 @@ hr {
     html{
       font-size: 70%;
     }
-
-    .message{
-
-    }
-
 
   }
 
@@ -2156,37 +2065,18 @@ hr {
       width: 29rem;
     }
 
-    .button-show2{
-    }
-
-    .iconos {
-
-    }
-
     .button-show {
-
       font-size: 1.9rem;
     }
   
-    .message2{
-
-    }
     .formulario3 {
 
       width: 28rem;
     }
 
-    .message2 {
-
-    }
-
     .card_all_product{
       display: grid;
       grid-template-columns: 20rem 20rem;
-    }
-
-    .message{
-
     }
   }
 
@@ -2194,14 +2084,6 @@ hr {
 @media screen and (max-width:480px) {
   .about_contact2 p{
       font-size: 15px;
-  }
-
-  .message {
-
-  }
-
-  .iconos {
-
   }
 
   .formulario {
@@ -2215,23 +2097,9 @@ hr {
     width: 24rem;
   }
 
-  .button-show {
-
-  }
-
-
-
   .formulario3 {
 
     width: 27rem;
-  }
-
-  .message2 {
-
-  }
-
-  .all{
-
   }
 
   .card_all_product{
@@ -2247,13 +2115,21 @@ hr {
     grid-template-columns: 1fr;
   }
   
-element.style {
-  display: flex;
-}
-.navbar {
-  align-items: center;
-}
+  element.style {
+    display: flex;
+  }
+  .navbar {
+    align-items: center;
+  }
 }
 
+/*-------- Responsive 414px ---------*/
+@media screen and (max-width:414px) {
+
+  .button-show2{
+    margin-left: 21rem;
+  }
+
+}
 
 

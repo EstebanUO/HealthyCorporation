@@ -155,21 +155,25 @@ export const Products = (props) => {
 
   /*----------- Filtro de ordenado por: ------------------*/
 
+  const [ordernado, setordernado] = useState([])
+
   const handleOnClick = (e) =>{
     let opciones = e.target.value
     // console.log(opciones);
-    if (opciones === "max") {
-      const ordenMax = characters.map((datas2) => datas2.price)
-      const ordenReal = ordenMax.sort()
-      console.log(ordenReal.reverse())
-    }
-    if (opciones === "min") {
-      const ordenMin = characters.map((datas2) => datas2.price)
-      console.log(ordenMin.sort((a, b) => a - b ))
-    }
-    if (opciones === "reciente") {
-      const ordenRec = characters.map((datas2) => datas2.price)
-      console.log(ordenRec.reverse())
+    if (opciones === "relevancia") {
+      setordernado([])
+    }else if (opciones === "max") {
+      const ordenMax = characters.map((datas2) => datas2)
+      const ordenReal = ordenMax.sort((a, b) => b.price - a.price)
+      setordernado(ordenReal)
+    }else if (opciones === "min") {
+      const ordenMin = characters.map((datas2) => datas2)
+      const ordenReal = ordenMin.sort((a, b) => a.price - b.price )
+      setordernado(ordenReal)
+    }else if (opciones === "reciente") {
+      const ordenRec = characters.map((datas2) => datas2)
+      const ordenReal = ordenRec.reverse()
+      setordernado(ordenReal)
     }
   }
 
@@ -187,7 +191,7 @@ export const Products = (props) => {
         <p className='productsEncontrados'>| Ordenar por:</p>
         <div className='content-select'>
           <select name="" id="selectPrecios" onChange={handleOnClick}>
-            <option value="revelancia">Relevancia</option>
+            <option value="relevancia">Relevancia</option>
             <option value="reciente">Más recientes</option>
             <option value="max">Precio más alto</option>
             <option value="min">Precio más bajo</option>
@@ -226,7 +230,7 @@ export const Products = (props) => {
             </div>
           </div>
         </div>
-        <CardAllProducts datosFiltrados3={datosFiltrados3} datosFiltrados2={datosFiltrados2} texto={texto} datosFiltrados={datosFiltrados}  characters={inputCharacters}/>
+        <CardAllProducts ordernado={ordernado} datosFiltrados3={datosFiltrados3} datosFiltrados2={datosFiltrados2} texto={texto} datosFiltrados={datosFiltrados}  characters={inputCharacters}/>
         {/* <Character characters={inputCharacters} /> */}
       </div>
       <Footer />

@@ -11,8 +11,6 @@ import sexual from '../../Image/Category/sexual.png';
 
 export const Categories = () => {
 
-  
-
     return (
         <div className='all' >
             <div className='contents' type='button'>
