@@ -142,7 +142,7 @@ hr {
     color: #00a650;
 }
 
-.padding_buy{
+.padding_buy {
     display: flex;
     flex-direction: column;
     align-items: baseline;
@@ -318,7 +318,7 @@ hr {
     display: block;
 }
 
-.imagen_buy{
+.imagen_buy {
     width: 3rem;
 }
 
@@ -449,8 +449,8 @@ hr {
     display: block;
     overflow: hidden;
     /* position: absolute; */
-   /* margin-top: 10rem; */
-    margin-left: -2rem; 
+    /* margin-top: 10rem; */
+    margin-left: -2rem;
     margin-right: -2rem;
 }
 
@@ -489,7 +489,7 @@ hr {
     }
 }
 
-@media screen and (max-width: 1000px){
+@media screen and (max-width: 1000px) {
     .img_up_ {
         width: 2.5rem;
     }
@@ -503,55 +503,62 @@ hr {
     }
 }
 
-@media screen and (max-width:850px){
+@media screen and (max-width:850px) {
     .row_buy {
         width: 60rem;
     }
+
     .columm_buy {
         width: 24rem;
     }
+
     .addBuy {
         width: 20.5rem;
     }
 }
 
-@media screen and (max-width:820px){
+@media screen and (max-width:820px) {
     .columm_buy {
         width: 22.5rem;
     }
 }
 
-@media screen and (max-width:780px){
+@media screen and (max-width:780px) {
     .columm_buy {
         width: 19.5rem;
     }
+
     .addBuy {
         width: 18.5rem;
     }
+
     .addBuy_2 {
         font-size: .85rem;
     }
 }
 
-@media screen and (max-width:760px){
+@media screen and (max-width:760px) {
     .columm_buy {
         width: 20.5rem;
     }
+
     .addBuy {
         width: 19.5rem;
     }
+
     .addBuy_2 {
         font-size: .85rem;
     }
 }
 
-@media screen and (max-width:768px){
+@media screen and (max-width:768px) {
     .row_buy {
         display: flex;
         flex-direction: column;
         width: 40rem;
         height: 57rem;
     }
+
     .columm_buy {
         display: flex;
         width: 100%;
@@ -561,33 +568,59 @@ hr {
         margin-top: -9rem;
         border-bottom-left-radius: 0.8rem;
     }
+
     .img_up_ {
         display: none;
     }
+
+    .metodos {
+        width: 50rem;
+    }
+
     .addBuy {
         width: 28.5rem;
     }
+
     .padding_buy {
         width: 28rem;
     }
 }
 
-@media screen and (max-width:600px){
+@media screen and (max-width:600px) {
     .content_description {
         padding: 1rem;
         width: auto;
     }
+
+    .metodos {
+        width: 40rem;
+    }
+
     .text-descrip2 {
         justify-content: center;
     }
+
     .card_product {
         display: flex;
         flex-wrap: wrap;
         width: auto;
         align-content: flex-start;
     }
+
     .description_all {
         display: flex;
         flex-direction: column;
+    }
+}
+
+@media screen and (max-width:460px) {
+    .metodos {
+        width: 37rem;
+    }
+}
+
+@media screen and (max-width:460px) {
+    .metodos {
+        width: 25rem;
     }
 }
