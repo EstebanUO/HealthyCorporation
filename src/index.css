@@ -678,6 +678,8 @@ input[type="checkbox"] {
 .about_contact2 {
   color: #5bc3fc;
   animation: about_contact2 1.5s forwards;
+  width: 25rem;
+  margin-right: 0rem;
 }
 
 @keyframes about_contact2 {
@@ -695,8 +697,10 @@ input[type="checkbox"] {
   margin-bottom: -5rem;
 }
 
+
 .about_contact4 {
   font-size: 1.3rem;
+  margin-left: 0rem;
   width: 27rem;
   color: gray;
   animation: about_contact4 1.5s forwards;
@@ -719,6 +723,7 @@ input[type="checkbox"] {
   flex-direction: column;
   margin-left: 2rem;
   margin-top: 8.1rem;
+  margin-right: 0;
 }
 
 @keyframes about_where {
@@ -738,16 +743,19 @@ input[type="checkbox"] {
 
 .text_product_ {
   font-size: 4.2rem;
-  padding-left: 6rem;
+  /* padding-left: 6rem; */
   color: #5bc3fc;
   animation: text_product 1s forwards;
 }
 
 .text_product_2 {
   font-size: 4rem;
-  padding-left: 6rem;
+  /* padding-left: 6rem; */
   color: gray;
   animation: text_product_2 1.4s forwards;
+}
+.info_all__ {
+  width: "400px"
 }
 
 @keyframes text_product_2 {
@@ -762,7 +770,7 @@ input[type="checkbox"] {
 
 .about_where3 {
   font-size: 1.3rem;
-  margin-left: 1.2rem;
+  /* margin-left: 1.2rem; */
   width: 28rem;
   color: gray;
 }
@@ -1831,6 +1839,10 @@ hr {
     grid-template-columns: 20rem 18rem 18rem;
   }
 
+  .text_product_2 {
+    font-size: 3rem;
+  }
+
   .text_product_ {
     font-size: 3.3rem;
   }
@@ -1915,6 +1927,12 @@ hr {
     flex-direction: column;
   }
 
+  .info_2 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
 
   .card_all_product {
     display: grid;
@@ -1929,9 +1947,12 @@ hr {
   }
 
   .text_product_ {
-
-    font-size: 5rem;
-
+    padding-top: 2rem;
+    font-size: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 2rem;
   }
 
 
@@ -1951,7 +1972,7 @@ hr {
   }
 
   .about_where3 {
-    width: 29rem;
+    width: 25rem;
 
 
   }
