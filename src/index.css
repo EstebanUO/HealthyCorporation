@@ -2054,6 +2054,19 @@ hr {
     font-size: 4rem;
   }
 
+  .container-Orden-Productos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .buscar {
+    width: 25rem;
+    border-radius: 5px;
+    border: solid 1px gray;
+  }
 
   .about_contact2 {
 

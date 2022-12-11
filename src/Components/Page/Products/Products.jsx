@@ -182,7 +182,6 @@ export const Products = (props) => {
       <Header valiLoginAdmin={props.valiLoginAdmin} /><br /><br />
       <h2 className='titleCategoria'>Compra por categoría</h2>
       <Categories/>
-      <br /><br />
       <div className='container-Orden-Productos'>
         <div className='navba__'>
           <input type="search" placeholder='Buscar producto' className='buscar' value={texto} onChange={inputLoad} />
