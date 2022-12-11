@@ -70,6 +70,7 @@ export const Buy = (props) => {
         }
     }
 
+    /*------------------------- validacion si hay un producto en lista de deseos se quede en rojo y pueda eliminarlo ----------------------------- */
     // const [valid, setvalid] = useState(second)
     // const arr = JSON.parse(localStorage.getItem("list"));
     // useEffect(() => {
@@ -145,6 +146,8 @@ export const Buy = (props) => {
 
 
             /* ----------------------- eliminar el producto ----------------------- */
+
+            
         }
     };
 

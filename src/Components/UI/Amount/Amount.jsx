@@ -148,7 +148,7 @@ export const Amount = (props) => {
                     <div className='back_up_'><Link to="/products"><img className='img_up2' src={back} alt="atras" /><p className='back'>Atras</p></Link>
                     </div></nav>
                 <div   className='product'>
-                <div id="text_list"><AiOutlineExclamationCircle className='icon_warning'/><p>Aun no has agregado productos a tu carrito</p></div>
+                <div id="text_list"><AiOutlineExclamationCircle className='icon_warning'/><p>No has agregado productos a tu carrito</p></div>
           
                      {arr.map((data) => (
                         <> <div className="product_all">
