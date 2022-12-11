@@ -1460,6 +1460,17 @@ hr {
   display: grid;
   grid-template-columns: 20rem 20rem 20rem;
   justify-items: end;
+  animation: card_all_product 1.5s forwards;
+}
+
+@keyframes card_all_product {
+  from {
+    transform: translate(100px);
+  }
+
+  to {
+    transform: translate(0px);
+  }
 }
 
 .imgAllProduct {
