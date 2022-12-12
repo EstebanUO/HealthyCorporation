@@ -90,25 +90,58 @@
 }
 
 .addProduct_check4 {
-    border-radius: .5rem;
-    background-color: #5bc3fc;
-    border: none;
-    height: .5rem;
-    transition: all 300ms;
+    font-size: 18px;
+    /* letter-spacing: 2px; */
     height: 3.4rem;
     width: 15rem;
     margin-top: 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    /* text-transform: uppercase; */
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+    /* padding: 0.7em 2em; */
+    margin-bottom: .5rem;
+    border: 3px solid #5bc3fc;
+    border-radius: .5rem;
+    width: 13rem;
+    position: relative;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+    color: #5bc3fc;
+    text-decoration: none;
+    transition: 0.3s ease all;
+    z-index: 1;
 }
 
-.addProduct_check4:hover {
-    background-color: #eee7e7;
-    transition: all 300ms;
-    border:  solid #5bc3fc;
+.addProduct_check4:before {
+    transition: 0.5s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: '';
+    background-color: #5bc3fc;
+    z-index: -1;
+  }
+   
+  .addProduct_check4:hover,
+  .addProduct_check4:focus {
+    color: white;
+  }
+  
+  .addProduct_check4:hover:before,
+  .addProduct_check4:focus:before {
+    transition: 0.5s all ease;
+    left: 0;
+    right: 0;
+    opacity: 1;
+  }
+  
+  .addProduct_check4:active {
+    transform: scale(0.9);
+  }
 
-}
 
 .addProduct_check3:hover {
     background-color: #eee7e7;
@@ -211,4 +244,18 @@
     margin-left: 21rem;
     color: black;
     margin-top: -2.8rem;
+}
+
+@media screen and (max-width:1000px) {
+
+    .addProduct_check4 {
+        width: 17rem;
+      }
+}
+
+@media screen and (max-width:673px) {
+
+    .addProduct_check4 {
+        width: 19rem;
+      }
 }

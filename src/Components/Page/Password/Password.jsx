@@ -170,20 +170,22 @@ export const Password = (props) => {
 
               <div className='acount_content_direction'>
                 <p className='text_check'>Contraseña actual</p>
-                <input value={pass} onChange={(e) => { setPass(e.target.value) }} className='input_acount' placeholder='Ingresa tu contraseña actual' minlength="8" type="password"  />
+                <input value={pass} onChange={(e) => { setPass(e.target.value) }} className='input_acount' placeholder='Ingresa tu contraseña actual' minlength="8" type="password" required />
               </div><br />
               <div className='acount_content_row'>
                 <div className='acount_content_direction2'>
                   <p className='text_check'>Nueva contraseña</p>
-                  <input value={passNew} onChange={(e) => { setpassNew(e.target.value) }} className='input_acount2' placeholder='Ingresa la nueva contraseña' minlength="8" type="password"  />
+                  <input value={passNew} onChange={(e) => { setpassNew(e.target.value) }} className='input_acount2' placeholder='Ingresa la nueva contraseña' minlength="8" type="password"  required/>
                 </div><br />
                 <div className='acount_content_direction2'>
                   <p className='text_check'>Confirmar contraseña</p>
-                  <input value={passNewConfirm} onChange={(e) => { setpassNewConfirm(e.target.value) }} className='input_acount2' placeholder='Ingresa de nuevo la contraseña' minlength="8" type="password"  />
+                  <input value={passNewConfirm} onChange={(e) => { setpassNewConfirm(e.target.value) }} className='input_acount2' placeholder='Ingresa de nuevo la contraseña' minlength="8" type="password"  required/>
                 </div>
-              </div>
+              </div><br />
+              <Link  to="/recoverPassword"><p  className='text_check'>¿Se te olvido la contraseña?</p></Link>
             </div>
             <div className='acount_btn'>
+             
               <button onClick={(e)=>validation()} className='btn_save'>Guardar</button>
             </div>
           </div>

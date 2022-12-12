@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import {  useNavigate,Navigate } from "react-router-dom"
 import './Amount.css';
 import { FaShoppingCart } from "react-icons/fa";
+import { AiOutlineExclamationCircle } from "react-icons/ai";
 import { Footer } from '../../Page/Layout/Footer/Footer';
 import { Link } from 'react-router-dom';
 import delect from '../../Image/eliminar.png'
@@ -23,6 +24,7 @@ export const Amount = (props) => {
     const onload= ()=> {
         if (arrs!==null) {
             setarr(arrs)
+            document.getElementById("text_list").style.display = 'none'
         }
         let total=0;
         
@@ -115,7 +117,7 @@ export const Amount = (props) => {
                 const filtro = arr.filter((item) => item !== arr[datos]) 
                 localStorage.setItem("car", JSON.stringify(filtro))
                 setarr(filtro) 
-                window.location.reload()    
+                window.location.reload()
             }
         })
     }
@@ -146,6 +148,8 @@ export const Amount = (props) => {
                     <div className='back_up_'><Link to="/products"><img className='img_up2' src={back} alt="atras" /><p className='back'>Atras</p></Link>
                     </div></nav>
                 <div   className='product'>
+                <div id="text_list"><AiOutlineExclamationCircle className='icon_warning'/><p>No has agregado productos a tu carrito</p></div>
+          
                      {arr.map((data) => (
                         <> <div className="product_all">
                             <div>

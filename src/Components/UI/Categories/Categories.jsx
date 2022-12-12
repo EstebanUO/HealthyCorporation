@@ -11,10 +11,8 @@ import sexual from '../../Image/Category/sexual.png';
 
 export const Categories = () => {
 
-  
-
     return (
-        <div className='all' >
+        <><div className='all' >
             <div className='contents' type='button'>
                 <div className='card2'>
                     <img src={ofertas} alt="Prueba de imagen" className='Image-card' />
@@ -57,6 +55,6 @@ export const Categories = () => {
                     <p className='text-card'>Dermocosméticos</p>
                 </div>
             </div>
-        </div>
+        </div><br /><br /></>
     )
 }

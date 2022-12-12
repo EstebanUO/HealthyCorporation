@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { FaShoppingCart } from "react-icons/fa";
 // import { MdAttachMoney } from "react-icons/Md";
 import Swal from 'sweetalert2'
 
 // import { keyboard } from "@testing-library/user-event/dist/keyboard";
 
-export const CardAllProducts = ({characters,datosFiltrados,texto}) => {
+export const CardAllProducts = ({characters,datosFiltrados,texto,datosFiltrados2,datosFiltrados3,ordernado}) => {
 
   /*no eliminar este usestate por que se cae la pagina*/
   const [products_2, setProducts_2] = useState([])
@@ -15,7 +15,19 @@ export const CardAllProducts = ({characters,datosFiltrados,texto}) => {
   let datosProductos = characters
 
   if (texto === '') {
-    datosProductos = datosFiltrados.length !==0 ? datosFiltrados : characters;
+    if (ordernado.length === 0) {
+      if (datosFiltrados3.length === 0) {
+        if (datosFiltrados.length !== 0) {
+          datosProductos =  datosFiltrados
+        }else if(datosFiltrados2.length !== 0){
+          datosProductos =  datosFiltrados2
+        }
+      }else if (datosFiltrados3.length !== 0) {
+        datosProductos =  datosFiltrados3
+      }
+    }else if (ordernado.length !== 0) {
+      datosProductos = ordernado
+    }
   }
 
   /*-------------------------------------------------------*/
@@ -116,9 +128,9 @@ export const CardAllProducts = ({characters,datosFiltrados,texto}) => {
               <button onClick={(e) => { add(data.nombre,data.price,data.imagen,data.id) }} className='addProduct_' value={{'id':data.id,'imagen':data.imagen,'price':data.price,'nombre':data.nombre}}>
                 Agregar <FaShoppingCart />
               </button>
-              <Link to="/compra"><button onClick={(e) => { add_2(e) }} className='addProduct_2' value={data.id}>
+              <a href="/compra"><button onClick={(e) => { add_2(e) }} className='addProduct_2' value={data.id}>
                 Ver más
-              </button></Link>
+              </button></a>
             </div>
           </div>
         ))

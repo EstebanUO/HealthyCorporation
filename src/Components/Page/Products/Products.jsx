@@ -4,8 +4,8 @@ import { Footer } from '../Layout/Footer/Footer';
 import { CardAllProducts } from '../../UI/CardAllProducts/CardAllProducts';
 import { FaArrowCircleDown, FaArrowCircleUp, FaSlidersH } from "react-icons/fa";
 // import { Character } from '../../UI/Character/Character';
-// import { Categories } from '../../UI/Categories/Categories'
-// import Slider from '@mui/material/Slider';
+import { Categories } from '../../UI/Categories/Categories'
+import Slider from '@mui/material/Slider';
 
 export const Products = (props) => {
 
@@ -117,38 +117,85 @@ export const Products = (props) => {
 
   /*--------------- Filtro de precios ---------------*/
 
-  // const [prizes, setValue] = useState([1, 100000]);
+  const [prizes, setValue] = useState([1, 100000]);
+  const [datosFiltrados2, setDatosFiltrados2] = useState([])
+  const [datosFiltrados3, setdatosFiltrados3] = useState([])
 
-  // const handleChange = (num1, num2) => {
+  let handleChange=()=>{};
 
-  //   let filterPrice = characters.map((datas) => datas.price)
+  if (datosFiltrados.length === 0) {
+    handleChange = (num1, num2) => {
 
-  //   filterPrice = Math.max(...filterPrice)
+      let numVal1 = num1.target.value[0]
+      let numVal2 = num2[1]
+  
+      const resultadoCategoria2 = characters.filter((datas2) => datas2.price >= numVal1 && datas2.price <= numVal2)
+      setDatosFiltrados2(
+        resultadoCategoria2
+      )
+  
+      setValue(num2);
+    };
+  
+  }else if (datosFiltrados.length !== 0) {
+    handleChange = (num1, num2) => {
 
-  //   console.log(filterPrice)
-  //   setValue(num2);
-  // };
+      let numVal1 = num1.target.value[0]
+      let numVal2 = num2[1]
+  
+      const resultadoCategoria2 = datosFiltrados.filter((datas2) => datas2.price >= numVal1 && datas2.price <= numVal2)
+      setdatosFiltrados3(
+        resultadoCategoria2
+      )
+  
+      setValue(num2);
+    };
+  }
+  
+
+  /*----------- Filtro de ordenado por: ------------------*/
+
+  const [ordernado, setordernado] = useState([])
+
+  const handleOnClick = (e) =>{
+    let opciones = e.target.value
+    // console.log(opciones);
+    if (opciones === "relevancia") {
+      setordernado([])
+    }else if (opciones === "max") {
+      const ordenMax = characters.map((datas2) => datas2)
+      const ordenReal = ordenMax.sort((a, b) => b.price - a.price)
+      setordernado(ordenReal)
+    }else if (opciones === "min") {
+      const ordenMin = characters.map((datas2) => datas2)
+      const ordenReal = ordenMin.sort((a, b) => a.price - b.price )
+      setordernado(ordenReal)
+    }else if (opciones === "reciente") {
+      const ordenRec = characters.map((datas2) => datas2)
+      const ordenReal = ordenRec.reverse()
+      setordernado(ordenReal)
+    }
+  }
 
   return (
     <div>
       <Header valiLoginAdmin={props.valiLoginAdmin} /><br /><br />
-      {/* <h2 className='titleCategoria'>Compra por categoría</h2> */}
-      {/* <Categories/> */}
-      <br /><br />
+      <h2 className='titleCategoria'>Compra por categoría</h2>
+      <Categories/>
       <div className='container-Orden-Productos'>
         <div className='navba__'>
           <input type="search" placeholder='Buscar producto' className='buscar' value={texto} onChange={inputLoad} />
         </div>
-        <p className='productsEncontrados'>{counterProd} Productos Encontrados</p>
-        {/* <p className='productsEncontrados'>Ordenar por:</p>
-        <select name="" id="selectPrecios">
-          <option value="">Relevancia</option>
-          <option value="">Más vendidos</option>
-          <option value="">Más recientes</option>
-          <option value="">Descuento</option>
-          <option value="">Precio más alto</option>
-          <option value="">Precio más bajo</option>
-        </select> */}
+        <p className='productsEncontrados'>{counterProd} Productos Encontrados |</p>
+        <p className='productsEncontrados'>| Ordenar por:</p>
+        <div className='content-select'>
+          <select name="" id="selectPrecios" onChange={handleOnClick}>
+            <option value="relevancia">Relevancia</option>
+            <option value="reciente">Más recientes</option>
+            <option value="max">Precio más alto</option>
+            <option value="min">Precio más bajo</option>
+          </select>
+        </div>
       </div>
       <div className='containerFilter'>
         <div className='containerCategorias'>
@@ -167,9 +214,9 @@ export const Products = (props) => {
               </div>
             </div>
             <hr />
-            {/* <label className='priceRange'>Precios</label> */}
+            <label className='priceRange'>Precios</label>
             <br />
-            {/* <div className="wrapper">
+            <div className="wrapper">
                 <Slider
                   getAriaLabel={() => 'Temperature range'}
                   value={prizes}
@@ -179,10 +226,10 @@ export const Products = (props) => {
                   // step={50000}
                   max={100000}
                 />
-            </div> */}
+            </div>
           </div>
         </div>
-        <CardAllProducts texto={texto} datosFiltrados={datosFiltrados}  characters={inputCharacters}/>
+        <CardAllProducts ordernado={ordernado} datosFiltrados3={datosFiltrados3} datosFiltrados2={datosFiltrados2} texto={texto} datosFiltrados={datosFiltrados}  characters={inputCharacters}/>
         {/* <Character characters={inputCharacters} /> */}
       </div>
       <Footer />

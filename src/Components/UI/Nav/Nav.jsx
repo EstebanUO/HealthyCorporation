@@ -14,7 +14,7 @@ export const Nav = (props) => {
       <div className='content'>
         <Link to='/' className='a'>Inicio</Link>
         <Link to='/products' className='a'>Productos</Link>
-        <Link to='/register' className='a'>Mi cuenta</Link>
+        <Link to='/login' className='a'>Mi cuenta</Link>
         <Link to='/Contact' className='a'>Contacto</Link>
         {props.valiLoginAdmin? <a target="_blank" href='  https://api-products-healthy.herokuapp.com/admin/' className='a'>Administrar Productos</a>:null}
         {props.valiLoginAdmin? <a target="_blank" href='https://apiprojectmain.herokuapp.com/admin/' className='a'>Administrar Usuarios</a>:null}
