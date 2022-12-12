@@ -2510,6 +2510,10 @@ hr {
     width: 23rem;
   }
 
+  .menu.visible{
+    right: 7rem;
+  }
+
   .button-show2 {
     margin-left: 17rem;
   }
