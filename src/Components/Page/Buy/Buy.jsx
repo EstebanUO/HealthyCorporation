@@ -63,7 +63,7 @@ export const Buy = (props) => {
         } else if (vali === 1) {
             Swal.fire({
                 icon: 'warning',
-                title: 'producto ya añadido a carrito',
+                title: 'Producto ya añadido a carrito',
                 showConfirmButton: false,
                 timer: 1600 
             })
@@ -106,7 +106,7 @@ export const Buy = (props) => {
     let validDatos_ = (localStorage.getItem("list"))
 
     const onHeart = (nombre,price,imagen,id,cantidad) => {
-        let data=JSON.parse(validDatos)
+        let data=JSON.parse(validDatos_)
         let vali=0
         if (data!==null) {
           data.map((data) =>{if( data.ids === id){
@@ -132,7 +132,7 @@ export const Buy = (props) => {
         }else if(vali===1){
             Swal.fire({
             icon: 'warning',
-            title: 'producto ya añadido a carrito',
+            title: 'Producto ya añadido a lista de deseos',
             showConfirmButton: false,
             timer: 1600
         })
@@ -239,7 +239,7 @@ export const Buy = (props) => {
                                 <p className="like">{counter} like</p>
                             </div>
                             <a href="/pago"><button onclick="" className='addBuy_'>
-                                Comprar ahora
+                                Comprar
                             </button></a>
                             <button className='addBuy_2' onClick={(e) => { add(Id.nombre, Id.price, Id.imagen, Id.id) }} value={Id.id}>
                                 Agregar<FaShoppingCart />

@@ -3,6 +3,8 @@ import { Header } from '../Layout/Header/Header';
 import { Footer } from '../Layout/Footer/Footer';
 import { Link } from "react-router-dom";
 import back from '../../Image/back.png';
+import delect from '../../Image/eliminar.png'
+import Swal from 'sweetalert2';
 import { AiOutlineExclamationCircle } from "react-icons/ai";
 
 
@@ -20,6 +22,38 @@ export const ListaDeseos = () => {
     }
 
   }
+
+  const delectt = (data) => {
+    Swal.fire({
+        title: '¿Estas seguro?',
+        text: "¡No podrás revertir esto!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: '!Si!, quiero eliminarlo',
+        cancelButtonText: 'Cancelar',
+        buttonsStyling: false,
+        customClass: {
+            confirmButton: "confirm",
+            cancelButton: "Cancel"
+        }
+    }).then((result) => {
+        if (result.isConfirmed) {
+            Swal.fire({
+                icon: 'success',
+                title: 'Se ha eliminado el producto del carrito',
+                showConfirmButton: false,
+                timer: 1400
+            })
+            const datos=arr.indexOf(data)
+            const filtro = arr.filter((item) => item !== arr[datos]) 
+            localStorage.setItem("list", JSON.stringify(filtro))
+            setarr(filtro) 
+            window.location.reload()
+        }
+    })
+}
 
   // --------------------- compra  ----------------------------
 
@@ -54,7 +88,7 @@ export const ListaDeseos = () => {
           <div className="descripcionDeseos">
             <h1 className="titleDescripcionDeseos2">Datos de los productos</h1>
           </div><br />
-          <div id="text_list"><AiOutlineExclamationCircle className='icon_warning'/><p>Aun no has marcado productos que te gusten</p></div>
+          <div id="text_list"><AiOutlineExclamationCircle className='icon_warning'/><p>No has marcado productos que te gusten</p></div>
           <>{arr.map((data) => (
           
             <div className="cardProducts_2">
@@ -68,6 +102,8 @@ export const ListaDeseos = () => {
               <p className='disponibilidad'>Agotado</p>
               <p className='disponibilidad_'>Disponible</p>
               <Link to="/compra"><button className='btn_' onClick={(e) => { add_2(e) }} value={data.ids}>Ver más</button></Link>
+              {/* <button className='btn_2'>Quitar</button> */}
+              <img onClick={()=>delectt(data)} className='delect_producto_' src={delect} alt="eiminar producto" />
 
             </div>
           </div>

@@ -18,23 +18,7 @@
     justify-content: center;
 }
 
-.confirm{
-    color: #ffffff;
-    padding: 0.3rem;
-    background-color: #5bc3fc;
-    width: 15rem;
-    border-radius: 0.5rem;
-    font-size: 1.3rem;
-    border: none;
-    transition: all 400ms;
-}
 
-.confirm:hover {
-    background-color: #eee7e7;
-    color: black;
-    transition: all 300ms;
-    border: solid #5bc3fc;
-}
 
 .text_link{
     color: black;
@@ -113,23 +97,60 @@
 }
 
 .btn_save2 {
-    color: black;
-    padding: 0.3rem;
+    color: #ffffff;
     background-color: #fc5b5b;
-    width: 12rem;
-    display: flex;
-    justify-content: center;
-    border-radius: 0.5rem;
-    font-size: 1.3rem;
-    transition: all 400ms;
-    border: none;
+    font-size: 18px;
+    /* letter-spacing: 2px; */
+    /* text-transform: uppercase; */
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+    /* padding: 0.7em 2em; */
+    margin-bottom: .5rem;
+    margin-left: 1rem;
+    border: 3px solid #fc5b5b;
+    border-radius: .5rem;
+    width: 10rem;
+    height: 3rem;
+    position: relative;
+    /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1); */
+    
+    text-decoration: none;
+    transition: 0.3s ease all;
+    z-index: 1;
 }
 
-.btn_save2:hover {
-    background-color: #eee7e7;
-    transition: all 300ms;
-    border: solid #fc5b5b;
-}
+.btn_save2:before {
+    transition: 0.5s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: '';
+    background-color: white;
+    z-index: -1;
+  }
+   
+  .btn_save2:hover,
+  .btn_save2:focus {
+    color: #fc5b5b;
+  }
+  
+  .btn_save2:hover:before,
+  .btn_save2:focus:before {
+    transition: 0.5s all ease;
+    left: 0;
+    right: 0;
+    opacity: 1;
+    border-radius: .3rem;
+  
+  }
+  
+  .btn_save2:active {
+    transform: scale(0.9);
+  }
 
 .circles3 {
     width: 3.5rem;

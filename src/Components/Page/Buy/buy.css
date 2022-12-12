@@ -224,39 +224,109 @@ hr {
 .addBuy {
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 .addBuy_ {
+    font-size: 18px;
+    /* letter-spacing: 2px; */
+    /* text-transform: uppercase; */
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+    /* padding: 0.7em 2em; */
+    border: 3px solid #5bc3fc;
     border-radius: .5rem;
-    background-color: #5bc3fc;
-    border: none;
-    transition: all 300ms;
     width: 8rem;
-    height: 2.8rem;
-    margin: 0.2rem;
-    font-size: .9rem;
+    height: 3rem;
+    position: relative;
+    /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1); */
+    color: #5bc3fc;
+    text-decoration: none;
+    transition: 0.3s ease all;
+    z-index: 1;
 }
 
 .addBuy_2 {
-    border-radius: 0.5rem;
-    border: solid #5bc3fc;
-    transition: all 300ms;
-    width: 11rem;
-    height: 2.8rem;
-    font-size: .9rem;
-    font-weight: 400;
+    font-size: 18px;
+    /* letter-spacing: 2px; */
+    /* text-transform: uppercase; */
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+    /* padding: 0.7em 2em; */
+    border: 3px solid #5bc3fc;
+    border-radius: .5rem;
+    width: 8rem;
+    height: 3rem;
+    position: relative;
+    /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1); */
+    color: #5bc3fc;
+    text-decoration: none;
+    transition: 0.3s ease all;
+    z-index: 1;
 }
 
-.addBuy_:hover {
-    background-color: #50c4ff2e;
-    transition: all 300ms;
-    border: solid #5bc3fc;
-}
+.addBuy_2:before {
+    transition: 0.5s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: '';
+    background-color: #5bc3fc;
+    z-index: -1;
+  }
+   
+  .addBuy_2:hover,
+  .addBuy_2:focus {
+    color: white;
+  }
+  
+  .addBuy_2:hover:before,
+  .addBuy_2:focus:before {
+    transition: 0.5s all ease;
+    left: 0;
+    right: 0;
+    opacity: 1;
+  }
+  
+  .addBuy_2:active {
+    transform: scale(0.9);
+  }
 
-.addBuy_2:hover {
-    background-color: #50c4ff2e;
-    transition: all 300ms;
-}
+
+  .addBuy_:before {
+    transition: 0.5s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: '';
+    background-color: #5bc3fc;
+    z-index: -1;
+  }
+   
+  .addBuy_:hover,
+  .addBuy_:focus {
+    color: white;
+  }
+  
+  .addBuy_:hover:before,
+  .addBuy_:focus:before {
+    transition: 0.5s all ease;
+    left: 0;
+    right: 0;
+    opacity: 1;
+  }
+  
+  .addBuy_:active {
+    transform: scale(0.9);
+  }
 
 /* metodos  de pago */
 #content_det {
