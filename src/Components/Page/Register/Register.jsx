@@ -68,7 +68,7 @@ export const Register = (props) => {
             <h1 className="titleReg">Registro</h1>
             <div className="formularioReg">
               <p className='pvaliRegister' id='valiExiste' />
-              <label className="labelsReg">Nobre de usuario</label>
+              <label className="labelsReg">Nombre de usuario</label>
               <FaUserAlt className='iconUserReg' />
               <input minLength="4" maxLength="20" value={props.usernameRegister} onChange={props.onChangeusernameRegister} name="name" type="text" className="form-input" placeholder="User name" autoComplete="off" required />
               <p className='pvaliRegister' id='txtvalidUsername' />
