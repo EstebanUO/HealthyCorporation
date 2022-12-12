@@ -104,13 +104,13 @@ export const Direction_pago = (props) => {
             </div>
             <div className='nom_check'>
                 <p className='text_check2' id='text_check2'><b>¡{direction_2.name}</b> &nbsp;dijita tu dirección para saber en donde te encuentras!</p>
-                <p className='text_check2' id='text_check3'><b>¡{direction_2.name}</b> &nbsp;ya tienes una direccion agregada!</p>
+                <p className='text_check2' id='text_check3'><b>¡{direction_2.name}</b> &nbsp;ya tienes una dirección agregada!</p>
             </div>
             <div className='check_all'>
                 <div className='content_check'>
 
                     <nav className='nav_check'><p className='pad_check'>Método de entrega</p>
-                        <div className='back_up'><Link to="/compra"><img className='img_up2' src={back} alt="atras" /><p className='back'>Atras</p></Link>
+                        <div className='back_up'><a href="/compra"><img className='img_up2' src={back} alt="atras" /><p className='back'>Atras</p></a>
                         </div></nav>
 
 

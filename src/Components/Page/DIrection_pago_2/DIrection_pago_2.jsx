@@ -103,7 +103,7 @@ export const DIrection_pago_2 = (props) => {
             </div>
             <div className='nom_check'>
                 <p className='text_check2' id='text_check2'><b>¡{direction_2.name}</b> &nbsp;dijita tu dirección para saber en donde te encuentras!</p>
-                <p className='text_check2' id='text_check3'><b>¡{direction_2.name}</b> &nbsp;ya tienes una direccion agregada!</p>
+                <p className='text_check2' id='text_check3'><b>¡{direction_2.name}</b> &nbsp;ya tienes una dirección agregada!</p>
             </div>
             <div className='check_all'>
                 <div className='content_check'>

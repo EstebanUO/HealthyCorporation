@@ -126,8 +126,9 @@
     width: 13rem;
     position: relative;
     /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1); */
-    color: #5bc3fc;
+    color: white;
     text-decoration: none;
+    background-color: #5bc3fc;
     transition: 0.3s ease all;
     z-index: 1;
   }
@@ -142,13 +143,14 @@
     bottom: 0;
     opacity: 0;
     content: '';
-    background-color: #5bc3fc;
+    background-color: white;
     z-index: -1;
+    border-radius: .3rem;
   }
    
   .addProduct_2:hover,
   .addProduct_2:focus {
-    color: white;
+    color:#5bc3fc;
   }
   
   .addProduct_2:hover:before,

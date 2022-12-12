@@ -18,6 +18,15 @@ export const Buy = (props) => {
     const [valor, setValor] = useState(1);
     const [Id, setId] = useState([])
 
+    const arrs = JSON.parse(localStorage.getItem("list"));
+    const [arr, setarr] = useState([])
+    const onload = () => {
+        if (arrs !== null) {
+          setarr(arrs)
+        }
+    
+      }
+
     /* ------------------------------ add product ---------------------------- */
     const [products_2, setProducts_2] = useState([])
 
@@ -70,17 +79,7 @@ export const Buy = (props) => {
         }
     }
 
-    /*------------------------- validacion si hay un producto en lista de deseos se quede en rojo y pueda eliminarlo ----------------------------- */
-    // const [valid, setvalid] = useState(second)
-    // const arr = JSON.parse(localStorage.getItem("list"));
-    // useEffect(() => {
-    //     arr.map((data) => (
-    //         setvalid(data.ids)
-    //     ))
-    // }, [arr])
 
-    // useEffect(() => {
-    // }, [])
 
     const sumar = () => {
         setAmount(amount + 1);
@@ -129,39 +128,50 @@ export const Buy = (props) => {
 
         localStorage.setItem("list", JSON.stringify(validDatos_.concat(datos)))
         
-        }else if(vali===1){
-            Swal.fire({
-            icon: 'warning',
-            title: 'Producto ya añadido a lista de deseos',
-            showConfirmButton: false,
-            timer: 1600
-        })
         }
 
 
         if (counter === 7) {
-            document.querySelector(".material-symbols-outlined").style.color = 'gray';
-            document.querySelector(".Content_favorite").style.border = ' solid gray';
-            setCounter(counter - 1);
+            // document.querySelector(".material-symbols-outlined").style.color = 'gray';
+            // document.querySelector(".Content_favorite").style.border = ' solid gray';
+            setCounter(counter);
 
 
-            /* ----------------------- eliminar el producto ----------------------- */
+        //     /* ----------------------- eliminar el producto ----------------------- */
 
-            
+        //     const datos_=arr.indexOf(Id)
+        //     const filtro = arr.filter((item) => item !== arr[datos_]) 
+        //     localStorage.setItem("list", JSON.stringify(filtro))
+        //     setarr(filtro) 
+        //     window.location.reload()
         }
     };
 
     /* ------------------------------ product ---------------------------- */
 
+    /* validacion si hay un producto en lista de deseos se quede en rojo y pueda eliminarlo */
+
     const productId = localStorage.getItem("product")
 
-    // useEffect(() => {
-    //     if (productId==null){
-    //         console.log(productId)
-    //     } else if(productId!=null){
-    //         setValor(Id.cantidad)
-    //     }
-    // }, [productId])
+    /* toma solo un valor el ultimo */
+    let num 
+
+    arr.map(function(data) {
+       num = data.ids
+    });
+
+    window.onload = () => {
+        // const productId_2 = localStorage.getItem("product")
+        let num_ = parseInt(productId)
+        if (num_ === num) {
+            console.log("entra");
+            document.querySelector(".material-symbols-outlined").style.color = 'red';
+            document.querySelector(".Content_favorite").style.border = ' solid red';
+            setCounter(counter + 1)
+        }
+    }
+
+    /* fin de validacion */
 
     const baseURL = `https://api-products-healthy.herokuapp.com/api/healthyapp/${productId}`;
     React.useEffect(() => {
@@ -173,16 +183,16 @@ export const Buy = (props) => {
 
     /*----------------------------------------------------------------------*/
 
-    // const formatoMexico = (number) => {
-    //     const exp = /(\d)(?=(\d{3})+(?!\d))/g;
-    //     const rep = '$1,';
-    //     return number.toString().replace(exp,rep);
-    // }
+    const formatoMexico = (number) => {
+        const exp = /(\d)(?=(\d{3})+(?!\d))/g;
+        const rep = '$1,';
+        return number.toString().replace(exp, rep);
+      }
 
     return (
         <>
             <Header valiLoginAdmin={props.valiLoginAdmin} />
-            <div className='content_buy'>
+            <div className='content_buy'  onLoad={()=>{onload()}}>
                 <div className='row_buy'>
                     <div className='imgBuy'>
                         <ReactImageMagnify {...{
@@ -238,7 +248,7 @@ export const Buy = (props) => {
                                 </span>
                                 <p className="like">{counter} like</p>
                             </div>
-                            <a href="/pago"><button onclick="" className='addBuy_'>
+                            <a href="/pago"><button className='addBuy_'>
                                 Comprar
                             </button></a>
                             <button className='addBuy_2' onClick={(e) => { add(Id.nombre, Id.price, Id.imagen, Id.id) }} value={Id.id}>

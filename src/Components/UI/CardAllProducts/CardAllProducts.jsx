@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { FaShoppingCart } from "react-icons/fa";
 // import { MdAttachMoney } from "react-icons/Md";
 import Swal from 'sweetalert2'
@@ -128,9 +128,9 @@ export const CardAllProducts = ({characters,datosFiltrados,texto,datosFiltrados2
               <button onClick={(e) => { add(data.nombre,data.price,data.imagen,data.id) }} className='addProduct_' value={{'id':data.id,'imagen':data.imagen,'price':data.price,'nombre':data.nombre}}>
                 Agregar <FaShoppingCart />
               </button>
-              <Link to="/compra"><button onClick={(e) => { add_2(e) }} className='addProduct_2' value={data.id}>
+              <a href="/compra"><button onClick={(e) => { add_2(e) }} className='addProduct_2' value={data.id}>
                 Ver más
-              </button></Link>
+              </button></a>
             </div>
           </div>
         ))

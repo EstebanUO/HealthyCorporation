@@ -42,7 +42,7 @@ export const ListaDeseos = () => {
         if (result.isConfirmed) {
             Swal.fire({
                 icon: 'success',
-                title: 'Se ha eliminado el producto del carrito',
+                title: 'Se ha eliminado el producto de lista de deseos',
                 showConfirmButton: false,
                 timer: 1400
             })
@@ -101,7 +101,7 @@ export const ListaDeseos = () => {
               <p className='precioDeseos'>$ {formatoMexico (data.prices)}</p>
               <p className='disponibilidad'>Agotado</p>
               <p className='disponibilidad_'>Disponible</p>
-              <Link to="/compra"><button className='btn_' onClick={(e) => { add_2(e) }} value={data.ids}>Ver más</button></Link>
+              <a href="/compra"><button className='btn_' onClick={(e) => { add_2(e) }} value={data.ids}>Ver más</button></a>
               {/* <button className='btn_2'>Quitar</button> */}
               <img onClick={()=>delectt(data)} className='delect_producto_' src={delect} alt="eiminar producto" />
 
