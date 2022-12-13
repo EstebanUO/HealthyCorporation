@@ -98,7 +98,7 @@ export const Amount = (props) => {
             showCancelButton: true,
             confirmButtonColor: '#3085d6',
             cancelButtonColor: '#d33',
-            confirmButtonText: '!Si!, quiero eliminarlo',
+            confirmButtonText: '!Si quiero!',
             cancelButtonText: 'Cancelar',
             buttonsStyling: false,
             customClass: {
