@@ -42,14 +42,14 @@ export const Footer = () => {
                 <MDBIcon icon="gem" className="me-3" />
                 Healthy Corporation
               </h6>
-              <p>Somos una pagina web local, con la finalidad de ayudar a aquellas personas que no viva cerca de una farmacia</p>
+              <p>Somos una aplicativo web local, con la finalidad de ayudar a aquellas personas que no vivan cerca a una farmacia</p>
             </MDBCol>
 
             <MDBCol md="2" lg="2" xl="2" className='mx-auto mb-4' >
               <h6 className='text-uppercase fw-bold mb-4'>Ubicación</h6>
               <p>
                 <MDBIcon icon="home" className="me-2" />
-                Armenia Quindio
+                Armenia - Quindio
               </p>
             </MDBCol>
 

@@ -353,6 +353,7 @@ header img {
 .navbar {
   display: flex;
   align-items: baseline;
+  align-items: center;
   justify-content: space-between;
   background-color: #44D2F2;
   display: none;
@@ -2527,12 +2528,18 @@ hr {
     width: 23rem;
   }
 
-  .menu.visible{
-    right: 7rem;
-  }
+  .menu.visible {
+    right: 6rem;
+    /* margin: auto; */
+    display: flex;
+    width: 22rem;
+    justify-content: space-around;
+    /* align-items: center; */
+}
 
   .button-show2 {
     margin-left: 17rem;
   }
 
+ 
 }
