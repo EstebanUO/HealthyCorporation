@@ -305,6 +305,7 @@ nav {
   align-items: center;
   height: 2.5rem;
   box-shadow: 0 6px 7px -2px grey;
+  height: auto;
 }
 
 .Logo_nav {
