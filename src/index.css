@@ -2242,13 +2242,13 @@ hr {
 
 
 
-  .container_1 {
+  /* .container_1 {
     width: 39rem;
-  }
-
+  } */
+/* 
   .reclamo {
     width: 35rem;
-  }
+  } */
 
   /* .buscar{
     width: 29rem;
@@ -2366,9 +2366,12 @@ hr {
   }
 
   .about_contact2 {
-
     font-size: 2.3rem;
-  }
+    width: 26rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
   .about_contact4 {
     width: 32rem;
@@ -2388,6 +2391,16 @@ hr {
 
 /*-------- Responsive 500px ---------*/
 @media screen and (max-width:500px) {
+
+  .acount_all {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .select_btn {
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+  }
 
   .formulario {
     display: flex;
@@ -2472,6 +2485,10 @@ hr {
   .message2 {
     margin-right: 0rem;
     margin-left: 0rem;
+  }
+
+  .text_check_2 {
+    font-size: 1.4rem;
   }
 }
 
