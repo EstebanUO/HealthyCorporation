@@ -19,6 +19,21 @@
     box-shadow: #0e1e251f 0px 2px 4px 0px, #0e1e2552 0px 0px 7px 0px;
 }
 
+.card2Select {
+    width: 10rem;
+    height: 9rem;
+    background-color: #fff;
+    border-radius: .7rem;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    border: solid 2px #80808070;
+    align-items: center;
+    transition: all 300ms;
+    box-shadow: #0117201f 9px 12px 14px 12px, #0e1e2552 1px 4px 1px 7px;
+}
+
 .card2:hover {
     /* background-color: #eee7e76e; */
     transition: all 300ms;
