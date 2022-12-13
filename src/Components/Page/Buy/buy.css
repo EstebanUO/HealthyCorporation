@@ -700,4 +700,8 @@ hr {
     .addBuy_ {
         font-size: 13px;
       }
+
+    .material-symbols-outlined {
+        margin-bottom: 0rem;
+    }
 }
