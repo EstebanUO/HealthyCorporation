@@ -74,12 +74,12 @@ export const Register = (props) => {
               <p className='pvaliRegister' id='valiExiste' />
               <label className="labelsReg">Nombre de usuario</label>
               <FaUserAlt className='iconUserReg' />
-              <input minLength="4" maxLength="20" value={props.usernameRegister} onChange={props.onChangeusernameRegister} name="name" type="text" className="form-input" placeholder="@Usurario" autoComplete="off" required />
+              <input minLength="4" maxLength="20" value={props.usernameRegister} onChange={props.onChangeusernameRegister} name="name" type="text" className="form-input" placeholder="Usuario" autoComplete="off" required />
               <p className='pvaliRegister' id='txtvalidUsername' />
               <div> 
                 <label className="labelsReg"><br />Correo</label>
                 <FaUserAlt className='iconUserEmailReg' />
-                <input value={props.emailRegister} onChange={props.onChangeemailRegister} name="correo" type="email" className="form-input" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ejemplo@healhty.com" autoComplete="off" required />
+                <input value={props.emailRegister} onChange={props.onChangeemailRegister} name="correo" type="email" className="form-input" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ejemplo@healthy.com" autoComplete="off" required />
               </div>
               <p className='pvaliRegister' id='txtvalidEmail' />
               <div>
