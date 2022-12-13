@@ -2,6 +2,7 @@
     font-size: 2rem;
     color: rgb(146, 146, 146);
     cursor: pointer;
+    margin-bottom: .5rem;
     transition: all 400ms ease;
     font-variation-settings:
         'FILL' 1,
@@ -9,6 +10,8 @@
         'GRAD' 200,
         'opsz' 40
 }
+
+
 
 /*contador*/
 .product_btn_ {
@@ -626,13 +629,13 @@ hr {
         display: flex;
         flex-direction: column;
         width: 40rem;
-        height: 57rem;
+        height: 60rem;
     }
 
     .columm_buy {
         display: flex;
         width: 100%;
-        height: 25.3rem;
+        height: 28.3rem;
         flex-direction: column;
         align-items: center;
         margin-top: -9rem;

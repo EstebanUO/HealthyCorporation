@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Footer } from '../Layout/Footer/Footer';
 import { Header } from '../Layout/Header/Header';
 import { Card } from '../../UI/Card/Card';
-import { FaShoppingCart } from "react-icons/fa";
+import { FaShoppingCart, FaHeart } from "react-icons/fa";
 import ReactImageMagnify from 'react-image-magnify';
 import back from '../../Image/x.png';
 import Swal from 'sweetalert2';
@@ -251,7 +251,7 @@ export const Buy = (props) => {
                         <div className='addBuy'>
                             <div className="Content_favorite" onClick={(e) => { onHeart(Id.nombre, Id.price, Id.imagen, Id.id, Id.cantidad) }}>
                                 <span className="material-symbols-outlined">
-                                    favorite
+                                    <FaHeart />
                                 </span>
                                 <p className="like"> Me gusta</p>
                             </div>
