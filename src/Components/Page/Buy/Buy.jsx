@@ -152,24 +152,31 @@ export const Buy = (props) => {
     /* validacion si hay un producto en lista de deseos se quede en rojo y pueda eliminarlo */
 
     const productId = localStorage.getItem("product")
-
+    let num_ = parseInt(productId)
     /* toma solo un valor el ultimo */
     let num 
 
-    arr.map(function(data) {
-       num = data.ids
-    });
-
-    window.onload = () => {
-        // const productId_2 = localStorage.getItem("product")
-        let num_ = parseInt(productId)
-        if (num_ === num) {
+    const result = arr.filter(data => {
+        if (data.ids === num_) {
             console.log("entra");
             document.querySelector(".material-symbols-outlined").style.color = 'red';
             document.querySelector(".Content_favorite").style.border = ' solid red';
-            setCounter(counter + 1)
-        }
-    }
+            // setCounter(counter + 1)
+        } 
+    });
+    
+
+
+    // window.onload = () => {
+    //     // const productId_2 = localStorage.getItem("product")
+    //     let num_ = parseInt(productId)
+    //     if (num_ === num) {
+    //         console.log("entra");
+    //         document.querySelector(".material-symbols-outlined").style.color = 'red';
+    //         document.querySelector(".Content_favorite").style.border = ' solid red';
+    //         setCounter(counter + 1)
+    //     }
+    // }
 
     /* fin de validacion */
 
@@ -246,7 +253,7 @@ export const Buy = (props) => {
                                 <span className="material-symbols-outlined">
                                     favorite
                                 </span>
-                                <p className="like">{counter} like</p>
+                                <p className="like"> Me gusta</p>
                             </div>
                             <a href="/pago"><button className='addBuy_'>
                                 Comprar
