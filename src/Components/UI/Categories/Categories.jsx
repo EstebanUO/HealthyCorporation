@@ -29,7 +29,7 @@ export const Categories = (props) => {
           if (resultadoCategoria.length===0) {
             Swal.fire({
                 icon: 'warning',
-                title: 'no hay productos con esta categoria',
+                title: 'No hay productos con esta categoria',
                 showConfirmButton: false,
                 timer: 1800
             })
