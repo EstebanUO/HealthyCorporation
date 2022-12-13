@@ -154,11 +154,11 @@ export const Buy = (props) => {
     const productId = localStorage.getItem("product")
     let num_ = parseInt(productId)
     /* toma solo un valor el ultimo */
-    let num 
+    // let num 
 
     const result = arr.filter(data => {
         if (data.ids === num_) {
-            console.log("entra");
+            // console.log("entra");
             document.querySelector(".material-symbols-outlined").style.color = 'red';
             document.querySelector(".Content_favorite").style.border = ' solid red';
             // setCounter(counter + 1)
