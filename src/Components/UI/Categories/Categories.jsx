@@ -28,6 +28,7 @@ export const Categories = (props) => {
           setcategoriaSelect("")
         }
       }
+      
 
     return (
         <><div className='all' >
