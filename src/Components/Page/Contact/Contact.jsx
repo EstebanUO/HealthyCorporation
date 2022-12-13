@@ -18,7 +18,7 @@ export const Contact = (props) => {
             </div><br /><br />
 
             <div className='info_2' >
-              <h2 className="about_contact2">Cuéntanos qué nesecitas</h2>
+              <h2 className="about_contact2">Cuéntanos que necesitás</h2>
               <h3  className="about_contact4">Rellena el siguiente formulario y nos pondremos en contacto contigo a la mayor brevedad posible.</h3>
 
             </div><br /><br />
