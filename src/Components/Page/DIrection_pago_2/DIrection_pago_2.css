@@ -10,7 +10,8 @@
 .check_all {
     display: flex;
     justify-content: center;
-    padding: 4rem;
+    padding: 2rem;
+    margin-top: 2rem;
 }
 
 .up_check {
@@ -257,4 +258,12 @@
     .addProduct_check4 {
         width: 19rem;
       }
+}
+
+@media screen and (max-width:480px) {
+
+    .back_up {
+      display: none;
+      /* flex-direction: row; */
+   }
 }

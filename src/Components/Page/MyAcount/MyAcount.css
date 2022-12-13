@@ -34,9 +34,9 @@
         font-size: 1rem;
     }
 
-    .input_acount{
+    /* .input_acount{
         width: 84%;
-    }
+    } */
 
     .input_acount2{
         width: 100%;
@@ -60,9 +60,9 @@
         font-size: 1rem;
     }
 
-    .input_acount2{
+    /* .input_acount2{
         width: 104%;
-    }
+    } */
 
     .input_acount{
         width: 100%;
@@ -81,9 +81,9 @@
         width: 24rem;
     }
 
-    .input_acount2{
+    /* .input_acount2{
         width: 45%;
-    }
+    } */
 
     .btn_update {
         width: 7rem;

@@ -193,3 +193,11 @@
 
     transition: all ease-in 300ms;
 }
+
+@media screen and (max-width:480px) {
+    .pad_check2 {
+        margin-bottom: 0;
+        font-size: 1.4rem;
+        
+    }
+}
