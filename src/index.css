@@ -2529,7 +2529,7 @@ hr {
   }
 
   .menu.visible {
-    right: 5rem;
+    right: 6rem;
     /* margin: auto; */
     display: flex;
     width: 22rem;
@@ -2541,4 +2541,5 @@ hr {
     margin-left: 17rem;
   }
 
+ 
 }

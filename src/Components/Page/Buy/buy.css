@@ -617,7 +617,7 @@ hr {
     }
 
     .addBuy_2 {
-        font-size: .85rem;
+        font-size: 14px;
     }
 }
 
@@ -693,4 +693,8 @@ hr {
     .metodos {
         width: 25rem;
     }
+
+    .addBuy_ {
+        font-size: 13px;
+      }
 }
