@@ -51,10 +51,10 @@ export const Home = (props) => {
       <div>
           <Slider2 />
           <div>
-            <div className="Content_categorias">
+            {/* <div className="Content_categorias">
               <h1 className='title-home2'>Categorías</h1>
               <Categories />
-            </div>
+            </div> */} <br /><br />
             <div className='products-home'>
               <h1 className='title-home'> Productos más vendidos</h1>
               <Slider />

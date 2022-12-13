@@ -241,3 +241,38 @@
     font-size: 1.4rem;
     margin-bottom: 0px;
 }
+
+@media screen and (max-width:700px) {
+    .precioDeseos {
+        /* padding-left: 4rem; */
+        margin-bottom: 0;
+        display: none;
+    }
+}
+
+@media screen and (max-width:525px) {
+    .subtitleDeseos {
+        color: #505050;
+        display: none;
+
+    }
+
+    .imgProd1 {
+        width: auto;
+        height: 5rem;
+        top: 0;
+    }
+
+}
+
+@media screen and (max-width:415px) {
+    .imgProd1 {
+        margin-left: -3rem;
+    }
+    .disponibilidad_ {
+        margin-left: -2rem;
+    }
+    .disponibilidad {
+        margin-left: -2 rem;
+    }
+}
