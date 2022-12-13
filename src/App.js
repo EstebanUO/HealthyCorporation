@@ -111,7 +111,7 @@ function App() {
 
   const [passwordUser, setpasswordUser] = useState("")
 
-  const onChangeUserLogin = ({ currentTarget }) => setuserLogin(currentTarget.value);
+  const onChangeUserLogin = ({ currentTarget }) => setuserLogin(currentTarget.value.toLowerCase());
 
   const onChangePasswordLogin = ({ currentTarget }) => setpasswordUser(currentTarget.value);
 
@@ -210,7 +210,7 @@ function App() {
   const [emailRegister, setemailRegister] = useState("")
   const onChangeusernameRegister = ({ currentTarget }) => setusernameRegister(currentTarget.value);
   const onChangepasswordRegister = ({ currentTarget }) => setpasswordRegister(currentTarget.value);
-  const onChangeemailRegister = ({ currentTarget }) => setemailRegister(currentTarget.value);
+  const onChangeemailRegister = ({ currentTarget }) => setemailRegister(currentTarget.value.toLowerCase());
   const onChangeconfrimPasword = ({ currentTarget }) => setconfrimPasword(currentTarget.value);
 
 
