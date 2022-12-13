@@ -49,7 +49,7 @@ export const Footer = () => {
               <h6 className='text-uppercase fw-bold mb-4'>Ubicación</h6>
               <p>
                 <MDBIcon icon="home" className="me-2" />
-                Armenia Quindio
+                Armenia - Quindio
               </p>
             </MDBCol>
 
